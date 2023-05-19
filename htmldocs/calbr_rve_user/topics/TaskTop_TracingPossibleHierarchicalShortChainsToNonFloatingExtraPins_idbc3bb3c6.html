@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Tracing Possible Hierarchical Short Chains to Non-Floating Extra Pins" />
+<meta name="abstract" content="You can use Calibre RVE for LVS to trace possible hierarchical shorts in the layout. The discrepancy types “Instances of cells with non-floating extra pins” and “Possible hierarchical short chains to non-floating extra pins” are relevant for this type of problem. In this context, a hierarchical short is an unwanted path between two nets at different levels of the layout hierarchy." />
+<meta name="description" content="You can use Calibre RVE for LVS to trace possible hierarchical shorts in the layout. The discrepancy types “Instances of cells with non-floating extra pins” and “Possible hierarchical short chains to non-floating extra pins” are relevant for this type of problem. In this context, a hierarchical short is an unwanted path between two nets at different levels of the layout hierarchy." />
+<meta name="prodname" content="Calibre RVE User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rve_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® RVE™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Tracing Possible Hierarchical Short Chains to Non-Floating Extra Pins</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Tracing Possible Hierarchical Short Chains to Non-Floating Extra Pins" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<meta name="has_video" content="true" /><script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Tracing Possible Hierarchical Short Chains to Non-Floating Extra
+Pins</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You can use Calibre RVE for LVS to trace
+possible hierarchical shorts in the layout. The discrepancy types
+“Instances of cells with non-floating extra pins” and “Possible
+hierarchical short chains to non-floating extra pins” are relevant
+for this type of problem. In this context, a hierarchical short
+is an unwanted path between two nets at different levels of the
+layout hierarchy.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Instances of Cells With Non-Floating Extra Pins', 'calbr_ver_user'); return false;">Instances of Cells With Non-Floating Extra Pins</a>” in the <span class="ph filepath">Calibre Verification User’s Manual</span> for
+detailed information about this discrepancy type. </p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__id54250c87-a42a-4afb-9232-6b2a4e6aee83"><p class="p">An
+SVDB from a Calibre nmLVS run which includes LVS comparison. See “<a class="xref fm:HeadingAndPage" href="Concept_RuleFileRequirementsExaminingResultsCalibreRveLvs_idb788dbfe.html#idb788dbfe-9d57-4df5-8c71-89f30af4492c__Concept_RuleFileRequirementsExaminingResultsCalibreRveLvs_idb788dbfe.xml#idb788dbfe-9d57-4df5-8c71-89f30af4492c" title="Calibre RVE for LVS requires a standard verification database (SVDB). The SVDB is specified in the rule file and is created as part of your Calibre nmLVS run. Certain rule file statements and options are required in order to properly set up the results database.">Rule File Requirements for Examining Results with Calibre RVE for LVS</a>”.</p>
+</li>
+<li class="li" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idd87918b3-e8a2-4cf7-865a-01a1506df1bf"><p class="p">The
+layout database for your LVS run.</p>
+</li>
+<li class="li" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idbf531b34-c42e-46e3-95fa-97e4ea5ac090"><p class="p">A
+layout viewer with an interface to Calibre RVE. See “<a class="xref fm:HeadingAndPage" href="Contain_ConnectionLayoutSchematicViewerInCalibreRve_idec8e8bf0.html#idec8e8bf0-8015-464c-a014-cf71c8ff9d80__Contain_ConnectionLayoutSchematicViewerInCalibreRve_idec8e8bf0.xml#idec8e8bf0-8015-464c-a014-cf71c8ff9d80" title="It is very useful to have your Calibre RVE session connected to a layout viewer so that you can highlight results, and cross-probe results between the geometric layout and the source.">Connection to a Design Tool</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="section VideoProcedures"><h2 class="title Subheading sectiontitle">Video</h2><div class="p Video"><a class="xref fm-xref-container VideoXref" target="_blank" href="../../../videos/calbr_rve_tracehiershort_ht_vid/index.html" handle="calbr_rve_tracehiershort_ht_vid" jobid="C7FE5D79_91B2_1014_B0C1_C78FDC3CF4D5" webid="95b2fb33-244f-429f-9a5d-1a689af325c8" title="How To Trace Hierarchical Short Chains Using Calibre® RVE™ for LVS" description="You can trace hierarchical short paths using Calibre RVE for LVS. You can highlight the short segments in the layout viewer and find the layout paths for the short. Hierarchical shorts are reported by Calibre nmLVS as the Possible hierarchical short chains to non-floating extra pins discrepancy." recorded_version="2016.4" verified_version="2016.4" categories=""><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/video_thumbnails/calbr_rve_tracehiershort_ht_vid_idC7FE5D79_small.png" /></div><br /></a></div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__id3588d3e0-773c-43e6-8707-aab86d669449"><span class="ph cmd">Open your layout in Calibre
+DESIGNrev or in another supported layout viewer. </span></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idd8689b29-70c1-4d8d-9f5c-80decf4ec472"><span class="ph cmd">Start Calibre RVE from your
+layout viewer, as described in the procedure “<a class="xref fm:HeadingAndPage" href="TaskTop_InvokingCalibreRveFromLayoutSchematicViewer_idb2d20e2d.html#idb2d20e2d-abb5-47c6-bc67-25bc33d65fd2__TaskTop_InvokingCalibreRveFromLayoutSchematicViewer_idb2d20e2d.xml#idb2d20e2d-abb5-47c6-bc67-25bc33d65fd2" title="Invoking Calibre RVE from a layout or schematic viewer automatically creates a connection between Calibre RVE and the viewer.">Invoking Calibre RVE From a Layout or Schematic Viewer</a>” and open your SVDB. </span></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idb10663b6-2de0-4061-8433-1c90f5af1df0"><span class="ph cmd">Disable <span class="ph uicontrol bold">Highlight &gt; Clear Existing Highlights</span>.</span></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idc4428bfa-8e51-44b3-a052-9e4b6a205992"><span class="ph cmd">Select
+the <span class="ph uicontrol">Comparison Results</span> tab. </span></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idebff2889-eb5c-4705-9b4b-50e158d25a0c"><span class="ph cmd">Select
+“View by Error Type” in the LVS toolbar, or select <span class="ph menucascade"><span class="ph uicontrol">View</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Tree Options</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">View by Error Type</span></span>. </span></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idf67964d0-d511-4043-9feb-3a01fad5b1a7"><span class="ph cmd">Expand
+the “Possible hierarchical short chains to non-floating extra pins”
+error type and select a discrepancy. A typical view is shown in
+the following figure:</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idd4761d0a-2a42-49f8-871e-8f1749c22336"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_shortchains.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__iddb0e8123-ba20-4003-992d-8b3e474c8932"><span class="ph cmd">Click the
+net links to highlight them in the connected layout viewer. Nets
+are highlighted in the context of the cell they are associated with
+by default. A useful debug process is to highlight the end points
+of the possible short chain and then highlight each intermediate
+net starting with the highest point in the hierarchy. (The discrepancy
+shown in the previous step consists only of the two endpoints, and
+has no intermediate nets in the short chain.)</span><div class="itemgroup info StepInfo"><p class="p">Clicking on a net that is not one of the endpoints
+sometimes results in the “Highlight in Lower Cell” pop-up dialog
+box with the message “Layout cell <var class="keyword varname emphasis">cell</var> has
+no shapes on net <var class="keyword varname emphasis">n</var>. ...”
+This occurs if Calibre nmLVS added ports to the extracted netlist
+in order to include the possible hierarchical short chain. Such
+added ports have no corresponding geometry in the layout; however,
+Calibre can determine where such a port connects in a lower level
+cell. Click the <span class="ph uicontrol">Highlight in Lower Cell</span> button
+to highlight the net in a lower level cell in the layout. The <span class="ph uicontrol">Continue</span> and <span class="ph uicontrol">Cancel</span> buttons
+both result in no highlight. </p>
+<div class="p">The following image shows the two endpoints of the discrepancy
+highlighted. In this example the short chain consists of only the
+two endpoints.<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_hier_short_endpoints_rve.gif" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idc94822fb-543e-4fc6-81de-ad40ff25c69d"><span class="ph cmd">Right-click
+anywhere in the discrepancy view and select <span class="ph uicontrol">Isolate Path</span>.</span><div class="itemgroup info StepInfo"><p class="p">This opens the <span class="ph uicontrol">Finder</span> tab, populates
+the fields for an “Isolate Path on Layout Net” search, and opens
+the dialog box to select the path endpoints in the layout viewer. </p>
+<div class="fig fignone" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__id2697c970-3192-4b5c-beea-c8474235f0a0"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_hier_short_finder.gif" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idc2422fbf-509c-437b-abf5-7ccaea30230b"><span class="ph cmd">Select
+endpoints in the layout—one endpoint on the starting net of the short
+and one endpoint on the ending net. </span><div class="itemgroup info StepInfo"><div class="p">It is important that you zoom into the layout enough
+to make sure the selected points are on the net. If the dialog box
+displays a message that the location is not on the net, start over
+with the previous step, as the Finder dialog no longer has the correct
+information. <br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_hier_short_pick_points.gif" /></div><br /></div>
+<p class="p">The path search may take some time if the design is large. </p>
+</div></li>
+<li class="li step stepexpand" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__id0902db0f-989d-4c05-9ac6-c8f21e569fee"><span class="ph cmd">Examine
+the results. </span><div class="itemgroup info StepInfo"><p class="p">The Isolate Path results are listed in the Finder result
+area and the first path is highlighted, as shown in the following
+figure. </p>
+<div class="fig fignone" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__id9221dd65-a269-4cb2-914b-4ecc71300f0a"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_hier_short_firstresult.gif" /></div><br /></div>
+<p class="p">To highlight a different path, click the IP (<img class="image fmdpi:96" src="../graphics/lvs_rve/rve_lvs_icon_IP.gif" />) icon
+next to a path result to highlight that path. You may want to first
+select <span class="ph menucascade"><span class="ph uicontrol">Highlight</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Use
+Layer Colors</span></span> to highlight each layer in
+the path result in a different color. The following figure highlights
+a different path than the previous figure and has “Use Layer Colors”
+on. </p>
+<div class="fig fignone" id="idbc3bb3c6-3726-483e-9d15-b844c9d7cf84__idceee5d9f-f941-4823-b572-4f7afb123c26"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lvs_rve/lvs_rve_hier_short_results_layercolor.gif" /></div><br /></div>
+<p class="p">You can use the path information to examine the layout polygons
+and determine the problem. </p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DebuggingShortsConnectionErrorsCalibreRveLvs_id60fb4140.html" title="There are several methods to help you debug shorts and other connectivity errors using Calibre RVE for LVS.">Debugging Shorts and Connection Errors with Calibre RVE for LVS</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rve_user"
+                DocTitle = "Calibre® RVE™ User’s Manual"
+                PageTitle = "Tracing Possible Hierarchical Short Chains to Non-Floating Extra Pins"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_TracingPossibleHierarchicalShortChainsToNonFloatingExtraPins_idbc3bb3c6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® RVE™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

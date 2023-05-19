@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Netlist Reduction Techniques" />
+<meta name="abstract" content="You can reduce the size of the parasitic netlist by selecting specific nets for extraction, filtering nets, and performing model order reduction." />
+<meta name="description" content="You can reduce the size of the parasitic netlist by selecting specific nets for extraction, filtering nets, and performing model order reduction." />
+<meta name="prodname" content="Calibre xL User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_xl_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xL User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb81b134c-416f-4fba-a8c3-6ee2b89297a0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Netlist Reduction Techniques</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Netlist Reduction Techniques" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Netlist Reduction Techniques</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">You can reduce
+the size of the parasitic netlist by selecting specific nets for
+extraction, filtering nets, and performing model order reduction. </span>
+</div>
+<p class="p">This section describes the following
+netlist reduction techniques:</p>
+<ul class="ul"><li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id93377a59-55a4-4dc9-baff-1772982e67e2"><p class="p"><a class="xref fm:HeadingOnly" href="#idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id890c838b-4fdc-413a-a0b3-106ce912c585">Selected Net Extraction</a> </p>
+</li>
+<li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id464c5779-b9dc-4d8c-a1a1-d24a50e520c5"><p class="p"><a class="xref fm:HeadingOnly" href="#idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id0e7744df-03ec-4cc2-872f-586e8d5af3f0">Net Filtering</a> </p>
+</li>
+<li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id71cbb82b-79c0-453a-b133-47af8aabcbd1"><p class="p"><a class="xref fm:HeadingOnly" href="#idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id5373a597-6027-49bf-9bc9-f2abf6632298">Model Order Reduction</a> </p>
+</li>
+</ul>
+<div class="section Subsections" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__idf133326b-3fb5-4417-a062-d25477232248"><div class="section Subsection" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id890c838b-4fdc-413a-a0b3-106ce912c585"><h2 class="title Subheading sectiontitle">Selected
+Net Extraction</h2><p class="p">You can include
+or exclude certain nets from extraction or limit the parasitic extraction
+to a list of specified nets. To include certain nets, use either
+of the following:</p>
+<ul class="ul"><li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id473a792d-14ee-4889-8144-15f1a3548188"><p class="p">The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Include', 'svrf_ur'); return false;">PEX Extract Include </a>statement in your SVRF rule file and specify the
+-select parameter on the command line.</p>
+</li>
+<li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id5aed454a-2145-4908-94d3-cd9053210d3d"><p class="p">The PEX “Extract parasitics for specified
+nets” option in Calibre Interactive.</p>
+</li>
+</ul>
+<p class="p">To exclude certain nets (such as ground and
+power) from an extraction run, use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Exclude', 'svrf_ur'); return false;">PEX Extract Exclude </a>statement in your SVRF rule file. For information
+on the PEX Include Distributed and PEX Exclude Distributed statements,
+see the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual</a>.</p>
+</div>
+<div class="section Subsection" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id0e7744df-03ec-4cc2-872f-586e8d5af3f0"><h2 class="title Subheading sectiontitle">Net Filtering</h2><p class="p">You can filter out short paths to reduce
+the netlist size and enable full-chip simulation and analysis. The
+filtering is done on a per-path basis. Only signal paths that violate
+the filtering conditions are excluded from impedance extraction. </p>
+<p class="p">To apply this filter let the tool approximate
+the location of the two terminals of the paths (driver and receiver)
+or you may specify the driver and receiver paths in a file yourself.
+Note that the value of the rise time or maximum frequency also participate
+in the path length calculation, that is the criteria for filtering.
+For more information, see “<a class="xref fm:HeadingAndPage" href="Concept_DriverReceiverFileGeneration_iddbc4fe18.html#iddbc4fe18-05c8-4427-8868-02e916f613ae__Concept_DriverReceiverFileGeneration_iddbc4fe18.xml#iddbc4fe18-05c8-4427-8868-02e916f613ae" title="The driver and receiver file (driver.xl) is an optional file that identifies the paths to evaluate for self and mutual impedance extraction.">Driver and Receiver File Generation</a>”.</p>
+<p class="p">To specify the nets to include in the return
+path, use either of the following:</p>
+<ul class="ul"><li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id140dd0b7-e294-487a-8174-d100f8ee218f"><p class="p">The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Returnpath', 'svrf_ur'); return false;">PEX Inductance Returnpath</a> statement in your SVRF rule file.</p>
+</li>
+<li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__ida7663780-01d0-4f80-8c28-ec3832249081"><p class="p">The PEX “Nets to include in return path”
+option in Calibre Interactive.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id5373a597-6027-49bf-9bc9-f2abf6632298"><h2 class="title Subheading sectiontitle">Model Order Reduction</h2><p class="p">You can reduce the parasitic netlist size to
+enable an efficient simulation using the TIme Constant Equilibration
+Reduction (TICER) algorithm. This algorithm reduces the model order while
+accurately preserving network response for specified upper frequency
+limits. You can specify the highest frequency of interest up to
+which the reducer accurately preserves network response. For consistency,
+this frequency should be less than or equal to the frequency specified for
+extraction. The TICER algorithm is an efficient method of reduction
+and does not change the electrical behavior of the circuit below
+the specified cut-off frequency. The specified cut-off frequency
+is used as the basis for minimizing the number of parasitics added
+to the netlist.</p>
+<p class="p">To specify model order
+reduction, use either of the following:</p>
+<ul class="ul"><li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id4c517b63-8c28-4010-a09c-77a88bbc8a32"><p class="p">The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Reduce TICER', 'svrf_ur'); return false;">PEX Reduce TICER</a> statement in your SVRF rule file.</p>
+</li>
+<li class="li" id="idb81b134c-416f-4fba-a8c3-6ee2b89297a0__id47ab81f7-d7dd-401b-973b-d4d798448f72"><p class="p">The PEX “Enable TICER Reduction Below”
+option in Calibre Interactive.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_TypesInductanceProblemsExtractionModels_idbae05cee.html" title="Calibre xL provides different solutions depending on your inductance analysis needs.">Types of Inductance Problems and Extraction Models</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_xl_user"
+                DocTitle = "Calibre® xL User’s Manual"
+                PageTitle = "Netlist Reduction Techniques"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_NetlistReductionTechniques_idb81b134c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xL User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

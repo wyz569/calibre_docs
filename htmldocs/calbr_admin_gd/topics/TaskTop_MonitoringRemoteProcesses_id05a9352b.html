@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Monitoring Remote Processes" />
+<meta name="abstract" content="The monitoring utilities allow you to monitor the load and memory usage on individual machines in a cluster, as well as the input and output characteristics between the primary and remote hosts. The following steps describe how to use these capabilities, in addition to providing some debugging methodologies while using Calibre in a cluster environment." />
+<meta name="description" content="The monitoring utilities allow you to monitor the load and memory usage on individual machines in a cluster, as well as the input and output characteristics between the primary and remote hosts. The following steps describe how to use these capabilities, in addition to providing some debugging methodologies while using Calibre in a cluster environment." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id05a9352b-d4cc-4d04-bfcd-ce7e08070253" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Monitoring Remote Processes</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Monitoring Remote Processes" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Monitoring Remote Processes</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The monitoring
+utilities allow you to monitor the load and memory usage on individual
+machines in a cluster, as well as the input and output characteristics
+between the primary and remote hosts. The following steps describe
+how to use these capabilities, in addition to providing some debugging
+methodologies while using Calibre in a cluster environment.</p>
+<p class="p">To
+use the monitoring capabilities, add the <a class="xref fm:HeadingOnly" href="Command_MonitorLocal_iddbea601c.html#iddbea601c-8e2d-44ed-a007-efbd9142a97d__Command_MonitorLocal_iddbea601c.xml#iddbea601c-8e2d-44ed-a007-efbd9142a97d" title="Enables monitoring of Calibre MTflex operations on the primary host.">MONITOR LOCAL</a> and <a class="xref fm:HeadingOnly" href="Command_MonitorRemote_id371abde9.html#id371abde9-4863-4a07-aa06-ab1f61e184b6__Command_MonitorRemote_id371abde9.xml#id371abde9-4863-4a07-aa06-ab1f61e184b6" title="Enables monitoring of Calibre MTflex operations on the remote hosts.">MONITOR REMOTE</a> statements to your configuration file.
+Each statement can be specified once, for the primary or remote
+hosts. If any monitoring is enabled on the remote hosts, the log
+files are not deleted when the process completes.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id8825d27d-daf4-48d6-9164-10c490b23843"><p class="p">The
+CALIBRE_HOME environment variable must be set to the location of
+a Calibre software tree that is accessible by the remote hosts.</p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id44335801-775b-4ccb-bb53-ceb6e25863e0"><p class="p">LM_LICENSE_FILE
+or MGLS_LICENSE_FILE must be set to the location of a license file.</p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id21261a9d-f75c-4643-8d8c-d3dc6266c54b"><p class="p">You
+must perform steps 1-3 in “<a class="xref fm:HeadingOnly" href="TaskTop_UsingLaunchClusterRemoteCommandStatements_idaef4757e.html#idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__TaskTop_UsingLaunchClusterRemoteCommandStatements_idaef4757e.xml#idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb" title="You can create a configuration file in which you define the LAUNCH CLUSTER and REMOTE COMMAND statements. The LAUNCH CLUSTER statement sets parameters for the connection of the primary host to the remote hosts, while the REMOTE COMMAND statement starts a Calibre MTflex server on a remote host. You then execute Calibre using the ‑remotefile argument to specify the path to a configuration file.">Using the LAUNCH CLUSTER and REMOTE COMMAND Statements</a>.”</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id1d161272-7ca2-49e4-aeb7-dad5336dadf0"><span class="ph cmd">Create a configuration file
+that includes the following statements:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>MONITOR LOCAL CONNECT LOAD MEMORY IO
+MONITOR REMOTE CONNECT MEMORY IO</code></pre><p class="p">The MONITOR LOCAL statement
+enables:</p>
+<ul class="ul"><li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idca8a8661-a85b-4211-8800-b7c2599f63d2"><p class="p">Verbose output relating
+to the primary host and remote host connection process (CONNECT)</p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id13ae234b-0b14-4558-a81f-af8165e6bc60"><p class="p">Internal task monitoring
+on the primary host (LOAD)</p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idf1252293-67ac-4d89-af22-7d0c341c9682"><p class="p">LVHEAP memory monitoring
+on the primary host (MEMORY)</p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idbe60f611-f304-479f-b4ec-2b9b80f08d2a"><p class="p">Network IO monitoring
+on the primary and remote hosts (IO)</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idf4b848a7-03dc-460f-b835-2faead752a3e"><span class="ph cmd">Save and close the configuration
+file. </span></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id893b68b1-1024-4894-a119-d05dd63133e9"><span class="ph cmd">Execute the Calibre run. For
+example:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibre -drc -hier -turbo -remotefile mtflex.config rules</pre>
+</div></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id64e4a76c-6303-4c15-a68e-0e5b6fd0a74c"><span class="ph cmd">Review the transcript results.
+The CONNECT option enables more verbose output relating to the primary
+and remote connections. This option is useful for debugging connection
+problems. Following is a sample output of a remote connection with
+this option enabled. The report shows the version used and the exact
+Calibre invocation on the remote host.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>// Connecting to CPU on remote host node19...
+Creating child process to invoke remote process
+Child process executing following command:
+/usr/bin/rsh node19 -n /cal_home/bin/rcalibre /tmp 1 CALIBRE_HOME
+	/cal_home -mtflex &lt;host&gt;:12345
+Remote process invocation started successfully
+Remote process invocation completed, now waiting for socket
+	connection
+Done.
+VERIFY: remote calibre_version = v2019.1_0.0</code></pre><p class="p">When monitoring is not enabled,
+only the first line is displayed in the transcript.</p>
+<p class="p">When monitoring is enabled
+and a connection problem is identified, you should perform the following
+tasks to resolve the issue:</p>
+<ul class="ul"><li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id013acc28-f15e-4737-8d76-e61802f48967"><p class="p">Ensure
+you can specify the remote host in an rsh or ssh (required for the
+RHEL/CentOS operating system) command on the primary host. </p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idf5fd55f7-4548-47c3-896d-06e268a544d5"><p class="p">Make sure rcalibre can
+be invoked on the remote host using the path specified for the rcalibre
+command. </p>
+</li>
+<li class="li" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idced4c95a-2f42-4f19-b667-0096667e6cbe"><p class="p">Verify the specified TCP/IP
+port (58422 in this example) is working correctly.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id16ee4e95-e2e5-4bec-9989-901a8bc35b59"><span class="ph cmd">The LOAD option enables internal
+task monitoring of Calibre MTflex operations on the primary host.
+The output includes information relating to the internal thread
+management and remote operation behavior. The monitoring information is
+enclosed in angle brackets (&lt; &gt;) and contains the string “MON”
+at the beginning of each line. For details on the output, refer
+to the “<a class="xref fm:HeadingOnly" href="FileRef_MonitorLocalLoadTranscript_idf1a65843.html#idf1a65843-9f02-49d4-96a4-56e8438129ae__FileRef_MonitorLocalLoadTranscript_idf1a65843.xml#idf1a65843-9f02-49d4-96a4-56e8438129ae" title="The LOAD option for the MONITOR LOCAL statement enables internal task monitoring of Calibre MTflex operations on the primary host. This reference page describes the parameters that can be found in the transcript output when you use the MONITOR LOCAL LOAD statement.">MONITOR LOCAL LOAD Transcript</a>” reference page. The following
+is a sample output generated by the LOAD option:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>drop::TMP&lt;3&gt; = reference_layer INTERACT check_layer != 1
+--------------------------------------------------------
+&lt;MON:B 3219 O 14&gt;
+&lt;MON:S 3219&gt;
+&lt;MON:L 3224 T 116 0 Q 1678 0 R 116&gt;
+&lt;MON:L 3229 T 116 0 Q 2015 0 R 113&gt;
+&lt;MON:L 3234 T 116 0 Q 1827 0 R 116&gt;
+&lt;MON:L 3239 T 116 0 Q 1497 0 R 116&gt;
+&lt;MON:L 3244 T 116 0 Q 1053 0 R 116&gt;
+&lt;MON:L 3249 T 116 0 Q 1147 0 R 116&gt;
+...
+&lt;MON:F 3887 W 668 L 235 R 9410&gt;
+&lt;MON:E 3887 O 14&gt;
+drop::TMP&lt;3&gt; (HIER-FMF TYP=1 CFG=0 HGC=0 FGC=0 HEC=0 FEC=0 VHC=F
+drop::TMP&lt;3&gt; (HIER-FMF TYP=1 CFG=0 HGC=0 FGC=0 HEC=0 FEC=0 VHC=F
+VPC=F)
+CPU TIME = 235 + 9410 REAL TIME = 668 LVHEAP = 2885/10598/10599
+OPS COMPLETE = 7 OF 32</code></pre></div></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__idd7f27d40-8b13-4e20-a768-aec58431f085"><span class="ph cmd">The MEMORY option enables
+the reporting of LVHEAP memory on the primary or remote nodes. Following
+is an example of the transcript generated by the Boolean NOT operation
+running on eight remote nodes:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>E = C NOT B
+-----------
+&lt;MON:B 3869 O 12&gt;
+&lt;MON:S 3870&gt;
+&lt;MON:L 3931 T 8 0 Q 606 0 R 8&gt;
+&lt;MON:M 3932 H 3228 3853 3853&gt;
+&lt;MON:L 3995 T 8 0 Q 400 0 R 8&gt;
+&lt;MON:M 3999 H 3390 3853 3853&gt;
+&lt;MON:L 4055 T 8 0 Q 109 0 R 8&gt;
+&lt;MON:M 4056 H 3517 3853 3853&gt;
+
+&lt;MON:L 4117 T 8 0 Q 13 0 R 8&gt;
+&lt;MON:M 4119 H 3728 3853 3853&gt;
+&lt;MON:F 4193 W 323 L 6 R 2072&gt;
+&lt;MON:E 4193 O 12&gt;
+E (HIER TYP=1 CFG=1 HGC=14991864 FGC=99064435 HEC=1002467482
+FEC=3500465063 VHC=F VPC=F)
+CPU TIME = 6 + 2072 REAL TIME = 324 LVHEAP = 3843/3867/3867
+OPS COMPLETE = 9 OF 29</code></pre><p class="p">The monitoring information is enclosed
+in angle brackets and the format is as follows:</p>
+<pre class="pre codeblock leveled"><code>&lt;MON:M <span class="keyword ParameterName OptionalReplaceable">timestamp</span> H <span class="keyword ParameterName OptionalReplaceable">n1 n2 n3</span>&gt;</code></pre><p class="p">The <span class="keyword ParameterName OptionalReplaceable">n1</span>, <span class="keyword ParameterName OptionalReplaceable">n2</span>,
+and <span class="keyword ParameterName OptionalReplaceable">n3</span> values
+represent the currently used memory, the currently allocated memory,
+and the maximum allocated memory in megabytes (MB). This is similar
+to the LVHEAP information provided at the end of each operation.</p>
+</div></li>
+<li class="li step stepexpand" id="id05a9352b-d4cc-4d04-bfcd-ce7e08070253__id079ff958-9618-4dfa-b40d-2f5a9f4f0e84"><span class="ph cmd">The IO option enables network
+input/output monitoring. When enabled for the primary host, Calibre
+performs a series of tests (read, write, and latency) on each remote
+CPU after the connection is completed. Following is an example of
+the results generated by this option:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>Performing sequential IO characterization to remote CPU: node2
+	Socket Info: RCVBUF = 87380, SNDBUF = 16384, MAXSEG = 1460,
+		NODELAY = 1
+	WRITE 0: 10000 16K blocks, TIME = 1.38838, Mb/s = 944.064
+	WRITE 1: 10000 16K blocks, TIME = 1.38508, Mb/s = 946.312
+	WRITE 2: 10000 16K blocks, TIME = 1.3879, Mb/s = 944.392
+	READ 0: 10000 16K blocks, TIME = 1.38245, Mb/s = 948.115
+	READ 1: 10000 16K blocks, TIME = 1.38118, Mb/s = 948.989
+	READ 2: 10000 16K blocks, TIME = 1.38107, Mb/s = 949.061
+	PACKETS 0: 10000 16 byte packets, TIME = 1.29852, 
+		packets/s = 7701.07
+	PACKETS 1: 10000 16 byte packets, TIME = 1.26893, 
+		packets/s = 7880.69
+	PACKETS 2: 10000 16 byte packets, TIME = 1.25407, 
+		packets/s = 7974.06</code></pre><p class="p">The read and write performance
+tests are composed by sending 10,000 16K blocks three times to the
+remote CPU. The reported speed should be close to the actual network
+speed. For this example, the network is a 1 Gb/sec network and the average
+read and write speed is 946.82 Mbit/s.</p>
+<p class="p">The latency of the connection
+is measured by sending 10,000 16-byte packets three times to the
+remote CPU. For the remote, the IO monitoring option reports the number
+of bytes read and written by the remote. The format that appears
+in the remote host log file is:</p>
+<p class="p">&lt;MON:I <span class="keyword ParameterName OptionalReplaceable">timestamp</span> R <span class="keyword ParameterName OptionalReplaceable">n1</span> W <span class="keyword ParameterName OptionalReplaceable">n2</span>&gt;</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">n1</span> and <span class="keyword ParameterName OptionalReplaceable">n2</span> value
+reports the IO counts. <span class="keyword ParameterName OptionalReplaceable">n1</span> is
+the bytes (in millions) read by the remote and <span class="keyword ParameterName OptionalReplaceable">n2</span> is
+the number of bytes (in millions) written by the remote.</p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DistributedCalibreExecutingMonitoring_idd93c9d2e.html" title="Some of the more common scenarios for running a distributed Calibre job involve using the multithreaded (MT) or Calibre MTflex capabilities, with or without hyperscaling mode. Monitoring utilities allow you to track how the job is distributed along with the performance of the local and remote hosts.">Distributed Calibre: Executing and Monitoring</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Monitoring Remote Processes"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_MonitoringRemoteProcesses_id05a9352b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

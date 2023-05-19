@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example: Checking for High Voltage Conditions Involving Level Shifter Circuits" />
+<meta name="abstract" content="This example shows how to detect over-voltage conditions on low-voltage MOS devices." />
+<meta name="description" content="This example shows how to detect over-voltage conditions on low-voltage MOS devices." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd4ec981a-bdf7-4059-9a2e-21091d32469a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Checking for High Voltage Conditions Involving Level Shifter Circuits</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Checking for High Voltage Conditions Involving Level Shifter Circuits" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idd4ec981a-bdf7-4059-9a2e-21091d32469a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Checking for High
+Voltage Conditions Involving Level Shifter Circuits</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">This example
+shows how to detect over-voltage conditions on low-voltage MOS devices. </p>
+<p class="p">Level shifter circuits are used to step the
+voltage down from a global power signal, such as shown here: </p>
+<div class="fig fignone" id="id76b1ae7e-47b8-4317-b5fb-384837d00be9"><br /><div class="imagecenter"><img class="image imagecenter" height="107" src="../graphics/voltage_checks5.png" width="468" /></div><br /></div>
+<p class="p">Global
+power (VCC) is 3.3 volts. The level shifter steps this voltage down
+to 1.8 volts. The transition supply net is vcc_lv.</p>
+<p class="p">The conditions to check are as follows:</p>
+<ul class="ul"><li class="li" id="ide52b26e7-10db-4d7c-8e6b-be0a867162c2"><p class="p">Supply voltages across low-voltage PMOS
+source/drain pins may not be greater than 1.8 volts.</p>
+</li>
+<li class="li" id="idb69b6c6a-3342-4d09-996f-ccb632343039"><p class="p">Existence of a level shifter circuit.</p>
+</li>
+<li class="li" id="ide8968b13-c704-4917-b69f-c673d55d655c"><p class="p">Transition supply net names.</p>
+</li>
+</ul>
+<p class="p">Because intellectual property (IP) blocks
+may exist in a circuit, supply net names for the various voltage
+domains can be inconsistent throughout the design. This can require
+you to identify the transition supply nets that connect level shifters
+to other subcircuits in the design. This example shows code that
+assists in identifying both level shifters and the transition supply
+nets.</p>
+<p class="p">This is an overview of the steps involved
+in writing this check:</p>
+<ul class="ul"><li class="li" id="idb864b47b-aa77-463b-9a75-5ed4cbfdf989"><p class="p">Create a SPICE pattern template to match
+level shifters in your design and reference this template in the
+rule file.</p>
+</li>
+<li class="li" id="idf445a0c8-d1c5-4750-89f0-e8328b2d44ea"><p class="p">Write the initialization procedure to
+set up net types.</p>
+</li>
+<li class="li" id="ide14ea360-5267-4ccd-b824-15a9468b72ca"><p class="p">Write rule check procedures for identifying
+level shifters and voltage transition nets coming from level shifters.</p>
+</li>
+<li class="li" id="ide2f342b8-0d99-4497-a768-cf52a9d646bc"><p class="p">Write the initialization procedure to
+set up voltage paths.</p>
+</li>
+<li class="li" id="idff3ba5cf-564f-4a3d-bf68-1fb1df288b4a"><p class="p">Write the voltage checking procedure.</p>
+</li>
+<li class="li" id="id21ea8b91-c4b7-436c-8341-1a300005c59c"><p class="p">Run the voltage check and debug as necessary.</p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida75c32f7-a99b-4c0a-b17e-0e9483218136"><p class="p">You
+understand voltage propagation as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_ConnectivityBasedVoltagePropagation_idde127dbd.html#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93__Concept_ConnectivityBasedVoltagePropagation_idde127dbd.xml#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93" title="Calibre PERC employs static, connectivity-based voltage propagation. Unlike dynamic circuit simulators, Calibre PERC voltage propagation does not consider resistance or current. Voltage labels are passed along well-defined paths and are subsequently checked by rules.">Connectivity-Based Voltage Propagation</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idfbcb5c15-0077-4b35-a00f-3b344d975a94"><span class="ph cmd">Identify the global power
+and ground nets in your design, and place corresponding statements
+into your control rule file similar to the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Power Name', 'svrf_ur'); return false;">LVS POWER NAME</a> vcc? 
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Ground Name', 'svrf_ur'); return false;">LVS GROUND NAME</a> gnd? </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id42714312-cd9b-49f9-b146-12879bc3e999"><span class="ph cmd">In a text editor, create a
+SPICE pattern template for identifying level shifters, such as this:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>$$ level shifter pattern template 
+$$ vcca is power 
+$$ gnda is ground 
+$$ derived_power is the transition supply net for stepped-down  
+$$ voltage 
+ 
+.SUBCKT level_shifter bias1 bias2 derived_power vcca gnda 
+Mp1 local1 bias1 vcca vcca pmos 
+Mp2 derived_power bias1 local1 vcca pmos 
+Mn1 derived_power bias2 gnda gnda nmos 
+.ENDS 
+ 
+.SUBCKT TOP 
+X1 b1 b2 derived_power vcca gnda level_shifter 
+.ENDS </code></pre><p class="p">Save the file as <span class="ph filepath">pattern.sp</span>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id62e8c0d0-00ee-4284-b5c0-30c3c8b9cc88"><span class="ph cmd">Place the following statement
+into your control file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Pattern Path', 'svrf_ur'); return false;">PERC PATTERN PATH</a> pattern.sp </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id239b52b5-2493-430a-9a2a-ab0e6fbf9a98"><span class="ph cmd">Start a new file in your text
+editor and add this code:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC LOAD</a> pattern_analysis INIT pattern_init  
+  SELECT identify_level_shifter  
+ 
+TVF FUNCTION pattern_analysis [/* 
+package require CalibreLVS_PERC 
+ 
+  proc pattern_init {} { </code></pre><p class="p">This serves as the start of
+the code block that will contain rules for identifying level shifter
+circuits and transition supply nets in the design.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida0e76cf3-c59b-4d6f-886f-eb38a6fdde72"><span class="ph cmd">Add the following commands
+to the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> "Power"   {lvsPower} 
+perc::define_net_type "Ground"  {lvsGround} </code></pre><p class="p">These commands set up net types
+that correspond to the LVS Power Name and LVS Ground Name nets you
+declared previously.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id4a76ef1d-d162-4faf-a2cd-fe62dd0bb84f"><span class="ph cmd">Add the following commands
+to the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Open the transition net file and write the header 
+  set fd [open "[<a class="xref fm:HeadingOnly" href="Command_TvfsvrfVar_id9dd1c79d.html#id9dd1c79d-55e8-4dcf-b104-4b2ef3bef4e4__Command_TvfsvrfVar_id9dd1c79d.xml#id9dd1c79d-55e8-4dcf-b104-4b2ef3bef4e4" title="Returns the value defined in a rule file Variable statement. This command is used instead of tvf::sys_var in Calibre PERC rules.">tvf::svrf_var</a> VOLTAGE_TRANSITION_FILE]" w] 
+  puts $fd "######################################################" 
+  puts $fd "# Date: [exec date]" 
+  puts $fd "# Generated file containing voltage transition nets" 
+  puts $fd "######################################################" 
+  puts $fd "" 
+  puts $fd "## Place holder for VT net type" 
+  puts $fd "" 
+  close $fd </code></pre><p class="p">These commands create a file
+that will be named later by the VOLTAGE_TRANSITION_FILE variable.
+After a Calibre PERC run, this file contains commands for stepped-down
+voltage transition supply nets coming from level shifters.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida76a9a19-64c6-4cf2-a3df-078bc49fa3ce"><span class="ph cmd">Add the following code to
+the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Default is not to run the debug commands 
+  set ::debug 0 
+ 
+# if RUN_DEBUG is set, run the debug commands 
+  if {[info exists ::env(RUN_DEBUG)]} { 
+    set ::debug 1 
+  } 
+} ; # end of pattern_init </code></pre><p class="p">This code controls debugging
+features to be added to the rules later. This also concludes the
+pattern_init initialization procedure started in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id239b52b5-2493-430a-9a2a-ab0e6fbf9a98">4</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id43da1da9-0cf7-4719-ac39-2df33202eaf7"><span class="ph cmd" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idac79af35-054a-46e1-8e5b-9a7db0610fda">Add the following code to the
+open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Utility procedure to write out identified voltage transition nets
+proc write_voltage_transition_net {net} { 
+  set fd [open "[tvf::svrf_var VOLTAGE_TRANSITION_FILE]" \
+    [list RDWR APPEND]] 
+  set net_names [<a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> $net -fromTop] 
+  foreach new_pattern_net $net_names { 
+    puts $fd "<a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByPlacement_id6c10ba02.html#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb__Command_PercdefineNetTypeByPlacement_id6c10ba02.xml#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb" title="Assigns a net type to nets that are connected to selected placements.">perc::define_net_type_by_placement</a> VT_net_type \
+      \"$new_pattern_net\"" 
+    puts $fd "<a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a> 1.8 \
+      \"$new_pattern_net\"" 
+  } 
+  close $fd 
+} </code></pre><p class="p">This procedure writes commands
+to the voltage transition file generated by the Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id4a76ef1d-d162-4faf-a2cd-fe62dd0bb84f">6</a> code. In this case, the stepped-down
+voltage for a transition supply net is assumed to be 1.8 volts.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf1c2f123-ee93-4ed9-a5f5-6f1938e2a418"><span class="ph cmd" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id69f1c541-27a2-44a6-a8bd-9b831f87c67a">Add this code to the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Identifies the level shifters and transition nets 
+proc identify_level_shifter {} { 
+  <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> -type {MN} -condition cond_pattern \
+    -comment "Identify level shifter." 
+} 
+ 
+proc cond_pattern {dev} { 
+# If the level shifter supply net names are consistent throughout  
+# the design, comment out this command and use the following one 
+# instead. 
+  set patIter [<a class="xref fm:HeadingOnly" href="Command_PercgetOnePattern_id0b6dc0fc.html#id0b6dc0fc-6241-4679-9c86-7d0be6871edb__Command_PercgetOnePattern_id0b6dc0fc.xml#id0b6dc0fc-6241-4679-9c86-7d0be6871edb" title="Creates a pattern iterator.">perc::get_one_pattern</a> -patternType "level_shifter" \
+    -patternNode [list "Mn1" $dev] \
+    -patternPortsShortable YES \
+    -patternSupplyPorts [list DYNAMIC [list derived_power]]] 
+# set patIter [perc::get_one_pattern -patternType "level_shifter" \
+#   -patternNode [list "Mn1" $dev] \
+#   -patternPortsShortable YES] 
+ 
+  if {$patIter ne ""} { 
+# Found derived voltage nets. Write them out. 
+    set net_list [<a class="xref fm:HeadingOnly" href="Command_PercgetNetsInPattern_id57a3e94b.html#id57a3e94b-bbd0-4389-86de-6ccb8d6b8137__Command_PercgetNetsInPattern_id57a3e94b.xml#id57a3e94b-bbd0-4389-86de-6ccb8d6b8137" title="Returns a list of net iterators from a matched pattern.">perc::get_nets_in_pattern</a> $patIter \
+      -name derived_power] 
+    set anchor_net [lindex $net_list 0] 
+# Now save the transition to net the separate file 
+    write_voltage_transition_net $anchor_net 
+# If RUN_DEBUG is set, do this 
+    if {$::debug} { 
+      <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> \
+        -title "Found Level Shifter structure" \
+        -list [<a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInPattern_idaa4801f2.html#idaa4801f2-6232-41a4-8661-57ec3ea1aaee__Command_PercgetInstancesInPattern_idaa4801f2.xml#idaa4801f2-6232-41a4-8661-57ec3ea1aaee" title="Returns a list of instance iterators from a matched pattern.">perc::get_instances_in_pattern</a> $patIter] 
+      return 1 
+    } 
+  } 
+  return 0 
+} 
+ 
+*/] </code></pre><p class="p">These procedures identify level
+shifters in the design according to the <span class="ph filepath">pattern.sp</span> file created
+in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id42714312-cd9b-49f9-b146-12879bc3e999">2</a>. The cond_pattern procedure
+calls the procedure created in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id43da1da9-0cf7-4719-ac39-2df33202eaf7">8</a> to write out transition supply
+nets. It also writes out results when level shifters are identified
+and the RUN_DEBUG environment variable is set, which is checked
+by the code in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida76a9a19-64c6-4cf2-a3df-078bc49fa3ce">7</a>. This concludes the pattern_analysis
+TVF FUNCTION block started in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id239b52b5-2493-430a-9a2a-ab0e6fbf9a98">4</a>.</p>
+<p class="p">The perc::get_one_pattern -patternSupplyPorts
+DYNAMIC option (with a port list) is used in this code because power
+and ground names in the pattern template may not be used consistently
+throughout the design. (The DYNAMIC option can adversely affect performance,
+but in cases where supply net names are inconsistent in the design, DYNAMIC
+must be used.) If power and ground names are consistent throughout
+the design, it is preferable to use the commented-out command in
+the cond_pattern proc instead.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id403684a8-7446-4d40-831b-86db57c24f00"><span class="ph cmd">Save the currently-open file
+as <span class="ph filepath">rules.pattern_identification</span> and add this
+statement to your control file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">INCLUDE</a> rules.pattern_identification </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida9158c6d-be70-446b-bad2-f7bff6a14e32"><span class="ph cmd">Add the following statement
+to your control file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Variable', 'svrf_ur'); return false;">VARIABLE</a> VOLTAGE_TRANSITION_FILE "./voltage_transition.tcl" </code></pre><p class="p">This variable corresponds to
+the code entered in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id4a76ef1d-d162-4faf-a2cd-fe62dd0bb84f">6</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id2b00accf-702b-46b0-b46a-4dc5e18b5c3a"><span class="ph cmd">Open a new file in your text
+editor and add this code:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>PERC LOAD VA INIT va_init SELECT rule_va 
+ 
+TVF FUNCTION VA [/* 
+package require CalibreLVS_PERC 
+ 
+  proc va_init {} { </code></pre><p class="p">This is the start of the voltage
+check rules.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idaa95fec1-9fde-43ed-80b1-2019b22c6460"><span class="ph cmd">Add the following code to
+the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Global power 
+  <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> "Power"   {VCC3P3} 
+  <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> 3.3 VCC3P3 
+ 
+  perc::define_net_type "Ground"  {lvsGround} </code></pre><p class="p">Global power is defined as
+VCC3P3 and is assigned a voltage of 3.3. The ground name is taken
+from the LVS Ground Name statement in the control file.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida507f204-536f-4d04-975f-ea0ddb13be46"><span class="ph cmd">Add the following code to
+the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Load the voltage transition net identifier file 
+  if { [file exists [tvf::svrf_var VOLTAGE_TRANSITION_FILE]] } {  
+    source [tvf::svrf_var VOLTAGE_TRANSITION_FILE]  
+  } </code></pre><p class="p">This loads the voltage transition
+file generated by the code from Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id4a76ef1d-d162-4faf-a2cd-fe62dd0bb84f">6</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id8035a635-5cd3-4578-8cc3-536f8a24bacc"><span class="ph cmd">Add the following command
+to generate the voltage propagation path:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Propagate voltage through MOS s/d pins with breaks at supply nets     
+<a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> -type {MP MN} \
+      -break {GROUND || POWER || VT_net_type} -pin {S D} </code></pre><p class="p">The VT_net_type is defined
+by the <span class="ph filepath">voltage_transition.tcl</span> file generated
+by the code in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf1c2f123-ee93-4ed9-a5f5-6f1938e2a418">9</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__iddeba47e8-eacb-41ad-a22a-f353621a9c21"><span class="ph cmd">Add the following code to
+the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Default is not to run the debug commands 
+  set ::debug 0 
+ 
+# If RUN_DEBUG is set, run the debug commands 
+  if {[info exists ::env(RUN_DEBUG)]} { 
+    set ::debug 1 
+  } 
+} ; # end of va_init </code></pre><p class="p">This code controls debugging
+features to be added to the rules later. This also concludes the
+va_init initialization procedure started in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id2b00accf-702b-46b0-b46a-4dc5e18b5c3a">12</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf53bd7dc-19cd-4ac9-8272-23d60c497586"><span class="ph cmd">Add the following code to
+the open file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Identifies voltage problems for PMOS_LV devices 
+proc rule_va {} { 
+  <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> -type {MP} -subtype {PMOS_LV} \
+    -condition voltage_error_check \
+    -comment "PMOS_LV supply must be 1.8V" 
+} 
+ 
+proc voltage_error_check {dev} { 
+  set vs_max [<a class="xref fm:HeadingOnly" href="Command_PercvoltageMax_ida5217c7b.html#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee__Command_PercvoltageMax_ida5217c7b.xml#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee" title="Returns the maximum voltage for an instance’s pin.">perc::voltage_max</a> $dev "s"] 
+  set vd_max [perc::voltage_max $dev "d"] 
+  set fail 0 
+ 
+# If RUN_DEBUG is set, show the device in the transcript 
+  if {$::debug} { 
+    puts "DEBUG (voltage_error_check): Working on device \
+      [<a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> $dev -fromTop]" 
+    puts "        vs_max = $vs_max vd_max = $vd_max" 
+  } 
+ 
+  if {$vd_max &gt; 1.8} { 
+    <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> \
+     -title "Voltage limit check failure: $vd_max &gt; 1.8"     
+    set fail 1 
+  } 
+ 
+  if {$vs_max &gt; 1.8} { 
+    perc::report_base_result \
+      -title "Voltage limit check failure: $vs_max &gt; 1.8" 
+    set fail 1 
+  } 
+  return $fail        
+} 
+ 
+*/] </code></pre><p class="p">These procedures identify PMOS_LV
+devices having over-voltage conditions. They also write out transcript
+data when the RUN_DEBUG environment variable is set, which is checked
+by the code in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__iddeba47e8-eacb-41ad-a22a-f353621a9c21">16</a>. This is also the end of the
+VA TVF FUNCTION block started in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id2b00accf-702b-46b0-b46a-4dc5e18b5c3a">12</a>.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id8f9cd890-80d9-46f8-a186-d2d0235657df"><span class="ph cmd">Save the currently-open file
+as <span class="ph filepath">rules.voltage_check</span> and add this statement
+to your control file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">INCLUDE</a> rules.voltage_check </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id69e0dbde-c140-4bc6-bb05-57ae7bc4f85c"><span class="ph cmd">Set the following environment
+variable and value:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>RUN_DEBUG=1 </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idb6e9056b-1402-4bc2-be1f-d33abd51ff09"><span class="ph cmd">Assume this is your source
+netlist called <span class="ph filepath">src.net</span>:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>******************************************* 
+.SUBCKT LSHIFT1 b1 b2 vout vcca vss 
+M9 local1 b1 vcca vcca PMOS_HV L=65e-9 W=2e-6 
+M10 vout b1 local1 vcca PMOS_HV L=65e-9 W=2e-6 
+M11 vout b2 vss vss NMOS_HV 
+.ENDS 
+******************************************* 
+.SUBCKT LSHIFT2 b1 b2 vcc_out vcca vss 
+M25 local1 b1 vcca vcca PMOS_HV L=65e-9 W=2e-6 
+M26 vcc_out b1 local1 vcca PMOS_HV L=65e-9 W=2e-6 
+M27 vcc_out b2 vss vss NMOS_HV 
+.ENDS 
+******************************************* 
+.SUBCKT INV_LV vin gnd in out 
+M12 vin in out vin PMOS_LV L=65e-9 W=2e-6 
+M13 gnd in out gnd NMOS_LV L=65e-9 W=2e-6 
+.ENDS 
+******************************************* 
+.SUBCKT INV_HV vdd gnd in out 
+M6 vdd in out vdd PMOS_HV L=65e-9 W=2e-6 
+M7 gnd in out gnd NMOS_HV L=65e-9 W=2e-6 
+.ENDS 
+******************************************* 
+.SUBCKT C1 vddhv vddlv gnd in out 
+XINV_LV vddlv gnd in N1 INV_LV 
+M8 vdd N1 N2 vdd PMOS_HV L=65e-9 W=2e-6 
+XINV_HV vddhv gnd N2 out INV_HV 
+.ENDS 
+******************************************* 
+.SUBCKT TOP VCC3P3 GND IN OUT BIAS1 BIAS2 
+R1 IN N1 450.0 
+XC1 VCC_3P3 VOUT1P8 GND N1 OUT C1 
+Xlshift1 BIAS1 BIAS2 VOUT1P8 VCC3P3 GND LSHIFT1 
+Xlshift2 BIAS1 BIAS2 VCC1P8 VCC3P3 GND LSHIFT2 
+XINV_LV1 VCC1P8 GND IN OUT INV_LV 
+.ENDS 
+******************************************* </code></pre><p class="p">Add the following statements
+to your control file:</p>
+<pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">SOURCE PATH</a> "src.net" 
+SOURCE PRIMARY TOP 
+SOURCE SYSTEM SPICE 
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Netlist', 'svrf_ur'); return false;">PERC NETLIST</a> SOURCE 
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Report', 'svrf_ur'); return false;">PERC REPORT</a> "perc.report" </code></pre></div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf98c9e8e-767d-4731-a0ed-28c6e5bd0ed3"><span class="ph cmd">Execute the following command:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -perc -hier rules |tee log </code></pre><p class="p">where <span class="keyword ParameterName OptionalReplaceable">rules</span> is
+your control file.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id8eabf80a-54c8-49e1-afa2-839b0ededceb"><span class="ph cmd">Review the <span class="ph filepath">log</span> file.
+Because the RUN_DEBUG environment variable was set in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id69e0dbde-c140-4bc6-bb05-57ae7bc4f85c">19</a>, you should see the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>DEBUG (voltage_error_check): Working on device XINV_LV1/M12 
+        vs_max = 1.8 vd_max = 1.8 
+DEBUG (voltage_error_check): Working on device XC1/XINV_LV/M12 
+        vs_max = 1.8 vd_max = 1.8 </code></pre><p class="p">Here you can see the device
+instance in <span class="ph filepath">src.net</span> that was checked. The voltage
+values are acceptable.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id2cf01037-cdee-4823-8ed8-1cbdc7d5e21d"><span class="ph cmd">Review the <span class="ph filepath">perc.report</span> file.
+Because the RUN_DEBUG environment variable was set in Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id69e0dbde-c140-4bc6-bb05-57ae7bc4f85c">19</a>, you should see the following
+results in the CELL SUMMARY section:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>Status      Result Count  Cell 
+---------   ------------  -------------- 
+COMPLETED   0 (0)         INV_HV 
+COMPLETED   0 (0)         INV_LV 
+COMPLETED   1 (1)         LSHIFT1 
+COMPLETED   1 (1)         LSHIFT2 
+COMPLETED   0 (0)         C1 
+COMPLETED   0 (0)         TOP </code></pre><p class="p">Under the CELL VERIFICATION
+RESULTS section, you will see the details for the failures in the
+LSHIFT1 and LSHIFT2 cells. These are reported due to the code entered in
+Step <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf1c2f123-ee93-4ed9-a5f5-6f1938e2a418">9</a>. </p>
+<p class="p">These are not actual errors;
+rather, they are debugging analysis aids indicating level shifter
+circuits matching the <span class="ph filepath">pattern.sp</span> template have
+been identified. If you disable the RUN_DEBUG environment variable,
+these results will not be reported.</p>
+</div></li>
+<li class="li step stepexpand" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__idde19dd7e-d3ed-4d1c-80a9-0ff5fa8d1342"><span class="ph cmd">Review the <span class="ph filepath">voltage_transition.tcl</span> file.
+You will see commands in it like this:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByPlacement_id6c10ba02.html#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb__Command_PercdefineNetTypeByPlacement_id6c10ba02.xml#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb" title="Assigns a net type to nets that are connected to selected placements.">perc::define_net_type_by_placement</a> VT_net_type  "VOUT1P8" 
+<a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a> 1.8  "VOUT1P8" 
+perc::define_net_type_by_placement VT_net_type  "VCC1P8" 
+perc::define_net_voltage_by_placement 1.8  "VCC1P8" </code></pre><p class="p">These commands are the result
+of the code entered in Steps <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id4a76ef1d-d162-4faf-a2cd-fe62dd0bb84f">6</a>, <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__id43da1da9-0cf7-4719-ac39-2df33202eaf7">8</a>, <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__idf1c2f123-ee93-4ed9-a5f5-6f1938e2a418">9</a>, and <a class="xref fm:NumberOnlyBlack" href="#idd4ec981a-bdf7-4059-9a2e-21091d32469a__ida9158c6d-be70-446b-bad2-f7bff6a14e32">11</a>. The VOUT1P8 and VCC1P8 nets
+are the transition supply nets. They are assigned values of 1.8
+volts. The VT_net_type is the transition net type.</p>
+<p class="p">When this file is complete
+for the whole design, keep it for future verification runs.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The complete rule files for this
+example are as follows.</p>
+<div class="fig fignone ExampleTitle" id="idd4ec981a-bdf7-4059-9a2e-21091d32469a__id424c53a9-5c0e-4533-9d6c-2cc7965287b1"><span class="figcap"><span class="fig--title-label">Example 1. </span>Level Shifter Voltage
+Check</span></div>
+<p class="p">Control rule file:</p>
+<pre class="pre codeblock leveled"><code>// Supply specifications 
+LVS POWER  NAME vcc? 
+LVS GROUND NAME gnd?  
+ 
+PERC PATTERN PATH pattern.sp 
+ 
+// Rule file that does the pattern identification. 
+// Once the level shifters and transition nets are 
+// properly identified, these rules are not needed 
+// in the flow. 
+INCLUDE rules.pattern_identification 
+ 
+VARIABLE VOLTAGE_TRANSITION_FILE "./voltage_transition.tcl" 
+ 
+// Rule file that does the voltage check 
+INCLUDE rules.voltage_check 
+ 
+// Input and output statements 
+SOURCE PATH "src.net"   
+SOURCE PRIMARY TOP 
+SOURCE SYSTEM SPICE 
+PERC NETLIST SOURCE 
+PERC REPORT "perc.report" 
+ 
+MASK SVDB DIRECTORY "svdb" QUERY </code></pre><p class="p">Pattern identification rule file:</p>
+<pre class="pre codeblock leveled"><code>// rules.pattern_identification 
+ 
+PERC LOAD pattern_analysis INIT pattern_init  
+  SELECT identify_level_shifter  
+ 
+TVF FUNCTION pattern_analysis [/* 
+package require CalibreLVS_PERC 
+ 
+  proc pattern_init {} { 
+ 
+    perc::define_net_type "Power"   {lvsPower} 
+    perc::define_net_type "Ground"  {lvsGround} </code></pre><pre class="pre codeblock leveled"><code># Open the transition net file and write the header 
+    set fd [open "[tvf::svrf_var VOLTAGE_TRANSITION_FILE]" w] 
+    puts $fd "######################################################" 
+    puts $fd "# Date: [exec date]" 
+    puts $fd "# Generated file containing voltage transition nets" 
+    puts $fd "######################################################" 
+    puts $fd "" 
+    puts $fd "## Placeholder for VT net type" 
+    puts $fd "" 
+    close $fd</code></pre><pre class="pre codeblock leveled"><code># Default is not to run the debug commands 
+    set ::debug 0 
+ 
+# If RUN_DEBUG is set, run the debug commands 
+    if {[info exists ::env(RUN_DEBUG)]} { 
+      set ::debug 1 
+    } 
+  } ; # end of pattern_init 
+ 
+# Utility procedure to write out identified voltage transition nets 
+  proc write_voltage_transition_net {net} { 
+    set fd [open "[tvf::svrf_var VOLTAGE_TRANSITION_FILE]" \
+      [list RDWR APPEND]] 
+    set net_names [perc::name $net -fromTop] 
+    foreach new_pattern_net $net_names { 
+      puts $fd "perc::define_net_type_by_placement VT_net_type \
+        \"$new_pattern_net\"" 
+      puts $fd "perc::define_net_voltage_by_placement 1.8 \
+        \"$new_pattern_net\"" 
+    } 
+    close $fd 
+  } 
+ 
+# Identifies level shifters and transition nets 
+  proc identify_level_shifter {} { 
+    perc::check_device -type {MN} -condition cond_pattern \
+      -comment "Identify level shifter." 
+  }</code></pre><pre class="pre codeblock leveled"><code>  proc cond_pattern {dev} { 
+# If the level shifter supply net names are consistent throughout  
+# the design, comment out this command and use the following one 
+# instead. 
+    set patIter [perc::get_one_pattern -patternType "level_shifter" \
+     -patternNode [list "Mn1" $dev] \
+     -patternPortsShortable YES \
+     -patternSupplyPorts [list DYNAMIC [list derived_power]]] 
+#   set patIter [perc::get_one_pattern -patternType "level_shifter" \
+#    -patternNode [list "Mn1" $dev] \
+#    -patternPortsShortable YES] 
+ 
+    if {$patIter ne ""} { 
+# Found derived voltage nets. write them out. 
+      set net_list [perc::get_nets_in_pattern $patIter \
+        -name derived_power] 
+      set anchor_net [lindex $net_list 0] 
+# Now save the transition to net the separate file 
+      write_voltage_transition_net $anchor_net 
+# If RUN_DEBUG is set, do this 
+      if {$::debug} { 
+        perc::report_base_result \
+          -title "Found Level Shifter structure" \
+          -list [perc::get_instances_in_pattern $patIter] 
+        return 1 
+      } 
+    } 
+    return 0 
+  } 
+ 
+*/]</code></pre><p class="p">Voltage check rules:</p>
+<pre class="pre codeblock leveled"><code>// rules.voltage_check 
+ 
+PERC LOAD VA INIT va_init SELECT rule_va 
+ 
+TVF FUNCTION VA [/* 
+package require CalibreLVS_PERC 
+ 
+  proc va_init {} { 
+ 
+# Global power 
+    perc::define_net_type "Power"   {VCC3P3} 
+    perc::define_net_voltage 3.3 VCC3P3 
+ 
+    perc::define_net_type "Ground"  {lvsGround} 
+ 
+# Load the voltage transition net identifier file 
+    if { [file exists [tvf::svrf_var VOLTAGE_TRANSITION_FILE]] } {  
+      source [tvf::svrf_var VOLTAGE_TRANSITION_FILE]  
+    } </code></pre><pre class="pre codeblock leveled"><code># Propagate voltage through MOS s/d pins with breaks at supply nets     
+    perc::create_voltage_path -type {MP MN} \
+      -break {GROUND || POWER || VT_net_type} -pin {S D}   
+ 
+# Default is not to run the debug commands 
+    set ::debug 0 
+ 
+# If RUN_DEBUG is set, run the debug commands 
+    if {[info exists ::env(RUN_DEBUG)]} { 
+      set ::debug 1 
+    } 
+  } ; # end of va_init </code></pre><pre class="pre codeblock leveled"><code># Identifies voltage problems for PMOS_LV devices 
+  proc rule_va {} { 
+    perc::check_device -type {MP} -subtype {PMOS_LV} \
+      -condition voltage_error_check \
+      -comment "PMOS_LV supply must be 1.8V" 
+  } 
+ 
+  proc voltage_error_check {dev} { 
+    set vs_max [perc::voltage_max $dev "s"] 
+    set vd_max [perc::voltage_max $dev "d"] 
+    set fail 0</code></pre><pre class="pre codeblock leveled"><code># If RUN_DEBUG is set, show the device in the transcript 
+    if {$::debug} { 
+      puts "DEBUG (voltage_error_check): Working on device \
+        [perc::name $dev -fromTop]" 
+      puts "        vs_max = $vs_max vd_max = $vd_max" 
+    } 
+ 
+    if {$vd_max &gt; 1.8} { 
+      perc::report_base_result \
+        -title "Voltage limit check failure: $vd_max &gt; 1.8"     
+      set fail 1 
+    } 
+ 
+    if {$vs_max &gt; 1.8} { 
+      perc::report_base_result \
+        -title "Voltage limit check failure: $vs_max &gt; 1.8" 
+      set fail 1 
+    } 
+ 
+    return $fail 
+  } 
+ 
+*/]</code></pre><p class="p">If you do not set the RUN_DEBUG
+environment variable, then the debugging information is not written
+to the transcript and the identify_level_shifter check produces
+no results for level shifters that match the <span class="ph filepath">pattern.sp</span> file.</p>
+<p class="p">Once you are confident you have
+all level shifters and transition nets identified, you can comment
+out this statement in the control file:</p>
+<pre class="pre codeblock leveled"><code>// INCLUDE rules.pattern_identification </code></pre><p class="p">This saves the overhead of running
+the check in that file. Before you do this, ensure the <span class="ph filepath">voltage_transition.tcl</span> file
+is complete.</p>
+<p class="p">If your supply net names are consistent
+with your <span class="ph filepath">pattern.sp</span> file throughout your design,
+you can comment out this section of the cond_pattern proc:</p>
+<pre class="pre codeblock leveled"><code># set patIter [perc::get_one_pattern -patternType "level_shifter" \
+#  -patternNode [list "Mn1" $dev] \
+#  -patternPortsShortable YES \
+#  -patternSupplyPorts [list DYNAMIC [list derived_power]]] </code></pre><p class="p">and activate this section instead:</p>
+<pre class="pre codeblock leveled"><code>set patIter [perc::get_one_pattern -patternType "level_shifter" \
+  -patternNode [list "Mn1" $dev] \
+  -patternPortsShortable YES] </code></pre><p class="p">This has better performance than
+dynamic port matching.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/TaskTop_ExampleCheckingPinVoltageConditions_id3d0bc126.html" title="This example shows the use of perc::voltage to find MOS devices that meet certain pin conditions.">Example: Checking Pin Voltage Conditions</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Checking for High Voltage Conditions Involving Level Shifter Circuits"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExampleCheckingHighVoltageConditionsInvolvingLevelShifterCircuits_idd4ec981a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

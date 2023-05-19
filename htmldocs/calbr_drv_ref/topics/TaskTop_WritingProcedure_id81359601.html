@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Writing a Procedure" />
+<meta name="abstract" content="You now write a Tcl procedure to print out the children of a given cell and then invoke the procedure. You define a Tcl procedure by specifying what it is called, the arguments it takes, and what it does." />
+<meta name="description" content="You now write a Tcl procedure to print out the children of a given cell and then invoke the procedure. You define a Tcl procedure by specifying what it is called, the arguments it takes, and what it does." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id81359601-b48b-4718-8859-a22d1d261d4a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Writing a Procedure</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Writing a Procedure" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id81359601-b48b-4718-8859-a22d1d261d4a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Writing
+a Procedure</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You now write
+a Tcl procedure to print out the children of a given cell and then
+invoke the procedure. You define a Tcl procedure by specifying what
+it is called, the arguments it takes, and what it does.</p>
+<p class="p">As you do not know the number of levels of
+cells in the layout database, you need to use either a recursive
+or an iterative procedure to navigate the cell hierarchy. Recursion
+is used here, as it is generally more compact and useful when considering
+objects with a complex nested list structure.</p>
+<p class="p">When a procedure calls itself, it is called
+a recursive procedure. Our procedure calls itself as many times
+as needed, until it reaches a cell that has no children. It then
+pops back up one level of the hierarchy and looks for children in
+the next cell.</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id81359601-b48b-4718-8859-a22d1d261d4a__id85bf81c2-10fa-488a-a8e8-9de3ae6e7e01"><span class="ph cmd">Type or copy the following
+Tcl procedure:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>proc proc_cell_tree { L F {C ""} {Indent ""} } { 
+		if {$C == ""} { 
+			set C [$L topcell] 
+		} 
+		puts $F "$Indent --&gt; $C" 
+		append Indent " " 
+		foreach child [$L children $C] { 
+			proc_cell_tree $L $F $child $Indent 
+		} 
+	} </code></pre><p class="p">Tcl procedures always take
+the form:</p>
+<pre class="pre codeblock leveled"><code>proc <span class="keyword ParameterName OptionalReplaceable">procName</span> <span class="keyword ParameterName OptionalReplaceable">arguments</span> <span class="keyword ParameterName OptionalReplaceable">body</span></code></pre><p class="p">Where:</p>
+<ul class="ul"><li class="li" id="id81359601-b48b-4718-8859-a22d1d261d4a__id5ca45f94-be1e-41ff-b630-33a2be60f5c5"><p class="p">proc is the Tcl command
+that creates a procedure.</p>
+</li>
+<li class="li" id="id81359601-b48b-4718-8859-a22d1d261d4a__idb7b88896-3c91-4946-b34d-0ae848b08ebf"><p class="p"><span class="keyword ParameterName OptionalReplaceable">procName</span> is
+the name of the procedure. In this example the name of the procedure
+is “proc_cell_tree”.</p>
+</li>
+<li class="li" id="id81359601-b48b-4718-8859-a22d1d261d4a__id2c162be8-d01f-4034-9020-50cbc17b51a9"><p class="p"><span class="keyword ParameterName OptionalReplaceable">arguments</span> is
+a list of arguments for this procedure and the specified arguments
+are always enclosed in braces ({}). In this example, the argument
+list contains four arguments, and within the body of the procedure,
+these arguments are used as variables:</p>
+<pre class="pre codeblock"><code>{L F {C ""} {Indent ""}}</code></pre><p class="p">The first two arguments, L
+and F, are represented by their names alone because they have no
+default values. The last two arguments, C and Indent, are enclosed
+in braces because they have default values, in both cases being
+an empty string.</p>
+</li>
+<li class="li" id="id81359601-b48b-4718-8859-a22d1d261d4a__idb189d273-7a3a-4010-a422-5cdbe17e811f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">body</span> contains
+the commands that will be evaluated when the procedure is invoked
+and is also enclosed in braces. The Tcl interpreter understands
+that everything between the open and close braces forms the body
+of the procedure, even if it spans multiple lines and contains multiple commands.
+You can think of a procedure as a mini-script. It contains any commands needed
+to perform its processing.</p>
+<p class="p">The body of the procedure first
+checks to see if you passed it a cell name. If you did not, the
+value of C is “”, which is the default value. In this case, the procedure
+extracts the cell name using the “$mylayout topcell” instance command.</p>
+<pre class="pre codeblock leveled"><code>if {$C == ""} { 
+	set C [$L topcell] 
+} </code></pre></li>
+</ul>
+<p class="p">Next the procedure writes the
+name of the cell it is processing to the output file. $Indent and
+“--&gt;” add formatting to the output to help visualize the layout hierarchy.</p>
+<pre class="pre codeblock leveled"><code>puts $F "$Indent --&gt; $C" </code></pre><p class="p">The Tcl command, append, adds
+more characters to an existing variable (in this case, $Indent).
+Here it is used to show the layout hierarchy graphically, forcing
+the name of a child cell to be indented relative to the name of
+the parent cell.</p>
+<pre class="pre codeblock leveled"><code>append Indent " " </code></pre><p class="p">The last thing the procedure
+does is cycle through the children of the cell, invoking itself
+to print their names and children.</p>
+<pre class="pre codeblock leveled"><code>foreach child [$L children $C] { 
+		proc_cell_tree $L $F $child $Indent 
+	} </code></pre><p class="p">The foreach command creates
+a <span class="ph FontProperty emphasis">loop variable</span> (child)
+and assigns it the values resulting from processing the command
+in brackets. It cycles through the values one at a time, evaluating
+the commands between the braces ({}).</p>
+</div></li>
+<li class="li step stepexpand" id="id81359601-b48b-4718-8859-a22d1d261d4a__idab71f0cb-2a11-445a-8a85-dbadfa1bc7a8"><span class="ph cmd">Invoke the previously-created
+procedure to write the children of the topcell to the file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>proc_cell_tree $mylayout $fileID</code></pre></div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ExampleScript_id91446712.html" title="Typically, the Calibre layout viewers are accessed using the Calibre DESIGNrev GUI. Alternatively, layout viewer batch commands can be used. Additionally, these commands can be combined into stand-alone programs called scripts. Scripts are a simple way to string together a series of batch commands for execution together. It is often useful to develop a script interactively, to see the output of each command as you step through them.">Example Script</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Writing a Procedure"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_WritingProcedure_id81359601.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

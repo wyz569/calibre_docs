@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="RET SIDCUTFILL" />
+<meta name="abstract" content="Calibre RET SIDCUTFILL builds a correct-by-design topology of tracks and cuts, adhering to the spacer-is-dielectric process, and complies to all specified SADP-based design rules. Calibre SADP-specific commands adhere to SVRF standards. A typical SVRF rule file containing SADP-specific commands may also contain other SVRF commands that specify input layers, perform preliminary layer manipulation, and save output layers." />
+<meta name="description" content="Calibre RET SIDCUTFILL builds a correct-by-design topology of tracks and cuts, adhering to the spacer-is-dielectric process, and complies to all specified SADP-based design rules. Calibre SADP-specific commands adhere to SVRF standards. A typical SVRF rule file containing SADP-specific commands may also contain other SVRF commands that specify input layers, perform preliminary layer manipulation, and save output layers." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>RET SIDCUTFILL</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="RET SIDCUTFILL" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">RET SIDCUTFILL</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><p class="p ContextMGC"><a class="xref fm:HeadingOnly" href="Contain_SelfAlignedDoublePatterningCommandReference_idc72e80e5.html#idc72e80e5-78fa-40cf-9eb1-6952a0145aff__Contain_SelfAlignedDoublePatterningCommandReference_idc72e80e5.xml#idc72e80e5-78fa-40cf-9eb1-6952a0145aff" title="The Calibre RET SIDCUTFILL command and associated keywords are an implementation of the spacer-is-dielectric (SID) process for Self-Aligned Double-Patterning (SADP). These commands address topological generation requirements for the SID process. Calibre SADP-specific commands adhere to SVRF standards. A typical SVRF rule file containing SADP-specific commands may also contain other SVRF commands that specify input layers, perform preliminary layer manipulation, and save output layers.">Self-Aligned Double-Patterning Command Reference</a></p>
+<p class="shortdesc">Calibre RET SIDCUTFILL builds a correct-by-design topology
+of tracks and cuts, adhering to the spacer-is-dielectric process,
+and complies to all specified SADP-based design rules. Calibre SADP-specific
+commands adhere to SVRF standards. A typical SVRF rule file containing
+SADP-specific commands may also contain other SVRF commands that
+specify input layers, perform preliminary layer manipulation, and
+save output layers.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><div class="note note"><span class="notetitle">Note:</span> <p class="p">The input layers specified to RET SIDCUTFILL
+are user-defined and can be any name, matching those previously
+specified within the SVRF file. Each input layer name shown here
+has a corresponding keyword that must be specified in the inputLayerOrder
+list in the LITHO FILE statement.</p>
+</div>
+</div>
+<div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName RequiredReplaceable">output_layer</span> = <span class="keyword ParameterName Required">RET</span> <span class="keyword ParameterName Required">SIDCUTFILL</span><br />
+<span class="keyword ParameterName RequiredReplaceable">sadpMarker</span><br />
+[<span class="keyword ParameterName RequiredReplaceable">target</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">criticalTimingMarkers</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">cutCandidates</span>] [<span class="keyword ParameterName OptionalReplaceable">cutCandidates_0</span>] [<span class="keyword ParameterName OptionalReplaceable">cutCandidates_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">cutKeepout</span>] [<span class="keyword ParameterName OptionalReplaceable">cutKeepout_0</span>] [<span class="keyword ParameterName OptionalReplaceable">cutKeepout_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">mandrelAnchor</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">nonMandrelAnchor</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">pitchAlign</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion</span>] [<span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion_0</span>] [<span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">terminationRegion</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">trackPattern</span>] [<span class="keyword ParameterName OptionalReplaceable">trackPattern_0</span>] [<span class="keyword ParameterName OptionalReplaceable">trackPattern_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout</span>] [<span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout_0</span>] [<span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates</span>] [<span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates_0</span>] [<span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">userCuts</span>] [<span class="keyword ParameterName OptionalReplaceable">userCuts_0</span>] [<span class="keyword ParameterName OptionalReplaceable">userCuts_1</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">via</span>] [<span class="keyword ParameterName OptionalReplaceable">via_a</span>] [<span class="keyword ParameterName OptionalReplaceable">via_b</span>] [<span class="keyword ParameterName OptionalReplaceable">via_c</span>]<br />
+<span class="keyword ParameterName Required">FILE</span> <span class="keyword ParameterName RequiredReplaceable">name</span><br />
+<span class="keyword ParameterName Required">MAP</span> <span class="keyword ParameterName RequiredReplaceable">keyword</span></p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The RET SIDCUTFILL command generates a correct-by-design topology
+of tracks implied by target shapes, cuts for all target shapes,
+and outputs errors to assist with debugging where the intended generation
+of these layers fails. RET SIDCUTFILL also generates alternating
+mandrel and non-mandrel layers as required. All tracks and cuts
+adhere to the spacer-is-dielectric (SID) process, and complies with
+all manufacturer-specified SADP design rules.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Output Layer</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idc1a556fb-3eb6-4684-8b9c-2b2a292fcd06"><span class="keyword ParameterName RequiredReplaceable">output_layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required polygonal output layer containing
+generated shapes relevant to all mask-related cut, trim, and mandrel
+shapes to be printed on the wafer.</p>
+<p class="p">RET SIDCUTFILL can output any track, rectangular cut, or error
+layer. The output is always contained within the boundaries of each
+polygon on the sadpMarker layer.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Input Layers</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id7e90238c-5cb0-40c3-999f-d02999c697e9"><span class="keyword ParameterName RequiredReplaceable">sadpMarker</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required input polygonal layer encompassing
+a region of target shapes that RET SIDCUTFILL processes. No shapes
+outside this layer are processed. You can define multiple sadpMarker
+shapes in a single design. The corresponding inputLayerOrder keyword
+is sadpMarker.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id69fd2fcc-584c-4e3b-b6f2-17de71ec90c1"><span class="keyword ParameterName RequiredReplaceable">target</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required input polygonal layer comprising
+patterns to be printed on the wafer. The target layer typically
+has a logical description:</p>
+<pre class="pre codeblock"><code>preliminaryTarget = OR target mandrelAnchor nonMandrelAnchor</code></pre><p class="p">RET SIDCUTFILL requires these shapes to be rectangles (plus possible
+jogs between tracks and pads that span an odd number of tracks),
+and all rectangles on the same track (aligned with X- or Y-axis,
+depending on the specified trackDirection orientation) must be the
+same width. This is enforced within, and not across, the boundaries
+of each polygon on the sadpMarker layer. The corresponding inputLayerOrder
+keyword is target.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The target layer is not required if RET SIDCUTFILL is used
+to derive the target layer. In this case, trackPattern, or trackPattern_0
+and trackPattern_1 layers must be specified.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id626b9e4e-d214-4343-899d-20795dc47cee"><span class="keyword ParameterName OptionalReplaceable">criticalTimingMarkers</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used to
+identify nets considered critical for cut placement. Shapes on the
+criticalTimingMarkers layer must intersect with the associated critical
+net. The post-processed output layer, effectiveCriticalTimingMarkers,
+is subsequently generated internally for final application of the
+user-input markers. Cuts are placed at the ends of each effectiveCriticalTimingMarkers polygon
+where possible. No initial cuts are required. Where cuts are placed
+precisely at line ends sharing a criticalTimingMarkers shape, only
+a sliver at the line-end remains for the shape on the effectiveCriticalTimingMarkers
+layer. RET SIDCUTFILL minimizes the line-end extension for all target
+shapes. However, those nets identified with shapes on the criticalTimingMarkers
+layer are given priority. This prioritization provides line-end extensions
+on these target segments to be minimized, potentially at the expense
+of longer line-end extensions of target segments that are not identified
+as critical. Shapes on the criticalTimingMarkers layer must be a
+subset of the target layer. The corresponding inputLayerOrder keyword
+is criticalTimingMarkers.</p>
+<div class="fig fignone" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id3138cdb7-af24-4388-8e90-c4c29e2dde5c"><span class="figcap"><span class="fig--title-label">Figure 1. </span>criticalTimingMarkers</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/criticalTimingMarkers.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id4b414fb9-c1f0-48ba-a729-eef53f5c649f"><span class="keyword ParameterName OptionalReplaceable">cutCandidates</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used as
+candidates for cut locations. Enables repair flows where most cut
+locations are known, with some needing to be fixed or moved because
+of local target shape changes. The input cutCandidates are used where
+possible, but may be rejected because of spacing errors to other
+cutCandidates, or to additional cuts that are required to satisfy
+local constraints. The corresponding inputLayerOrder keyword is
+cutCandidates.</p>
+<p class="p">Shapes on the cutCandidates layer must comply with the same parameter requirements
+within the LITHO FILE as generated cuts. Any cutCandidates shapes
+that fail compliance are output to the illegalCutCandidates error
+layer. These criteria include:</p>
+<ul class="ul"><li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idb2552f8b-5a90-4898-827f-3a9ecc362ff9"><p class="p">Cuts must
+be rectangular.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id00cb8919-fd5b-4ebb-a6d2-b7ec125eb148"><p class="p">Cuts must not
+intersect any cutKeepout layer.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idfde164ec-a599-4cd6-8ef3-44c377c4ba07"><p class="p">Cut width must
+comply to the specification in the LITHO FILE.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idd4a799ef-3ccd-4cc0-a573-e81899e28e35"><p class="p">Cuts must not
+intersect target shapes (mask-specific if multiple cut masks are
+used).</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id629010d3-bde2-431b-8049-bc1967dbd328"><p class="p">Cut length
+must comply to the specification in the LITHO FILE.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id9e68c05c-0309-4491-80b4-14235229ebd2"><p class="p">All cuts must
+comply with the specified cutOverlap parameter.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idcab18f9b-715b-4c44-816f-7295d479e13c"><span class="keyword ParameterName OptionalReplaceable">cutCandidates_0</span>, <span class="keyword ParameterName OptionalReplaceable">cutCandidates_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers used for the
+same function as cutCandidates, but differentiating dual mask colors.
+The cutCandidates_0 layer is used for the mandrel cut mask and the
+cutCandidates_1 layer for the non-mandrel cut mask. The corresponding
+inputLayerOrder keywords are cutCandidates_0 and cutCandidates_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id60fcec5b-2a14-4259-98ad-c29981c62a7a"><span class="keyword ParameterName OptionalReplaceable">cutKeepout</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used to
+prohibit the placement of cuts for both masks. All cutKeepout shapes
+that touch or overlap generated tracks define regions where no cut
+shapes can be placed. The corresponding inputLayerOrder keyword
+is cutKeepout.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idcc72b9f8-0ca3-4f34-9d81-7918bbee8391"><span class="keyword ParameterName OptionalReplaceable">cutKeepout_0</span>, <span class="keyword ParameterName OptionalReplaceable">cutKeepout_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers performing
+the same function as cutKeepout, but differentiating dual mask colors.
+Used to prohibit the placement of cuts for dual mask layers. The
+cutKeepout_0 layer is used for mandrel cut keepouts and the cutKeepout_1
+layer for non-mandrel cut keepouts. The corresponding inputLayerOrder keywords
+are cutKeepout_0 and cutKeepout_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id7006bca9-517d-44c2-8ff1-3dd69b0b1b80"><span class="keyword ParameterName OptionalReplaceable">mandrelAnchor</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer comprising
+shapes used to assign target shapes to a mandrel track. Any target
+shape touching or overlapping any shape on the mandrelAnchor layer
+is assigned to the mandrel mask. The corresponding inputLayerOrder
+keyword is mandrelAnchor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id88fb2436-f4a5-4446-a1fc-604b4fca7dda"><span class="keyword ParameterName OptionalReplaceable">nonMandrelAnchor</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer comprising
+shapes used to assign target shapes to a non-mandrel track. Any
+target shape touching or overlapping any shape on the nonMandrelAnchor
+layer is assigned to the non-mandrel mask. The corresponding inputLayerOrder
+keyword is nonMandrelAnchor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id3d565738-f2fb-4869-abce-cca32d50acc7"><span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used to
+define the region where sinuous cut exceptions are allowed. This
+input layer may be used in single cut mask or two cut mask mode.
+The corresponding inputLayerOrder keyword is sinuousCutRegion.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idfdc92b43-5e72-47d9-8d38-ed2fa910762a"><span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion_0</span>, <span class="keyword ParameterName OptionalReplaceable">sinuousCutRegion_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers used to define
+the region where sinuous cut exceptions are allowed, but differentiating
+two mask colors. In two cut mask mode, the sinuous cut regions may
+be specified for two masks independently. If sinuousCutRegion is
+also specified, then the effective region of allowed sinuous cuts
+is the logical OR of the sinuousCutRegion layer and the sinuousCutRegion_0
+or sinuousCutRegion_1 layers. The sinuousCutRegion_0 layer identifies
+regions allowing sinuous cuts over non-mandrel tracks and the sinuousCutRegion_1
+layer identifies regions allowing sinuous cuts over mandrel tracks.
+The corresponding inputLayerOrder keywords are sinuousCutRegion_0
+and sinuousCutRegion_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id806a00b5-744f-41ab-891c-a18396b5eaea"><span class="keyword ParameterName OptionalReplaceable">terminationRegion</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer
+containing shapes that surround areas of previously determined tracks
+that may require subsequent modification outside the sadpMarker
+layer by either terminalDummyTrackWidth or terminationWidthSequence
+parameters. The terminationRegion layer can only include polygons
+touching one track-direction edge of the sadpMarker layer. If it
+includes polygons touching two or more different track-direction
+edges, an error message is output, and the terminationRegion is
+not extended to cover those edges.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id8371c7ed-794e-43a8-9cc9-7f18f46c99c2"><span class="keyword ParameterName OptionalReplaceable">trackPattern</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used to
+define all tracks. By default, tracks are computed as implied by
+shapes on the target. Since RET SIDCUTFILL may fill various gaps
+between shapes on the target and the sadpMarker layer, if the computed
+tracks do not match user intent, or the dummy tracks do not satisfactorily
+fill the spaces between tracks, the trackPattern layer may be used
+to define the tracks instead. The trackPattern layer consists of
+polygons inside the sadpMarker delineating all track locations. These
+polygons do not have to span the entire sadpMarker region. All shapes
+on the trackPattern layer must be rectangles. The corresponding
+inputLayerOrder keyword is trackPattern.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If the target layer is not specified, the trackPattern,
+or trackPattern_0 and trackPattern_1 layers must be specified for
+target layer derivation by RET SIDCUTFILL. </p>
+</div>
+<p class="p">Although allowable, Siemens EDA recommends the trackPattern layer
+not contain jogs. If the trackPattern layer is present, no further
+attempt is made by RET SIDCUTFILL to compute tracks.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__ide283e412-0edf-43fd-84b7-945908099ed5"><span class="keyword ParameterName OptionalReplaceable">trackPattern_0</span>, <span class="keyword ParameterName OptionalReplaceable">trackPattern_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers performing
+the same function as trackPattern, but differentiating dual mask
+colors. These input layers can be used in conjunction where the
+derivedTarget output layer is required. The trackPattern_0 layer
+is used for mandrel track patterns and the trackPattern_1 layer
+for non-mandrel track patterns. The corresponding inputLayerOrder
+keywords are trackPattern_0 and trackPattern_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idb91aaba2-11e4-4294-b5ad-88399c0a7d2e"><span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layer for single
+masks used to prohibit the placement of trim masks. Where trimMaskKeepout
+shapes touch or overlap generated tracks define regions in which
+no trim mask can be placed. The corresponding inputLayerOrder keyword
+is trimMaskKeepout.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id996e5a76-7e7c-47a7-9943-523955679848"><span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout_0</span>, <span class="keyword ParameterName OptionalReplaceable">trimMaskKeepout_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers differentiating
+dual mask colors used to prohibit the placement of trim masks. Where
+trimMaskKeepout shapes touch or overlap generated tracks define
+regions in which no trim mask can be placed. The trimMaskKeepout_0
+layer is used for mandrel trim mask keepouts and the trimMaskKeepout_1
+layer for non-mandrel trim mask keepouts. The corresponding inputLayerOrder
+keywords are trimMaskKeepout_0 and trimMaskKeepout_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id61e09dfd-041c-42f9-b248-c5bc6851960e"><span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used as
+candidates for cut locations that cannot be moved. Cuts on this
+layer disable repair flows where cuts may need to be fixed or moved
+because of local target shape changes or spacing errors. The corresponding
+inputLayerOrder keyword is unmovableCutCandidates.</p>
+<p class="p">Shapes on the unmovableCutCandidates layer must comply with the
+same parameter requirements within the LITHO FILE as generated cuts,
+and must pass compliance in the same way as cutCandidates. All unmovableCutCandidates
+shapes that fail compliance are output to the illegalCutCandidates
+error layer. For compliance information, see cutCandidates.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id29e4354e-210b-473f-a96e-a99a4b293bc5"><span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates_0</span>, <span class="keyword ParameterName OptionalReplaceable">unmovableCutCandidates_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers differentiating
+dual mask colors used as candidates for cut locations that cannot
+be moved. Cuts on these layers disable repair flows where cuts may
+need to be fixed or moved because of local target shape changes
+or spacing errors. The unmovableCutCandidates_0 layer is used for
+the mandrel cut mask and the unmovableCutCandidates_1 layer for
+the non-mandrel cut mask. The corresponding inputLayerOrder keywords
+are unmovableCutCandidates_0 and unmovableCutCandidates_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id92beb4a4-8e81-4f2f-97d2-0485806086b8"><span class="keyword ParameterName OptionalReplaceable">userCuts</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional input polygon layer used to
+define a layer comprising user-defined cut shapes. Although non-rectangular
+user-defined cuts are processed, it is advisable to define cuts
+only as rectangles to avoid unexpected processing results. The corresponding
+inputLayerOrder keyword is userCuts.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id471421ad-2e63-4e56-8174-96cb2b3123fd"><span class="keyword ParameterName OptionalReplaceable">userCuts_0</span>, <span class="keyword ParameterName OptionalReplaceable">userCuts_1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers, identical
+in function to userCuts, but used to define cut layers for multiple
+cut masks. The userCuts_0 layer is used for the mandrel cut mask
+and the userCuts_1 layer for the non-mandrel cut mask. The corresponding
+inputLayerOrder keywords are userCuts_0 and userCuts_1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id8c0b1785-b426-4d4a-8815-25ce55b65993"><span class="keyword ParameterName OptionalReplaceable">via</span>, <span class="keyword ParameterName OptionalReplaceable">via_a</span>, <span class="keyword ParameterName OptionalReplaceable">via_b</span>, <span class="keyword ParameterName OptionalReplaceable">via_c</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional input polygon layers used to define
+layers containing via shape locations. The via layers are typically
+used for generation of the derivedTarget layer where no target layer
+is specified, and also for defining minimum spacing constraints
+between via and cut layers using the viaEnclosure parameter. The corresponding
+inputLayerOrder keywords are via, via_a, via_b and via_c, respectively.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">LITHO FILE Statement Name</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id8bb6dc10-939c-42f0-b4cd-1e3e05edc2b0"><span class="keyword ParameterName Required">FILE</span> <span class="keyword ParameterName RequiredReplaceable">name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword followed
+by the name of a LITHO FILE statement. The LITHO FILE statement
+is called by the RET SIDCUTFILL command.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">MAP Output Keywords</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idac4af3a9-31af-45b9-a3c0-e6c0d05dc3f5"><span class="keyword ParameterName Required">MAP</span> <span class="keyword ParameterName RequiredReplaceable">keyword</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and its argument
+that specifies the application of the RET SIDCUTFILL output layer.
+The output keywords are used to generate mask layers</p>
+<p class="p"><span class="ph FontProperty shellcommand">Mask-Related Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id79dc8b1f-dc37-410f-ae04-1557121a3798"><p class="p Opt"><span class="keyword ParameterName Optional">cutMask</span> —
+An optional keyword that generates legal cuts to the cut mask layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id55dda125-bbe0-4df9-9cc6-e4e3058453bf"><p class="p Opt"><span class="keyword ParameterName Optional">cutMask_0</span>, <span class="keyword ParameterName Optional">cutMask_1</span> —
+Optional keywords that generate legal cuts to dual cut mask layers.
+The cutMask_0 keyword is used for the mandrel cut mask and the cutMask_1
+keyword for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__ide12ad604-1c62-437e-94e8-b077a3fad7f3"><p class="p Opt"><span class="keyword ParameterName Optional">mandrel</span> —
+An optional keyword that generates mandrel tracks. See <a class="xref fm:FigureAndPage" href="Concept_IntroductionToSIDCutFillMethodology_id384476c2.html#id384476c2-0cf9-4fac-b02c-6c954681d693__ide40251eb-aa07-484b-88d6-8e0f77298907">Figure 9</a> for mandrel and
+non-mandrel process-related information.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty shellcommand">Derivation-Related Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__ide4a91b39-151a-4d72-807a-cb629456148a"><p class="p Opt"><span class="keyword ParameterName Optional">derivedTarget</span> —
+An optional keyword that generates the derived target layer. For
+more information, see “<a class="xref fm:HeadingAndPage" href="Concept_DerivedTarget_iddbbd939e.html#iddbbd939e-e97b-4064-9514-e281e85bf695__Concept_DerivedTarget_iddbbd939e.xml#iddbbd939e-e97b-4064-9514-e281e85bf695" title="Provides patterns for target derivation.">Derived Target</a>”.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id06a2e574-04fb-4d79-8aaa-908fac7a872c"><p class="p Opt"><span class="keyword ParameterName Optional">derivedTarget_0</span>, <span class="keyword ParameterName Optional">derivedTarget_1</span> —
+Optional keywords that generate the derived target layer to dual
+mask layers. The derivedTarget_0 keyword is used for the mandrel
+cut mask and the derivedTarget_1 keyword for the non-mandrel cut
+mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id935e8d34-c7c0-47ac-9a49-c436ce37e53a"><p class="p Opt"><span class="keyword ParameterName Optional">effectiveCriticalTimingMarkers</span> —
+An optional keyword that generates an effectiveCriticalTimingMarkers
+layer with orthogonal edges from a criticalTimingMarkers input shape
+that may contain non-orthogonal edges. The resulting effectiveCriticalTimingMarkers
+layer always contains the original criticalTimingMarkers shape.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idc08013f2-334e-42ca-a278-e0f746a4f690"><p class="p Opt"><span class="keyword ParameterName Optional">effectiveSadpMarker</span> —
+An optional keyword that generates an effectiveSadpMarker layer
+with orthogonal edges from an sadpMarker shape that may contain
+non-orthogonal edges. The resulting effectiveSadpMarker layer always
+contains the original sadpMarker shape.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idb79b4b99-32c4-4d93-9c37-dd5f2508c931"><p class="p Opt"><span class="keyword ParameterName Optional">effectiveTerminationRegion</span> —
+An optional keyword that reflects the actual termination regions
+as computed and used by RET SIDCUTFILL. The input termination regions are
+assigned by the terminationRegion layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id66fdb0a7-22c1-4cfc-a6ba-664ac8b17d54"><p class="p Opt"><span class="keyword ParameterName Optional">pitchAlignTracks</span> — An
+optional keyword that generates a layer containing the pitch align
+tracks computed from the pitch_align input layer and the parameters
+pitchAlignTrackWidth and pitchAlignTrackSpacing. If RET SIDCUTFILL
+cannot compute any pitch align tracks within an sadpMarker layer,
+that sadpMarker shape contains no tracks, no aligned cuts, and may
+completely fail all computation.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idbc277eb8-2a49-4ec9-98db-80a949c9b131"><p class="p Opt"><span class="keyword ParameterName Optional">trimMask</span> —
+An optional keyword that generates the trim mask. For more information,
+see “<a class="xref fm:HeadingAndPage" href="Concept_TrimMask_idfaf14066.html#idfaf14066-74ce-409f-9b13-1cbe97ba6250__Concept_TrimMask_idfaf14066.xml#idfaf14066-74ce-409f-9b13-1cbe97ba6250" title="Removes mandrel and non-mandrel dummy fill.">Trim Mask</a>”.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idc63cc89f-7895-4b93-90dc-3d4a4a7fcf5e"><p class="p Opt"><span class="keyword ParameterName Optional">trimMask_0</span>, <span class="keyword ParameterName Optional">trimMask_1</span> —
+Optional keywords that generate the trim masks for dual mask layers.
+The trimMask_0 keyword is used for the mandrel cut mask and the
+trimMask_1 keyword for the non-mandrel cut mask.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty shellcommand">Other Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idc3a8d307-9900-4629-884c-ca590f3b155c"><p class="p Opt"><span class="keyword ParameterName Optional">dummyFillCutMarkers</span> —
+An optional keyword that generates markers for those cuts placed
+by the maxDummyFillLength parameter.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id174513b7-704b-4e3a-ba99-c1d52a737a57"><p class="p Opt"><span class="keyword ParameterName Optional">nonMandrel</span> —
+An optional keyword that generates non‑mandrel tracks.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idba609f51-deb8-4e43-a96b-913c064dc4c0"><p class="p Opt"><span class="keyword ParameterName Optional">sinuousCutMarkers</span> — An
+optional keyword that generates an error layer for single cut masks,
+marking cuts that satisfy all spacing requirements except those
+that are waived by the sinuousCutRegion layer. RET SIDCUTFILL moves
+sinuous cuts as close to each other as possible, making a smooth
+transition. The solution for sinuous cuts is to make a smooth transition,
+on average equally distributing spaces according to the surrounding
+geometries.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id14ebe86f-3ede-430d-955e-a090aa4a931e"><p class="p Opt"><span class="keyword ParameterName Optional">sinuousCutMarkers_0</span>, <span class="keyword ParameterName Optional">sinuousCutMarkers_1</span> —
+An optional keyword that generates an error layer for two cut masks.
+The sinuousCutMarkers_0 keyword is used for the mandrel cut mask
+and the sinuousCutMarkers_1 keyword for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idde39b86f-7e7e-4749-8a43-bdc60b3ce2b2"><p class="p Opt"><span class="keyword ParameterName Optional">sinuousCutConnectors</span> —
+An optional keyword that generates an error layer marking violated
+spacing requirements which are waived by the sinuousCutRegion layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id7c649a84-ca68-4a1a-81f8-00778824a4df"><p class="p Opt"><span class="keyword ParameterName Optional">sinuousCutConnectors_0</span>, <span class="keyword ParameterName Optional">sinuousCutConnectors_1</span> —
+Optional keywords that generate an error layer marking violated
+spacing requirements for their respective cuts which are waived
+by the sinuousCutRegion or sinuousCutRegion_0 and sinuousCutRegion_1
+layers. The sinuousCutConnectors_0 keyword is used for the mandrel
+cut mask and the sinuousCutConnectors_1 keyword for the non-mandrel cut
+mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__iddcf42dc2-1326-4720-9bb4-581826cd1f6a"><p class="p Opt"><span class="keyword ParameterName Optional">track</span> —
+An optional keyword that generates tracks to the track layer. Tracks
+fill the extent of each polygon on the sadpMarker layer spaced by
+the trackSpacing parameter. RET SIDCUTFILL generates tracks based
+on the arguments trackDirection, minTrackWidth, terminalDummyTrackWidth,
+trackSpacing, and the target polygons.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id36bdbc95-588c-4d91-ae46-2cf9d2ff5bdd"><p class="p Opt"><span class="keyword ParameterName Optional">trappedCuts</span> —
+An optional keyword that outputs cuts between two target shapes
+equal to the cutWidth parameter. Trapped cuts may extend across
+empty tracks between other trapped cuts where spacing parameters
+require two cuts to be joined into a single cut; in this case, the
+joined cut is output. By default, trapped cuts are placed on the
+cutMask output layer (or cutMask_0 and cutMask_1 for dual mask layers),
+but may also be output to the illegalCuts layer if they cause spacing
+errors. Trapped cuts may be extended to nearby tracks as required,
+but the trappedCuts error layer will not include these extensions.</p>
+<div class="fig fignone" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id86f7a1c8-7057-4016-a0d9-97eb8210621c"><span class="figcap"><span class="fig--title-label">Figure 2. </span>trappedCuts
+Layer</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/trapped_cuts.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id3727337c-64cb-46a2-bc69-df257796b02f"><p class="p Opt"><span class="keyword ParameterName Optional">trappedCuts_0</span>, <span class="keyword ParameterName Optional">trappedCuts_1</span> —
+Optional keywords that output cuts for dual mask layers between
+two target shapes of a spacing equal to the cutWidth parameter.
+Equivalent in function to trappedCuts. The trappedCuts_0 keyword
+is used for the mandrel cut mask and the trappedCuts_1 keyword for
+the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idbecdf4ed-a490-48e5-b7b3-8c97a6db2d8f"><p class="p Opt"><span class="keyword ParameterName Optional">unalignedCuts</span> —
+An optional warning layer to detect those cuts not aligned with
+pitchAlignTrack layer. This keyword may be used for single-cut or
+two-cut masks.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id79ed1154-0edd-4ea8-8468-fe28b4050545"><p class="p Opt"><span class="keyword ParameterName Optional">unalignedCuts_0</span>, <span class="keyword ParameterName Optional">unalignedCuts_1</span> —
+Optional warning layers to detect those cuts not aligned with pitchAlignTrack_0,
+and pitchAlignTrack_1 layers, respectively. In two cut mask mode,
+the unaligned cuts may be specified for two masks independently.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty shellcommand">Error Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__ida262835f-d127-438b-962d-d355382676e5"><p class="p Opt"><span class="keyword ParameterName Optional">anchorConflict</span> —
+An optional keyword that generates a layer containing rectangles
+defined by regions between two anchored tracks that are in conflict. Anchors
+trigger coloring conflicts over an even number of tracks. </p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id48ce2ad0-494b-4ad2-8f71-bfd127999869"><p class="p Opt"><span class="keyword ParameterName Optional">anchorSelfConflict</span> — An
+optional keyword that generates a layer containing all target shapes
+that have been assigned both mandrel and a non-mandrel anchors.
+The anchors are not included in the output layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id397407cd-3f73-46c6-9428-be4bd0b0c809"><p class="p Opt"><span class="keyword ParameterName Optional">anchorTrackConflict</span> —
+An optional keyword that generates a layer containing all tracks
+that have been assigned both mandrel and a non-mandrel anchors.
+The anchors are not included in the output layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idbd63aace-cd6e-49dd-8bf3-ed2bb6975993"><p class="p Opt"><span class="keyword ParameterName Optional">cutErrorCluster</span> —
+An optional keyword that generates polygons that connect cuts on
+the illegalCuts layer with polygons on the cutMask layer where cut
+spacing errors are found. These errors may indicate potential interactions
+between illegal cuts and legal cuts.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id3b7f241a-eaeb-4cfd-ad72-de77e840d36e"><p class="p Opt"><span class="keyword ParameterName Optional">cutErrorCluster_0</span>, <span class="keyword ParameterName Optional">cutErrorCluster_1</span> —
+Optional keywords that generate polygons that connect cuts on the
+illegalCuts_0 and illegalCuts_1 layers with polygons on the cutMask_0
+and cutMask_1 layers, respectively, where cut spacing errors are
+found. The cutErrorCluster_0 keyword is used for the mandrel cut mask
+and the cutErrorCluster_1 keyword for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id931a115d-c917-4e5a-afe2-f85daf851260"><p class="p Opt"><span class="keyword ParameterName Optional">cutPlacementError</span> — An
+optional keyword that generates polygons spanning cuts (shapes on
+the output layer generated by the cutMask keyword) indicating the
+presence of spacing errors that cannot be resolved. The cutPlacementError
+keyword also generates shapes to the illegalCuts layer.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id903c8e67-749f-4b5b-8bd2-81de8fbae25f"><p class="p Opt"><span class="keyword ParameterName Optional">cutPlacementError_0</span>, <span class="keyword ParameterName Optional">cutPlacementError_1</span> —
+Optional keywords that generate polygons spanning cuts on dual mask
+layers (shapes on the output layers generated by the cutMask_0 and
+cutMask_1 keywords) indicating the presence of spacing errors that
+cannot be resolved. The cutPlacementError_0 and cutPlacementError_1
+keywords also generate shapes to the illegalCuts_0 and illegalCuts_1
+layers, respectively. The cutPlacementError_0 keyword is used for
+the mandrel cut mask and the cutPlacementError_1 keyword for the
+non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id6ce3357c-94e0-4613-8187-09b906fbd624"><p class="p Opt"><span class="keyword ParameterName Optional">illegalCutCandidates</span> —
+An optional keyword that generates an error layer containing polygons
+from the cutCandidates input layer which do not comply with the
+same requirements for generated cuts within the LITHO FILE. </p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id431e4e18-4ea9-482a-8530-8c411c3a6522"><p class="p Opt"><span class="keyword ParameterName Optional">illegalCutCandidates_0</span>, <span class="keyword ParameterName Optional">illegalCutCandidates_1</span> —
+Optional keywords that generate error layers containing polygons
+from the cutCandidates_0 and cutCandidates_1 input layers which
+do not comply with the same requirements for generated cuts within
+the LITHO FILE. The illegalCutCandidates_0 keyword is used for the
+mandrel cut mask and the illegalCutCandidates_1 keyword for the
+non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id84191a1e-1106-4cde-a11f-3e4866197fe1"><p class="p Opt"><span class="keyword ParameterName Optional">illegalCuts</span> —
+An optional keyword that generates a layer consisting of illegally
+generated cut shapes, typically those that violate cut spacing requirements,
+minimum area requirements, or cut dimension requirements (cutWidth
+or maxCutLength parameters).</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id9f06c74c-4608-45e4-891c-fa9f51c131ae"><p class="p Opt"><span class="keyword ParameterName Optional">illegalCuts_0</span>, <span class="keyword ParameterName Optional">illegalCuts_1</span> —
+Optional keywords that generate layers consisting of illegally generated
+cut shapes on dual mask layers, typically those that violate cut
+spacing requirements or the maxCutLength setting. The illegalCuts_0
+keyword is used for the mandrel cut mask and the illegalCuts_1 keyword
+for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id693f593c-a9f2-4a55-b869-cfde65ef1f50"><p class="p Opt"><span class="keyword ParameterName Optional">illegalTarget</span> —
+An optional keyword that generates a layer consisting of shapes
+from the target layer that do not conform to the tracks generated
+by RET SIDCUTFILL. See <a class="xref fm:FigureAndPage" href="Concept_ErrorHandling_idd19849b4.html#idd19849b4-95a5-4cb4-b051-87dde62a4ca9__id8583604f-0d2d-485a-80ee-4c6f034e5482">Figure 1</a> for more information.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id8a5a38be-4407-4bfd-b4e5-7bb3839dba40"><p class="p Opt"><span class="keyword ParameterName Optional">illegalTargetGap</span> —
+An optional keyword that generates a layer containing shapes formed
+by gaps between two legal target shapes with widths less than the
+specified cutWidth parameter. If pitch align or maskGridSpacing
+is used, then the line-end extensions forced by that usage may result
+in additional illegalTargetGaps.  In these cases cuts will still
+be placed, but will also be marked as illegal.These gap shapes are
+added to their respective target shapes for further processing.
+See <a class="xref fm:FigureAndPage" href="Concept_ErrorHandling_idd19849b4.html#idd19849b4-95a5-4cb4-b051-87dde62a4ca9__id8583604f-0d2d-485a-80ee-4c6f034e5482">Figure 1</a> for more information.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idcfe158c2-a7ed-4b88-9d32-d5c8bba3e168"><p class="p Opt"><span class="keyword ParameterName Optional">illegalTrackSpace</span> — An
+optional keyword that generates a layer containing shapes formed
+by spaces between tracks that do not exactly adhere to the spacing
+specified by the trackSpacing parameter. This spacing check is performed
+after RET SIDCUTFILL adds dummy tracks. There are two ways track
+spacing can fail:</p>
+<ul class="ul"><li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__ide93cc1f5-5a03-4769-b8ec-d0042e5fd60b"><p class="p">Two target
+shapes define a pair of tracks with spacing less than the value
+specified by trackSpacing.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idea6fb20f-3044-4f4c-9ad1-93431508b947"><p class="p">Two target
+shapes define a pair of tracks (with no other occupied tracks between)
+with a gap greater than the trackSpacing value, but less than <span class="ph FontProperty equationvariable">2(trackSpacing) + minTrackWidth</span>.</p>
+</li>
+</ul>
+<p class="p">See <a class="xref fm:FigureAndPage" href="Concept_ErrorHandling_idd19849b4.html#idd19849b4-95a5-4cb4-b051-87dde62a4ca9__id8583604f-0d2d-485a-80ee-4c6f034e5482">Figure 1</a> for more information.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idac3ad73a-ae2d-4be6-9d88-458e13af8636"><p class="p Opt"><span class="keyword ParameterName Optional">illegalTrackWidth</span> — An
+optional keyword that generates track shapes implied by target input
+shapes of illegal width, or due to existing space between target
+shapes, requiring tracks of illegal width to be placed. When minTrackWidth
+is used to determine track widths, tracks of widths smaller than
+its specified value are illegal. When trackWidth is used to specify
+the list of all legal track widths, tracks not matching one of the
+specified values in the list are illegal.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id6b3b7b35-14d6-489f-8c25-9a72341cbca0"><p class="p Opt"><span class="keyword ParameterName Optional">insufficientEdgeSpace</span> —
+An optional keyword that generates shapes formed by the spaces between
+the inside edge of an sadpMarker layer and the nearest occupied
+track (parallel to the considered edge) that is not sufficient for
+the required mandrel track of width terminalDummyTrackWidth to be
+placed. Because the outside tracks must be always be mandrel tracks,
+a larger space than terminalDummyTrackWidth + trackSpacing may be
+required due to an additional non-mandrel track needed to make the
+mask assignment correct. The final mandrel track is allowed to be
+larger than the specified value, but is generated at the smallest
+width required.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id79bb8445-063e-4966-9419-d16668d152e9"><p class="p Opt"><span class="keyword ParameterName Optional">longCuts</span> —
+An optional error keyword that generates a layer consisting of cut
+shapes exceeding the maxCutLength parameter, that would otherwise
+be legal.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id02a633b7-b0e7-4712-b294-c56fd7c8434b"><p class="p Opt"><span class="keyword ParameterName Optional">longCuts_0</span>, <span class="keyword ParameterName Optional">longCuts_1</span> —
+Optional error keywords that generate layers consisting of cut shapes
+exceeding the maxCutLength parameter, that would otherwise be legal.
+The longCuts_0 keyword is used for the mandrel cut mask and the
+longCuts_1 keyword for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id188317f3-bcc1-402c-af97-e3938c19ce7c"><p class="p Opt"><span class="keyword ParameterName Optional">PitchAlignTargetExtensions</span> —
+An optional keyword that generates a layer containing polygons of
+extended target line‑ends required to meet maskGridSpacing and PitchAlign
+constraints.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id092e9dea-30e6-445a-932b-cf4688ffe08a"><p class="p Opt"><span class="keyword ParameterName Optional">pitchAlignTrackErrors</span> —
+An optional keyword that generates an error layer containing pitchAlignTracks computation
+errors. These errors may output tracks of a width not equal to the pitchAlignTrackWidth
+parameter or of a spacing between tracks not equal to the pitchAlignTrackSpacing
+parameter. The pitchAlignTrackErrors layer may also contain the
+sadpMarker layer indicating the pitch align tracks could not be
+computed for that sadpMarker shape.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty shellcommand">Debugging Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id1ef5270d-43cd-411e-9dac-fe808be7a9a7"><p class="p Opt"><span class="keyword ParameterName Optional">effectiveTarget</span> —
+An optional keyword that generates an output layer representing
+the target layer used by RET SIDCUTFILL to place cuts. The layer
+generated by effectiveTarget may vary from the input target layer:</p>
+<ul class="ul"><li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id1d4d4988-33bf-45bf-9ebc-665f4596bcb1"><p class="p">The layer
+contains input target, mandrelAnchor, and nonMandrelAnchor shapes.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__iddfa88172-3bbf-4e71-9886-816f15f36d7b"><p class="p">Any of these
+aforementioned shapes not aligning with internally-derived or user‑specified
+track patterns are deleted from the effectiveTarget layer. The illegalTarget
+output layer contains these deleted shapes.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id03fb4be2-4415-44ff-8128-13e6f7da7d54"><p class="p">Extensions
+of the target line-ends forced by pitch alignment rules, if present,
+are included in the effectiveTarget layer.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idd9d17cf6-df25-4ca6-9404-735ee785859a"><p class="p">The maskGridSpacing
+parameter is a special case of pitch alignment, and may force extension
+of line-ends, adding to the effectiveTarget layer.</p>
+</li>
+<li class="li" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id7b362853-3fcc-478f-b415-ce6cf375881c"><p class="p">If a pitchAlign
+layer or maskGridSpacing parameter is specified, resulting line-end
+extensions may result in additional shapes on the illegalTargetGap
+layer. Cuts will still be placed, but are marked as illegal. The effectiveTarget
+layer includes all line-ends corresponding to valid positions for the
+aligned cuts. For more information regarding illegalTargetGap, see “<a class="xref fm:HeadingAndPage" href="Concept_ErrorHandling_idd19849b4.html#idd19849b4-95a5-4cb4-b051-87dde62a4ca9__Concept_ErrorHandling_idd19849b4.xml#idd19849b4-95a5-4cb4-b051-87dde62a4ca9" title="Various error layers help resolve SADP patterning problems quickly.">Error Handling</a>”.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__id5f376b5d-53be-4ee3-bab9-aff3eb5ad4ac"><p class="p Opt"><span class="keyword ParameterName Optional">effectiveTarget_0</span>, <span class="keyword ParameterName Optional">effectiveTarget_1</span> —
+Optional keywords that generate output layers representing the target
+layers used by RET SIDCUTFILL to place cuts. The effectiveTarget_0
+keyword is used for the mandrel cut mask and the effectiveTarget_1
+keyword for the non-mandrel cut mask.</p>
+</li>
+<li class="li ArgOption" id="id5a65ed29-3e65-41a7-a3dc-0b94e2acd48a__idc92c7713-d7a6-4eae-841f-75b0f7d64d67"><p class="p Opt"><span class="keyword ParameterName Optional">modifiedTrackTerminationRegions</span> —
+An optional keyword that generates a debugging layer containing
+regions of the sadpMarker shape that have had track terminations modified.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">In this example, layer names specified in the RET SIDCUTFILL
+commands are identical to the names declared in the inputLayerOrder
+list. This is not required, since the layers named within RET SIDCUTFILL
+are sequentially mapped to layers declared in the inputLayerOrder list
+by position, and not by name. The declaration of layers in the inputLayerOrder
+list can be arranged in any order. In this example code, the MAP
+keywords are highlighted in red.</p>
+<pre class="pre codeblock"><code>LITHO FILE scf_setup [
+
+	inputLayerOrder = (target, sadpMarker, mandrelAnchor,
+		sinuousCutRegion);
+
+	dpFaceClass name(basic_cut) orientation(perpTrackDirection):
+		true for length &lt;= 0.048;
+		false otherwise;</code></pre><pre class="pre codeblock"><code>	dpFaceClass name(long_cut) orientation(perpTrackDirection):
+		true for length &gt; 0.048;
+		false otherwise;</code></pre><pre class="pre codeblock"><code>	dpFaceClass name(basic_cut_end) orientation(trackDirection):
+		true for length &lt;= 0.048;
+		false otherwise;</code></pre><pre class="pre codeblock"><code>	dpFaceClass name(long_cut_end) orientation(trackDirection):
+		true for length &gt; 0.048;
+		false otherwise;</code></pre><pre class="pre codeblock"><code>	dpSpacing (any, any): 0.046 otherwise;
+
+	dpSpacing (any, basic_cut_end) metric(euclidean): 0.050 otherwise;
+
+	dpSpacing (any, basic_cut_end) metric(opposite): 0.065 otherwise;
+
+	dpSpacing (any, long_cut_end) metric(euclidean): 0.054 otherwise;
+
+	dpSpacing (any, long_cut_end) metric(opposite): 0.096 otherwise;</code></pre><pre class="pre codeblock"><code>	dpSpacing (any, basic_cut) metric(opposite):
+		0.064 for runLength &gt;= 0.024;
+		0 otherwise; </code></pre><pre class="pre codeblock"><code>	dpSpacing (any, long_cut) metric(opposite):
+		0.070 for runLength &gt;= 0.024;
+		0 otherwise; </code></pre><pre class="pre codeblock"><code>	trackSpacing 								= 0.024;
+	trackDirection 								= X;
+	cutOverlap 								= 0.012;
+	minTrackWidth 								= 0.024;
+	terminalDummyTrackWidth = 0.048;
+	minArea 								= 0.0024;
+	maxLineEndExtension 								= 0.150;
+	cutWidth 								= 0.050;
+]</code></pre><pre class="pre codeblock"><code>cut_mask = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">cutMask</span>
+
+cutErrors = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion 
+	FILE scf_setup MAP <span class="ph CodeHighlight red">cutPlacementError</span>
+
+tracks = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">track</span></code></pre><pre class="pre codeblock"><code>mandrel = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">mandrel</span>
+
+nonMandrel = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">nonMandrel</span>
+
+badSpace = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">illegalTrackSpace</span>
+
+anchorErr = RET SIDCUTFILL target sadpMarker mandrelAnchor
+	sinuousCutRegion
+	FILE scf_setup MAP <span class="ph CodeHighlight red">anchorConflict</span></code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_SelfAlignedDoublePatterningCommandReference_idc72e80e5.html" title="The Calibre RET SIDCUTFILL command and associated keywords are an implementation of the spacer-is-dielectric (SID) process for Self-Aligned Double-Patterning (SADP). These commands address topological generation requirements for the SID process. Calibre SADP-specific commands adhere to SVRF standards. A typical SVRF rule file containing SADP-specific commands may also contain other SVRF commands that specify input layers, perform preliminary layer manipulation, and save output layers.">Self-Aligned Double-Patterning Command Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "RET SIDCUTFILL"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_RetSidcutfill_id5a65ed29.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

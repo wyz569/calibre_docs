@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="DFM Circle Analyze" />
+<meta name="abstract" content="Characterizes how close to circular the polygons on the input layer are. For each input polygon, the operation finds two concentric circles: one is the minimum enclosing circle and the other is the largest circle that is contained within the polygon. The radii of these two circles are reported as DFM properties attached to the output layer. Annular shapes are also identified. By default the output layer is a copy of the input layer, with properties attached to each polygon." />
+<meta name="description" content="Characterizes how close to circular the polygons on the input layer are. For each input polygon, the operation finds two concentric circles: one is the minimum enclosing circle and the other is the largest circle that is contained within the polygon. The radii of these two circles are reported as DFM properties attached to the output layer. Annular shapes are also identified. By default the output layer is a copy of the input layer, with properties attached to each polygon." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DFM Circle Analyze</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DFM Circle Analyze" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DFM Circle Analyze</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Layer operation</p>
+<p class="p ContextMGC">License: <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre nmDRC-H', 'calbr_admin_gd'); return false;">Calibre nmDRC-H</a></p>
+<p class="shortdesc">Characterizes how close to circular the polygons on the
+input layer are. For each input polygon, the operation finds two
+concentric circles: one is the minimum enclosing circle and the
+other is the largest circle that is contained within the polygon.
+The radii of these two circles are reported as DFM properties attached
+to the output layer. Annular shapes are also identified. By default the
+output layer is a copy of the input layer, with properties attached
+to each polygon. </p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">DFM CIRCLE ANALYZE</span> <span class="keyword ParameterName RequiredReplaceable">layer</span> [CENTER | RING]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id49224179-baf3-45b7-92ff-125f68efcfca"><span class="keyword ParameterName RequiredReplaceable">layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required polygon layer. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__ida8dcb5ec-9e8a-4fd0-8ff9-af41de753bc8">CENTER | RING</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword choice that specifies what to write to the output layer.
+By default the output layer is a copy of the input layer. See “<a class="xref fm:HeadingAndPage" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__ide8701b2d-0ee1-4f3a-bef6-c3a89c0f7b7c">Output Layer</a>” for more information.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__ideeb41412-8259-4b88-8183-2a8a59ded527"><p class="p Opt">CENTER
+— Specifies to write a 2×2 square marker polygon to the output layer
+for each input polygon. The center of each marker polygon is the
+grid point closest to the center of the concentric circles that
+characterize the input polygon. The output is unmerged.</p>
+</li>
+<li class="li ArgOption" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id3af02637-cf03-428b-bfdf-949529fcbc42"><p class="p Opt">RING — Specifies to output polygons that approximate the annular
+region between the two concentric circles that characterize each
+input polygon. The output is unmerged. See “<a class="xref fm:HeadingAndPage" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id75114bd5-1576-4edf-b9f1-b1aabe90f453">RING Output</a>” for more
+information.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">For each polygon on the input <span class="keyword ParameterName RequiredReplaceable">layer</span>,
+the operation finds the minimum enclosing circle C-out and calculates
+radius properties that characterize the polygon. </p>
+<p class="p">The operation also identifies annular regions, which are polygons
+with exactly one hole and the center of the circle C-out lies in
+that hole. </p>
+<p class="p">The properties defined in the following table are attached to
+each shape on the output layer. See <a class="xref fm:Figure" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id5b58cf66-4ce8-4d97-9367-88b9a76fc5a5">Figure 1</a> for examples.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__idd1575771-5161-4bc1-8392-94c13db2fe7b" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Properties
+Added by DFM Circle Analyze</span></caption><colgroup><col style="width:1.966in" /><col style="width:4.209in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row row-keep-with-next"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24002e226"><p class="p">Property</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24002e229"><p class="p">Definition</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row row-keep-with-next"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e226 "><p class="p">OUTRADIUS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e229 "><p class="p">The radius of circle C-out, the minimum
+enclosing circle of the polygon. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e226 "><p class="p">INRADIUS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e229 "><p class="p">For non-annular regions, the radius of circle
+C-in, the largest circle whose disk is contained within the polygon
+and concentric with C-out. </p>
+<p class="p">If the center of circle C-out is outside the input polygon and the
+shape is not an annulus, there is no circle C-in and INRADIUS is
+zero. </p>
+<p class="p">For annular regions, the radius of the circle C-in, the largest circle
+that is concentric with C-out without going outside the outer polygon
+boundary.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e226 "><p class="p">ANNULUS_OUTRADIUS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e229 "><p class="p">For an annulus, the radius of the circle
+that is concentric with C-out and is the minimum enclosing circle
+of the inner boundary of the polygon (circle CA-out in <a class="xref fm:Figure" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id5b58cf66-4ce8-4d97-9367-88b9a76fc5a5">Figure 1</a>).</p>
+<p class="p">This property is nonzero only if the polygon is an annulus.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e226 "><p class="p">ANNULUS_INRADIUS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e229 "><p class="p">For an annulus, the radius of the largest
+circle concentric with the outer circle and fully contained within
+the hole of the annulus (circle CA-in in <a class="xref fm:Figure" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id5b58cf66-4ce8-4d97-9367-88b9a76fc5a5">Figure 1</a>).</p>
+<p class="p">This property is nonzero only if the polygon is an annulus.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">For annular regions that are nearly circular and sufficiently
+thick, INRADIUS &gt; ANNULUS_OUTRADIUS. However, this may not be true
+for thin annular regions that are not very circular, such as a square
+with a very large square hole. </p>
+<p class="p">DFM property expressions that use INRADIUS, ANNULUS_INRADIUS,
+or ANNULUS_OUTRADIUS should be written so that the expression evaluates
+successfully when the property value is zero. </p>
+<p class="p">The following figure shows the circles C-out and C-in determined
+by DFM Circle Analyze for several different shapes. The shape on
+the top right shows a case where the center of the enclosing circle
+C-out is outside the input polygon, resulting in INRADIUS = 0. The
+figure also shows an annulus and a shape that is not an annulus
+even though it has a hole. </p>
+<div class="fig fignone" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id5b58cf66-4ce8-4d97-9367-88b9a76fc5a5"><span class="figcap"><span class="fig--title-label">Figure 1. </span>DFM Circle
+Analyze</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/DFM_general/dfm_circle_analyze_radii.png" /></div><br /></div>
+<div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__ide8701b2d-0ee1-4f3a-bef6-c3a89c0f7b7c"><h2 class="title Subheading sectiontitle">Output
+Layer</h2><p class="p">By default the output layer is a copy of the input layer. The
+RING and CENTER keywords change the shape that is written to the
+output layer. It is possible for unmerged output, which is produced
+by the RING and CENTER keywords, to overlap each other or extend
+outside the cell boundary.</p>
+</div>
+<div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id75114bd5-1576-4edf-b9f1-b1aabe90f453"><h2 class="title Subheading sectiontitle">RING
+Output</h2><p class="p">When RING is specified, the output polygons approximate the annular
+region between the two concentric circles that characterize each
+input polygon. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id6bc3f6f2-eb6a-4117-b90c-880c93d9ac03" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.724in" /><col style="width:2.801in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24002e303"><p class="p">Property Values</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24002e306"><p class="p">RING Output</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e303 "><p class="p">INRADIUS nonzero</p>
+<p class="p">ANNULUS_INRADIUS = 0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e306 "><p class="p">Region between C-out and C-in.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e303 "><p class="p">INRADIUS nonzero</p>
+<p class="p">ANNULUS_INRADIUS nonzero</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e306 "><p class="p">Region between C-out and CA-in.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e303 "><p class="p">INRADIUS = 0</p>
+<p class="p">ANNULUS_INRADIUS = 0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24002e306 "><p class="p">An approximately circular region corresponding
+to circle C-out. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The separation between the inner and outer boundaries of the
+output ring shape is on the same order as the separation between
+the concentric circles that define the ring, within limits. For
+the case of a nonzero INRADIUS and zero ANNULUS_INRADIUS, the closer
+an input polygon is to circular, the more vertices will be used
+to represent its annulus, with an upper bound of 2048 vertices.
+See “<a class="xref fm:HeadingAndPage" href="#idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id8a1d4a1a-d078-41be-8861-d3cf1c92d70a">Example 2</a>”.</p>
+</div>
+<div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__idc9292f38-cee6-49de-8c00-45cf85ce5a0d"><h2 class="title Subheading sectiontitle">Concurrency</h2><p class="p">Operations with the same <span class="keyword ParameterName RequiredReplaceable">layer</span> input
+run concurrently.</p>
+</div>
+<p class="p">Also see the CIRCLE keyword for <a class="xref fm:HeadingOnly" href="Command_InsideCell_id0a60c9eb.html#id0a60c9eb-78ef-4e70-b297-e2a98b2cce0c__Command_InsideCell_id0a60c9eb.xml#id0a60c9eb-78ef-4e70-b297-e2a98b2cce0c" title="Selects polygons that are inside the specified cell(s). Used only in Calibre.">Inside Cell</a> and “<a class="xref Link" href="../../calbr_solns_pv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Finding Circular Polygons', 'calbr_solns_pv_user'); return false;">Finding Circular Polygons</a>”
+in the <cite class="cite">Calibre Solutions for Physical Verification</cite> manual. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id053866a9-1eda-498a-aba2-473fe59ce579"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">This example finds shapes that are nearly circular and outputs
+them to a new layer named near_circle. Shapes are output if the
+ratio INRADIUS/OUTRADIUS is greater than 0.90. </p>
+<pre class="pre codeblock"><code>LAYER layer1 0
+
+circle_props = DFM CIRCLE ANALYZE layer1
+near_circle = DFM PROPERTY circle_props 
+         [ - = PROPERTY(circle_props, INRADIUS)/
+               PROPERTY(circle_props, OUTRADIUS)] &gt; 0.90</code></pre></div>
+<div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__id8a1d4a1a-d078-41be-8861-d3cf1c92d70a"><h2 class="title Subheading sectiontitle">Example
+2</h2><p class="p">This example uses the RING keyword to output the approximate
+annular region between the inner and outer circles that characterize
+each input polygon. The output layer is written out with DFM RDB
+so that properties can be viewed. The figure shows the results for
+a hexagon, an octagon, and an annular region. </p>
+<pre class="pre codeblock"><code>LAYER layer1 0
+ring_out = DFM CIRCLE ANALYZE layer1 RING
+ring_out { DFM RDB ring_out "dfm.rdb"  ALL CELLS CHECKNAME "%_l_" }</code></pre><div class="fig fignone" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__idf8e1b670-d36d-443d-be4a-5ec5bb37f9fb"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/DFM_general/dfm_circle_analyze_ring.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="idf9e3de14-c064-41e2-8afc-1c3e708ab6ab__idafd12a14-6934-43f7-a3da-10fe34b2e1fa"><h2 class="title Subheading sectiontitle">Example
+3</h2><p class="p">This example finds shapes that are identified as an annulus. </p>
+<pre class="pre codeblock"><code>LAYER layer1 0
+
+circle_props = DFM CIRCLE ANALYZE layer1
+annular_shape = DFM PROPERTY circle_props
+         [ - = PROPERTY(circle_props, ANNULUS_INRADIUS)] &gt; 0
+</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DfmCommands_ide62291e8.html" title="The commands in this section begin with “DFM.”">DFM … Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "DFM Circle Analyze"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_DfmCircleAnalyze_idf9e3de14.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

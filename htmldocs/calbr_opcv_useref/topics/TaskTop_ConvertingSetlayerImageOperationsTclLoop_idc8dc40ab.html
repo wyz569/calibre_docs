@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Converting the setlayer image Operations to a Tcl Loop" />
+<meta name="abstract" content="While you could run the code “as is” at this point, this task demonstrates how to implement the matching image commands." />
+<meta name="description" content="While you could run the code “as is” at this point, this task demonstrates how to implement the matching image commands." />
+<meta name="prodname" content="Calibre OPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="no" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® OPCverify™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc8dc40ab-4929-4816-af77-09eded0a87b1" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Converting the setlayer image Operations to a Tcl Loop</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Converting the setlayer image Operations to a Tcl Loop" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc8dc40ab-4929-4816-af77-09eded0a87b1">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Converting the setlayer image
+Operations to a Tcl Loop</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">While you could
+run the code “as is” at this point, this task demonstrates how to
+implement the matching image commands. </p>
+<p class="p">These were the commands you set up calls for
+in “<a class="xref fm:HeadingAndPage" href="TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.html#idaf601f5f-d681-4fd8-925c-e7871dffd193__TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.xml#idaf601f5f-d681-4fd8-925c-e7871dffd193" title="Since LITHO OPCVERIFY calls have the same basic structure, you can use a TVF loop to consolidate multiple calls into a single loop. This method can be used to easily expand the number of derived layers retrieved from a Calibre OPCverify file.">Converting LITHO OPCVERIFY Calls to a TVF Loop</a>” to a Tcl loop. </p>
+<p class="p">The following code will be converted:</p>
+<pre class="pre codeblock leveled"><code>####################################################
+# 6. Generate poly contours 
+#   Not all of the following contours will be used in the final output.
+####################################################
+setlayer img_d100_nom   = image optical opt_poly_nom  dose 1.00 resist_model res_poly    
+setlayer img_d100_n050  = image optical opt_poly_n050 dose 1.00 resist_model res_poly    
+setlayer img_d100_p050  = image optical opt_poly_p050 dose 1.00 resist_model res_poly    
+setlayer img_d100_n100  = image optical opt_poly_n100 dose 1.00 resist_model res_poly    
+setlayer img_d100_p100  = image optical opt_poly_p100 dose 1.00 resist_model res_poly    
+setlayer img_d095_nom   = image optical opt_poly_nom  dose 0.95 resist_model res_poly    
+setlayer img_d095_n050  = image optical opt_poly_n050 dose 0.95 resist_model res_poly    
+setlayer img_d095_p050  = image optical opt_poly_p050 dose 0.95 resist_model res_poly    
+setlayer img_d095_n100  = image optical opt_poly_n100 dose 0.95 resist_model res_poly    
+setlayer img_d095_p100  = image optical opt_poly_p100 dose 0.95 resist_model res_poly    
+setlayer img_d105_nom   = image optical opt_poly_nom  dose 1.05 resist_model res_poly    
+setlayer img_d105_n050  = image optical opt_poly_n050 dose 1.05 resist_model res_poly    
+setlayer img_d105_p050  = image optical opt_poly_p050 dose 1.05 resist_model res_poly    
+setlayer img_d105_n100  = image optical opt_poly_n100 dose 1.05 resist_model res_poly    
+setlayer img_d105_p100  = image optical opt_poly_p100 dose 1.05 resist_model res_poly </code></pre></div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__ida6f85a6c-58d5-4391-b512-d299aecb1665"><p class="p">“<a class="xref fm:HeadingAndPage" href="TaskTop_AddingTvfHeaderVerbatimBlocks_idc382b4cd.html#idc382b4cd-c9dc-44ea-9c27-4860a1f342f3__TaskTop_AddingTvfHeaderVerbatimBlocks_idc382b4cd.xml#idc382b4cd-c9dc-44ea-9c27-4860a1f342f3" title="Similar to designating a text file as a shell script or HTML file, a single header command at the top of an SVRF rule file indicates to the Calibre engine that it should treat the file as a TVF file.">Adding a TVF Header and VERBATIM Blocks</a>”. </p>
+</li>
+<li class="li" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__ide0ce27be-8032-4510-93b2-0447e02f9147"><p class="p">Implementing
+the SVRF code as a TVF loop (as described in “<a class="xref fm:HeadingAndPage" href="TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.html#idaf601f5f-d681-4fd8-925c-e7871dffd193__TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.xml#idaf601f5f-d681-4fd8-925c-e7871dffd193" title="Since LITHO OPCVERIFY calls have the same basic structure, you can use a TVF loop to consolidate multiple calls into a single loop. This method can be used to easily expand the number of derived layers retrieved from a Calibre OPCverify file.">Converting LITHO OPCVERIFY Calls to a TVF Loop</a>”) is not required, but is recommended
+in similar situations. </p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id5fc33028-ac2c-4c4a-9019-0a13955abec0"><span class="ph cmd">Analyze the code, then set
+up lists based on the repeating sequence. While a simple set of
+lists similar to the one described in “<a class="xref fm:HeadingAndPage" href="TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.html#idaf601f5f-d681-4fd8-925c-e7871dffd193__TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.xml#idaf601f5f-d681-4fd8-925c-e7871dffd193" title="Since LITHO OPCVERIFY calls have the same basic structure, you can use a TVF loop to consolidate multiple calls into a single loop. This method can be used to easily expand the number of derived layers retrieved from a Calibre OPCverify file.">Converting LITHO OPCVERIFY Calls to a TVF Loop</a>” could be used here, this example
+demonstrates the efficiency of a nested loop solution. </span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id71939a38-b736-454c-8a4a-33570102cb2d"><p class="p">Five optical models are
+in use in the sequence of code shown above: opt_poly_nom, opt_poly_n050,
+opt_poly_p050, opt_poly_n100, and opt_poly_p100. These models each
+represent a different defocus level. </p>
+<pre class="pre codeblock leveled"><code>set optmod {nom n050 p050 n100 p100}
+
+set optprefix opt_poly_</code></pre></li>
+<li class="li" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id0b7949b1-64c1-45fc-addb-91134ae96201"><p class="p">For each set of five optical
+models, the dose is consistent: dose 1.00, dose 0.95, and dose 1.05. </p>
+<pre class="pre codeblock leveled"><code>set doselist (1.00 0.95 1.05}</code></pre></li>
+<li class="li" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id6c0d8bb1-8e7a-41fe-a873-c3a8cb1ff153"><p class="p">The derived layer name
+is based on the optical model and dose. </p>
+<pre class="pre codeblock leveled"><code>set dosename {d100 d095 d105}</code></pre></li>
+</ul>
+<p class="p">A nested loop using the code
+above could use the doselist as the outer loop and the optical models
+as the inner loop. </p>
+</div></li>
+<li class="li step stepexpand" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id2bf27fd4-aba7-4d5b-a514-607779e0f60a"><span class="ph cmd">Implement a loop based on
+the repeating sequence.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>set optnum 0
+set dnum 0
+foreach dlist $dosename {
+set dval [lindex $doselist $dnum]
+	foreach optlist $optmod {
+setlayer img_${dlist}_$optlist = image optical $optprefix$optlist dose $dval resist_model res_poly
+		}
+	incr dnum
+	incr optnum
+	}</code></pre></div></li>
+<li class="li step stepexpand" id="idc8dc40ab-4929-4816-af77-09eded0a87b1__id31d34851-9302-4f75-9e69-3d49e02d1b77"><span class="ph cmd">Save the code and run the
+rule file.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">You should get identical results as
+the file from the run that does not have converted Tcl.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ConvertingModuleTvf_idf43fd7e3.html" title="Tcl Verification Format (TVF) is an enhancement to the Calibre Tools engine that allows Tcl programmers to implement Tcl as part of an SVRF rule file. Calibre OPCverify itself is a Tcl-based language, and therefore also supports Tcl intermixed with its commands.">Converting This Module to TVF</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcv_useref"
+                DocTitle = "Calibre® OPCverify™ User’s and Reference Manual"
+                PageTitle = "Converting the setlayer image Operations to a Tcl Loop"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ConvertingSetlayerImageOperationsTclLoop_idc8dc40ab.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCverify™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

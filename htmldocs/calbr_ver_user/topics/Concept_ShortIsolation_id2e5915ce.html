@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Short Isolation" />
+<meta name="abstract" content="A text short occurs when a layout net has two different connectivity text objects associated with it. Such shorts can lead to problems with net name assignment, which impacts things like ERC checks and LVS comparison results. Short isolation is the process of identifying and fixing text short discrepancies. Text shorts are always reported in the run transcript when circuit extraction is performed. They also appear in a circuit extraction report when one is produced. Most importantly, Calibre offers three flows for finding shorts. The first is implemented through the LVS Isolate Shorts specification statement. The second is implemented through the Mask SVDB Directory SI option, and the third is implemented through the -recon -si command line options. The latter two methods support interactive short isolation in the Calibre Query Server Tcl shell. All flows support Calibre RVE short debugging." />
+<meta name="description" content="A text short occurs when a layout net has two different connectivity text objects associated with it. Such shorts can lead to problems with net name assignment, which impacts things like ERC checks and LVS comparison results. Short isolation is the process of identifying and fixing text short discrepancies. Text shorts are always reported in the run transcript when circuit extraction is performed. They also appear in a circuit extraction report when one is produced. Most importantly, Calibre offers three flows for finding shorts. The first is implemented through the LVS Isolate Shorts specification statement. The second is implemented through the Mask SVDB Directory SI option, and the third is implemented through the -recon -si command line options. The latter two methods support interactive short isolation in the Calibre Query Server Tcl shell. All flows support Calibre RVE short debugging." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Short Isolation</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Short Isolation" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Short
+Isolation</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><p class="shortdesc">A text short
+occurs when a layout net has two different connectivity text objects
+associated with it. Such shorts can lead to problems with net name
+assignment, which impacts things like ERC checks and LVS comparison
+results. Short isolation is the process of identifying and fixing
+text short discrepancies.</p>
+<p class="shortdesc">Text shorts are always reported
+in the run transcript when circuit extraction is performed. They also
+appear in a circuit extraction report when one is produced. Most
+importantly, Calibre offers three flows for finding shorts. The
+first is implemented through the LVS Isolate Shorts specification
+statement. The second is implemented through the Mask SVDB Directory
+SI option, and the third is implemented through the -recon -si command
+line options. The latter two methods support interactive short isolation
+in the Calibre Query Server Tcl shell. All flows support Calibre
+RVE short debugging.</p>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__id5412a115-499c-4f3f-848e-df8521796a45"><h2 class="title Subheading sectiontitle">LVS
+Isolate Shorts Flow</h2><p class="p">To simplify the process of isolating shorts,
+you can specify this in the LVS rules:</p>
+<pre class="pre codeblock"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Isolate Shorts', 'svrf_ur'); return false;">LVS ISOLATE SHORTS</a> YES BY LAYER BY CELL</code></pre><p class="p">This statement isolates a short by finding
+a polygonal path between two or more conflicting text objects. The
+shorts are output to an ASCII results database similar to the ones
+produced in DRC runs.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Short isolation
+occurs only at the top level by default. If the default is used
+and no shorts occur at the top level, then no shorts database is
+produced. However, text shorts from all levels of the hierarchy
+always appear in the circuit extraction report.</p>
+</div>
+<p class="p">You should always use the BY LAYER keyword
+because it enables easier debugging. It organizes results per-short,
+per-layer.</p>
+<p class="p">Specifying BY CELL with BY LAYER causes the
+results to be written on a per-short, per-layer, per-cell basis,
+which can be very useful in debugging more complex shorts involving
+global signals or supply nets. The cell of origin is reported using
+the “CN” property in the results database.</p>
+<p class="p">The BY CELL and BY LAYER keywords have an optional
+ALSO keyword. Specifying ALSO causes the results to be written from
+multiple perspectives.</p>
+<p class="p">When more than one path exists between a pair
+of conflicting text points, the hierarchical short isolation algorithm
+prefers paths that consist of shapes at higher levels of hierarchy
+over those that pass through cell placements. For this reason, the
+indicated path in the results file may not be the shortest in terms
+of polygon count. Thus, different paths may be chosen when operating hierarchically
+and flat. Within a given level of hierarchy, paths with fewer polygons
+are preferred.</p>
+<p class="p">The order of execution is as follows:</p>
+<ol class="ol"><li class="li" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__idd11c960d-e842-4900-ad1b-c0c6dceb93d8"><p class="p">Hierarchical connectivity extraction is performed.</p>
+</li>
+<li class="li" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__idbbaa047d-e927-4386-8f18-42714d27f46e"><p class="p">If shorts exist at the level of hierarchy
+specified by the statement, short isolation algorithm operates hierarchically
+and shapes are not flattened. </p>
+</li>
+<li class="li" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__id8f7281f4-9d22-45c0-bf8d-95e546f81357"><p class="p">Short isolation results are written out to
+disk in an ASCII database format file, which is viewable using a
+layout editor and Calibre RVE. The name of this database is <span class="ph filepath">lvs_report_name</span>.shorts,
+where <span class="ph filepath">lvs_report_name</span> is the name of the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a>.
+If no LVS Report is specified, then the database is called lvs.<span class="ph filepath">layout_primary</span>.rep.shorts.</p>
+</li>
+<li class="li" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__id09b27bd7-9eca-4796-867c-09cb2c383885"><p class="p">Hierarchical device recognition, hierarchical
+SPICE netlist generation and, if requested, hierarchical LVS comparison.</p>
+</li>
+</ol>
+<p class="p">To execute short isolation in hierarchical
+mode, any of these command lines may be used:</p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net -turbo -hyper rules  
+
+calibre -spice layout.net -lvs -hier -hcell cells -turbo -hyper rules  
+
+calibre -lvs -hier -hcell cells -turbo -hyper rules  </code></pre><p class="p">The following commands execute short isolation
+in flat LVS or layout-to-Cnet translation:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -flatten rules  
+
+calibre -lvs -tl layout.cnet rules </code></pre><p class="p">You can view short isolation results before
+the run terminates by altering the command line in the following
+way:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs ... &gt;&amp; logfile 
+tail -f logfile </code></pre><p class="p">or</p>
+<pre class="pre codeblock leveled"><code>grep -i "SHORT ISOLATION" logfile</code></pre><p class="p">The short isolation module returns the following:</p>
+<pre class="pre codeblock leveled"><code>SHORT ISOLATION started. 
+SHORT ISOLATION completed. CPU TIME = 0  REAL TIME = 0  ... 
+SHORT ISOLATION RESULTS DATABASE = lvs.rep.shorts </code></pre><p class="p">You can then open the short isolation database
+in Calibre RVE and begin debugging. The short isolation database
+is much like the DRC ASCII results database with some additional information.</p>
+<p class="p">If the run produces no shorts and LVS Isolate
+Shorts YES is specified, the tool automatically removes an existing
+short isolation results database.</p>
+<p class="p">In flat and hierarchical systems, all short
+isolation results are returned in the coordinate space of the top-level
+cell. Short isolation in the top-level cell operates on the text
+at that level only, subject to the Text Depth specification statement.
+Short isolation in lower-level cells operates on text objects that
+are present locally in each particular cell, independent of <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Text Depth', 'svrf_ur'); return false;">Text Depth</a>.</p>
+<p class="p">In the shorts database, 2×2 dbu squares are added to the polygonal
+paths between shorted text objects. The text object base points
+intersect these squares. This is to ensure text objects in the shorts
+database are not isolated from short paths. The squares are on the
+layers that the text objects are attached to, and the squares abut
+or overlap other shapes in a short path.</p>
+<p class="p">In
+Calibre nmLVS-H, short isolation does not process target layers
+specified by the Sconnect statement unless those layers contain
+texted shapes that are involved in a short. Therefore, if you use <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> statements
+to form connections to the substrate, you can replace them with <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Sconnect', 'svrf_ur'); return false;">Sconnect</a> statements
+to increase efficiency.</p>
+<p class="p">You can cause text shorts to produce LVS comparison
+discrepancies by specifying <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report Option', 'svrf_ur'); return false;">LVS Report Option</a> ES.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Invoking Short Isolation', 'calbr_interactive_user'); return false;">Invoking Short Isolation</a>”
+in the <cite class="cite">Calibre Interactive User’s Manual </cite>to see how
+to set up a short isolation run in the interactive mode. </p>
+<p class="p">The short isolation (.<span class="keyword ParameterName OptionalReplaceable">shorts</span>)
+database can be viewed in Calibre RVE for LVS. You can debug a short,
+virtually repair the short by marking polygons for removal and assigning
+net labels within Calibre RVE, and run short verification to verify
+that the changes fix the short. See the following topics in the <cite class="cite">Calibre
+RVE User’s Manual</cite> for more information: “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Using Calibre RVE for LVS', 'calbr_rve_user'); return false;">Using Calibre RVE for LVS</a>”,
+“<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Interactive Short Isolation', 'calbr_rve_user'); return false;">Interactive Short Isolation</a>”,
+“<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Verifying Short Repairs', 'calbr_rve_user'); return false;">Verifying Short Repairs</a>.”</p>
+</div>
+<div class="section Subsection" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__id1de2fc15-31eb-411d-bfef-9c6f10a3f9af"><h2 class="title Subheading sectiontitle">Mask
+SVDB Directory SI Flow</h2><p class="p">This flow facilitates short isolation using the Query Server
+Tcl shell. The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> SI
+keyword ensures the SVDB directory has the necessary information
+to perform interactive short isolation using Query Server Tcl commands.
+For more information about this, see “<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Using Short Database Commands', 'calbr_query_user'); return false;">Using Short Database Commands</a>”
+in the <cite class="cite">Calibre Query Server Manual</cite>.</p>
+<p class="p">This flow allows you to do short isolation independently from
+other LVS tasks once the SVDB containing the shorts data exists.
+See “<a class="xref Link" href="../../calbr_solns_pv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Performing Only Short Isolation', 'calbr_solns_pv_user'); return false;">Performing Only Short Isolation</a>”
+in the <cite class="cite">Calibre Solutions for Physical Verification Manual</cite>.</p>
+</div>
+<div class="section Subsection" id="id2e5915ce-e8aa-433f-8ddf-7952e2236c4e__id11713a9d-8ed5-4703-adb1-5a94f3c09f90"><h2 class="title Subheading sectiontitle">Calibre
+nmLVS Reconnaissance Short Isolation</h2><p class="p">The Calibre nmLVS Reconnaissance Short Isolation flow (or <span class="ph FontProperty emphasis">Calibre nmLVS Recon SI</span> for short)
+supports stand-alone short isolation. This flow is used outside
+of LVS and is well suited toward fixing shorts early in the design
+cycle to avoid LVS problems later.</p>
+<p class="p">This flow uses the calibre <a class="xref" href="Command_CalibreNmLVSReconnaissanceCommandLine_id93e8f035.html#id93e8f035-8377-48dc-9929-7d279889c475__id42537a75-4e0b-4562-bbb6-acedce31fca9">-recon -si</a> command
+line. This is an abbreviated form:</p>
+<pre class="pre codeblock"><code>calibre -recon -si[={ALL | DB | IO | PG | &lt;tcl_script&gt;}] -turbo \
+  {&lt;rule_file&gt; | {-svdb &lt;svdb_dir&gt; [&lt;top_cell&gt;]}}</code></pre><p class="p">The -recon and -si options are both required. If <span class="keyword ParameterName OptionalReplaceable">rule_file</span> is
+specified, then the rule file flow is used (again, these are LVS
+circuit extraction rules). If -svdb is specified, then the Mask
+SVDB Directory flow is used. The run is hierarchical and multithreading
+is supported. Hyperscaling is supported when a rule file is specified.</p>
+<p class="p">The rule file flow performs short isolation using LVS circuit
+extraction rules and a layout as inputs. The Mask SVDB Directory
+flow requires the -svdb option and loads an SVDB from a previous
+LVS circuit extraction run and performs short isolation on that
+data. Both flows depend on a Mask SVDB Directory statement in the
+rules that produces a persistent hierarchical database (PHDB). Some
+of the common keyword options that do this include CCI, QUERY, or SI.</p>
+<p class="p">If -si is specified without the equals sign suffix, then all
+nets at the primary level of the design are processed for short
+isolation. Results are presented in the same way as when BY CELL
+BY LAYER are specified with LVS Isolate Shorts. If the equals sign
+is appended to -si, then an additional modal argument must be specified
+that controls which nets are processed for short isolation. These
+are either nets at all levels of the hierarchy, I/O signal nets
+at the primary level, or power and ground supply nets at the primary
+level. If the <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+specified, this is a Query Server Tcl shell script that runs commands
+from that interface on the PHDB data. Again, the DB modal operator
+produces only a PHDB for short isolation in subsequent runs on the SVDB.</p>
+<p class="p">The DB modal operator is a special case for use in a two-step
+flow. The first run uses ‑si=DB and creates just a PHDB in either
+a new or existing SVDB. Subsequent runs perform short isolation
+on the data in the SVDB (-si without “=DB” and -svdb are used).
+This can be faster than doing everything in a single run in certain
+cases, especially for larger designs or when there are many shorts
+anticipated in the layout.</p>
+<p class="p">In runs other than an -si=DB run, only connectivity extraction
+and short isolation are performed (no device extraction or anything
+dependent upon it, but Device statements are used to identify pin
+layers). These flows support interactive short isolation immediately
+upon loading the generated SVDB data into either Calibre RVE or
+the Calibre Query Server Tcl shell. This interactive capability
+is provided automatically and requires no additional rule file setup.
+For more information about interactive short isolation in Calibre
+RVE, see “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Interactive Short Isolation', 'calbr_rve_user'); return false;">Interactive Short Isolation</a>”
+in the <cite class="cite">Calibre RVE User’s Manual</cite>. For more information
+about this topic in the Query Server context, see “<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Using Short Database Commands', 'calbr_query_user'); return false;">Using Short Database Commands</a>”
+in the <span class="keyword ParameterName OptionalReplaceable">Calibre Query Server Manual</span>.</p>
+<p class="p">Here are some command line examples with brief descriptions:</p>
+<pre class="pre codeblock"><code># isolate shorts at the top level of the design
+calibre -recon -si -turbo rules 
+
+# isolate shorts in all cells. do not allow LVS Isolate Shorts NAMES
+# keyword to override short isolation on all nets.
+calibre -recon -si=ALL -turbo rules 
+
+# isolate top-level supply shorts using an SVDB containing a PHDB
+calibre -recon -si=PG -turbo -svdb svdb</code></pre><p class="p">An <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Isolate Shorts', 'svrf_ur'); return false;">LVS Isolate Shorts</a> NO
+statement, specified either explicitly or by default, is ignored
+in this flow. LVS Isolation Shorts YES secondary keywords are observed
+if specified in the rules and are applied to the run if they do
+not conflict with the command line option behavior.</p>
+<p class="p">There is also a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS SI Select Connects', 'svrf_ur'); return false;">LVS SI Select Connects</a> specification
+statement and a <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'short_dbselect_connects', 'calbr_query_user'); return false;">short_db::select_connects</a> Query
+Server command that may be used to configure which Connect and Sconnect
+operations are processed prior to short isolation. By default, all
+such operations that produce connectivity to the level of the device
+pins are processed.</p>
+<p class="p">Using this flow requires a Calibre nmLVS Reconnaissance license.
+A hierarchical LVS license pair is required if a rule file is specified.
+A Query Server license is required when -recon ‑si=<span class="ph filepath">tcl_script</span> is
+used.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_LvsCircuitExtraction_idb57f5b46.html" title="Circuit extraction is part of the LVS flow. Circuit extraction occurs before LVS comparison and includes various modules such as connectivity extraction, short isolation, device recognition, netlist writing, ERC checking, and soft connection checking.">LVS Circuit Extraction</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Short Isolation"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ShortIsolation_id2e5915ce.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

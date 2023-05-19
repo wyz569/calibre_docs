@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Optimize Results From setlayer curve" />
+<meta name="abstract" content="The setlayer curve command allows you to create a “smoothed” target based on the original target. The smoothed target allows you to prevent overcorrection on 2D and jogs. The setlayer curve command implements a B-spline, and control points are derived from existing polygon vertices." />
+<meta name="description" content="The setlayer curve command allows you to create a “smoothed” target based on the original target. The smoothed target allows you to prevent overcorrection on 2D and jogs. The setlayer curve command implements a B-spline, and control points are derived from existing polygon vertices." />
+<meta name="DC.subject" content="setlayer curve, recommended settings" />
+<meta name="keywords" content="setlayer curve, recommended settings" />
+<meta name="prodname" content="Calibre nmOPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="None" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® nmOPC™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9401f1fc-1b83-40e6-8252-fe76537708d5" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Optimize Results From setlayer curve</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Optimize Results From setlayer curve" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9401f1fc-1b83-40e6-8252-fe76537708d5">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Optimize Results From setlayer curve</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">The
+setlayer curve command allows you to create a “smoothed” target
+based on the original target. The smoothed target allows you to
+prevent overcorrection on 2D and jogs. The setlayer curve command
+implements a B-spline, and control points are derived from existing
+polygon vertices.</span>
+</div>
+<p class="p">There are a number of different
+parameters in setlayer curve that can be utilized to get the best results,
+depending on the kind of curvature you wish to produce.</p>
+<p class="p"><a class="xref fm:Table" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id889047a5-7db3-41c0-88d8-42352e47b174">Table 1</a> lists the recommended general setlayer
+curve parameter settings to get the best overall curvature fit.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id9401f1fc-1b83-40e6-8252-fe76537708d5__id889047a5-7db3-41c0-88d8-42352e47b174" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>General Recommended Settings for setlayer
+curve</span></caption><colgroup><col style="width:1.991in" /><col style="width:1.228in" /><col style="width:2.957in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e161"><p class="p">Parameter</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e164"><p class="p">Recommended Setting</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e167"><p class="p">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">order</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">6</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">An optional parameter
+that specifies the B-spline order. You can select linear, quadratic,
+or cubic. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">Set to 60% of your design’s minimum
+CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">Specifies the distance
+between additional control points inserted to the left and right of
+an original polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">Set to your design’s minimum
+CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">Controls where the last
+control point should be at exactly the specified distance away from
+the original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch or nub that would
+have had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">pts_per_cp</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">10</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">This parameter only controls
+the size of the output control points. It does not influence the
+curve parameter.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">scale1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">2.0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">If
+a line end or space end is smaller than cpdist * scale1, control
+points on adjacent edges are put at a cpdist * scale2 distance, instead
+of the <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span>.
+See <a class="xref fm:Figure" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id30c13330-a51e-49d8-b28c-0d24bf4d8c76">Figure 1</a> for an example of line_end
+and space_end scaling.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">scale2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">0.5</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">Any line/space end that
+has width &lt; scale1 * cpdist has a control point inserted on an adjacent
+edge at a distance of scale2 * width. </p>
+<p class="p">See <a class="xref fm:Figure" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id30c13330-a51e-49d8-b28c-0d24bf4d8c76">Figure 1</a> for an example of line_end and space_end
+scaling.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">&gt; 0.25*min CD &lt; 0.4*min
+CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e161 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e164 "><p class="p">0.000 </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e167 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fig fignone" id="id9401f1fc-1b83-40e6-8252-fe76537708d5__id30c13330-a51e-49d8-b28c-0d24bf4d8c76"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Example of Line/Space End
+Scaling</span><br /><div class="imagecenter"><img class="image imagecenter" height="221" src="../graphics/best_practices14a.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id7a166b0f-dbac-4d05-bfc9-d92c66e70489">Table 2</a> lists the recommended setlayer curve
+parameter settings for better handling of line ends and space ends.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id9401f1fc-1b83-40e6-8252-fe76537708d5__id7a166b0f-dbac-4d05-bfc9-d92c66e70489" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Line/Space End-Specific Recommended Settings
+for setlayer curve</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e292"><p class="p">Parameter</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e295"><p class="p">Recommended Setting</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e298"><p class="p">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">[line_end | space_end] </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">Select either line_end
+or space_end, depending on the feature</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">Specifies feature as
+a line end or space end.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">0.6*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">Specifies the distance between
+additional control points inserted to the left and right of an original
+polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">[0.8 – 1.0]*min CD </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">Controls where the last control
+point should be at exactly the specified distance away from the
+original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch/nub that would have
+had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">0.1*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">0.1*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e292 "><p class="p">length </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e295 "><p class="p">[1.0 to 1.5]*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e298 "><p class="p">Specifies the fragment
+length of the line end or space-end edge. See <a class="xref fm:Figure" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id17c2951c-dd28-4ee1-baff-2caac358c382">Figure 2</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fig fignone" id="id9401f1fc-1b83-40e6-8252-fe76537708d5__id17c2951c-dd28-4ee1-baff-2caac358c382"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Length and Width Representation
+for setlayer curve</span><br /><div class="imagecenter"><img class="image imagecenter" height="92" src="../graphics/best_practices15a.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#id9401f1fc-1b83-40e6-8252-fe76537708d5__id4428bf63-40fe-4898-8412-b3f6d5cd5f3d">Table 3</a> lists the recommended parameter settings
+to reduce jogs in the rendered curve.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id9401f1fc-1b83-40e6-8252-fe76537708d5__id4428bf63-40fe-4898-8412-b3f6d5cd5f3d" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Recommended Jog-Specific Settings for
+setlayer curve</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e394"><p class="p">Parameter</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e397"><p class="p">Recommended Setting</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d83168e400"><p class="p">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">jog</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">Specify “jog” as the
+feature</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">Specifies feature as
+a jog.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">0.6*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">Specifies the distance between
+additional control points inserted to the left and right of an original
+polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">[0.8 – 1.0]*min CD </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">Controls where the last control
+point should be at exactly the specified distance away from the
+original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch/nub that would have
+had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">0.000</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">0.1*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e394 "><p class="p">length</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e397 "><p class="p">roughly 0.6*min CD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d83168e400 "><p class="p">Specifies the fragment
+length of the feature.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">A concave/convex-specific
+setting is generally not needed unless a different curvature is desired.</p>
+</div>
+</div>
+</div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmopc_useref"
+                DocTitle = "Calibre® nmOPC™ User’s and Reference Manual"
+                PageTitle = "Optimize Results From setlayer curve"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_OptimizeResultsFromSetlayerCurve_id9401f1fc.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmOPC™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Tcl Interpreters and TVF Files" />
+<meta name="abstract" content="The master interpreter (m_interp) reads Tcl code to define the TVF namespace. The user interpreter (u_interp) reads the TVF file specified as the Calibre rule file. If the rule file includes any encrypted files specified with the Tcl source command, then each encrypted file is read into an encrypted interpreter (e_interp)." />
+<meta name="description" content="The master interpreter (m_interp) reads Tcl code to define the TVF namespace. The user interpreter (u_interp) reads the TVF file specified as the Calibre rule file. If the rule file includes any encrypted files specified with the Tcl source command, then each encrypted file is read into an encrypted interpreter (e_interp)." />
+<meta name="prodname" content="Calibre TVFencrypt User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_tvfencrypt_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® TVFencrypt User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="NONE" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idcbc992a7-299c-4679-963d-dd0e46949b70" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Tcl Interpreters and TVF Files</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Tcl Interpreters and TVF Files" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idcbc992a7-299c-4679-963d-dd0e46949b70">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Tcl Interpreters and TVF Files</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The master interpreter
+(m_interp) reads Tcl code to define the TVF namespace. The user
+interpreter (u_interp) reads the TVF file specified as the Calibre rule
+file. If the rule file includes any encrypted files specified with
+the Tcl <span class="ph FontProperty shellcommand">source</span> command,
+then each encrypted file is read into an encrypted interpreter (e_interp).</span>
+</div>
+<p class="p">Therefore,
+the interpreter running unencrypted TVF code is not the same interpreter
+running the encrypted TVF code. You can also source an encrypted
+file from within another encrypted TVF file as shown in <a class="xref fm:Figure" href="#idcbc992a7-299c-4679-963d-dd0e46949b70__idd181995a-a962-4488-854b-b0aa7e297bc6">Figure 1</a>. If the encrypted
+TVF files are created using different <span class="keyword ParameterName RequiredReplaceable">id_string</span> values,
+then separate encrypted interpreters are created for each encrypted
+TVF file.</p>
+<div class="fig fignone" id="idcbc992a7-299c-4679-963d-dd0e46949b70__idd181995a-a962-4488-854b-b0aa7e297bc6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Interpreter Structure</span><br /><div class="imagecenter"><img class="image imagecenter" height="408" src="../graphics/usage2a.png" width="283" /></div><br /></div>
+<p class="p">You can allow
+multiple encrypted TVF files to be read into the same encrypted
+Tcl interpreter by:</p>
+<ul class="ul"><li class="li" id="idcbc992a7-299c-4679-963d-dd0e46949b70__id4a48fb1f-035b-4480-88a4-1bbde10c4bd8"><p class="p">Specifying
+the same <span class="keyword ParameterName RequiredReplaceable">id_string</span> for
+each file when using the caltvfencrypt <span class="keyword ParameterName RequiredReplaceable">id_string</span> argument, and</p>
+</li>
+<li class="li" id="idcbc992a7-299c-4679-963d-dd0e46949b70__idc9d631f8-8866-4629-be44-b20f1dbbd7aa"><p class="p">Nesting calls to the files.</p>
+</li>
+</ul>
+<p class="p">Encrypted
+files that do not meet both of these conditions are read into separate
+encrypted Tcl interpreters.</p>
+<p class="p">For example,
+in <a class="xref fm:Figure" href="#idcbc992a7-299c-4679-963d-dd0e46949b70__id58e3d0d3-a0da-4ecb-af7b-bb174d1ef6bf">Figure 2</a>, <span class="ph filepath">file0.tbc</span> and <span class="ph filepath">file1.tbc</span> are
+encrypted using the same <span class="keyword ParameterName RequiredReplaceable">id_string</span> and
+are also nested. This allows the files to be read into the same
+encrypted Tcl interpreter. The encrypted file <span class="ph filepath">file2.tbc</span> has
+a different <span class="keyword ParameterName RequiredReplaceable">id_string</span> and
+is not nested, causing it to be read into a different encrypted
+Tcl interpreter.</p>
+<div class="fig fignone" id="idcbc992a7-299c-4679-963d-dd0e46949b70__id58e3d0d3-a0da-4ecb-af7b-bb174d1ef6bf"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Reading Multiple
+Files into an Encrypted Tcl Interpreter</span><br /><div class="imagecenter"><img class="image imagecenter" height="394" src="../graphics/usage3a.png" width="283" /></div><br /></div>
+<p class="p">Global or
+namespace variables are not visible between interpreters, with the
+exception of global variables defined using certain commands (refer
+to “<a class="xref fm:HeadingAndPage" href="General_GlobalVariables_idf6550ffe.html#idf6550ffe-a3d0-4885-928d-b8a2bd0db0a2__General_GlobalVariables_idf6550ffe.xml#idf6550ffe-a3d0-4885-928d-b8a2bd0db0a2" title="There are some TVF commands you can use to define global variables that can be shared across the different Tcl interpreters (both encrypted and unencrypted).">Global Variables</a>”). Tcl procedures are generally not callable between interpreters,
+with two exceptions:</p>
+<ul class="ul"><li class="li" id="idcbc992a7-299c-4679-963d-dd0e46949b70__id14d9ea65-4af5-4200-bbdd-c0bd8b697b2c"><p class="p">Tcl procedures
+within encrypted Tcl interpreters are callable from the user interpreter,
+and from other encrypted Tcl interpreters.</p>
+</li>
+<li class="li" id="idcbc992a7-299c-4679-963d-dd0e46949b70__id566b7e1f-b26a-434a-b6b7-2cb07373aa62"><p class="p">Procedures
+inside the TVF namespace of the master interpreter are callable from
+the user interpreter or any encrypted Tcl interpreter.</p>
+</li>
+</ul>
+<p class="p">Namespace
+code cannot be used across interpreters. For example, if procedures
+within namespace ABC are defined in both <span class="ph filepath">a.tvf</span> and <span class="ph filepath">b.tvf</span>,
+the two files must be compiled with the same <span class="keyword ParameterName RequiredReplaceable">id_string</span> when
+using the <span class="keyword ParameterName Required">caltvfencrypt</span> <span class="keyword ParameterName Required">‑id</span> argument.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_UsingAnEncryptedTvfFile_ida1546b8f.html" title="When Calibre reads a TVF rule file, at least two Tcl interpreters are created: a master interpreter and a user interpreter. If the rule file includes encrypted TVF code, then one or more encrypted interpreters are created depending on how the encrypted file is sourced.">Using an Encrypted TVF File</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_tvfencrypt_user"
+                DocTitle = "Calibre® TVFencrypt User’s Manual"
+                PageTitle = "Tcl Interpreters and TVF Files"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_TclInterpretersAndTvfFiles_idcbc992a7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® TVFencrypt User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="calibre -lsg" />
+<meta name="abstract" content="Calibre LSG generates layout clips that can be used for creating initial pattern libraries and other early design phase layout applications." />
+<meta name="description" content="Calibre LSG generates layout clips that can be used for creating initial pattern libraries and other early design phase layout applications." />
+<meta name="prodname" content="Calibre LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="version" content="v12.2" />
+<meta name="release" content="2016_01" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2017-11-09" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lsg_user" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="2" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 25, 2021" />
+<meta name="DocumentTitle" content="Calibre® LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>calibre -lsg</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="calibre -lsg" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">calibre -lsg</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">The
+Calibre LSG software tool is run from a Linux command line with
+an LSG options file. </p>
+<p class="shortdesc">Calibre LSG generates layout clips that can be used for
+creating initial pattern libraries and other early design phase
+layout applications.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">calibre ‑lsg</span>  [<span class="keyword ParameterName Optional">-turbo</span> [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]] <span class="keyword ParameterName RequiredReplaceable">lsg_options_file</span></p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Calibre LSG argument options can be used to customize the layout
+clips to represent more realistic design structures that are nearly
+DRC clean.</p>
+<p class="p">You run Calibre LSG from a command line and
+specify an LSG options file (<span class="ph filepath">lsg_options_file</span>) that
+contains the argument options specified as <span class="keyword ParameterName OptionalReplaceable">option</span>=<span class="keyword ParameterName OptionalReplaceable">value</span>.
+The format of the command syntax in the LSG options file is one
+argument option per line as shown:</p>
+<pre class="pre codeblock"><code>pattern_count=10
+pitch_size=0.1
+pattern_height=8
+pattern_width=15
+output_folder=LSG_OUT</code></pre></div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idb92bf7aa-037b-4fb1-aa26-619550ce5dc8"><span class="keyword ParameterName Required">‑lsg</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+to run Calibre LSG from the command line. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id7c6c53ff-14ca-40ce-9361-5d515919514f"><span class="keyword ParameterName RequiredReplaceable">lsg_options_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+an input file containing the argument options for running Calibre
+LSG. The options in this file are formatted as <span class="keyword ParameterName OptionalReplaceable">option</span>=<span class="keyword ParameterName OptionalReplaceable">value</span>.
+Specify this argument from the Calibre LSG command line.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ide186681c-f999-46ef-bb19-234c52576e8f"><span class="keyword ParameterName Optional">-turbo</span> [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+and value enabling multithreaded parallel processing. Specify this argument
+from the Calibre LSG command line.</p>
+<p class="p">The optional number_of_processors value is a positive
+integer that specifies the number of CPUs to use. If you do not
+specify number_of_processors, Calibre LSG runs on the maximum number
+of CPUs available for which you have licenses. See “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre Command Line', 'calbr_admin_gd'); return false;">Calibre Command Line</a>”
+in the <cite class="cite">Calibre Administrator’s Guide</cite> for
+more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idad510d1f-9216-49b7-936a-70293dc6474c"><span class="keyword ParameterName Required">pattern_count=</span><span class="keyword ParameterName RequiredReplaceable">pattern_count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+keyword and argument specifying the number of the layout clips that
+are output. This keyword must be specified if pattern_row_count
+and pattern_col_count are not specified. Specify this number as
+a positive integer.</p>
+<p class="p">This keyword is not used if the “systematic” keyword
+is specified. See “<a class="xref fm:HeadingAndPage" href="Command_SpgFlowOptions_idb622aa56.html#idb622aa56-674f-44f7-91b5-7ae440000589__Command_SpgFlowOptions_idb622aa56.xml#idb622aa56-674f-44f7-91b5-7ae440000589" title="Arguments are specified in the LSG options file with additional arguments in the SPG options file.">SPG Flow Options</a>” for more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id39b8028e-1307-4f97-9e2f-be557cb09837"><span class="keyword ParameterName Required">pattern_row_count</span>=<span class="keyword ParameterName RequiredReplaceable">pattern_row_count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and
+argument specifying the number generated rows of layout clips. This
+keyword is used in conjunction with pattern_col_count and must be
+specified if pattern_count is not specified. Specify this number
+as a positive integer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id609d01fc-c890-415a-a250-6bc0b44d05e1"><span class="keyword ParameterName Required">pattern_col_count=</span><span class="keyword ParameterName RequiredReplaceable">pattern_col_count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and
+argument specifying the number of generated columns of layout clips.
+This keyword is used in conjunction with pattern_row_count and must
+be specified if pattern_count is not specified. Specify this number
+as a positive integer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id348b4d2b-8f07-4a82-a585-5d6d983c2216"><span class="keyword ParameterName Required">pitch_size</span>=<span class="keyword ParameterName RequiredReplaceable">pitch_size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and argument
+that defines the edge length of a square unit pattern with symmetric
+pitch. This keyword must be specified if pitch_width and pitch_height
+are not specified. Specify this number as a positive floating‑point
+number in microns. The minimum value is 0.002 microns. For example,
+for a pitch of a 64 nm, specify pitch_size as follows:</p>
+<pre class="pre codeblock leveled"><code>pitch_size=0.064  </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9702f7f6-620a-4f65-80c5-9e70d7930a0a"><span class="keyword ParameterName Required">pitch_width=</span><span class="keyword ParameterName RequiredReplaceable">pitch_width</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and argument
+that defines the width for a unit pattern with asymmetric pitch.
+Use this keyword in conjunction with the pitch_height keyword. This
+keyword must be specified if pitch_size is not specified. Specify
+this number as a positive floating‑point number in microns. The
+minimum value is 0.002 microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id5eda3cf0-beee-4118-8804-fc5e043ab1b9"><span class="keyword ParameterName Required">pitch_height</span>=<span class="keyword ParameterName RequiredReplaceable">pitch_height</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and argument
+that defines the height of a unit pattern with asymmetric pitch.
+Use this keyword in conjunction with the pitch_width keyword. This
+keyword must be specified if pitch_size is not specified. Specify
+this number as a positive floating‑point number in microns. The
+minimum value is 0.002 microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id05edc724-2e25-4a3d-a783-43ee132b2718"><span class="keyword ParameterName Required">pattern_size=</span><span class="keyword ParameterName RequiredReplaceable">pattern_size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+keyword and argument that specifies the size of one layout clip
+in terms of the number of unit patterns used to form the clip side.
+A layout clip is made up of multiples of unit patterns. A pattern_size
+of 10 means a layout clip pattern of 10 x 10. This keyword must be
+specified if pattern_width and pattern_height are not specified.
+Specify this value as a positive integer number.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id7c5b3b4b-4764-4850-9126-7378b8d9b1f1"><span class="keyword ParameterName Required">pattern_width=</span><span class="keyword ParameterName RequiredReplaceable">pattern_width</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+keyword and argument that specifies the width of a layout clip in
+terms of the number of unit patterns used to form the layout clip
+width. Use this keyword in conjunction with the pattern_height keyword
+to create a rectangular layout clip. This keyword must be specified
+if pattern_size is not specified. Specify this value as a positive
+integer number.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id38d16d79-99e9-4d04-afef-486689bdc7f5"><span class="keyword ParameterName Required">pattern_height=</span><span class="keyword ParameterName RequiredReplaceable">pattern_height</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+keyword and argument that specifies the height of a layout clip
+in terms of the number of unit patterns used to form the layout
+clip height. Use this keyword in conjunction with the pattern_width
+keyword to create a rectangular layout clip. This keyword must be specified
+if pattern_size is not specified. Specify this value as a positive
+integer number.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idf94bb680-5c64-410f-800d-25b43224f624"><span class="keyword ParameterName Required">output_folder=</span><span class="keyword ParameterName RequiredReplaceable">output_dir</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and argument
+defining the name of the output directory for temporary files and
+the generated layout clips.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id7939f0d3-4e0d-445f-9e18-e1d2dddf9ce5"><span class="keyword ParameterName Optional">output_format</span>={<span class="keyword ParameterName OptionalDefault">OASIS</span> | <span class="keyword ParameterName Optional">GDSII</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the format of the output layout clip database. If not
+specified, format defaults to OASIS.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd3aa90cd-a55d-4c94-910e-a245e9417925"><span class="keyword ParameterName Optional">priority_file=</span><span class="keyword ParameterName OptionalReplaceable">priority_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the name of the priority or weight file. This file contains
+the weights for selecting the unit patterns and rotations.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd858e894-23fe-4446-b289-e545192096ba"><span class="keyword ParameterName Optional">custom_unit_patterns=</span>./<span class="keyword ParameterName OptionalReplaceable">unit_def.conf</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword
+and argument specifying the path and filename of a unit pattern definitions
+file. This file may contain both default and custom unit pattern
+definitions. See “<a class="xref fm:HeadingAndPage" href="FileRef_UnitPatternsDefinitionFileFormat_id649b83bd.html#id649b83bd-feb4-4eaa-8a4f-1c3b8249c7ce__FileRef_UnitPatternsDefinitionFileFormat_id649b83bd.xml#id649b83bd-feb4-4eaa-8a4f-1c3b8249c7ce" title="An optional Calibre LSG unit patterns definition file can be used to define the default unit patterns or custom unit patterns that are generated in the layout clips.">Unit Patterns Definition File Format</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id0276fb4c-b64b-4cd7-9dd9-746f2f88e43f"><span class="keyword ParameterName Optional">margin=</span><span class="keyword ParameterName OptionalReplaceable">margin_size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the margin between the generated layout clips. Specify
+this space as a floating-point number in microns. The margin keyword
+is overridden if specified with the <span class="keyword ParameterName Optional">margin_vertical</span> or <span class="keyword ParameterName Optional">margin_horizontal</span> keywords.
+The default margin space is 2 * pitch_size.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id64307e48-586c-4587-91f5-c3094ecdfafd"><span class="keyword ParameterName Optional">margin_vertical</span>=<span class="keyword ParameterName OptionalReplaceable">margin_vert</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the vertical margin between layout clips. Specify this
+space as a positive or negative floating‑point number in microns.
+You can control the spacing between the layout clips as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idcbcb6169-f6da-44ee-8fc3-756771a421b8"><p class="p">Specify a negative floating‑point
+number for overlapping layout clips.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfcfb82f4-fccf-449a-8d4e-ba9681907338"><p class="p">Specify a zero for no space
+between layout clips.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3a948c72-3b79-4fd8-ad6e-966d417db8cf"><p class="p">Specify a positive floating‑point
+number for a space between layout clips.</p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName Optional">margin_vertical</span> keyword
+can be specified with the <span class="keyword ParameterName Optional">margin_horizontal</span> keyword
+and overrides the <span class="keyword ParameterName Optional">margin keyword</span>.
+The default vertical margin space is 2 * pitch_height.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id21adfaf1-a7e1-412e-a0c8-e91a3d8cacf2"><span class="keyword ParameterName Optional">margin_horizontal=</span><span class="keyword ParameterName OptionalReplaceable">margin_horiz</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the horizontal margin space between the layout clips.
+Specify this space as a positive or negative floating‑point number
+in microns. You can control the output as shown for the <span class="keyword ParameterName Optional">margin_vertical</span> keyword.</p>
+<p class="p">The margin_horizontal keyword
+can be specified with the margin_vertical keyword and overrides
+the ‑margin keyword. The default horizontal margin space is 2 *
+pitch_width.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3345d5b7-9674-4cdd-9193-e21c2d94a4b9"><span class="keyword ParameterName Optional">layer</span>=<span class="keyword ParameterName OptionalReplaceable">layer_number</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the layout layer number for the generated layout clips.
+Specify this number as a positive integer. The default for layer_number
+is 200.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idc3b55c8e-8bb8-41bb-a535-2f1a6590ddc9"><span class="keyword ParameterName Optional">output_file</span>=<span class="keyword ParameterName OptionalReplaceable">output_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and argument specifying the name of the output database
+file for the generated layout clips. A file extension of <span class="ph filepath">.oas</span> or <span class="ph filepath">.gds</span> is
+added to output_file_name, depending on the database format. The
+default database filename is <span class="ph filepath">lsg_output.oas</span> for OASIS
+databases (default format) and <span class="ph filepath">lsg_output.gds</span> for
+GDS format databases.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id811aa3e1-e25b-492a-964d-aa4c013d1eda"><span class="keyword ParameterName Optional">rules</span>=<span class="keyword ParameterName OptionalReplaceable">rules_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and argument specifying additional unit pattern configuration
+and neighboring unit pattern rules. For more information, contact
+your Siemens EDA representative for rules that may be specific to
+your Calibre LSG run.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idf8d6aa81-bfe8-49e8-b719-ea0393b2f639"><span class="keyword ParameterName Optional">drc</span>=<span class="keyword ParameterName OptionalReplaceable">postfix_vars_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and argument specifying a postfix variables filename. This
+file is used with other required input options to run a DRC‑fixing
+flow on the generated layout clips. See “<a class="xref fm:HeadingAndPage" href="Contain_CalibreLSGDRCBasedPostFix_id9db21a77.html#id9db21a77-750d-1014-ad66-a956285af79d__Contain_CalibreLSGDRCBasedPostFix_id9db21a77.xml#id9db21a77-750d-1014-ad66-a956285af79d" title="The Calibre LSG postfix flow (postfix flow) performs DRC fixes on the generated layout clips based on your DRC rule specifications.">Calibre LSG DRC‑Based Postfix</a>” and “<a class="xref fm:HeadingAndPage" href="Command_PostfixOptions_id2e8e6506.html#id2e8e6506-cb06-4fe8-85a9-17c6ef34b6be__Command_PostfixOptions_id2e8e6506.xml#id2e8e6506-cb06-4fe8-85a9-17c6ef34b6be" title="Arguments are specified in the LSG options file and the postfix variables file.">Postfix Options</a>” and your Siemens EDA representative for more information
+on this flow.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfe58ff6c-7387-4985-bd7d-b35faed9c015"><span class="keyword ParameterName Optional">multi_pattern=</span><span class="keyword ParameterName OptionalReplaceable">multi_pattern_number</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument specifying
+the number of patterns (mask layers) to be represented in the generated
+layout clips. Specify this number as a positive integer. If the specified
+number is not equal to one (1), the default behavior is to define
+the group of unit patterns for each layer.</p>
+<p class="p">For example, a double pattern ten sample layout clip is specified
+by the following command arguments in an LSG options file:</p>
+<pre class="pre codeblock leveled"><code>pattern_count=10
+pitch_size=0.064
+pattern_size=15
+multi_pattern=2
+priority_file=<span class="keyword ParameterName OptionalReplaceable">my_dp_weights</span>
+rules=<span class="keyword ParameterName OptionalReplaceable">my_dp_rules.conf
+</span>output_folder=<span class="ph filepath">my_out_dir</span></code></pre><p class="p">Unit patterns from 1 to 5 belong to the first layer, and unit
+patterns from 6 to 10, which are a copy from unit pattern 1 to 5,
+belong to the second layer.</p>
+<p class="p">You can assign a specific layer number to each layer by defining
+layer IDs and assigning each layer ID a layer number using the <span class="keyword ParameterName Optional">layers_numbers</span> argument.
+See the <span class="keyword ParameterName Optional">layers_numbers</span> argument
+for format specifications. If specific layer numbers are not assigned
+to each layer, the layer numbers are assigned randomly.</p>
+<p class="p">You can define your own custom unit patterns (rather than using
+the basic unit patterns definitions) and generate multi‑pattern
+layout clips by specifying a unit patterns definition file and the <span class="keyword ParameterName Optional">multi_patterning</span> and <span class="keyword ParameterName Optional">layers_numbers</span> arguments.
+The <span class="keyword ParameterName Optional">unit_patterns_layer</span> argument
+can also be specified with these options to define the unit patterns
+for specific layers. See “<a class="xref fm:HeadingAndPage" href="FileRef_UnitPatternsDefinitionFileFormat_id649b83bd.html#id649b83bd-feb4-4eaa-8a4f-1c3b8249c7ce__FileRef_UnitPatternsDefinitionFileFormat_id649b83bd.xml#id649b83bd-feb4-4eaa-8a4f-1c3b8249c7ce" title="An optional Calibre LSG unit patterns definition file can be used to define the default unit patterns or custom unit patterns that are generated in the layout clips.">Unit Patterns Definition File Format</a>” and the <span class="keyword ParameterName Optional">unit_patterns_layer</span> argument
+for format specifications. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idc4a0afe5-ef5b-475d-af1d-d63300ddcfaa">layers_numbers=<span class="keyword ParameterName OptionalReplaceable">layers_numbers_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and argument specifying the name of the SVRF file used to
+set a layer number to each specified layer ID. If layer numbers
+are not specified in this file, Calibre LSG assigns them randomly.
+The format specifies the LAYERS_IDS variable followed by the variables
+for the layer number assignment. </p>
+<p class="p">Constraints for the clip template definitions are as follows:</p>
+<p class="p">For example,
+assigning layer ID 1 to layer number 100, and layer ID 2 to layer
+number 20.5, respectively, is specified as follows:</p>
+<pre class="pre codeblock leveled"><code>VARIABLE LAYERS_IDS "1" "2"
+VARIABLE layer_1 100 
+VARIABLE layer_2 20.50  </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd25fefa7-2354-4b40-8174-5aa57003cf3d"><span class="keyword ParameterName Optional">unit_pattern_layers=</span><span class="keyword ParameterName OptionalReplaceable">unit_pattern_layer_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying the name of the SVRF file used to map layer IDs to unit
+patterns. For example, this specifies to map layer ID 1 to unit
+pattern IDs 1 through 5 and layer ID 2 to unit pattern IDs 6 through
+10:</p>
+<pre class="pre codeblock leveled"><code>VARIABLE UNIT_PATTERNS_layer_1 "1" "2" "3" "4" "5" 
+VARIABLE UNIT_PATTERNS_layer_2 "6" "7" "8" "9" "10"  </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id33fd5ecf-8853-4506-ba57-7e7d22212490"><span class="keyword ParameterName Optional">cell_name_prefix</span>=<span class="keyword ParameterName OptionalReplaceable">cell_name_prefix</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+specifying a cell name prefix for each layout clip. Each layout
+clip is saved in the output directory when cell_name_prefix is specified. </p>
+<p class="p">For example, if cell_name_prefix
+LSG is specified, the top cell is named LSG and the individual layout
+clips are named LSG_0, LSG _1, LSG _2, …. The layout clip files <span class="ph filepath">LSG_0.gds</span>, <span class="ph filepath">LSG _1.gds</span>, <span class="ph filepath">LSG _2.gds</span>,
+… are saved in the output directory. </p>
+<p class="p">By default, the top cell is
+named “cell” and the individual layout clips are named “cell_0”, “cell_1”,
+“cell_2” …. The individual layout clips are <span class="ph FontProperty emphasis">not</span> saved
+by default. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id05adfc7a-e252-4eba-b9e4-bb9301c73436">clip_template=<span class="keyword ParameterName OptionalReplaceable">clip_template_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument specifying
+the name of a rule file used to generate power rail‑like or cell
+boundary‑like structures in the layout clip. You define the structures by
+filling rows or columns with a unit pattern or by placing unit patterns
+at specific positions. Any undefined positions are filled with random
+patterns. </p>
+<p class="p">Constraints for the clip template definitions are as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id4dff6e5c-e719-49ec-861f-2c581f42dc68"><p class="p">Definitions
+for rows, columns, and positions can be combined as long as a position
+is not defined more than once. An error is issued if clip template
+definitions specify the same position.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id24b941cd-7e04-40d6-be0e-4cc5a7cc4b28"><p class="p">Keyword “n”
+can be used to define a last row, column, or position enabling clip template
+definitions to update with layout clip size changes.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd60ee6f0-60fc-472c-98b4-d6d793f8da7d"><p class="p">Rows or columns
+can be defined along with a range of unit pattern positions to facilitate
+specification.</p>
+</li>
+</ul>
+<p class="p">The clip
+template file contains SVRF Variable statements for the following
+parameters:</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Row Fill</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd2908ca6-932a-4904-a79c-59233fb5dff6"><p class="p Opt">NUMBER_OF_DEFINED_ROWS <span class="ph FontProperty equationvariable">J</span> —
+Specifies the number <span class="ph FontProperty equationvariable">J</span> of
+row definition variables (DEFINED_ROWS_<span class="ph FontProperty equationvariable">j</span>)
+that are provided, where <span class="ph FontProperty equationvariable">j</span> goes
+from 1 to <span class="ph FontProperty equationvariable">J</span>. </p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id50e3eb56-45a2-4f24-9ce8-29e0846da5d7"><p class="p Opt">DEFINED_ROWS_<span class="ph FontProperty equationvariable">j</span> “<span class="keyword ParameterName OptionalReplaceable">p_id</span>”
+“<span class="keyword ParameterName OptionalReplaceable">row</span>”
+[“<span class="keyword ParameterName OptionalReplaceable">row</span>”
+…] — Fills one or more rows with a unit pattern <span class="keyword ParameterName OptionalReplaceable">p_id</span>.
+Row numbers “<span class="keyword ParameterName OptionalReplaceable">row</span>”
+start with 1 at the top. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idf3bb497d-18ff-4813-9fc3-a8323b575846"><p class="p Opt">You
+specify a “<span class="keyword ParameterName OptionalReplaceable">row</span>”
+definition using the following definitions:</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idddf65c47-71a6-48f0-a176-1c56325ed198"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">integer</span> —
+A positive integer value.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id421e5f03-c3a1-42f9-a941-3ec6d80f5156"><p class="p Opt"><span class="keyword ParameterName Required">n</span> —
+A keyword “n” that specifies the last row number.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id333fe376-7724-49ba-93b3-c0da914eb7ce"><p class="p Opt"><span class="keyword ParameterName Required">n ‑</span> <span class="keyword ParameterName RequiredReplaceable">x</span> —
+An expression that specifies a row number relative to the last row,
+where <span class="ph FontProperty equationvariable">x</span> is
+a positive integer less than n.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__iddf9ecb52-5dfa-46a0-92d3-ab9bbe8e9f72"><p class="p Opt">For
+example, for a generated clip that is 5 x 5 with two rows of unit
+pattern 5.1 for the top rail and one row of unit pattern 3.2 for
+the bottom power rail (last row), the clip template file looks like
+this:</p>
+</li>
+</ul>
+<pre class="pre codeblock leveled"><code>VARIABLE NUMBER_OF_DEFINED_ROWS 2 
+// two rows of pattern 5.1 at the top 
+VARIABLE DEFINED_ROWS_1 "5.1" "1" “2” 
+// one row of pattern 3.2 in row 5 
+VARIABLE DEFINED_ROWS_2 "3.2" "n"  </code></pre><div class="fig fignone" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ida232e309-5670-46f5-97cf-ec9082f79ed9"><span class="figcap"><span class="fig--title-label">Figure 1. </span>VARIABLE
+DEFINED_ROWS</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LSG_rows_vars_pdf.png" /></div><br /></div>
+<p class="p"><span class="ph FontProperty HeadingLabel">Column Fill</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9f6f77d0-8bfc-4dff-b6f9-4dc1e9b3dc10"><p class="p Opt">NUMBER_OF_DEFINED_COLUMNS <span class="ph FontProperty equationvariable">K</span> —
+Specifies the number <span class="ph FontProperty equationvariable">K</span> of
+column definition variables (DEFINED_COLUMNS_<span class="ph FontProperty equationvariable">k</span>)
+that are provided, where <span class="ph FontProperty equationvariable">k</span> goes
+from 1 to <span class="ph FontProperty equationvariable">K</span>. </p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idc4ea64ab-9c3c-47e9-bc53-b97f5b299097"><p class="p Opt">DEFINED_COLUMNS_<span class="ph FontProperty equationvariable">k</span> “<span class="keyword ParameterName OptionalReplaceable">p_id</span>”
+“<span class="keyword ParameterName OptionalReplaceable">col</span>”
+[“<span class="keyword ParameterName OptionalReplaceable">col</span>”
+…] — Fills one or more columns with a unit pattern <span class="keyword ParameterName OptionalReplaceable">p_id</span>.
+Column numbers “<span class="keyword ParameterName OptionalReplaceable">col</span>”
+start with 1 at the left side. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3ff1a832-184e-4e22-8211-746665378246"><p class="p Opt">You
+specify a “<span class="keyword ParameterName OptionalReplaceable">col</span>”
+definition using the following:</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id8b41f4a7-3461-42f3-8e2f-e96e7c92a314"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">integer</span> —
+A positive integer value.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id523cd97c-c953-4582-bbde-dfe7d0058ecd"><p class="p Opt"><span class="keyword ParameterName Required">n</span> —
+A keyword “n” that specifies the last column number.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idade96842-6305-4c88-9360-6fd091c930d0"><p class="p Opt"><span class="keyword ParameterName Required">n ‑</span> <span class="keyword ParameterName RequiredReplaceable">x</span> —
+An expression that specifies a column number relative to the last
+column, where <span class="ph FontProperty equationvariable">x</span> is
+a positive integer less than n.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idc20d688e-e18c-47d9-bb7b-433c2dd13c61"><p class="p Opt" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idb5e4892c-7c81-4ba0-9e89-513dede4bcaa">For example,
+for a generated clip that is 5 x 5 with last column of unit pattern
+5.1 and first column of unit pattern 3.1, the clip template file
+looks like this:</p>
+</li>
+</ul>
+<pre class="pre codeblock"><code>VARIABLE NUMBER_OF_DEFINED_COLUMNS 2
+// last column of pattern 5.1 at the right
+VARIABLE DEFINED_COLUMNS_1  "5.1" "n"
+//first column of pattern 3.1 at the left
+VARIABLE DEFINED_COLUMNS_2  "3.1" "1"</code></pre><div class="fig fignone" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfaa63819-fa67-4260-9020-4daa913df9fd"><span class="figcap"><span class="fig--title-label">Figure 2. </span>VARIABLE
+DEFINED_COLUMNS</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LSG_col_vars_pdf.png" /></div><br /></div>
+<p class="p"><span class="ph FontProperty HeadingLabel">Position Definitions</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id62d9e8f9-849b-47a3-83a4-5a59194350e4"><p class="p Opt">NUMBER_OF_DEFINED_POSITIONS <span class="ph FontProperty equationvariable">P</span> —
+Specifies the number <span class="ph FontProperty equationvariable">P</span> of
+position definition variables (DEFINED_POSITIONS_<span class="ph FontProperty equationvariable">p</span>)
+that are provided, where <span class="ph FontProperty equationvariable">p</span> goes from
+1 to <span class="ph FontProperty equationvariable">P</span>. </p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id1e9af69d-e07b-4d20-b9f9-dd745c0c5b9e"><p class="p Opt">DEFINED_POSITIONS_<span class="ph FontProperty equationvariable">p</span> “<span class="keyword ParameterName OptionalReplaceable">p_id</span>”
+“<span class="keyword ParameterName OptionalReplaceable">row,col</span>”
+[“<span class="keyword ParameterName OptionalReplaceable">row,col</span>”
+…] — Fills the one or more position with unit pattern <span class="keyword ParameterName OptionalReplaceable">p_id</span>.
+Positions are defined with row and column numbers, starting with
+“1,1” at the top left. </p>
+<ul class="ul ArgumentOptions" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id6be5ab2d-e1d0-4e11-bab5-7d685dd2120a"><li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id36d59d7b-de14-4c3e-b34b-21a42e1e45c8"><p class="p Opt">You
+specify a “<span class="keyword ParameterName OptionalReplaceable">row,col</span>”
+position definition using the following:</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id090fb8d5-eaaa-462e-9e9f-13881e68d076"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">integer</span> —
+A positive integer value.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id6c11722e-40c7-499f-9346-27221097f73b"><p class="p Opt"><span class="keyword ParameterName Required">n</span> —
+A keyword “n” that specifies a last row or column number.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id2f3a138e-4a28-4505-9110-308b7399c969"><p class="p Opt"><span class="keyword ParameterName Required">n ‑</span> <span class="keyword ParameterName RequiredReplaceable">x</span> —
+An expression that specifies a position relative to a last row or
+column, where <span class="ph FontProperty equationvariable">x</span> is
+a positive integer less than n.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id76b59fb5-eb56-4ab3-85f7-20ddf66e760b"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">integer</span>:<span class="keyword ParameterName Required">n</span> —
+A range from a positive integer value to n.</p>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id0606cded-f766-44d6-8e8e-658537ecff68"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">integer</span>:<span class="keyword ParameterName Required">n ‑</span> <span class="keyword ParameterName RequiredReplaceable">x</span> —
+A range from a positive integer value to a position relative to
+a last row or column, where <span class="ph FontProperty equationvariable">x</span> is
+a positive integer less than n.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id86ff1b53-629f-4b3f-bdeb-742ca996cfba"><p class="p Opt">For
+example, for a 5 x 5 layout clip, the following clip template file
+places unit pattern 5.1 at the four corners, unit pattern 3.2 in
+the remaining positions in the top row, and unit pattern 3.4 in
+the remaining positions in the bottom (last) row. </p>
+</li>
+</ul>
+<pre class="pre codeblock leveled"><code>VARIABLE NUMBER_OF_DEFINED_POSITIONS 3 
+// define four corners of 5 x 5 grid using specified positions 
+VARIABLE DEFINED_POSITIONS_1 "5.1" "1,1" "1,5" "5,1" "5,5"  
+// define row 1, columns 2, 3, and 4 using a range of positions 
+VARIABLE DEFINED_POSITIONS_2 "3.2" "1,2:4" 
+// define row 5, and columns 2, 3, and 4 using a range of positions
+ VARIABLE DEFINED_POSITIONS_3 "3.4" "n,2:4"   </code></pre><div class="fig fignone" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3ba68735-73c8-419f-b0ae-0ee6c7f42111"><span class="figcap"><span class="fig--title-label">Figure 3. </span>VARIABLE
+DEFINED_POSITIONS</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LSG_pos_vars_pdf.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id07640932-3cdb-40c7-8d2a-8248ae0db734"><span class="keyword ParameterName Optional">highlight_layer</span>={<span class="keyword ParameterName OptionalReplaceable">layer_number</span> | <span class="keyword ParameterName OptionalReplaceable">layer_number.datatype</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument specifying the layout layer number
+for a highlight layer that covers the pattern extents in the generated
+layout clips. Specify a positive integer for layer_number (default
+datatype 0) or a layer number and datatype combination for layer_number.datatype.
+Valid layer numbers range from 0 to 65535. The highlight_layer option
+can be specified in conjunction with the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3b7803b4-7f87-4a17-8be4-e9a1cdbd7fab"><span class="keyword ParameterName Optional">grid_layer</span>={<span class="keyword ParameterName OptionalReplaceable">layer_number</span> | <span class="keyword ParameterName OptionalReplaceable">layer_number.datatype</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument generating a grid layer for each output clip. Specify a positive
+integer for layer_number (default datatype 0) or a layer number
+and datatype combination for layer_number.datatype. Valid layer
+numbers range from 0 to 65535. For example,</p>
+<pre class="pre codeblock"><code>grid_layer=50.2</code></pre><p class="p">The grid is generated in the form of separated
+rectangles with the size assigned to the cells. The size of each
+grid rectangle is equal to the size assigned to the cell under it.
+The grid rectangles are sized down by 1 dbu to create a separation
+between the cells. The grid size follows ungrid_values if specified. </p>
+<p class="p">The behavior of the grid_layer option is as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id989f0646-ec8c-4a2c-91eb-9e70026ba281"><p class="p">In the case of postfix (drc option), the grid
+output layer is preserved after the postfix run.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfc67172c-0bb9-43d5-9611-3cda52e52919"><p class="p">In the case of run_post_fix_only, on a previously
+generated layout with grid_layer, you must define the generated
+grid layer in the configuration file of the stand‑alone postfix
+run. This preserves the grid layer and includes it in the resultant
+layout.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id4446bfa9-fe61-4c19-ad38-43f2ef18b105"><p class="p">In case of margin specifications with negative
+values, the grid layer overlaps at the boundaries. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ida3dfb9b9-e1ff-4def-8fd2-c70f250b8559">highlight_layer_text=<span class="keyword ParameterName OptionalReplaceable">text_value</span>, <span class="keyword ParameterName OptionalReplaceable">output_layer_number</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and arguments specifying an output text layer that is a
+highlight layer on the generated layout. This option attaches a
+user-defined text string to a highlight‑layer polygon. The text
+string is appended with the incremented cell name. The highlight_layer option
+does not need to be specified with this option. For example:</p>
+<pre class="pre codeblock"><code>highlight_layer_text=this_is_cell_number, 80.1</code></pre><p class="p">If the cell name is “cell 31”, then the displayed
+text is as follows:</p>
+<pre class="pre codeblock"><code>this_is_cell_number31</code></pre><p class="p">The arguments are defined as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idf50e9a95-8f98-4eec-a423-70cc027e57bb"><p class="p">text_value — Specifies a literal text string.
+This text displays at the bottom left corner of the highlight‑layer
+polygon.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id56d0e5a1-5ce8-446a-b324-94b5b6920408"><p class="p">output_layer_number — Specifies the layer number
+or layer number and datatype for the output text layer.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id6382e999-54f3-42ac-82ea-77ba495b6ac9">text_layer=<span class="keyword ParameterName OptionalReplaceable">text_value</span>, <span class="keyword ParameterName OptionalReplaceable">attached_layer_number</span>, <span class="keyword ParameterName OptionalReplaceable">output_layer_number</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and arguments specifying an output text layer that is attached
+to a layer (metal or highlight) in the generated layout. For example:</p>
+<pre class="pre codeblock"><code>text_layer=metal2_layer_polygon,46.4,33</code></pre><p class="p">The arguments are defined as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idd28c9f4b-b191-422c-bf03-f9a3d8b81d6c"><p class="p">text_value — Specifies a literal text string.
+This text displays at the bottom left corner of every polygon in
+the attached layer.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id0fd4a0c8-1da5-4d00-b532-20f81bd8ef84"><p class="p">attached_layer_number — Specifies the layer number
+or layer number and datatype of the polygon layer to which the text
+is attached.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idabeb7bae-71b4-4b95-97aa-c53e87301ec7"><p class="p">output_layer_number — Specifies the layer number
+or layer number and datatype of the output text layer.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9044c1c1-25aa-408c-b008-6aaec711d04f"><span class="keyword ParameterName Optional">xorigin</span>=<span class="keyword ParameterName OptionalReplaceable">Xvalue</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument specifying the value for the starting x‑coordinate for
+the bottom-left corner of the generated layout. You specify the
+Xvalue argument as a positive floating‑point number in microns.
+The default value is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id07ad33b3-d16a-48cd-89eb-50aa2b24985d"><span class="keyword ParameterName Optional">yorigin</span>=<span class="keyword ParameterName OptionalReplaceable">Yvalue</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument specifying the value for the starting x‑coordinate for
+the bottom-left corner of the generated layout. You specify the
+Yvalue argument as a positive floating‑point number in microns.
+The default value is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idc033fc28-fdcd-4c39-90f1-572ff2440453"><span class="keyword ParameterName Optional">precision</span>=<span class="keyword ParameterName OptionalReplaceable">precision_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument defining
+the database precision of the generated layout. The precision_value
+is the ratio of database units to user units. Preferably, the precision
+is specified as a positive integer. The default is 1000. For example,
+if the pitch size is 48 nm, and the precision is 2000, the pitch
+size in the generated layout is 96 nm, and if the precision is 1000
+(default), the pitch size in the generated layout is 48 nm.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idf033559a-d251-469f-bb88-e53550e9af66"><span class="keyword ParameterName Optional">flip_cells</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword specifying to vertically
+flip cells referenced in the even rows of the top‑cell merged layout.
+This is useful in the case where power rails are defined on different masks
+and you want to merge the cells to emulate standard cells.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id2d2a1332-e066-49fb-8807-cd113eec390b"><span class="keyword ParameterName Optional">run_post_fix_only</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword specifying
+to run the postfix flow (drc option) stand‑alone with no layout
+generation. The postfix flow runs on the layouts defined by output_layout
+and output_folder to fix DRC violations. See “<a class="xref fm:HeadingAndPage" href="Contain_CalibreLSGDRCBasedPostFix_id9db21a77.html#id9db21a77-750d-1014-ad66-a956285af79d__Contain_CalibreLSGDRCBasedPostFix_id9db21a77.xml#id9db21a77-750d-1014-ad66-a956285af79d" title="The Calibre LSG postfix flow (postfix flow) performs DRC fixes on the generated layout clips based on your DRC rule specifications.">Calibre LSG DRC‑Based Postfix</a>” or your Siemens EDA representative for more information
+on the postfix flow.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idb04bcb6a-5869-4d28-a6cd-9e7af60b5a2c"><span class="keyword ParameterName Optional">resolve_contradicting_rules</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword specifying to resolve
+contradicting rules encountered during the run by adding an extra
+rule. The extra rule is written to the contradicting_rules_resolution_log file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ide15692dd-c3ab-4122-9c8c-12e680bb5eba"><span class="keyword ParameterName Optional">no_merge</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword specifying not to merge
+the output layouts in the top cell. With this option, each generated
+layout clip is output to a separate layout file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idcc483c39-ff0c-48c9-acb7-9fea68a1b9c5"><span class="keyword ParameterName Optional">systematic</span>=<span class="keyword ParameterName OptionalReplaceable">spg_options_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+enabling the systematic pattern generator (SPG) mode. This mode
+can be used to run the SPG flow for creating layout clips for all
+pattern combinations. The spg_options_file argument contains SPG
+options in the format option=value. See “<a class="xref fm:HeadingAndPage" href="Contain_SystematicPatternGeneratorSPG_id4edede2c.html#id4edede2c-594c-40d6-b6c5-75671a5ce821__Contain_SystematicPatternGeneratorSPG_id4edede2c.xml#id4edede2c-594c-40d6-b6c5-75671a5ce821" title="The Systematic Pattern Generator flow (SPG flow) enables the creation of small core patterns for testing the coverage of all possible unit pattern combinations in the generated layout clips.">Systematic Pattern Generator (SPG)</a>” and your Siemens EDA representative for more information
+on this flow.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id06c9c498-e368-48a5-99f2-c636be20df53"><span class="keyword ParameterName Optional">ungrid_values</span>=<span class="keyword ParameterName OptionalReplaceable">ungrid_values_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+enabling ungrid (off‑pitch) patterning behavior as defined in the
+ungrid_values_file. See “<a class="xref fm:HeadingAndPage" href="FileRef_UngridValuesFileFormat_id3363e091.html#id3363e091-a604-4749-afc9-54540f4bab0b__FileRef_UngridValuesFileFormat_id3363e091.xml#id3363e091-a604-4749-afc9-54540f4bab0b" title="An optional LSG rules file used to specify a set of off‑grid (off‑pitch size) values representing different pitch heights and widths for rows and columns in the generated layout clips.">Ungrid Values File Format</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9a198f51-c4d8-4acf-b247-3ffd5c48168a"><span class="keyword ParameterName Optional">margin_type</span>=<span class="keyword ParameterName OptionalDefault">{COMPACT</span> | <span class="keyword ParameterName Optional">FIXED</span> | <span class="keyword ParameterName Optional">MAXIMUM}</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the type of margin space
+to create between the generated layout clips. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">This option does not show
+any difference between the three types of margin spacing except
+when used with the ungrid_values option.</p>
+</div>
+<p class="p">The margin spacing is based on the starting coordinate
+of the row and the calculated clip height and clip width for each
+margin_type as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfb41a823-4025-4627-b10f-dc4102b614a1"><p class="p"><span class="keyword ParameterName OptionalDefault">COMPACT</span> (default
+behavior)</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id07fa1c5f-32f3-4bb7-8e81-fe98be9eebe4"><p class="p">Each row starts from x‑coordinate = 0 and y-coordinate
+= maximum clip height of the previous row added to the vertical
+margin.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id6c230eb1-7c2d-4a32-8bd4-35d575b00d5e"><p class="p">Each clip in the same row starts from x-coordinate
+= previous clip width added to the horizontal margin.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9d9f12e7-7ea3-4b68-adcf-dd73d545026d"><p class="p">FIXED</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id622e8ebb-bcea-40f9-8567-a3a8161f2a89"><p class="p">Each row starts from x-coordinate = 0 and y‑coordinate
+= clip height of the corresponding clip in the previous row added
+to the vertical margin.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idefbd15e9-f297-4478-a5bc-eaf49633107b"><p class="p">Each clip in the same row starts from x-coordinate
+= previous clip width added to the horizontal margin.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id4fcb9bf3-12f5-4e0b-bc33-4f604976eecc"><p class="p">MAXIMUM</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idaaed8e11-265e-46d3-92da-207a253567ae"><p class="p">Each row starts from x-coordinate = 0 and y-coordinate
+= maximum clip height calculated from the specified ungrid_values
+added to the vertical margin.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idb291422d-2b76-4943-b6ca-17cf3a18957e"><p class="p">Each clip in the same row starts from x-coordinate
+= maximum clip width calculated from the specified ungrid_values
+added to the horizontal margin.</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idad1d7208-8405-481f-b29a-5786d5e6e386"><span class="keyword ParameterName Optional">ungrid_variations_count</span>=<span class="keyword ParameterName OptionalReplaceable">number</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument specifying the number of ungrid (off‑pitch) variations for
+each clip within the same row. For example, if you define pattern_count=5
+and ungrid_variations_count=8 with any of the ungrid_values options,
+this generates five different patterns, with eight ungrid variations
+for each pattern. The patterns are generated in five rows with each
+row containing eight columns. Specify this number as a positive
+integer.</p>
+<p class="p">You can also control the number of rows and columns
+using the pattern_row_count and pattern_col_count options instead
+of pattern_count.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id5fae0353-587e-420b-b19c-0849c9ee0b03"><span class="keyword ParameterName Optional">min_density</span>=<span class="keyword ParameterName OptionalReplaceable">float_number_percentage</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument specifying the minimum density required for each clip to
+be generated. This option is only used in SPG flow (systematic option)
+and cannot be specified with ungrid_values. If this option is used
+in the postfix flow (drc option), a warning is generated. The min_density
+value is a floating‑point number (zero to 100) expressed as a percentage.
+The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id0cceebc2-1182-4ea3-9acb-6182f344db59"><span class="keyword ParameterName Optional">max_density</span>=<span class="keyword ParameterName OptionalReplaceable">float_number_percentage</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument only used in SPG mode specifying the maximum density required
+for each clip to be generated. This option is only used in SPG flow (systematic
+option) and cannot be specified with ungrid_values. If this option
+is used in the postfix flow (drc option), a warning is generated.
+The max_density is a floating‑point number (zero to 100) expressed
+as a percentage. The default is 100.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id95a610d3-ae8c-4f70-88d7-ad112d492aa6"><span class="keyword ParameterName Optional">share_same_horizontal_grid</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword specifying to share the same clip height based
+on the ungrid_values per row. The behavior is as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id732e6e4f-cba2-4080-a930-13c53887dbce"><p class="p">The row ungrid_values are fixed per each clip
+in the same row of the layout.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id29a47c8a-31a6-4a6c-b995-061f4629e449"><p class="p">The row ungrid_values are chosen randomly for
+the first clip in each row of the layout. All remaining clips share
+the same ungrid_values. </p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id66e16754-0e88-4298-a4b9-4dbb47811445"><p class="p">The column ungrid_values can be different for
+each clip in the same row of the layout.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ida7a4be6e-2285-426d-b382-e191fdd0cda1"><p class="p">The generated layouts each share different horizontal
+and vertical ungrid_values when the no_merge option or SPG DisableIncrementalOutputMerge
+is specified. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id6ffd65a9-88a8-4767-b066-40b237b7a4d7"><span class="keyword ParameterName Optional">share_same_vertical_grid</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword specifying
+to share the same clip width based on the ungrid_values per column.
+The behavior is as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ide7062db9-6a0c-4d28-bc96-2b86b5e61a61"><p class="p">The column ungrid_values are fixed per each clip
+in the same column of the layout.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id57070224-bb48-44c3-9bde-ee00d42e33de"><p class="p">The column ungrid_values are chosen randomly for
+the first clip in each column of the layout. All remaining clips
+share the same ungrid_values. </p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id9eb2e062-3395-4414-bf8f-34930698519a"><p class="p">The row ungrid_values can be different for each
+clip in the same column of the layout.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3aa33e99-a004-41a9-bff0-dfd4aa6a14c9"><span class="keyword ParameterName Optional">final_clip_width</span>=<span class="keyword ParameterName OptionalReplaceable">clip_width</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the width of the final output
+clip. Use this option when the generated patterns have different
+widths according to the ungrid_values. This option clips the patterns
+with a constant mask to make them the same size. Specify the clip_width
+as a positive floating point number in microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ida0bc3cfa-90ac-4881-90ee-3a73459ada56"><span class="keyword ParameterName Optional">final_clip_height</span>=<span class="keyword ParameterName OptionalReplaceable">clip_height</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and
+argument defining the height of the final output clip. Use this option
+when the generated patterns have different heights according to
+the ungrid_values. This option clips the patterns with a constant
+mask to make them the same size. Specify the clip_height as a positive
+floating point number in microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idee98f3c7-179b-4465-8951-df2f9185b9c2"><span class="keyword ParameterName Optional">highlight_left_margin</span>=<span class="keyword ParameterName OptionalReplaceable">left_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the left edge. Use this
+option to define positive or negative margins between the clip and
+the highlight layer specified by the highlight_layer option. Specify
+the left_margin_value as a floating point number in microns.</p>
+<p class="p">The general behavior of the highlight margin options
+is as follows:</p>
+<ul class="ul"><li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id94dbcb1f-62b4-4340-a3dd-16dac247645d"><p class="p">The enabled highlight margin option controls the
+highlight layer to be larger or smaller than the generated clip.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id745796a8-71b9-47d8-880d-9daab0e16fa4"><p class="p">The start of the layout from the defined x‑ and
+y‑coordinate is from the bottom left of the highlight layer of the
+first clip.</p>
+</li>
+<li class="li" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__ida06e1e9e-a2b5-4558-9f38-c1179041dbf4"><p class="p">The highlight margin is calculated between the
+highlight layers of the clips even if the highlight layer is smaller
+than the original clip.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idfcea31e7-720c-4cc6-bf84-821e1674c3d2"><span class="keyword ParameterName Optional">highlight_right_margin</span>=<span class="keyword ParameterName OptionalReplaceable">right_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the right edge. Use this
+option to define positive or negative margins between the clip and
+the highlight layer specified by the highlight_layer option. Specify
+the right_margin_value as a floating point number in microns. </p>
+<p class="p">The highlight_right_margin option follows the
+general behavior of the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id4bbecbde-2e41-47bb-a4cb-50fec73ba914"><span class="keyword ParameterName Optional">highlight_top_margin</span>=<span class="keyword ParameterName OptionalReplaceable">top_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the top edge. Use this
+option to define positive or negative margins between the clip and
+the highlight layer specified by the highlight_layer option. Specify
+the top_margin_value as a floating point number in microns. </p>
+<p class="p">The highlight_top_margin option follows the general
+behavior of the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id04f3d235-4c83-4f2b-a660-5be9874ab66e"><span class="keyword ParameterName Optional">highlight_bottom_margin</span>=<span class="keyword ParameterName OptionalReplaceable">bottom_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Am
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the bottom edge. Use this
+option to define positive or negative margins between the clip and
+the highlight layer specified by the highlight_layer option. Specify
+the bottom_margin_value as a floating point number in microns.</p>
+<p class="p">The highlight_bottom_margin option follows the
+general behavior of the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__idb62b4dc5-9061-444c-8542-2d009674e151"><span class="keyword ParameterName Optional">highlight_horizontal_margin</span>=<span class="keyword ParameterName OptionalReplaceable">left_right_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the left side and right
+sides. Use this option to define positive or negative margins between
+the clip and the highlight layer specified by the highlight_layer option.
+Specify the left_right_margin_value as a floating point number in
+microns.</p>
+<p class="p">The highlight_horizontal_margin option follows
+the general behavior of the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id8022cc0d-1cc8-4f81-bb61-9837e54e3d72"><span class="keyword ParameterName Optional">highlight_vertical_margin</span>=<span class="keyword ParameterName OptionalReplaceable">top_bottom_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the top and bottom edges.
+Use this option to define positive or negative margins between the
+clip and the highlight layer specified by the highlight_layer option. Specify
+the top_bottom_margin_value as a floating point number in microns. </p>
+<p class="p">The highlight_vertical_margin option follows the
+general behavior of the highlight margin options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id8bbc9159-5eb8-43cf-bb68-65a1580bcf12"><span class="keyword ParameterName Optional">highlight_all_margin</span>=<span class="keyword ParameterName OptionalReplaceable">all_margin_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional keyword and argument defining the margin value between
+clip layers and the highlight layer from the left, right, bottom,
+and top edges. Use this option to define positive or negative margins
+between the clip and the highlight layer specified by the highlight_layer option.
+Specify the all_margin_value as a floating point number in microns. </p>
+<p class="p">The highlight_all_margin option follows the general
+behavior of the highlight margin options. </p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id05154f14-a051-4800-87e0-c3103fe47afb"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">Here is an example of running Calibre LSG from a Calibre command
+line with an LSG options file:</p>
+<pre class="pre ShellCommand"><span class="keyword ParameterName Required">calibre -lsg</span> <span class="keyword ParameterName Optional">-turbo</span> <span class="keyword ParameterName OptionalReplaceable">8</span><span class="keyword ParameterName RequiredReplaceable"> lsg_options_file</span></pre>
+<p class="p">Here is an example of the arguments specified in an LSG options
+file: </p>
+<pre class="pre codeblock"><code>pattern_count=100
+pitch_size=0.1
+pattern_height=10
+pattern_width=15
+output_folder=LSG_OUT
+priority_file=./inputs/weights_M1
+output_file=lsg_out</code></pre></div>
+<div class="section Subsection" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id310ae4cb-5a4d-40c5-bbef-d4771fc86231"><h2 class="title Subheading sectiontitle">Example
+2</h2><p class="p">Here is an example of a 5 x 5 layout clip using the clip_template
+keyword “n” to define the last column with unit pattern <span class="keyword ParameterName OptionalReplaceable">p_id</span> 5.1:</p>
+<pre class="pre codeblock"><code>VARIABLE NUMBER_OF_DEFINED_COLUMNS 2
+VARIABLE DEFINED_COLUMNS_1 "5.1" "n"
+VARIABLE DEFINED_COLUMNS_2 "3.3" "1"</code></pre><div class="fig fignone" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id1dfa7e2f-eb93-4f4c-ba53-aa513ab658d3"><span class="figcap"><span class="fig--title-label">Figure 4. </span>5 x 5
+Layout Clip with Last Column Definition “n”</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LSG_5_5_clip_pdf.png" /></div><br /></div>
+</div>
+<p class="p">If the layout clip size changes to 5 x 8, the clip template keeps
+the same pattern characteristics:</p>
+<div class="fig fignone" id="id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__id3564fcc3-bec2-4051-b888-29630cb112c2"><span class="figcap"><span class="fig--title-label">Figure 5. </span>M-8. 5
+x 8 Layout Clip with Last Column Definition “n”</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LSG_5_8_clip_pdf.png" /></div><br /></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreLSGCommandAndFileReference_id9da55cd5.html" title="Specific syntax, command arguments, and file formats are used to configure the Calibre LSG tool flows and output.">Calibre LSG Command and File Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lsg_user"
+                DocTitle = "Calibre® LSG for Synthetic Layout Generation User’s Manual"
+                PageTitle = "calibre -lsg"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalibreLfdLsg_id4a5f952a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® LSG for Synthetic Layout Generation User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

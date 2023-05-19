@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="TICER" />
+<meta name="abstract" content="TICER stands for “Time Constant Equilibration Reduction”. You specify this reduction method in your SVRF rule file using the following SVRF statement and keyword:" />
+<meta name="description" content="TICER stands for “Time Constant Equilibration Reduction”. You specify this reduction method in your SVRF rule file using the following SVRF statement and keyword:" />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>TICER</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="TICER" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">TICER</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">TICER stands
+for “Time Constant Equilibration Reduction”. You specify this reduction
+method in your SVRF rule file using the following SVRF statement and
+keyword:</span>
+</div>
+<pre class="pre codeblock"><code>PEX REDUCE TICER <span class="keyword ParameterName OptionalReplaceable">frequency</span> </code></pre><p class="p">where frequency is a user-defined calculated
+number controlling which nodes in the circuit the tool can select
+for subsequent elimination; specifically, the tool will select nodes
+with time constants less than the frequency parameter.</p>
+<p class="p">In your rule file, you specify the calculated
+frequency parameter in hertz and express the value in the SVRF PEX
+Reduce TICER statement using scientific notation. For example:</p>
+<p class="lines ApplCommand">PEX REDUCE TICER 40e9</p>
+<p class="p">Using the Calibre Interactive PEX interface,
+you specify TICER reduction by selecting “Enable TICER reduction
+below” and entering a frequency. The “Enable TICER reduction below”
+option is in the PEX Options pane. To enable PEX Options, select <span class="ph menucascade"><span class="ph uicontrol">Setup</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">PEX Options</span></span> in
+the Calibre Interactive - PEX menu.</p>
+<div class="section Subsections"><div class="section Subsection" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__idd918412a-a933-48ef-8e84-7ced4fceb986"><h2 class="title Subheading sectiontitle">How TICER Works</h2><p class="p">The TICER reduction method preserves the frequency
+response of an RC interconnect circuit from dc up to the <span class="keyword ParameterName OptionalReplaceable">frequency</span> parameter. Consequently,
+the <span class="keyword ParameterName OptionalReplaceable">frequency</span> parameter
+provides you with a control for trading off compression with accuracy. </p>
+<ul class="ul"><li class="li" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__id53319609-39d4-4306-b5fb-6be467589438"><p class="p">Setting the <span class="keyword ParameterName OptionalReplaceable">frequency</span> parameter
+to a higher value results in larger (more R and C elements) interconnect circuits
+having a wider bandwidth of accuracy. </p>
+</li>
+<li class="li" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__idd87ae90b-7d2a-4174-96be-501329ec2ff1"><p class="p">Setting the <span class="keyword ParameterName OptionalReplaceable">frequency</span> parameter
+to a lower value results in more compression and an earlier roll-off
+in accuracy. </p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__idf4dd165e-a09e-43be-a353-25dd9a35fa76"><h2 class="title Subheading sectiontitle">Calculating
+the <span class="ph FontProperty emphasis">frequency</span> Parameter</h2><p class="p">You must calculate the frequency parameter
+using the following formula:</p>
+<div class="fig fignone" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__ida7967f6b-6b9c-4365-949a-5a56be3d1296"><br /><div class="imagecenter"><img class="image imagecenter" src="../graphics/reduction_ref_ap2a.gif" /></div><br /></div>
+<p class="p">where:</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">tradeoff_value</span> —
+a number between 4 and 10. A larger tradeoff_value results in a
+higher frequency parameter value and, consequently, more accurate
+reduction results. </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">transition_time_minimum</span> —
+the shortest rise or fall time you expect in your design. In general,
+you can estimate this value using 1/5 of your design’s switching
+delay. </p>
+</div>
+<div class="section Subsection" id="idf0beb3b1-fcb7-4b61-9b9d-87b4f4dcec7e__ide7b63e9f-4617-4cc1-8b57-9ce4acfc0def"><h2 class="title Subheading sectiontitle">TICER and Temperature Sensitivity
+Effects</h2><p class="p">If you include temperature sensitivity in the
+extraction process by using the PEX Temperature SVRF statement,
+the reduced netlist will include parasitic capacitors that have small
+changes in value due to temperature coefficients.</p>
+<p class="p">These changes are caused by how RC delays are
+calculated when using TICER. Including temperature coefficients
+in the extraction process affects the final values of parasitic resistors.
+During TICER reduction the values for resistors and capacitors are
+recalculated so that the RC delayer in the network remain unchanged.
+Including temperature coefficients for resistors affects the recalculated
+values for the parasitic capacitors in the final netlist.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ReductionTechniques_ide4515ba3.html" title="Calibre xRC provides reduction controls used to reduce run time and/or netlist size.">Reduction Techniques</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "TICER"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_Ticer_idf0beb3b1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

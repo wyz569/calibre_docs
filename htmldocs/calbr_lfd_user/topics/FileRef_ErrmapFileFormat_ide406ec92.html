@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="errmap File Format" />
+<meta name="abstract" content="The errmap file is an ASCII file that describes the correspondence between a Calibre LFD hotspot check name and Cadence HIF parameters. This file format is also used to describe the correspondence to the Synopsys IC Compiler (ICC) hotspot file." />
+<meta name="description" content="The errmap file is an ASCII file that describes the correspondence between a Calibre LFD hotspot check name and Cadence HIF parameters. This file format is also used to describe the correspondence to the Synopsys IC Compiler (ICC) hotspot file." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ide406ec92-d2a7-4949-9d2a-e4519fc08a84" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>errmap File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="errmap File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ide406ec92-d2a7-4949-9d2a-e4519fc08a84">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">errmap File
+Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input for:
+WriteHIF and WriteICC</p>
+<p class="shortdesc">The errmap file is an ASCII
+file that describes the correspondence between a Calibre LFD hotspot
+check name and Cadence HIF parameters. This file format is also
+used to describe the correspondence to the Synopsys IC Compiler
+(ICC) hotspot file. </p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">An
+errmap file contains one line for each check in the Calibre LFD
+RDB. Each line contains four strings:</p>
+<p class="p"><span class="keyword ParameterName RequiredReplaceable">RDB_CheckName</span> <span class="keyword ParameterName RequiredReplaceable">error_type</span> <span class="keyword ParameterName RequiredReplaceable">layer</span> <span class="keyword ParameterName RequiredReplaceable">severity</span></p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="ide406ec92-d2a7-4949-9d2a-e4519fc08a84__ida8298f6a-de53-44cc-90a0-6ac99f9315f0"><span class="keyword ParameterName RequiredReplaceable">RDB_CheckName	</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The name
+of a check, as specified in the Calibre LFD RDB.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ide406ec92-d2a7-4949-9d2a-e4519fc08a84__idae515834-085e-4a1e-a3f6-2ecdc8a2a65e"><span class="keyword ParameterName RequiredReplaceable">error_type </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The type
+of error represented by the check. Must be one of: SPACING or WIDTH.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ide406ec92-d2a7-4949-9d2a-e4519fc08a84__id0aee782a-fea8-4bd8-8716-701c096cdf4f"><span class="keyword ParameterName RequiredReplaceable">layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The name
+of the original design layer containing the feature that caused
+the error.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ide406ec92-d2a7-4949-9d2a-e4519fc08a84__id435c70b4-83de-40f0-a3d4-ef3ec23dc856"><span class="keyword ParameterName RequiredReplaceable">severity</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The process-variation
+experiment, or subwindow, in which this error was found. Refer to the
+LFD::<a class="xref fm:HeadingOnly" href="Command_Writehif_id17fd0c15.html#id17fd0c15-71ff-42ed-aa59-f2755e55c069__Command_Writehif_id17fd0c15.xml#id17fd0c15-71ff-42ed-aa59-f2755e55c069" title="Writes a Litho hotspot file that adheres to the Cadence Hotspot Interface Format (HIF).">WriteHIF</a> -max_severity value for an explanation
+of how subwindows relate to severity.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock leveled"><code>Metal1_MSC_P1_check SPACING M1 1 
+Metal1_MSC_P2_check SPACING M1 2 
+Metal2_MWC_P1_check WIDTH M2 1 
+Metal2_MWC_P2_check WIDTH M2 2 </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreLfdErrmapCommandReferenceCadenceTools_id4994feac.html" title="The Calibre LFD errmap and rdb2hif command are used to translate hotspot check information to a format used by Cadence tools.">Calibre LFD errmap and Command Reference for Cadence Tools</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "errmap File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_ErrmapFileFormat_ide406ec92.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

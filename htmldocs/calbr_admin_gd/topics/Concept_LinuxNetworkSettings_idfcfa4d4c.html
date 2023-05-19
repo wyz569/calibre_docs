@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Linux Network Settings" />
+<meta name="abstract" content="Generally, Calibre MTflex works well with default Linux kernel and driver settings. A few changes may be necessary for large Calibre MTflex clusters that include many hundreds of remote CPUs." />
+<meta name="description" content="Generally, Calibre MTflex works well with default Linux kernel and driver settings. A few changes may be necessary for large Calibre MTflex clusters that include many hundreds of remote CPUs." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idfcfa4d4c-3031-4e39-991a-7fa454234740" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Linux Network Settings</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Linux Network Settings" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idfcfa4d4c-3031-4e39-991a-7fa454234740">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Linux
+Network Settings</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Generally,
+Calibre MTflex works well with default Linux kernel and driver settings.
+A few changes may be necessary for large Calibre MTflex clusters that
+include many hundreds of remote CPUs.</span>
+</div>
+<p class="p">Current
+ulimit settings can be displayed in the C shell using <span class="ph FontProperty shellcommand">limit</span>.
+For example:</p>
+<pre class="pre codeblock"><code>% <span class="ph FontProperty shellcommand">limit</span>
+cputime unlimited
+filesize unlimited
+datasize unlimited
+stacksize 10240 kbytes
+coredumpsize unlimited
+memoryuse unlimited
+vmemoryuse unlimited
+descriptors 65535
+memorylocked 64 kbytes
+maxproc 2048</code></pre><p class="p">They can be displayed with <span class="ph FontProperty shellcommand">ulimit -a</span> in
+Bourne shells. The <span class="ph FontProperty shellcommand">limit</span> and <span class="ph FontProperty shellcommand">ulimit</span> commands
+can also be used to configure settings of interest. You may need
+root-level privileges to do this.</p>
+<p class="p">Settings can be configured in <span class="ph filepath italic">/etc/security/limits.conf</span> or
+in the following files:</p>
+<p class="p BlockIndent">RHEL7: <span class="ph filepath">/etc/security/limits.d/20-nproc.conf</span></p>
+<p class="p BlockIndent">RHEL6 and 5: <span class="ph filepath italic">/etc/security/limits.d/90-nproc.conf</span> </p>
+<p class="p">These settings are important for the performance of the machine
+when running Calibre. Certain runtime warnings are issued if these
+settings are not optimal, as discussed in the following table.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idfcfa4d4c-3031-4e39-991a-7fa454234740__id9064d844-d851-4a98-8320-caf1f6361609" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Linux Network
+Kernel and Driver Recommended Settings</span></caption><colgroup><col style="width:1.625in" /><col style="width:4.875in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d78822e186"><p class="p">Class</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d78822e189"><p class="p">Recommended Settings</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">ulimit settings</p>
+<p class="p">limit name (ulimit name)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p"><span class="ph FontProperty HeadingLabel">descriptors (open files)</span> —
+Calibre MTflex and CalCM use a file descriptor for each remote process
+(TCP socket), so this value should be larger than the total number
+of CPUs in the available pool, plus additional descriptors as needed
+for file I/O. Set this value to 65535 on hardware having &lt;=32
+GB of memory and to 350402 on hardware having &gt;32 GB memory to allow
+for future growth.</p>
+<p class="p">If the value is &lt; 65535, then the Calibre transcript contains
+this warning:</p>
+<pre class="pre codeblock"><code>WARNING: Please increase descriptors limit for best performance </code></pre><p class="p">If this warning is not mitigated, then multithreaded runs with large
+numbers of remote hosts could abort.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">maxproc (max user processes)</span> —
+Set this value to the maximum process limit configured for the kernel.
+Refer to <a class="xref fm:TableAndPage" href="Concept_PotentialNetworkErrors_id754ab0c4.html#id754ab0c4-0e75-44ea-8f5c-52242da1d519__idb5ca262b-b80e-48a6-a87a-0a0174bc61de">Table 1</a> for guidelines
+on calculating the maxproc setting.</p>
+<p class="p">If the maxproc setting is too low, then the Calibre transcript contains
+this warning:</p>
+<pre class="pre codeblock"><code>WARNING: Please increase max process limit for best performance</code></pre><p class="p">Failure to mitigate the warning can result in Calibre aborting.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">coredumpsize (core file size)</span> —
+Core files are used to debug crashes, which are rare with Calibre.
+This value may be set as needed based on IT practices because production
+Calibre builds do not produce useful core files. In the unlikely
+event that CSD recommends debugging a crash at a customer site,
+a special debug version of the Calibre executable will be provided
+and coredumpsize should be set to “unlimited” for the duration of
+the test.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">RSH Limits</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">Linux limits the number
+of concurrent RSH processes as a protection against “denial of service”
+attacks. This can cause LAUNCH CLUSTER and/or CalCM to fail when
+connecting to certain remotes on large clusters.</p>
+<p class="p">Workaround: If you encounter problems connecting
+to &gt;500 remote CPUs on large jobs, use SSH instead of RSH or increase
+the <span class="ph filepath">xinetd.conf</span> CPS (incoming connections per second)
+parameter from the default of 50 to some larger value.</p>
+<p class="p">For the RHEL6 OS, add
+the following to <span class="ph filepath italic">/etc/sysctl.conf</span> to
+prevent remote host connection failures on large clusters:</p>
+<pre class="pre codeblock leveled"><code>net.ipv4.tcp_tw_recycle = 1</code></pre><p class="p">This statement tells the OS to recycle the
+tcp ports faster, which alleviates most of the failing connections.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For the RHEL/CentOS 8 operating
+system, you must use SSH instead of RSH. </p>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">NIC Settings</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">No specific performance
+settings are required. Follow the manufacturer’s recommendations
+for the best performance and check periodically for driver updates.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Internet Address Resolution Protocol (ARP) Table</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">The ARP cache tables
+and garbage collection (gc) thresholds should be large enough to
+retain the network addresses for all hosts in the available pool.
+Network ARP table garbage collection thresholds must be larger than
+the number of nodes (not CPUs) in the cluster to ensure adequate
+performance. The Linux default of 128 for gc_thresh1 is too low
+for clusters with more than 512 remote CPUs, assuming four CPUs
+per remote node. (See <span class="ph filepath italic">/proc/sys/net/ipv4/neigh/default/gc_thresh</span>.)</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Network Driver/TCP Settings</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">Network (driver, TCP)
+settings should be tuned for high performance, large data block
+transfers, and OS kernel offload.</p>
+<p class="p">When Calibre initially connects to a large number of remotes,
+the incoming connection requests are cached in the Linux system
+queue, which is called the TCP listen backlog queue. On RHEL5 and
+RHEL6 systems, the default size of this queue is 128, which is too
+small for Calibre MTflex. The small queue size can cause Calibre
+to be very slow when initializing the connection. The small queue
+size can also cause remotes to be dropped before connection to the
+primary host is established. For releases prior to Calibre 2017.2,
+the recommendation is to increase this queue size on primary hosts
+to 1024 by adding the following line to <span class="ph filepath">/etc/sysctl.conf</span>.</p>
+<pre class="pre codeblock"><code>net.core.somaxconn = 1024</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Systems with Large Disks</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">For systems with disks
+that are one TB or larger, bump the number of NFSD to 16. The variable
+to set in the <span class="ph filepath">/etc/sysconfig/nfs</span> file, is RPCNFSDCOUNT
+for RH and USE_KERNEL_NFSD_NUMBER for SLES.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">OS Vendor Updates and Patches</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">Periodically check for
+OS Vendor networking updates and patches. Fixes to xinetd, ipv4,
+and tcp are often important to prevent random Calibre MTflex connection
+failures.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Disk Swap Space</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p"><span class="ph FontProperty HeadingLabel">Remote hosts</span> —
+Disk swap should be enabled on remote hosts and disk swap space
+should be equal to available memory (RAM). Remote host performance
+for some applications (such as OPC) is relatively insensitive to
+small amounts of remote disk swap up to 50 percent of RAM. Allowing
+for swapping may prevent jobs from failing unnecessarily.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Primary hosts</span> —
+Disk swap should be enabled on Calibre MTflex primary hosts, but
+should be avoided because primary host disk swap interferes with
+network performance and severely reduces Calibre MTflex performance.
+The amount of disk swap space is left to your discretion, but should
+be sufficient to allow user intervention (usually by killing one
+or more jobs) before swap free space goes to zero, which will cause
+the OS to become unresponsive.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Name Service Caching</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">The Linux name service
+cache daemon has been reported to cause network failures. Unless
+this service is required, disabling the nscd may improve reliability.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e186 "><p class="p">Virtual Memory Zone Reclaim Mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78822e189 "><p class="p">Set zone_reclaim_mode
+to one to ensure Calibre application data has priority over disk
+cache data. A value of zero (0) in this variable can significantly
+increase Calibre run times under certain circumstances.</p>
+<pre class="pre codeblock"><code>$ echo 1 &gt; /proc/sys/vm/zone_reclaim_mode</code></pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_NetworkConfigurationGuidelines_id7e4f6b67.html" title="The network configuration is an important consideration for a distributed Calibre environment. While the data being transmitted is small, the frequency of transmission between the and remote hosts is high. As a result, a dedicated, high-speed network between the and remote hosts is recommended.">Network Configuration Guidelines</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Linux Network Settings"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_LinuxNetworkSettings_idfcfa4d4c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

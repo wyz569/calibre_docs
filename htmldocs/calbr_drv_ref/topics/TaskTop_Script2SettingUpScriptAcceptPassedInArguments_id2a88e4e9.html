@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Script 2: Setting up a Script to Accept Passed In Arguments" />
+<meta name="abstract" content="You can use a Tcl script to generate a new layout and accept command line arguments that specify the name of the topcell, a layer number, the coordinates of a polygon, and the name to use for saving the new GDS layout." />
+<meta name="description" content="You can use a Tcl script to generate a new layout and accept command line arguments that specify the name of the topcell, a layer number, the coordinates of a polygon, and the name to use for saving the new GDS layout." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2a88e4e9-332d-4a4b-a94b-76f893406068" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Script 2: Setting up a Script to Accept Passed In Arguments</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Script 2: Setting up a Script to Accept Passed In Arguments" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2a88e4e9-332d-4a4b-a94b-76f893406068">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Script 2: Setting up
+a Script to Accept Passed In Arguments</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You can use a
+Tcl script to generate a new layout and accept command line arguments
+that specify the name of the topcell, a layer number, the coordinates
+of a polygon, and the name to use for saving the new GDS layout. </p>
+<p class="p">The Tcl commands and variables covered in
+this procedure include:</p>
+<ul class="ul"><li class="li" id="id8e394e98-d8f8-418e-befd-c3bcc23eb90d"><p class="p"><span class="ph FontProperty HeadingLabel">lindex</span> —
+Extracts one or more elements from a Tcl list. The syntax for this
+command is:</p>
+<pre class="pre ShellCommand">lindex <span class="keyword ParameterName OptionalReplaceable">list</span> <span class="keyword ParameterName OptionalReplaceable">index</span></pre>
+<p class="p">The first argument is the name you want to assign to the list
+and the second argument is the position of an element to return.
+The first element in a list has an index of 0 and the last element
+in a list of length <var class="keyword varname">N</var> has an index of <var class="keyword varname">N</var>‑1. </p>
+</li>
+<li class="li" id="idd61990be-decb-4a0f-8cfe-77c40a7e7d2e"><p class="p"><span class="ph FontProperty HeadingLabel">argv</span> —
+A global Tcl variable that is a list of all command line argument
+values.</p>
+</li>
+<li class="li" id="id9618fe9d-fa12-4a03-b975-f2984f41b144"><p class="p"><span class="ph FontProperty HeadingLabel">argc</span> —
+A global Tcl variable that contains the number of command line arguments
+in argv.</p>
+</li>
+<li class="li" id="ideab1bcd0-9cbe-47d6-948a-48fb85869d94"><p class="p"><span class="ph FontProperty HeadingLabel">lrange</span> —
+Returns one or more adjacent elements from a list. The syntax for
+this command is:</p>
+<pre class="pre ShellCommand">lrange <span class="keyword ParameterName OptionalReplaceable">list</span> <span class="keyword ParameterName OptionalReplaceable">first</span> <span class="keyword ParameterName OptionalReplaceable">last</span></pre>
+<p class="p">The first argument is the name you want to assign to the list,
+while <span class="keyword ParameterName OptionalReplaceable">first</span> and <span class="keyword ParameterName OptionalReplaceable">last</span> specify
+the range of elements to return.</p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id1a552d21-c533-4a86-b1ea-b2d39fe5c6df"><p class="p">The <span class="ph filepath italic">new_layout.tcl </span>script
+(refer to “<a class="xref fm:HeadingAndPage" href="TaskTop_Script1WritingScriptGenerateNewLayout_idc59ce86e.html#idc59ce86e-2469-45f9-b8de-9a212c7ac45e__TaskTop_Script1WritingScriptGenerateNewLayout_idc59ce86e.xml#idc59ce86e-2469-45f9-b8de-9a212c7ac45e" title="You can create a Tcl script for generating a new layout using batch commands.">Script 1: Writing a Script to Generate a New Layout</a>”).</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idd4239cb5-e6dc-465a-91a1-36f2f446cf9b"><span class="ph cmd">Open the <span class="ph filepath italic">new_layout.tcl</span> Tcl script.</span></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id0af4c546-d331-4aed-a51b-f01d2d695502"><span class="ph cmd">Modify
+the following line of the script to accept input that specifies the
+name of the topcell you want to create:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id1a8ae0ab-350a-49c4-812f-746d31e05dd9"><p class="p"><span class="ph FontProperty HeadingLabel">Change:</span></p>
+<pre class="pre codeblock"><code>$L create layer 10</code></pre></li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id61fcd67c-43cd-437f-a800-3c74a4c25c78"><p class="p"><span class="ph FontProperty HeadingLabel">To:</span></p>
+<pre class="pre codeblock"><code>set my_cell [lindex $argv 0]
+$L create cell $my_cell</code></pre></li>
+</ul>
+<p class="p">These lines contain the following commands:</p>
+<ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id82f7d6ff-7fc9-4967-a759-5002545f203e"><p class="p"><span class="ph FontProperty HeadingLabel">lindex $argv 0</span> —
+Returns the first argument (cell name) in the arguments list.</p>
+</li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idb8412315-3d77-4856-81bb-eff8f4fd9dbc"><p class="p"><span class="ph FontProperty HeadingLabel">set my_cell [lindex $argv 0]</span> — Stores
+the results of the lindex command in the variable my_cell.</p>
+</li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idb23de723-ece9-4358-97ac-e50d8889c1a6"><p class="p"><span class="ph FontProperty HeadingLabel">$L create cell $my_cell</span> —
+Creates a cell using the results from processing the lindex command
+and assigning the name of the my_cell variable to the new cell.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idbb16defb-40e1-4e8b-ba87-e6b7b3346f0c"><span class="ph cmd">Modify the following lines
+of the script to accept input that specifies the numbers of the
+layers you want to create:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idb710dbd2-bc34-48ea-84ae-cab04c4f42e4"><p class="p"><span class="ph FontProperty HeadingLabel">Change:</span></p>
+<pre class="pre codeblock"><code>$L create layer 1
+$L create layer 2.7</code></pre></li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__ide633c71b-adf9-4ab9-9ffb-90e1770a7d56"><p class="p"><span class="ph FontProperty HeadingLabel">To:</span></p>
+<pre class="pre codeblock"><code>$L create layer [set layer_num [lindex $argv 1]]</code></pre></li>
+</ul>
+<p class="p">This line contains the following
+commands:</p>
+<ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idc2f8ff25-8456-48a6-b2e0-cb8494021568"><p class="p">lindex $argv 1 — Returns
+the second argument (layer number) in the arguments list.</p>
+</li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id31f6134e-9a3d-4ead-91cb-0e1fc4c0b320"><p class="p">set layer_num [lindex
+$argv 1] — Stores the results of the lindex command in the variable
+layer_num. </p>
+</li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idb803b0d2-795e-4231-a314-b8ddb65fa569"><p class="p">$L create layer [set layer_num
+[lindex $argv 1]] — Creates a layer using the results from processing
+the lindex command, which is assigned to the variable layer_num.
+Since the return value for the set command is always the value to
+which the variable is set, the command uses the second argument
+passed to the script as the layer number.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__idea922587-3358-411f-8062-3ef99a118b92"><span class="ph cmd">Add the following code directly
+after the command to create the layer. This code extracts the polygon
+coordinates from the arguments list:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>set first_coord 2 
+set last_coord [expr $argc-2] 
+set coords [lrange $argv $first_coord $last_coord]</code></pre><p class="p">To extract the coordinates
+of the polygon from the list, you use the Tcl lrange command. This
+command returns a new list containing all the elements with indices from
+$first_coord through $last_coord.</p>
+<p class="p">If the arguments between the
+layer number and the name of the file are to be used as the coordinates
+of the polygon, you know that $first_coord, the index of the first coordinate,
+must be 2 (as 0 was the topcell, and 1 was the layer number).</p>
+<p class="p">The variable argc is a special
+variable managed by the Tcl interpreter that contains a count of
+the number of arguments passed to the script. Recall the index of
+the last element in a list of length N is (N-1). Since the last
+argument to be passed in is the name of the file, the index of the
+final coordinate of the polygon must be ($argc -2). </p>
+<p class="p">The Tcl expr command instructs
+the Tcl interpreter to evaluate a mathematical operation and in
+doing so, treats the values stored in the specified variables as
+numbers rather than as strings. Thus, you can calculate last_coord
+using [expr $argc-2].</p>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id7119e747-24b1-406d-8019-3f42758dd49a"><span class="ph cmd">Delete the line that creates
+the rectangle, and edit the line that creates the polygon:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id47406aa6-ab0f-45da-a5e8-62720a1774cd"><p class="p"><span class="ph FontProperty HeadingLabel">Change:</span></p>
+<pre class="pre codeblock"><code>$L create polygon TOP 1 0 0 100 100
+$L create polygon TOP 1 0 0 0 40 30 40 30 \
+80 45 80 45 25 15 25 15 0</code></pre></li>
+<li class="li" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id7d6db139-f3c2-4776-bd89-1d1fd46caac2"><p class="p"><span class="ph FontProperty HeadingLabel">To:</span></p>
+<pre class="pre codeblock"><code>eval $L create polygon $my_cell $layer_num $coords</code></pre></li>
+</ul>
+<p class="p">The Tcl <span class="ph FontProperty shellcommand">eval</span> command
+is a special command that builds a command string out of a set of
+arguments and passes it to the Tcl interpreter for processing. When
+you must build a command string using variable substitution or command
+substitution, you sometimes end up with data in a format that does
+not match the command. For instance, in this case, $L create polygon
+expects each coordinate value to be a separate string, but you are
+passing in a single string($coords) containing all of them. The <span class="ph FontProperty shellcommand">eval</span> command
+expands all the variables when it builds the command string, so
+the Tcl interpreter is able to process the $L create polygon command.</p>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id007f2906-2994-442a-a7e5-6dcb14dabf38"><span class="ph cmd">Edit the final line, saving
+the file to the file you pass in as the last argument:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>$L gdsout [lindex $argv end]</code></pre><p class="p">The Tcl <span class="ph FontProperty shellcommand">lindex</span> command
+recognizes the end of the string as representing the last index
+in a list.</p>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id56e97830-fd47-4fa6-b7a0-7dd8ef923f9f"><span class="ph cmd">Save the script.</span></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id9e375e9e-a625-4103-8352-bc5f135f9951"><span class="ph cmd">Run the script:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibredrv new_layout.tcl topcell 2 0 0 0 40 30 40 30 80 45 80 45 25
+   15 25 15 0 new_file.gds</pre>
+</div></li>
+<li class="li step stepexpand" id="id2a88e4e9-332d-4a4b-a94b-76f893406068__id12a7f9b5-24fc-4f36-9f9d-7700cb13ede2"><span class="ph cmd">View the
+new layout in Calibre DESIGNrev:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibredrv new_file.gds</pre>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">You have now modified the <span class="ph filepath">new_layout.tcl</span> Tcl
+script to define arguments and lists, and extract polygon coordinates.</p>
+<pre class="pre codeblock leveled"><code>set L [layout create] 
+set my_cell [lindex $argv 0] 
+$L create cell $my_cell 
+$L create layer [set layer1 [lindex $argv 1]] 
+set first_coord 2 
+set last_coord [expr $argc - 2] 
+set coords [lrange $argv $first_coord $last_coord] 
+eval $L create polygon $my_cell $layer1 $coords 
+$L gdsout [lindex $argv end]</code></pre><p class="p">When executing the script, in addition to specifying the name
+of the script, you must specify the following information on the
+command line:</p>
+<pre class="pre codeblock"><code>calibredrv new_layout.tcl &lt;<span class="keyword ParameterName OptionalReplaceable">cellName</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">layer</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">polygon_coordinates</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">output_file</span>&gt;</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ScriptsLayoutGenerationAssembly_id9ce6fdb2.html" title="Layout generation and assembly takes existing cells or layout files and modifies or combines them. You can create Tcl scripts to automate this process.">Scripts for Layout Generation and Assembly</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_LayoutCreate_id84f77681.html" title="Creates a new layout.">layout create</a></div>
+<div><a class="link" href="../topics/Command_LCreateCell_idbcfcf106.html#idbcfcf106-c647-4f4a-a019-786fdca1c51b__" title="Creates a new cell with the specified name.">$L create cell</a></div>
+<div><a class="link" href="../topics/Command_LGdsout_id86e3a39d.html#id86e3a39d-643c-4fef-8e7a-c51d90751100__" title="Writes the layout to a GDS-formatted file.">$L gdsout</a></div>
+<div><a class="link" href="../topics/Command_LCreatePolygon_id4d5c06bc.html#id4d5c06bc-d039-4b55-aa31-99ec3ea80c5a__" title="Creates a polygon with the given coordinates.">$L create polygon</a></div>
+<div><a class="link" href="../topics/Command_LCreateLayer_id0342d2b7.html#id0342d2b7-2137-462f-b6d0-b2c612a498fb__" title="Creates a new layer with the specified layer number.">$L create layer</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Script 2: Setting up a Script to Accept Passed In Arguments"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_Script2SettingUpScriptAcceptPassedInArguments_id2a88e4e9.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

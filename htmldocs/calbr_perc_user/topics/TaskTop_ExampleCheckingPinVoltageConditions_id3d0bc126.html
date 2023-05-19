@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example: Checking Pin Voltage Conditions" />
+<meta name="abstract" content="This example shows the use of perc::voltage to find MOS devices that meet certain pin conditions." />
+<meta name="description" content="This example shows the use of perc::voltage to find MOS devices that meet certain pin conditions." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id3d0bc126-335d-40fe-8211-c51edeed2dca" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Checking Pin Voltage Conditions</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Checking Pin Voltage Conditions" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id3d0bc126-335d-40fe-8211-c51edeed2dca">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Checking Pin Voltage Conditions</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">This example
+shows the use of perc::voltage to find MOS devices that meet certain
+pin conditions.</p>
+<ul class="ul"><li class="li" id="ideb757b07-46e7-4e1e-8943-2eb1b5ea0a88"><p class="p">The device is MN or MP.</p>
+</li>
+<li class="li" id="id604ae79c-3781-4c72-a9a9-0ba24dd0c96a"><p class="p">The voltage differences across these
+pins are within a specified tolerance:</p>
+<ul class="ul"><li class="li" id="id1fcee287-495c-4b12-b270-98525054ea64"><p class="p">drain to bulk</p>
+</li>
+<li class="li" id="idac20dd41-1a98-4447-9ab6-93d9a25926ca"><p class="p">source to bulk</p>
+</li>
+<li class="li" id="ida8680e31-0247-46cc-a5ce-766f5da5c48a"><p class="p">gate to bulk</p>
+</li>
+<li class="li" id="idf456ea7a-7161-49e4-aac7-06337dde7050"><p class="p">gate to drain</p>
+</li>
+<li class="li" id="id188aac1f-83b0-4ebb-a632-b7b894c0ec56"><p class="p">gate to source</p>
+</li>
+<li class="li" id="id0d695bc3-1774-4e96-9068-909d628fd391"><p class="p">drain to source</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">This check employs vectored analysis, so source
+voltages and input signal voltages are specified. </p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id1e60ec5f-177a-49e9-ac40-31855c767a13"><p class="p">You
+understand voltage propagation as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_ConnectivityBasedVoltagePropagation_idde127dbd.html#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93__Concept_ConnectivityBasedVoltagePropagation_idde127dbd.xml#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93" title="Calibre PERC employs static, connectivity-based voltage propagation. Unlike dynamic circuit simulators, Calibre PERC voltage propagation does not consider resistance or current. Voltage labels are passed along well-defined paths and are subsequently checked by rules.">Connectivity-Based Voltage Propagation</a>”.</p>
+</li>
+<li class="li" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id361654ed-5e13-46fe-87cc-7cc47e3374c2"><p class="p">You
+have created a file called <span class="ph filepath">utilities.tcl</span>,
+which contains the Tcl procs discussed under “<a class="xref fm:HeadingAndPage" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__Concept_UsefulUtilityProcedures_ide324021e.xml#ide324021e-abe0-4793-bc35-3ee9d47a4885" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id366593dc-2d29-41c9-b5bf-22879d8f62a9"><span class="ph cmd">Create a net voltages file
+called <span class="ph filepath">voltages.txt</span>,
+as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__Concept_UsefulUtilityProcedures_ide324021e.xml#ide324021e-abe0-4793-bc35-3ee9d47a4885" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a>”. Here is an example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>VDD  3.3 
+VDDA 3.3 
+VDDL 1.8 
+VSS  0.0 
+IN   1.8 </code></pre><p class="p">There should be one voltage
+value per net.</p>
+</div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__ida1216ff6-8fb8-43d1-845c-967855029a9c"><span class="ph cmd">Source the <span class="ph filepath">utilities.tcl</span> file
+containing your utilities procs:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>source utilities.tcl </code></pre></div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id74c77048-5118-45d3-85ab-d8035ee00b3b"><span class="ph cmd">Start the initialization procedure
+by calling the <a class="xref fm:HeadingOnly" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__id0c811fc9-a1b8-435a-ab42-65738390412f">define_net_voltages_from_file proc</a> in <span class="ph FontProperty emphasis">utilities.tcl</span>.
+In this case, we use the same initialization procedure for “<a class="xref fm:HeadingAndPage" href="TaskTop_ExampleFindingFloatingGates_id47d5ad77.html#id47d5ad77-1635-47f7-869c-462069b1f3bb__TaskTop_ExampleFindingFloatingGates_id47d5ad77.xml#id47d5ad77-1635-47f7-869c-462069b1f3bb" title="This example uses perc::voltage to find MOS gates where the device is MN or MP, and the gate is undriven. This check employs vectored analysis, so source voltages and input signal voltages are specified.">Example: Finding Floating Gates</a>”.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>proc init_7 {} { 
+ 
+#----------Voltage definitions------------ 
+ 
+# Required voltage definitions 
+# The check this proc supports uses switching voltages, so input 
+# voltages are expected in addition to rail voltages. 
+ 
+    define_net_voltages_from_file voltages.txt </code></pre><p class="p">This portion of the initialization
+proc defines the net voltages for the design.</p>
+</div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id1b91d433-ca8a-4ad5-97fa-47e8135dddf5"><span class="ph cmd">Define the power and ground
+net types.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Required to define -break net types 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power  { VDD? } 
+    perc::define_net_type ground { VSS? } </code></pre></div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id39469a59-4b87-4d7f-9ac8-8eb05015e75f"><span class="ph cmd">Define the voltage paths.
+Power and ground net types break paths for MN devices.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>#---------Propagation definitions---------- 
+ 
+    <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> -type {MN} -on "g+ &gt; 1.6" -pin {s d} \
+     -break { power || ground } 
+    perc::create_voltage_path -type {MP} -on "g- &gt; 1.6" -pin {s d} 
+} </code></pre></div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id62a9337c-5f1f-4659-8935-8da8f0f14e9f"><span class="ph cmd">Define a rule file variable
+for a pin voltage difference tolerance.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>VARIABLE voltage_delta 3.5 </code></pre><p class="p">This statement should appear
+in the rule file outside of the TVF FUNCTION block.</p>
+</div></li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id9ea43a44-61a7-45f8-ba1e-63483b8fff9b"><span class="ph cmd">Write the rule check procedures.
+The procedures occur in pairs, the first proc to select devices,
+and the second to test pin conditions.</span><ol type="a" class="ol substeps"><li class="li substep" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id75373702-5c5f-4d6d-bf9d-9c89d5528802"><span class="ph cmd">The first set of procedures
+finds all MN and MP devices and calls a -condition procedure.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>#---------MOS pin voltage checks----------  
+ 
+# Procedure naming convention: &lt;device type&gt;_&lt;from pin&gt;-&gt;&lt;to pin&gt; 
+ 
+  proc MN_d-&gt;b {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> -type {MN} -condition cond_M_db \
+      -comment "ERROR(MN_d-&gt;b)" 
+  } 
+   
+  proc MN_s-&gt;b {} { 
+    perc::check_device -type {MN} -condition cond_M_sb \
+      -comment "ERROR(MN_s-&gt;b)" 
+  } 
+   
+  proc MN_g-&gt;b {} { 
+    perc::check_device -type {MN} -condition cond_M_gb \
+      -comment "ERROR(MN_g-&gt;b)" 
+  }</code></pre><pre class="pre codeblock leveled"><code> 
+  proc MN_g-&gt;d {} { 
+    perc::check_device -type {MN} -condition cond_M_gd \
+      -comment "ERROR(MN_g-&gt;d)" 
+  } 
+   
+  proc MN_g-&gt;s {} { 
+    perc::check_device -type {MN} -condition cond_M_gs \
+      -comment "ERROR(MN_g-&gt;s)" 
+  } 
+
+  proc MN_d-&gt;s {} { 
+    perc::check_device -type {MN} -condition cond_M_ds \
+      -comment "ERROR(MN_d-&gt;s)" 
+  } 
+ 
+  proc MP_d-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_db \
+      -comment "ERROR(MP_d-&gt;b)" 
+  } </code></pre><pre class="pre codeblock leveled"><code>  proc MP_s-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_sb \
+      -comment "ERROR(MP_s-&gt;b)" 
+  } 
+  
+  proc MP_g-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_gb \
+      -comment "ERROR(MP_g-&gt;b)" 
+  } 
+   
+  proc MP_g-&gt;d {} { 
+    perc::check_device -type {MP} -condition cond_M_gd \
+      -comment "ERROR(MP_g-&gt;d)" 
+  } 
+   
+  proc MP_g-&gt;s {} { 
+    perc::check_device -type {MP} -condition cond_M_gs \
+      -comment "ERROR(MP_g-&gt;s)" 
+  } 
+ 
+  proc MP_d-&gt;s {} { 
+    perc::check_device -type {MP} -condition cond_M_ds \
+      -comment "ERROR(MP_d-&gt;s)" 
+  }</code></pre></div></li>
+<li class="li substep" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__id7e3a2de6-3f03-4c28-bbd7-924eff62fdbd"><span class="ph cmd">The -condition procedures
+check the pin conditions by calling the <a class="xref fm:HeadingOnly" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__id2ef969b1-6aea-464b-bc28-f0dc5199cc23">check_pin_voltages proc</a>, which is in the sourced file <span class="ph FontProperty emphasis">utilities.tcl</span>:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>#---------MOS pin voltage condition procs---------- 
+ 
+  proc cond_M_db {dev} {  
+    return [check_pin_voltages $dev "d" "b" \
+[<a class="xref fm:HeadingOnly" href="Command_TvfsvrfVar_id9dd1c79d.html#id9dd1c79d-55e8-4dcf-b104-4b2ef3bef4e4__Command_TvfsvrfVar_id9dd1c79d.xml#id9dd1c79d-55e8-4dcf-b104-4b2ef3bef4e4" title="Returns the value defined in a rule file Variable statement. This command is used instead of tvf::sys_var in Calibre PERC rules.">tvf::svrf_var</a> voltage_delta]] 
+  } </code></pre><pre class="pre codeblock leveled"><code>  proc cond_M_sb {dev} {         
+    return [check_pin_voltages $dev "s" "b" 0.0] 
+  } 
+   
+  proc cond_M_gb {dev} {    
+    return [check_pin_voltages $dev "g" "b" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+   
+  proc cond_M_gd {dev} {  
+    return [check_pin_voltages $dev "g" "d" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+ 
+  proc cond_M_gs {dev} { 
+    return [check_pin_voltages $dev "g" "s" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+   
+  proc cond_M_ds {dev} {  
+    return [check_pin_voltages $dev "d" "s" \
+    [tvf::svrf_var voltage_delta]] 
+  } </code></pre></div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id3d0bc126-335d-40fe-8211-c51edeed2dca__idfa0782a1-287f-4d14-8833-06800bc84cb3"><span class="ph cmd">The complete rule check is
+as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>PERC LOAD voltage.lib INIT init_7 SELECT 'MN_d-&gt;b' 'MN_s-&gt;b'
+  'MN_g‑&gt;b' 'MN_g-&gt;d' 'MN_g-&gt;s' 'MN_d-&gt;s' 'MP_d-&gt;b' 'MP_s-&gt;b'
+  'MP_g‑&gt;b' 'MP_g-&gt;d' 'MP_g-&gt;s' 'MP_d-&gt;s' 
+ 
+VARIABLE voltage_delta 3.5
+
+TVF FUNCTION voltage.lib [/* 
+package require CalibreLVS_PERC 
+ 
+source utilities.tcl   
+
+###################################################################
+### PIN DIFFERENCE CHECKS 
+########## 
+ 
+  proc init_7 {} { 
+ 
+#----------Voltage definitions------------ 
+ 
+# Required voltage definitions 
+# The check this proc supports uses switching voltages, so input 
+# voltages are expected in addition to rail voltages. 
+ 
+    define_net_voltages_from_file voltages.txt 
+ 
+# Required to define -break net types 
+    perc::define_net_type power  { VDD? } 
+    perc::define_net_type ground { VSS? } </code></pre><pre class="pre codeblock leveled"><code>#---------Propagation definitions---------- 
+ 
+    perc::create_voltage_path -type {MN} -on "g+&gt; 1.6" -pin {s d} \
+      -break { power || ground } 
+    perc::create_voltage_path -type {MP} -on "g- &gt; 1.6" -pin {s d} 
+ 
+} 
+ 
+#---------MOS pin voltage checks----------  
+ 
+# Procedure naming convention:&lt;device type&gt;_&lt;from pin&gt;-&gt;&lt;to pin&gt; 
+ 
+  proc MN_d-&gt;b {} { 
+    perc::check_device -type {MN} -condition cond_M_db \
+      -comment "ERROR(MN_d-&gt;b)" 
+  } 
+   
+  proc MN_s-&gt;b {} { 
+    perc::check_device -type {MN} -condition cond_M_sb \
+      -comment "ERROR(MN_s-&gt;b)" 
+  } 
+   
+  proc MN_g-&gt;b {} { 
+    perc::check_device -type {MN} -condition cond_M_gb \
+      -comment "ERROR(MN_g-&gt;b)" 
+  } 
+   
+  proc MN_g-&gt;d {} { 
+    perc::check_device -type {MN} -condition cond_M_gd \
+      -comment "ERROR(MN_g-&gt;d)" 
+  } 
+   
+  proc MN_g-&gt;s {} { 
+    perc::check_device -type {MN} -condition cond_M_gs \
+      -comment "ERROR(MN_g-&gt;s)" 
+  } 
+ 
+  proc MN_d-&gt;s {} { 
+    perc::check_device -type {MN} -condition cond_M_ds \
+      -comment "ERROR(MN_d-&gt;s)" 
+  } 
+ 
+  proc MP_d-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_db \
+      -comment "ERROR(MP_d-&gt;b)" 
+  } 
+   
+  proc MP_s-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_sb \
+      -comment "ERROR(MP_s-&gt;b)" 
+  } 
+  
+  proc MP_g-&gt;b {} { 
+    perc::check_device -type {MP} -condition cond_M_gb \
+      -comment "ERROR(MP_g-&gt;b)" 
+  } 
+   </code></pre><pre class="pre codeblock leveled"><code>  proc MP_g-&gt;d {} { 
+    perc::check_device -type {MP} -condition cond_M_gd \
+      -comment "ERROR(MP_g-&gt;d)" 
+  } 
+   
+  proc MP_g-&gt;s {} { 
+    perc::check_device -type {MP} -condition cond_M_gs \
+      -comment "ERROR(MP_g-&gt;s)" 
+  } 
+ 
+  proc MP_d-&gt;s {} { 
+    perc::check_device -type {MP} -condition cond_M_ds \
+      -comment "ERROR(MP_d-&gt;s)" 
+  } 
+ 
+#---------MOS pin voltage condition procs---------- 
+ 
+  proc cond_M_db {dev} {   
+    return [check_pin_voltages $dev "d" "b" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+   
+  proc cond_M_sb {dev} {         
+    return [check_pin_voltages $dev "s" "b" 0.0] 
+  } 
+   
+  proc cond_M_gb {dev} {    
+    return [check_pin_voltages $dev "g" "b" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+   
+  proc cond_M_gd {dev} {  
+    return [check_pin_voltages $dev "g" "d" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+ 
+  proc cond_M_gs {dev} { 
+    return [check_pin_voltages $dev "g" "s" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+   
+  proc cond_M_ds {dev} {  
+    return [check_pin_voltages $dev "d" "s" \
+    [tvf::svrf_var voltage_delta]] 
+  } 
+*/] </code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Output to the run transcript is given
+by the check_pin_voltages proc, which appears under “<a class="xref fm:HeadingAndPage" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__Concept_UsefulUtilityProcedures_ide324021e.xml#ide324021e-abe0-4793-bc35-3ee9d47a4885" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a>”. Output appears similar to
+this:</p>
+<pre class="pre codeblock leveled"><code>  Executing RuleCheck "MP_d-&gt;s" ...
+    Checking RULE: ERROR(MP_d-&gt;s)
+subckt inv_hv  instance M0 pins d=undefined  s=3.3 ::cond_M_ds()
+subckt nor_lv  instance M2 pins d=undefined  s=1.8 ::cond_M_ds()
+subckt nor_lv  instance M3 pins d=0  s=undefined ::cond_M_ds() </code></pre><p class="p">A large number of device instances
+can be reported by the puts command that generates this information.
+Hence, this sort of output is primarily useful in rule file development
+and debugging.</p>
+<p class="p">Results in the PERC Report appear
+similar to this:</p>
+<pre class="pre codeblock leveled"><code>5    M3 [ MP(P_LV) ]  (1 placement, LIST# = L1)
+         g: IN2 [ ] [ ] [ 1.8 ] [ 1.8 ]
+         s: INT2
+         d: INT1 [ ] [ ] [ ] [ 0 ]
+         b: VDD [ ] [ ] [ 1.8 ] [ 1.8 ]</code></pre><p class="p">The drain-to-source voltage difference
+limit is 3.5 volts. In this case, the source has an undefined voltage,
+and this is an error. Investigating why net INT2 sees no voltage
+is a logical debugging step.</p>
+<p class="p">The annotations to the pins indicate
+the path types and voltage values at initialization time and after
+voltage propagation throughout the design, respectively. The general
+form of pin annotations is this:</p>
+<pre class="pre codeblock leveled"><code>&lt;pin&gt;: &lt;net&gt; [ &lt;initialized_net_type_list&gt; ] [ &lt;propagated_path_type_list&gt; ] [ &lt;initialized_voltage_list&gt; ] [ &lt;propagated_voltage_list&gt; ] </code></pre><p class="p">The list fields can appear empty or
+are suppressed if information is not available for those fields.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Checking Pin Voltage Conditions"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExampleCheckingPinVoltageConditions_id3d0bc126.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

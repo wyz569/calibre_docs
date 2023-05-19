@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Debugging DP Layout Errors" />
+<meta name="abstract" content="After running Calibre double-patterning, you find DP-related errors revealed by the MAP keywords specified in the RET NMDPC command." />
+<meta name="description" content="After running Calibre double-patterning, you find DP-related errors revealed by the MAP keywords specified in the RET NMDPC command." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id0d4440e0-210f-40aa-a184-597092d0c23f" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Debugging DP Layout Errors</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Debugging DP Layout Errors" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id0d4440e0-210f-40aa-a184-597092d0c23f">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Debugging DP Layout
+Errors</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">After running
+Calibre double-patterning, you find DP-related errors revealed by
+the MAP keywords specified in the RET NMDPC command. </p>
+<p class="p">In this procedural example, the error type
+names are user-defined. Your names may be different. The names are
+derived from the SVRF rules file. This procedure only focuses on
+a subset of the available DP error resolution tools.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id882bd43a-398c-4ebe-99a1-a730fdd6a881"><p class="p">Successful
+completion of an SVRF double-patterning run using RET NMDPC.</p>
+</li>
+<li class="li" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id7a74b8aa-2c24-4b89-ac3b-a71838eb0e7c"><p class="p">Specification
+of MAP keywords using RET NMDPC.</p>
+</li>
+<li class="li" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id8f8dd1f5-471f-4c8e-a552-142c11981f8f"><p class="p">Prior
+successful DRC completion.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id422bb6bb-ad11-4432-952b-f47a04b191c6"><span class="ph cmd">Open the
+output layout:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibredrv <span class="keyword ParameterName OptionalReplaceable">output_layout</span></code></pre><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id24a0f340-01fb-41c1-8495-651b40467c74"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Output Layout</span><br /><div class="imagecenter"><img class="image imagecenter" height="279" src="../graphics/output_layout.png" width="401" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idb4f10001-8168-4abb-b2a9-60410a5ef695"><span class="ph cmd">Open the results database
+using the calibredrv menu:</span><div class="itemgroup info StepInfo"><p class="lines ApplCommand">Verification — Start RVE</p>
+</div><ol type="a" class="ol substeps"><li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idffbb8fb1-7705-44c6-99df-b47661284712"><span class="ph cmd">Select an RDB filename.</span></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id6bd83d19-350a-4810-8d30-98e45da45b7c"><span class="ph cmd">Click the <span class="ph uicontrol">Open</span> button.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id35a9fa5a-cb92-42bb-9981-6005c590271a"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Starting RVE </span><br /><div class="imagecenter"><img class="image imagecenter" height="174" src="../graphics/RVE.png" width="401" /></div><br /></div>
+</div></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">The RVE form opens with various
+error types displayed in the RVE form. The error types are output
+by the SVRF and RET NMDPC commands in the Rules file:</p>
+<div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idce01bf87-f5fd-4b3b-a25e-aad01e71031e"><span class="figcap"><span class="fig--title-label">Figure 3. </span>RVE Form </span><br /><div class="imagecenter"><img class="image imagecenter" height="218" src="../graphics/RVE_form.png" width="401" /></div><br /></div>
+<p class="p">The next series of steps explore
+the general means of selecting error types and specific error types
+used for debugging. </p>
+</div></li>
+<li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id6a99a7bf-35f6-4ae5-8dc3-3531b6cbd630"><span class="ph cmd">To select any error type (and
+specifically action separators) from the RVE form:</span><ol type="a" class="ol substeps"><li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id3f3d415d-ea4e-4849-8473-116e77eb6963"><span class="ph cmd">Select the action separator
+error type.</span></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id12a80463-4713-4929-a9c0-4da2da4509dd"><span class="ph cmd">Click the highlight icon.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id71d8e2ec-f401-494c-baab-e6a2b5e9d782"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Selecting an Action
+Separator </span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/RVE_forma.png" width="401" /></div><br /></div>
+</div></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">In <a class="xref fm:Figure" href="#id0d4440e0-210f-40aa-a184-597092d0c23f__ideb0caea7-e22c-4bde-8e27-014c62714a00">Figure 5</a>, RVE displays the action separators.
+Action separators indicate that two shapes the separator touches
+must be placed on different masks:</p>
+<div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ideb0caea7-e22c-4bde-8e27-014c62714a00"><span class="figcap"><span class="fig--title-label">Figure 5. </span>Action Separators</span><br /><div class="imagecenter"><img class="image imagecenter" height="316" src="../graphics/odd_cycle_separators.png" width="401" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ide7e9a351-6257-475d-b207-62e2f8f5adda"><span class="ph cmd">To select loop errors from
+the RVE form:</span><ol type="a" class="ol substeps"><li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id3bd33eea-8192-45a5-8a2a-67d4d9ef2ab9"><span class="ph cmd">Select the loop error type.</span></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idb519f766-ef79-45d0-a4eb-a46745f62394"><span class="ph cmd">Click the highlight icon.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ida3eeefbe-b43e-4921-a509-2d69fba74db9"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Selecting a Loop Error </span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/RVE_formb.png" width="401" /></div><br /></div>
+</div></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">The loop errors are displayed
+on the output layout in <a class="xref fm:Figure" href="#id0d4440e0-210f-40aa-a184-597092d0c23f__id64bfbb8b-5c4c-4c04-ae83-4b7ba0ea7703">Figure 7</a>. Loop errors highlight shapes and action
+separators that are grouped into odd-cycle errors:</p>
+<div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id64bfbb8b-5c4c-4c04-ae83-4b7ba0ea7703"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Loop Errors</span><br /><div class="imagecenter"><img class="image imagecenter" height="316" src="../graphics/odd_cycle_loop.png" width="401" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idea28d85a-a76c-460b-a4f8-21202ab75fa3"><span class="ph cmd">To select conflict rings from
+the RVE form:</span><ol type="a" class="ol substeps"><li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idd859ef9d-7c63-4b39-bc74-387aa6744ec2"><span class="ph cmd">Select the conflict ring error type.</span></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ide0864b23-d86d-4ef8-9ef3-d55d3e5c6a90"><span class="ph cmd">Click the highlight icon.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idb0d22631-4eec-47e6-84b8-9261a9301f12"><span class="figcap"><span class="fig--title-label">Figure 8. </span>Selecting an Error Type</span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/RVE_formc.png" width="401" /></div><br /></div>
+</div></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">Conflict rings highlight odd-cycle
+errors. Conflict rings touch all shapes involved in an odd cycle.
+Conflict rings appear in two different ways depending on whether
+warning error types are additionally specified in the SVRF rules
+file. The differences are shown in <a class="xref fm:Figure" href="#id0d4440e0-210f-40aa-a184-597092d0c23f__id8b7f8ea4-86d4-4e06-850d-5475246192d6">Figure 9</a>:</p>
+<div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id8b7f8ea4-86d4-4e06-850d-5475246192d6"><span class="figcap"><span class="fig--title-label">Figure 9. </span>Conflict Ring Errors </span><br /><div class="imagecenter"><img class="image imagecenter" height="319" src="../graphics/procedures31.png" width="468" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id7327842c-3566-4168-8c79-b97eb62278cf"><span class="ph cmd">To simultaneously select conflict
+rings and warnings from the RVE form:</span><ol type="a" class="ol substeps"><li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__idc2c8f1b7-d180-4c2b-a327-17f79d84a652"><span class="ph cmd">Select the conflict ring error type.</span></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id5aca0add-b105-44c2-b8bd-aa8ab375e8de"><span class="ph cmd">While holding the Shift key,
+select the warning ring error type.</span><div class="itemgroup info SubStepInfo"><p class="p">Both error types in the RVE
+form are selected.</p>
+</div></li>
+<li class="li substep" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ida1343d3c-efbb-42ad-83c5-9b2044eb4306"><span class="ph cmd">Click the highlight icon.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__id57a922f9-3265-4381-8aa6-277775584083"><span class="figcap"><span class="fig--title-label">Figure 10. </span>Selecting Ring and
+Warning Error Types</span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/RVE_formd.png" width="401" /></div><br /></div>
+</div></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">Both conflict and warning rings
+appear as shown in <a class="xref fm:Figure" href="#id0d4440e0-210f-40aa-a184-597092d0c23f__ideab72579-a9ce-4f78-b4cb-618e29dde522">Figure 11</a>. When used together, conflict and warning
+rings highlight odd-cycle errors and indicate where odd-cycle errors
+can be resolved. Conflict rings touch all shapes involved in an
+odd cycle.</p>
+<div class="fig fignone" id="id0d4440e0-210f-40aa-a184-597092d0c23f__ideab72579-a9ce-4f78-b4cb-618e29dde522"><span class="figcap"><span class="fig--title-label">Figure 11. </span>Conflict and Warning
+Ring Errors </span><br /><div class="imagecenter"><img class="image imagecenter" height="281" src="../graphics/odd_cycle_ring_warning.png" width="468" /></div><br /></div>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SetUpRunCalibreMultiPatterning_id947e0f3f.html" title="You use Calibre Multi-Patterning to perform mask decomposition. Because Calibre Multi-Patterning tools run in batch mode, you configure all settings in a LITHO FILE statement, which is called from an SVRF file.">Set Up and Run Calibre Multi-Patterning</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "Debugging DP Layout Errors"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DebuggingDpLayoutErrors_id0d4440e0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

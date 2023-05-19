@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Avoid Spacing Violations After Treatment" />
+<meta name="abstract" content="Default rules define corrections required for all line-ends, but Calibre OPCLINEEND avoids post-bias errors by checking for spacing violations after applying the default correction." />
+<meta name="description" content="Default rules define corrections required for all line-ends, but Calibre OPCLINEEND avoids post-bias errors by checking for spacing violations after applying the default correction." />
+<meta name="prodname" content="Calibre Rule-Based OPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-01-30" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rbopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Rule-Based OPC User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id0292f64b-d93b-4141-8e70-440cacef017c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Avoid Spacing Violations After Treatment</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Avoid Spacing Violations After Treatment" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id0292f64b-d93b-4141-8e70-440cacef017c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Avoid Spacing Violations After Treatment</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Default
+rules define corrections required for all line-ends, but Calibre
+OPCLINEEND avoids post-bias errors by checking for spacing violations
+after applying the default correction.</span>
+</div>
+<p class="p">The OPCLINEEND command measures
+the external distance between the generated OPC geometries and other
+geometries, including the other OPC geometries. If it encounters
+a spacing violation, as defined by a correction rule, OPCLINEEND
+removes any initial corrections in the direction of the violation,
+and replaces them with corrections defined by the END and SERIF
+arguments for the correction rule that correspond to the spacing violation
+condition. </p>
+<p class="p">Line-ends are always found on the in_layer.
+You control where OPCLINEEND looks for spacing violations through
+the layers you supply in the command statement. </p>
+<ul class="ul"><li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id5f1dc4ed-d0d8-4070-aae6-331754062f75"><p class="p">If you supply an in_layer without a reference_layer,
+the command checks for spacing violations between the line-end and
+other geometries on the in_layer.</p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id2377ab23-e2e9-49d7-b6bd-c3a95830e044"><p class="p">If you supply an in_layer plus a reference_layer,
+the command checks for spacing violations in two places: between
+the line-end on the in_layer and edges on the reference_layer and
+between the line-end on the in_layer and other corrected line-ends on
+the in_layer. Note that the reference_layer should include all geometry
+from the in_layer plus any additional geometry that must be considered
+for space measurements. </p>
+</li>
+</ul>
+<p class="p">The OPCLINEEND command uses the SPACE violation
+condition to calculate and correct for two types of spacing violations,
+line-end OPC spacing violations and serif OPC spacing violations.
+These violation types and their resolution methods are described
+here.</p>
+<div class="section Subsections" id="id0292f64b-d93b-4141-8e70-440cacef017c__id6cdc01a3-3dbe-4a9b-880e-1aff9a0dafe6"><div class="section Subsection" id="id0292f64b-d93b-4141-8e70-440cacef017c__id1e54e1b2-f774-42e4-84fe-25807233210b"><h2 class="title Subheading sectiontitle">Line-end Spacing Violations</h2><p class="p">Calibre OPCLINEEND identifies line-end spacing
+violations by generating a measurement region for the line-end edge
+after it has been extended by the default rule.</p>
+<p class="p"><a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__ide847e510-0492-4055-a80a-0be1d2289b35">Figure 1</a> shows the OPPOSITE EXTENDED measurement
+region used for identifying line-end spacing violations as specified
+by the bit of code shown.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__ide847e510-0492-4055-a80a-0be1d2289b35"><span class="figcap"><span class="fig--title-label">Figure 1. </span>The OPPOSITE EXTENDED Measurement Region</span><br /><div class="imagecenter"><img class="image imagecenter" height="156" src="../graphics/opclineend06.png" width="438" /></div><br /></div>
+<p class="p">If the system finds geometries inside the measurement
+region on the same layer or in the ref_layer, a violation is said
+to exist. Calibre OPCLINEEND corrects that violation by modifying
+the line-end correction to agree with the line-end extension defined
+in the correction rule. The new line-end extension values must be
+smaller than the initial ones.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__id5ee033fc-7d59-4c45-8b2f-d05d4f22008a"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Spacing Violations</span><br /><div class="imagecenter"><img class="image imagecenter" height="260" src="../graphics/opclineend07.png" width="427" /></div><br /></div>
+<p class="p">If the line-end
+has serifs, modifying the line-end correction also impacts the serif
+height. <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idfe3204cf-395f-4f30-978e-81c0eee649cc">Figure 3</a> shows the results of correcting the
+space violation without also adjusting the serif depth. Note that
+the total serif height is shorter after the line-end extension is
+reduced to avoid the line-end OPC spacing violation.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__idfe3204cf-395f-4f30-978e-81c0eee649cc"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Correcting Line-end Spacing Violations
+Without Serif Depth Adjustments</span><br /><div class="imagecenter"><img class="image imagecenter" height="236" src="../graphics/opclineend08.png" width="468" /></div><br /></div>
+<p class="p">You can control the
+impact on the serif height by writing a correction rule that includes
+new values for both the END and the SERIF depth. When a line-end
+has serifs, OPCLINEEND corrects the violation by modifying both
+the width of the line-end correction and the depth of the serif
+to agree with the correction rule line-end extension and serif depth,
+respectively.</p>
+<p class="p">You
+would use this technique when it is desirable either to adjust the total
+serif height or to keep the serif height fixed (for example, to
+ensure that the serif height remains greater than the minimum width
+allowed by Calibre nmDRC).</p>
+<p class="p">You can ensure that the serif height remains
+the same by increasing the serif depth by the same amount by which
+the line-end extension is reduced. In order to do this, the system
+allows for specifying a greater serif depth value after the spacing
+measurement. <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idf45f2cda-54f1-4681-9f0f-b3c83f41fae1">Figure 4</a> shows the results of correcting the
+space violation by adjusting both the line-end extension and the
+serif depth.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__idf45f2cda-54f1-4681-9f0f-b3c83f41fae1"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Correcting Line-End Spacing Violations
+With Serif Depth Adjustments</span><br /><div class="imagecenter"><img class="image imagecenter" height="233" src="../graphics/opclineend09.png" width="468" /></div><br /></div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When correcting
+a line-end spacing violation, OPCLINEEND ignores the serif extension
+value in the correction rule. It modifies the serif extension only
+when it discovers a serif violation and corrects the violations
+using the serif extension values for the rule that applies.</p>
+</div>
+</div>
+<div class="section Subsection" id="id0292f64b-d93b-4141-8e70-440cacef017c__id5260aaac-c4ba-47ee-b6fb-fcd6862ed7cc"><h2 class="title Subheading sectiontitle">Serif Spacing Violations</h2><p class="p">Calibre OPCLINEEND identifies serif spacing
+violations by generating a measurement region for each serif after
+it has been extended by the default rule. <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__id75496e30-937d-4a47-97ed-2989bceba200">Figure 5</a> shows the OPPOSITE EXTENDED measurement
+regions used to identify serif spacing violations for a generic
+hammerhead.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__id75496e30-937d-4a47-97ed-2989bceba200"><span class="figcap"><span class="fig--title-label">Figure 5. </span>Finding Serif Spacing Violations
+With OPPOSITE EXTENDED</span><br /><div class="imagecenter"><img class="image imagecenter" height="163" src="../graphics/opclineend11.png" width="468" /></div><br /></div>
+<p class="p">If the system finds geometries
+inside the measurement region on the same layer or on the ref_layer,
+a serif violation is said to exist. Calibre OPCLINEEND corrects that
+violation by modifying the serif width to agree with the corrected
+serif extension. Notice how the serif extension in <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__id75496e30-937d-4a47-97ed-2989bceba200">Figure 5</a> is adjusted only on the side with the
+violation. The OPCLINEEND command treats each serif as a separate
+entity. The new serif extension value must be smaller than the initial
+one, possibly as small as zero. The line-end extension and serif
+depth are unaffected. </p>
+</div>
+<div class="section Subsection" id="id0292f64b-d93b-4141-8e70-440cacef017c__ide01722ad-2127-411c-b79e-f95b9fee9777"><h2 class="title Subheading sectiontitle">How Opposing Edges Affect Corrections</h2><p class="p">Because spacing violations are likely to be
+different in all three directions, Calibre OPCLINEEND may draw from
+three different correction rules to arrive at the final line-end treatment;
+one for each violation.</p>
+<div class="p">When you design correction rules, keep in mind
+that these are multi-purpose rules. They define the corrections
+for line-end spacing violations and the corrections for serif spacing violations.<br /><div class="imagecenter"><img class="image imagecenter" height="206" src="../graphics/opclineend12.png" width="468" /></div><br /></div>
+<p class="p">Extension and depth values are dependent
+on the type of edge directly opposite the fragment being moved.
+There are three cases:</p>
+<ul class="ul"><li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id4d68e6a3-1eb2-49e7-ae77-7ea050a0d125"><p class="p">The opposing edge is not extended.</p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__idcaaf38c0-c374-4609-ace0-ff76c00971ec"><p class="p">The opposing edge is an extension of
+the same type. </p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id61a84da4-b748-42ec-af74-d16db01e3de7"><p class="p">The opposing edge is an extension of
+a different other type.</p>
+</li>
+</ul>
+<p class="p">When a correction rule contains a single value
+for end, or serif extension, or serif depth, that value applies
+to all three cases. When it contains two values, the first is used
+for cases in which the opposing edge is not extended and the second
+is used for all other situations. </p>
+<p class="p">Each is illustrated in <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idd00f3dbc-11a4-432a-962b-35aaed05873f">Figure 6</a>.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__idd00f3dbc-11a4-432a-962b-35aaed05873f"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Extension Conditions</span><br /><div class="imagecenter"><img class="image imagecenter" height="198" src="../graphics/opclineend13.png" width="468" /></div><br /></div>
+<p class="p">Applying the same correction to case A as to
+case C results in a wider spacing between the case C edges than
+the case A edges. This is because both edges pull back in case C
+and only one edge pulls back in case A. </p>
+<p class="p">To avoid this discrepancy, you can define up
+to three different corrections for each of the three categories
+of movement (line-end extension, serif extension, and serif depth),
+one for each case. The values are order dependent:</p>
+<dl class="dl"><dt class="dt dlterm">First
+Value </dt>
+<dd class="dd"><p class="p">Used when the opposing edge is not extended. This value is
+also used as the default for the other values when they are not
+specified.</p>
+</dd>
+<dt class="dt dlterm" id="id0292f64b-d93b-4141-8e70-440cacef017c__idff9f234a-c966-4208-89ed-c98e17016187">Second Value</dt>
+<dd class="dd"><p class="p">Used if the opposing edge is an extension of the same type.
+(That is, both edges are line-end extensions or both are serifs.)</p>
+</dd>
+<dt class="dt dlterm" id="id0292f64b-d93b-4141-8e70-440cacef017c__id1390b44b-080d-4f35-9899-79a0b1d5aba6">Third
+Value</dt>
+<dd class="dd"><p class="p">Used if the opposing edge is an extension
+of the same type, where both edges are line-end extensions or both
+are serifs. If the third value is not specified, the second value
+is used by default.</p>
+</dd>
+</dl>
+<p class="p">You specify actual extension distances based
+upon the spacing condition that exists after moving the edge the
+default amount. Also note that if you specify multiple values for
+serif extension, you must specify the same number of values for
+serif depth. In <a class="xref fm:Example" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idf108bb07-7ad9-457e-a504-e23b539ce949">Figure 7</a>, and as illustrated in <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idf8f6aabf-9923-4c16-aaa0-89b09ef7b087">Figure 8</a>, the four values after the keyword
+SERIF are respectively interpreted as:</p>
+<ol class="ol"><li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id2d57adb2-a9f3-49f6-a795-d63d1f4202d2"><p class="p">serif extension opposite unextended edge</p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__idf78267f6-4d4f-4742-a7c6-21a7af382cd8"><p class="p">serif extension opposite extended edge of
+any type</p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__idb6f989af-2db3-464a-b65b-3189fb2d37ca"><p class="p">serif depth opposite unextended edge</p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__id29316228-8a86-46fc-8023-a723f24c4b44"><p class="p">serif depth opposite extended edge of any
+type</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__idf108bb07-7ad9-457e-a504-e23b539ce949"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Correction Rules to Anticipate
+Effects of Opposing Edges (Code)</span></div>
+<pre class="pre codeblock not-leveled"><code>X {OPCLINEEND POLY
+	WIDTH &lt;= 0.2                      END 0.15     SERIF 0.15 0.3
+	WIDTH &lt;= 0.2 SPACE &lt;= 0.05        END 0 0.05   SERIF 0.00 0.05 0.3 0.3
+	WIDTH &lt;= 0.2 SPACE &gt; 0.05 &lt;= 0.10 END 0.0 0.10 SERIF 0.05 0.10 0.3 0.3
+	WIDTH &lt;= 0.2 SPACE &gt; 0.10 &lt;= 0.15 END 0.10     SERIF 0.10 0.3
+}</code></pre><div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__idf8f6aabf-9923-4c16-aaa0-89b09ef7b087"><span class="figcap"><span class="fig--title-label">Figure 8. </span>Correction Rules to Anticipate
+Effects of Opposing Edges</span><br /><div class="imagecenter"><img class="image imagecenter" height="101" src="../graphics/opclineend14.png" width="346" /></div><br /></div>
+</li>
+</ol>
+<p class="p">In <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idf8f6aabf-9923-4c16-aaa0-89b09ef7b087">Figure 8</a>, the default extension for both line-ends
+and serifs is 0.15. The depth is 0.3. The minimum space you must
+enforce is 0.2 and the input shapes are drawn on a grid of 0.05.
+In <a class="xref fm:Example" href="#id0292f64b-d93b-4141-8e70-440cacef017c__idf108bb07-7ad9-457e-a504-e23b539ce949">Figure 7</a>, consider the third rule for the interval
+&gt; 0.05 &lt;= 0.10:</p>
+<ol class="ol"><li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__idaff0c8cf-8afa-4ca4-90ab-3eb5ea455553"><p class="p">The distance between the serif and the opposing
+non-extended edge is 0.10. The default movement of 0.15 moved the
+edge too far to enforce a spacing of 0.2, so you know the correction
+rule must be less than 0.15. You can calculate that the corrected
+extension should be 0.05, which is the default extension, 0.15,
+minus the distance by which the edge overshot the mark, (0.20 -0.10). </p>
+</li>
+<li class="li" id="id0292f64b-d93b-4141-8e70-440cacef017c__idb0ec73e4-cf05-4439-91b6-509a55a79ec7"><p class="p">The distance between the serif and the opposing
+serif is also 0.10. Since both edges are pulled back by the same
+amount, you can calculate that the corrected extension should be
+0.10, which is the default extension, 0.15, minus half the distance by
+which the two edges overshot the mark, (0.20 - 0.10)/2. </p>
+</li>
+</ol>
+<h2 class="title Subheading sectiontitle">OPCLINEEND Correction
+Rules and Summary</h2><p class="p">In general, a rule set contains a default rule
+and one or more correction rules. The default rule defines the maximum
+OPC. Correction rules define the OPC treatment required for line-ends
+that would introduce spacing violations if they were corrected using
+the default rule. <a class="xref fm:Example" href="#id0292f64b-d93b-4141-8e70-440cacef017c__id2e1b74ee-7799-4b03-a727-abea52845931">Figure 9</a> shows a rule set comprising the default
+rule plus two correction rules.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__id2e1b74ee-7799-4b03-a727-abea52845931"><span class="figcap"><span class="fig--title-label">Figure 9. </span>OPCLINEEND Rule Structure</span><br /><div class="imagecenter"><img class="image imagecenter" height="95" src="../graphics/opclineend15.png" width="468" /></div><br /></div>
+<p class="p">All three rules in the example apply to poly
+line-ends of width less than 0.3 and height greater than 0.2. In
+the default rule, the line-end extension is 0.02, the serif extension
+is 0.02, and the serif depth is 0.1.</p>
+<p class="p">The first correction rule is applied when the
+default rule introduces a spacing error such that the spacing between
+adjusted edges is less than or equal to 0.3. For edges that meet
+the spacing condition, the line-ends are moved 0.005, and no serif
+would be formed because the serif extension is 0. The serif depth
+of 0.115 does not matter in this case because of the 0 value for
+serif extension.</p>
+<p class="p">The second correction rule is applied when
+the default rule introduces a spacing error of the interval &gt; 0.3
+&lt;= 0.35. You can see what the line-end and serif values are in
+the example for this case.</p>
+<p class="p">Notice the intervals of the SPACE condition
+are mutually exclusive. This must be true in any rule set.</p>
+<p class="p">In the case where line-end edges are abutting,
+no serif is generated at the abutting corners. Instead, corner gap
+filling is performed for the line-end extension geometries at such
+corners. See <a class="xref fm:Figure" href="#id0292f64b-d93b-4141-8e70-440cacef017c__id99c39f88-6b30-4747-826e-a9dc7f2153a3">Figure 10</a>.</p>
+<div class="fig fignone" id="id0292f64b-d93b-4141-8e70-440cacef017c__id99c39f88-6b30-4747-826e-a9dc7f2153a3"><span class="figcap"><span class="fig--title-label">Figure 10. </span>Corner Filling</span><br /><div class="imagecenter"><img class="image imagecenter" height="93" src="../graphics/opclineend16.png" width="369" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_OpclineendCommand_idbc2fb318.html" title="The OPCLINEEND command performs variable line-end extension, including end extension and hammerhead creation.">OPCLINEEND Command</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rbopc_useref"
+                DocTitle = "Calibre® Rule-Based OPC User’s and Reference Manual"
+                PageTitle = "Avoid Spacing Violations After Treatment"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_AvoidSpacingViolationsAfterTreatment_id0292f64b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Rule-Based OPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

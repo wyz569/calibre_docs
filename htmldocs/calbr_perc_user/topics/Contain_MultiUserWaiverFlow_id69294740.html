@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Multi-User Waiver Flow" />
+<meta name="abstract" content="The multi-user waiver flow supports multiple users waiving topology results in the same Mask SVDB Directory. The users generate their own sets of waiver annotations in the form of a “delta” waiver file. The delta waiver files are then imported by another user, such as a design project supervisor, who collects all the delta waiver files to produce a final set of results waivers that are applied during a Calibre PERC run. This flow is used in Calibre RVE for PERC." />
+<meta name="description" content="The multi-user waiver flow supports multiple users waiving topology results in the same Mask SVDB Directory. The users generate their own sets of waiver annotations in the form of a “delta” waiver file. The delta waiver files are then imported by another user, such as a design project supervisor, who collects all the delta waiver files to produce a final set of results waivers that are applied during a Calibre PERC run. This flow is used in Calibre RVE for PERC." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id69294740-8829-4466-bc6c-cfa6b2c20d01" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Multi-User Waiver Flow</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Multi-User Waiver Flow" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id69294740-8829-4466-bc6c-cfa6b2c20d01">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Multi-User Waiver Flow</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">The multi-user waiver flow supports
+multiple users waiving topology results in the same Mask SVDB Directory.
+The users generate their own sets of waiver annotations in the form
+of a “delta” waiver file. The delta waiver files are then imported
+by another user, such as a design project supervisor, who collects
+all the delta waiver files to produce a final set of results waivers that
+are applied during a Calibre PERC run. This flow is used in Calibre
+RVE for PERC.</span>
+</div>
+<p class="p">To enable this flow, the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> MUWDB
+(multi-user waiver database) keyword must be used in the rules.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The distinction between multi-user
+(<dfn class="term italic">delta</dfn>)
+waivers and results waivers is important. The former are primarily
+for administrative use in Calibre RVE to manage generation of the
+latter. Only the latter are applied during a Calibre PERC waiver
+run to waive results in the PERC report.</p>
+</div>
+<p class="p">A single user generates results waivers as discussed under “<a class="xref fm:HeadingAndPage" href="TaskTop_GeneratingTopologyResultsWaivers_id68420a6e.html#id68420a6e-cb30-48f5-9531-59606e65a56e__TaskTop_GeneratingTopologyResultsWaivers_id68420a6e.xml#id68420a6e-cb30-48f5-9531-59606e65a56e" title="A topology waiver description file suitable for use with the PERC Waiver Path rule file statement can be generated using Calibre RVE.">Generating Topology Results Waivers</a>”. However,
+it may be desirable that multiple engineers evaluate the waiver status
+of topology results. This latter use model is supported by the multi-user
+waiver flow.</p>
+<div class="fig fignone" id="id69294740-8829-4466-bc6c-cfa6b2c20d01__id9aecda73-a54f-4b8f-a4f9-9370be0bbfc4"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Multi-User
+Waiver Flow</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/waivers_multi_user.png" /></div><br /></div>
+<p class="p">In the figure, users one through three apply waiver states to
+the results database contemporaneously. Each saves a delta waiver
+file for the set of results that each evaluates. User four assembles
+all the previous waivers, evaluates them, and applies a final set
+of waiver states.</p>
+<p class="p">In the multi-user waiver flow, there are three waiver states
+that apply in Calibre RVE for PERC:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Pending</span> —
+The result is neither reviewed nor waived. It awaits investigation.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Reviewed</span> —
+The result has been investigated by a user, but it is not waived.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Waived</span> —
+The result is not a discrepancy and has been waived. </p>
+<p class="p BlockIndent">A result may have been waived automatically either
+in a Calibre PERC run with waivers or manually by a user when changing
+a result’s status to “Waived” in Calibre RVE. The former waiver
+also appears as a waived result in the PERC Report while the latter
+waiver does not (it only applies in Calibre RVE for administrative
+purposes).</p>
+<p class="p">These criteria are important to understand when using this flow:</p>
+<ul class="ul"><li class="li" id="id69294740-8829-4466-bc6c-cfa6b2c20d01__id2cad1a6b-673f-4e5a-870a-d6c6dc5571b9"><p class="p">The user
+associated with entries in a delta waiver file corresponds to the
+value of the $USER environment variable for the Calibre RVE session.</p>
+</li>
+<li class="li" id="id69294740-8829-4466-bc6c-cfa6b2c20d01__id7e3f5b41-d93d-49a9-815d-b41f37dd5294"><p class="p">The state of
+any result in Calibre RVE can be changed by a user to one of the
+three aforementioned states at any time. However, if a check is
+specified with SELECTTYPE UNWAIVABLE in the PERC Load statement,
+the state cannot be changed. Additionally, a user can assign a comment
+to a waiver.</p>
+</li>
+<li class="li" id="id69294740-8829-4466-bc6c-cfa6b2c20d01__idcc974475-9d1f-4bd6-a5e0-428580c1e15a"><p class="p">Previously
+saved multi-user (delta) waiver files are not read automatically
+when starting a Calibre RVE session. However, result states that
+are recorded in the SVDB from a previous session are displayed when
+the SVDB is opened.</p>
+</li>
+<li class="li" id="id69294740-8829-4466-bc6c-cfa6b2c20d01__id1185b647-836c-418a-8783-d9b13b1e4632"><p class="p">Upon importation
+of delta waiver files, they are collated by Calibre RVE. If the
+waiver criteria differ across the set of users that generated the
+delta waiver files, the conflicts are reported in Calibre RVE. The
+waiver settings of the final delta waiver file that is loaded prevail
+unless overridden by the user doing the waiver file importation.</p>
+<p class="p">Example: Assume that calibre -perc waives a result automatically.
+User one marks the result as Reviewed while user two leaves the
+same result as Waived. If user one’s delta waiver file is loaded
+last, the state of the result is Reviewed, not Waived. But if the
+files are loaded in the reverse order, the state is Waived because
+user two exported that waiver state. In either case, the conflict
+between the waiver settings of the two users is reported when their
+delta waiver files are imported into Calibre RVE.</p>
+</li>
+</ul>
+<p class="p">These procedures are used in the multi-user waiver flow:</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_GeneratingMultiUserTopologyWaivers_id70ed765c.html" title="The multi-user waiver flow allows multiple users to assess the waiver status of topology check results in a Mask SVDB Directory. Each user marks the waiver state for results in Calibre RVE for PERC. ">Generating Multi-User Topology Waivers</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_ImportingMultiUserWaiversToGenerateResultsWaivers_id0b18c947.html" title="In the multi-user waiver flow, results statuses from multiple users are stored in “delta” waiver files. These files are imported by another user and collated by Calibre RVE in order to produce topology results waivers used in a PERC Waiver Path statement.">Importing Multi-User Waivers to Generate Results Waivers</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TopologyWaiverApplication_id35ea29df.html" title="Calibre PERC supports automatic error waivers for topological results. These waivers do not apply to geometric results produced by Logic-Driven Layout (LDL) flows.">Topology Waiver Application</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Multi-User Waiver Flow"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_MultiUserWaiverFlow_id69294740.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

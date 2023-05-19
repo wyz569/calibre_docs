@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Using a Tcl Script to Print a Schematic View to File with Calibre RVE" />
+<meta name="abstract" content="The Calibre RVE SPICE file viewer includes a Tcl interface to output a schematic view to file. You can expand instances and highlight objects in the schematic view, then save the view to a postscript or Scalable Vector Graphics file." />
+<meta name="description" content="The Calibre RVE SPICE file viewer includes a Tcl interface to output a schematic view to file. You can expand instances and highlight objects in the schematic view, then save the view to a postscript or Scalable Vector Graphics file." />
+<meta name="prodname" content="Calibre RVE User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rve_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® RVE™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id3d06c459-4d62-4b67-9005-450b088a0f12" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using a Tcl Script to Print a Schematic View to File with Calibre RVE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using a Tcl Script to Print a Schematic View to File with Calibre RVE" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id3d06c459-4d62-4b67-9005-450b088a0f12">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using a Tcl Script to
+Print a Schematic View to File with Calibre RVE</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The Calibre RVE
+SPICE file viewer includes a Tcl interface to output a schematic
+view to file. You can expand instances and highlight objects in
+the schematic view, then save the view to a postscript or Scalable
+Vector Graphics file.</p>
+<p class="p">The scripting interface for the Calibre RVE
+SPICE file viewer uses schematic viewer options found in the <span class="ph filepath italic">.rvedb</span> file.
+In particular, the setting for “Clear existing highlights” controls
+whether multiple highlights or only a single highlight are visible
+in the schematic image. For example, if “Clear existing highlights”
+is enabled, only one highlight is included in the output file. </p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id9c8c24a4-cf1d-4855-9482-dde941ee975d"><p class="p">A
+netlist file in SPICE format. </p>
+<p class="p">The following compressed file formats are supported:</p>
+<ul class="ul"><li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id463955d5-e031-4c35-9fda-603eb4d20b2b"><p class="p">Files ending
+in the <span class="ph filepath">.gz</span> file extension and compressed in
+the gzip format.</p>
+</li>
+<li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__idcf9e17a9-6064-4818-b3a5-4b63acdfac16"><p class="p">Files with
+the .Z file extension. Such files are opened with the gunzip utility.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id50f43702-d0f0-40a6-9703-82676cf991a3"><p class="p">Options
+for the Calibre RVE SPICE File Viewer are set up as desired. You can
+set up options in one of the following ways:</p>
+<ul class="ul"><li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id8f343e20-600a-4b2f-89a6-e163604fc685"><p class="p">“<a class="xref fm:HeadingAndPage" href="TaskTop_SettingCaseSensitivityHighlightViewOptionsSpiceFileViewer_id5bed1aef.html#id5bed1aef-3194-4541-8335-e91a820f972d__TaskTop_SettingCaseSensitivityHighlightViewOptionsSpiceFileViewer_id5bed1aef.xml#id5bed1aef-3194-4541-8335-e91a820f972d" title="Prior to printing schematic views with the Tcl scripting interface to the Calibre RVE SPICE File Viewer, you must set the viewer options. The viewer options are set within Calibre RVE and saved to the .rvedb file. The settings in the .rvedb file are used when the Tcl script is executed.">Setting Case-Sensitivity, Highlight, and View Options for the Scripting Interface to the SPICE File Viewer</a>”. </p>
+</li>
+<li class="li" id="id3d06c459-4d62-4b67-9005-450b088a0f12__ide7046eb0-e911-4f7c-98f8-5118dfa88ad0"><p class="p">If
+you saved a<span class="ph filepath italic"> .rvedb</span> file
+with the desired options, specify the directory containing the <span class="ph filepath italic">.rvedb </span>file
+using the MGC_RVEDB_DIR environment variable. For example:</p>
+<pre class="pre codeblock leveled"><code>setenv MGC_RVEDB_DIR ~/rvedb_dir_for_spice_viewer</code></pre></li>
+</ul>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Calibre
+RVE unsets TCLLIBPATH at invocation, so TCLLIBPATH and the auto_path
+variable do not have the same value in the Calibre RVE environment
+as in the invoking shell. You must explicitly set the auto_path
+variable within the Tcl script if the script uses the auto_path
+variable.</p>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id7ee21bec-57d4-4c86-99c9-141303a7607e"><span class="ph cmd">Create a Tcl script with SPICE
+Browser API commands. Include the following commands:</span><div class="itemgroup info StepInfo"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Getloadednetlists_id22e2e20f.html#id22e2e20f-b654-4392-beb7-f7b1d8d48b44__Command_Getloadednetlists_id22e2e20f.xml#id22e2e20f-b654-4392-beb7-f7b1d8d48b44" title="Tcl command that returns the list of netlists loaded in the Calibre RVE SPICE file viewer.">GetLoadedNetlists</a> — Get the list of netlists that
+are loaded. </p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Getspicebrowserapi_id75e414d0.html#id75e414d0-b87a-49a2-b454-d090d34d7539__Command_Getspicebrowserapi_id75e414d0.xml#id75e414d0-b87a-49a2-b454-d090d34d7539" title="Tcl command that returns the API object for a netlist that is loaded in the Calibre RVE SPICE file viewer.">GetSpiceBrowserAPI</a> — Get the API object for a netlist. </p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Highlight_idf83fb0b9.html#idf83fb0b9-1c60-427c-9190-aaa7f9d317af__Command_Highlight_idf83fb0b9.xml#idf83fb0b9-1c60-427c-9190-aaa7f9d317af" title="Tcl command to highlight a set of objects in the Calibre RVE SPICE file viewer.">highlight</a> — Use as desired to highlight
+nets, cells, instances, and devices. </p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Expandinstance_id97b4bab0.html#id97b4bab0-4f3b-4183-8c48-91763f5028b3__Command_Expandinstance_id97b4bab0.xml#id97b4bab0-4f3b-4183-8c48-91763f5028b3" title="Tcl command to expand an instance in the Calibre RVE SPICE file viewer.">expandInstance</a> — Use as desired to expand instances. </p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Printschematictofile_id365ab708.html#id365ab708-5d13-42b5-a964-8d6b7c7c7350__Command_Printschematictofile_id365ab708.xml#id365ab708-5d13-42b5-a964-8d6b7c7c7350" title="Tcl command to output the schematic view to a file.">printSchematicToFile</a> — Use one or more times to output the
+schematic image. </p>
+<p class="p">See the “Examples” section
+for a complete Tcl script. </p>
+</div></li>
+<li class="li step stepexpand" id="id3d06c459-4d62-4b67-9005-450b088a0f12__id72e38b83-84a4-491d-b1ec-7cce368bfdbe"><span class="ph cmd">Run the Tcl script with the
+following command:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -rve -nodisplay -spice topcell.sp -script print_schem.tcl </code></pre><p class="p">where <span class="ph filepath">topcell.sp</span> is
+the SPICE netlist and <span class="ph filepath">print_schem.tcl</span> is the
+Tcl script.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">A postscript or SVG file of the schematic
+is created, depending on the parameters specified for the <a class="xref fm:HeadingOnly" href="Command_Printschematictofile_id365ab708.html#id365ab708-5d13-42b5-a964-8d6b7c7c7350__Command_Printschematictofile_id365ab708.xml#id365ab708-5d13-42b5-a964-8d6b7c7c7350" title="Tcl command to output the schematic view to a file.">printSchematicToFile</a> command. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">This example is for use with a netlist
+that has a top cell named “pllclk.” Several instances are expanded
+and several nets are highlighted. The resulting schematic view is
+saved to a postscript file with a white background and to a SVG
+file with a black background. </p>
+<pre class="pre codeblock leveled"><code># Tcl script to print a schematic to file with the 
+# Calibre RVE SPICE Browser API
+
+# get the list of netlists open in the SPICE browser
+set netlists [::rve::SpiceBrowserAPI::<a class="xref fm:HeadingOnly" href="Command_Getloadednetlists_id22e2e20f.html#id22e2e20f-b654-4392-beb7-f7b1d8d48b44__Command_Getloadednetlists_id22e2e20f.xml#id22e2e20f-b654-4392-beb7-f7b1d8d48b44" title="Tcl command that returns the list of netlists loaded in the Calibre RVE SPICE file viewer.">GetLoadedNetlists</a>]</code></pre><pre class="pre codeblock leveled"><code># get the API object for the netlist
+set api [::rve::SpiceBrowserAPI::<a class="xref fm:HeadingOnly" href="Command_Getspicebrowserapi_id75e414d0.html#id75e414d0-b87a-49a2-b454-d090d34d7539__Command_Getspicebrowserapi_id75e414d0.xml#id75e414d0-b87a-49a2-b454-d090d34d7539" title="Tcl command that returns the API object for a netlist that is loaded in the Calibre RVE SPICE file viewer.">GetSpiceBrowserAPI</a> [lindex $netlists 0]]
+
+# highlight the cell pllclk
+$api <a class="xref fm:HeadingOnly" href="Command_Highlight_idf83fb0b9.html#idf83fb0b9-1c60-427c-9190-aaa7f9d317af__Command_Highlight_idf83fb0b9.xml#idf83fb0b9-1c60-427c-9190-aaa7f9d317af" title="Tcl command to highlight a set of objects in the Calibre RVE SPICE file viewer.">highlight</a> cell pllclk pllclk</code></pre><pre class="pre codeblock leveled"><code># expand the cell and two instances
+$api <a class="xref fm:HeadingOnly" href="Command_Expandinstance_id97b4bab0.html#id97b4bab0-4f3b-4183-8c48-91763f5028b3__Command_Expandinstance_id97b4bab0.xml#id97b4bab0-4f3b-4183-8c48-91763f5028b3" title="Tcl command to expand an instance in the Calibre RVE SPICE file viewer.">expandInstance</a> pllclk
+$api expandInstance pllclk/XI19
+$api expandInstance pllclk/XI19/XI20</code></pre><pre class="pre codeblock leveled"><code># Highlight two nets in the default highlight color.
+# The Calibre RVE setting “Clear existing highlights” must be off
+# in order to make multiple highlights. 
+$api highlight net pllclk {ibias reset}</code></pre><pre class="pre codeblock leveled"><code># highlight a net in the XI20 instance using color index 2
+$api highlight net pllclk {XI19/XI20/result_0} 2
+
+# highlight an instance in color index 3
+$api highlight inst pllclk {XI19/XI20/Xi_0} 3</code></pre><pre class="pre codeblock leveled"><code># print a postscript file with white background (default)
+$api <a class="xref fm:HeadingOnly" href="Command_Printschematictofile_id365ab708.html#id365ab708-5d13-42b5-a964-8d6b7c7c7350__Command_Printschematictofile_id365ab708.xml#id365ab708-5d13-42b5-a964-8d6b7c7c7350" title="Tcl command to output the schematic view to a file.">printSchematicToFile</a> sch_pllclk_w.ps
+
+# print a SVG file with black background
+$api printSchematicToFile sch_pllclk_b.svg -colormode bg_black</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ScriptingInterfaceCalibreRveSpiceFileViewer_id1a3020de.html" title="You can write a Tcl script for the Calibre RVE SPICE File Viewer. The Tcl script sets up a schematic view and saves the view to a file.">Scripting Interface to the Calibre RVE SPICE File Viewer</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_CalibreRve_id44e739d7.html#id44e739d7-9626-4fa6-8032-07d65b5e90d7__" title="Command line invocation for Calibre RVE (Results Viewing Environment).">calibre -rve</a></div>
+<div><a class="link" href="../topics/TaskTop_SettingCaseSensitivityHighlightViewOptionsSpiceFileViewer_id5bed1aef.html#id5bed1aef-3194-4541-8335-e91a820f972d__" title="Prior to printing schematic views with the Tcl scripting interface to the Calibre RVE SPICE File Viewer, you must set the viewer options. The viewer options are set within Calibre RVE and saved to the .rvedb file. The settings in the .rvedb file are used when the Tcl script is executed.">Setting Case-Sensitivity, Highlight, and View Options for the Scripting Interface to the SPICE File Viewer</a></div>
+<div><a class="link" href="../topics/Contain_CalibreRveSpiceBrowserApiCommands_idf4ef687c.html#idf4ef687c-dbf2-4a8c-bdd9-d92394d0a7e0__" title="You can create a Tcl script to create a schematic view with highlights and save the view to a postscript or SVG file.">Calibre RVE SPICE Browser API Commands</a></div>
+<div><a class="link" href="../topics/Contain_CalibreRveConfigurationFiles_id5763e7fe.html#id5763e7fe-03a6-44dc-bfe8-e59f8486a391__" title="Calibre RVE option settings are saved in a configuration file named .rvedb. The configuration file is saved automatically in your home directory by default; however, you may specify a different location for the configuration file. Database-specific options are saved in Calibre RVE for DRC and Calibre RVE for PERC; these options are saved automatically in the .rve directory in your home directory and restored when you reopen the database.">Calibre RVE Configuration Files</a></div>
+<div><a class="link" href="../topics/Concept_MultiLevelConfigurationManagementInCalibreRve_id1ad354a5.html#id1ad354a5-1374-458b-9ea0-80a14bad932e__" title="You can define multiple locations for the .rvedb configuration file with the MGC_RVEDB_DIR environment variable. This allows you to apply both global and project level settings, for example, and define the order of precedence for applying options.">Multi-Level Configuration Management in Calibre RVE</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rve_user"
+                DocTitle = "Calibre® RVE™ User’s Manual"
+                PageTitle = "Using a Tcl Script to Print a Schematic View to File with Calibre RVE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_UsingTclScriptPrintSchematicViewFileCalibreRve_id3d06c459.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® RVE™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

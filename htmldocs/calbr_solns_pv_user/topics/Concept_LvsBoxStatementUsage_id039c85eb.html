@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="LVS Box Statement Usage" />
+<meta name="abstract" content="LVS Box is a rule file specification statement used to prevent the contents of cells from being compared in LVS-H verification. It is also used to exclude cell contents during circuit extraction. Typically cells that are incomplete in the layout, source, or both are specified to prevent spurious discrepancies. There are three flows: black box, gray box, and regular box. Each of these has a preferred usage model, which is important to understand when selecting a box cell flow." />
+<meta name="description" content="LVS Box is a rule file specification statement used to prevent the contents of cells from being compared in LVS-H verification. It is also used to exclude cell contents during circuit extraction. Typically cells that are incomplete in the layout, source, or both are specified to prevent spurious discrepancies. There are three flows: black box, gray box, and regular box. Each of these has a preferred usage model, which is important to understand when selecting a box cell flow." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>LVS Box Statement Usage</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="LVS Box Statement Usage" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">LVS Box Statement Usage</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">LVS Box is a rule file specification
+statement used to prevent the contents of cells from being compared
+in LVS-H verification. It is also used to exclude cell contents
+during circuit extraction. Typically cells that are incomplete in
+the layout, source, or both are specified to prevent spurious discrepancies.
+There are three flows: black box, gray box, and regular box. Each
+of these has a preferred usage model, which is important to understand
+when selecting a box cell flow.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id1fdae6e8-e9ad-44bd-8ade-e6a7104effaf"><h2 class="title Subheading sectiontitle">Differences
+Between LVS Box Flows</h2><p class="p">The following table summarizes differences between the three <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Box', 'svrf_ur'); return false;">LVS Box</a> flows. Understanding these differences
+can help you select which flow best suits your needs.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id64e227ee-f5bb-4b0b-8911-a79919c08421" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Differences
+Between LVS Box Flows</span></caption><colgroup><col style="width:4.599in" /><col style="width:0.755in" /><col style="width:0.567in" /><col style="width:0.578in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d19447e185"><p class="p">Behavior</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d19447e188"><p class="p">Regular</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d19447e191"><p class="p">Black</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d19447e194"><p class="p">Gray</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Box cells processed in isolation from rest
+of design</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">Y</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Can reduce runtime</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Port layers and port text required</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">Y<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Requires Mask SVDB Directory statement</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">Y</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Layers inside box cell hierarchy interact
+with outside layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N<a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N<span class="ph FontProperty LiteralSuperScript">2</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Circuit extraction performed within box
+cells</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">Y<a name="fnsrc_3" href="#fntarg_3"><sup>3</sup></a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">ERC, short isolation, and device annotation
+performed in box cells</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Permits device seed promotion out of a box
+cell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">Box cell geometries preserved in SVDB for
+downstream flows</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">Y</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e185 "><p class="p">High-short resolution performed to box cell
+instance pins</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e188 "><p class="p">Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e191 "><p class="p">N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d19447e194 "><p class="p">N</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The key difference between regular box cells (which have the
+longest history of support in LVS-H) and black or gray box cells
+is, black and gray box cells are processed in isolation from the
+rest of the design. </p>
+<p class="p">A key difference between black and gray box cells is, circuit
+extraction is never performed in a black box cell, while it as always
+performed in a gray box cell. Here are some additional considerations
+that are direct consequences of the behaviors listed in <a class="xref fm:Table" href="#id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id64e227ee-f5bb-4b0b-8911-a79919c08421">Table 1</a>:</p>
+<ul class="ul"><li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__idcd601b16-3255-4b13-8add-f2c2bae60ceb"><p class="p">Black box
+cells are not used for downstream flows involving parasitic extraction.</p>
+</li>
+<li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__idcd0079f3-ea35-4fe2-8c74-32b61fe14860"><p class="p">Black box cells
+usually improve performance because non-pin layers are ignored.</p>
+</li>
+<li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__idc4c31f62-9800-4932-8b36-a9096b40e60a"><p class="p">Black and gray
+box cells tend to preserve hierarchy better than regular box cells.</p>
+</li>
+<li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id027257e7-ba44-4a55-987e-3a54f7b9b866"><p class="p">Black and gray
+cells can cause a CORRECT result in LVS comparison in certain cases where
+regular box cells do not.</p>
+</li>
+<li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id81ea6c89-3d34-430e-9677-91677ca8378a"><p class="p">Regular box
+cells offer the closest behavior to running LVS-H with no box cells
+at all.</p>
+</li>
+</ul>
+<p class="p">The LVS Box LAYOUT ONLY keyword causes cells to be treated as
+box cells during circuit extraction only. If this statement is used,
+layout black and gray box cells will probably cause an INCORRECT
+comparison with the source because the source is not boxed, while
+the layout box cell will be netlisted as primitive (an exception
+is when LVS Box GRAY DEVICES is used, where box cells are not primitive).</p>
+<p class="p">Regarding <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Netlist Box Contents', 'svrf_ur'); return false;">LVS Netlist Box Contents</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Preserve Box Cells', 'svrf_ur'); return false;">LVS Preserve Box Cells</a> settings,
+the following behaviors apply:</p>
+<ul class="ul"><li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id26e7e8bc-70aa-419c-9408-183a81d2be5d"><p class="p">With default
+netlisting settings, regular box cells are extracted as complete
+subcircuits and seed promotion can occur out of the cells. Otherwise,
+they are extracted as primitives and no seed promotion occurs.</p>
+</li>
+<li class="li" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id8dce2b69-5666-4d9e-bbae-62e7b78616f4"><p class="p">Regardless
+of netlisting settings, black and gray box cells are extracted as
+primitive subcircuits with one exception. As mentioned previously,
+LVS Box GRAY DEVICES causes box cells to be extracted as complete
+subcircuits with device recognition and no seed promotion.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id5981ff47-1617-465b-b5fc-ea1b3ad2d389"><h2 class="title Subheading sectiontitle">Black
+Box Cell Configuration</h2><p class="p">Black box cells are specified with the LVS Box BLACK keyword.
+Such cells have extra rule file requirements that other box cells
+do not. Specifically, the LVS Black Box Port statement must also
+be specified.</p>
+<p class="p">The LVS Black Box Port statement helps to identify black box
+cells. This is needed because the internal shapes of a black box
+cell are discarded, but the external interfaces to the cell still
+need to be identifiable. The LVS Black Box Port statement requires
+three input layers: an original (drawn) layer from which port polygons
+are constructed, a connectivity text layer, and a layer that externally
+connects to box cell ports. Following is an example.</p>
+<pre class="pre codeblock"><code>LAYER m2     12 // original layer used for black box ports
+LAYER txt    15 // connectivity text layer
+LAYER cap    18 // capacitor marker
+LAYER res    19 // resistor marker
+
+m2wire = m2 NOT (cap OR res) // interconnect layer
+
+CONNECT m2wire m2
+
+// connectivity text layer must be declared in a TEXT LAYER statement
+TEXT LAYER txt 
+ATTACH txt m2wire
+
+LVS BOX BLACK ram // requires LVS BLACK BOX PORT statement
+LVS BLACK BOX PORT m2 txt m2wire 
+
+MASK SVDB DIRECTORY svdb QUERY</code></pre><p class="p">If there are ports to a black box cell that exist below the primary
+level of the cell, use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Black Box Port Depth', 'svrf_ur'); return false;">LVS Black Box Port Depth</a> statement.</p>
+</div>
+<div class="section Subsection" id="id039c85eb-8e12-42a1-a3b1-9bb4c8277d4d__id5d6b0ca7-3a11-461c-bd11-0493fc67ed92"><h2 class="title Subheading sectiontitle">LVS
+Gray Box Cell Configuration</h2><p class="p">Gray box cells are specified with the LVS Box GRAY keyword. Gray
+boxes are typically used in conjunction with downstream timing analysis
+tools. Gray box cells do not require any additional specification
+statements besides LVS Box GRAY, but there are some options that
+are useful in certain contexts.</p>
+<p class="p">Devices are not recognized by default in gray box cells. To override
+this, specify LVS Box GRAY DEVICES.</p>
+<p class="p">Like black box cells, gray box cells are processed in isolation
+from the rest of the layout hierarchy. This means that, by default,
+geometries in gray box cells do not interact with layers outside
+such cells. To permit layers in a gray box cell to interact with
+layers outside the cell, specify LVS Box Peek Layer.</p>
+<p class="p">Although gray box cells are processed in isolation
+from the rest of the design, external pin connections are determined
+in a separate processing step. By default, Connect or Sconnect layers
+that form external interfaces to gray box cells form pins to such
+cells. To prevent a layer from forming pins in a gray box cell,
+use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Gray Box Not Port', 'svrf_ur'); return false;">LVS Gray Box Not Port</a> statement.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_LvsBestPractices_id6b55e1bc.html" title="There are a number of best practices to consider when using Calibre nmLVS, including rule file elements you should use, and rule file practices you should avoid.">LVS Best Practices</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Black Box Port', 'svrf_ur'); return false;">LVS Black Box Port</a> statement
+is required in the black box flow.</div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Box Peek Layer', 'svrf_ur'); return false;">LVS Box Peek Layer</a> overrides
+the default behavior.</div><div class="fn"><a name="fntarg_3" href="#fnsrc_3"><sup>3</sup></a>  By default, devices are not recognized.
+LVS Box GRAY DEVICES keyword overrides this.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "LVS Box Statement Usage"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_LvsBoxStatementUsage_id039c85eb.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

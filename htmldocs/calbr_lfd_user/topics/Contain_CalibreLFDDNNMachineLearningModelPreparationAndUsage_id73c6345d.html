@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Calibre LFD DNN Machine Learning Model Preparation and Usage" />
+<meta name="abstract" content="You use machine learning to run the Calibre LFD DNN flow in three phases: preprocessing and data generation, model training, and hotspot prediction." />
+<meta name="description" content="You use machine learning to run the Calibre LFD DNN flow in three phases: preprocessing and data generation, model training, and hotspot prediction." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id73c6345d-1f7b-42e5-8e26-f05fb7129479" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre LFD DNN Machine Learning Model Preparation and Usage</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre LFD DNN Machine Learning Model Preparation and Usage" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id73c6345d-1f7b-42e5-8e26-f05fb7129479">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre
+LFD DNN Machine Learning Model Preparation and Usage</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">You use machine learning to run the
+Calibre LFD DNN flow in three phases: preprocessing and data generation,
+model training, and hotspot prediction.</span>
+</div>
+<p class="p">The flow begins with the preprocessing of the initial
+input layer that includes the hotspots used for model training.
+The regions of interest on this input layer are identified and anchors
+are set based on user‑specifications for critical width or space,
+anchor separation and size, and window size. This phase of the flow
+uses the LFD::<a class="xref fm:HeadingOnly" href="Command_Mldatagen_id316e4411.html#id316e4411-e51a-4198-ac52-8bd99b5ff6c4__Command_Mldatagen_id316e4411.xml#id316e4411-e51a-4198-ac52-8bd99b5ff6c4" title="Samples and translates features for input to a machine learning training model in the preprocessing and data generation phase of the Calibre LFD deep neural network (DNN) flow.">MLDataGen</a> command
+to generate the data used to create an untrained model for the training
+phase of the flow. Once the untrained model is available, it is
+input to the <a class="xref fm:HeadingOnly" href="Command_LfdDnnTrain_id10408446.html#id10408446-3689-479c-81f6-5417ec31aa2b__Command_LfdDnnTrain_id10408446.xml#id10408446-3689-479c-81f6-5417ec31aa2b" title="A Calibre LFD executable utility that uses machine learning to train a raw (untrained) model with the generated CSV file output from the preprocessing and data generation phase of the Calibre LFD DNN flow.">lfd_dnn_train</a> utility,
+which uses machine learning and DNNs to output a trained model that
+can be frozen and saved. In the last phase of the flow, hotspot prediction,
+the trained model is input to the LFD::<a class="xref fm:HeadingOnly" href="Command_Mloptimizer_idc0e34fdb.html#idc0e34fdb-b96a-48f6-a3e0-ec7b198351eb__Command_Mloptimizer_idc0e34fdb.xml#idc0e34fdb-b96a-48f6-a3e0-ec7b198351eb" title="Performs hotspot prediction on a new design using a machine learning trained model in the prediction phase of the Calibre LFD deep neural network (DNN) flow.">MLOptimizer</a> command,
+which ends the flow by generating hotspot candidate locations for
+a new input design layer.</p>
+<div class="fig fignone" id="id73c6345d-1f7b-42e5-8e26-f05fb7129479__idcd3be3ec-5b32-4e8a-8524-02193df16389"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Machine
+Learning Model Preparation and Usage</span></div>
+<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lfd_dnn_flow.png" /></div><br /><p class="p">Consult your Siemens representative for information
+on creating an untrained model and an LFD kit for the Calibre LFD
+DNN flow.</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Concept_PreprocessingAndDataGeneration_id2a0c30a0.html" title="The functionality of the LFD::MLDataGen command is used for preprocessing and data generation in the first phase of the Calibre LFD DNN flow. ">Preprocessing and Data Generation</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Contain_ModelTraining_idfdea3d03.html" title="A Calibre LFD machine learning DNN training utility is used to perform model training in the second phase of the LFD DNN flow.">Model Training</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_Prediction_id2e2812f6.html" title="The LFD::MLOptimizer command uses the trained output model to perform the hotspot prediction in the third and final phase of the Calibre LFD DNN flow.">Prediction</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_TrialsToEnhanceAccuracy_id710d089b.html" title="Certain settings and actions can be used to improve the accuracy of the hotspot predictions in Calibre LFD DNN flow.">Trials to Enhance Accuracy</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_CalibreLFDDeepNeuralNetworkDNNFlow_idcbf7ccab.html" title="You can use the Calibre LFD deep neural network (DNN) flow to prepare a machine learning model that is trained with available hotspot data for a technology and layer to predict hotspot candidates in new designs with acceptable accuracy.">Calibre LFD Deep Neural Network (DNN) Flow</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Calibre LFD DNN Machine Learning Model Preparation and Usage"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_CalibreLFDDNNMachineLearningModelPreparationAndUsage_id73c6345d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

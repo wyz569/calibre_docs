@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="perc::trace_path" />
+<meta name="abstract" content="Given a net or an instance pin, determines a minimal set of devices in a voltage propagation path that exist between that node and nets of a specified voltage. Either a device count or instance paths are returned. The connecting nets in the path can optionally be included in the output." />
+<meta name="description" content="Given a net or an instance pin, determines a minimal set of devices in a voltage propagation path that exist between that node and nets of a specified voltage. Either a device count or instance paths are returned. The connecting nets in the path can optionally be included in the output." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>perc::trace_path</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="perc::trace_path" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">perc::trace_path</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><span class="shortdesc">Given a net
+or an instance pin, determines a minimal set of devices in a voltage
+propagation path that exist between that node and nets of a specified
+voltage. Either a device count or instance paths are returned. The
+connecting nets in the path can optionally be included in the output.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">perc::trace_path</span> {<span class="keyword ParameterName RequiredReplaceable">net_iterator</span> | {<span class="keyword ParameterName RequiredReplaceable">instance_iterator</span> <span class="keyword ParameterName Required">-name </span><span class="keyword ParameterName RequiredReplaceable">pin_name</span>}} <span class="keyword ParameterName Required">-voltage</span> <span class="keyword ParameterName RequiredReplaceable">voltage</span> {<span class="keyword ParameterName Required">‑minDistanceOnly</span> | {<span class="keyword ParameterName Required">‑maxDistance</span> <span class="keyword ParameterName RequiredReplaceable">integer</span> [-includeNets] [-onePlacement]}}</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">For this discussion, the term “distance” means a count of serially
+connected devices between a source and sink node. This command finds
+the minimum distance from a starting net or instance pin (the sink)
+to a net having the specified <span class="keyword ParameterName RequiredReplaceable">voltage</span> (the
+source). The distance has an explicit upper bound if <span class="keyword ParameterName Required">-maxDistance</span> is
+used.</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Voltage Trace Distance Enable', 'svrf_ur'); return false;">PERC Voltage Trace Distance Enable</a> YES must be specified when perc::trace_path is used
+or a runtime error results.</p>
+<p class="p">The returned distance to a given net is a
+minimum one. If more than one minimum-distance path is present,
+the representative minimum-distance path is chosen arbitrarily,
+and the output is based upon that.</p>
+<p class="p">This command assumes voltages
+have been previously assigned using <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> or <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a>, and it only traces across devices
+whose pins are specified in a <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> command.
+The defined and propagated voltages are the ones that are traced. </p>
+<p class="p">If <span class="keyword ParameterName RequiredReplaceable">net_iterator</span> is
+specified, then that net is the start of the trace. If <span class="keyword ParameterName RequiredReplaceable">instance_iterator</span> is
+specified, then the net connected to the <span class="keyword ParameterName RequiredReplaceable">pin_name</span> of
+that instance is the start of the trace. </p>
+<p class="p">If <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageDrop_idc6eb4714.html#idc6eb4714-d6f6-4c7b-932d-2ce43dc96927__Command_PercdefineVoltageDrop_idc6eb4714.xml#idc6eb4714-d6f6-4c7b-932d-2ce43dc96927" title="Specifies voltage drop values for a net or pin.">perc::define_voltage_drop</a> alters
+a voltage on a net, perc::trace_path stops tracing at the generated
+voltage. Similarly, if perc::create_voltage_path -pinVoltage or
+‑pinLimit procedures change a voltage across the pins of a device,
+perc::trace_path stops tracing at the altered voltage.</p>
+<p class="p">Before this command is called, you should
+check for sink-to-source shorts by comparing the voltages on the
+net referenced by the <span class="keyword ParameterName RequiredReplaceable">net_iterator</span>,
+or the net connected to the <span class="keyword ParameterName RequiredReplaceable">pin_name</span> pin
+of the <span class="keyword ParameterName RequiredReplaceable">instance_iterator</span>,
+to any <span class="keyword ParameterName RequiredReplaceable">voltage</span> value.
+(This as a comparison of any assigned voltage to a propagated one.)
+If such a short exists, then the net should not be traced. Failure
+to ensure this results in an error when a sink and source voltage
+are the same. The <a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> command
+is useful for determining voltages on a sink net. (See the Examples
+section.)</p>
+<p class="p">A distance constraint must be specified by either <span class="keyword ParameterName Required">-minDistanceOnly</span> or <span class="keyword ParameterName Required">-maxDistance</span>.
+The <span class="keyword ParameterName Required">‑minDistanceOnly</span> option
+causes the command to return the minimum distance as a number. The <span class="keyword ParameterName Required">-maxDistance</span> option
+defines the maximum number of devices that can comprise a path trace.
+The <span class="keyword ParameterName RequiredReplaceable">integer</span> value
+must be positive. The <span class="keyword ParameterName Required">-maxDistance</span> option
+returns the device instance names in a minimum-distance path from
+the sink net to the source net as a Tcl list.</p>
+<p class="p">The trace terminates at a net (the source) having the specified <span class="keyword ParameterName RequiredReplaceable">voltage</span> value,
+or when no path can be found that satisfies the distance constraint
+option. In the latter case, the returned list is empty in the case
+of <span class="keyword ParameterName Required">-maxDistance</span>,
+or -1 in the case of <span class="keyword ParameterName Required">-minDistanceOnly</span>.</p>
+<p class="p">When <span class="keyword ParameterName Required">-maxDistance</span> is
+used, by default, the returned trace list includes only device instance names.
+If -includeNets is specified, then the instance names of the nets
+connected to the devices in the path are also included in the list.</p>
+<p class="p">When <span class="keyword ParameterName Required">-maxDistance</span> is
+used, by default, the returned path is given in all placements in
+which the path occurs. If ‑onePlacement is specified, then a single
+placement representative is chosen as the context for the returned
+path.</p>
+<p class="p">This command may only be specified in a rule check procedure.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id271b587a-c416-4348-84af-7c0bb3c41d71"><span class="keyword ParameterName RequiredReplaceable">net_iterator</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument that specifies a
+net iterator. Either this argument or the <span class="keyword ParameterName RequiredReplaceable">instance_iterator </span>argument
+set must be specified. See <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a> ‑condition, <a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetNetsInPattern_id57a3e94b.html#id57a3e94b-bbd0-4389-86de-6ccb8d6b8137__Command_PercgetNetsInPattern_id57a3e94b.xml#id57a3e94b-bbd0-4389-86de-6ccb8d6b8137" title="Returns a list of net iterators from a matched pattern.">perc::get_nets_in_pattern</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetOtherNetOnInstance_id85c3d2b2.html#id85c3d2b2-1b55-49a9-ae53-4cda904a9176__Command_PercgetOtherNetOnInstance_id85c3d2b2.xml#id85c3d2b2-1b55-49a9-ae53-4cda904a9176" title="Creates a net iterator.">perc::get_other_net_on_instance</a>, or <a class="xref fm:HeadingOnly" href="Command_Percdescend_idbba0a66e.html#idbba0a66e-fb1a-4939-ac12-602ab0543c29__Command_Percdescend_idbba0a66e.xml#idbba0a66e-fb1a-4939-ac12-602ab0543c29" title="Creates an iterator that points to a cell placement representative or to a net in a cell.">perc::descend</a>. The net pointed to by the iterator
+is the start of the trace.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__idd726c939-6a89-4d68-9705-5cb0f5501933"><span class="keyword ParameterName RequiredReplaceable">instance_iterator </span><span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">pin_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set that specifies
+an instance iterator and an instance pin name. Either this argument
+set or the <span class="keyword ParameterName RequiredReplaceable">net_iterator</span> argument
+must be specified. See <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> ‑condition, <a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInParallel_idb1ea3d7e.html#idb1ea3d7e-5223-448f-ae87-6456a062a7d0__Command_PercgetInstancesInParallel_idb1ea3d7e.xml#idb1ea3d7e-5223-448f-ae87-6456a062a7d0" title="Returns a list of instance iterators containing instances connected in parallel.">perc::get_instances_in_parallel</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInSeries_id99f054f0.html#id99f054f0-66da-4cf9-aaa2-015f3552d176__Command_PercgetInstancesInSeries_id99f054f0.xml#id99f054f0-66da-4cf9-aaa2-015f3552d176" title="Returns a list of instance iterators containing instances connected in series.">perc::get_instances_in_series</a>, or <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInPattern_idaa4801f2.html#idaa4801f2-6232-41a4-8661-57ec3ea1aaee__Command_PercgetInstancesInPattern_idaa4801f2.xml#idaa4801f2-6232-41a4-8661-57ec3ea1aaee" title="Returns a list of instance iterators from a matched pattern.">perc::get_instances_in_pattern</a>. The net associated with the specified
+device and pin is used as the starting point for the trace.</p>
+<p class="p">If pin names are mapped using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Device Type', 'svrf_ur'); return false;">LVS Device Type</a>,
+then the mapped pin name is used, not the original name.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id7345fe17-dcb7-46a3-89b2-eef3dd4c4d8f"><span class="keyword ParameterName Required">-voltage</span> <span class="keyword ParameterName RequiredReplaceable">voltage</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument
+set that specifies the voltage of a terminal net of a path. This
+is a propagated voltage to be traced. The <span class="keyword ParameterName RequiredReplaceable">voltage</span> value
+may be either numeric or symbolic.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id81429435-71ef-4d66-93c9-9a6dba6f979b"><span class="keyword ParameterName Required">-minDistanceOnly</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument that specifies the returned
+value is a number indicating the distance between nets. Either this
+argument or <span class="keyword ParameterName Required">-maxDistance</span> must
+be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id5e846e6a-faf3-4da8-815f-33e7e5232579"><span class="keyword ParameterName Required">-maxDistance</span> <span class="keyword ParameterName RequiredReplaceable">integer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set that specifies
+the maximum count of device instances a path may have. The <span class="keyword ParameterName RequiredReplaceable">integer</span> value
+must be positive. This option also causes the output to be a Tcl
+list of instance names. Either this argument set or <span class="keyword ParameterName Required">-minDistanceOnly</span> must
+be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id20d34869-4e02-4b98-8eec-001ec5d333f5">-includeNets</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies to include
+the names of the nets connecting the devices of a trace path in
+the output list. The sink and source nets are included. May only
+be specified with <span class="keyword ParameterName Required">-maxDistance</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__id2244531f-6376-4103-a39e-18eb141c2180">-onePlacement</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies the
+returned path is in the context of a single placement representative
+rather than all placements that contain the path. May only be specified
+with <span class="keyword ParameterName Required">‑maxDistance</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">When <span class="keyword ParameterName Required">-minDistanceOnly</span> is
+specified, a number.</p>
+<p class="p">When <span class="keyword ParameterName Required">-maxDistance</span> is
+specified, a quoted Tcl list. The default is to have only flattened
+device instance names, like this:</p>
+<pre class="pre codeblock"><code>{XI15/XI0/XI1/RR17 XI15/XI0/XI0/RR32}</code></pre><p class="p">With -includeNets:</p>
+<pre class="pre codeblock"><code>{XI15/XI0/XI1/NET55 XI15/XI0/XI1/RR17 RTAPS&lt;254&gt; XI15/XI0/XI0/RR32 VREF}</code></pre></div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock"><code>// required for perc::trace_path
+PERC VOLTAGE TRACE DISTANCE ENABLE YES
+
+// set the maximum path instance count
+VARIABLE MAX_DISTANCE 4
+// set 1 to include interconnecting nets in the output
+VARIABLE INCLUDE_NETS 0
+// VARIABLE INCLUDE_NETS 1
+// set 1 to print just a single placement representative in the output
+VARIABLE ONE_PLACEMENT 0
+// VARIABLE ONE_PLACEMENT 1</code></pre><pre class="pre codeblock leveled"><code>TVF FUNCTION test_trace_path [/* 
+  package require CalibreLVS_PERC 
+ 
+  proc init {} {
+    set top_port_nets [perc::expand_list lvsTopPorts -type net]
+# puts "TOP_PORT_NETS: $top_port_nets"
+    perc::define_net_type TOP_PORTS lvsTopPorts
+    perc::define_voltage_group VSS  {0.0} 
+    perc::define_voltage_group VSS1 {0.0} 
+    perc::define_voltage_group VSS2 {0.0} 
+    perc::define_voltage_group GND  {VSS VSS1 VSS2}
+    perc::define_net_voltage GND {VSS?} -symbolic
+    
+    perc::define_voltage_group VDD  {5.0}
+    perc::define_voltage_group VDD1 {3.0}
+    perc::define_voltage_group VDD2 {1.8}
+    perc::define_net_voltage   VDD  VDD  -symbolic
+    perc::define_net_voltage   VDD1 VDD1 -symbolic
+    perc::define_net_voltage   VDD2 VDD2 -symbolic
+
+    perc::define_voltage_group IN1 {1.0}
+    perc::define_voltage_group IN2 {1.0}
+    perc::define_voltage_group INPUT {IN1 IN2}
+    perc::define_net_voltage   INPUT {IN?} -symbolic
+    
+# propagation paths
+    perc::create_voltage_path -type {MN MP} -pin {s d} -break {TOP_PORTS}
+    perc::create_voltage_path -type {R L D} -pin {p n}
+  }
+
+# the maximum count of device instances in a path
+  set max_distance [expr {int( [tvf::svrf_var MAX_DISTANCE] )}]</code></pre><pre class="pre codeblock leveled"><code>  proc cond_trace_me {net} {
+    set netname  [perc::name $net]
+    set place [perc::get_placements $net]
+    set placements [perc::name $place]
+# puts "&gt;&gt;&gt;ENTERED trace_me: net=$netname placement=$placements"
+# the maximum path length
+    set max_distance [expr {int( [tvf::svrf_var MAX_DISTANCE]} )]
+# flags for -includeNets and -onePlacement options
+    set include_nets_int  [expr {int( [tvf::svrf_var INCLUDE_NETS]} )]
+    set one_placement     [expr {int( [tvf::svrf_var ONE_PLACEMENT]} )]
+# set up command options
+    if { $include_nets_int } {
+      set inclNet "yes"
+      set include_nets "-includeNets"
+    } else {
+      set inclNet "no"
+      set include_nets ""
+    }
+    if { $one_placement } {
+      set onePlc "yes"
+      set one_placement "-onePlacement"
+    } else {
+      set onePlc "no"
+      set one_placement ""
+    }</code></pre><pre class="pre codeblock leveled"><code> # get the propagated voltages on the net for testing
+ # and reporting.
+    set voltages [perc::voltage $net -path]
+ 
+    puts "&gt;&gt;&gt;SETUP: net=$netname voltages=$voltages \
+   -maxDistance=$max_distance -includeNets=$inclNet \
+   -onePlacement=$onePlc placements=$placements"
+
+  # get any initialized voltage on the net
+    set sink_voltage [perc::voltage $net]
+  # volt is a source voltage to trace.
+  # if it is different from an assigned voltage (no short)
+  # then trace it.
+    foreach volt $voltages {
+      set contained [lsearch $sink_voltage $volt] 
+  # check if sink and source are shorted; if so, skip $net
+      if { $contained &gt;= 0 } {
+        puts "   SHORTED: net=:$netname: sink_voltage=:$sink_voltage: \
+  source_voltage=:$volt:"
+        continue;
+      }
+
+#   puts "   TRACE: net=$netname voltage=$volt max_distance=$max_distance"
+    set trace [perc::trace_path $net -voltage $volt \
+               -maxDistance $max_distance $include_nets $one_placement]
+#   puts "   RESULT: trace_result=$trace"
+    perc::report_base_result -title "Trace of net=$netname with \
+      voltage=$volt" -value "$trace"
+    }
+    return 1
+  }</code></pre><pre class="pre codeblock leveled"><code>  proc demo_trace_path {} { 
+    set max_distance [expr {int( [tvf::svrf_var MAX_DISTANCE]} )]
+    perc::check_net -condition cond_trace_me \
+      -comment "Paths with &lt;= $max_distance devices"
+  } 
+*/] </code></pre><p class="p">The initial VARIABLE statements
+set up conditions for the perc::trace_path commands. The MAX_DISTANCE
+variable value is 4, which means that paths having more instances
+than this do not return path lists (but the current net referenced
+by the iterator is still reported because any path there might be
+exceeds the -maxDistance value). Tcl proc init sets up the voltage propagation
+conditions with symbolic voltages. The demo_trace_path proc causes
+the tool to iterate over all nets and to pass a net iterator to
+the cond_trace_me proc.</p>
+<p class="p">The cond_trace_me proc begins by setting variable values for
+the name of the passed in net and the names of its placements. Then
+it determines which perc::trace_path command options should be used
+based upon prior VARIABLE settings. Then it tests whether each passed-in
+net has a propagated voltage that matches an initialized (sink)
+voltage on the net. If so, this is reported as a short to the transcript,
+and the voltage is skipped. Otherwise, the voltage is processed.
+For nets that satisfy the criteria of the perc::trace_path command,
+a list is returned and printed in the PERC report. Nets that do
+not have a path meeting the -maxDistance setting are also reported,
+but no perc::trace_path output list is returned for them. Nets that
+have no voltages on them are simply reported as a result.</p>
+<p class="p">Here is an example of report contents based upon the preceding
+code:</p>
+<pre class="pre codeblock"><code> 16    Net  N2
+
+ 17    Net  NET24 [ ] [ ] [ ] [ VDD2 VDD3 ]
+       Trace of net=NET24 with  voltage=VDD2
+       {MM6 MM7}
+       
+       Trace of net=NET24 with  voltage=VDD3</code></pre><p class="p">Net N2 is reported because it has no voltage propagated to it.
+NET24 has two symbolic voltages propagated to it: VDD2 and VDD3.
+For VDD2, there are two instances in the path between N24 and VDD2.
+For VDD3, there is no path with four or fewer instances, so no instance
+list is given.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RuleCheckCommands_id9b3d8e0b.html" title="Rule check commands appear in rule check procs and are used to check the design. Some rule check commands may be used in init procs. These are annotated in the notes to the tables in this section.">Rule Check Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "perc::trace_path"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Perctracepath_id4c73d7f6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

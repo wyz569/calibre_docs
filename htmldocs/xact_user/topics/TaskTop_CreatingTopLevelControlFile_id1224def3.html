@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Top-level Control File" />
+<meta name="abstract" content="The top-level control file is an SVRF rule file that contains all the settings necessary to run Calibre xACT. This example describes a set of statements used in a GDS flow." />
+<meta name="description" content="The top-level control file is an SVRF rule file that contains all the settings necessary to run Calibre xACT. This example describes a set of statements used in a GDS flow." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id1224def3-3ef4-478d-9ec6-c8ef6e498dde" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Top-level Control File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Top-level Control File" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating a Top-level Control File </h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">The top-level
+control file is an SVRF rule file that contains all the settings
+necessary to run Calibre xACT. This example describes a set of statements
+used in a GDS flow.</span>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id3b8a0535-e759-4b4f-8343-9447173c2fda"><span class="ph cmd">Create a Calibre xACT rule
+file called <span class="ph filepath">xact_t.rules</span>. </span></li>
+<li class="li step stepexpand" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id95b764f4-1b86-4d5c-9165-6ef161b19a31"><span class="ph cmd">Using a text editor, include
+the following statements in the <span class="ph filepath">xact_t.rules </span>file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>// design layout information - GDS 
+LAYOUT PRIMARY "mytopcell"  
+LAYOUT PATH "design/mytopcell.gds"  
+LAYOUT SYSTEM GDSII  
+ 
+// design netlist information 
+SOURCE PRIMARY “mytopcell”  
+SOURCE PATH “design/mytopcell.src.net”  
+SOURCE SYSTEM SPICE  
+ 
+// specify extracted netlist output - DSPF 
+PEX NETLIST "netlist.dspf" DSPF SOURCENAMES  
+PEX EXTRACT EXCLUDE SOURCENAMES VDD VSS  
+PEX EXTRACT TEMPERATURE 27  
+PEX REDUCE ANALOG YES  
+UNIT CAPACITANCE fF // May already be in capacitance file  
+ 
+// specify LVS and parasitic extraction rule files 
+INCLUDE rules/calibre_layers.svrf  
+INCLUDE rules/calibre_lvs_rules.svrf  
+INCLUDE rules/rules.C  
+INCLUDE rules/rules.R  
+INCLUDE rules/rules.xact  </code></pre><p class="p"></p>
+<p class="p">This rule file uses the following
+SVRF statements:</p>
+<ul class="ul"><li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id5558693d-1305-48e7-a151-7309e9f26994"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a>, <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a>, and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Primary', 'svrf_ur'); return false;">Layout Primary</a> statements
+specify the layout database. The layout database, also called the
+design, is a physical representation of your IC. </p>
+<p class="p">Calibre xACT accepts GDS, OASIS<sup>®</sup>, and LEF/DEF design formats.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__idb73133d4-343b-464c-9c90-82400b9515d2"><p class="p">If you require source
+or schematic names in the generated netlist, use <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source System', 'svrf_ur'); return false;">Source System</a>, <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a>,
+and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Primary', 'svrf_ur'); return false;">Source Primary</a> statements
+to specify the source netlist. </p>
+<p class="p">If you require source (schematic)
+names in the generated netlist, you need the source netlist. This
+netlist must be in SPICE format and is identified in the SVRF rule
+file.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__idd8adc81c-b041-40f2-8f97-df669dd7fd2b"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist', 'svrf_ur'); return false;">PEX Netlist</a> generates
+a netlist with parasitic elements and places it in the specified
+file.</p>
+<p class="p">Calibre xACT supports HSPICE,
+DSPF, SPEF, SPECTRE, ELDO, and CALIBREVIEW netlist formats. When
+performing extraction with source names be sure to specify the SOURCENAMES
+keyword.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id984a0515-0d10-4152-94b5-0f9a95a3b001"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Exclude', 'svrf_ur'); return false;">PEX Extract Exclude </a>specifies to exclude the named nets from parasitic
+extraction. When performing extraction with source names be sure
+to specify the SOURCENAMES keyword.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__iddc066dd7-917f-40b3-bd00-c078f70560c2"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Temperature', 'svrf_ur'); return false;">PEX Extract Temperature</a> specifies a temperature dependency for the extracted
+resistance.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id57edb565-5657-4e13-95e0-722256d73f23"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Reduce Analog', 'svrf_ur'); return false;">PEX Reduce Analog </a>specifies to perform reduction of extracted data from
+analog designs.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__idf7b82a0b-72c5-4bfe-aaeb-a818585b67ad"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Unit Capacitance', 'svrf_ur'); return false;">Unit Capacitance</a> specifies
+the capacitance scale factor for device calculations. This may already
+be defined in your <span class="ph filepath">rules.C</span> file.</p>
+</li>
+<li class="li" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__id45dae5a6-08a1-41cd-ae32-5c87da22f6f0"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">Include</a> specifies
+to include statements from the specified rule file in the top-level
+rule file.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id1224def3-3ef4-478d-9ec6-c8ef6e498dde__idea969bdf-c608-436a-af97-8ed1f4372461"><span class="ph cmd">Save and close the file. </span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_GettingStartedCalibreXactParasiticExtractionUsingBatchMode_idbfb7cbe3.html" title="The Calibre xACT extraction flow for advanced process nodes offers many possible customizations based on your particular needs.">Getting Started: Calibre xACT Parasitic Extraction For Transistor-Level Designs</a></div>
+</div>
+</div></div>
+<div class="fn"><sup>1</sup>  OASIS<sup>®</sup> is
+a registered trademark of Thomas Grebinski and licensed for use
+to SEMI<sup>®</sup>, San Jose. SEMI<sup>®</sup> is
+a registered trademark of Semiconductor Equipment and Materials
+International.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Creating a Top-level Control File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingTopLevelControlFile_id1224def3.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

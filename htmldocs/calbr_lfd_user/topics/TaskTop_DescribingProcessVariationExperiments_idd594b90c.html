@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Describing Process Variation Experiments" />
+<meta name="abstract" content="You issue the LFD::PVband function once for each layer. This one function instructs Calibre LFD to perform all the process variation experiments designed for that layer." />
+<meta name="description" content="You issue the LFD::PVband function once for each layer. This one function instructs Calibre LFD to perform all the process variation experiments designed for that layer." />
+<meta name="DC.subject" content="Focus/dose settings, Process Variation, experiments, multiple" />
+<meta name="keywords" content="Focus/dose settings, Process Variation, experiments, multiple" />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Describing Process Variation Experiments</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Describing Process Variation Experiments" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Describing Process Variation Experiments</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You issue the
+LFD::PVband function once for each layer. This one function instructs
+Calibre LFD to perform all the process variation experiments designed
+for that layer.</p>
+<p class="p">To use a single invocation to instruct Calibre
+LFD to process multiple experiments, you must pass in descriptions
+of the process variation experiments in the form of opticalSpanLists
+and doseSpanLists, which are arguments to the LFD::<a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> function. When you need to apply
+a bias to the original geometry during the PV-band generation step,
+you must also supply the optional sizeSpanLists.</p>
+<p class="p">These lists contain one value for each focus
+and dose pair:</p>
+<ul class="ul"><li class="li" id="id884bb922-0537-48cb-8a8a-210dbb89777f"><p class="p">The opticalSpanList contains the model
+created for the specified focus.</p>
+</li>
+<li class="li" id="id90821e07-f19e-452a-b518-502e0f2f6311"><p class="p">The doseSpanList contains the dose.</p>
+</li>
+<li class="li" id="idba30745f-9ed4-4bd5-8de9-85612c2f6b93"><p class="p">The sizeSpanList contains the size of
+the bias.</p>
+</li>
+<li class="li" id="id5a7a9338-297e-472c-b8a4-df69e6e81f90"><p class="p">The resistSpanList contains the resist
+model.</p>
+</li>
+<li class="li" id="idaeacf36a-d1bf-4885-b997-b5d48291880c"><p class="p">The etchSpanList contains the etch model.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Experiments involving
+double exposures require two opticalSpanLists, two doseSpanLists,
+and two sizeSpanLists.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__ide147b5e9-8fcb-46ac-aa45-466f105c25d5"><span class="ph cmd">For each process variation
+experiment, create a list of focus and dose combinations to be investigated.</span><div class="itemgroup info StepInfo">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id3d2bfb37-2cf6-433f-b766-4f61702651b3" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e184"><p class="p">Experiment 1 or</p>
+<p class="p">Subwindow 1</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e189"><p class="p">Experiment 2 or</p>
+<p class="p">Subwindow 2</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e194"><p class="p">Experiment 3 or</p>
+<p class="p">Subwindow 3</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e184 "><p class="p">defocus 0   -  dose
+1.0</p>
+<p class="p">defocus 50   -  dose 1.0</p>
+<p class="p">defocus -50   -  dose 1.0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e189 "><p class="p">defocus 0   -  dose
+.80</p>
+<p class="p">defocus 50   -  dose .90</p>
+<p class="p">defocus -50   -  dose .90</p>
+<p class="p">defocus 50   -  dose 1.1</p>
+<p class="p">defocus -50   -  dose 1.1</p>
+<p class="p">defocus 0   -  dose 1.2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e194 "><p class="p">defocus 50   -  dose
+.80</p>
+<p class="p">defocus -50   -  dose .80</p>
+<p class="p">defocus 100   -  dose .90</p>
+<p class="p">defocus -100   -  dose .90</p>
+<p class="p">defocus 100   -  dose 1.0</p>
+<p class="p">defocus -100   -  dose 1.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id4501e105-ae0f-4057-83ee-e5cfe36870c8"><span class="ph cmd">In your lists, replace each
+defocus setting with the name of the optical model created using
+that setting. This is shown in the table in Step <a class="xref fm:NumberOnlyBlack" href="#idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id6a2d9cd6-3565-48cc-b61b-0868ff718a5f">3</a>.</span></li>
+<li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id6a2d9cd6-3565-48cc-b61b-0868ff718a5f"><span class="ph cmd">Create one opticalSpanList
+and one doseSpanList for each experiment. Be sure to keep the orders
+the same in both lists.</span><div class="itemgroup info StepInfo">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id4e8b4e41-81cd-4ec4-83b9-e6999da72f9f" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.032in" /><col style="width:2.032in" /><col style="width:2.112in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e252"><p class="p">Experiment 1 or</p>
+<p class="p">Subwindow 1</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e261"><p class="p">Experiment 2 or</p>
+<p class="p">Subwindow 2</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d113112e266"><p class="p">Experiment 3 or</p>
+<p class="p">Subwindow 3</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e252 "><p class="p"><img class="image fmdpi:96" src="../graphics/lfd_cad04a.png" /></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e261 "><p class="p"><img class="image fmdpi:96" src="../graphics/lfd_cad05a.png" /></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d113112e266 "><p class="p"><img class="image fmdpi:96" src="../graphics/lfd_cad06a.png" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="itemgroup info StepInfo" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__idf4ed2f80-d1cb-4921-9be3-d7a465001eb3"><p class="p">You
+only need to define new experiments in experiment 2 and 3 span lists,
+unless using the LFD::<a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> -independentWindows option.</p>
+<ul class="ul"><li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id72b2bd88-2ecb-4a00-96aa-2fa7ea4c1aef"><p class="p">opticalSpanList1 — {D0
+D50 DM50 D0 D0}</p>
+<p class="p">doseSpanList1 — {1.0 1.0 1.0 .90 1.1}</p>
+</li>
+<li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__idc2e49d54-ce40-474b-9d1e-0895ac77a72d"><p class="p">opticalSpanList2 — {D0
+D0 D50 DM50 D0 D50 DM50 D0 D50 DM50 D0}</p>
+<p class="p">doseSpanList2 — {.80 .90 .90 .90 1.0 1.0 1.0 1.1 1.1 1.1 1.2}</p>
+</li>
+<li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__ide2de92f4-6a93-4773-93a2-2c73abe3a5fe"><p class="p">opticalSpanList3 — {D0
+D50 50 D0 D50 DM50 D100 DM100 D0 D50 DM50 D100 DM100 D0 D50 DM50
+D100 DM100 D0 D50 DM50}</p>
+<p class="p">doseSpanList3 — {.80 .80 .80 .90 .90 .90 .90 .90 1.0 1.0 1.0
+1.0 1.0 1.0 1.1 1.1 1.1 1.1 1.1 1.2 1.2 1.2}</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__idb7aff82e-7064-46f0-a4a1-031e534151d6"><span class="ph cmd">Combine the opticalSpanLists
+to create the Tcl list of lists that is the argument for the ‑opticalSpanList
+keyword. Be sure to enclose the list of lists in braces ({}):</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>-opticalSpanList {{D0 D50 DM50 D0 D0} {D0 D0 D50 DM50 D0 D50 DM50 D0 D50 DM50 D0} {D0 D50 50 D0 D50 DM50 D100 DM100 D0 D50 DM50 D100 DM100 D0 D50 DM50 D100 DM100 D0 D50 DM50}} 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id469de745-3340-49b6-be68-fc4358b89b53"><span class="ph cmd">Combine the doseSpanLists
+to create the list of lists that is the argument for the ‑doseSpanList
+keyword. Be sure to enclose the list of lists in braces ({}):</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>-doseSpanList {{1.0 1.0 1.0 .90 1.1} {.80 .90 .90 .90 1.0 1.0 1.0 1.1 1.1 1.1 1.2} {.80 .80 .80 .90 .90 .90 .90 .90 1.0 1.0 1.0 1.0 1.0 1.0 1.1 1.1 1.1 1.1 1.1 1.2 1.2 1.2} } 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__ide437287e-d7d2-4d26-b4db-ed187646a38e"><span class="ph cmd">If sizeSpanLists are required:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id0691a274-d1cf-4240-9ef0-78850d4e3e4a"><p class="p">Return to step 1, and
+define the bias to be applied for each focus and dose setting in each
+experiment.</p>
+</li>
+<li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id89e99914-3557-4855-839f-1d1c5b6ec2fa"><p class="p">Create one sizeSpanList
+for each experiment.</p>
+</li>
+<li class="li" id="idd594b90c-2f41-4a25-a1d2-dfb8443d56c0__id460ffade-5aa5-4d7b-8862-9ae15d218d18"><p class="p">Combine the sizeSpanLists
+to create the list of lists that is the argument for the ‑sizeSpanList
+keyword. Be sure to enclose the list of lists in braces ({}):</p>
+<pre class="pre codeblock leveled"><code>-sizeSpanList {{0.001 0.001 0.001 ‑0.002 0.001} {‑0.001 ‑0.002 ‑0.002 ‑0.002 0.001 0.001 0.001 0.001 0.001 0.001 0.002} {‑0.001 ‑0.001 ‑0.001 0.001 0.001 ‑0.002 ‑0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.000 0.000 0.000 0.000 0.002 0.002 0.002}}  </code></pre></li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_WritingRuleFileGeneratingPvBands_ida6897972.html" title="Several steps are required for writing the rule file to generate PV-Bands.">Writing the Rule File for Generating PV-Bands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Describing Process Variation Experiments"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DescribingProcessVariationExperiments_idd594b90c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

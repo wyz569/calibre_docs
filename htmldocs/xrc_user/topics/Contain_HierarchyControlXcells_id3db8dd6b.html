@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Hierarchy Control with Xcells" />
+<meta name="abstract" content="When performing hierarchical extraction, you define your design’s hierarchy for Calibre xRC by identifying the lower-level cells in the design hierarchy." />
+<meta name="description" content="When performing hierarchical extraction, you define your design’s hierarchy for Calibre xRC by identifying the lower-level cells in the design hierarchy." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id3db8dd6b-ac75-4e6e-a66c-b1f4a9198ecf" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Hierarchy Control with Xcells</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Hierarchy Control with Xcells" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id3db8dd6b-ac75-4e6e-a66c-b1f4a9198ecf">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Hierarchy Control with Xcells</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">When
+performing hierarchical extraction, you define your design’s hierarchy
+for Calibre xRC by identifying the lower-level cells in the design hierarchy.</span>
+</div>
+<p class="p">You define this hierarchy by
+creating a cell correspondence list that matches source and layout
+names. This cell correspondence list, also known as an hcell list,
+is input into the Calibre nmLVS‑H tool using the “‑hcell” switch.
+An xcell list is derived from the hcell list; the xcell list can
+only contain cells that were named in the hcell list. The xcell
+list is specified as part of the Calibre xRC invocation.</p>
+<p class="p">Xcells may also be specified in your
+rule file using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Xcell', 'svrf_ur'); return false;">PEX Xcell</a> statement.
+You may use both methods as long as the xcell definitions in different
+locations are not in conflict. If a conflict is detected that cannot
+be resolved, then extraction stops with an error message. Two xcell
+flags or options will cause a conflict if they cannot be simultaneously applied
+to one xcell. </p>
+<p class="p">Conflicts between xcell specifications
+made in the SVRF rule file and the xcell list file can be resolved
+with the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Xcell Precedence', 'svrf_ur'); return false;">PEX Xcell Precedence </a>statement. This statement allows you to control
+which file takes precedence if conflicting xcell definitions are
+encountered between files. If a conflict is detected, then a warning
+will be issued indicating the name of the affected cell and the
+xcell options that will be applied. If precedence has not been set
+and a conflict occurs, then extraction stops with an error. If conflicting
+xcell definitions are found within the same file, extraction will
+always stop with an error.</p>
+<p class="p">If all xcell specifications are made
+in your SVRF rule file, then the -xcell command line option for
+the PDB step is not required.</p>
+<p class="p">An xcell list is an ASCII file you create<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>. The cells listed in the xcell list define your design’s
+hierarchy and designate the cells the extraction will preserve.
+Cells not in the xcell list are flattened into the top circuit.</p>
+<p class="p">During Parasitic Database
+(PDB) creation, Calibre xRC caches a copy of the xcell list you
+input into the tool, even if the xcell list is empty. If you supply
+an empty xcell list, or if none of the cells in the provided xcell
+list are found in the layout, Calibre xRC issues the following warning
+message at the conclusion of the PDB stage:</p>
+<pre class="pre codeblock"><code>WARNING: Could not match any layout cell names against the XCELL file: 
+      <span class="keyword ParameterName OptionalReplaceable">xcell_file_name</span>
+</code></pre><p class="p">An empty xcell list effectively produces
+a transistor-level (flat) PDB and, consequently, a flat netlist
+or report.</p>
+<p class="p"> </p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Concept_CalibreNmlvshCalibreXrcCellListCompatibility_id0b49125e.html" title="When performing source name extraction, you must provide Calibre nmLVS‑H with an hcell list that includes the cells you will use as xcells with Calibre xRC. ">Calibre nmLVS‑H and Calibre xRC Cell List Compatibility</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_XcellListFormat_ide3fa103b.html" title="An xcell list can have either of two formats, hcell or xcell. ">Xcell List Format</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_DiscoveringLayoutPathsInContextCells_id9cb32949.html" title="This procedure describes how to specify a valid layout path or “parent_id/cell_id” for -C cells in the xcell file.">Discovering Layout Paths for In-Context Cells</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_WildcardsInXcellList_id2ffa5cde.html" title="You can use an asterisk (*) as a wildcard in the xcell list to ease the task of creating an xcell file. ">Wildcards in Xcell List</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_TipsChoosingXcellsFullHierarchicalExtraction_id812fe29e.html" title="For most GDS-based extractions, you can shorten extraction time by using only a subset of the LVS hcells as xRC xcells. The cells you specify affect performance and accuracy.">Tips For Choosing Xcells for Full Hierarchical Extraction</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_HandlingInput_idf173adaf.html" title="Basic extraction processes can be modified to handle different types of input.">Handling Input</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  As of version 2007.3, when the input is LEF/DEF
+format the hcell and xcell list are automatically created and used.
+You may customize the generated list but are not required to create
+it. </div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Hierarchy Control with Xcells"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_HierarchyControlXcells_id3db8dd6b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

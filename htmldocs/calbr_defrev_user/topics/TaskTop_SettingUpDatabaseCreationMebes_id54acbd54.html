@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Setting Up Database Creation for MEBES" />
+<meta name="abstract" content="For GDSII and OASIS files, the creation of a database is done locally on the machine where Calibre DefectReview was launched. For MEBES.JOB and MEBES files, database creation is done remotely on a Linux machine." />
+<meta name="description" content="For GDSII and OASIS files, the creation of a database is done locally on the machine where Calibre DefectReview was launched. For MEBES.JOB and MEBES files, database creation is done remotely on a Linux machine." />
+<meta name="prodname" content="Calibre DefectReview User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_defrev_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DefectReview™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="none" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id54acbd54-5f85-4146-950f-c5b080f53bf3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Setting Up Database Creation for MEBES</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Setting Up Database Creation for MEBES" />
+<meta name="attributes" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id54acbd54-5f85-4146-950f-c5b080f53bf3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Setting Up Database Creation for MEBES</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">For GDSII and
+OASIS files, the creation of a database is done locally on the machine
+where Calibre DefectReview was launched. For MEBES.JOB and MEBES
+files, database creation is done remotely on a Linux machine.</p>
+<p class="p">For
+this procedure, an example is used for illustration purposes. This
+example uses the following:</p>
+<ul class="ul"><li class="li" id="idcaee94e6-e17d-4d46-98a8-b5721a29fb73"><p class="p">On the Linux machine, the MEBES job
+deck file is located on <span class="keyword ParameterName OptionalReplaceable">/g/repository/data/ mebes_data.jb.</span></p>
+</li>
+<li class="li" id="id0b9012dc-9aac-42a9-86bf-bc0d790fadf1"><p class="p">The <span class="keyword ParameterName OptionalReplaceable">mebes_data.jb </span>file
+is accessible from a Windows machine using the path <span class="keyword ParameterName OptionalReplaceable">Z:/repository/data/mebes_data.jb</span>.</p>
+</li>
+<li class="li" id="id04345580-0006-4084-8453-1f89457501fb"><p class="p">The Linux machine IP address is 10.0.0.112.</p>
+</li>
+<li class="li" id="id8c2898df-b34d-45ae-8e6c-e95e4153c68f"><p class="p">The Linux user login name is manab.</p>
+</li>
+<li class="li" id="id5fe88196-64c6-4b8c-b1d3-29f9795f557a"><p class="p">On the Linux machine, the HOME directory
+for manab is <span class="keyword ParameterName OptionalReplaceable">/home/manab</span> and
+this directory is accessible on Windows using the path Y:.</p>
+<p class="p">This type of mapping of Linux drives is
+done using the <span class="keyword ParameterName Required">Map Network Drive</span> options
+in Windows.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id7697e36f-ca2d-4e93-b62c-7e598700e5a9"><span class="ph cmd">Launch a Calibre DefectReview
+session on the Windows machine.</span></li>
+<li class="li step stepexpand" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id16fb928d-d634-42a9-965b-12c813336a2c"><span class="ph cmd">In the Calibre DefectReview
+window, select <span class="ph uicontrol bold">Utilities &gt; Calibration
+Parameter Editor</span>. This invokes the Calibration Parameter
+Editor.</span></li>
+<li class="li step stepexpand" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__ide9da66a8-8b7b-4338-8a5a-142e201aae11"><span class="ph cmd">In Remote Machine Settings
+section, enter the user name and IP address for the Linux machine
+(shown in <a class="xref fm:Figure" href="#id54acbd54-5f85-4146-950f-c5b080f53bf3__id97e8f034-bb85-436a-a211-7a0e6379b41a">Figure 1</a>). For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>User: manab
+IP Address: 10.0.0.112</code></pre><div class="fig fignone" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id97e8f034-bb85-436a-a211-7a0e6379b41a"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Reading Remote Machine
+User Name and IP Address</span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/remote_machine_user.jpg" width="241" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__idd1db4956-bcbe-4e0f-a339-fe03b1b73c63"><span class="ph cmd">Map the Windows network drives
+and Linux paths in the Remote Machine Settings section. This enables
+Calibre DefectReview to convert a Windows path to a Linux path. </span><div class="itemgroup info StepInfo"><p class="p">For example, the following
+mapping information is added for the Z: and Y: drives. </p>
+<ul class="ul"><li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id708175cc-de67-473d-9454-d74af58f321b"><p class="p">Assuming that the Z: drive
+is already mapped to <span class="keyword ParameterName OptionalReplaceable">\\10.0.0.6\g</span> and
+this path is accessible in Linux through <span class="keyword ParameterName OptionalReplaceable">/g/, </span>set
+the Z: drive mapping in Calibre DefectReview as follows:</p>
+<ol class="ol" type="a"><li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id55f13b79-7f21-498c-a6d8-a93f8527cb6f"><p class="p">Select
+the <span class="keyword ParameterName Required">Z:</span> drive
+from Local Drive dropdown list.</p>
+</li>
+<li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__idac89b63e-868d-41c5-bb13-d83e47d4e4ca"><p class="p">Enter
+the Linux path <span class="keyword ParameterName OptionalReplaceable">/g/</span> in
+the Remote Path text box. Calibre DefectReview maps <span class="keyword ParameterName OptionalReplaceable">Z:/repository/data/mebes_data.jb</span> on
+Windows to /<span class="keyword ParameterName OptionalReplaceable">g/repository/data/mebes_data.jb</span> on
+Linux. It only replaces Z: in the Windows path with <span class="keyword ParameterName OptionalReplaceable">/g/</span> on Linux.</p>
+</li>
+<li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id2d52ccc3-d9bb-4d59-975a-00235e378f98"><p class="p">Click <span class="keyword ParameterName Required">Update</span> and
+the mapping information for the Z: drive gets added as shown in <a class="xref fm:Figure" href="#id54acbd54-5f85-4146-950f-c5b080f53bf3__id949fa659-763b-4a73-998a-7500835236a7">Figure 2</a>.</p>
+<div class="fig fignone" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id949fa659-763b-4a73-998a-7500835236a7"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Updating the Mapped
+Local Drive</span><br /><div class="imagecenter"><img class="image imagecenter" height="166" src="../graphics/mapped_local_drive.jpg" width="244" /></div><br /></div>
+</li>
+<li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id5281559c-bc89-4c79-8b23-fc6f8fbd7645"><p class="p">Select
+the <span class="keyword ParameterName Required">Y: </span>drive
+from Local Drive dropdown list.</p>
+</li>
+<li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id57490727-1593-4f85-b54f-43a86ae7b493"><p class="p">Enter
+the path <span class="keyword ParameterName OptionalReplaceable">/home/manab</span> in
+the Remote Path entry field and click <span class="keyword ParameterName Required">Update</span>. <a class="xref fm:Figure" href="#id54acbd54-5f85-4146-950f-c5b080f53bf3__id52833521-6839-4d5d-9512-6db9b2de1701">Figure 3</a> shows information for all connected
+drives.</p>
+<div class="fig fignone" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id52833521-6839-4d5d-9512-6db9b2de1701"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Connected Drives information
+With Remote Path</span><br /><div class="imagecenter"><img class="image imagecenter" height="168" src="../graphics/map_connected_drives.jpg" width="245" /></div><br /></div>
+<p class="p">If an incorrect mapping is
+entered, double-click a mapped item and a dialog box appears, asking
+if you want to delete the mapping.</p>
+</li>
+<li class="li" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__idd4b52fe8-f8f5-406e-bc43-522226418fef"><p class="p">Specify
+the shared folder (directory) to be used. This folder is used by
+the Linux process of Calibre DefectReview to create temporary files.
+The directory must be writable by both the Windows and Linux processes
+of Calibre DefectReview. You can enter the folder either manually
+or click <span class="keyword ParameterName Required">Browse</span> to
+select the folder.</p>
+</li>
+</ol>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id1a133622-b9f8-4c55-b479-f730d4c946db"><span class="ph cmd">Click <span class="ph uicontrol bold">Save and Apply</span> to save these
+settings.</span><div class="itemgroup info StepInfo"><div class="note note"><span class="notetitle">Note:</span> <p class="p">This stage is typically done
+only once.</p>
+</div>
+<div class="fig fignone" id="id54acbd54-5f85-4146-950f-c5b080f53bf3__id00e99057-fa2b-4719-868f-641d4450ed33"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Save and Apply in
+the Calibration Parameter Editor</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:150" src="../graphics/save_and_apply.jpg" /></div><br /></div>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DataPreparation_id98b43db1.html" title="In this stage, you use Calibre DefectReview to enter parameters for the input layout images to generate databases.">Data Preparation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_defrev_user"
+                DocTitle = "Calibre® DefectReview™ User’s Manual"
+                PageTitle = "Setting Up Database Creation for MEBES"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_SettingUpDatabaseCreationMebes_id54acbd54.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DefectReview™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

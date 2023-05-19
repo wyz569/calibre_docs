@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Decomposing Stitched Shapes" />
+<meta name="abstract" content="Stitching shapes is performed by Calibre nmDPC. Valid stitch areas can be determined manually or automatically using RET DPSTITCH. RET DPSTITCH calls the LITHO FILE statement and outputs a stitch candidates layer. RET NMDPC then inputs the stitch candidates layer to produce final stitches." />
+<meta name="description" content="Stitching shapes is performed by Calibre nmDPC. Valid stitch areas can be determined manually or automatically using RET DPSTITCH. RET DPSTITCH calls the LITHO FILE statement and outputs a stitch candidates layer. RET NMDPC then inputs the stitch candidates layer to produce final stitches." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idbfe66dc7-6afc-404b-9726-f559117daac9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Decomposing Stitched Shapes</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Decomposing Stitched Shapes" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idbfe66dc7-6afc-404b-9726-f559117daac9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Decomposing Stitched
+Shapes</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Stitching shapes
+is performed by Calibre nmDPC. Valid stitch areas can be determined
+manually or automatically using RET DPSTITCH. RET DPSTITCH calls
+the LITHO FILE statement and outputs a stitch candidates layer.
+RET NMDPC then inputs the stitch candidates layer to produce final
+stitches.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id7a4a791c-ddc0-4bbb-83c2-24b4f3d4ed97"><p class="p">Layout
+in GDS or OASIS format</p>
+</li>
+<li class="li" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id4269ef7f-2076-42b2-8f0b-a6fa3892487c"><p class="p">Minimum
+spacing rules between shapes</p>
+</li>
+<li class="li" id="idbfe66dc7-6afc-404b-9726-f559117daac9__idf42d8055-ba93-4584-902c-855362586b01"><p class="p">SVRF
+file defining input, deriving any necessary layers, and naming at least
+one results database (RDB)</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id6d3b0823-dc50-4035-b605-dca5981f9bc7"><span class="ph cmd">If you want to embed the setup
+files in the SVRF file, add two LITHO FILE statements to the SVRF
+file. RET NMDPC and RET DPSTITCH require separate setup files.</span><div class="itemgroup info StepInfo"><p class="p">Where commands are identified
+for inclusion in the setup file, add them between the opening and
+closing brackets, each on their own line. Each LITHO FILE statement
+in an SVRF file must have a unique name.</p>
+</div></li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id63dd6534-5ce8-4749-ad86-dad4f087ed47"><span class="ph cmd">If the layout includes precoloring,
+manual stitches, or keepout markers, add the necessary SVRF commands.
+For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>LAYER M1 200 //Metal1 Layer
+LAYER M1_FILL 300 //Fill Layer
+LAYER M1_0 1000 //Metal1 Pre-Color0
+LAYER M1_1 1001 //Metal1 Pre-Color1
+LAYER M1USERSTITCH 1002 //Metal1 User Stitches
+LAYER M1USERSTITCHKEEPOUT 1003 //Metal1 User Stitch Keepout
+...
+drawn = DFM COPY M1 M1_FILL //collects all shapes to be decomposed 
+mask0_precolor = M1_0 NOT M1_1 
+mask1_precolor = M1_1 NOT M1_0 
+user_stitches = (M1_0 AND M1_1) OR M1USERSTITCH 
+keepout = DFM COPY M1_0 M1_1 M1USERSTITCHKEEPOUT</code></pre></div></li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__ide2661853-3146-4b3a-a44b-80d4a1aab412"><span class="ph cmd">In the setup file for RET DPSTITCH, define suitable
+stitch conditions.</span><div class="itemgroup info StepInfo"><p class="p">Some common methods of implementation are shown in
+the examples. For a complete list, see “<a class="xref fm:HeadingAndPage" href="Contain_RetDpstitchOptionsBlockCommands_idf20c2c0e.html#idf20c2c0e-3d73-4f69-8f4c-39906aecf89d__Contain_RetDpstitchOptionsBlockCommands_idf20c2c0e.xml#idf20c2c0e-3d73-4f69-8f4c-39906aecf89d" title="The setlayer dpstitch options block contains keywords that classify edges and specify dimensional constraints. The options block is referenced by the OPTION argument of a setlayer dpstitch command.">setlayer dpstitch options Commands</a>”.</p>
+</div></li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__ida8a68c9f-bb1a-4aeb-8794-9c1e7084a4f2"><span class="ph cmd">Output the stitch candidate
+layer and possibly others from the RET DPSTITCH setup file.</span><ol type="a" class="ol substeps"><li class="li substep" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id8d2e1bc6-be4c-49ec-a3b3-c12f2bc3f9ed"><span class="ph cmd">In the options block, add
+-outLayer arguments to <a class="xref fm:HeadingOnly" href="Command_Dpstitchcandidates_id8ac2555f.html#id8ac2555f-e5ae-40d0-a5f6-a51e1febd6da__Command_Dpstitchcandidates_id8ac2555f.xml#id8ac2555f-e5ae-40d0-a5f6-a51e1febd6da" title="Generates shapes representing regions where overlapping decomposed layers may be joined.">dpStitchCandidates</a> for each layer you want available.</span><div class="itemgroup info SubStepInfo"><p class="p">The
+-outLayer stitchCandidates argument outputs the stitch candidate
+layer. The ‑outLayer stitchCandidates argument must be present and
+be the first ‑outLayer argument in the dpStitchCandidates command. When
+developing the decomposition rules, you may also want to see the
+separators (‑outLayer separators) or face classes (‑outLayer &lt;class_name&gt;).</p>
+</div></li>
+<li class="li substep" id="idbfe66dc7-6afc-404b-9726-f559117daac9__ideac3d535-ada4-4689-a18c-52457b4eb01a"><span class="ph cmd">Outside the options block
+but still within the LITHO FILE statement, add <a class="xref fm:HeadingOnly" href="Command_SetlayerDpstitch_id7a1d415a.html#id7a1d415a-59ed-4db5-baff-b074db7ea96c__Command_SetlayerDpstitch_id7a1d415a.xml#id7a1d415a-59ed-4db5-baff-b074db7ea96c" title="Generates layers for dpStitchCandidates. Used for RET DPSTITCH only.">setlayer dpstitch</a> commands to make the dpStitchCandidates
+layers available.</span><div class="itemgroup info SubStepInfo"><p class="p">The order of layers specified in the options block
+and the setlayer dpstitch command must match. The names can be different,
+but their order determines which layer data is passed from the options
+block to the setlayer dpstitch command. These statements take the
+form:</p>
+</div><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>setlayer &lt;name&gt; = dpstitch &lt;drawn&gt; &lt;other_layers&gt; \
+	OPTIONS opt \ 
+	MAP &lt;outLayer_value&gt;</code></pre></div></li>
+<li class="li substep" id="idbfe66dc7-6afc-404b-9726-f559117daac9__idd52d1bf9-30c1-4149-96b3-93286ef994c3"><span class="ph cmd">In the SVRF file, add derived
+layer statements to make the layers available to other SVRF calls. </span><div class="itemgroup info SubStepInfo"><p class="p">These derived layer statements also invoke Calibre dpStitch.</p>
+</div><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>&lt;layer&gt; = <a class="xref fm:HeadingOnly" href="Command_RetDpstitch_ida3b4a7b5.html#ida3b4a7b5-6866-4b87-8702-bee6cf68a2a5__Command_RetDpstitch_ida3b4a7b5.xml#ida3b4a7b5-6866-4b87-8702-bee6cf68a2a5" title="Calls a LITHO FILE statement containing a setlayer dpstitch command that generates stitch candidate shapes. Used with RET NMDPC and DFM DP.">RET DPSTITCH</a> &lt;drawn&gt; &lt;other_layers&gt;
+	FILE &lt;setup_file&gt; 
+	MAP &lt;name&gt;</code></pre><p class="p">The &lt;name&gt; for MAP must
+match one of the setlayer &lt;name&gt; values. This determines which
+layer is being passed. Add a derived layer statement for each output
+layer you want to view or use in the RET NMDPC operation.</p>
+</div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id67f5b030-2389-45ab-ae62-71a1c974e01a"><span class="ph cmd">For the layers you want to
+view, add a rule check in the SVRF file to write them to a results
+database:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>dpSC {COPY candidates} DRC CHECK MAP dpStitchCan 50</code></pre></div></li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id2196f65b-526e-404a-8c61-efddf2e7dcb6"><span class="ph cmd">Add the calls to the SVRF
+file with <a class="xref fm:HeadingOnly" href="Command_RetNmdpc_idb33f96b7.html#idb33f96b7-80a8-4b67-bdc4-0d4ce15fc91a__Command_RetNmdpc_idb33f96b7.xml#idb33f96b7-80a8-4b67-bdc4-0d4ce15fc91a" title="Invokes Calibre nmDPC and splits the target layer into two masks.">RET NMDPC</a>.</span><div class="itemgroup info StepInfo"><p class="p">This SVRF operation calls the setup file and outputs
+various types of layers. The output can be captured with either
+rule checks or derived layer statements, which you then save to
+the RDB. When a drawn layer cannot be separated into two masks satisfying
+the conditions, a conflict layer is created. The conflict layer
+contains only the shapes that cannot be resolved.</p>
+</div><ol type="a" class="ol substeps"><li class="li substep" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id7b8e4d99-343d-4441-9ff2-f26d5d252ddd"><span class="ph cmd">(Optional)
+For easier resolution, also output the ring and warning layers,
+or the loop layer.</span><div class="itemgroup info SubStepInfo"><p class="p">The different layers are indicated by the MAP keyword
+in the RET NMDPC statement.</p>
+<pre class="pre codeblock leveled"><code>conflict = RET NMDPC sCandidates drawn FILE setup.in MAP conflict 
+mask0    = RET NMDPC sCandidates drawn FILE setup.in MAP mask0 
+mask1    = RET NMDPC sCandidates drawn FILE setup.in MAP mask1 
+errors   = RET NMDPC sCandidates drawn FILE setup.in MAP ring 
+at_risk  = RET NMDPC sCandidates drawn FILE setup.in MAP warning</code></pre><p class="p">Conflicts
+caused by critical anchor layers are output separately, using the
+anchor_conflict and anchor_path MAP keywords.</p>
+</div></li>
+<li class="li substep" id="idbfe66dc7-6afc-404b-9726-f559117daac9__id947f47e4-0a3a-4814-963f-a06427e27930"><span class="ph cmd">When
+using derived layers, write the layers to the RDB with DRC CHECK
+MAP:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>conflict {COPY conflict} DRC CHECK MAP conflict 5  
+mask0    {COPY mask0}    DRC CHECK MAP mask0 10  
+mask1    {COPY mask1}    DRC CHECK MAP mask1 11 
+errors   {COPY errors}   DRC CHECK MAP errors 20 
+at_risk  {COPY at_risk}  DRC CHECK MAP at_risk 21</code></pre></div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="idbfe66dc7-6afc-404b-9726-f559117daac9__idea6c1cf6-20e5-4b10-b578-b3e99ec04d19"><span class="ph cmd">Run DRC checks to validate
+output.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">After the run completes, the results
+database contains the layers you have written, although either the
+mask layers or the conflict layers are empty.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SetUpRunCalibreMultiPatterning_id947e0f3f.html" title="You use Calibre Multi-Patterning to perform mask decomposition. Because Calibre Multi-Patterning tools run in batch mode, you configure all settings in a LITHO FILE statement, which is called from an SVRF file.">Set Up and Run Calibre Multi-Patterning</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_LithoFile_idb9db0eb3.html" title="Specifies pattern decomposition commands. Used only with RET NMDPC, RET TP, and RET QP.">LITHO FILE</a></div>
+<div><a class="link" href="../topics/Command_RetDpstitch_ida3b4a7b5.html" title="Calls a LITHO FILE statement containing a setlayer dpstitch command that generates stitch candidate shapes. Used with RET NMDPC and DFM DP.">RET DPSTITCH</a></div>
+<div><a class="link" href="../topics/Command_RetNmdpc_idb33f96b7.html" title="Invokes Calibre nmDPC and splits the target layer into two masks.">RET NMDPC</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "Decomposing Stitched Shapes"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DecomposingStitchedShapes_idbfe66dc7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

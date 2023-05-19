@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Iterator Concepts" />
+<meta name="abstract" content="The iterator control and data access commands rely on iterators. An iterator is a Tcl construct that provides access to data in the input netlist. Essentially, an iterator is an opaque array or list of references to design objects. You can traverse all of the elements in the design hierarchy using iterators. The string representation of an iterator is not meaningful and can change from release to release." />
+<meta name="description" content="The iterator control and data access commands rely on iterators. An iterator is a Tcl construct that provides access to data in the input netlist. Essentially, an iterator is an opaque array or list of references to design objects. You can traverse all of the elements in the design hierarchy using iterators. The string representation of an iterator is not meaningful and can change from release to release." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id51cc0a59-3db0-4f03-81e1-cd179d70be3a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Iterator Concepts</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Iterator Concepts" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id51cc0a59-3db0-4f03-81e1-cd179d70be3a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Iterator Concepts</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The iterator
+control and data access commands rely on <dfn class="term italic">iterators</dfn>.
+An iterator is a Tcl construct that provides access to data in the input
+netlist. Essentially, an iterator is an opaque array or list of
+references to design objects. You can traverse all of the elements
+in the design hierarchy using iterators. The string representation
+of an iterator is not meaningful and can change from release to
+release. </span>
+</div>
+<p class="p">Objects
+referenced by iterators are accessed sequentially. When an iterator
+is stepped forward and reaches the end of its list, its string representation
+is set to the empty string. It is possible that an iterator is empty
+upon creation because a sought-for object does not exist. In this
+case, the iterator string representation is set to the empty string.</p>
+<p class="p">Iterators are passed internally by reference
+within the tool. This means that if an iterator is incremented (stepped
+forward), it is incremented everywhere the iterator is referenced,
+not just in the local scope where a reference may appear. In order
+to create a copy of an iterator that is not referenced to the original,
+use <a class="xref fm:HeadingOnly" href="Command_Percclone_idffd576c2.html#idffd576c2-1382-424e-85f1-429d7e2b7c81__Command_Percclone_idffd576c2.xml#idffd576c2-1382-424e-85f1-429d7e2b7c81" title="Creates an iterator that is a copy of another.">perc::clone</a>.</p>
+<p class="p">Iterator references to objects are managed internally by the
+tool to ensure proper behavior when traversing hierarchy (See “<a class="xref fm:HeadingAndPage" href="Concept_HierarchyTraversalOpaquecell_id81e7e878.html#id81e7e878-7e09-46c9-acf7-1ddda1873aeb__Concept_HierarchyTraversalOpaquecell_id81e7e878.xml#id81e7e878-7e09-46c9-acf7-1ddda1873aeb" title="The high-level commands like perc::check_device, perc::check_net, perc::check_device_and_net check, and perc::check_data check objects cell-by-cell by default. When nets are processed in the context of these commands, they automatically perform net traversal across cell boundaries when needed in the context of the lowest cell in the hierarchy that completely contains a net.">Hierarchy Traversal and -opaqueCell</a>” for details).
+Proper behavior cannot be guaranteed if an iterator is stored in
+a global variable and subsequently accessed from arbitrary hierarchical
+contexts. A <a class="xref" href="Concept_CollectionsAndCollectionIterators_id866db00e.html#id866db00e-656e-419c-a896-5a75bd7c1d9f__id390d2a25-2197-4a32-9c75-7210466b15b9">hash collection</a> is
+the recommended structure for storing device instance or net iterators instead
+of a global variable, as a collection manages hierarchical traversal
+automatically.</p>
+<p class="p">These are the supported iterator types:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id51cc0a59-3db0-4f03-81e1-cd179d70be3a__id8f9e54fe-85c6-4814-8259-dfc0c275aae4" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre PERC Iterator Types</span></caption><colgroup><col style="width:1.323in" /><col style="width:2.263in" /><col style="width:2.263in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d50596e183"><p class="p">Iterator Type</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d50596e186"><p class="p">Referenced Element</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d50596e189"><p class="p">Example Command</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Cell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Cell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetCells_id51a08d17.html#id51a08d17-5eeb-40f2-bc72-37cfb68b71ec__Command_PercgetCells_id51a08d17.xml#id51a08d17-5eeb-40f2-bc72-37cfb68b71ec" title="Creates a cell iterator pointing to the first cell in the list of all hcells in the design hierarchy.">perc::get_cells</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Collection</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Instance iterator, net iterator, or name
+string</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p">-collection option used with <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> or <a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> or ‑begin
+option used with <a class="xref fm:HeadingOnly" href="Command_Perccollection_id01127e08.html#id01127e08-7773-4f86-9c93-f48a26bfd673__Command_Perccollection_id01127e08.xml#id01127e08-7773-4f86-9c93-f48a26bfd673" title="Returns data from a collection iterator. Creates a hash collection, adds data to it, returns data from it, and can delete it. Returns a collection iterator from a hash collection.">perc::collection</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Device stack</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Device instance</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Percget_stack_groups_id3119b5b8.html#id3119b5b8-d2d2-11e6-82ce-005056b32f49__Command_Percget_stack_groups_id3119b5b8.xml#id3119b5b8-d2d2-11e6-82ce-005056b32f49" title="Returns a device stack iterator of instances of a particular device type, on a particular net of a given path type, and in a particular cell placement.">perc::get_stack_groups</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Placement</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Cell placement representative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetPlacements_idbb97f715.html#idbb97f715-1a39-433c-af27-25ad6d2679ef__Command_PercgetPlacements_idbb97f715.xml#idbb97f715-1a39-433c-af27-25ad6d2679ef" title="Creates a placement representative iterator.">perc::get_placements</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Instance </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Device or cell instance</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Net</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Net</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Pin</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Pin</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetPins_idcfb94cf6.html#idcfb94cf6-a4dc-4442-ac03-614d308693ed__Command_PercgetPins_idcfb94cf6.xml#idcfb94cf6-a4dc-4442-ac03-614d308693ed" title="Creates a pin iterator.">perc::get_pins</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e183 "><p class="p">Property </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e186 "><p class="p">Property of a device</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50596e189 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PercgetProperties_idc5f1a506.html#idc5f1a506-2f7d-49c7-ab74-b8ac5d62d8c2__Command_PercgetProperties_idc5f1a506.xml#idc5f1a506-2f7d-49c7-ab74-b8ac5d62d8c2" title="Creates a property iterator.">perc::get_properties</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The instance, net, pin, and property iterator
+types can only exist in the context of a cell placement. A collection
+iterator also satisfies this criterion when created using perc::count ‑collection.
+See the section “<a class="xref fm:HeadingAndPage" href="Concept_CellPlacementSignaturesRepresentatives_id015da209.html#id015da209-9330-41f9-b618-69215ce6f044__Concept_CellPlacementSignaturesRepresentatives_id015da209.xml#id015da209-9330-41f9-b618-69215ce6f044" title="When processing each PERC Load statement, the tool initializes the netlist before executing any rule checks selected by the statement. As the last part of the initialization phase, Calibre PERC computes cell placement signatures for every hcell in the design. If the optional initialization Tcl proc is specified, Calibre PERC executes this Tcl proc first before computing placement signatures.">Cell Placement Signatures and Representatives</a>” for a discussion of cell placement
+representatives. </p>
+<p class="p">The data access commands retrieve data from
+the netlist given the proper iterator as an argument. For collection
+iterators, the only command that can retrieve data from them is perc::collection.</p>
+<p class="p">See <a class="xref fm:HeadingOnly" href="Command_Percequal_id6694e74a.html#id6694e74a-ec3f-4390-be3a-cfbbc4310f02__Command_Percequal_id6694e74a.xml#id6694e74a-ec3f-4390-be3a-cfbbc4310f02" title="Returns TRUE if two iterators point to the same element.">perc::equal</a> and <a class="xref fm:HeadingOnly" href="Command_PercisComparableByEqual_idc06d4aa0.html#idc06d4aa0-a03b-411b-b54a-a5fafd9391ac__Command_PercisComparableByEqual_idc06d4aa0.xml#idc06d4aa0-a03b-411b-b54a-a5fafd9391ac" title="Returns TRUE if the input iterators are comparable by perc::equal.">perc::is_comparable_by_equal</a> for details regarding equivalence checking
+for iterators. </p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Do not convert
+iterators to strings, such as using string, concat, or eval Tcl commands
+to operate on an iterator. Doing so can introduce errors when interpreting iterators.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_RuleCheckProceduresCommands_id5cf67804.html" title="A rule check in Calibre PERC is a Tcl procedure called with the check_proc argument of the PERC Load specification statement. Rule checks evaluate various aspects of a design and produce results of those evaluations. Multiple rule check procedures can be specified. The rule check procedure is defined within a TVF Function statement.">Rule Check Procedures and Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Iterator Concepts"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_IteratorConcepts_id51cc0a59.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

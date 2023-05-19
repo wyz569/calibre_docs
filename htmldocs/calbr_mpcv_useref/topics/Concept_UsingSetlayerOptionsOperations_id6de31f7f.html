@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Using Setlayer Options as Operations" />
+<meta name="abstract" content="Calibre MPCverify uses setlayer options (sometimes referred to as setlayer operations, setlayer subcommands, or setlayer commands) to create and derive layers." />
+<meta name="description" content="Calibre MPCverify uses setlayer options (sometimes referred to as setlayer operations, setlayer subcommands, or setlayer commands) to create and derive layers." />
+<meta name="prodname" content="Calibre MPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mpcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® MPCverify User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6de31f7f-0b0e-4ed9-8597-ff6502808196" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using Setlayer Options as Operations</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using Setlayer Options as Operations" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id6de31f7f-0b0e-4ed9-8597-ff6502808196">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using Setlayer Options as Operations</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre MPCverify
+uses setlayer options (sometimes referred to as setlayer operations,
+setlayer subcommands, or setlayer commands) to create and derive
+layers.</span>
+</div>
+<p class="p">All setlayer operations consist
+of a single <span class="keyword ParameterName OptionalReplaceable">case-sensitive</span> line
+that uses the syntax:</p>
+<pre class="pre codeblock leveled"><code>setlayer <span class="ph FontProperty emphasis">output_layer_name</span> = <span class="ph FontProperty emphasis">setlayer_operation</span></code></pre><p class="p">A <span class="ph FontProperty emphasis">setlayer_operation</span> is
+one of the following types: </p>
+<ul class="ul"><li class="li" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id2b1d039a-51e9-4196-a4da-7e9477fab484"><p class="p">Image Operations</p>
+</li>
+<li class="li" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id3c46e17a-5110-45e0-bf7b-e45bb6ec0752"><p class="p">DRC-type Operations</p>
+</li>
+<li class="li" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id29a0549f-31d8-4826-b767-c667f4e9c126"><p class="p">Verification
+Control Operations</p>
+</li>
+</ul>
+<div class="section Subsections"><div class="section Subsection" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id2b395d6f-052c-4472-b8e6-13223bb711fb"><h2 class="title Subheading sectiontitle">Calibre MPCverify-Specific Setlayer Operations</h2><p class="p">The following table lists the setlayer operations utilized specifically
+for Calibre MPCverify.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id3b3931fc-f8eb-4601-b232-4acd853f21b3" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre
+MPCverify Setlayer Operations</span></caption><colgroup><col style="width:2.040in" /><col style="width:4.134in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e175"><p class="p">Operation</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e178"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e175 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_EbeamSimulate_id39548dce.html#id39548dce-f669-4b57-adb7-1336bc7ffa56__Command_EbeamSimulate_id39548dce.xml#id39548dce-f669-4b57-adb7-1336bc7ffa56" title="Simulates E-beam effects on an input layer.">ebeam_simulate</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e178 "><p class="p">Simulates E-beam effects on an input layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e175 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_VebSimulate_id12370a2e.html#id12370a2e-54b3-4fc2-98dd-9207ca1b7c67__Command_VebSimulate_id12370a2e.xml#id12370a2e-54b3-4fc2-98dd-9207ca1b7c67" title="Performs etch bias simulation.">veb_simulate</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e178 "><p class="p">Simulates Variable Etch Bias (VEB) effects
+on an input layer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id1135dda9-540c-48a0-b709-1f9a9ef72bfd"><h2 class="title Subheading sectiontitle">Calibre
+OPCVerify Setlayer Operations Supported by Calibre MPCverify</h2><p class="p">Calibre MPCverify and Calibre OPCverify share the majority of
+their setlayer options. These are documented in the <a class="xref LinkItalic" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_opcv_useref'); return false;">Calibre OPCverify User’s and Reference Manual </a></p>
+<p class="p">An image operation performs optical and resist
+simulation using geometry on visible layers defined by the layer
+command, subject to the command options. Image operations are described in
+the <a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'image', 'calbr_opcv_useref'); return false;">image</a> syntax page
+described in the <span class="keyword ParameterName OptionalReplaceable">Calibre OPCverify User’s and Reference Manual</span>.</p>
+<p class="p">The DRC-type operations are implemented for use with Calibre
+OPCverify setlayer commands. They must be entered in case-sensitive
+text.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id93f938b9-36b5-4772-8870-c3c19664895c" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Calibre OPCverify Setlayer Ops in Calibre
+MPCverify (DRC-type) </span></caption><colgroup><col style="width:1.728in" /><col style="width:4.121in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e233"><p class="p">Operation</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e236"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'and', 'calbr_opcv_useref'); return false;">and</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs multilayer AND
+on inputs. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'copy', 'calbr_opcv_useref'); return false;">copy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Copies the layer to a
+new layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'enclosure', 'calbr_opcv_useref'); return false;">enclosure</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs an enclosure check within the specified
+region.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'external', 'calbr_opcv_useref'); return false;">external</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs an external
+check within the specified region.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'internal', 'calbr_opcv_useref'); return false;">internal</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs an internal
+check within the specified region.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'not', 'calbr_opcv_useref'); return false;">not</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs a multilayer
+NOT of all inputs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'or', 'calbr_opcv_useref'); return false;">or</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs a multilayer
+OR of all inputs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'size', 'calbr_opcv_useref'); return false;">size</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs the sizing operation
+on the input layer, expanding or shrinking polygons on the input
+layer by the specified amount.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'width', 'calbr_opcv_useref'); return false;">width</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs a width check
+on the specified region. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e233 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'xor', 'calbr_opcv_useref'); return false;">xor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e236 "><p class="p">Performs a multilayer
+XOR of all inputs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The customized verification control operations are implemented
+for use with setlayer commands. They must be entered in case-sensitive
+text.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6de31f7f-0b0e-4ed9-8597-ff6502808196__id6656d6ee-55e2-4097-a437-baaf545e5dbf" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Calibre OPCverify Setlayer Ops in Calibre
+MPCverify (Verification Control) </span></caption><colgroup><col style="width:1.728in" /><col style="width:4.121in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e340"><p class="p">Operation</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4290e343"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'annotate', 'calbr_opcv_useref'); return false;">annotate</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Annotates an input layer
+with shapes matching the selection criteria.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'area_compute', 'calbr_opcv_useref'); return false;">area_compute</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for shapes that
+match a certain area constraint. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'area_overlay', 'calbr_opcv_useref'); return false;">area_overlay</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Performs a contact /
+via alignment check.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'area_ratio', 'calbr_opcv_useref'); return false;">area_ratio</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for shapes that
+meet a certain area ratio constraint.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'bandcheck', 'calbr_opcv_useref'); return false;">bandcheck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks CD accuracy for
+inner and outer tolerance band violations. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'bridge', 'calbr_opcv_useref'); return false;">bridge</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for bridging problems.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'center_shift', 'calbr_opcv_useref'); return false;">center_shift</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Measures projections
+of contacts and vias from a target.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'circularity_compute', 'calbr_opcv_useref'); return false;">circularity_compute</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Measures the circularity
+of simulated contours.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'contour_diff', 'calbr_opcv_useref'); return false;">contour_diff</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Calculates the error
+factor between two contours, similar to meefcheck.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'empty_layer', 'calbr_opcv_useref'); return false;">empty_layer</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Creates an empty layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'OpcVerify Function Reference99end_cap', 'calbr_opcv_useref'); return false;">end_cap</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks endcap coverage.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'filter_generate', 'calbr_opcv_useref'); return false;">filter_generate</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Generates a filter layer
+for the measure_cd command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'gate_stats', 'calbr_opcv_useref'); return false;">gate_stats</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Computes statistics for
+a gate area. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'gauges', 'calbr_opcv_useref'); return false;">gauges</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Adds properties to an
+output layer based on user-defined gauges.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'holes', 'calbr_opcv_useref'); return false;">holes</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Returns holes inside
+layer shapes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'identify_corner', 'calbr_opcv_useref'); return false;">identify_corner</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Identifies line fragments
+of edges near corners.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_IdentifyEdge_id7e665269.html#id7e665269-914a-48b6-b43d-9ca3ff30c0a2__Command_IdentifyEdge_id7e665269.xml#id7e665269-914a-48b6-b43d-9ca3ff30c0a2" title="Identifies line ends and jogs.">identify_edge</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Identifies line ends
+and jogs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'imax_check', 'calbr_opcv_useref'); return false;">imax_check</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Analyzes the aerial image
+intensity for an image contour against an Imax constraint.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'imin_check', 'calbr_opcv_useref'); return false;">imin_check</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Analyzes the aerial image
+intensity for an image contour against an Imin constraint.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'interact', 'calbr_opcv_useref'); return false;">interact</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for shapes that
+interact with each other.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'measure_cd', 'calbr_opcv_useref'); return false;">measure_cd</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks width and space
+CD accuracy.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'measure_cdv', 'calbr_opcv_useref'); return false;">measure_cdv</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks CD between two
+contours versus a target CD.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'measure_cross_section', 'calbr_opcv_useref'); return false;">measure_cross_section</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks the cross section
+of a contour versus a target shape.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'measure_distance', 'calbr_opcv_useref'); return false;">measure_distance</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks the distance between
+an edge and the nearest edge. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'measure_epe', 'calbr_opcv_useref'); return false;">measure_epe</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks if a layer’s EPE
+fails a specified constraint.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'nilscheck', 'calbr_opcv_useref'); return false;">nilscheck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks the Normalized
+Image Log-Slope (NILS) for two or more contours for a specified
+range constraint. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'not_printing', 'calbr_opcv_useref'); return false;">not_printing</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for features that
+do not print.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'notchfill', 'calbr_opcv_useref'); return false;">notchfill</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Fills in notches on polygons.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'pinch', 'calbr_opcv_useref'); return false;">pinch</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for pinching problems.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'pinch_tolerance', 'calbr_opcv_useref'); return false;">pinch_tolerance</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks for inner tolerance
+band violations. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'polygon_extent', 'calbr_opcv_useref'); return false;">polygon_extent</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks the area of polygons
+in x and y dimensions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'pvband', 'calbr_opcv_useref'); return false;">pvband</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Generates a process variation
+band from multiple contours.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'pwcheck', 'calbr_opcv_useref'); return false;">pwcheck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Checks the common process
+window versus a process window.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'shadow_bias', 'calbr_opcv_useref'); return false;">shadow_bias</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Shifts a layer according
+to a shadow bias model.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'shift', 'calbr_opcv_useref'); return false;">shift</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Shifts the polygons on
+a layer a distance in x and y.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'show_annotation', 'calbr_opcv_useref'); return false;">show_annotation</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Writes annotation markers
+to an output layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e340 "><p class="p"><a class="xref Link" href="../../calbr_opcv_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'window', 'calbr_opcv_useref'); return false;">window</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4290e343 "><p class="p">Outputs context clips
+based on an error layer.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_SetlayerOperationsReference_id39f5d654.html" title="All commands that create or modify layers are known as setlayer operations.">Setlayer Operations Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mpcv_useref"
+                DocTitle = "Calibre® MPCverify User’s and Reference Manual"
+                PageTitle = "Using Setlayer Options as Operations"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_UsingSetlayerOptionsOperations_id6de31f7f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® MPCverify User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

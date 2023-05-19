@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calibre mbSRAF Recipe Development" />
+<meta name="abstract" content="Application of best practices aid in recipe development." />
+<meta name="description" content="Application of best practices aid in recipe development." />
+<meta name="prodname" content="Calibre® nmSRAF™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmsraf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 23, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmSRAF™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id25ad6488-f742-4ff1-9cdf-578236262f2d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre mbSRAF Recipe Development</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre mbSRAF Recipe Development" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id25ad6488-f742-4ff1-9cdf-578236262f2d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre mbSRAF
+Recipe Development</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Application
+of best practices aid in recipe development.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idce1cc4e8-672c-4e35-a0a3-2f5df1cdadba"><h2 class="title Subheading sectiontitle">Role
+of Input Layers During Gradient Calculation</h2><p class="p">These input layers affect gradient map generation for mbsraf:</p>
+<ul class="ul"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id7ed49b26-a51b-4c37-b6e9-36b5902e049f"><p class="p">correctionlayer</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idcd9a3422-26f3-4c8b-ae39-5ad452722ff7"><p class="p">offsetlayer</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id4e5dc233-4f0b-4fa0-9103-524c7acef658"><p class="p">sblayer</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id4079e449-c76d-4809-9740-a1c01182e4ea"><p class="p">targetlayer</p>
+</li>
+</ul>
+<p class="p">Although taglayer and prioritylayer are input layers, their role
+is limited to SRAF candidate selection, after seed pixel generation
+is complete, using the computed gradient. Therefore, these input
+layers are not shown in this list. Various input layers specified
+to mbSRAF can be classified as one of three types:</p>
+<dl class="dl"><dt class="dt dlterm">Gradient</dt>
+<dd class="dd"><p class="p">This layer is used for determining pixel evaluation points
+for computing the gradient. Currently, only the targetlayer is used
+for deciding pixel evaluation points for computing the gradient.</p>
+</dd>
+<dt class="dt dlterm">Light</dt>
+<dd class="dd"><p class="p">This layer is used to inform where the light passes through.
+The gradient computer uses this layer to compute the gradient at each
+pixel evaluation point. It is not used during seed pixel generation,
+candidate generation, or MRC checks. If the correctionlayer and
+sblayer are defined, they are used to determine where light passes
+through the mask. If not, the targetlayer is used.</p>
+</dd>
+<dt class="dt dlterm">MRC</dt>
+<dd class="dd"><p class="p">This layer is used to perform enforcement of MRC checks and
+define keepout areas. The targetlayer, sblayer, and offsetlayer
+are all used during the MRC cleanup process. The correctionlayer
+is not used during MRC checking. Its role is limited only to the
+gradient calculation.</p>
+</dd>
+</dl>
+<p class="p">The target layer is a required layer because the shapes provided
+on the target layer define the evaluation points for the gradient
+calculation. If a portion of the original target layer is being processed
+in mbSRAF (typically using mbSRAF as SRAF fill after cnsraf rules-based insertion),
+the selected region of the target layer must be large enough to
+provide an empiric topological environment for any subset of target
+shapes in order for the gradient to be representationally accurate.
+If a shape is artificially isolated, the gradient can be erroneous
+due to inadequate sampling of the empiric target environment.</p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_Sblayer_id76518fca.html#id76518fca-782a-46d3-a7f2-79b6d5349c9e__Command_Sblayer_id76518fca.xml#id76518fca-782a-46d3-a7f2-79b6d5349c9e" title="Specifies a layer name containing preexisting SRAFs. Used by RET SBAR and RET MBSRAF.">sblayer</a> and <a class="xref fm:HeadingOnly" href="Command_Correctionlayer_ide353f555.html#ide353f555-40f5-4f34-a254-0eee5a912710__Command_Correctionlayer_ide353f555.xml#ide353f555-40f5-4f34-a254-0eee5a912710" title="Specifies a polygon layer for gradient calculation. Used by MBSRAF only.">correctionlayer</a> are layers containing
+shapes that are simulated to provide the image from which the gradient
+is calculated. If neither of these layers are available, the target
+layer is used for the image simulation.</p>
+<p class="p">When using mbSRAF as fill or an SRAF safety net after rules-based
+insertion, all layers processed must contain a large enough region
+centered on the selected shape needing further lithographic validation
+through an optical diameter, but the generated SRAFs produced by mbSRAF
+must only be constrained to a smaller halo around the center target
+(using a value equal to or smaller than maxoffset).</p>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id47685820-ce5d-4401-a136-a2776dd84cea"><h2 class="title Subheading sectiontitle">Using
+algorithm 1</h2><p class="p">Added in Calibre release 2016.3, algorithm 1 significantly enhances
+geometric consistency during SRAF generation. Siemens EDA recommends
+always enabling algorithm 1 within all Calibre mbSRAF recipes. Enabling
+algorithm 1 requires these keyword settings:</p>
+<ul class="ul"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id7ed78ef5-850e-47bd-ae1c-ddf4a105a1f8"><p class="p">The minfeaturespace
+keyword must be explicitly set.</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id359ef664-df5a-4478-84f4-8833fc18addb"><p class="p">The minoffset
+keyword must be explicitly set.</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id15d57d38-27f1-4676-b26a-365b7253dd81"><p class="p">Because algorithm 1
+provides optimal SRAF generation through internal settings, Siemens
+EDA recommends that none of these keywords be modified:</p>
+<ul class="ul"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id09d9b49d-6047-4bef-8a3e-9f824215ead9"><p class="p">cornerpref</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id421b99e1-abc7-4b33-9851-63f23c2aedd3"><p class="p">cornerprefnegative</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id08defc76-fec8-41df-9226-fec042e09e11"><p class="p">mode</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idbd5fa523-cedb-4d93-a3a6-4cd2e58b4548"><p class="p">peaktype</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__iddde59e03-05ba-4e3c-aaef-bf844978be27"><h2 class="title Subheading sectiontitle">Calibre
+mbSRAF Settings</h2><p class="p">Without OPC and Calibre OPCverify scripts, assessing Calibre
+mbSRAF optimization results do not provide clear indicators of successful
+optimization. The Calibre OPCverify script you use must contain
+figures of merit that SRAFs are intended to address such as Depth
+of Focus (DOF) or PVband width.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id0c60d4dc-9fec-49b0-8a77-0730e11cfa1f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre mbSRAF
+Recommended Optimization Settings</span></caption><colgroup><col style="width:1.546in" /><col style="width:1.041in" /><col style="width:1.248in" /><col style="width:3.314in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32e261"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32e264"><p class="p">Default</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32e267"><p class="p">Recommended</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32e270"><p class="p">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">maxmove</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">width/2 for algorithm 0, 1 nm for algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">For finite control of SRAF movement during cleanup</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">As of 2018.1, the previous default setting of
+maxmove 0 has changed, and can now be explicitly specified. However,
+recipes previously using algorithm 1 must now explicitly specify
+maxmove 0 to obtain identical SRAF results prior to 2018.1..</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">jogignore</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">Disabled</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use with variable etch bias (VEB) models</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Siemens EDA recommends always using jogignore
+with <a class="xref fm:HeadingOnly" href="Command_Mode_ida2a31488.html#ida2a31488-d94f-4e9e-9280-d5e47e315ea6__Command_Mode_ida2a31488.xml#ida2a31488-d94f-4e9e-9280-d5e47e315ea6" title="Specifies a generated SRAF orientation. Used by RET MBSRAF only.">mode</a> collectno45
+to achieve expected results.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">algorithm</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">Required</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Siemens EDA recommends using the algorithm
+1 keyword within all Calibre mbSRAF recipes for improved geometric consistency
+during SRAF generation. The minfeaturespace parameter must be explicitly set.
+Additionally, algorithm 1 sets peaktype internally, and sets cornerpref
+to no; Siemens EDA recommends against overriding these internally-set
+values.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">target</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Litho target</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Target should be based on what the litho processing
+step attempts to achieve and not the etch target.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">correctionlayer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Defined, pass a single layer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">The correctionlayer shapes should be 80%
+to 120% of the area of their respective target shapes at the defined
+process conditions. If multiple layers combine to serve as a correctionlayer,
+they should be passed as a single layer to mbsraf after using an
+SVRF logical OR operation to combine them.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">sblayer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Required if they exist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">When combining rules-based with model-based
+SRAF, you must provide the rules-based as optical elements. If positive
+and negative SRAF exist, you must pass them separately in two different
+layers. Additionally, when sblayer is specified, it must appear
+in either the options block or the setlayer command, but never both.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">offsetlayer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Pass a single layer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Offsetlayer should never be a copy of the target
+layer or correctionlayer. It should be an additional, single layer
+for which SRAFs must honor spacing restrictions. If multiple layers need
+to be merged for this layer, it is best to OR them using an SVRF
+operation prior to running mbsraf. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When offsetlayer is specified, it must appear in either
+the options block or the setlayer command, but never both.</p>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">Model specification</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Litho model format to insure proper specifications</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Organized models prevent entry errors, especially
+for layer modifications.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">minfeaturespace</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">minCD/2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">The tool enforces a distance based on a fraction
+of the optical pitch if the specified value is smaller than the
+calculated value. For recipes using algorithm 1, however, no such internally
+calculated value is used; only explicitly-specified values are enforced.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">minoffset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">minCD/2, but optimize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">More SRAFs are inserted when minoffset is
+smaller, and the risk of SRAF printing increases when minoffset
+is smaller.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">minoffsetlayerspace</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Desired offset from layer shapes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Only needed when offset layers are used, and
+a non-zero separation between SRAF and offsetlayer is desired.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">gradientshift</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Larger than reported need in transcript</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">When negative values are near target they
+can lead to smaller SRAFs. The transcript reports the value immediately
+adjacent to the target. An application note (MG585966) is available
+on <a class="xref" href="https://support.mentor.com/en/product/852852053/knowledge-base/MG585866?pid=sc%3Asearch&amp;pid_context=MG585866" target="_blank">Support Center</a>, entitled
+“<cite class="cite">Identifying the gradientShift value to use in mbSRAF</cite>”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">width</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">minCD/4 to minCD/2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">The maximum width that does not print.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">squarewidth</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Up to 2x width</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">The maximum square that does not print.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">minarea/minsquarearea/minwidth/ minlength/minsquarelength</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Defined</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Explicit specification provides optimal results.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">peaktype</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">3dir for algorithm 0, internally set for algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use algorithm 1, internally set</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Lower numbers (1,2)dir may lead to more
+seed pixels and candidates. Use of (1,2,3)peak should be limited
+to processes which exhibit saddle-points in the gradient on some
+layouts. peaktype behavior is demonstrated in <a class="xref fm:Figure" href="#id25ad6488-f742-4ff1-9cdf-578236262f2d__idf32d7df8-cde8-4592-a340-28d21f065b69">Figure 1</a>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">nearestno45 for algorithm 0, internally
+set for algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use algorithm 1, internally set</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Collectno45 creates more SRAFs not immediately
+adjacent to the target, which is needed in some processes; nearestno45
+limits SRAF size to the target plus extension.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">pw_conditions </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Conditions that match the degraded image in
+Calibre OPCverify simulations</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Additional conditions add runtime, but they
+can help correct imaging failures identified in verification.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">cornerpref</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">square for algorithm 0, no for algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use algorithm 1, cornerpref set to no</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Some processes are dependent on corner SRAFs
+while others show no benefit (where cornerpref no lowers mask costs).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">cornerprefnegative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">square for algorithm 0, no for algorithm 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use algorithm 1, cornerprefnegative set
+to no</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Some processes are dependent on corner SRAFs
+while others show no benefit (where cornerprefnegative no lowers
+mask costs).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">prioritylayer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use for specific layouts</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Small shapes orthogonal to large shapes benefit
+the most (for example, M1 signal lines in the triple-patterning
+process).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">maxlength</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use as advised</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Results at tile boundaries may vary, but this
+is a cost effective way to reduce SRAF printing. If printing is
+a minor concern, Siemens EDA recommends not using this feature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">maxoffset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Specify a value to place enough of the required
+SRAF rows to benefit the process window</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Use Calibre OPCverify results to help define
+how far SRAFs should be placed from any target (which affects the
+number of rows of SRAFs). For certain layers, such as metal, do not
+specify maxoffset. Instead, control the number of rows by multiple
+localmaxgradient templates that permit control of SRAF widths per
+row. The combination of multiple localmaxgradient templates with
+maxoffset is not recommended.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e261 "><p class="p">intersection J</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e264 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e267 "><p class="p">Use as advised</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32e270 "><p class="p">Allowing jogs provides more continuous SRAFs,
+but sraf_print_avoidance in Calibre nmOPC is unable to correct any
+printing induced at jogs because of control fragment misalignment.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fig fignone" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idf32d7df8-cde8-4592-a340-28d21f065b69"><span class="figcap"><span class="fig--title-label">Figure 1. </span>SRAF Coverage Varies by peaktype Mode</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:72" src="../graphics/bestPractices2a.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id5adbab2b-483b-40c2-9c85-3ac6bdbba244"><h2 class="title Subheading sectiontitle">Calibre mbSRAF Optimization Steps</h2><p class="p">The foundation of Calibre mbSRAF is the gradient calculation
+for a process condition that defines SRAF placement locations. In
+order for the gradient to be as robust as the process can support,
+it is important that the print image at the desired process conditions
+roughly matches the target shape dimensions. One empirically consistent
+rule used for many customer designs and processes is the area of
+image should be 80% to 120% of the target area for any given process
+condition. A correction layer derived from a SIZE operation or from
+a few iterations of OPC may be required to achieve images of this
+range.</p>
+<p class="p">The next value to specify for proper gradient-to-SRAF conversion
+is gradientshift. The optimal amount can best be measured on an
+isolated target. An application note is available on <a class="xref" href="https://support.mentor.com/en/product/852852053/knowledge-base/MG585866?pid=sc%3Asearch&amp;pid_context=MG585866" target="_blank">Support Center</a>, entitled <cite class="cite OptionalReplaceableDefault">Application note
+MG585866</cite> which details methods for choosing this setting.
+The gradientshift keyword may be required in resist processes using
+negative tone development (NTD) where dark areas in a bright mask
+are the desired target locations.</p>
+<p class="p">When the gradient is largely shifted to a positive range, the
+SRAFs generated from seed pixels will be larger, and therefore,
+more effective in image correction. The number of SRAFs is closely
+related to the prevalence of the seed pixels, and the number of
+seed pixels can be increased by reducing the number of directions
+a local maxima must satisfy. Siemens EDA recommends that you measure
+the effectiveness of SRAF with the default 3dir keyword before modifying
+it. Use the verification script to help determine if more or less
+SRAFs are needed. Both the seedpixels and candidates debug layers
+are useful for analysis of SRAFs that are placed.</p>
+<p class="p">Once the spatial frequency and density of SRAFs seems reasonably
+effective, optimize the values of width and squarewidth to maximize
+positive image benefit while maintaining a low level of SRAF printing.
+The largest process window advantage comes from leaving some limited
+SRAF printing at the insertion stage and relying on sraf_print_avoidance
+in OPC to resolve this printing. A more conservative choice would
+be to keep the SRAF size smaller, but it is still possible for OPC
+edge movement to combine with these smaller SRAFs to induce printing,
+so sraf_print_avoidance is not optional for a production solution. </p>
+<p class="p">In combination with some experimental runs yielding varying SRAF
+width, this is the appropriate time in the recipe development to
+experiment with the mode. As a rough rule, collectno45, which bases
+SRAF length on the gradient peaks rather than target size, has proven effective
+on both island layers (generally contacts) as well as line layers
+(generally metal). However, as the relative shape of layers continue
+to change as additional interconnect solutions are adopted, there
+is no way to state that either mode will work better without experimentation.</p>
+<p class="p">In more classical line layer topologies, the square SRAFs at
+line ends may be unnecessary if line end pullback requirements are
+not very strict. The corner SRAFs help significantly with formation
+of 2D images, which is why cornerpref square is default. For many illuminators,
+the square SRAFs are so important that the squareonly option is
+required so that square SRAFs are placed at a higher priority than
+edge-oriented SRAFs.</p>
+<h2 class="title Subheading sectiontitle">Specific case solutions</h2><p class="p">The following solutions are provided as additional guidance for
+specific layer and illuminator scenarios.</p>
+<dl class="dl"><dt class="dt dlterm">Line layers</dt>
+<dd class="dd"><p class="p">As mentioned, square SRAFs may be unnecessary, depending
+on the image requirement specifications. In addition, the restriction
+of a single width for each localmaxgradient can diminish the achievable
+process window. The solution is to not specify maxoffset (maximum distance
+from targets that SRAFs are placed) and instead have additional localmaxgradient
+templates, which have (generally) increasing SRAF widths (and square
+widths if desired). The benefit of the larger SRAFs at the larger
+distance to targets is more image influence, while the separation
+from OPC movement reduces the chance of SRAF printing (still controlled
+in OPC by sraf_print_avoidance).</p>
+</dd>
+<dt class="dt dlterm">Layers of mixed size targets
+in close proximity</dt>
+<dd class="dd"><p class="p">Several layers include a mix of smaller and larger shapes
+in close proximity to each other. An example would be the smaller
+signal lines and larger power lines in a standard cell metal layer.
+For these environments, the gradient typically provides a grid of
+seed pixels that can be transformed into SRAFs which are parallel
+to either shape. If small shapes are marked as members of the prioritylayer,
+the SRAF output provides better support of small images at a modest
+expense of large shape imaging. Because the tolerance of the larger
+shapes to image imperfections is typically larger, this allows a
+general method of directing SRAFs to focus the benefit on the smaller
+target shapes.</p>
+</dd>
+<dt class="dt dlterm">Inadequate process window
+after optimization</dt>
+<dd class="dd"><p class="p">In the majority of layouts and processes, simulation with
+a single optical condition (best focus or defocus) provides adequate
+SRAF insertion. However, at times the competing forces on proper
+image placement may require that the gradient consider more than
+one condition. Using Calibre OPCverify conditions for process windows, identify
+the conditions that lead to image failure. If these (or slightly
+more off-nominal) conditions are provided to the gradient calculations,
+the placement of SRAFs will shift and usually resolve the insufficient
+solution. At times, the weight of these pw_conditions may need to
+be in the 10-100 range, so that they more fully dominate the gradient
+calculation. Of course, if a single condition is needed to achieve
+the process window that condition can be provided as the nominal
+model (defined by the mbsraf optical command).</p>
+</dd>
+<dt class="dt dlterm">Negative SRAF insertion</dt>
+<dd class="dd"><p class="p">In large target shapes, which are near tight spaces, imaging
+can be improved by inserting negative SRAFs, which are SRAFs that
+remove material inside the target (typically generating slots) in
+the vicinity of a tight space, increasing the amount of light that
+can form the outer edges. To enable negative SRAF generation with
+Calibre mbSRAF, several steps are required.</p>
+<ol class="ol"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id25809eb8-4f35-4cc4-b294-c47a45b7e998"><p class="p">Define
+a localmaxgradient template with a unique prior value. In the associated
+priority definition, specify the keyword negative along with any
+other priority level controls desired (for example minfeaturespace). </p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id67a25b2a-affe-4ab7-89b7-2b7d5b542d2f"><p class="p">Define styles
+specific to negative SRAF such as maxoffsetnegative, cornerprefnegative,
+and intersectionnegative, which refine negative SRAFs you generate. </p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id42003ddd-57f1-4f78-900a-8ab1304528ea"><p class="p">Introduce negative
+SRAFs into all shapes large enough for MRC-legal insertion. While
+it is mathematically valid that inserting negative SRAFs on isolated shapes
+improves many process variation artifacts, including PVbands, many customers
+desire to only have negative SRAFs inserted near tight spaces where
+they have the most significant imaging benefit. To control SRAF
+placement in these spaces, use a tag (from taglayer or using a tag
+script) to define the space edges in the localmaxgradient template
+used for negative SRAF. If the space where this is needed is unknown,
+it is probably better to choose a much larger space than suspected,
+and to adjust it tighter as the process matures. Again, the critical
+imaging metrics should be the guide for the definition of spaces
+that have restricted access.</p>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id92177a69-f171-4d23-854c-a7ac3e464364"><h2 class="title Subheading sectiontitle">Miscellaneous
+Recipe Development Aids</h2><p class="p">Using the available Calibre mbSRAF keywords and constraints properly
+speed recipe development.</p>
+<ol class="ol"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idd4f3da36-8908-475c-815f-e59a83f0a0c3"><p class="p">Start by defining the MRC constraints
+to match those used by OPC.</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id52a62ab2-bfdc-42ef-a97c-aba4f26943b8"><p class="p">Use the mode keyword to define required
+SRAF length controlled by target length or length controlled by
+gradient.</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id82a2883a-d9ad-4778-b01f-24fcd6252a4f"><p class="p">Optimize width and squarewidth values
+based on process window printing.</p>
+</li>
+</ol>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idc1623ecd-ae4f-4bf2-894a-2e24640ecaa0"><h2 class="title Subheading sectiontitle">Lithomodel Format Usage for
+Calibre mbSRAF Execution</h2><p class="p">Siemens EDA recommends using litho model format
+in the development and execution of Calibre mbSRAF because:</p>
+<ul class="ul"><li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id429c746c-d387-4cfd-9867-2175c4dc9af3"><p class="p">The litho model format provides a more
+organized repository for model data.</p>
+</li>
+<li class="li" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__id8120df05-67df-421e-add9-5386f5bda10f"><p class="p">The litho model format is becoming more
+widely used for many Siemens EDA litho modeling tools.</p>
+</li>
+</ul>
+<p class="p">The litho model format has several operational
+constituents:</p>
+<dl class="dl"><dt class="dt dlterm"><a class="xref fm:HeadingOnly" href="Command_ImageOptions_id251346d4.html#id251346d4-529b-4487-a80d-c85b3307ad98__Command_ImageOptions_id251346d4.xml#id251346d4-529b-4487-a80d-c85b3307ad98" title="A LITHO FILE command referencing the Lithomodel file and an sraf_options command referencing the litho_model name. Used by RET MBSRAF only.">image_options</a></dt>
+<dd class="dd"><p class="p">Specifies the image_options block name.</p>
+</dd>
+<dt class="dt dlterm"><a class="xref fm:HeadingOnly" href="Command_LithoModel_idbc597319.html#idbc597319-3f47-40cc-8d13-ce07f3863eb6__Command_LithoModel_idbc597319.xml#idbc597319-3f47-40cc-8d13-ce07f3863eb6" title="Specifies the directory name that contains files for the litho model format. Used by RET MBSRAF only.">litho_model</a></dt>
+<dd class="dd"><p class="p">Specifies the directory containing the <span class="ph filepath">Lithomodel</span> data.</p>
+</dd>
+<dt class="dt dlterm"><span class="ph filepath">Lithomodel</span> file</dt>
+<dd class="dd"><p class="p">References optical and resist models contained in the directory
+specified by litho_model.</p>
+</dd>
+</dl>
+<p class="p">In this <span class="ph filepath">Lithomodel</span> file,
+a DDM model is specified:</p>
+<pre class="pre codeblock leveled"><code>version 1
+mask 0 {
+	optical optical_0
+	optical optical_-40 focus -40nm
+	optical optical_+40 focus 40nm
+	background 1 0
+	mask_layer 0 TRANS -.9785 -.0085 DDM omog.dark.quad.ddm
+	mask_layer 1 TRANS -.9785 -.0085 DDM omog.dark.quad.ddm
+	dose 1
+}
+resist resist.mod
+image_threshold 0.246</code></pre><p class="p">This <span class="ph filepath">Lithomodel</span> file
+specifies a non-DDM model:</p>
+<pre class="pre codeblock leveled"><code>version 1
+mask 0 {
+	optical opt
+	background atten 0.06
+	mask_layer 0 TRANS clear CATEGORY visible
+}
+resist ctr.mod</code></pre><p class="p">This example presents a complete LITHO FILE
+statement, implementing the litho model format, for generating SRAF
+with Calibre mbSRAF:</p>
+<pre class="pre codeblock leveled"><code>LITHO FILE mbsraf_setup [
+	modelpath ./models
+	layer M1
+	layer M1_sraf
+	layer M1_OPC
+	tilemicrons 25
+	progress_meter on
+</code></pre><pre class="pre codeblock leveled"><code>	<a class="xref fm:HeadingOnly" href="Command_ImageOptions_id251346d4.html#id251346d4-529b-4487-a80d-c85b3307ad98__Command_ImageOptions_id251346d4.xml#id251346d4-529b-4487-a80d-c85b3307ad98" title="A LITHO FILE command referencing the Lithomodel file and an sraf_options command referencing the litho_model name. Used by RET MBSRAF only.">image_options</a> LMO {
+		lithomodel MX1
+		layer M1 visible mask_layer 1
+		layer M1_sraf visible mask_layer 2
+		layer M1_OPC visible mask_layer 406
+	}</code></pre><pre class="pre codeblock leveled"><code>	<a class="xref fm:HeadingOnly" href="Command_SrafOptions_id88d00999.html#id88d00b85-2e1a-4029-a747-8f9008c7d9a1__Command_SrafOptions_id88d00999.xml#id88d00b85-2e1a-4029-a747-8f9008c7d9a1" title="Allows Calibre nmSRAF keywords to be written in free format. The sraf_options statement is called by the setlayer command for SRAF generation. Used by RET SBAR and RET MBSRAF.">sraf_options</a> opts {
+		algorithm 1
+		sblayer M1_sraf
+		correctionlayer M1_OPC
+		image_options LMO
+		minfeaturespace 0.045 minoffset 0.025 maxoffset 0.220
+		minwidth 0.015 minlength 0.030
+		minsquarelength 0.022 minsquarearea 0.000529
+		gradientshift 0
+		localmaxgradient prior 1 width 0.02 squarewidth 0.03
+	}</code></pre><pre class="pre codeblock leveled"><code>	setlayer mb_sraf = mbsraf M1 IMAGE_OPTIONS LMO OPTIONS opts
+	setlayer seedpixels = mbsraf debug mb_sraf seedpixels 1
+]</code></pre><pre class="pre codeblock leveled"><code>mb_sraf = RET mbsraf M1 M1_sraf M1_OPC FILE mbsraf_setup MAP mb_sraf</code></pre><p class="p">For detailed information regarding the <span class="ph filepath">Lithomodel</span> file
+and litho model format, see the <a class="xref LinkItalic" href="../../calbr_nmopc_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Lithomodel (Litho Model Format)', 'calbr_nmopc_useref'); return false;">Calibre nmOPC User’s and Reference Manual.</a></p>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idab5a71d4-78aa-4673-83c4-edf6292cec6a"><h2 class="title Subheading sectiontitle">correctionlayer Usage
+for Calibre mbSRAF</h2><p class="p">The correctionlayer keyword is used during
+simulation to define the initial image that forms the basis of the
+gradient calculation.</p>
+<p class="p">Siemens EDA recommends using the correctionlayer
+argument for better performing SRAF, especially with bright field
+masks. The correctionlayer for mbsraf can be a sized-up target layer
+or an OPC layer (a layer that has been resized by several iterations
+of nmOPC). The image generated using the correctionlayer should
+be within plus or minus 20 percent of the expected nominal contour
+image.</p>
+</div>
+<div class="section Subsection" id="id25ad6488-f742-4ff1-9cdf-578236262f2d__idea090403-f58f-44bb-bfd7-9d1273d77f68"><h2 class="title Subheading sectiontitle">Priorities
+for Calibre mbSRAF Tagging</h2><p class="p">Priorities are vital for the segregation of SRAFs generated by
+different templates. Priorities also apply to tag different groups,
+and ensure that minfeaturespace and minoffset enforcement for these
+various tag groups do not conflict. Additionally, localmaxgradient templates
+with different tags and the same priority generate Calibre warning
+messages.</p>
+<h2 class="title Subheading sectiontitle">Example</h2><p class="p">This code sample:</p>
+<pre class="pre codeblock"><code>localmaxgradient tag <span class="ph CodeHighlight red">mytag1</span> width 0.018 squarewidth 0.025 <span class="ph CodeHighlight red">prior 1</span>
+localmaxgradient tag <span class="ph CodeHighlight green">mytag2</span> width 0.018 squarewidth 0.025 <span class="ph CodeHighlight green">prior 1</span></code></pre><p class="p">produces this warning in the transcript:</p>
+<p class="lines ApplCommand">/-- WARN: nmSraf: Priority 1, templates 0 and 1 do not have the same tags. Check tags or move one template to a different priority.</p>
+<p class="p">Setting different priorities for each template with differing
+tags parses correctly:</p>
+<pre class="pre codeblock"><code>localmaxgradient tag <span class="ph CodeHighlight red">mytag1</span> width 0.018 squarewidth 0.025 <span class="ph CodeHighlight red">prior 1</span>
+localmaxgradient tag <span class="ph CodeHighlight green">mytag2</span> width 0.018 squarewidth 0.025 <span class="ph CodeHighlight green">prior 2</span></code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreNmsrafBestPractices_id8b65111f.html" title="Siemens EDA provides several tools for SRAF insertion, each taking different approaches and working together to provide optimized results.">Calibre nmSRAF Best Practices</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmsraf_useref"
+                DocTitle = "Calibre® nmSRAF™ User’s and Reference Manual"
+                PageTitle = "Calibre mbSRAF Recipe Development"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalibreMbsrafRecipeDevelopment_id25ad6488.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmSRAF™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

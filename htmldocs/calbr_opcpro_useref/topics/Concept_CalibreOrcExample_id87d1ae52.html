@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calibre ORC Example" />
+<meta name="abstract" content="This section contains a Calibre ORC usage example. It uses the Calibre ORC batch tool to find line_ends and compare them to EPEs. You output both types of fragments (line_ends and errors) as GDS layers. This allows you to discover which portion of the errors are caused by line_ends." />
+<meta name="description" content="This section contains a Calibre ORC usage example. It uses the Calibre ORC batch tool to find line_ends and compare them to EPEs. You output both types of fragments (line_ends and errors) as GDS layers. This allows you to discover which portion of the errors are caused by line_ends." />
+<meta name="DC.subject" content="Examples, ORC" />
+<meta name="keywords" content="Examples, ORC" />
+<meta name="prodname" content="Calibre OPCpro User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcpro_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="Mar. 12, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® OPCpro™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre ORC Example</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre ORC Example" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre
+ORC Example</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This section
+contains a Calibre ORC usage example. It uses the Calibre ORC batch
+tool to find line_ends and compare them to EPEs. You output both
+types of fragments (line_ends and errors) as GDS layers. This allows
+you to discover which portion of the errors are caused by line_ends.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8__id87823c1d-e1f1-4d24-b160-8721dd35be26"><h2 class="title Subheading sectiontitle">Finding and Outputting
+Errors</h2><p class="p">After defining the input layers (in this case
+there is one input layer, type opc) you can reference them in the
+tagging script. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Tagging commands are always written with
+respect to the opc layer. If an external layer is defined, EPEs
+are measured as the distance between the external layer and the
+opc layer.</p>
+</div>
+<p class="p">The following is an excerpt from the setup
+file used with this example:</p>
+<pre class="pre codeblock leveled"><code># ---------------- Layer info ---------------
+background clear
+# Layers
+layer 2  POLY   0 0 opc dark
+
+#----- Arbitrary Commands Can Follow This Line -----
+<a class="xref fm:HeadingOnly" href="Command_Cleartagscript_id2453740a.html#id2453740a-db29-4231-b928-df2dfb6e9860__Command_Cleartagscript_id2453740a.xml#id2453740a-db29-4231-b928-df2dfb6e9860" title="Clears all previous tagging commands.">clearTagScript</a>
+newTag dangerousEPE -how EPE all -10 -0.01
+<a class="xref fm:HeadingOnly" href="Command_Tags2boxes_idd388154d.html#idd388154d-7747-4297-a5db-a7d8e15cf929__Command_Tags2boxes_idd388154d.xml#idd388154d-7747-4297-a5db-a7d8e15cf929" title="Creates boxes around tags or sites.">tags2boxes</a> -tags dangerousEPE line_end -layers 101 102</code></pre><p class="p">Notice that you only created one new tag, dangerousEPE.
+The other tag, line_end is a built-in tag.</p>
+</div>
+<div class="section Subsection" id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8__id05aa54e3-48da-4d56-a790-3478348ee9fa"><h2 class="title Subheading sectiontitle">Performing the LITHO Operation</h2><p class="p">Issue the operation twice, using the MAPNUMBER
+option to the operation to signal concurrent operations and control
+which output layer each operation returns. The portion of the SVRF
+file that implements this functionality would look like this:</p>
+<pre class="pre codeblock leveled"><code>dangerous_errors = LITHO ORC FILE orc.in POLY MAPNUMBER 101
+line_ends = LITHO ORC FILE orc.in POLY MAPNUMBER 102
+
+dangerous_errors {copy dangerous_errors}
+line_ends {copy line_ends}
+
+DRC CHECK MAP dangerous_errors 101
+DRC CHECK MAP line_ends 102 </code></pre><p class="p">This set of SVRF statements and operations
+saves the ORC results as derived layers, creates rule check statements
+that are copies of the derived layers, then writes the rule check
+statements to the GDS results database. The layer GDS layer numbers
+happen to be the same as the Calibre layer numbers, but this is
+not a requirement.</p>
+</div>
+<div class="section Subsection" id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8__id406e9850-5616-4da7-a969-c409932b3a52"><h2 class="title Subheading sectiontitle">Finding and Outputting Errors</h2><p class="p">The input GDS file contains both the original
+mask design and the OPC corrected design, with the original data
+on layer 2 (POLY) and the corrected data on layer 3 (CORR). In the
+setup file, set the RET layer type for the original mask design
+to opc layer (the target) and the layer type for the corrected data
+to type external (the data to be simulated.) Refer to “<a class="xref fm:HeadingAndPage" href="Contain_LayerUsage_id368b7080.html#id368b7080-8c2b-47a2-bca6-378d67078e76__Contain_LayerUsage_id368b7080.xml#id368b7080-8c2b-47a2-bca6-378d67078e76" title="The Calibre RET batch tools operate on Calibre polygon layers. The opc layer containing the image you want to print on your wafer is the minimum layout data required to run the Calibre OPCpro batch tool. This minimum data is sometimes not the only data needed. You can improve overall results by providing additional layer data to include non-printing simulation data, generate fragments, and control correction.">Layer Usage</a>” for
+layer information.</p>
+<p class="p">Using
+these layers as input, you can classify EPEs according to how far
+the simulated edge differs from the drawn layer. Create a different
+tag for each range of errors. The following is an excerpt from the
+setup file: </p>
+<pre class="pre codeblock leveled"><code># ---------------- Layer info ---------------
+<a class="xref fm:HeadingOnly" href="Command_Background_id13f8d5ca.html#id13f8d5ca-6c71-40fd-b005-c3636c1aa50d__Command_Background_id13f8d5ca.xml#id13f8d5ca-6c71-40fd-b005-c3636c1aa50d" title="Required. Describes the imaging background.">background</a> clear
+# Layers
+<a class="xref fm:HeadingOnly" href="Command_Layer_id24bcf6df.html#id24bcf6df-916f-445c-80b7-a063af955d1e__Command_Layer_id24bcf6df.xml#id24bcf6df-916f-445c-80b7-a063af955d1e" title="Required. Defines how the given mask layer is treated by OPC and simulation.">layer</a>    0  CORR   0 0 external   dark
+layer    1  POLY   0 0 opc        dark
+
+#----- Arbitrary Commands Can Follow This Line -----
+<a class="xref fm:HeadingOnly" href="Command_Cleartagscript_id2453740a.html#id2453740a-db29-4231-b928-df2dfb6e9860__Command_Cleartagscript_id2453740a.xml#id2453740a-db29-4231-b928-df2dfb6e9860" title="Clears all previous tagging commands.">clearTagScript</a>
+<a class="xref fm:HeadingOnly" href="Command_Newtag_id03232dcf.html#id03232dcf-c28f-489b-abf7-d0ea52e27926__Command_Newtag_id03232dcf.xml#id03232dcf-c28f-489b-abf7-d0ea52e27926" title="Creates new, user-defined tags using the methods described in subsequent reference pages.">newTag</a> badEPE0 -how EPE all -5 -1
+newTag badEPE1 -how EPE all -1 -0.01
+newTag badEPE3 -how EPE all 0.01 1
+newTag badEPE4 -how EPE all 1 5
+<a class="xref fm:HeadingOnly" href="Command_Tags2boxes_idd388154d.html#idd388154d-7747-4297-a5db-a7d8e15cf929__Command_Tags2boxes_idd388154d.xml#idd388154d-7747-4297-a5db-a7d8e15cf929" title="Creates boxes around tags or sites.">tags2boxes</a> -tags badEPE0 badEPE1 badEPE3 badEPE4 -layers 100 101 102 103</code></pre></div>
+<div class="section Subsection" id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8__id40f49ceb-a3b1-4559-84a5-256160b2d454"><h2 class="title Subheading sectiontitle">Performing the LITHO Operation</h2><p class="p">Compare the following excerpts from two SVRF
+files, presented side by side.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Although the Calibre
+layer numbers in the previous example are the same as in the setup
+file, this is not required.</p>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id87d1ae52-e060-4f82-bc65-4b2d6a4d99b8__id41b0b5ff-e3a4-4603-8fb8-341c948d9dc8" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:2.985in" /><col style="width:4.165in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel"><span class="ph filepath">orc.drc</span> Excerpts</span></p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel"><span class="ph filepath">concur_orc.drc</span> Excerpts</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><pre class="pre codeblock leveled"><code><span class="ph FontProperty P8">LAYER POLY 2
+LAYER CORR 3
+
+// ORC Operation using LITHO
+// The file orc.in is a LITHO setup file
+
+MY_ORC { 
+    LITHO ORC FILE orc.in POLY CORR
+}
+
+POLY {COPY POLY}
+CORR {COPY CORR}
+
+DRC CHECK MAP POLY 2
+DRC CHECK MAP CORR 3
+DRC CHECK MAP MY_ORC 4</span></code></pre></td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><pre class="pre codeblock leveled"><code><span class="ph FontProperty P8">LAYER POLY 2
+LAYER CORR 3
+// ORC Operation using LITHO
+// The file orc.in is a LITHO setup file
+// MY_ORC {
+// LITHO ORC FILE orc.in POLY CORR
+// }
+MY_ORC_L1 = LITHO ORC FILE orc.in POLY CORR MAPNUMBER 100 
+MY_ORC_L2 = LITHO ORC FILE orc.in POLY CORR MAPNUMBER 101
+MY_ORC_L3 = LITHO ORC FILE orc.in POLY CORR MAPNUMBER 102
+MY_ORC_L4 = LITHO ORC FILE orc.in POLY CORR MAPNUMBER 103
+POLY {COPY POLY}
+CORR {COPY CORR}
+MY_ORC_L1 {COPY MY_ORC_L1}
+MY_ORC_L2 {COPY MY_ORC_L2}
+MY_ORC_L3 {COPY MY_ORC_L3}
+MY_ORC_L4 {COPY MY_ORC_L4}
+DRC CHECK MAP POLY 2
+DRC CHECK MAP CORR 3
+DRC CHECK MAP MY_ORC_L1 100
+DRC CHECK MAP MY_ORC_L2 101
+DRC CHECK MAP MY_ORC_L3 102
+DRC CHECK MAP MY_ORC_L4 103</span></code></pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreOrcProceduresExamples_id8885dd2f.html" title="Originally designed for performing Optical Rule Checking (ORC) to check the polygon edges in a layout to see whether or not they print within a user-specified tolerance, the Calibre ORC batch tool has evolved into a powerful tool that allows you to categorize polygon edges and fragments based on a wide range of properties and characteristics. You can use this tool many ways, chief among them being:">Calibre ORC Procedures and Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcpro_useref"
+                DocTitle = "Calibre® OPCpro™ User’s and Reference Manual"
+                PageTitle = "Calibre ORC Example"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalibreOrcExample_id87d1ae52.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCpro™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

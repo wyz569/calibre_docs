@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Hierarchical Netlist from Calibre Interactive" />
+<meta name="abstract" content="This procedure assumes you have an SVRF file set up for your type of parasitic extraction and only specifies the settings particular to producing hierarchical netlists." />
+<meta name="description" content="This procedure assumes you have an SVRF file set up for your type of parasitic extraction and only specifies the settings particular to producing hierarchical netlists." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id018370c3-f576-4b31-9ae2-57cec6f45ab9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Hierarchical Netlist from Calibre Interactive</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Hierarchical Netlist from Calibre Interactive" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id018370c3-f576-4b31-9ae2-57cec6f45ab9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating a Hierarchical Netlist from Calibre Interactive</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">This procedure
+assumes you have an SVRF file set up for your type of parasitic
+extraction and only specifies the settings particular to producing
+hierarchical netlists.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id71f29809-95af-4656-9be4-ba4119153a76"><p class="p">A
+valid PEX rule file for this layout. If you are creating a DSPF netlist
+for use in a hierarchical simulator that accepts a position file,
+add <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist Position File', 'svrf_ur'); return false;">PEX Netlist Position File</a>.</p>
+</li>
+<li class="li" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id63f9c246-ef37-40b3-a321-0193f663107f"><p class="p">Hcell
+file or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> statement
+that includes all cells also listed in the xcell file.</p>
+</li>
+<li class="li" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__idf03d870e-f8bb-41aa-9c8d-ce70e9bb9971"><p class="p">Xcell
+file listing cells to preserve in the parasitic netlist. </p>
+</li>
+<li class="li" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id834b5e51-29f3-4a18-a7fa-aecb955be0df"><p class="p">Layout
+database that is LVS-clean.</p>
+<p class="p">For more information refer
+to “<a class="xref fm:HeadingOnly" href="Concept_PrerequisitesPerformingParasiticExtraction_id4d4d6d13.html#id4d4d6d13-f8f8-4c31-96b7-ce1746a99e8a__Concept_PrerequisitesPerformingParasiticExtraction_id4d4d6d13.xml#id4d4d6d13-f8f8-4c31-96b7-ce1746a99e8a" title="Running Calibre xRC extraction requires that certain conditions be met. These include:">Prerequisites for Performing Parasitic Extraction</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id24458185-a758-49cb-b978-9305b562a88d"><span class="ph cmd">Start the PEX interface in
+Calibre Interactive:</span></li>
+<li class="li step" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id54f5da44-ca45-4ad7-874a-4bd486ee4567"><span class="ph cmd">Load a runset or rulefile.</span></li>
+<li class="li step" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id97dfd4f0-e669-42dc-98ad-c9d6279d9d32"><span class="ph cmd">Specify the hcells, xcells,
+and extraction type.</span><ol type="a" class="ol substeps"><li class="li substep" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id27133a38-f040-46aa-8083-5d856d21fc4e"><span class="ph cmd">Click the <span class="ph uicontrol bold">Inputs</span> button in the left pane.
+Select the <span class="ph uicontrol">H-Cells</span> tab. Specify
+the hcell and xcell files in the appropriate fields. (They can be
+the same file.)</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id97bfa6b3-082e-48c6-a60b-d0c7ddadc7d1"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Inputs Pane
+for Hierarchical Extraction </span><br /><div class="imagecenter"><img class="image imagecenter" height="82" src="../graphics/CI_Hcells.gif" width="253" /></div><br /></div>
+</div></li>
+<li class="li substep" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__idf930cd96-1aa1-456d-9a48-c1d0fb99c1be"><span class="ph cmd">Click the <span class="ph uicontrol bold">Outputs</span> button in the left pane.
+Set Extraction Mode to <span class="ph uicontrol bold">xRC</span>.</span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__ide033f769-94b0-4c79-8c77-a5e17378afb6"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Set Extraction Mode</span><br /><div class="imagecenter"><img class="image imagecenter" height="65" src="../graphics/bem_extraction_mode_hier_c.gif" width="217" /></div><br /></div>
+</div></li>
+<li class="li substep" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id8126ef81-ca3c-4854-be1f-338b4e1c56c9"><span class="ph cmd">In the area above the tabs,
+set Extraction Type to <span class="ph uicontrol bold">Hierarchical</span></span><div class="itemgroup info SubStepInfo"><div class="fig fignone" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__ida7a9831c-992c-4574-899c-6b434e170a0e"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Outputs Pane
+for Hierarchical Extraction.</span><br /><div class="imagecenter"><img class="image imagecenter" height="65" src="../graphics/BEM_extraction_type_hier_c.gif" width="217" /></div><br /></div>
+</div></li>
+</ol>
+</li>
+<li class="li step" id="id018370c3-f576-4b31-9ae2-57cec6f45ab9__id0843e2b0-8940-4fd8-9963-1e0a3fddcfca"><span class="ph cmd">Set other controls as needed.
+When ready, click the <span class="ph uicontrol bold">Run PEX</span> button
+in the left pane.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Check the Transcripts pane to verify
+the run completed with no errors. If you have selected “View netlist
+after PEX finishes” in the Outputs pane, a text viewer appears with
+the generated netlist loaded.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RunningFullHierarchicalMixedSignalHierarchicalExtraction_id2e60a39b.html" title="The difference between full hierarchical extraction and mixed-signal hierarchical extraction is whether or not all xcells are extracted in full and independent of the layout. The xcell file specifies whether each cell is a “regular” cell (no flag or a -c) to be extracted in full or a primitive cell (-p) and not extracted. The invocation and SVRF file are identical.">Running Full Hierarchical and Mixed-Signal Hierarchical Extraction</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/MGCChap_GettingStartedParasiticExtractionUsingCalibreInteractive_id23ac5840.html#id23ac5840-c5d8-42ba-98cc-3057288e19c9__" title="The Calibre xRC tool can be run from Calibre’s Graphical User Interface (GUI) tool known as Calibre Interactive.">Getting Started: Parasitic Extraction Using Calibre Interactive</a></div>
+<div><a class="link" href="../topics/Concept_HierarchicalMemoryExtraction_id6d29ac86.html#id6d29ac86-b808-4bdc-bb5b-0b589d9d62eb__" title="Hierarchical memory extraction (-xcell -full) extracts data for each user-defined cell as well as the top level of the design. You can nest any number of cells making it ideal for memory arrays. Each cell is extracted only once, which shortens extraction time and netlist size.">Hierarchical Memory Extraction</a></div>
+<div><a class="link" href="../topics/MGCChap_BasicExtractionMethods_idbd45771e.html#idbd45771e-9f73-4814-8816-6b870611981f__" title="This chapter provides procedures for common extraction runs using both the command-line interface and the Calibre Interactive GUI. Each procedure details the minimum required steps.">Basic Extraction Methods</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Creating a Hierarchical Netlist from Calibre Interactive"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingHierarchicalNetlistFromCalibreInteractive_id018370c3.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

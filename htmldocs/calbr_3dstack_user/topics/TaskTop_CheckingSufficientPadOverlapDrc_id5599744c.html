@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Checking For Sufficient Pad Overlap (DRC)" />
+<meta name="abstract" content="If a chip is placed slightly off of its target, or the geometry of the pads do not match exactly between chips, the pads may still be electrically connected, but not acceptable for manufacturing. The overlap tolerance must be checked to avoid false connected check reports." />
+<meta name="description" content="If a chip is placed slightly off of its target, or the geometry of the pads do not match exactly between chips, the pads may still be electrically connected, but not acceptable for manufacturing. The overlap tolerance must be checked to avoid false connected check reports." />
+<meta name="prodname" content="Calibre 3DSTACK User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_3dstack_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® 3DSTACK User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5599744c-706e-4d21-9b84-d6a57f3e324c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Checking For Sufficient Pad Overlap (DRC)</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Checking For Sufficient Pad Overlap (DRC)" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5599744c-706e-4d21-9b84-d6a57f3e324c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Checking For Sufficient Pad Overlap (DRC)</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">If
+a chip is placed slightly off of its target, or the geometry of
+the pads do not match exactly between chips, the pads may still
+be electrically connected, but not acceptable for manufacturing.
+The overlap tolerance must be checked to avoid false connected check
+reports.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__idb08fc367-049b-4bb7-80f1-d6397160d0f1"><p class="p">Completion
+of “<a class="xref fm:HeadingAndPage" href="Contain_WritingAssemblyOperationsInCalibre3dstackRuleFile_id4767b309.html#id4767b309-4483-4974-a040-5a59ef4ebffe__Contain_WritingAssemblyOperationsInCalibre3dstackRuleFile_id4767b309.xml#id4767b309-4483-4974-a040-5a59ef4ebffe" title="Before writing any rule checks for your 3D-IC, you must define the layouts, layers, location, and text for the dies, and the layer connectivity. These rule file components are called assembly operations.">Writing Assembly Operations in the Calibre 3DSTACK Rule File</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__id0aadaccf-c383-44ea-9599-a66967467787"><span class="ph cmd">Open your <span class="ph filepath">3dstack.rules</span> rule
+file.</span></li>
+<li class="li step stepexpand" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__idbfbc3b49-716e-4bcd-bd2e-24ee91d1cfc5"><span class="ph cmd">To check for sufficient pad
+overlap by the percentage of the overlap, add <a class="xref fm:HeadingOnly" href="Command_Overlap_id96690c5e.html#id96690c5e-8356-406d-9cd6-5532cff77f70__Command_Overlap_id96690c5e.xml#id96690c5e-8356-406d-9cd6-5532cff77f70" title="Checks for sufficient overlap between two placed layers.">overlap</a> commands after the assembly operations
+as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>overlap -check_name "OVERLAP_PAD_TO_BUMP" \
+	-layer_type1 pad \
+	-layer_type2 bump \
+	-constraint " &lt; 99" -intersection \
+	-comment "Pad overlap must be greater than 90%!"</code></pre><p class="p">In this case, if the overlap
+between the controller and interposer pads is not greater than 90%,
+then the rule check fails.</p>
+</div></li>
+<li class="li step stepexpand" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__id9c3a3070-4013-4100-9c9e-55432a6b5217"><span class="ph cmd">To specify the pad overlap
+by the area of the overlap, use the -by_area command as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>overlap -check_name "OVERLAP_PAD_TO_BUMP_AREA" \
+	-layer_type1 pad \
+	-layer_type2 bump \
+	-constraint " &lt; 13" -intersection \
+	-comment "Pad overlap must be greater than 13 um^2!" </code></pre><p class="p">In this case, if the overlap
+between the controller and interposer pads is not greater than 13
+um<span class="ph FontProperty LiteralSuperScript">2</span>,
+then the rule check fails.</p>
+</div></li>
+<li class="li step stepexpand" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__id66eb04b8-95ef-4c1d-8c8e-ddee9df59afb"><span class="ph cmd">Save the rule file and close
+it.</span></li>
+<li class="li step stepexpand" id="id5599744c-706e-4d21-9b84-d6a57f3e324c__ide3553320-6e4b-4415-80ac-5d54dd1e9b2a"><span class="ph cmd">Continue to “<a class="xref fm:HeadingAndPage" href="TaskTop_RunningCalibre3dstackVerificationFromCommandLine_iddc020bee.html#iddc020bee-8421-4fed-8fd0-a2c5125952a2__TaskTop_RunningCalibre3dstackVerificationFromCommandLine_iddc020bee.xml#iddc020bee-8421-4fed-8fd0-a2c5125952a2" title="You must have a complete rules file before running Calibre 3DSTACK from the command line.">Running a Calibre 3DSTACK Verification from the Command Line</a>”.</span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_WritingVerificationChecksInCalibre3dstackRuleFile_id0b200312.html" title="LVS and DRC rules are written using Calibre 3DSTACK rule file commands.">Writing Verification Checks in the Calibre 3DSTACK Rule File</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_3dstack_user"
+                DocTitle = "Calibre® 3DSTACK User’s Manual"
+                PageTitle = "Checking For Sufficient Pad Overlap (DRC)"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CheckingSufficientPadOverlapDrc_id5599744c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® 3DSTACK User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

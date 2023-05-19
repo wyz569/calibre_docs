@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="CUSTOM::VARIABLE" />
+<meta name="abstract" content="Inserts a Variable statement in the Calibre Interactive control file, or defines a Tcl variable in the case of TVF rule files." />
+<meta name="description" content="Inserts a Variable statement in the Calibre Interactive control file, or defines a Tcl variable in the case of TVF rule files." />
+<meta name="prodname" content="Calibre Interactive User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id09d39077-a1ec-48e3-b87d-f2a6d4445bee" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CUSTOM::VARIABLE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CUSTOM::VARIABLE" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CUSTOM::VARIABLE</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Command
+type: Customization command for Calibre Interactive. </p>
+<p class="shortdesc">Inserts a Variable statement
+in the Calibre Interactive control file, or defines a Tcl variable
+in the case of TVF rule files.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">CUSTOM::VARIABLE</span> ‑<span class="keyword ParameterName Required">name </span><span class="keyword ParameterName RequiredReplaceable">var_name</span> <br />
+[-choices { <span class="keyword ParameterName OptionalReplaceable">“”</span> | <span class="keyword ParameterName OptionalReplaceable">choices_list</span> } [‑multi_choice {<span class="keyword ParameterName OptionalDefault">0</span>|1}] ] [-initval <span class="keyword ParameterName OptionalReplaceable">init_value</span>]<br />
+[‑vartype { <span class="keyword ParameterName OptionalDefault">auto</span> | numeric | string [‑<span class="keyword ParameterName Optional">file_browser</span> {<span class="keyword ParameterName OptionalDefault">0</span>|1}] | expression } ]<br />
+[-prompt <span class="keyword ParameterName OptionalReplaceable">prompt_text</span>] [‑tooltip <span class="keyword ParameterName OptionalReplaceable">tooltip_string</span>]  [‑multiline {0|1}]<br />
+[-boolean {0 | 1} [-select {0|1}] [-enable {0|1}]] [-display {0|1}] <br />
+[-tool {DRC | LVS | PEX | DFM | PERC | <span class="keyword ParameterName OptionalReplaceable">tool_list</span>}] [-tvf {<span class="keyword ParameterName OptionalDefault">0</span>|1}]<br />
+[‑vtype <span class="keyword ParameterName OptionalReplaceable">type</span>] [‑vcmd ‘[’ list <span class="keyword ParameterName OptionalReplaceable">v_proc</span> ‘]’ ]<br />
+[ {{-master <span class="keyword ParameterName OptionalReplaceable">master_spec</span>} [‑master_select {0 | <span class="keyword ParameterName OptionalDefault">1</span>}]} | ‑master_expr <span class="keyword ParameterName OptionalReplaceable">expr_spec </span>]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id7d8c4e5f-b01e-4ad9-8852-1d848a95a8c1"><span class="keyword ParameterName Required">-</span><span class="keyword ParameterName Required">name </span><span class="keyword ParameterName RequiredReplaceable">var_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required option and parameter that specifies the name of the variable
+output to the control file. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id20a9d96a-b311-4643-9074-c945fc49b990">-choices {“” | <span class="keyword ParameterName OptionalReplaceable">choices_list</span> } </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether a text entry
+field or a dropdown list with a list of choices is displayed for the
+control. </p>
+<ul class="ul"><li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idc87b8593-8d57-4367-9881-c80a9102b255"><p class="p">“” (empty string) — Display
+a text entry field for specifying the value of the variable. A text
+entry field is also displayed if the ‑choices argument is not included. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id3c5312cf-f4d7-45e3-ac39-4d9743691f9f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">choices_list</span> —
+Display a control button with a dropdown list of choices for the
+value of the variable. The values are displayed as mutually exclusive
+radio buttons. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">choices_list</span> can
+be specified in the following ways:</p>
+<ul class="ul"><li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__ida989b038-21ed-4980-b205-9fadfed45a73"><p class="p">A Tcl list of single elements.
+For a list of single elements, the values themselves are displayed
+in the dropdown list of the control button. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__iddbe941a0-806a-4c87-ac04-01b8fd2ed5c0"><p class="p">A Tcl list of two-element
+sublists. The first element is displayed in the fields of the dropdown
+list and the second element is the actual value. For example:</p>
+<pre class="pre codeblock leveled"><code>	{{"poly layer" 7} {"metal layer" 5}}</code></pre><p class="p">where the braces are required to
+indicate a Tcl list.</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idd1f24faf-cc1d-41f9-9c43-3e128a818308">‑multi_choice {<span class="keyword ParameterName OptionalDefault">0</span>|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether multiple items
+can be selected from the <span class="keyword ParameterName OptionalReplaceable">choices_list. </span>This
+switch and value can only be used if “-choices <span class="keyword ParameterName OptionalReplaceable">choices_list</span>”
+is specified. The default is 0, indicating that only one value can
+be selected. </p>
+<p class="p">If “‑multi_choice 1” is specified
+the ‑initval parameter may specify a list. See “<a class="xref fm:HeadingAndPage" href="#id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id00bec05f-18b3-48c8-b521-d3eead491070">Example 3: CUSTOM::VARIABLE with Multiple Selections</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id66413d32-b0d5-43e7-9470-cbfa5bf5033d">-initval <span class="keyword ParameterName OptionalReplaceable">init_value </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies an initial value with
+one of the following choices:</p>
+<ul class="ul"><li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id8ac15ca4-b4ec-4190-9b65-c6d4133e628e"><p class="p">The default value from the
+‑choices list, if present.</p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idbd38d6fd-f37e-4bed-9ccb-20977ef84dd5"><p class="p">The initial value of the variable.
+This value appears in the text entry field if the ‑choices option
+is not specified or if ‑choices “” is specified.</p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">init_value</span> may
+be a list if “‑multi_choice 1” is used. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">init_value </span>is
+read and applied the first time the Customization GUI is opened
+or if the customization file changes; however, <span class="keyword ParameterName OptionalReplaceable">init_value </span>is
+overridden with the runset value if the runset option cmnCustomFileOverrideValues
+specifies a value for the control. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">init_value </span>is
+always applied if the Customization GUI is opened using the <span class="ph uicontrol">Load</span> button in
+the Customization Settings dialog box; the runset value specified
+with the runset option cmnCustomFileOverrideValues is not used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id1c6b9ffe-26ae-482f-a9a6-3c7277192756">‑vartype { <span class="keyword ParameterName OptionalDefault">auto</span> | numeric | string [‑file_browser {<span class="keyword ParameterName OptionalDefault">0</span>|1}] | expression } </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies how to interpret the
+input value for the variable and whether to surround the value with
+quotes. </p>
+<ul class="ul"><li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idefcb1b6d-8f93-4100-8a7a-54cbef3372db"><p class="p"><span class="keyword ParameterName OptionalDefault">auto</span> —
+This is the default. If the input value is a floating point number,
+write the value without quotes; otherwise, surround the value with
+double quotes. If embedded spaces are present, the value is interpreted
+as a list and each list element is surrounded by double quotes. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id1bd9fcfd-d3ab-43af-b744-8d2e2f675fd3"><p class="p">numeric — Interpret the input
+value as a number and do not surround it with double quotes. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id5076a603-8680-465e-849d-f41203eb89a1"><p class="p">string [‑file_browser {<span class="keyword ParameterName OptionalDefault">0</span>|1}] </p>
+<p class="p">string — Interpret the input
+value as a string and surround the value with double quotes. If
+embedded spaces are present, the value is interpreted as a list
+and each list element is surrounded by double quotes. </p>
+<p class="p">‑file_browser {<span class="keyword ParameterName OptionalDefault">0</span>|1}
+— Specifies whether or not to includes a file browser button with
+the control. The ‑file_browser option is only valid with “‑vartype
+string”. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id82250cff-1af8-4628-ab91-15c7db4faeb3"><p class="p">expression — Interpret the
+value as an expression and do not surround with double quotes. Embedded
+spaces are kept. </p>
+</li>
+</ul>
+<p class="p">Most of the possibilities for
+‑vartype and the corresponding output in the control file are shown
+in “Example 5: CUSTOM::VARIABLE with Different Variable Types.”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id4bb33fc4-7e95-4b0b-b945-a54037a5757d">-prompt <span class="keyword ParameterName OptionalReplaceable">prompt_text</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Places the string <span class="keyword ParameterName OptionalReplaceable">prompt_text </span>next
+to the control button or checkbox. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id96b43639-b35d-4583-b8f8-475df6ccba73">-tooltip <span class="keyword ParameterName OptionalReplaceable">tooltip_string</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a tooltip <span class="keyword ParameterName OptionalReplaceable">tooltip_string</span> for
+the control. Line breaks in <span class="keyword ParameterName OptionalReplaceable">tooltip_string</span> are
+preserved in the generated tooltip. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id6b7bddbb-2568-475c-9df5-770d5fd45314">‑multiline {0|1}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls whether the text entry box is a
+single line (0) or multiple lines (1). The default is 0. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id7f51b720-c8f3-4851-934d-8eacd9aa8613">-boolean {0|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls the display of the
+checkbox, where 1 specifies to display the checkbox. The default value
+is 0 (do not a checkbox) if ‑boolean is not specified.</p>
+<p class="p">If a checkbox is used, the Variable
+statement is written to the control file only when the checkbox
+is selected.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id2c1db5e9-8b3a-422b-9740-ab9e6dd1c96c">-select {0|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls the initial setting
+of the ‑boolean checkbox. The default value is 1 (selected) if this option
+is not specified. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id2f5e2450-90ea-47c8-80cf-2fbacd158b23">-enable {0|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls whether the ‑boolean
+checkbox is active (responds to user input). The default value is
+1 (enabled) if this option is not specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idb189a4c0-7592-45e8-a552-ec095f4470cd">-display {0|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls whether the control
+is displayed in the customization dialog box. The default value is
+1 (true) if this option is not specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id548d909f-a972-493e-8838-7700a1ff2f70">-tool {DRC | LVS | PEX | DFM | PERC | <span class="keyword ParameterName OptionalReplaceable">tool_list</span> } </dt>
+<dd class="dd ArgumentDescription"><p class="p">If included, the statement applies
+only to the specified tool(s). To specify more than one tool, provide
+a Tcl list; for example: {DRC DFM} </p>
+<p class="p">If ‑tool is not specified, the
+command applies to all tools.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id4dcfd997-b36b-4b35-8b54-487c46177af7">-tvf {0|1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Adds a Tcl variable to the Calibre
+Interactive control file when 1 is specified and you are using a
+TVF rule file. The default is 0 (false) if this option is not specified.
+If the option ‑tvf 1 is specified when not using a TVF rule file,
+the customization command does not output any statement to the control
+file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idb65ecabb-8d71-46f0-9c76-41c4ff0eaba9">‑vtype <span class="keyword ParameterName OptionalReplaceable">type</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Verify the type of the input
+if the control creates a text entry field. The parameter <span class="keyword ParameterName OptionalReplaceable">type</span> is
+one of the following:</p>
+<ul class="ul"><li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id48d02b48-4c5b-4105-a617-7267de6fd9bb"><p class="p">none — Any type is accepted.
+This is the default if the ‑vtype option is not specified. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idd91f3e9f-f777-475f-a0c0-49d6cdc1534d"><p class="p">nospaces — No spaces are allowed
+in the input. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id73353b1b-936a-46d0-b05a-157ba1bbcba3"><p class="p">integer — Integer input. </p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id081c3bf4-c23a-461c-93b9-a90b3eb6e07e"><p class="p">float — Floating point input.
+Scientific notation is accepted; for example: -54.3E6.</p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idd253eb64-dc6b-479e-995f-a7667ae28799"><p class="p">nonnegint — Non negative integer
+input.</p>
+</li>
+<li class="li" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__ideb8a138b-4ed6-4239-a4a9-b77b6181fa66"><p class="p">nonnegreal — Non negative
+floating point input. Scientific notation is not accepted.</p>
+</li>
+</ul>
+<p class="p">Input that does not satisfy
+the specified type is ignored. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id54846a20-ad2c-4135-aa71-80d38f41cd2a">‑vcmd ‘[’ list <span class="keyword ParameterName OptionalReplaceable">v_proc</span> ‘]’ </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a Tcl procedure <span class="keyword ParameterName OptionalReplaceable">v_proc</span> to
+call in order to perform input verification for controls that create
+a text entry field. The brackets are required to cause command substitution.
+The procedure <span class="keyword ParameterName OptionalReplaceable">v_proc</span> should
+return 1 if the input is acceptable and return 0 otherwise. See “<a class="xref fm:HeadingAndPage" href="Concept_InputTypeCheckingCustomizationGuiEntryFields_id50e3c784.html#id50e3c784-a1a4-4b7b-9322-e0a7d3750f57__Concept_InputTypeCheckingCustomizationGuiEntryFields_id50e3c784.xml#id50e3c784-a1a4-4b7b-9322-e0a7d3750f57" title="You can have the customization GUI verify that the input for a text entry field is of the correct type. The CUSTOM::DEFINE and CUSTOM::VARIABLE commands allow text entry fields and input type checking.">Input Type Checking for Customization GUI Entry Fields</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__idf2896fa2-f21c-46e8-8f1f-92ff546c0a5e">{{-master <span class="keyword ParameterName OptionalReplaceable">master_spec</span>} [‑master_select {0 | <span class="keyword ParameterName OptionalDefault">1</span>}]} | ‑master_expr <span class="keyword ParameterName OptionalReplaceable">expr_spec </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword and parameter set that specifies the current control as
+a dependent control to another primary control in the customization
+file. In other words, this option specifies that the appearance
+of this GUI object in the customization window depends on the value
+of another control referenced by <span class="keyword ParameterName OptionalReplaceable">master_spec</span> or <span class="keyword ParameterName OptionalReplaceable">expr_spec</span>. </p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="General_MasterSlaveCommands_id75547f19.html#id75547f19-e68d-4e2d-98e9-d5e369035716__General_MasterSlaveCommands_id75547f19.xml#id75547f19-e68d-4e2d-98e9-d5e369035716" title="You can specify that the visibility of one control (the dependent control) depends on the state of one or more other controls (the primary) in the customization file.">Primary-Dependent Commands</a>” for a complete description
+of using the ‑master option.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Inserts a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Variable', 'svrf_ur'); return false;">Variable</a> statement
+in the Calibre Interactive control file. It displays either a text
+entry field (the default) or a button with a dropdown list (‑choices <span class="keyword ParameterName OptionalReplaceable">choices_list</span>).
+Multiple items from the <span class="keyword ParameterName OptionalReplaceable">choices_list</span> may
+be selected if “‑multi_choice 1” is specified. </p>
+<p class="p">If the Variable value is a string
+(‑vartype string), the option “‑file_browser 1” can be specified to
+include a file browser button with the control.</p>
+<p class="p">The variable must be set to a value
+(not an empty string or white space) for the Variable statement
+to be written to the control file.</p>
+<p class="p">If “‑tvf 1” is included, a Tcl
+variable is defined in the Calibre Interactive control file rather
+than adding a Variable statement. Two statements are added to the
+control file: a Tcl set command and a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'tvfset_global_variable', 'svrf_ur'); return false;">tvf::set_global_variable</a> command. </p>
+<p class="p">The ‑vtype and ‑vcmd switches are
+used to specify type checking for input fields. The input type checking
+performed with ‑vtype float and nonnegreal only checks that the
+input characters are valid for the specified type—checking for valid
+numbers is not performed. See “<a class="xref fm:HeadingAndPage" href="Concept_InputTypeCheckingCustomizationGuiEntryFields_id50e3c784.html#id50e3c784-a1a4-4b7b-9322-e0a7d3750f57__Concept_InputTypeCheckingCustomizationGuiEntryFields_id50e3c784.xml#id50e3c784-a1a4-4b7b-9322-e0a7d3750f57" title="You can have the customization GUI verify that the input for a text entry field is of the correct type. The CUSTOM::DEFINE and CUSTOM::VARIABLE commands allow text entry fields and input type checking.">Input Type Checking for Customization GUI Entry Fields</a>” for more information and examples. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id2225ed07-92b8-4b3d-959f-70fe400a9a67"><h2 class="title Subheading sectiontitle">Example 1: CUSTOM::VARIABLE</h2><p class="p">This example generates a “Variable
+“RES_TOL” 1” statement in the rule file for all Calibre runs. A
+text entry field with the prompt “var RES_TOL” is displayed in the
+Customization Settings dialog box for all tools.</p>
+<pre class="pre ShellCommand">CUSTOM::VARIABLE ‑name "RES_TOL" -initval 1 -prompt "var RES_TOL" </pre>
+</div>
+<div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id819eb5fb-a6f4-484f-b48a-68f8d05a6e99"><h2 class="title Subheading sectiontitle">Example 2: CUSTOM::VARIABLE
+with Choices List</h2><p class="p">This example generates a default “Variable
+“DEPTH” ALL” statement in the control file for a Calibre Interactive
+nmLVS run. A “Text Depth:” prompt appears in the Customization Settings dialog
+box. A button with a dropdown list is displayed, where the selections
+in the list are ALL, PRIMARY, 1, 2, and NONE.</p>
+<pre class="pre codeblock leveled"><code>CUSTOM::VARIABLE -name "DEPTH" -choices {ALL PRIMARY 1 2 NONE} \
+     -prompt "Text Depth: " -tool LVS</code></pre><p class="p">This displays the following control
+with a dropdown list of choices:</p>
+<p class="p"><img class="image fmdpi:96" src="../graphics/customization/custom_text_depth.gif" /></p>
+</div>
+<div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id00bec05f-18b3-48c8-b521-d3eead491070"><h2 class="title Subheading sectiontitle">Example 3: CUSTOM::VARIABLE
+with Multiple Selections</h2><pre class="pre codeblock leveled"><code>CUSTOM::VARIABLE -name "LISTVAR_J" -initval [list 1 3] \
+	-choices {1 2 3 4} -multi_choice 1 \
+	-prompt "List Variable J" </code></pre><p class="p">This displays the following control
+with a dialog to choose selections:</p>
+<p class="p"><img class="image fmdpi:96" src="../graphics/customization/variable_multi_choice.gif" /></p>
+<p class="p">The following SVRF statement is
+added to the control file:</p>
+<pre class="pre codeblock leveled"><code>VARIABLE "LISTVAR_J" "1" "3" </code></pre></div>
+<div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id6738afb6-50c8-4b43-92c2-8ea550dd758a"><h2 class="title Subheading sectiontitle">Example 4: CUSTOM::VARIABLE
+with Multiple Selections and TVF Output</h2><p class="p">If a TVF rule file is used and “‑tvf
+1” is included in the CUSTOM::VARIABLE statement for “Example 3:
+CUSTOM::VARIABLE with Multiple Selections”, the following Tcl code
+is added to the control file:</p>
+<pre class="pre codeblock leveled"><code>#!tvf
+
+## +++ TVF CUSTOMIZATION SETTINGS START +++ 
+
+set VAR_J "1 3"
+tvf::set_global_variable VAR_J "1 3"
+
+## +++ TVF CUSTOMIZATION SETTINGS END +++ </code></pre></div>
+<div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id30578046-660e-4147-b459-9dc4c4f2f8b5"><h2 class="title Subheading sectiontitle">Example 5: CUSTOM::VARIABLE
+with Different Variable Types</h2><p class="p">The ‑vartype switch specifies how
+to interpret the input value. The following customization file demonstrates
+the use of the ‑vartype switch.</p>
+<pre class="pre codeblock leveled"><code>CUSTOM::VARIABLE -name "num_auto" -initval "2300" -vartype auto \
+	-prompt "number, auto type"
+
+CUSTOM::VARIABLE -name "num_string" -initval "2300" -vartype string \
+	-prompt "number, string type"
+
+CUSTOM::VARIABLE -name "num_numeric" -initval "2300" -vartype numeric \
+	-prompt "number, numeric type"
+
+CUSTOM::VARIABLE -name "mixed_auto" -initval "34xyz"  -vartype auto \
+	-prompt "mixed value, auto type"
+
+CUSTOM::VARIABLE -name "mixed_string" -initval "34xyz"  -vartype string \
+	-prompt "mixed value, string type"</code></pre><pre class="pre codeblock leveled"><code># control has a file browser to select a filepath for the filename string 
+CUSTOM::VARIABLE -name "map_filepath" -initval "map.txt"  \
+	-vartype string -file_browser 1 -prompt "map file"
+
+# This control causes an error since 34xyz is not a valid number
+#CUSTOM::VARIABLE -name "mixed_numeric" -initval "34xyz"  \
+# 	-vartype numeric -prompt "mixed value, numeric type"
+
+CUSTOM::VARIABLE -name "var_list" -initval "23 24" -vartype auto \
+	-prompt "list, auto type"</code></pre><pre class="pre codeblock leveled"><code># assign a value to var_num for use in the expression in the next control
+CUSTOM::VARIABLE -name var_num -initval 10 \
+	-prompt "enter var_num for expression"
+
+CUSTOM::VARIABLE -name "var_expression" -initval "(var_num *2) + 5"  \
+	-vartype expression -prompt "Var_num with expression"
+
+CUSTOM::VARIABLE -name MGC_HOME -initval ENVIRONMENT \
+	-vartype expression -display 0</code></pre><p class="p">The above customization file results
+in the following output to the control file by default:</p>
+<pre class="pre codeblock leveled"><code>// +++ CUSTOMIZATION SETTINGS START +++ 
+
+VARIABLE "num_auto" 2300
+VARIABLE "num_string" "2300"
+VARIABLE "num_numeric" 2300
+VARIABLE "mixed_auto" "34xyz"
+VARIABLE "mixed_string" "34xyz"
+VARIABLE "map_filepath" "map.txt"
+VARIABLE "var_list" "23" "24"
+VARIABLE "var_num" 10
+VARIABLE "var_expression" (var_num *2) + 5
+VARIABLE "MGC_HOME" ENVIRONMENT
+
+// +++ CUSTOMIZATION SETTINGS END +++ </code></pre></div>
+<div class="section Subsection" id="id09d39077-a1ec-48e3-b87d-f2a6d4445bee__id40dbd654-dfe9-44df-aaaa-0f0460f7e7dc"><h2 class="title Subheading sectiontitle">Example 6: TVF Output
+for CUSTOM::VARIABLE</h2><p class="p">This example uses the ‑tvf option.</p>
+<pre class="pre codeblock leveled"><code>CUSTOM::VARIABLE -name var_tvfX -initval "procA" -tvf 1 -prompt "var_tvfX" </code></pre><p class="p">This code produces the following output
+in the TVF control file:</p>
+<pre class="pre codeblock leveled"><code>#!tvf
+
+## +++ TVF CUSTOMIZATION SETTINGS START +++ 
+
+set var_tvfX "procA"
+tvf::set_global_variable var_tvfX "procA"
+
+## +++ TVF CUSTOMIZATION SETTINGS END +++ 
+</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CustomizationCommands_idae3eb40c.html" title="The customization commands allow you to construct the Customization GUI.">Customization Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_user"
+                DocTitle = "Calibre® Interactive™ User’s Manual"
+                PageTitle = "CUSTOM::VARIABLE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Customvariable_id09d39077.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

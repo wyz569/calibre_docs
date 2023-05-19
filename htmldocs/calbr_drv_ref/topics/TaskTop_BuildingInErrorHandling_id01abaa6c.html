@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Building in Error Handling" />
+<meta name="abstract" content="The code you have written thus far displays a message box telling you the hierarchy was written successfully to the file. In this procedure you modify the Tcl script to include some error handling capability. You use the Tcl catch command to track whether a script returns an error, add conditional statements using if and if … else, and then use the Tcl return command to exit the procedure." />
+<meta name="description" content="The code you have written thus far displays a message box telling you the hierarchy was written successfully to the file. In this procedure you modify the Tcl script to include some error handling capability. You use the Tcl catch command to track whether a script returns an error, add conditional statements using if and if … else, and then use the Tcl return command to exit the procedure." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id01abaa6c-de95-4f90-8604-6d44035d5335" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Building in Error Handling</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Building in Error Handling" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id01abaa6c-de95-4f90-8604-6d44035d5335">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Building in Error Handling</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc Required">The code you have written thus far
+displays a message box telling you the hierarchy was written successfully
+to the file. In this procedure you modify the Tcl script to include
+some error handling capability. You use the Tcl catch command to
+track whether a script returns an error, add conditional statements
+using if and if … else, and then use the Tcl <span class="keyword ParameterName Required">return</span> command
+to exit the procedure.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id7e194f2d-0908-409a-b28b-f9bf416d5341"><p class="p">Calibre
+DESIGNrev is running in interactive GUI mode and a layout is loaded</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id1ddb6cde-a62c-4cfd-b0b4-ff5268939a43"><span class="ph cmd">In the file <span class="ph filepath italic">write_hier.tcl</span>,
+edit the command procedure write_hier:</span><div class="itemgroup info StepInfo"><p class="p">Replace the line:</p>
+<pre class="pre codeblock leveled"><code>set fileID [open $File w]</code></pre><p class="p">With:</p>
+<pre class="pre codeblock leveled"><code>if [catch {open $File w} errMsg] { 
+	tk_messageBox -message "$errMsg"}</code></pre><p class="p">Here you use the if command
+to set up a conditional statement. The syntax is:</p>
+<pre class="pre codeblock leveled"><code>if &lt;condition&gt; &lt;action&gt;</code></pre><p class="p">If &lt;condition&gt; is TRUE,
+yes, or a non-zero value, the Tcl interpreter performs the &lt;action&gt;.
+Otherwise it skips those actions and moves on to the next portion
+of the script.</p>
+<p class="p">Because the Tcl open command
+used with the “w” argument opens the file for writing, the command
+returns an error if you do not have write permission for the file. You
+can write the &lt;condition&gt; based on whether or not you can open
+the file.</p>
+<p class="p">The Tcl catch command tracks
+whether or not a script<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a> returns an error.
+If a script executes successfully, catch returns 0. If the script
+does not execute successfully, it returns an error code.</p>
+<p class="p">The catch command takes an
+optional second argument, which is the name of a variable. If the
+script executes successfully, catch sets the variable to the value
+returned by the command. If the script does not execute successfully,
+catch sets the variable to the error message generated by the script.
+Using this optional argument, you can keep track of the file address,
+as you did in the original code.</p>
+<p class="p">The &lt;action&gt; portion of
+the if statement defines what to do if the &lt;condition&gt; occurs.
+If an error occurs, you want to display a message box telling the
+user of the problem. The easiest way is to display the actual error
+message, which catch saves to the variable errMsg. Thus, the &lt;action&gt;
+is:</p>
+<pre class="pre codeblock leveled"><code>tk_messageBox -message $errMsg </code></pre></div></li>
+<li class="li step stepexpand" id="id01abaa6c-de95-4f90-8604-6d44035d5335__idc2917630-6b6e-46de-83ad-c7c879c10fa6"><span class="ph cmd">Save <span class="ph filepath italic">write_hier.tcl</span> and
+test it:</span><ol type="a" class="ol substeps"><li class="li substep" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id885c1d65-7de2-4a01-93e4-816f45c1c482"><span class="ph cmd">In the shell window, source <span class="ph filepath italic">write_hier.tcl.</span></span></li>
+<li class="li substep" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id76cf2a53-a226-4ea4-9e17-aced6c29f1ef"><span class="ph cmd">In the GUI, select “my macro”
+from the Macros menu.</span></li>
+<li class="li substep" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id0e1d5446-5c40-46b7-8a18-a1f2c1fa48db"><span class="ph cmd">When the browser pops up,
+navigate to a file for which you do not have write permission.</span></li>
+<li class="li substep" id="id01abaa6c-de95-4f90-8604-6d44035d5335__idaf369008-aa5a-42c9-b8d1-148b710bfa65"><span class="ph cmd">Select the file and click <span class="ph uicontrol">Save</span>.</span></li>
+<li class="li substep" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id9055e8e6-7b78-4111-a060-d305b2e15a62"><span class="ph cmd">When the macro displays a
+message box containing the error, click <span class="ph uicontrol">OK</span>.</span><div class="itemgroup info SubStepInfo"><p class="p">Before exiting, the macro displays
+the message box telling you the file was successfully written (which
+is not true). Click <span class="ph uicontrol">OK</span>. In the next steps,
+you fix this problem.</p>
+</div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id8933624c-0a84-4930-ad55-96b3f323827f"><span class="ph cmd">Edit <span class="ph filepath italic">write_hier.tcl</span>,
+adding the following line inside the &lt;action&gt; for the if statement:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>if [catch {open $File w} errMsg] { 
+   tk_messageBox -message "$errMsg" 
+   return "file_error"}</code></pre><p class="p">The Tcl <span class="keyword ParameterName Required">return</span> command
+exits the procedure it is in. It also passes the string you define,
+in this case “file_error”, back to the program as the <span class="ph FontProperty emphasis">return value</span><a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a> for the procedure.</p>
+</div></li>
+<li class="li step stepexpand" id="id01abaa6c-de95-4f90-8604-6d44035d5335__id10bac15a-055a-4a10-8f1a-5df9e59dd544"><span class="ph cmd">In the file <span class="ph filepath italic">write_hier.tcl</span>,
+edit the command procedure write_hier.</span><div class="itemgroup info StepInfo"><p class="p">Replace the line:</p>
+<pre class="pre codeblock leveled"><code>write_hier $wbHandle $filename 
+tk_messageBox -message "The layout hier was successfully written." \
+      -type OK </code></pre><p class="p">With:</p>
+<pre class="pre codeblock leveled"><code>set return [write_hier $wbHandle $filename] 
+   if {$return == "file-error"} { 
+      return 
+   } else { 
+      tk_messageBox -message "The layout hier was successfully \
+         written” -type ok 
+   } </code></pre><p class="p">The replacement code creates
+a conditional statement controlling whether to display the message
+box telling you the layout was successfully written.</p>
+<p class="p">First, it uses the set command
+to track the value returned by the write_hier procedure.</p>
+<p class="p">It then uses an if statement
+to check what the return value was. If the return value was “file-error”
+it exits the macro entirely. The else portion of this statement
+defines an &lt;action&gt; to perform if the &lt;condition&gt; is not met.
+In this case, the action is to display the macro successful message
+box.</p>
+</div></li>
+<li class="li step stepexpand" id="id01abaa6c-de95-4f90-8604-6d44035d5335__idb160d394-a621-4def-a8be-fa952aa8fda8"><span class="ph cmd">Save <span class="ph filepath italic">write_hier.tcl</span> and
+test it using the process described in step 2. Notice that this
+time the macro completes after displaying the error message.</span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExplorationsInCreatingMacros_id35535188.html" title="Examples are used to explore the process of creating a simple macro that writes the hierarchy of the current layout to a file the user specifies.">Explorations in Creating Macros</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  The term script refers
+to a block of code returning a single value. It can be a single
+command, a procedure, or a full program.</div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  The return value for a procedure is the data it
+returns on completion. By default, the return value is the return
+value for the last command executed in the procedure. The Tcl return
+statement lets you control what this is. In many cases, you ignore
+the return value from a procedure.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Building in Error Handling"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_BuildingInErrorHandling_id01abaa6c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

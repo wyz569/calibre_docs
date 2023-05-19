@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="Calibre DefectReview Command Line Interface Syntax" />
+<meta name="abstract" content="The Calibre DefectReview command line interface executable contains a number of options to run from the command line. There are two invocation modes. The first mode is the default -m review mode and works with the inspection file. The second mode is the -m pcserver mode. In this case, Calibre DefectReview runs as a server to monitor a particular shared folder for inspection files. It picks the inspection file automatically and runs Calibre DefectClassify on it, saving the result to the database for further analysis." />
+<meta name="description" content="The Calibre DefectReview command line interface executable contains a number of options to run from the command line. There are two invocation modes. The first mode is the default -m review mode and works with the inspection file. The second mode is the -m pcserver mode. In this case, Calibre DefectReview runs as a server to monitor a particular shared folder for inspection files. It picks the inspection file automatically and runs Calibre DefectClassify on it, saving the result to the database for further analysis." />
+<meta name="prodname" content="Calibre DefectReview User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_defrev_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DefectReview™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="none" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre DefectReview Command Line Interface Syntax</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre DefectReview Command Line Interface Syntax" />
+<meta name="attributes" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre DefectReview Command Line Interface Syntax</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">The Calibre
+DefectReview command line interface executable contains a number
+of options to run from the command line. </p>
+<p class="shortdesc">There are two invocation modes.
+The first mode is the default -m review mode and works with the
+inspection file. The second mode is the -m pcserver mode. In this
+case, Calibre DefectReview runs as a server to monitor a particular
+shared folder for inspection files. It picks the inspection file
+automatically and runs Calibre DefectClassify on it, saving the
+result to the database for further analysis. </p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine">The following is the -m review mode syntax (default):</p>
+<p class="lines UsageLine">{<span class="keyword ParameterName Required">NxDAT_cli.exe</span> | <span class="keyword ParameterName Required">nxdat</span>}[-m review] <br />
+{{<span class="keyword ParameterName Required">-c</span> | <span class="keyword ParameterName Required">--cli</span>} [<span class="keyword ParameterName RequiredReplaceable">tcl_filename</span>]} [-h | --help] [-v | -version] <br />
+[{-r | --reference} &lt;<span class="keyword ParameterName OptionalReplaceable">ref_name</span>&gt;] [{-i | --inspections} <span class="keyword ParameterName OptionalReplaceable">insp_name</span>] [{-d |-- dir} <span class="keyword ParameterName OptionalReplaceable">dir_name</span>] <br />
+[{-e | --exitstatus} <span class="keyword ParameterName OptionalReplaceable">log_file</span>}]</p>
+<p class="lines UsageLine">The following is the -m pcserver mode syntax: </p>
+<p class="lines UsageLine">{<span class="keyword ParameterName Required">NxDAT_cli.exe</span> | <span class="keyword ParameterName Required">nxdat</span>}<span class="keyword ParameterName Required">-m </span><span class="keyword ParameterName Required">pcserver</span> <br />
+{<span class="keyword ParameterName Required">-q</span> | <span class="keyword ParameterName Required">--enfolder</span>} <span class="keyword ParameterName RequiredReplaceable">foldername</span><br />
+{<span class="keyword ParameterName Required">-r</span> | <span class="keyword ParameterName Required">--lrffolder</span>} <span class="keyword ParameterName RequiredReplaceable">insp_folder_name</span><br />
+{<span class="keyword ParameterName Required">-p</span> | <span class="keyword ParameterName Required">--configfile</span>} <span class="keyword ParameterName RequiredReplaceable">name</span><br />
+{-t | --retry}<span class="keyword ParameterName OptionalReplaceable"> num</span><br />
+{-x | --timeout} <span class="keyword ParameterName OptionalReplaceable">time</span></p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id9a149483-4d14-4f1a-8351-27b09ac9105b">{<span class="keyword ParameterName Required">-c </span>|<span class="keyword ParameterName Required">--cli</span>} [<span class="keyword ParameterName RequiredReplaceable">tcl_filename</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword that instructs
+Calibre DefectReview to run in command line mode without a GUI.
+The <span class="keyword ParameterName RequiredReplaceable">tcl_filename</span> optionally
+specifies a Tcl-based batch script file (see “<a class="xref fm:HeadingAndPage" href="Contain_CalibreNxdatTclScriptingCommands_id545106d3.html#id545106d3-5a6e-4f37-ac62-2a67cf79c759__Contain_CalibreNxdatTclScriptingCommands_id545106d3.xml#id545106d3-5a6e-4f37-ac62-2a67cf79c759" title="The Calibre DefectReview CLI supports a number of operations that can be scripted or recorded into a Tcl file.">Calibre DefectReview Tcl Scripting Commands</a>” for further information).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__idefef4ab0-69ca-4120-8559-ccdc30ea215d">-h | -- help</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that lists
+the supported command line options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id7b39bcf8-d5fd-4c07-95a6-31f16a6f240c">-v | --version </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that displays
+the Calibre DefectReview version number.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id8b4e384a-0fdb-49a1-bcdb-a60f36fc5042">{-r | --reference} <span class="keyword ParameterName OptionalReplaceable">ref_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies
+the name of the reference inspection.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id60a451e0-fbd2-46e7-82e5-e5ccb7a7c92b">{-i | --inspections} <span class="keyword ParameterName OptionalReplaceable">insp_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that displays
+a list of inspections related to a specified inspection file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id884366a3-e760-4c6c-bf46-7edb44191165">{-d | --dir} <span class="keyword ParameterName OptionalReplaceable">dir_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies
+a directory containing inspection files.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id713e5572-a8bc-43a5-841a-adb569613928">{-e | --exitstatus} <span class="keyword ParameterName OptionalReplaceable">log_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies
+a log file to store the exit status.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id156792a3-915e-4ff5-b5a2-11ab7a26c850">{<span class="keyword ParameterName Required">-q</span> | <span class="keyword ParameterName Required">--enfolder</span>} <span class="keyword ParameterName RequiredReplaceable">foldername</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword used by -m pcserver mode
+that specifies the folder name containing END files. The search
+method is recursive.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id5e242125-f147-49ae-a1b3-f4ce50d34044">{<span class="keyword ParameterName Required">-r</span> | <span class="keyword ParameterName Required">--lrffolder</span>} <span class="keyword ParameterName RequiredReplaceable">insp_folder_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument used by -m pcserver
+mode if you want to run Calibre DefectReview to monitor a particular
+shared folder for inspection files. Calibre DefectReview picks the inspection
+file automatically and runs Calibre DefectClassify (refer to the <a class="xref LinkItalic" href="../../calbr_defclass_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_defclass_user'); return false;">Calibre DefectClassify User’s Manual</a> for details) on it and saves the result to
+the database for further analysis (see “<a class="xref fm:HeadingAndPage" href="TaskTop_SavingResultsAutomaticallyInCliMode_id75b870c2.html#id75b870c2-5c35-4624-99d9-7acb1153310c__TaskTop_SavingResultsAutomaticallyInCliMode_id75b870c2.xml#id75b870c2-5c35-4624-99d9-7acb1153310c" title="The Calibre DefectReview command line interface can be configured to run Calibre DefectClassify automatically and save the results to a database. Currently, this is supported only for LRF inspection reports (both lrfX700 and lrfX800 formats are supported).">Saving Calibre DefectClassify Results Automatically in CLI Mode</a>” for further
+details).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id181a3000-712d-4531-844e-ce12951e0f85">{<span class="keyword ParameterName Required">-p</span> | <span class="keyword ParameterName Required">--configfile</span>} <span class="keyword ParameterName RequiredReplaceable">name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument used by -m pserver mode
+that specifies the configuration file or folder name. For further
+details, refer to the <a class="xref LinkItalic" href="../../calbr_defclass_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_defclass_user'); return false;">Calibre DefectClassify User’s Manual</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id23e56118-58a3-4139-9612-2cacdd2846ea">{-t | -- retry} <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword used by -m pcserver
+mode that specifies the number of retries to run Calibre DefectClassify
+if it fails.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__ida01134e4-ed82-435e-b3ca-f9e73bf885e3">{-x | --timeout} <span class="keyword ParameterName OptionalReplaceable">time</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword used by -m pcserver
+mode that specifies the time (in seconds) to wait for a Calibre
+DefectClassify run to complete. The default value is 6 hours. Specify
+-1 to keep the tool from a timeout. This option should be used when
+a Calibre DefectClassify run takes longer than 6 hours.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Executes the Calibre DefectReview tool from the command line.
+You can also define the log file name under the ExitStatusLogFile
+node in the <span class="ph filepath">dat-ini.xml</span> file as shown in the
+following figure:</p>
+<div class="fig fignone" id="id8aea2c0f-4d4f-4c1f-9faa-ac3583b5f5e7__id6d831de0-b6d5-4403-b522-6d998c38eeb6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>ExitStatusLogFile
+Node</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/exit_status_log_file.jpg" /></div><br /></div>
+<p class="p">The log file path may be a relative or absolute file path. If
+you specify a relative path, the Calibre DefectReview creates the
+file in application directory on Windows (<span class="ph filepath">C:\DefectAnalysisTool\bin\</span>)
+and in your workspace on Linux (<span class="ph filepath">$HOME/.calibrenx_workspace</span>).
+If the file path contains any director name (for example <span class="ph filepath">C:\reports\cli_activation_log.txt</span>),
+you must create the directory (you must also create the <span class="ph filepath">reports</span> directory)
+before running in CLI mode.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreNxdatCommandLineInterface_id43e97149.html" title="Calibre DefectReview supports an interface that enables you to interact with the tool using a command line. Batch scripts can be written in Tcl that can be loaded into Calibre DefectReview through the command line interface.">Calibre DefectReview Command Line Interface</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_defrev_user"
+                DocTitle = "Calibre® DefectReview™ User’s Manual"
+                PageTitle = "Calibre DefectReview Command Line Interface Syntax"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalibreNxdatCommandLineInterfaceSyntax_id8aea2c0f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DefectReview™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

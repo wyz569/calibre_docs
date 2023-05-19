@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="calcm_hmonitor_app.tcl" />
+<meta name="abstract" content="Retrieves the hardware information monitored in the CalScope or Ganglia server." />
+<meta name="description" content="Retrieves the hardware information monitored in the CalScope or Ganglia server." />
+<meta name="prodname" content="Calibre Cluster Manager (CalCM) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cm_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Cluster Manager (CalCM) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.1" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id95b3928e-6022-4e23-9a40-8d2221f0d7fc" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>calcm_hmonitor_app.tcl</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="calcm_hmonitor_app.tcl" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">calcm_hmonitor_app.tcl</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">Retrieves
+the hardware information monitored in the CalScope or Ganglia server.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Requires CalCM+ advanced features licenses. Refer to the <a class="xref LinkItalic" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_admin_gd'); return false;">Calibre Administrator’s Guide</a> for complete licensing information.</p>
+</div>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">APPLICATION TCL</span> <span class="keyword ParameterName RequiredReplaceable">path</span><span class="keyword ParameterName Required">/calcm_hmonitor_app.tcl</span> [ FILE ‘[’ </p>
+<p class="lines UsageLine">   [BASEURL = <span class="keyword ParameterName OptionalReplaceable">URL</span>]</p>
+<p class="lines UsageLine">   [CALSCOPEADD = <span class="keyword ParameterName OptionalReplaceable">flag</span>]</p>
+<p class="lines UsageLine">   [CALSCOPECLI = <span class="keyword ParameterName OptionalReplaceable">path</span>]</p>
+<p class="lines UsageLine">   [CALSCOPEREMOVE = <span class="keyword ParameterName OptionalReplaceable">boolean</span>]</p>
+<p class="lines UsageLine">   [CLUSTER = <span class="keyword ParameterName OptionalReplaceable">names</span>]</p>
+<p class="lines UsageLine">   [ENABLECALSCOPE = <span class="keyword ParameterName OptionalReplaceable">boolean</span>]</p>
+<p class="lines UsageLine">   [HOLDINTERVAL = <span class="keyword ParameterName OptionalReplaceable">sec</span>]</p>
+<p class="lines UsageLine">   [HOST = <span class="keyword ParameterName OptionalReplaceable">hostname</span>[<span class="keyword ParameterName OptionalReplaceable">:port</span>]]</p>
+<p class="lines UsageLine">   [RESETCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span>]</p>
+<p class="lines UsageLine">   [RESETINTERVAL = <span class="keyword ParameterName OptionalReplaceable">sec</span>]</p>
+<p class="lines UsageLine">   [RESETMASTERMAX = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [RESETREMOTEMAX = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [RETRYCOUNT = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">‘]’ ]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id8131add0-6fbe-47cb-be9a-c46bd7332b7e">BASEURL = <span class="keyword ParameterName OptionalReplaceable">URL</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the URL used to build hypertexts
+to the hardware information URL. The URL is used in the calcm_http_server_app.tcl
+application only for the authorized users.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__ided366724-731d-4040-9c4a-b84284270ada">CALSCOPEADD = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a flag value that controls the
+type of node to add to CalScope for hardware monitoring. The following
+flag values only apply when ENABLECALSCOPE = 1 (the default flag
+value is 3):</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__ida0740f23-98e9-4ede-92f0-310e51ddd610"><p class="p Opt">0
+— Do not add any node</p>
+</li>
+<li class="li ArgOption" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__idd3079746-212b-4f71-b7db-ebde2245a69d"><p class="p Opt">1
+— Add only the registered node</p>
+</li>
+<li class="li ArgOption" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id80f594dd-70b6-4ca4-8a0c-5ea5e673dcf0"><p class="p Opt">2
+— Add only the unregistered node</p>
+</li>
+<li class="li ArgOption" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id68819112-827d-4ed7-bd1b-e28291b75eb9"><p class="p Opt">3
+— Add all nodes (default)</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id2ec0ccf0-8278-498b-b326-a9ce5f673b6f">CALSCOPECLI = <span class="keyword ParameterName OptionalReplaceable">path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the path to the CalScope command‑line
+interface (CLI), which enables interaction with the monitored resources.
+The default path is <span class="ph filepath">$MGC_HOME/bin/calscope</span>. </p>
+<p class="p">For information on the CalScope software tool, see the <cite class="cite">Calibre
+System Monitoring Solution (CalScope) User’s Manual</cite> on <a class="xref" href="https://support.sw.siemens.com" target="_blank">Support Center</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id12987f5a-68d7-4ed7-a323-a41e21105792">CALSCOPEREMOVE = <span class="keyword ParameterName OptionalReplaceable">boolean</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether to use the remove command
+every update cycle when synchronized with the CalScope server. The
+default is 1, specifying to use the remove command. If the value
+is 0, the remove command is not used. The remove command only applies
+when ENABLECALSCOPE = 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__idd87b0988-2898-4f3c-8e8c-74cbe76ecaee">CLUSTER = <span class="keyword ParameterName OptionalReplaceable">names</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the cluster names defined in the <span class="ph">CalScope or </span>Ganglia
+server. Only hosts specified in the clusters are monitored. Multiple
+comma‑separated clusters can be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__idee76f3af-25d0-4bcf-8566-0fae5d820f88">ENABLECALSCOPE = <span class="keyword ParameterName OptionalReplaceable">boolean</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether to use CalScope instead
+of Ganglia for hardware monitoring. The default is 0 (Ganglia).
+If specified as 1, the calcm_hmonitor_app.tcl application uses CalScope
+for hardware monitoring and starts synchronizing the host status
+with CalScope.</p>
+<p class="p">During the synchronization, only the hosts in CalCM are added
+to CalScope through the CalScope CLI add command. Likewise, only
+the hosts in CalScope are removed from CalScope through the CalScope
+CLI remove command. For example, add and then remove two monitored
+hosts from the CalScope session:</p>
+<pre class="pre codeblock"><code>calscope hw_monitor add -hostnames host03 host04
+calscope hw_monitor remove -hostnames host03 host04</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id93742a28-8986-4e6b-8b31-04c7f76c9ff8">HOLDINTERVAL = <span class="keyword ParameterName OptionalReplaceable">sec</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a hold interval in seconds for
+the primary and remote hosts. If the RESETINTERVAL keyword is specified
+and the time difference between the boot time and current time is
+equal to or greater than the interval, the node is put on hold.
+During the hold, no primary or remote processes can be launched.
+The default hold interval is 2 * RESETINTERVAL time. No hosts are
+held if RESETINTERVAL is not specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__idec09bb38-a1e1-46b7-9a1e-1d3681b6a9b7">HOST = <span class="keyword ParameterName OptionalReplaceable">hostname</span>[<span class="keyword ParameterName OptionalReplaceable">:port</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the host name where the Ganglia
+tool is installed. The optional port number can be specified if
+different from 8652.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id91df6207-8283-481b-8f2f-3fddba5f26b0">RESETCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the command line executable to
+reset hosts. The default value is “$rsh $hostName $rshFlags reboot
+&amp;”.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The default value for the $rsh variable in CalCM is “ssh”.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__idff8150dd-6efc-4c4e-a76d-bf2341b19414">RESETINTERVAL = <span class="keyword ParameterName OptionalReplaceable">sec</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the interval in seconds to reset
+primary and remote hosts. If the difference between the boot time
+and current time is equal to or greater than the interval and there
+is no Calibre process running, the node is reset. The default is
+0, no hosts are reset.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id429dcad4-0af2-4c59-9b54-29e05006953e">RESETMASTERMAX = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the maximum number of master hosts
+that are reset during the update cycle. The default is 0, no master
+hosts are reset.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id646c47ca-ad63-43fb-a966-6a803b2cda38">RESETREMOTEMAX = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the maximum number of remote hosts
+that are reset during the update. The default is 20. If the value
+is 0, no remote hosts are reset.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id406da7fa-7572-49cc-94b6-cff2f593d5e1">RETRYCOUNT = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a number for the retry count to
+detect whether a host is up or down. The default value is 4. The
+equation is as follows:</p>
+<pre class="pre codeblock"><code>$host(TN) &lt;= $host(TMAX) * $retryCount</code></pre><p class="p">where TN is the number of seconds since the metric was last updated
+and TMAX indicates the timeout in seconds. CalCM uses the TN and
+TMAX values returned by Ganglia to determine if a host needs to
+be reset.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The <span class="ph filepath">calcm_hmonitor_app.tcl</span> application
+retrieves and updates the hardware monitoring information from the
+specified CalScope or Ganglia server.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__ided743156-bb8a-441b-8606-c76be3a3f3a7"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">This example retrieves the hardware monitoring information from
+a CalScope server.</p>
+<pre class="pre codeblock"><code>APPLICATION TCL calcm_hmonitor_app.tcl FILE [
+	ENABLECALSCOPE= 1
+	CALSCOPECLI = $MGC_HOME/bin/calscope
+	CALSCOPEADD = 3
+	CALSCOPEREMOVE = 0
+]</code></pre></div>
+<div class="section Subsection" id="id95b3928e-6022-4e23-9a40-8d2221f0d7fc__id1a2105d4-0d53-4f8b-bc0c-9e76b26767a8"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">This example retrieves the hardware monitoring information from
+a Ganglia server.</p>
+<pre class="pre codeblock"><code>APPLICATION TCL calcm_hmonitor_app.tcl FILE [
+	HOST= ganglia.&lt;my_ganglia_host&gt;.com
+	CLUSTER = CalCM_Primaries,CalCM_Remotes
+	BASEURL = http://ganglia.&lt;my_ganglia_host&gt;.com/&lt;path&gt;
+]</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalcmTclApplicationReference_id59ca9376.html" title="This section provides reference information on the CalCM Tcl applications (default unless noted otherwise).">CalCM Tcl Application Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cm_user"
+                DocTitle = "Calibre® Cluster Manager (CalCM) User’s Manual"
+                PageTitle = "calcm_hmonitor_app.tcl"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalcmHmonitorAppTcl_id95b3928e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Cluster Manager (CalCM) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

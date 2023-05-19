@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Internal Trigger to Set an SVRF Variable" />
+<meta name="abstract" content="In this example an internal pre-execution trigger parses the topcell parameter and creates a file that is used as an INCLUDE file with the rule file for the Calibre run. The created file contains a Variable statement." />
+<meta name="description" content="In this example an internal pre-execution trigger parses the topcell parameter and creates a file that is used as an INCLUDE file with the rule file for the Calibre run. The created file contains a Variable statement." />
+<meta name="prodname" content="Calibre Interactive User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id373f2106-9314-4c3d-aa01-f971fa751cce" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Internal Trigger to Set an SVRF Variable</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Internal Trigger to Set an SVRF Variable" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id373f2106-9314-4c3d-aa01-f971fa751cce">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Internal Trigger to Set an SVRF Variable</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">In this example
+an internal pre-execution trigger parses the topcell parameter and
+creates a file that is used as an INCLUDE file with the rule file
+for the Calibre run. The created file contains a Variable statement.</span>
+</div>
+<p class="p">For this example, assume the following: </p>
+<ul class="ul"><li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id235ada0b-69a8-48b7-a5ab-4db2d376df13"><p class="p">The top cell name of a design is “&lt;cell_name&gt;_TOP”,
+where &lt;cell_name&gt; varies from design to design.</p>
+</li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id016fad2c-b387-429f-a01b-38f7dfc3b1b3"><p class="p">The cell, “&lt;cell_name&gt;_NEXT”, is always
+in the sub-hierarchy of &lt;cell_name&gt;_TOP. The &lt;cell_name&gt; arguments
+are identical for each.</p>
+</li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__idad55683b-401e-4059-8eb7-3b5dbbaa3a0f"><p class="p">There are other cell names in the design
+that end in “_NEXT”.</p>
+</li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__idd3cb0740-81c6-4e36-898b-a244bcbb18da"><p class="p">The following rule check is in the rule
+file:</p>
+<pre class="pre codeblock leveled"><code>inside_cell_test {@layer L1 inside "NEXT" cell
+L1 inside cell CELLVAR
+}</code></pre><p class="p">In this rule check, CELLVAR is a variable
+name and should specify “&lt;cell_name&gt;_NEXT”.</p>
+</li>
+</ul>
+<p class="p">Note that you cannot use “*_NEXT” to define
+CELLVAR, because this would include other cells ending in “_NEXT”
+that you do not want to check.</p>
+<p class="p">Take the following steps to specify an internal
+trigger that creates a file with a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Variable', 'svrf_ur'); return false;">Variable</a> statement
+and to include the created file in the Calibre Interactive run.
+The trigger function uses the replaceable parameter %L to write
+the current top cell name to the Variable statement.</p>
+<ol class="ol"><li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id0e8de47e-fc5d-4842-aab2-a653a156b2ae"><p class="p">Create a script named <span class="ph filepath">my.trigger</span> as
+a pre-execution trigger for Calibre Interactive:</p>
+<pre class="pre codeblock leveled"><code>echo "VARIABLE CELLVAR '$1'" | sed "s/TOP/NEXT/" &gt; cellvar.include </code></pre></li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id3ab18268-2885-4318-bb39-df72b1e307e9"><p class="p">Create a file named <span class="ph filepath">cellvar.include</span> with
+a Variable statement. </p>
+<pre class="pre codeblock leveled"><code>echo "VARIABLE CELLVAR 'cell_TOP'" &gt; cellvar.include</code></pre><p class="p">This is done so that the include file exists
+and CELLVAR is defined when Calibre Interactive compiles the rule
+file for the first time; otherwise Calibre Interactive reports a
+compilation error. The <span class="ph filepath">cellvar.include</span> file
+is overwritten with the correct cell name before Calibre execution
+begins.</p>
+</li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id750b6d46-5999-465a-a9cc-301ffc50fb76"><p class="p">In Calibre Interactive, choose <span class="ph menucascade"><span class="ph uicontrol">Setup</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Preferences</span></span>,
+then the <span class="ph uicontrol">Triggers</span> tab and specify “<span class="keyword ParameterName OptionalReplaceable">my.trigger</span> %L”
+as a pre-execution trigger. </p>
+<p class="p">The <span class="ph filepath">my.trigger</span> script
+uses the top cell argument (%L), replaces TOP with NEXT, and writes
+the following statement to the file <span class="ph filepath">cellvar.include</span>:</p>
+<pre class="pre codeblock leveled"><code>VARIABLE CELLVAR '&lt;cell_name&gt;_NEXT'</code></pre></li>
+<li class="li" id="id373f2106-9314-4c3d-aa01-f971fa751cce__id2f3bad8e-3069-4887-b198-35d9e45e7b05"><p class="p">Choose <span class="ph uicontrol">Setup &gt; </span><span class="keyword ParameterName RequiredReplaceable">app</span> <span class="ph uicontrol">Options</span>,
+then the <span class="ph uicontrol">Include</span> tab and specify <span class="ph filepath">cellvar.include</span> as
+an include file. (<span class="keyword ParameterName RequiredReplaceable">app</span> indicates
+the Calibre Interactive application being run)</p>
+</li>
+</ol>
+<p class="p">With this internal trigger and the created
+include file, Calibre Interactive uses the correct value for CELLVAR
+in the inside_cell_test rule check.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreInteractiveInternalTriggerExamples_ida168e576.html" title="Several examples are provided for Calibre Interactive internal triggers.">Calibre Interactive Internal Trigger Examples</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/TaskTop_SettingCalibreInteractiveInternalTriggers_idf2c317eb.html#idf2c317eb-f615-48a8-b746-757a3c114aa1__" title="You can instruct Calibre Interactive to run internal triggers before and after the Calibre run. Multiple trigger functions may be specified for each stage. If you are connected to a supported design tool, you can also specify procedures that run in the design tool environment.">Setting Calibre Interactive Internal Triggers</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_user"
+                DocTitle = "Calibre® Interactive™ User’s Manual"
+                PageTitle = "Internal Trigger to Set an SVRF Variable"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_InternalTriggerSetSvrfVariable_id373f2106.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

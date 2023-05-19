@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Tcl Basics for Pattern Matching Batch Commands" />
+<meta name="abstract" content="If you are not familiar with Tcl coding, this section described basics, such as command syntax and special characters." />
+<meta name="description" content="If you are not familiar with Tcl coding, this section described basics, such as command syntax and special characters." />
+<meta name="prodname" content="Calibre Pattern Matching Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-20" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="API Batch Command Support" />
+<meta name="SourceHandle" content="calbr_pmatch_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/17/2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Pattern Matching Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Tcl Basics for Pattern Matching Batch Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Tcl Basics for Pattern Matching Batch Commands" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Tcl Basics for Pattern Matching Batch Commands</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">If you are not familiar with
+Tcl coding, this section described basics, such as command syntax and
+special characters. </span>
+</div>
+<p class="p">Tcl characteristics:</p>
+<ul class="ul"><li class="li" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__ide5e30f3c-1802-491f-8532-7386fc5516b1"><p class="p"><span class="ph FontProperty HeadingLabel">Tcl is case sensitive — </span>The
+commands in the pmatch:: namespace must be used as shown.</p>
+</li>
+<li class="li" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__id2f00641c-6d43-488a-80e2-0aafd823e4f7"><p class="p"><span class="ph FontProperty HeadingLabel">Statements can span multiple lines — </span>The
+statement continuation character for multiple line statements is
+the backslash (\) character, which must terminate each continued
+line. There cannot be any whitespace characters after the backslash.</p>
+</li>
+<li class="li" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__idf7534f2b-39af-4986-8ded-ef6245daa1c7"><p class="p"><span class="ph FontProperty HeadingLabel">Comments are a type of command</span> —
+In Tcl, comments are indicated by “#”. It must be the first non-whitespace
+character of the command; nothing after it on the line is acted
+upon. However, the comment line is parsed, and mismatched braces
+and parentheses can cause Tcl errors. </p>
+</li>
+<li class="li" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__id91d50e34-7ea5-462e-a3bd-53d7d4bd8761"><p class="p"><span class="ph FontProperty HeadingLabel">Tcl lists</span> —
+The list is a basic data structure in Tcl, and is used in several
+API commands. A Tcl list is an ordered collection of numbers, strings,
+or other lists. </p>
+<p class="p">A Tcl list of single elements can be specified
+in these equivalent ways:</p>
+<pre class="pre codeblock"><code>"a b c d"
+{a b c d} 
+[list a b c d]</code></pre><p class="p">A list of lists can be specified in these equivalent
+ways:</p>
+<pre class="pre codeblock"><code>{{a1 a2} {b1 b2} {c1 c2} {d1 d2}} 
+[list [list a1 a2] [list b1 b2] [list c1 c2] [list d1 d2]]</code></pre></li>
+<li class="li" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__id15e33d81-9415-4fbf-9cb0-4ce569843c67"><p class="p"><span class="ph FontProperty HeadingLabel">Many characters have special meanings in Tcl — </span>Consult
+any online reference for Tcl for a complete list of special characters.
+The following are the special characters used in this chapter:</p>
+</li>
+</ul>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id460aa452-ff30-4e1c-acdb-6bbaf585c9e1__idaa620e73-c209-48a1-840f-3f9c014cd570" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Tcl Special Characters</span></caption><colgroup><col style="width:0.967in" /><col style="width:4.882in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10656e184"><p class="p">Character</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10656e187"><p class="p">Meaning</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">;</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">The semicolon terminates
+the previous command, allowing you to place more than one command
+on the same line.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">\</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">The backslash causes
+backslash substitution, or, when within double quotes, disables
+substitution for the single character immediately following the
+backslash. </p>
+<p class="p">The backslash is also the line
+continuation character. Be careful not to have whitespace on the
+same line after a backslash that terminates a line, as this can
+cause Tcl interpretation errors.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">\n</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">The backslash with the
+letter “n” creates a new line.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">#</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">The pound sign indicates
+the start of a comment.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">$</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">The dollar sign in front
+of a variable name instructs the Tcl interpreter to access the value
+stored in the variable.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">[ ] </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">Brackets cause command
+substitution, instructing the Tcl interpreter to treat everything
+within the brackets as the result of a command. Command substitution
+can be nested within words.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">{ }</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">Braces instruct the Tcl
+interpreter to treat the enclosed words as a single string. The
+Tcl interpreter accepts the string as is, without performing any
+variable substitution or evaluation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e184 "><p class="p">" "</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10656e187 "><p class="p">Quotes instruct the Tcl
+interpreter to treat the enclosed words as a single string. However,
+if the Tcl interpreter encounters variables or commands within the
+string in quotes, it first evaluates the variables and commands.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Braces and square
+brackets are used in both syntax definitions and Tcl constructs.
+If a syntax definition includes a Tcl construct with brackets or
+braces, the Tcl elements are enclosed in single quotes to indicate
+a literal element. For example, the following syntax indicates the square
+brackets are literal within a syntax definition: </p>
+<p class="p">'[' list a b c ']' </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_GettingStarted_idd41352df.html" title="You can run Calibre Pattern Matching Tcl API commands interactively from the API command prompt or execute a Tcl script that contains the API commands.">Getting Started with the Calibre Pattern Matching API</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tcl Library in Calibre', 'calbr_admin_gd'); return false;">Tcl Library in Calibre [Calibre Administrator's Guide]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_pmatch_ref"
+                DocTitle = "Calibre® Pattern Matching Reference Manual"
+                PageTitle = "Tcl Basics for Pattern Matching Batch Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_TclBasicsForPatternMatcingBatchCommands_id460aa452.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Pattern Matching Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

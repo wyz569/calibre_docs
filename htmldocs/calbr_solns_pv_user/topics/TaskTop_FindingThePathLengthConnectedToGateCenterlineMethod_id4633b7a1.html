@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Finding the Length of a Net Path Connected to Gate: Centerline Method" />
+<meta name="abstract" content="This check measures the path lengths of nets connected to MOS gates along centerlines of complete polygons on the first two layers of metal interconnect. Length is not measured from via to via or via to contact, but along the entire lengths of polygons. Corners and jogs are handled reasonably so lengths are not counted twice at corners." />
+<meta name="description" content="This check measures the path lengths of nets connected to MOS gates along centerlines of complete polygons on the first two layers of metal interconnect. Length is not measured from via to via or via to contact, but along the entire lengths of polygons. Corners and jogs are handled reasonably so lengths are not counted twice at corners." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Finding the Length of a Net Path Connected to Gate: Centerline Method</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Finding the Length of a Net Path Connected to Gate: Centerline Method" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Finding the Length of a Net Path Connected to Gate: Centerline
+Method</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">This check measures the path lengths of
+nets connected to MOS gates along centerlines of complete polygons
+on the first two layers of metal interconnect. Length is not measured
+from via to via or via to contact, but along the entire lengths
+of polygons. Corners and jogs are handled reasonably so lengths
+are not counted twice at corners.</p>
+<p class="p"><a class="xref fm:Figure" href="#id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__idbb8eb414-c3e6-462b-8e92-3a19aac44dab">Figure 1</a> shows a MOS gate with
+its associated net path on MET1 and MET2 layers. The centerlines
+calculated by the layer derivation code are shown in black. The
+total lengths of the path segments on a net are attached to the
+associated gate polygons as properties.</p>
+<div class="fig fignone" id="idbb8eb414-c3e6-462b-8e92-3a19aac44dab"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Net Path
+Connected to Gate</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adv_drc_net_path_annotated.png" /></div><br /></div>
+<p class="p">The rule file code in this example may require further refinement,
+depending on the behavior of jogs and corners on the metal layers;
+see “<a class="xref fm:HeadingAndPage" href="Concept_ComparisonOfCenterlineAndEffectiveLengthMethodsForFindingPathLength_idf5123c20.html#idf5123c20-d57e-491e-80fe-c388d4c6bf5c__Concept_ComparisonOfCenterlineAndEffectiveLengthMethodsForFindingPathLength_idf5123c20.xml#idf5123c20-d57e-491e-80fe-c388d4c6bf5c" title="The path length of polygons in a net can be computed by two different methods: centerline method and effective length method.">Comparison of Centerline and Effective Length Methods for Finding Path Length</a>” for examples
+of the derivation results with short stubs, non-uniform line widths,
+and angled edges. If net paths include more than two metal layers,
+you can add layers as needed by using the existing code as a template.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4733bcd1-b5cd-47aa-ad4d-389e80188ad8" class="table" frame="hsides" border="1" rules="cols"><colgroup><col style="width:0.989in" /><col style="width:5.186in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p">    <span class="ph FontProperty HeadingLabel">Try It!</span> </p>
+<img class="image fmdpi:96" src="../graphics/try_it_note_small.png" /></td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre Advanced DRC (eqDRC) Tutorial and Example Kit</span></p>
+<p class="p">Go to <a class="xref" href="http://supportnet.mentor.com/infohub.cfm?infohub=ver_ih&amp;link=cal_ekit_IC" target="_blank">this page</a> on Support Center
+to download the complete eKit.</p>
+<p class="p">This example is in the device_routing_checks/gate_net_path_length/centerline_method
+example directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__idb92e8d0a-e23b-480d-87e3-6039ad60433d"><span class="ph cmd">Ensure
+code similar to the following exists in your rules for connecting
+device gates up through the interconnect layer stack:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>gate = POLY AND ACTIVE
+
+CONNECT POLY gate 
+CONNECT MET1 POLY by CONT
+CONNECT MET2 MET1 by VIA1</code></pre></div></li>
+<li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__idcad71933-c271-47cc-be1b-33579b34319a"><span class="ph cmd">Define
+the following variables for the minimum length of a metal edge and
+for the maximum width of a metal polygon to be considered as part
+of a net path. Use values suitable for your design. Edges shorter
+than cd_lineend are considered corners and handled separately.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// minimum edge length to consider for a line
+VARIABLE cd_lineend 1
+// maximum line width to consider
+VARIABLE w_max 3</code></pre></div></li>
+<li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id0cd31e28-0e8f-4836-8108-6d65abf16dec"><span class="ph cmd">Add the
+following code as a macro for calculating polygon centerline lengths,
+summing the lengths, and placing the length properties on the output
+layers:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// gate is a MOS gate layer
+// lay is a metal layer on a net
+// lay_prop_nodal is an output layer with gate shapes 
+//     and attached properties 
+// lay_prop is an output layer with lay shapes and properties
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Macros99DMACRO', 'svrf_ur'); return false;">DMACRO</a> PathLength gate lay lay_prop_nodal lay_prop { 
+
+  // Get edges longer than the minimum
+  lay_edges = LENGTH lay &gt; cd_lineend
+
+  // Get edges closer than max width of a wire
+  lay_int = INT lay_edges &lt;= w_max OPPOSITE 
+
+  // Get the centerlines between max width edges
+  lay_e = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Copy', 'svrf_ur'); return false;">DFM COPY</a> lay_int CENTERLINE
+
+  // Make regions out of max width edges
+  lay_e_reg = DFM COPY lay_int REGION</code></pre><pre class="pre codeblock"><code>  // Get corner regions of the wires
+  lay_corner = lay NOT lay_e_reg
+
+  // Get corner edges closer than max width of a wire
+  lay_corner_int = INT lay_corner &lt;= w_max OPPOSITE
+
+  // Get the centerlines between max width edges on a corner
+  lay_c = DFM COPY lay_corner_int CENTERLINE</code></pre><pre class="pre codeblock"><code>  // Attach corner length properties to the input layer.  
+  // px=0 and py=0 are expression chains, or fall-through rules, 
+  //     in case of evaluation errors 
+  lay_c_prop = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Property', 'svrf_ur'); return false;">DFM PROPERTY</a> lay lay_c OVERLAP MULTI 
+               [ px = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'SUM', 'svrf_ur'); return false;">SUM</a>(<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LENGTHXP', 'svrf_ur'); return false;">LENGTHXP</a>(lay_c)) ] [ px = 0 ]
+               [ py = SUM(<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LENGTHYP', 'svrf_ur'); return false;">LENGTHYP</a>(lay_c)) ] [ py = 0 ]
+     [ pathlength_corner = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PROPERTY_REF', 'svrf_ur'); return false;">PROPERTY_REF</a>(px)/2 + PROPERTY_REF(py)/2 ]</code></pre><pre class="pre codeblock"><code>  // Attach edge length properties to the input layer
+  lay_e_prop = DFM PROPERTY lay lay_e OVERLAP MULTI 
+               [ pathlength_edge = SUM(<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LENGTH', 'svrf_ur'); return false;">LENGTH</a>(lay_e)) ]
+                   [ pathlength_edge = 0 ]</code></pre><pre class="pre codeblock"><code>  // Sum the corner and edge length properties on the input layer
+  lay_prop = DFM PROPERTY lay lay_c_prop lay_e_prop OVERLAP 
+             ABUT ALSO MULTI  
+             [ plc = SUM(<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '99DfmFunc PROPERTY', 'svrf_ur'); return false;">PROPERTY</a>(lay_c_prop,pathlength_corner)) ]
+             [ ple = PROPERTY(lay_e_prop,pathlength_edge) ]
+             [ pl = PROPERTY_REF(plc) + PROPERTY_REF(ple) ]
+
+  // Attach length and netID properties to gates
+  lay_prop_nodal = DFM PROPERTY gate lay_prop NODAL MULTI
+                   [ PathLength = PROPERTY(lay_prop,pl) ]
+                   [ Netname = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'NETID', 'svrf_ur'); return false;">NETID</a>(gate) ]
+}</code></pre></div></li>
+<li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id2fb9a19f-89ea-4276-ac28-5fc8b9a7d326"><span class="ph cmd">Add this
+code to identify the MET1 and MET2 shapes on nets attached to gates,
+and pass those layers to the macro from Step <a class="xref fm:NumberOnlyBlack" href="#id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id0cd31e28-0e8f-4836-8108-6d65abf16dec">3</a>. Then sum the
+path length properties on the gate polygons and attach the sum as
+a new property PathLength_M1M2.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// Find metal layers on same net as gate polygon
+M1 = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Net Area Ratio', 'svrf_ur'); return false;">NET AREA RATIO</a> MET1 gate [!!AREA(gate)] == 1
+M2 = NET AREA RATIO MET2 gate [!!AREA(gate)] == 1 
+
+// Call a macro to generate the derived layers PL_M1 and PL_M2,
+// which contain the path length property PathLength for the metal
+// layers connected to each gate
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Macros99CMACRO', 'svrf_ur'); return false;">CMACRO</a> PathLength gate M1 PL_M1 
+CMACRO PathLength gate M2 PL_M2
+
+// Sum the lengths of M1 and M2 shapes on the same net as gate. 
+// Do not generate output if M2 shapes are not part of the path. 
+// Use this layer as an input for calculating path lengths on MET3
+// if needed.
+PL_M1M2 = DFM PROPERTY gate PL_M1 PL_M2 OVERLAP MULTI
+    [ PathLength_M1M2 = (PROPERTY(PL_M2,PathLength) == 0) ? 0 : 
+      PROPERTY(PL_M1,PathLength) +  PROPERTY(PL_M2,PathLength) ] &gt; 0
+    [Netname = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'NETPROPERTY', 'svrf_ur'); return false;">NETPROPERTY</a>(PL_M1,"Netname",1)]</code></pre></div></li>
+<li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id3888a956-336c-4c0f-9305-c9a4e4a6bf9b"><span class="ph cmd">Output
+the results. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>path_length { 
+    DFM RDB PL_M1M2 "eqdrc.rdb" CHECKNAME "%_l_" 
+       CELL SPACE ALL CELLS 
+}</code></pre></div></li>
+<li class="li step stepexpand" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id550fc44f-31b9-4a62-bf7d-d88eb6e11e90"><span class="ph cmd">If debug
+output is desired, comment out the DRC Unselect Check statement
+to run the PL1_dbg and centerlines_dbg checks. These checks can
+be used to verify the output of the preceding code. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>DRC UNSELECT CHECK PL1_dbg centerlines_dbg
+
+PL1_dbg { 
+@ show gates connected to M1 and M2.
+@ show whole chains in nar_dbg.rdb.
+  NET AREA RATIO PL_M1M2 M1 M2 &gt; 0 RDB "nar_dbg.rdb" 
+    BY LAYER PL_M1M2 M1 M2  
+}</code></pre><pre class="pre codeblock"><code>// draw centerlines of polygons involved in net paths
+DMACRO centerlines L {
+  lay_edges  = LENGTH L &gt; cd_lineend
+  lay_int    = INT lay_edges &lt;= w_max OPPOSITE 
+  DFM COPY lay_int CENTERLINE
+  lay_e_reg  = DFM COPY lay_int REGION
+  lay_corner = L NOT lay_e_reg
+  lay_corner_int = INT lay_corner &lt;= w_max OPPOSITE
+  DFM COPY lay_corner_int CENTERLINE
+}
+
+centerlines_dbg {
+@ show polygon centerlines, which are the basis for 
+@ calculating the path lengths
+  CMACRO centerlines M1 
+  CMACRO centerlines M2
+}</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Open the <cite class="cite">eqdrc.rdb</cite> file in Calibre RVE to view the
+path length property PathLength_M1M2 for each gate. Choose <span class="ph menucascade"><span class="ph uicontrol">View</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Result Options</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Details</span></span> to view the results
+in table format. </p>
+<div class="fig fignone" id="id4633b7a1-8d12-4f80-b23d-c86cf61d2ac0__id3be624d7-bdcd-4efe-b662-af284a3ff4a7"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adv_drc/adv_drc_path_length_rve.png" /></div><br /></div>
+<p class="p">If debug output was produced, open the <span class="ph filepath">nar_dbg.rdb</span> database
+and the standard DRC results database. The standard DRC results
+database contains the output of the centerlines_dbg check. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_FindingPathLengthConnectedToGate_idfa4bdf99.html" title="The two rule checks in this section measure the path lengths of nets connected to MOS gates on the first two layers of metal interconnect.">Finding the Length of a Net Path Connected to Gate</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Finding the Length of a Net Path Connected to Gate: Centerline Method"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_FindingThePathLengthConnectedToGateCenterlineMethod_id4633b7a1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

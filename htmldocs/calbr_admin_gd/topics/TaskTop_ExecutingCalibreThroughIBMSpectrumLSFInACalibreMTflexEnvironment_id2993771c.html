@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Executing Calibre Through IBM Spectrum LSF in a Calibre MTflex Environment" />
+<meta name="abstract" content="In Calibre MTflex mode, Calibre runs in a “primary‑remote” mode, where the primary host manages input data and distributes data to each host and each remote host gets data from the primary host, runs a specific SVRF operation, and returns the results back to the primary host." />
+<meta name="description" content="In Calibre MTflex mode, Calibre runs in a “primary‑remote” mode, where the primary host manages input data and distributes data to each host and each remote host gets data from the primary host, runs a specific SVRF operation, and returns the results back to the primary host." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2993771c-5a5b-4d10-b39c-66150e591a06" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Executing Calibre Through IBM Spectrum LSF in a Calibre MTflex Environment</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Executing Calibre Through IBM Spectrum LSF in a Calibre MTflex Environment" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2993771c-5a5b-4d10-b39c-66150e591a06">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Executing Calibre
+Through IBM Spectrum LSF in a Calibre MTflex Environment</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">In Calibre MTflex
+mode, Calibre runs in a “primary‑remote” mode, where the primary
+host manages input data and distributes data to each host and each remote
+host gets data from the primary host, runs a specific SVRF operation,
+and returns the results back to the primary host.</p>
+<p class="p">It is required in this
+mode to submit the Calibre job first to a primary host with multiple CPUs.
+This job then submits IBM Spectrum LSF jobs for running each remote
+host. In the shell, the primary host job has a configuration file
+that specifies a hostname for each remote.</p>
+<p class="p">In this procedure, the script and configuration
+files you create depend on how your IBM Spectrum LSF grid is configured.
+If the IBM Spectrum LSF parameter JOB_ACCEPT_INTERVAL is set to
+0, you can use job arrays and IBM Spectrum LSF will put as many
+remotes as possible on the best host for the job, then get more
+remotes from other hosts, if needed. If JOB_ACCEPT_INTERVAL is set
+to 1, a job array is not ideal for licensing and performance reasons.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The default for JOB_ACCEPT_INTERVAL is 1.</p>
+</div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id14c96810-17d0-472d-bda4-a521c5e2de18"><p class="p">IBM
+Spectrum LSF must be installed and configured for your network.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__idb430e4dc-503c-4c23-8420-dc4954d0998a"><p class="p">The
+CALIBRE_HOME environment variable must be set to the location of a
+Calibre software tree that is accessible by the remote hosts.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id192d694f-5453-4df9-8e80-461c1913532c"><p class="p">LM_LICENSE_FILE
+or MGLS_LICENSE_FILE must be set to the location of a license file.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id07a3676c-e159-4868-b91a-ae0daee341cf"><p class="p">To run this
+procedure with the RHEL/CentOS 8 operating system, you must substitute
+rsh with ssh.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="id2993771c-5a5b-4d10-b39c-66150e591a06__ide78eb0bf-0a04-4b23-a946-65c427d84f4d"><li class="li step stepexpand" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id0ef6e4b9-e734-4ac9-9000-0b3833230f27"><span class="ph cmd">Create an executable shell script named <span class="ph filepath">run_cluster</span>.
+The script you create depends on how your IBM Spectrum LSF grid
+is configured. </span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id0c14a691-e556-4b76-a93a-3744beffa30d"><p class="p">If
+LSF_JOB_ACCEPT_INTERVAL is set to 1:</p>
+<pre class="pre codeblock"><code>#!/bin/csh
+lsgrun -p -m "$LSB_HOSTS" calibre -mtflex \
+	$CALIBRE_REMOTE_CONNECTION -f</code></pre><p class="p">In this script, the lsgrun command is used
+to execute a task on a set of hosts defined by the LSB_HOSTS variable,
+which is set by IBM Spectrum LSF. The CALIBRE_REMOTE_CONNECTION
+variable defines a host and port ID for the connection between the
+primary and remote host.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id5327f701-0918-4265-8d1e-aa69ac528668"><p class="p">If LSF_JOB_ACCEPT_INTERVAL
+is set to 0:</p>
+<pre class="pre codeblock"><code>#!/bin/csh
+setenv CALIBRE_HOME /calibre_tree/linux_tree \
+$CALIBRE_HOME/bin/rcalibre "/tmp" 1 \
+	-mtflex $CALIBRE_REMOTE_CONNECTION -f
+rsh $node $CALIBRE_HOME/bin/rcalibre "/scratch1" 1 \
+	CALIBRE_HOME $VCO_HOME -mtflex $CALIBRE_REMOTE_CONNECTION &amp;</code></pre><p class="p">This script sets the value of CALIBRE_HOME and uses the rcalibre command
+to connect to the host machine using the IP and port specified by
+the CALIBRE_REMOTE_CONNECTION environment variable.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For the RHEL/CentOS 8 operating system, you must use ssh
+instead of rsh.</p>
+</div>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id2993771c-5a5b-4d10-b39c-66150e591a06__idc5fc6b0c-8c8e-45bf-b4c5-5efc0cc8ae83"><span class="ph cmd">Create a configuration file named <span class="ph filepath">config_lsf</span>. The
+type of configuration file you create depends on how your IBM Spectrum LSF
+grid is configured.</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id2268bc48-b2dc-4764-a745-6b31e33c14aa"><p class="p">If
+LSF_JOB_ACCEPT_INTERVAL is set to 1:</p>
+<pre class="pre codeblock"><code>LAUNCH CLUSTER WAIT 120 COUNT 8 MINCOUNT 6
+REMOTE COMMAND bsub ARGUMENTS [ -n 8 -J "MTFlexJob" \
+	-o MTFlexJob_%J.log -R "select[type==LINUX64 &amp;&amp; hname!='%H']"\
+	/&lt;run_cluster_path&gt;/run_cluster]</code></pre></li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id98299dbf-7413-463b-bcd6-4226ab480249"><p class="p">If LSF_JOB_ACCEPT_INTERVAL
+is set to 0:</p>
+<pre class="pre codeblock"><code>LAUNCH CLUSTER MINCOUNT 8
+REMOTE COMMAND bsub ARGUMENTS [ -J "JobArray[1-8]" \
+	-R "span[hosts=1] select[hname!=’%H’ &amp;&amp; type==any]" \
+	"/&lt;run_cluster_path&gt;/run_cluster"]</code></pre></li>
+</ul>
+<p class="p">The LAUNCH CLUSTER statement
+sets the parameters for connection of the primary host to the remote
+hosts. The MINCOUNT keyword causes the Calibre run to fail if the
+number of remote connections is less than the specified number of
+minimum remote connections after the WAIT time expires.</p>
+<p class="p">The REMOTE COMMAND statement
+specifies information for launching remote hosts. The first argument
+to the REMOTE COMMAND specifies the name of the Linux command or
+utility to execute. In this example, the REMOTE COMMAND executes
+the bsub command and the following arguments inside the brackets
+([ ]):</p>
+<ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__idd7a6a474-cd39-43a7-8301-c17c39fd20c1"><p class="p">-J is an option to the
+bsub command and is used to specify the job name and to repeat the
+execution of the bsub command if an array is specified. The value
+[1-8] causes the bsub command to execute eight times. For a successful Calibre
+run, the value specified for MINCOUNT must be the same as the number
+of executed LSF jobs.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__idae19cb22-a6f5-415f-a7c6-bbc0595412db"><p class="p">-R is an option to the
+bsub command used to specify resource requirements for the job.
+In this example, the filter contains the following filter criteria:</p>
+<ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id5f9bacc9-2bb8-4764-9ff5-7eddabcf71d1"><p class="p">span[hosts=1] specifies
+that the CPUs used for the job must be on the same host. </p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__idbc10c6d8-b654-4a4c-a5c5-7ba6eaf6efde"><p class="p">select[hname!=’%H’ &amp;&amp;
+type==any] specifies none of the machine processors on the primary
+host be used as a remote processor and the job can run on any remote
+hosts. The %H represents the hostname portion of the Calibre remote
+connection.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id844cab30-ca7a-4e6c-a122-49c6f7e1a1a8"><p class="p">&lt;<span class="ph filepath italic">run_cluster_path</span>&gt;<span class="ph filepath italic">/run_cluster</span> specifies
+the path to the script created in Step <a class="xref fm:NumberOnly" href="#id2993771c-5a5b-4d10-b39c-66150e591a06__id0ef6e4b9-e734-4ac9-9000-0b3833230f27">1</a>.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id80a9eaaa-1cbd-4d99-9cfe-889359116b46"><span class="ph cmd">Execute
+the Calibre run in a distributed, multithreaded environment using
+IBM Spectrum LSF as follows:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">bsub -o drc.log -n 4 $CALIBRE_HOME/bin/calibre -drc \
+	-hier -turbo -remotefile config_lsf rule.file</pre>
+<ul class="ul"><li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__id8c533aa3-9f03-4684-b873-200c1db1c0c3"><p class="p">-o redirects the Calibre
+standard output to the file named <span class="ph filepath italic">drc.log</span>.</p>
+</li>
+<li class="li" id="id2993771c-5a5b-4d10-b39c-66150e591a06__ida4d2224d-3ff9-4a7c-91e2-e28f12f5a36d"><p class="p">-n instructs LSF to select
+any four CPUs for running Calibre.</p>
+</li>
+</ul>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExecutingCalibreUsingIBMSpectrumLSF_id05fc183e.html" title="IBM Spectrum LSF is software for managing workload processing for compute and data-intensive applications. With IBM Spectrum LSF, you can schedule and track the completion of batch workloads across a distributed environment.">Executing Calibre Using IBM Spectrum LSF</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Executing Calibre Through IBM Spectrum LSF in a Calibre MTflex Environment"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExecutingCalibreThroughIBMSpectrumLSFInACalibreMTflexEnvironment_id2993771c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

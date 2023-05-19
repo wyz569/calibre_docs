@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="readerprefs File Format" />
+<meta name="abstract" content="When a Calibre layout viewer loads a layout, it can encounter errors or exceptions with the layout. You can control how the layout viewer responds to these situations by specifying layout exceptions in the readerprefs file." />
+<meta name="description" content="When a Calibre layout viewer loads a layout, it can encounter errors or exceptions with the layout. You can control how the layout viewer responds to these situations by specifying layout exceptions in the readerprefs file." />
+<meta name="prodname" content="Calibre DESIGNrev Layout Viewer User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_drv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Layout Viewer User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id66ba174a-ed2f-4590-91cc-527d1366aa6c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>readerprefs File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="readerprefs File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id66ba174a-ed2f-4590-91cc-527d1366aa6c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">readerprefs File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Tools: Calibre DESIGNrev, Calibre
+LITHOview, Calibre MDPview, Calibre WORKbench</p>
+<p class="shortdesc">When a Calibre layout viewer
+loads a layout, it can encounter errors or exceptions with the layout.
+You can control how the layout viewer responds to these situations by
+specifying layout exceptions in the <span class="ph filepath italic">readerprefs</span> file.</p>
+<p class="p">A default <span class="ph filepath italic">readerprefs</span> file
+is automatically placed in your layout viewer configuration directory
+the first time you invoke the viewer. The layout viewer reads this
+file when you load a layout file, and processes the exception types
+and severities. You can use an ASCII text editor to change the exception
+settings in the <span class="ph filepath italic">readerprefs</span> file. </p>
+<div class="section Subsection" id="id4d8d9852-37d7-49db-93df-d0f22e48176f"><h2 class="title Subheading sectiontitle">High Capacity (HC) Mode Support for Exception Severities</h2><p class="p">High Capacity (HC) mode is configured
+to support the behavior of specific layout exception severity settings.
+When opening a layout in HC mode, the transcript identifies the
+exception severities defined in the <span class="ph filepath">readerprefs</span> file, generates
+a warning for each severity that is ignored in HC mode, and identifies
+if a different severity setting is being used. For example:</p>
+<pre class="pre codeblock"><code>LOADING LAYOUT FILE WITH READER PREFERENCES:
+AREF_PLACEMENT 1 - WARNING: Ignored in HC mode; using severity setting 0
+CIRCLE 2 - WARNING: Ignored in HC mode 
+TEXTSTRING_ASTRING 0</code></pre><p class="p">The exception severity reference pages in this section identify
+the supported severity settings for HC mode, which may differ from
+the standard (non-HC) mode defaults. These settings cannot be overridden
+when using HC mode.</p>
+<p class="p">Refer to “<a class="xref fm:HeadingAndPage" href="Concept_InvocationModesAndOptions_id239d4912.html#id239d4912-2b0b-45c1-8ce7-7ae3f6fcb28c__id86654676-7849-4bf0-9145-50d49e09fe7f">High Capacity Mode</a>” for more information on HC mode.</p>
+</div>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A <span class="ph filepath italic">readerprefs</span> file
+must conform to the following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="id66ba174a-ed2f-4590-91cc-527d1366aa6c__idb4ff4a38-b94a-4ae2-86f1-4349d64d9b14"><p class="p">Must be ASCII</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id66ba174a-ed2f-4590-91cc-527d1366aa6c__id3ad800ec-1530-4c39-ba4d-03c803a7eea2"><p class="p">Must use the syntax:</p>
+<p class="p"><span class="keyword ParameterName Required">exceptionSeverity</span> <span class="keyword ParameterName RequiredReplaceable">exception_name</span> <span class="keyword ParameterName RequiredReplaceable">severity_value</span></p>
+</li>
+</ul>
+<p class="p">For example:</p>
+<pre class="pre codeblock leveled"><code># Reader Preferences File 
+exceptionSeverity TEXTSTRING_ASTRING 1 </code></pre></div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">The following table
+provides a complete list of exceptions used by Calibre DESIGNrev
+along with a brief description. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id66ba174a-ed2f-4590-91cc-527d1366aa6c__idbd946a48-f03f-4dcb-a42f-2e84e071b870" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Exceptions
+Detected While Reading Layouts</span></caption><colgroup><col style="width:2.747in" /><col style="width:3.753in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d14553e223"><p class="p">Keyword</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d14553e226"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row row-keep-with-next"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Arrays</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_ArrayPitchZero_id1d032667.html#id1d032667-0f0b-482e-a5af-f422bcbabcf2__Command_ArrayPitchZero_id1d032667.xml#id1d032667-0f0b-482e-a5af-f422bcbabcf2" title="Controls zero row or column spacing in placement arrays in GDSII or OASIS input layout databases. For GDSII, this occurs when an AREF placement has its x-dimension (or y‑dimension) &gt; 1 but the spacing in the x-direction (or y-direction) is zero. For OASIS, this occurs when a placement record has a type 1 or 2 repetition and the x-direction spacing is zero, or a placement record has a type 1 or 3 repetition and the y-direction spacing is zero.">ARRAY_PITCH_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Controls zero row or column spacing in placement
+arrays in GDSII or OASIS input layout databases.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">AREFs</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_ArefAngled_id52d578f3.html#id52d578f3-52d8-435b-bc33-168ba4fcff73__Command_ArefAngled_id52d578f3.xml#id52d578f3-52d8-435b-bc33-168ba4fcff73" title="Controls handling of AREF rotation that is not a multiple of 90 degrees.">AREF_ANGLED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Controls handling of AREF rotation that is
+not a multiple of 90 degrees.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_ArefPlacement_id229d4213.html#id229d4213-835e-4ebc-9247-20898221e5b5__Command_ArefPlacement_id229d4213.xml#id229d4213-835e-4ebc-9247-20898221e5b5" title="A GDSII AREF has been encountered.">AREF_PLACEMENT</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII AREF has been encountered.</p>
+</td>
+</tr>
+<tr class="row row-keep-with-next"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Cells</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_DuplicateCell_iddf034e49.html#iddf034e49-fa02-4bb6-9dab-9e814d32b2b7__Command_DuplicateCell_iddf034e49.xml#iddf034e49-fa02-4bb6-9dab-9e814d32b2b7" title="A cell structure has been encountered multiple times in the input layout database.">DUPLICATE_CELL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A cell structure has been encountered multiple
+times in the input layout database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_MissingReference_id9ea5ca85.html#id9ea5ca85-ae8d-4706-a877-6e1cbc6d9583__Command_MissingReference_id9ea5ca85.xml#id9ea5ca85-ae8d-4706-a877-6e1cbc6d9583" title="A placement points to a cell that is not defined in the database.">MISSING_REFERENCE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A placement points to a cell that is not defined
+in the database.</p>
+</td>
+</tr>
+<tr class="row row-keep-with-next"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Miscellaneous geometry</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Circle_id0b5739a4.html#id0b5739a4-e2e2-4534-a242-0635e7494f8f__Command_Circle_id0b5739a4.xml#id0b5739a4-e2e2-4534-a242-0635e7494f8f" title="An OASIS circle has been encountered.">CIRCLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An OASIS circle has been encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CircleRadiusZero_id34c526a5.html#id34c526a5-5a0d-4bb5-abd7-d8ec2515d101__Command_CircleRadiusZero_id34c526a5.xml#id34c526a5-5a0d-4bb5-abd7-d8ec2515d101" title="An OASIS circle has zero radius.">CIRCLE_RADIUS_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An OASIS circle has zero radius.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CtrapezoidAreaZero_iddc551e7f.html#iddc551e7f-3a07-479f-aeb3-255f897241a1__Command_CtrapezoidAreaZero_iddc551e7f.xml#iddc551e7f-3a07-479f-aeb3-255f897241a1" title="A CTRAPEZOID has zero area.">CTRAPEZOID_AREA_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A CTRAPEZOID has zero area.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CtrapezoidDegenerate_id94716202.html#id94716202-ff60-40fc-86ea-a01ad9d925a0__Command_CtrapezoidDegenerate_id94716202.xml#id94716202-ff60-40fc-86ea-a01ad9d925a0" title="A CTRAPEZOID record is degenerate (that is, cannot be formed into a polygon as specified).">CTRAPEZOID_DEGENERATE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A
+CTRAPEZOID record is degenerate (that is, cannot be formed into
+a polygon as specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_TrapezoidAreaZero_id851fcd31.html#id851fcd31-d26b-4425-9d1d-8b0363a8894e__Command_TrapezoidAreaZero_id851fcd31.xml#id851fcd31-d26b-4425-9d1d-8b0363a8894e" title="A TRAPEZOID has zero area.">TRAPEZOID_AREA_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A TRAPEZOID has zero area.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_TrapezoidDegenerate_id82c62ae3.html#id82c62ae3-660b-4a5e-af17-ecb23fef919d__Command_TrapezoidDegenerate_id82c62ae3.xml#id82c62ae3-660b-4a5e-af17-ecb23fef919d" title="A TRAPEZOID record is degenerate (that is, cannot be formed into a polygon as specified).">TRAPEZOID_DEGENERATE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A
+TRAPEZOID record is degenerate (that is, cannot be formed into a
+polygon as specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Paths</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathAcute_idc3752198.html#idc3752198-6f98-4843-ab6b-c15f04dc8b5e__Command_PathAcute_idc3752198.xml#idc3752198-6f98-4843-ab6b-c15f04dc8b5e" title="A path has a centerline with one or more acute angles.">PATH_ACUTE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has a centerline with one or more acute
+angles.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathAngled_idbd9d1f8d.html#idbd9d1f8d-1715-4156-acb6-97d8da89b2df__Command_PathAngled_idbd9d1f8d.xml#idbd9d1f8d-1715-4156-acb6-97d8da89b2df" title="A path has a centerline with one or more angled segments.">PATH_ANGLED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has a centerline with one or more angled
+segments.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathCircular_idb153313a.html#idb153313a-4189-4874-9a0d-9965d2d3e003__Command_PathCircular_idb153313a.xml#idb153313a-4189-4874-9a0d-9965d2d3e003" title="A type-1 path (circular endcap) is present in the layout.">PATH_CIRCULAR</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A type-1 path (circular endcap) is present.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathCoincident_id8d32e4de.html#id8d32e4de-cdbc-4e46-b32b-a3639c249a3f__Command_PathCoincident_id8d32e4de.xml#id8d32e4de-cdbc-4e46-b32b-a3639c249a3f" title="A path has no length.">PATH_COINCIDENT</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has no length.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathDegenerate_id1bb2d296.html#id1bb2d296-ec25-4251-862b-e296e8989381__Command_PathDegenerate_id1bb2d296.xml#id1bb2d296-ec25-4251-862b-e296e8989381" title="A path has 0 or 1 vertices.">PATH_DEGENERATE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has 0 or 1 vertices.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathEndsegmentShort_idf0110c66.html#idf0110c66-f6a5-41cc-a161-b8dab063dc56__Command_PathEndsegmentShort_idf0110c66.xml#idf0110c66-f6a5-41cc-a161-b8dab063dc56" title="The endsegment of a type-0 GDSII path or flush-ended OASIS path is less than 1/2 the path width.">PATH_ENDSEGMENT_SHORT</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">The endsegment of a type-0 GDSII path or flush-ended
+OASIS path is less than 1/2 the path width.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathExtension_id1b830596.html#id1b830596-60d2-4448-b1f0-ceaa09a94061__Command_PathExtension_id1b830596.xml#id1b830596-60d2-4448-b1f0-ceaa09a94061" title="A type-4 GDSII path or variable-end OASIS path cannot be extended.">PATH_EXTENSION</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A type-4 GDSII path or variable-end OASIS
+path cannot be extended.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathNegative_idcff4862b.html#idcff4862b-285f-464d-82fb-bd7d459d13a6__Command_PathNegative_idcff4862b.xml#idcff4862b-285f-464d-82fb-bd7d459d13a6" title="A type-4 GDSII path or variable-end OASIS path has a negative start or end extension. If severities 2, 5, or 6 occur at the start extension, then there is no further checking for the end extension.">PATH_NEGATIVE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A type-4 GDSII path or variable-end OASIS
+path has a negative start or end extension.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathNonorientable_id7cdde6a6.html#id7cdde6a6-507a-4156-b3b3-01808272c291__Command_PathNonorientable_id7cdde6a6.xml#id7cdde6a6-507a-4156-b3b3-01808272c291" title="A path cannot be oriented after expansion.">PATH_NONORIENTABLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path cannot be oriented after expansion.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathNonsimple_id332ad1e3.html#id332ad1e3-a6ed-42b9-8eb3-c22130fe95d5__Command_PathNonsimple_id332ad1e3.xml#id332ad1e3-a6ed-42b9-8eb3-c22130fe95d5" title="A path overlaps itself after expansion.">PATH_NONSIMPLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path overlaps itself after expansion.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathSpike_ide46b1aea.html#ide46b1aea-33dc-4421-979c-564e37b8740d__Command_PathSpike_ide46b1aea.xml#ide46b1aea-33dc-4421-979c-564e37b8740d" title="Consecutive path segments retrace the same length.">PATH_SPIKE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Consecutive path segments retrace the same
+length.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathVariable_idbec3e237.html#idbec3e237-99e8-42de-995e-418b4cc5b2fa__Command_PathVariable_idbec3e237.xml#idbec3e237-99e8-42de-995e-418b4cc5b2fa" title="A GDSII path of type 4 or OASIS path with a non-flush or non-square extension is encountered.">PATH_VARIABLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII path of type 4 or OASIS path with
+a non-flush or non-square extension is encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathWidthAbsolute_ide94b5433.html#ide94b5433-7e9c-40bd-b4c3-f16b99a53962__Command_PathWidthAbsolute_ide94b5433.xml#ide94b5433-7e9c-40bd-b4c3-f16b99a53962" title="A GDSII path has absolute width specified in the database. See a GDSII functional specification for the definition of absolute width.">PATH_WIDTH_ABSOLUTE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII path has absolute width specified
+in the database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathWidthOdd_idae2d957b.html#idae2d957b-5f9b-4478-b4f8-37b723311453__Command_PathWidthOdd_idae2d957b.xml#idae2d957b-5f9b-4478-b4f8-37b723311453" title="A path has an odd-valued width. The half-width value is rounded when the path is expanded to a polygon.">PATH_WIDTH_ODD</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has an odd-valued width. The half-width
+value is rounded when the path is expanded to a polygon.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PathWidthZero_idfb1e8fc1.html#idfb1e8fc1-a9e1-4469-9d37-bffe24c17672__Command_PathWidthZero_idfb1e8fc1.xml#idfb1e8fc1-a9e1-4469-9d37-bffe24c17672" title="A path has zero width.">PATH_WIDTH_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A path has zero width.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Placements</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PlacementAngleAbsolute_idcc98edaa.html#idcc98edaa-5f24-4850-8d97-8e54e2c47a76__Command_PlacementAngleAbsolute_idcc98edaa.xml#idcc98edaa-5f24-4850-8d97-8e54e2c47a76" title="A GDSII placement has an absolute rotation angle.">PLACEMENT_ANGLE_ABSOLUTE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A
+GDSII placement has an absolute rotation angle.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PlacementMagnificationAbsolute_idf2ca312c.html#idf2ca312c-6185-47f8-9cb5-d9833fd30479__Command_PlacementMagnificationAbsolute_idf2ca312c.xml#idf2ca312c-6185-47f8-9cb5-d9833fd30479" title="A GDSII placement has an absolute magnification. See a GDSII functional specification for the definition of absolute angle in a STRANS record.">PLACEMENT_MAGNIFICATION_ABSOLUTE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII placement has an absolute magnification.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PlacementMagnificationNonpositive_id0a865968.html#id0a865968-42de-4672-9358-0676538c69b2__Command_PlacementMagnificationNonpositive_id0a865968.xml#id0a865968-42de-4672-9358-0676538c69b2" title="A placement has a non-positive magnification.">PLACEMENT_MAGNIFICATION_NONPOSITIVE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A placement has a non-positive magnification.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PlacementMagnified_ida4f13138.html#ida4f13138-1fc6-4007-a15d-0a04c833accd__Command_PlacementMagnified_ida4f13138.xml#ida4f13138-1fc6-4007-a15d-0a04c833accd" title="A GDSII or OASIS placement has a non-unit magnification.">PLACEMENT_MAGNIFIED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII or OASIS placement has a non-unit
+magnification.</p>
+</td>
+</tr>
+<tr class="row row-keep-with-next"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Polygons</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonAcute_id7d7a426f.html#id7d7a426f-1eae-4d7d-831d-177881b6c368__Command_PolygonAcute_id7d7a426f.xml#id7d7a426f-1eae-4d7d-831d-177881b6c368" title="An acute angle exists in a GDSII boundary or OASIS polygon.">POLYGON_ACUTE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An acute angle exists in a GDSII boundary
+or OASIS polygon.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonAreaZero_id114fbb11.html#id114fbb11-49b6-4a38-85a1-414a6536cd80__Command_PolygonAreaZero_id114fbb11.xml#id114fbb11-49b6-4a38-85a1-414a6536cd80" title="A zero-area boundary exists in a GDSII-type database or a zero-area polygon exists in an OASIS database.">POLYGON_AREA_ZERO</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A zero-area boundary exists in a GDSII-type
+database or a zero-area polygon exists in an OASIS database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonDegenerate_id373aae46.html#id373aae46-c2e8-420d-ac3d-cd04ac756986__Command_PolygonDegenerate_id373aae46.xml#id373aae46-c2e8-420d-ac3d-cd04ac756986" title="A polygon has 0 or 1 vertices.">POLYGON_DEGENERATE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A polygon has 0 or 1 vertices.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonIsRectangle_id53dd82c7.html#id53dd82c7-b729-47b4-b027-618955e8b254__Command_PolygonIsRectangle_id53dd82c7.xml#id53dd82c7-b729-47b4-b027-618955e8b254" title="A two-point GDSII BOUNDARY is encountered.">POLYGON_IS_RECTANGLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A two-point GDSII BOUNDARY is encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonNonorientable_id9e3d3a29.html#id9e3d3a29-b5a7-4d3b-bc30-ad44a5f4cd14__Command_PolygonNonorientable_id9e3d3a29.xml#id9e3d3a29-b5a7-4d3b-bc30-ad44a5f4cd14" title="A polygon cannot be oriented.">POLYGON_NONORIENTABLE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A polygon cannot be oriented.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonNonsimple_id9bc9ed3e.html#id9bc9ed3e-f7db-4842-88ec-dbcf2401b68d__Command_PolygonNonsimple_id9bc9ed3e.xml#id9bc9ed3e-f7db-4842-88ec-dbcf2401b68d" title="A polygon overlaps itself.">POLYGON_NONSIMPLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A polygon overlaps itself.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonNotClosed_id85a5b1ad.html#id85a5b1ad-5251-4a39-9e14-140c412d37db__Command_PolygonNotClosed_id85a5b1ad.xml#id85a5b1ad-5251-4a39-9e14-140c412d37db" title="Controls the message that is generated when closing an open GDSII BOUNDARY.">POLYGON_NOT_CLOSED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Controls how Calibre interprets open GDSII
+BOUNDARY parameters.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PolygonSpike_id355fabbb.html#id355fabbb-c45e-4513-abee-5821ef22a303__Command_PolygonSpike_id355fabbb.xml#id355fabbb-c45e-4513-abee-5821ef22a303" title="Applies to spikes in boundaries read from GDSII-type input layout databases or polygons read from OASIS-type input layout databases. A “spike” is defined as two consecutive edges whose interior angle is 0 or 360 degrees.">POLYGON_SPIKE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Applies to spikes in boundaries read from
+GDSII-type input layout databases or polygons read from OASIS-type
+input layout databases.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_RectangleSideZero_id0beca3bd.html#id0beca3bd-3d1a-46d8-ab90-5214293caa94__Command_RectangleSideZero_id0beca3bd.xml#id0beca3bd-3d1a-46d8-ab90-5214293caa94" title="A rectangle (including a two-point GDSII polygon) has zero width or length.">RECTANGLE_SIDE_ZERO</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A rectangle (including a two-point GDSII polygon)
+has zero width or length.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Records</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_BoxRecord_id894a2f69.html#id894a2f69-92ff-479a-9256-a3339105f510__Command_BoxRecord_id894a2f69.xml#id894a2f69-92ff-479a-9256-a3339105f510" title="Error in handling BOX record for input layout database.">BOX_RECORD</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Error in handling BOX record for input layout
+database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CellnameNstring_iddaebff9b.html#iddaebff9b-7a41-42e0-9a9a-9b65be8248f2__Command_CellnameNstring_iddaebff9b.xml#iddaebff9b-7a41-42e0-9a9a-9b65be8248f2" title="The string in a CELLNAME, CELL, or PLACEMENT record is not an OASIS n‑string.">CELLNAME_NSTRING</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">The string in a CELLNAME, CELL, or PLACEMENT
+record is not an OASIS n‑string.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NodeRecord_id68de7835.html#id68de7835-7de6-42de-b5b0-d8831e2d3d5b__Command_NodeRecord_id68de7835.xml#id68de7835-7de6-42de-b5b0-d8831e2d3d5b" title="Error in handling NODE record for input layout database.">NODE_RECORD</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">Error in handling NODE record for input layout
+database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PropnameNstring_idd16a5642.html#idd16a5642-c9b6-4e15-9662-dbbc99ae84e1__Command_PropnameNstring_idd16a5642.xml#idd16a5642-c9b6-4e15-9662-dbbc99ae84e1" title="The string in a PROPNAME or PROPERTY record is not an OASIS n-string.">PROPNAME_NSTRING</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">The string in a PROPNAME or PROPERTY record
+is not an OASIS n-string.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_TextstringAstring_id5d551427.html#id5d551427-b90d-4ebb-bb2e-d3f5d9766bdb__Command_TextstringAstring_id5d551427.xml#id5d551427-b90d-4ebb-bb2e-d3f5d9766bdb" title="The string in a TEXTSTRING or TEXT record is not an OASIS a-string.">TEXTSTRING_ASTRING</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">The string in a TEXTSTRING or TEXT record
+is not an OASIS a-string.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_XelementUnsupported_id0ec7557b.html#id0ec7557b-da5b-443c-bbec-a2fe96a87290__Command_XelementUnsupported_id0ec7557b.xml#id0ec7557b-da5b-443c-bbec-a2fe96a87290" title="An XELEMENT record (not supported) has been encountered.">XELEMENT_UNSUPPORTED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An XELEMENT record (not supported) has been
+encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_XgeometryUnsupported_ide8bbf9d2.html#ide8bbf9d2-d80c-4bac-98a8-453e82e8c713__Command_XgeometryUnsupported_ide8bbf9d2.xml#ide8bbf9d2-d80c-4bac-98a8-453e82e8c713" title="An OASIS XGEOMETRY record (not supported) has been encountered.">XGEOMETRY_UNSUPPORTED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An XGEOMETRY record (not supported) has been
+encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_XnameUnsupported_id05c98f62.html#id05c98f62-34ad-47c2-820b-ec94efc8b40d__Command_XnameUnsupported_id05c98f62.xml#id05c98f62-34ad-47c2-820b-ec94efc8b40d" title="An XNAME record (not supported) has been encountered.">XNAME_UNSUPPORTED</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">An XNAME record (not supported) has been encountered.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d14553e223 d14553e226 "><p class="p"><span class="ph FontProperty HeadingLabel">Text</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_TextBig_id70573e09.html#id70573e09-0dcc-40e8-bb92-009791bfa292__Command_TextBig_id70573e09.xml#id70573e09-0dcc-40e8-bb92-009791bfa292" title="A GDSII text object has more than one vertex.">TEXT_BIG</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII text object has more than one vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e223 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_TextDegenerate_id3c759cf8.html#id3c759cf8-1749-45b1-9d8c-039b522b5731__Command_TextDegenerate_id3c759cf8.xml#id3c759cf8-1749-45b1-9d8c-039b522b5731" title="A GDSII text object has zero vertices.">TEXT_DEGENERATE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d14553e226 "><p class="p">A GDSII text object has zero vertices.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock"><code># Reader Preferences File
+exceptionSeverity TEXTSTRING_ASTRING 0</code></pre></div>
+</div>
+<div class="related-links"><div class="childlink"><strong>Child Topics</strong></div>
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Command_ArrayPitchZero_id1d032667.html" title="Controls zero row or column spacing in placement arrays in GDSII or OASIS input layout databases. For GDSII, this occurs when an AREF placement has its x-dimension (or y‑dimension) &gt; 1 but the spacing in the x-direction (or y-direction) is zero. For OASIS, this occurs when a placement record has a type 1 or 2 repetition and the x-direction spacing is zero, or a placement record has a type 1 or 3 repetition and the y-direction spacing is zero.">ARRAY_PITCH_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_ArefAngled_id52d578f3.html" title="Controls handling of AREF rotation that is not a multiple of 90 degrees.">AREF_ANGLED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_ArefPlacement_id229d4213.html" title="A GDSII AREF has been encountered.">AREF_PLACEMENT</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_BoxRecord_id894a2f69.html" title="Error in handling BOX record for input layout database.">BOX_RECORD</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_CellnameNstring_iddaebff9b.html" title="The string in a CELLNAME, CELL, or PLACEMENT record is not an OASIS n‑string.">CELLNAME_NSTRING</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Circle_id0b5739a4.html" title="An OASIS circle has been encountered.">CIRCLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_CircleRadiusZero_id34c526a5.html" title="An OASIS circle has zero radius.">CIRCLE_RADIUS_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_CtrapezoidAreaZero_iddc551e7f.html" title="A CTRAPEZOID has zero area.">CTRAPEZOID_AREA_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_CtrapezoidDegenerate_id94716202.html" title="A CTRAPEZOID record is degenerate (that is, cannot be formed into a polygon as specified).">CTRAPEZOID_DEGENERATE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_DuplicateCell_iddf034e49.html" title="A cell structure has been encountered multiple times in the input layout database.">DUPLICATE_CELL</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_MissingReference_id9ea5ca85.html" title="A placement points to a cell that is not defined in the database.">MISSING_REFERENCE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_NodeRecord_id68de7835.html" title="Error in handling NODE record for input layout database.">NODE_RECORD</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathAcute_idc3752198.html" title="A path has a centerline with one or more acute angles.">PATH_ACUTE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathAngled_idbd9d1f8d.html" title="A path has a centerline with one or more angled segments.">PATH_ANGLED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathCircular_idb153313a.html" title="A type-1 path (circular endcap) is present in the layout.">PATH_CIRCULAR</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathCoincident_id8d32e4de.html" title="A path has no length.">PATH_COINCIDENT</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathDegenerate_id1bb2d296.html" title="A path has 0 or 1 vertices.">PATH_DEGENERATE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathEndsegmentShort_idf0110c66.html" title="The endsegment of a type-0 GDSII path or flush-ended OASIS path is less than 1/2 the path width.">PATH_ENDSEGMENT_SHORT</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathExtension_id1b830596.html" title="A type-4 GDSII path or variable-end OASIS path cannot be extended.">PATH_EXTENSION</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathNegative_idcff4862b.html" title="A type-4 GDSII path or variable-end OASIS path has a negative start or end extension. If severities 2, 5, or 6 occur at the start extension, then there is no further checking for the end extension.">PATH_NEGATIVE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathNonorientable_id7cdde6a6.html" title="A path cannot be oriented after expansion.">PATH_NONORIENTABLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathNonsimple_id332ad1e3.html" title="A path overlaps itself after expansion.">PATH_NONSIMPLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathSpike_ide46b1aea.html" title="Consecutive path segments retrace the same length.">PATH_SPIKE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathVariable_idbec3e237.html" title="A GDSII path of type 4 or OASIS path with a non-flush or non-square extension is encountered.">PATH_VARIABLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathWidthAbsolute_ide94b5433.html" title="A GDSII path has absolute width specified in the database. See a GDSII functional specification for the definition of absolute width.">PATH_WIDTH_ABSOLUTE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathWidthOdd_idae2d957b.html" title="A path has an odd-valued width. The half-width value is rounded when the path is expanded to a polygon.">PATH_WIDTH_ODD</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PathWidthZero_idfb1e8fc1.html" title="A path has zero width.">PATH_WIDTH_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PlacementAngleAbsolute_idcc98edaa.html" title="A GDSII placement has an absolute rotation angle.">PLACEMENT_ANGLE_ABSOLUTE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PlacementMagnificationAbsolute_idf2ca312c.html" title="A GDSII placement has an absolute magnification. See a GDSII functional specification for the definition of absolute angle in a STRANS record.">PLACEMENT_MAGNIFICATION_ABSOLUTE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PlacementMagnificationNonpositive_id0a865968.html" title="A placement has a non-positive magnification.">PLACEMENT_MAGNIFICATION_NONPOSITIVE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PlacementMagnified_ida4f13138.html" title="A GDSII or OASIS placement has a non-unit magnification.">PLACEMENT_MAGNIFIED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonAcute_id7d7a426f.html" title="An acute angle exists in a GDSII boundary or OASIS polygon.">POLYGON_ACUTE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonAreaZero_id114fbb11.html" title="A zero-area boundary exists in a GDSII-type database or a zero-area polygon exists in an OASIS database.">POLYGON_AREA_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonDegenerate_id373aae46.html" title="A polygon has 0 or 1 vertices.">POLYGON_DEGENERATE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonIsRectangle_id53dd82c7.html" title="A two-point GDSII BOUNDARY is encountered.">POLYGON_IS_RECTANGLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonNonorientable_id9e3d3a29.html" title="A polygon cannot be oriented.">POLYGON_NONORIENTABLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonNonsimple_id9bc9ed3e.html" title="A polygon overlaps itself.">POLYGON_NONSIMPLE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonNotClosed_id85a5b1ad.html" title="Controls the message that is generated when closing an open GDSII BOUNDARY.">POLYGON_NOT_CLOSED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PolygonSpike_id355fabbb.html" title="Applies to spikes in boundaries read from GDSII-type input layout databases or polygons read from OASIS-type input layout databases. A “spike” is defined as two consecutive edges whose interior angle is 0 or 360 degrees.">POLYGON_SPIKE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PropnameNstring_idd16a5642.html" title="The string in a PROPNAME or PROPERTY record is not an OASIS n-string.">PROPNAME_NSTRING</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_RectangleSideZero_id0beca3bd.html" title="A rectangle (including a two-point GDSII polygon) has zero width or length.">RECTANGLE_SIDE_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_TextBig_id70573e09.html" title="A GDSII text object has more than one vertex.">TEXT_BIG</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_TextDegenerate_id3c759cf8.html" title="A GDSII text object has zero vertices.">TEXT_DEGENERATE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_TextstringAstring_id5d551427.html" title="The string in a TEXTSTRING or TEXT record is not an OASIS a-string.">TEXTSTRING_ASTRING</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_TrapezoidAreaZero_id851fcd31.html" title="A TRAPEZOID has zero area.">TRAPEZOID_AREA_ZERO</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_TrapezoidDegenerate_id82c62ae3.html" title="A TRAPEZOID record is degenerate (that is, cannot be formed into a polygon as specified).">TRAPEZOID_DEGENERATE</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_XelementUnsupported_id0ec7557b.html" title="An XELEMENT record (not supported) has been encountered.">XELEMENT_UNSUPPORTED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_XgeometryUnsupported_ide8bbf9d2.html" title="An OASIS XGEOMETRY record (not supported) has been encountered.">XGEOMETRY_UNSUPPORTED</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_XnameUnsupported_id05c98f62.html" title="An XNAME record (not supported) has been encountered.">XNAME_UNSUPPORTED</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ConfigurationFileReference_id4dccc720.html" title="Any time you configure the layout viewer, the tool saves your setting in one of several configuration files. While you can use the GUI to configure some aspects of the tool, you also have the option of editing the configuration files. Some aspects of the layout viewer behavior can only be modified by editing one of the configuration files.">Configuration File Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_user"
+                DocTitle = "Calibre® DESIGNrev™ Layout Viewer User’s Manual"
+                PageTitle = "readerprefs File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_ReaderprefsFileFormat_id66ba174a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Layout Viewer User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

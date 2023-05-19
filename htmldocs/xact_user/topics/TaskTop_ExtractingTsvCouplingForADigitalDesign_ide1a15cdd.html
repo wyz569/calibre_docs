@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Extracting TSV Coupling for a Digital Design" />
+<meta name="abstract" content="Create a netlist that inserts a TSV and includes coupling capacitance between TSVs in a digital design using the LEF/DEF extraction flow." />
+<meta name="description" content="Create a netlist that inserts a TSV and includes coupling capacitance between TSVs in a digital design using the LEF/DEF extraction flow." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ide1a15cdd-d2ea-4559-89aa-e3ad49162559" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Extracting TSV Coupling for a Digital Design</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Extracting TSV Coupling for a Digital Design" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Extracting TSV Coupling
+for a Digital Design</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Create a
+netlist that inserts a TSV and includes coupling capacitance between
+TSVs in a digital design using the LEF/DEF extraction flow.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__idf1e25e46-5c13-4f6d-9c36-b1303a66ff6a"><p class="p">Calibrated
+rule files that contain TSV capacitance (C<span class="ph FontProperty LiteralSubScript">eff</span>)
+parasitic values as a function of spacing between the TSVs and frequency.</p>
+<p class="p">To demonstrate the behavior this example assumes
+the following table was defined in the MIPT file used to generate
+the calibrated rule files as a part of the TSV via layer definition.</p>
+<pre class="pre codeblock"><code>...
+table = tsv_capacitance_eff {
+        property = tsv_capacitance
+        table_type = C
+        dim_type = drawn
+        value_type = absolute
+        frequency = { 5.0E+07 <span class="ph CodeHighlight orange">7.0E+07</span> 9.0E+07 1.2E+08 1.4E+08 1.6E+08 1.9E+08 2.1E+08 2.3E+08 2.6E+08 2.8E+08 3.1E+08 3.3E+08 3.5E+08 3.8E+08 4.0E+08 4.2E+08 4.5E+08 4.7E+08 5.0E+08 }
+        spacing = { 60 70 80 90 100 110 120 130 140 150 <span class="ph CodeHighlight orange">160</span> 170 180 190 200 210 220 230 }
+        value = { 2600 2400 2270 2120 2030 1900 1800 1790 1700 1680 1630 1600 1570 1550 1530 1510  1500 1490 ,
+1770 1650 1550 1460 1380 1320 1260 1210 1170 1140 <span class="ph CodeHighlight orange">1110</span> 1080 1060 1050 1030 1020 1015 1010 , 
+1340 1250  1170 1100 1050  1000 950 910 880  860 840 820 800 790 780 775 770 760 ,
+1070 1000 940 880 840 800 770 740 710 690 670 660 650 640 630 625 620  615 ,
+900 840 780 740 700 670 640 610 590 580 560 550 540 530 525 520 515  510 ,
+...</code></pre><p class="p">The values in bold are used to demonstrate the
+results.</p>
+</li>
+<li class="li" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__id3c8df3c5-6198-4e2a-9106-9ac7571d5037"><p class="p">A TSV subcircuit definition in SPICE format in
+R or RC models. Inductance is not supported for digital designs.
+This example uses an RC subcircuit definition. </p>
+</li>
+<li class="li" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__idb5d93414-8922-4ad1-83c9-b091adfa1034"><p class="p">A
+LEF/DEF design.</p>
+</li>
+<li class="li" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__idccaf8b89-2559-4505-a2ff-a3d01172d672"><p class="p">A valid
+top level LEF/DEF rule file. For more information refer to “<a class="xref fm:HeadingOnly" href="TaskTop_PerformingExtractionCalibreXactSoc_idc28c4dc5.html#idc28c4dc5-b800-4504-8ec8-cf1c2d1ce32b__TaskTop_PerformingExtractionCalibreXactSoc_idc28c4dc5.xml#idc28c4dc5-b800-4504-8ec8-cf1c2d1ce32b" title="Run Calibre xACT digital extraction to create the SPEF netlist.">Performing Digital Extraction With Calibre xACT</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__idf7fb66b0-a6e5-454b-b571-00daa9882b16"><span class="ph cmd">The file <span class="ph filepath">tsv_rc.subckt</span> contains
+an RC subcircuit definition for a TSV. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>.subckt     tsv_rc    top    bottom
+            R1        top    n2       5555
+            R2        n2     bottom   6666
+            C         n2     sub      7777f
+.ends</code></pre></div></li>
+<li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__idf860cab9-45d6-4e59-8d79-bfce68c80c85"><span class="ph cmd">Verify the top-level rule file, <span class="ph filepath">top_lefdef.rules</span>,
+contains the following specification information.</span><div class="itemgroup info StepInfo"><p class="p">The layout input statements
+are used to specify the LEF/DEF input. For example:</p>
+<pre class="pre codeblock"><code>LAYOUT PRIMARY “DIGITAL_interposer”
+LAYOUT PATH "./input/tsv.lef"
+            "./input/ubm.lef"
+            "./input/DIGITAL_Interposer.tlef"
+            "./input/DIGITAL_Interposer.def"
+INCLUDE ./RC_interposer_LEFDEF/RC_interposer.lefdef.map.svrf
+...</code></pre><p class="p">Specify the extracted netlist output in SPEF format
+using layout names with:</p>
+<pre class="pre codeblock"><code>PEX NETLIST “tsv_netlist.spef” SPEF LAYOUTNAMES MAPNAMES NOINSTANCEX CLAYER RLAYER RLOCATION RLENGTH RWIDTH</code></pre></div></li>
+<li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__ida35add01-8d1d-4652-a36b-0fbf8de7aa5e"><span class="ph cmd">To
+include the TSV subcircuit in the extracted netlist add the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist 3DIC', 'svrf_ur'); return false;">PEX Netlist 3DIC</a> statement
+to the <span class="ph filepath">top_lefdef.rules</span> file. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PEX NETLIST 3DIC tsv_rc FILE “./inputs/tsv_rc.subckt” SUBNODE sub</code></pre><p class="p">where <span class="ph filepath">tsv_rc</span> is
+an LVS layer or a calibrated layer name, and <span class="ph filepath">sub</span> is
+TSV circuit middle node.</p>
+</div></li>
+<li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__id8b589ff8-6d5d-465e-81b8-9a9e163ead34"><span class="ph cmd">To also include the couplings between the TSVs
+that are within a distance of 325 microns of each other, add the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX 3DIC Coupling', 'svrf_ur'); return false;">PEX 3DIC Coupling</a> statement
+to the <span class="ph filepath">top_lefdef.rules</span> file.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PEX 3DIC COUPLING tsv_rc DIGITAL 7.0e7 MAXDISTANCE 325</code></pre><p class="p">When the <span class="keyword ParameterName Required">DIGITAL</span> keyword
+is specified, the coupling capacitance between the TSVs is extracted
+based on an effective capacitance table. The parasitic values are
+provided as a function of spacing between the TSVs and the operating
+frequency. </p>
+</div></li>
+<li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__id29ed0854-fbbf-43ef-bcee-e0c383ddd7ba"><span class="ph cmd">Save and close the <span class="ph filepath">top_lefdef.rules</span> file.</span></li>
+<li class="li step stepexpand" id="ide1a15cdd-d2ea-4559-89aa-e3ad49162559__id0a12af52-048a-4854-8359-2d8c730b081e"><span class="ph cmd">Run Calibre xACT to extract RC parasitic effects,
+insert a TSV circuit, and generate the netlist.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -xact -rc top_lefdef.rules</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">If there are no errors, the directory should contain
+the SPEF netlist, <span class="ph filepath">tsv_netlist.spef.</span> </p>
+<p class="p">Examine the contents of the netlist. The netlist
+should contain the inserted TSV information. The resistance and
+capacitance values should match those from the subcircuit specified
+in <span class="ph filepath">tsv_rc.subckt</span>. For example:</p>
+<pre class="pre codeblock"><code>...
+*CAP
+...
+23 *31:88 *31:22 <span class="ph CodeHighlight orange">7777</span>
+24 *31:22 *30:17 1.1124e+06
+...
+*RES
+...
+53 *31 *31:88 <span class="ph CodeHighlight orange">6666</span> // $x=182.5 $y=229.0 $x2=182.5 $y2=229.0
+54 *31:88 *31:84 <span class="ph CodeHighlight orange">5555</span> // $x=182.5 $y=229.0 $x2=182.5 $y2=224.875
+...</code></pre><p class="p">The netlist should also include the TSV coupling
+information:</p>
+<pre class="pre codeblock"><code>...
+*CAP
+...
+23 *31:88 *31:22 7777
+24 *31:22 *30:17 <span class="ph CodeHighlight orange">1.110e+06</span>
+25 *31:22 *33:20 1.011e+06
+26 *31:22 *34:24 1.011e+06
+27 *31:22 *35:24 1.112e+06
+28 *31:22 *37:19 1.011e+06
+...</code></pre><p class="p">The capacitance values for TSV coupling were obtained
+from the effective tsv_capacitance table for the spacing value of
+160 microns.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RunningInterposerExtraction_id730fe9ef.html" title="Calibre xACT supports die and interposer TSV extraction for both GDS and LEF/DEF designs. TSV extraction includes the extraction of the interposer parasitics on both sides of the TSVs, TSV subcircuit insertion, and TSV to TSV coupling extraction.">Running TSV Extraction</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Extracting TSV Coupling for a Digital Design"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExtractingTsvCouplingForADigitalDesign_ide1a15cdd.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

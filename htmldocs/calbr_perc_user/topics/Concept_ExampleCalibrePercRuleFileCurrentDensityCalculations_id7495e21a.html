@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Example Rule File for LDL Current Density Calculations" />
+<meta name="abstract" content="This example shows a Calibre PERC rule file for performing current density calculations. Current density is computed for nets connected to IO pads. IO port to MOS gate pin, and MOS gate pin to MOS gate pin resistance connections are evaluated." />
+<meta name="description" content="This example shows a Calibre PERC rule file for performing current density calculations. Current density is computed for nets connected to IO pads. IO port to MOS gate pin, and MOS gate pin to MOS gate pin resistance connections are evaluated." />
+<meta name="DC.subject" content="LDL, CD rule file example" />
+<meta name="keywords" content="LDL, CD rule file example" />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id7495e21a-49f9-4d7b-a2fc-a4aafc4ac8b3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example Rule File for LDL Current Density Calculations</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example Rule File for LDL Current Density Calculations" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id7495e21a-49f9-4d7b-a2fc-a4aafc4ac8b3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example Rule File for LDL Current Density Calculations</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This example
+shows a Calibre PERC rule file for performing current density calculations. Current
+density is computed for nets connected to IO pads. IO port to MOS
+gate pin, and MOS gate pin to MOS gate pin resistance connections
+are evaluated.</span>
+</div>
+<div class="fig fignone ExampleTitle" id="id7495e21a-49f9-4d7b-a2fc-a4aafc4ac8b3__id0da210c0-8099-42d8-876d-6eb41cec0bc7"><span class="figcap"><span class="fig--title-label">Example 1. </span>Current
+Density Checking Rule File</span><pre class="pre codeblock leveled"><code>PERC REPORT "perc.report" 
+LVS  REPORT "lvs.report" // for circuit extraction report name
+ 
+LVS POWER  NAME VCC 
+LVS GROUND NAME VSS 
+ 
+// define this for power grid metal layers
+PERC LDL LAYOUT REDUCE TOP LAYERS m4 m5 m6 m7 m8
+
+// add this for via resistance reduction
+// Default rule: reduction OFF for all layers and nets.
+// PEX REDUCE VIA RESISTANCE OFF 
+//
+// Specific rules: reduce power grid vias.
+// Perform on LVS Power Name and LVS Ground Name nets and metal
+// layers m4 to m8. Vias are partitioned into 3x3 arrays.
+// PEX REDUCE VIA RESISTANCE m4 m5 FLEXIBLE MINSTEP 3 
+//   POWERNETS GROUNDNETS
+// PEX REDUCE VIA RESISTANCE m5 m6 FLEXIBLE MINSTEP 3 
+//   POWERNETS GROUNDNETS
+// PEX REDUCE VIA RESISTANCE m6 m7 FLEXIBLE MINSTEP 3 
+//   POWERNETS GROUNDNETS
+// PEX REDUCE VIA RESISTANCE m7 m8 FLEXIBLE MINSTEP 3 
+//   POWERNETS GROUNDNETS
+
+PERC LOAD esd INIT init SELECT rule_1 </code></pre><pre class="pre codeblock leveled"><code>// ESD resistance calculation portion 
+TVF FUNCTION esd [/* 
+ 
+  package require CalibreLVS_PERC 
+ 
+# define net types and path type propagation device pins 
+  proc init {} { 
+    perc::define_net_type "IOPad"  {IN? OUT?} 
+    perc::create_net_path -type R -pin {p n} 
+  } </code></pre><pre class="pre codeblock leveled"><code># port-to-pin resistance connections for top-level ports and MOS g pins
+# for current density calculations 
+  proc calc_resistance {dev} { 
+    perc::export_pin_pair [list lvsTopPort port $dev g ] -cd 
+    return 0 
+  } 
+ 
+# define pin-to-pin resistance connections for MOS g pins
+# for current density calculations 
+  proc calc_dev_to_dev_resistance {dev1 dev2} { 
+    perc::export_pin_pair [list $dev1 g $dev2 g] -cd 
+    return 0 
+  }</code></pre><pre class="pre codeblock leveled"><code># compute resistances between ports and pins
+  proc compute_res {net} { 
+  # count the nmos connected to the net at the gate pin. 
+  # these are input gates to be protected. Store them in a list. 
+    set result [perc::count -net $net -type {mn} -pinAtNet {g} -list] 
+    set nmos_count [lindex $result 0] 
+    set nmos_list  [lindex $result 1] 
+ 
+    if { $nmos_count != 0 } { 
+    # loop over device lists, and calculate metal resistance for each  
+    # port to pin. 
+      for {set i 0} {$i &lt; $nmos_count} {incr i} { 
+        set nmos [lindex $nmos_list $i] 
+        calc_resistance $nmos  
+      } 
+    } 
+ 
+  # follow similar procedure for pmos. 
+    set result [perc::count -net $net -type {mp} -pinAtNet {g} -list] 
+    set pmos_count [lindex $result 0] 
+    set pmos_list [lindex $result 1] 
+ 
+    if { $pmos_count != 0 } { 
+      for {set i 0} {$i &lt; $pmos_count} {incr i} { 
+        set pmos [lindex $pmos_list $i] 
+        calc_resistance $pmos 
+      } 
+    } 
+ 
+  # calculate device-to-device resistances. 
+    for {set i 0} {$i &lt; $nmos_count} {incr i} { 
+      set nmos [lindex $nmos_list $i] 
+        for {set j 0} {$j &lt; $pmos_count} {incr j} { 
+          set pmos [lindex $pmos_list $j] 
+          calc_dev_to_dev_resistance $nmos $pmos 
+        } 
+    } 
+    return 0 
+  } </code></pre><pre class="pre codeblock leveled"><code>  proc rule_1 {} { 
+    perc::check_net -pathType IOPad -condition compute_res \
+      -comment "Primary ESD resistance on IO nets" 
+  } 
+ 
+*/] 
+ 
+// current density analysis reporting constraints 
+PERC LDL CD poly CONSTRAINT cmacro cd_macro 
+PERC LDL CD m1   CONSTRAINT cmacro cd_macro 
+PERC LDL CD m2   CONSTRAINT cmacro cd_macro </code></pre><pre class="pre codeblock leveled"><code>// assign dynamic constraints based upon layer and voltage drop across 
+// parasitic resistor 
+DMACRO cd_macro {[ 
+CONSTRAINT val 
+  drop = get_voltage_drop() // voltage drop 
+  L = get_layer_name()  
+  val = tvf_num_fun::cd_lib::calc_cd(drop, L) 
+]} 
+ 
+// voltage drops across metal and poly layers
+TVF FUNCTION cd_lib [/* 
+  proc calc_cd {drop L} { 
+    if {[regexp -nocase {m[1-9]} [$L]]} {  
+      if {[$drop] &lt; 0.5} { 
+        return 0.2 
+      } else { 
+        return 0.5 
+      } 
+    } 
+    if {[string equal -nocase [$L] poly]} {  
+      if {[$drop] &lt; 0.2} { 
+        return 0.1 
+      } else { 
+        return 0.3 
+      } 
+    } 
+    return 0 
+  } 
+*/] </code></pre><pre class="pre codeblock leveled"><code>TVF FUNCTION perc_cd_checks [/* 
+ 
+proc cd_execute {} { 
+ 
+# sort results by rule check; use locally specified I and V 
+  lappend cd_tests [ perc_ldl::design_cd_experiment \
+    -experiment_name rule_1.I1_V0 -rulecheck rule_1 -I 1 -V 0 ] 
+ 
+# sort results by rule check; use execute_cd_checks I and V 
+  lappend cd_tests [ perc_ldl::design_cd_experiment \
+    -experiment_name rule_1.I2_V0.5 -rulecheck rule_1 ] 
+ 
+# sort results by source; use execute_cd_checks I and V 
+  lappend cd_tests [ perc_ldl::design_cd_experiment \
+    -experiment_name rule_1.I2_V0.5_by_source -rulecheck rule_1 \
+    -group_by source ] 
+ 
+# use a reporting threshold of 90% 
+  perc_ldl::execute_cd_checks -I 2 -V 0.5 \
+    -report_threshold 90 -cd_experiment_list [list $cd_tests] 
+ 
+exit -force
+} 
+*/] 
+ 
+DFM YS AUTOSTART perc_cd_checks cd_execute 
+DFM DATABASE "dfmdb" OVERWRITE REVISIONS [DEVICES PINLOC] </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CurrentDensityChecks_id88453e90.html" title="Calibre PERC Logic Driven Layout Current Density (LDL CD) checking calculates the current flow through layout interconnect layers and outputs polygon-based results that meet the specified constraints. This application uses Calibre PERC, Calibre nmDRC, Calibre nmLVS, Calibre DFM, and Calibre xRC applications in a single package to perform the calculations.">Current Density Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/MGCChap_CurrentDensityChecks_id88453e90.html" title="Calibre PERC Logic Driven Layout Current Density (LDL CD) checking calculates the current flow through layout interconnect layers and outputs polygon-based results that meet the specified constraints. This application uses Calibre PERC, Calibre nmDRC, Calibre nmLVS, Calibre DFM, and Calibre xRC applications in a single package to perform the calculations.">Current Density Checks</a></div>
+<div><a class="link" href="../topics/TaskTop_RunningCalibrePercCdFlow_id204c3ddd.html" title="This procedure shows how to set up and run the Calibre PERC CD flow.">Running the Calibre PERC CD Flow</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example Rule File for LDL Current Density Calculations"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ExampleCalibrePercRuleFileCurrentDensityCalculations_id7495e21a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

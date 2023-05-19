@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Finding Extents for Full Chip Runs" />
+<meta name="abstract" content="For full chip, you find the extent by loading a dummy file to the Calibre engine, and then reading the extent information directly from the actual intended design file." />
+<meta name="description" content="For full chip, you find the extent by loading a dummy file to the Calibre engine, and then reading the extent information directly from the actual intended design file." />
+<meta name="prodname" content="Calibre OPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="no" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® OPCverify™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf111beae-beda-4404-8fdf-00a09797c584" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Finding Extents for Full Chip Runs</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Finding Extents for Full Chip Runs" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf111beae-beda-4404-8fdf-00a09797c584">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Finding Extents for Full
+Chip Runs</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">For full chip,
+you find the extent by loading a dummy file to the Calibre engine,
+and then reading the extent information directly from the actual
+intended design file.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">There is an alternative
+step for this flow. See also “<a class="xref fm:HeadingAndPage" href="TaskTop_FindingExtentsSmallDesigns_id927a9444.html#id927a9444-76bf-4829-8796-4219f56e6121__TaskTop_FindingExtentsSmallDesigns_id927a9444.xml#id927a9444-76bf-4829-8796-4219f56e6121" title="Once you have created the header for the litho flat SVRF file, you must add relevant dummy layers and create an output window for the HDB engine to use as a template. You will be replacing these later in the Calibre OPCverify command file.">Finding Extents for Small Designs</a>”.</p>
+</div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__id6c88090d-e237-436f-afb2-662e0ce79a75"><p class="p">A
+flat design file (OASIS format only)</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idf111beae-beda-4404-8fdf-00a09797c584__id7eff5317-e372-436a-a4b3-5bd389470421"><span class="ph cmd">Create a mostly-empty OASIS
+design file. It must have at least the following characteristics:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__ida0c12ef1-6d90-4887-b1c0-c85474c72789"><p class="p">Its database precision
+must match the actual design file’s precision setting.</p>
+</li>
+<li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__id340f1db7-3112-4285-9022-4b2835fa9712"><p class="p">Its grid size must match
+the actual design file’s grid size setting.</p>
+</li>
+<li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__id7739938b-86d7-4667-8a1d-dc863281866a"><p class="p">It must have at least one
+drawn object on layer 1. The layer should be named “dummy”.</p>
+</li>
+</ul>
+<p class="p">Save the
+file as <span class="ph filepath">dummy.oas</span>.</p>
+</div></li>
+<li class="li step stepexpand" id="idf111beae-beda-4404-8fdf-00a09797c584__idf47620fa-2b36-44fa-a069-de7cd408d0ff"><span class="ph cmd">In a text editor, create an
+SVRF rule file. It should use the following format (use the proper
+values where needed):</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__id1ff1cbb7-50b5-4083-8b8b-40c8be653208"><p class="p"><span class="keyword ParameterName OptionalReplaceable">extract_layer_num </span>must
+match the layer you want to get the extent from in <span class="keyword ParameterName OptionalReplaceable">design_filename</span>.oas,
+which is the actual design file.</p>
+</li>
+<li class="li" id="idf111beae-beda-4404-8fdf-00a09797c584__idd7c28859-930c-44a8-8aac-b9428c262723"><p class="p"><span class="keyword ParameterName OptionalReplaceable">precision_value</span> must
+be the correct value.</p>
+<pre class="pre codeblock leveled"><code>LAYOUT SYSTEM OASIS
+LAYOUT PATH "./input/dummy.oas"
+LAYOUT PRIMARY "*"
+PRECISION <span class="keyword ParameterName OptionalReplaceable">precision_value</span>
+LAYER dummy 1
+DRC MAXIMUM RESULTS ALL
+DRC RESULTS DATABASE "./output/dummy_opcv.oas" OASIS
+DRC SUMMARY REPORT "./reports/dummy_opcv.rep"
+// derive a layer to the extent of input file, 
+//this will also be the input 
+// file to OPCV in the second Calibre job
+input_extent = MDP OASIS_EXTENT MAP initial_extent FILE [
+	vboasis_path "./input/<span class="keyword ParameterName OptionalReplaceable">design_filename</span>.oas" 
+	vboasis_precision_multiplier auto
+	layout_subset initial_extent <span class="keyword ParameterName OptionalReplaceable">extract_layer_num</span>
+]
+input_extent { COPY input_extent } DRC CHECK MAP input_extent OASIS 0</code></pre></li>
+</ul>
+<p class="p">This rule file uses the Calibre
+MDPview command MDP OASIS_EXTENT (described in the <a class="xref LinkItalic" href="../../calbr_mdp_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_mdp_useref'); return false;">Calibre Mask Data Preparation User’s and Reference Manual</a>) to scan
+and extract the extent information from the named design file. </p>
+</div></li>
+<li class="li step stepexpand" id="idf111beae-beda-4404-8fdf-00a09797c584__idfcab1042-83ba-43a8-93e9-0710100b8fcb"><span class="ph cmd">Save the rule
+file as <span class="ph filepath">extract.svrf</span> and run
+it in Calibre: </span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibre -drc -hier extract.svrf</pre>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ListTasks_id6b27e4eb.html" title="The following table shows the tasks to implement litho flat rule files:">List of Tasks</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcv_useref"
+                DocTitle = "Calibre® OPCverify™ User’s and Reference Manual"
+                PageTitle = "Finding Extents for Full Chip Runs"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_FindingExtentsFullChipRuns_idf111beae.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCverify™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

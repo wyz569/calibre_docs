@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Step 3: Extract Self and Mutual Impedance" />
+<meta name="abstract" content="Follow this procedure when you want to extract self and mutual impedance from your layout." />
+<meta name="description" content="Follow this procedure when you want to extract self and mutual impedance from your layout." />
+<meta name="prodname" content="Calibre xL User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_xl_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xL User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4ef88ce5-b168-49a6-b697-d678fb7f00b5" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Step 3: Extract Self and Mutual Impedance</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Step 3: Extract Self and Mutual Impedance" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Step 3: Extract Self and Mutual Impedance</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Follow this procedure
+when you want to extract self and mutual impedance from your layout.</p>
+<p class="p">This step can be run multiple times
+without regenerating the PHDB. You will identify victim nets, update
+the SVRF rule file, and select the inductance extraction options.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id76bb594c-adeb-4734-a853-46931c45abda"><p class="p">You
+must have created the PHDB; if not, see “<a class="xref fm:HeadingAndPage" href="TaskTop_Step1CreatePhdb_id60f998d9.html#id60f998d9-37a8-474b-91f2-46a1e54ccdfd__TaskTop_Step1CreatePhdb_id60f998d9.xml#id60f998d9-37a8-474b-91f2-46a1e54ccdfd" title="Follow this procedure when you need to create the Persistent Hierarchical Database (PHDB).">Step 1: Create the PHDB</a>”.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idedca3d6f-b7de-4413-8d7a-4922afa16b39"><p class="p">You
+must have created the PDB; if not, see “<a class="xref fm:HeadingAndPage" href="TaskTop_Step2CreatePdb_id63ba3390.html#id63ba3390-fb1c-4556-8e88-27c9592cdbf9__TaskTop_Step2CreatePdb_id63ba3390.xml#id63ba3390-fb1c-4556-8e88-27c9592cdbf9" title="Follow this procedure to create the parasitic database (PDB).">Step 2: Create the PDB</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idfb7d6a83-897e-44fe-9590-6287dc9fc482"><span class="ph cmd">From Calibre Interactive,
+click <span class="ph uicontrol bold">Start RVE</span> to open
+the Calibre — RVE window.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id90deb0a1-0995-4ce0-a4f6-e0a78402686e"><span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">Tools</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Mutual Inductance</span></span>.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id7068e20e-21a3-439e-8744-586b30f37a2d"><span class="ph cmd">Select a target net (victim
+net) from the droplist of available nets or click on the layout
+icon (<img class="image" height="13" src="../graphics/rve_icon_layout.gif" width="15" />) to select the nets
+interactively in the Calibre DESIGNrev layout viewer window. The <span class="ph uicontrol bold">Driver</span> will automatically be
+identified.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id468ced09-8b2f-4a07-8937-7f6cb02472e1"><span class="ph cmd">The tags you can specify are
+“b” for base, “c” for collector, “d” for drain, “e” for emitter,
+“g” for gate, “n” for negative, “p” for positive, “s” for source,
+and “t” for text port. For example, if you know you want to select
+a drain or source as the driver, type “d s” in the <span class="ph uicontrol bold">Driver Tags</span> entry box. This
+prevents you from selecting a device pin or port that is not a drain
+or source <span class="ph uicontrol bold">Driver</span> list
+box. To change the list of tags that specify which of the device
+pins and ports you can select as the driver, edit the list of tags
+in the <span class="ph uicontrol bold">Driver Tags</span> entry
+box.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id62707468-50d0-45df-9a0c-f8ae220fce8e"><span class="ph cmd">To change a driver select
+one from the available list of drivers in the droplist. The selected
+driver for the <span class="ph uicontrol bold">Target Net</span> appears
+in the <span class="ph uicontrol bold">Driver</span> entry.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id1b2b7a25-d13e-4da1-bb83-b821b6d0a904"><span class="ph cmd">Enter the <span class="ph uicontrol bold">Tube Radius</span> you want to use
+for the target net. The default entry is 60 microns. For more information,
+see “<a class="xref fm:HeadingAndPage" href="Concept_ControllingHowCalibreXlSelectsAggressorNets_id9ea096d5.html#id9ea096d5-14b0-4e68-960a-6cf430a8c9ad__Concept_ControllingHowCalibreXlSelectsAggressorNets_id9ea096d5.xml#id9ea096d5-14b0-4e68-960a-6cf430a8c9ad" title="For the selected victims, the Calibre xL tool automatically identifies the aggressors based on an imaginary tube placed around the victim paths.">Controlling How Calibre xL Selects Aggressor Nets</a>”.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id6395aa09-22e2-4216-bcee-66784bc26997"><span class="ph cmd">Click <span class="ph uicontrol bold">Select Net</span> to add the selected
+net into the list to be exported to the victim file.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id63e48ded-7549-48ab-a7fb-45303964c4c1"><span class="ph cmd">Repeat steps 3 through 7 for
+each victim net you want to add to the list.</span><div class="itemgroup info StepInfo"><div class="note note"><span class="notetitle">Note:</span> <p class="p">To view a victim net in the
+layout, select the net in the Selected Nets box, right click and
+select <span class="ph uicontrol bold">Highlight Net</span> from the
+pop-up menu to view the net in the Calibre DESIGNrev window. This
+is useful when you want to examine the layout to see that you have
+specified the correct net or the appropriate tube radius. To delete
+a victim net from the list, select the net in the Selected Nets
+box and right click to select <span class="ph uicontrol bold">Delete</span> from
+the pop-up menu.</p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__ida254c8cd-5fe7-4116-9c98-838d828997e3"><span class="ph cmd">When
+you finish selecting target nets, click <span class="ph uicontrol bold">Save
+Victim File</span>. This creates the victim file that contains
+the victim nets.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idf9adbc5d-a3b3-4e6c-be0f-78e2fa45652d"><span class="ph cmd">Click <span class="ph uicontrol bold">OK</span> to accept the default file
+name <span class="ph filepath">victim.xl</span>, type a new
+file name, or select a different file name from the directory listing
+shown. By default, the Calibre RVE viewer saves this file in your
+working directory.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idb2550d9b-b567-474d-92b3-248af5957ab3"><span class="ph cmd">You may close the Mutual Inductance
+tab when you finish.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id45f72f74-0b1e-4279-8c31-d3f975cd33e8"><span class="ph cmd">Update the SVRF rule to specify
+the location of the victim file using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">Include</a> statement:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>INCLUDE “<span class="ph FontProperty emphasis">location</span>/victim” </code></pre><p class="p">where <span class="ph filepath">location</span> is
+the path to the file. By default, the Calibre RVE viewer stores
+these files in your working directory.</p>
+</div></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id2ebfb4ca-e32b-486f-abd4-50c5931c5f04"><span class="ph cmd">Return to the Calibre Interactive
+window, and select <span class="ph menucascade"><span class="ph uicontrol">Setup</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">PEX Options</span></span>.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id64b8812a-2dbf-4109-86f4-7e8a4f9e6b9d"><span class="ph cmd">From the <span class="ph uicontrol bold">Netlist </span>tab click the <span class="ph uicontrol bold">Reduction and CC</span> tab. Select
+“Enable TICER Reduction Below” to set up for netlist reduction during
+the netlist formatter stage, and type in a value for the highest
+frequency of interest up to which the reducer accurately preserves network
+response. For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Reduce TICER', 'svrf_ur'); return false;">PEX Reduce TICER</a> statement.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id6d4fd521-03f4-43da-b70b-76e900b5f212"><span class="ph cmd">Click the <span class="ph uicontrol bold">Misc</span> tab.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id0884a051-2725-49ee-af59-77e9f0668558"><span class="ph cmd">The following options can
+be specified for controlling inductance extraction:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id55d8a101-6a8b-4088-97a8-a44da0520185"><p class="p">Power nets — Select whether
+or not to use layout or source net names when specifying power nets. </p>
+<ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id7d39919c-a016-4c70-a4a6-410a74b2f34e"><p class="p">Layout — Use layout net
+names.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id9f8e300c-10a9-423a-911f-be954d553c51"><p class="p">Source — Use source net
+names.</p>
+</li>
+</ul>
+<p class="p">For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Power', 'svrf_ur'); return false;">PEX Power</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id8a532840-dbde-489c-a83b-c6cf90b0779e"><p class="p">Ground nets — Select whether
+or not to use layout or source net names when specifying ground
+nets. </p>
+<ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idd4e30032-1f81-4a37-8b55-3eddbc75337e"><p class="p">Layout — Use layout net
+names.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id2fe13499-f222-4372-b5ae-89b26a32341a"><p class="p">Source — Use source net
+names.</p>
+</li>
+</ul>
+<p class="p">For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Ground', 'svrf_ur'); return false;">PEX Ground</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idba935c05-eed2-434c-b4c0-6815d8abe706"><p class="p">Generate driver/receiver
+file — Select whether or not to generate a driver and receiver file
+for use in Calibre xRC extraction. If you selected this option, type
+in the driver and receiver file. The default driver file is <span class="ph filepath">driver.xl</span>.
+Also, type in the tags for the driver and receiver file. For complete
+information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Generate Driver File Tag', 'svrf_ur'); return false;">PEX Generate Driver File Tag</a> statement.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idbd1e15ab-81f1-4c35-8538-6af11f7fc3ba"><span class="ph cmd">Click the <span class="ph uicontrol bold">Inductance</span> tab.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idbfdca852-353a-41f5-9dc1-39523246b037"><span class="ph cmd">The following options can
+be specified for controlling inductance extraction:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id34644fa1-7bc6-4b95-8b2d-bc16859fcf82"><p class="p">Broadband
+— Select whether or not to use broadband mode. Enabling Broadband
+enables the Switch Time entry box.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id34604ed7-eb86-4b69-823a-be8a850458e5"><p class="p">Operating Frequency — Type
+in a value for the global maximum operating frequency in GHz for
+any signal net in the design. The default is 10 GHz. For complete
+information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Frequency', 'svrf_ur'); return false;">PEX Inductance Frequency</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id51a8b204-e1f0-4b57-886e-df56c190ec7e"><p class="p">Switch
+Time — If you selected Broadband, you may alternatively select Switch
+Time to specify a global switch time. Type in a value for the global
+switch time in seconds to use during inductance extraction. For
+complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Switch Time', 'svrf_ur'); return false;">PEX Inductance Switch Time</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idc9d8a33e-b45e-4c7d-ab4e-b4559d50321d"><p class="p">Net
+Filter — Select the type of net filtering to apply:</p>
+<ul class="ul"><li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idbd844de3-7758-4897-bf1a-1c404344f98a"><p class="p">Off — Do not filter nets.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__ide6131d4b-51f3-4be2-a6b6-273a040df745"><p class="p">Approx — Approximate an
+end point as driver (default).</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id4001e5d8-5fc5-4f2b-a418-40b03d467e06"><p class="p">File — Use drivers and
+receivers from the file specified using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Driver File', 'svrf_ur'); return false;">PEX Inductance Driver File</a> statement to recognize the current paths before
+applying filtering. </p>
+</li>
+</ul>
+<p class="p">For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Filter', 'svrf_ur'); return false;">PEX Inductance Filter</a>.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idcede6749-d008-4a82-9150-b2e5ab9cfa40"><p class="p">Driver/Receiver File —
+If you selected File for Net Filter, you may then type in the path
+to a file containing driver and receiver information for inductance extraction,
+or click to browse for the file. The default is <span class="ph filepath">driver.xl</span>.
+If you want to view the file, click <span class="ph uicontrol bold">View</span>.
+For more information on the driver and receiver file, see “<a class="xref fm:HeadingAndPage" href="Concept_DriverReceiverFileGeneration_iddbc4fe18.html#iddbc4fe18-05c8-4427-8868-02e916f613ae__Concept_DriverReceiverFileGeneration_iddbc4fe18.xml#iddbc4fe18-05c8-4427-8868-02e916f613ae" title="The driver and receiver file (driver.xl) is an optional file that identifies the paths to evaluate for self and mutual impedance extraction.">Driver and Receiver File Generation</a>” and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Driver File', 'svrf_ur'); return false;">PEX Inductance Driver File</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__ide6548369-99df-49f4-9b37-c4ff3c44fee0"><p class="p">Driver/Receiver Tags —
+If you selected File for Net Filter, type in an optional list of
+values that specifies how to generate a driver and receiver file.
+For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Filter', 'svrf_ur'); return false;">PEX Inductance Filter</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__ida8211044-069c-4680-a09d-92fd5183cec3"><p class="p">Use Victim Nets File —
+Select whether or not to use a victim nets file. The default is <span class="ph filepath">victim.xl</span>.
+If you select this option, type in the filename or click to browse
+for the file. </p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id3be37067-77f8-434d-94a4-34d0c67d1356"><p class="p">Inductance Range — Specifies
+how far to search from a given net segment for the return paths
+to be included in self impedance calculations. Select Cell Extent
+or type in a value in microns. The default is the extent of the
+chip. For complete information, see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Range', 'svrf_ur'); return false;">PEX Inductance Range</a> statement.</p>
+</li>
+<li class="li" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id0f33650c-7655-4018-b75c-137f8adfc0e0"><p class="p">Nets to include in return
+path — Specifies the type of nets (Average, Ground, Power, Ground
+and Power, or None) that may be considered as candidates for return
+path in inductance extraction. The default is “Ground”. For complete information,
+see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Returnpath', 'svrf_ur'); return false;">PEX Inductance Returnpath</a> statement.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id1f5ae257-33c6-419e-b1e2-314b50a95a0f"><span class="ph cmd">Click <span class="ph uicontrol bold">Outputs</span>.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__idf1d13ee0-bd78-4898-a4b6-5924ecc0d0c7"><span class="ph cmd">For
+Extraction Type, select the type of parasitic inductance to extract
+“L (Self Inductance)” or “L + M (Self + Mutual Inductance)”.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id5b5169dc-d86a-4fe0-9d68-89bd1569f171"><span class="ph cmd">Click <span class="ph uicontrol bold">Run Control</span>.</span></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id79356df1-d12c-4a8b-8ace-2c99bba2ae9c"><span class="ph cmd">On the <span class="ph uicontrol bold">Advanced</span> tab, check that the
+“Run PDB-generation step” is selected.</span><div class="itemgroup info StepInfo"><div class="note note"><span class="notetitle">Note:</span> <p class="p">If you
+want to extract inductance and create the parasitic netlist in one run,
+select “Run parasitic netlist generation step.”</p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="id4ef88ce5-b168-49a6-b697-d678fb7f00b5__id99c59bf1-84f3-4a8c-9d81-92f992d849fc"><span class="ph cmd">Click <span class="ph uicontrol bold">Run PEX</span>. The PDB has been appended
+with inductance information when the run finishes without errors.</span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_RunningCalibreXlFromCalibreinteractive_id025013a6.html" title="The Calibre xL tool can be run from Calibre’s Graphical User Interface (GUI) tool known as Calibre Interactive.">Running Calibre xL From Calibre Interactive </a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_xl_user"
+                DocTitle = "Calibre® xL User’s Manual"
+                PageTitle = "Step 3: Extract Self and Mutual Impedance"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_Step3ExtractSelfMutualImpedance_id4ef88ce5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xL User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

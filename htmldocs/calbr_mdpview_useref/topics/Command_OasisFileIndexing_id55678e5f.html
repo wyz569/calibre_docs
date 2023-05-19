@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="OASIS File Indexing" />
+<meta name="abstract" content="A Calibre WORKbench batch command that pre-indexes an OASIS file to speed job deck loading and pattern file viewing." />
+<meta name="description" content="A Calibre WORKbench batch command that pre-indexes an OASIS file to speed job deck loading and pattern file viewing." />
+<meta name="prodname" content="Calibre MDPview User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdpview_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® MDPview™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id55678e5f-27dd-47cd-864e-ef21d00607a1" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>OASIS File Indexing</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="OASIS File Indexing" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id55678e5f-27dd-47cd-864e-ef21d00607a1">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">OASIS File Indexing</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">A Calibre
+WORKbench batch command that pre-indexes an OASIS file to speed
+job deck loading and pattern file viewing.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">oasisIndex</span> <span class="keyword ParameterName RequiredReplaceable">oasis_file_path</span> [<span class="keyword ParameterName OptionalReplaceable">top_cell_name</span>] [-noView] [-fastIndex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]] [-scale {<span class="keyword ParameterName OptionalDefault">MASK</span> | WAFER}] [-sequential] [-saveLayerExtents] [-parallelCblocks]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id363ead2d-ae71-4fd4-b4f2-d8e24e9db078"><span class="keyword ParameterName RequiredReplaceable">oasis_file_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that specifies
+the path to the OASIS file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__ide06da9c1-ab20-48e1-8052-df2236ed9cca"><span class="keyword ParameterName OptionalReplaceable">top_cell_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optionally
+specifies the top cell name.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__iddda96d71-3bdb-446f-b1fa-482ce4de6b10">-noView </dt>
+<dd class="dd ArgumentDescription"><p class="p">Optionally specifies that the
+indexing omits some computations intended only to improve interactive
+viewing speed. The index is made much more quickly, but the drawing
+speed in the viewer is substantially slower. Use this option if
+the file is only intended for direct input to Calibre MDP functions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id99963386-e20e-4d41-af86-9092e5c0b329">-fastIndex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that enables a “fast
+mode” of index generation if the input file is an OASIS.MASK file
+and the option -noView is specified. The file created in fast mode
+is valid only if the input OASIS.MASK file contains a single layer-datatype
+pair. Fast mode index generation should be avoided when there are
+multiple layers or datatypes in the input. By default, fast mode
+index generation assumes layer-datatype of 0-0. You can override these
+values by specifying layer-datatype pair as an argument to the -fastIndex
+option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id9ed936de-3b50-4d30-9fcb-e09d5e9ad8cb">-scale {<span class="keyword ParameterName OptionalDefault">MASK</span>| WAFER}</dt>
+<dd class="dd ArgumentDescription"><p class="p">If the index is intended for
+viewing, you can assist the indexing process by specifying the scale
+of the layout. Use the -scale option to state whether the layout
+is at wafer or mask scale. No other values are currently accepted.
+This is an inherently difficult quantity to estimate automatically,
+and knowing the value produces an index with a better cost-benefit factor.
+MASK is the default setting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__idd2e16c56-0a64-4429-b500-5ce6b744a403">-sequential</dt>
+<dd class="dd ArgumentDescription"><p class="p">The indexing operation uses
+a probability calculation algorithm to improve performance. With
+the -sequential option, the entire layout is scanned sequentially,
+ignoring the cell-offset table.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__ida54b8326-0d93-4ff2-8483-beb872043b19">-saveLayerExtents</dt>
+<dd class="dd ArgumentDescription"><p class="p">Allows a bounding box for each
+layer in the top cell to be written in the generated index file. Keeping
+per-layer bounding box information in the index file for the top
+cell helps to speed calculation of extents.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id6a87132c-0e28-44c6-9d6b-f349fc6cc745">-parallelCblocks</dt>
+<dd class="dd ArgumentDescription"><p class="p">Allows parallel indexing for
+non-strict cblock OASIS data. The CBLOCKS cell is parsed in parallel
+during sequential parsing of non-strict OASIS files for faster index
+creation.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">OASIS files in extended MEBES job
+decks can be “pre-indexed” to speed job deck loading. A separate
+index file named “<span class="keyword ParameterName OptionalReplaceable">orig_file</span>.fvi”
+is created and must be kept in the same directory as the OASIS file.
+(The .fvi index files are not backwards-compatible with previous
+INDEX versions; they are, however, compatible with files generated
+by previous Calibre WORKbench versions as long as the separate index
+version is unchanged).</p>
+<p class="p">You can change the location in
+Calibre WORKbench (for instance, with the <span class="keyword ParameterName OptionalReplaceable">.signaext</span> file)
+by specifying the Tcl environment variable MDPIndexSearchPath. If
+you are defining this variable in the <span class="keyword ParameterName OptionalReplaceable">.signaext </span>file,
+the syntax is:</p>
+<pre class="pre codeblock leveled"><code>set env(MDPIndexSearchPath) <span class="keyword ParameterName OptionalReplaceable">dir1</span>:<span class="keyword ParameterName OptionalReplaceable">dir2</span>:<span class="keyword ParameterName OptionalReplaceable">dir3</span> </code></pre><p class="p">The Linux shell version of this
+environment variable is:</p>
+<pre class="pre codeblock leveled"><code>setenv MDPIndexSearchPath <span class="keyword ParameterName OptionalReplaceable">dir1</span>:<span class="keyword ParameterName OptionalReplaceable">dir2</span>:<span class="keyword ParameterName OptionalReplaceable">dir3</span> </code></pre><p class="p">The
+specified paths separated by colon (<span class="keyword ParameterName Required">:</span>)
+is searched first, then the OASIS file location is checked. The
+same algorithm is applied when creating the index file.</p>
+<p class="p">The Tcl variable always takes precedence
+over the Linux shell variable.</p>
+<p class="p">The next time the file is viewed,
+the viewer checks for the index file and use it. If the index file does
+not exist or appears to be in any way wrong, the viewer automatically
+recomputes the index before loading. When index files are used,
+loading any OASIS file generally takes a few seconds.</p>
+<p class="p">As generating an index can sometimes
+take a significant amount of time, you should generate the index
+(creating the .fvi files) on any file that you intend to read with
+the disk resident oasis reader(s). This should occur in preprocessing,
+prior to loading extended job decks with multiple OASIS files.</p>
+<p class="p">In general, an OASIS file cannot
+be parsed in parallel except for one exception: if an OASIS file is
+in “strict mode” and has a cell-offset record for every cell, the
+file can be parsed in parallel. The indexing function does this,
+achieving scalability usually limited only by file system access.</p>
+<p class="p">Several conditions can cause an
+existing index to be deemed invalid and need to be replaced. Index
+versions are never forward-compatible. Only versions with the same
+major version number are backwards-compatible. Check the Release
+Notes to see when the index version changes. Using viewer releases
+with different index major versions can thus cause the index to be
+remade. Several characteristics of the OASIS file and index file
+themselves can also force the re-creation of an index:</p>
+<ul class="ul"><li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id066c380b-74bc-4006-8d96-94ffc3a94777"><p class="p">The index does not exist.</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__iddd7afe25-2c48-452b-8f1d-b98a471bba28"><p class="p">The index file cannot be
+read.</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id97a5558f-3a52-4d8a-9004-4426b0f83030"><p class="p">The length of the OASIS file
+does not match the length recorded in the existing index. An OASIS
+file may have changed due to several possible reasons including:</p>
+<ul class="ul"><li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id69bfcbe8-cfa6-49f2-abf4-09e1284d9261"><p class="p">Adding
+or removing geometries</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id3911e37f-9217-474d-a5f4-daf7e8e9acb9"><p class="p">Altering the
+hierarchy (oasis2oasis)</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id34285ed5-3810-47b1-8e9b-4aa0365578f7"><p class="p">Clipping the
+OASIS file</p>
+</li>
+</ul>
+<p class="p">In any of these cases, the input OASIS file has been modified
+and the index file is regenerated. For example, with hierarchy optimization,
+although the input OASIS file and output OASIS file are the same,
+the hierarchy of the OASIS file changed, leading to index regeneration.</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id362aa98d-5c56-40f3-bf96-7e049b1f1bf7"><p class="p">Selected samples of the OASIS
+file do not match the record in the existing index. This occurs
+in cases where the OASIS file has been overwritten or altered. For
+example, you have an OASIS file <span class="ph filepath">a.oas</span> with
+its respective index file <span class="ph filepath">a.oas.fvi</span>. If an
+alternate OASIS file <span class="ph filepath">b.oas</span> is renamed to <span class="ph filepath">a.oas</span>,
+the contents of <span class="ph filepath">a.oas</span> and <span class="ph filepath">a.oas.fvi </span>no
+longer match and the index is regenerated.</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id67c77048-1a9e-4a4b-bc53-31a9a895c011"><p class="p">The current
+version of the index (depending on the Calibre version set) differs
+from the index file version.</p>
+</li>
+</ul>
+<p class="p">The default behavior when the input
+layout contains an undefined cell is to treat the cell as empty
+and continue the process. By specifying the Tcl variable:</p>
+<p class="p">::MDP_MISSING_REFERENCE {0 | <span class="keyword ParameterName OptionalDefault">1</span>|
+2}</p>
+<p class="p">you
+can specify how the error is handled. There are three possible settings:</p>
+<ul class="ul"><li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__idb64170b0-3ea0-464f-8195-7304795ea96c"><p class="p">0 — continues the operation
+without issuing a message</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__idaaca79bd-79c1-47f3-9308-4416e9b04671"><p class="p">1 — continues the operation
+and issues a message (this is the default behavior)</p>
+</li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id4a50187b-24fe-41ef-a19a-788aaabd0344"><p class="p">2 — aborts the indexing operation
+with an error message</p>
+</li>
+</ul>
+<p class="p">The validity of an index for an
+OASIS file can be checked by invoking the command:</p>
+<p class="p">oasisIndexInfo [-v] <span class="keyword ParameterName OptionalReplaceable">oasis_file_path</span></p>
+<p class="p">Note that the command argument
+is the OASIS file, not the index file. This command states whether
+or not an index file exists, the version of any such file and the
+version used by the current executable. Finally the command issues
+a statement if the index is not valid according to the previously-listed
+criteria. The -v option outputs the size of the file in a transcript
+and includes the Remote size and Flat Vertex count.</p>
+<p class="p">This table lists OASIS index versions used by their respective
+Calibre release.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id0010e1eb-c295-4ed3-ab14-0e05ef11d048" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>OASIS Index
+Version per Release</span></caption><colgroup><col style="width:1.950in" /><col style="width:1.950in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24238e362"><p class="p">Calibre Release Version</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24238e365"><p class="p">OASIS Index Version</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2016.1- Current</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">3.0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2015.4</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.11</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2015.3</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.10</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2015.2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.9</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2015.1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.7</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2014.1-2014.4</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.6</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2011.2-2013.4</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.5</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2009.3-2011.1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2,4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2009.2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e362 "><p class="p">2009.1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24238e365 "><p class="p">2.2</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The
+on-disk hierarchy injection data can also be precomputed using the
+following command:</p>
+<p class="p">oasisInjection <span class="keyword ParameterName OptionalReplaceable">input_file_name</span> [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span>]
+[-force]</p>
+<p class="p">If an index does not exist when
+this command is invoked, one is created with a minimal set of options.
+Creation of the persistent index file can be controlled for OASIS.MASK
+files only by using the MDP_INDEX_MASK_FILES Tcl variable. See “<a class="xref fm:HeadingAndPage" href="General_ControlIndexFileGeneration_id8c84ea9a.html#id8c84ea9a-4b73-4879-83a3-671cd1d380fb__General_ControlIndexFileGeneration_id8c84ea9a.xml#id8c84ea9a-4b73-4879-83a3-671cd1d380fb" title="You can control the index generation for pattern file viewing for MEBES and VBOASIS using a number of methods.">Control Index File Generation</a>” for complete information.</p>
+<p class="p">Additionally, the CALIBRE_REGENERATE_INDEX_TIMESTAMP_BASED Tcl
+variable, when set to true, detects if an index is created after
+OASIS creation. If the index is detected, the index is regenerated.</p>
+<p class="p">The
+injection parameters are controlled by the Tcl and Linux shell environment
+variables described in “<a class="xref fm:HeadingAndPage" href="General_VboasisInjection_ide934af60.html#ide934af60-a4d3-49ca-a001-0ef39979077e__General_VboasisInjection_ide934af60.xml#ide934af60-a4d3-49ca-a001-0ef39979077e" title="Some layouts may have very large cells with a lot of data which may degrade viewing performance. To improve the efficiency of viewing (including disk-resident OASIS viewing), you can use a feature known as “VBOASIS injection.” Though this injection takes additional run time, subsequent viewings can be faster. VBOASIS (Vector-Based OASIS) is a restricted form of OASIS DDE (Direct Data Entry) files.">VBOASIS Injection</a>”. The -size of the cells that
+should be binned and the size of each bin (bin_size) can be explicitly
+specified using the -size option in microns. The default value is <span class="keyword ParameterName OptionalDefault">250 microns</span>. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+index file should not be created if it exists no matter what parameters
+are specified with the vboasis_injection option.</p>
+</div>
+<p class="p">Injection data is not created if
+it already exists; to overwrite the existing data, use the -force option.
+The -force option also recreates an .fvi file if one already exists,
+though it drops the viewer components.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When
+you generate an index for a layout larger than 4 GB the 64-bit platform
+should be used. In 32-bit platform an integer overflow can happen
+and it results in an invalid index.</p>
+</div>
+<p class="p">You can perform RVE hierarchical
+layer scans on disk resident OASIS layouts from Calibre MDPview.
+However, if you generate your own RVE database files for this purpose,
+the rule file DRC CELL NAME statement should not specify the CELL
+SPACE XFORM options. This causes RVE to instruct Calibre MDPview
+to open the appropriate cell for each cell’s instances, and opening
+a cell is not supported within disk resident OASIS viewing. </p>
+<p class="p">Alternatively, the <span class="ph uicontrol bold">RVE Highlight &gt; Highlight in Context</span> option
+can be turned off. You should deactivate this option for any hierarchical
+layer scans of disk resident OSIS data.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id186983cb-2b97-4d4f-b4a1-981f51d11798">For multithreaded processing,
+delete the existing <span class="ph filepath">.fvi</span> file when you create
+a new OASIS file. This prevents the following risks: dropped-data
+for direct-database-entry fracture, missed or false flags in direct-data-entry
+MDPVERIFY<span class="keyword ParameterName OptionalReplaceable">format</span>2DB
+operations, and data dropping from view in disk-based viewing such
+as <span class="ph filepath">.ejb</span> for extended job deck viewing and <span class="ph uicontrol bold">View Oasis Layout</span>.</p>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">These examples demonstrate the use of oasisIndex (to generate
+the OASIS index) and oasisIndexInfo (to report information on the
+indices), both the command line invocation and output:</p>
+<ul class="ul"><li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__idb2b1cc4e-aed3-4bc9-853d-aed51cc166bf"><p class="p">Create
+an OASIS index with Calibre 2017.4, OASIS index version 3.0:</p>
+<pre class="pre codeblock"><code>calibremdpv -a oasisIndex file.oas | tee oasisIndex.file.log</code></pre><pre class="pre codeblock"><code>Creating an index, version: 3.0.
+SEG TIME: CPU TIME = 0  REAL TIME = 0
+MEMORY: LVHEAP = 3/3/4.
+Sequential parsing of OASIS file.
+PARSE TIME: CPU TIME = 0  REAL TIME = 0
+MEMORY: LVHEAP = 3/59/59.
+NOTE: Cell GUNTER was automatically selected as the top cell.
+NOTE: REMOVED 89 cells, 143 single, 49 array placements.
+Note: Viewer components are present.
+POST PROCESSING TIME: CPU TIME = 0  REAL TIME = 0
+MEMORY: LVHEAP = 3/59/59.
+Opening an index file, file.oas.fvi.
+INDEX OUTPUT TIME: CPU TIME = 0  REAL TIME = 0
+MEMORY: LVHEAP = 3/59/59.</code></pre></li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__id5d351d41-b7cb-40b6-bf23-5b0a3790fc00"><p class="p">Report OASIS
+index version:</p>
+<pre class="pre codeblock"><code>calibremdpv -a oasisIndexInfo file.oas | tee oasisIndexInfo.file.log</code></pre><pre class="pre codeblock"><code>Opening an index file, file.oas.fvi.
+
+Note: Existing index file version: 3.0.  Current version: 3.0.
+Note: Viewer components are present.</code></pre></li>
+<li class="li" id="id55678e5f-27dd-47cd-864e-ef21d00607a1__idba4c8418-bba4-44c4-8555-b9b545a5d0d6"><p class="p">Report OASIS
+index version and more verbose information:</p>
+<pre class="pre codeblock"><code>calibremdpv -a oasisIndexInfo file.oas -v | tee \
+       oasisIndexInfo-v.file.log</code></pre><pre class="pre codeblock"><code>Opening an index file, file.oas.fvi.
+
+Note: Existing index file version: 3.0.  Current version: 3.0.
+Note: Viewer components are present.</code></pre></li>
+</ul>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_IndexFiles_idc0e40f97.html" title="Certain databases (OASIS) and pattern files (Micronic and MEBES) can be “pre-indexed” to speed job deck loading and viewing in Calibre MDPview. Refer to the following sections for descriptions on how to pre-index your files.">Index Files</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdpview_useref"
+                DocTitle = "Calibre® MDPview™ User’s and Reference Manual"
+                PageTitle = "OASIS File Indexing"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_OasisFileIndexing_id55678e5f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® MDPview™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

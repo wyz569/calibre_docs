@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Mapping Algorithm for Output" />
+<meta name="abstract" content="Given the set of unique DRC rule checks {R1, …, Rn} to be executed in a DRC run, a set of unique DRC result databases {D1, …, Dm} is determined which encompasses the cumulative DRC output from the application. Each results database Dj has an associated (and unique) type (ASCII, GDSII, or OASIS). The mapping is n-&gt;m. Any given DRC rule check Ri may map to multiple members of {D1, …, Dm} and any given DRC results database Dj may be mapped into by multiple members of {R1, …, Rn}." />
+<meta name="description" content="Given the set of unique DRC rule checks {R1, …, Rn} to be executed in a DRC run, a set of unique DRC result databases {D1, …, Dm} is determined which encompasses the cumulative DRC output from the application. Each results database Dj has an associated (and unique) type (ASCII, GDSII, or OASIS). The mapping is n-&gt;m. Any given DRC rule check Ri may map to multiple members of {D1, …, Dm} and any given DRC results database Dj may be mapped into by multiple members of {R1, …, Rn}." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb1648f81-d575-425c-8fff-5ea319fd3975" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Mapping Algorithm for Output</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Mapping Algorithm for Output" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb1648f81-d575-425c-8fff-5ea319fd3975">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Mapping Algorithm for Output</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Given the
+set of unique DRC rule checks {R<span class="ph FontProperty LiteralSubScript">1</span>,
+…, R<span class="ph FontProperty VariableSubScript">n</span>}
+to be executed in a DRC run, a set of unique DRC result databases
+{D<span class="ph FontProperty LiteralSubScript">1</span>,
+…, D<span class="ph FontProperty VariableSubScript">m</span>}
+is determined which encompasses the cumulative DRC output from the
+application. Each results database D<span class="ph FontProperty VariableSubScript">j</span> has
+an associated (and unique) type (ASCII, GDSII, or OASIS). The mapping
+is n-&gt;m. Any given DRC rule check R<span class="ph FontProperty VariableSubScript">i</span> may
+map to multiple members of {D<span class="ph FontProperty LiteralSubScript">1</span>,
+…, D<span class="ph FontProperty VariableSubScript">m</span>}
+and any given DRC results database D<span class="ph FontProperty VariableSubScript">j</span> may
+be mapped into by multiple members of {R<span class="ph FontProperty LiteralSubScript">1</span>,
+…, R<span class="ph FontProperty VariableSubScript">n</span>}.</span>
+</div>
+<p class="p">In order to allow completely unambiguous
+and non-conflicting construction of the previous mapping, the compiler
+enforces strict rules on the DRC Check Map specification statement:</p>
+<ul class="ul"><li class="li" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id77fec49c-3d84-4907-ad75-24edbac60774"><p class="p">It is a compilation
+error for the <span class="keyword ParameterName OptionalReplaceable">file_name</span> parameter
+to be specified in another DRC Check Map specification statement
+with a different type (ASCII, GDSII, or OASIS) or to be globally
+specified in the DRC Results Database specification statement with
+a different type.</p>
+</li>
+<li class="li" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id329096ea-e0d7-4c9e-9c8e-2f6eb04b4606"><p class="p">If <span class="keyword ParameterName OptionalReplaceable">file_name</span> is
+not specified in a DRC Check Map specification statement, then the
+type (ASCII, GDSII, or OASIS) of the statement must match the global
+type specified (or default) in the DRC Results Database specification
+statement. This is because the default <span class="keyword ParameterName OptionalReplaceable">file_name</span> parameter
+is the global DRC Results Database filename.</p>
+</li>
+<li class="li" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id1991c2be-2218-4564-bc32-adfd9b15dd4d"><p class="p">Multiple specification of the (<span class="keyword ParameterName OptionalReplaceable">rule_name</span>,<span class="keyword ParameterName OptionalReplaceable">file_name</span>)
+coordinate in the set of DRC Check Map specification statements
+is a compilation error. </p>
+</li>
+<li class="li" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id25105a75-4361-4495-ba1e-2515aa79ff43"><p class="p">If MAXIMUM RESULTS is specified in a
+DRC Check Map specification statement for DRC rule check R, then
+it must be specified with exactly the same value in all DRC Check Map
+specification statements for rule check R. That is, no individual
+DRC rule check may have different maximum results specifications.
+(This is an internal limitation).</p>
+</li>
+<li class="li" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id67bd06b8-d519-4b36-8330-34c9acc53d03"><p class="p">For any two DRC Check Map statements
+writing to the same database, the PREFIX or APPEND specifications
+must be consistent when used. Similarly, a DRC Check Map statement
+that writes to the same database as the DRC Results Database statement
+must have consistent PREFIX or APPEND specifications when used.</p>
+</li>
+</ul>
+<p class="p">Given any DRC rule check R, the set of DRC
+results databases into which it maps is determined by the following
+algorithm. This algorithm, along with the compilation checks described previously,
+also insures unambiguous determination of the MAXIMUM RESULTS values
+and AREF parameters for any R<span class="ph FontProperty VariableSubScript">i </span>-&gt;
+D<span class="ph FontProperty VariableSubScript">j</span> map.
+A conceptual pseudocode of this is shown in <a class="xref fm:Figure" href="#idb1648f81-d575-425c-8fff-5ea319fd3975__id2e2b09ca-2d5c-4cbf-9105-913b4ecc3765">Figure 1</a>.</p>
+<div class="fig fignone" id="idb1648f81-d575-425c-8fff-5ea319fd3975__id2e2b09ca-2d5c-4cbf-9105-913b4ecc3765"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Mapping Algorithm for Multiplexing
+of DRC Rule Check Output</span><br /><div class="imagecenter"><img class="image imagecenter" height="367" src="../graphics/drc_apps4.png" width="424" /></div><br /></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MaskDrcResults_id6a79d34a.html" title="The DRC Check Map specification statement provides a way to output layers to mask data DRC results databases. Among its many configuration options, it allows an m -&gt; n mapping between DRC rule check outputs and DRC results databases, as well as AREF compaction capability for rectangles. It also allows per-rule-check specification of the maximum result count.">Mask DRC Results</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Mapping Algorithm for Output"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_MappingAlgorithmOutput_idb1648f81.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

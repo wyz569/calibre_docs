@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="Pathchk" />
+<meta name="abstract" content="Constructs layers consisting of polygons that do or do not have a path to power, ground, or labeled nets, or that satisfy a combination of these conditions. Also can output information about nets that satisfy these conditions. Used during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and ICtrace Mask mode." />
+<meta name="description" content="Constructs layers consisting of polygons that do or do not have a path to power, ground, or labeled nets, or that satisfy a combination of these conditions. Also can output information about nets that satisfy these conditions. Used during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and ICtrace Mask mode." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idbee83a3b-8172-4740-9f6d-6f429bf36843" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Pathchk</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Pathchk" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idbee83a3b-8172-4740-9f6d-6f429bf36843">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Pathchk</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Layer operation</p>
+<p class="shortdesc">Constructs layers consisting
+of polygons that do or do not have a path to power, ground, or labeled
+nets, or that satisfy a combination of these conditions. Also can
+output information about nets that satisfy these conditions. Used
+during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and
+ICtrace Mask mode.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">PATHCHK</span> {<span class="keyword ParameterName RequiredReplaceable">labeled_flag</span> | {<span class="keyword ParameterName RequiredReplaceable">power_ground_flag</span> [<span class="keyword ParameterName OptionalReplaceable">operand</span> <span class="keyword ParameterName OptionalReplaceable">power_ground_flag</span>]}} [<span class="keyword ParameterName OptionalReplaceable">layer</span>]<br />
+[<span class="keyword ParameterName Optional">PRINT POLYGONS</span> “<span class="keyword ParameterName OptionalReplaceable">filename</span>” [<span class="keyword ParameterName Optional">BY LAYER</span>] [<span class="keyword ParameterName Optional">BY CELL</span> | <span class="keyword ParameterName Optional">FLAT</span>]]<br />
+[PRINT NETS “<span class="keyword ParameterName OptionalReplaceable">filename</span>”]<br />
+[<span class="keyword ParameterName Optional">PORTS ALSO</span>] [<span class="keyword ParameterName Optional">NOFLOAT</span>] [BREAK FILTERED] <br />
+[EXCLUDE SUPPLY] [<span class="keyword ParameterName Optional">EXCLUDE UNUSED</span>]<br />
+[POWERNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>” [“<span class="keyword ParameterName OptionalReplaceable">name</span>” …]] <br />
+[GROUNDNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>” [“<span class="keyword ParameterName OptionalReplaceable">name</span>” …]] <br />
+[LABELNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>” [“<span class="keyword ParameterName OptionalReplaceable">name</span>” …]]<br />
+[BREAKNAME {“<span class="keyword ParameterName OptionalReplaceable">break_net</span>” | “<span class="keyword ParameterName OptionalReplaceable">cell_name</span> ‘(’ <span class="keyword ParameterName OptionalReplaceable">break_net</span> [<span class="keyword ParameterName OptionalReplaceable">break_net</span> …] ‘)’ ”} …]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id4a0ddf68-074b-453c-8eb7-372c4507aaa9"><span class="keyword ParameterName RequiredReplaceable">labeled_flag</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A string that
+specifies how the tool outputs polygons or nets that do or do not
+have a path to a top-level labeled net. This option requires top-level
+connectivity text objects (such as from <a class="xref fm:HeadingOnly" href="Command_TextLayer_idb312d972.html#idb312d972-cbcd-4d55-a34a-03fac1fa9d17__Command_TextLayer_idb312d972.xml#idb312d972-cbcd-4d55-a34a-03fac1fa9d17" title="Specifies the layers in the database from which connectivity extraction text is read.">Text Layer</a>) to be present that are neither
+power nor ground net labels. Possible choices are these:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idf8af2c26-2645-4fed-8424-cd8fb8191d25"><p class="p Opt"><span class="keyword ParameterName Required">LABELED</span> —
+Reports polygons or nets with a path to a labeled net.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__ideee9db19-7190-4bd2-a505-8af19d14e222"><p class="p Opt"><span class="keyword ParameterName Required">! LABELED</span> —
+Reports polygons or nets with no path to any labeled net.</p>
+</li>
+</ul>
+<p class="p">The exclamation mark (!) is
+synonymous with logical inverse.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id5d5ce912-d765-491b-84c0-fffedcb260e2"><span class="keyword ParameterName RequiredReplaceable">power_ground_flag</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A string that specifies how
+the tool outputs polygons or nets that do or do not have a path
+to a top-level power or ground net. Power and ground nets are top-level
+nets specified in the <a class="xref fm:HeadingOnly" href="Command_LvsPowerName_id6f8b1ecc.html#id6f8b1ecc-d5d7-4352-8035-be7e509843cb__Command_LvsPowerName_id6f8b1ecc.xml#id6f8b1ecc-d5d7-4352-8035-be7e509843cb" title="Specifies a list of power net names.">LVS Power Name</a> and <a class="xref fm:HeadingOnly" href="Command_LvsGroundName_idf53d81ac.html#idf53d81ac-9acb-4bbb-8ae7-b098a3907769__Command_LvsGroundName_idf53d81ac.xml#idf53d81ac-9acb-4bbb-8ae7-b098a3907769" title="Specifies a list of ground net names.">LVS Ground Name</a> statement. Possible choices are
+these:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idc5b56b48-b859-42e4-b18b-7e2219fcb482"><p class="p Opt"><span class="keyword ParameterName Required">POWER</span> —
+Reports polygons or nets with a path to a power net.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id956813a6-1b36-43c3-87f2-50c5e5af9cd0"><p class="p Opt"><span class="keyword ParameterName Required">! POWER</span> —
+Reports polygons or nets with no path to a power net.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id5823cdb8-6e7d-4a65-9343-5581839f21ef"><p class="p Opt"><span class="keyword ParameterName Required">GROUND</span> —
+Reports polygons or nets with a path to a ground net.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id84bb767a-cb56-4d8f-b611-2c29482e3632"><p class="p Opt"><span class="keyword ParameterName Required">! GROUND</span> —
+Reports polygons or nets with no path to a ground net.</p>
+</li>
+</ul>
+<p class="p">The exclamation mark (!) is
+synonymous with logical inverse.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">power_ground_flag</span> keyword
+when not combined by an operand is called a <span class="ph FontProperty emphasis">primitive condition</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idfdf5c47a-4408-4892-88fa-48cd0058f6b9"><span class="keyword ParameterName OptionalReplaceable">operand</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional logical symbol
+that combines two <span class="keyword ParameterName RequiredReplaceable">power_ground_flag</span> conditions.
+Possible choices are these:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id89048e10-8d3d-405c-8a69-35268565af61"><p class="p Opt"><span class="keyword ParameterName Optional">&amp;&amp;</span> —
+Selects polygons or nets that satisfy both primitive conditions:
+Boolean AND.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id5e06e722-604a-4332-8260-57c004ffaf93"><p class="p Opt"><span class="keyword ParameterName Optional">||</span> —
+Selects polygons or nets that satisfy any primitive condition: Boolean
+OR.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id9e2f2b8a-6675-474f-991b-948f03fffa18"><span class="keyword ParameterName OptionalReplaceable">layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional layer name that
+directs the Pathchk operation to output polygons only from the specified
+layer. The <span class="keyword ParameterName OptionalReplaceable">layer</span> must
+have connectivity established. When you do not specify the <span class="keyword ParameterName OptionalReplaceable">layer</span> parameter,
+the Pathchk operation outputs merged polygons from all layers specified
+in Connect and Sconnect statements.</p>
+<p class="p">PRINT parameters are not affected
+by the <span class="keyword ParameterName OptionalReplaceable">layer</span> parameter.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id7a356110-ce33-4793-8fbe-4071c3dbfd35"><span class="keyword ParameterName Optional">PRINT POLYGONS</span> “<span class="keyword ParameterName OptionalReplaceable">filename</span>” [BY LAYER] [BY CELL | FLAT]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword followed
+by a file pathname generates polygon output of all nets that satisfy
+the Pathchk conditions. The <span class="keyword ParameterName OptionalReplaceable">filename</span> is
+generated in DRC results ASCII format. By default, all results from
+each Pathchk operation are written to one check in the result file. BREAKNAME
+nets are not included in PRINT POLYGONS output.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">filename</span> parameter
+can contain environment variables. For information regarding the use
+of environment variables in the filename parameter, refer to “<a class="xref fm:HeadingOnly" href="Concept_EnvironmentVariablesInPathnameParameters_id227f5401.html#id227f5401-c3e0-428d-97cb-cc1872c793cc__Concept_EnvironmentVariablesInPathnameParameters_id227f5401.xml#id227f5401-c3e0-428d-97cb-cc1872c793cc" title="When specifying a pathname parameter in a rule file statement, you can use an environment variable as a component of the filename (this does not apply to ICverify). The environment variable is signified by preceding it with a dollar sign ($). The tool evaluates the environment variable at compilation time and substitutes it into the filename string.">Environment Variables in Pathname Parameters</a>” in the chapter “<a class="xref fm:HeadingOnly" href="MGCChap_KeyConcepts_id1d4cfc17.html#id1d4cfc17-3ef0-42a5-9c22-f833aed72cb3__MGCChap_KeyConcepts_id1d4cfc17.xml#id1d4cfc17-3ef0-42a5-9c22-f833aed72cb3" title="This chapter covers the basic concepts needed to write and use a SVRF rule file for the Calibre and ICverify products.">Key Concepts</a>”.</p>
+<p class="p">The following keywords may
+be specified with PRINT POLYGONS; they have no effect on PRINT NETS
+output:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id51a8af10-a078-4862-aa22-d46a5d044609"><p class="p Opt"><span class="keyword ParameterName Optional">BY LAYER</span> —
+An optional keyword that classifies PRINT POLYGONS results by layer.
+The tool creates a separate check for each layer. The check contains
+net polygons reported for the layer. All results are reported in
+top-level coordinate space.</p>
+<p class="p">The tool generates a check for each layer in each cell when you
+specify BY LAYER and BY CELL in the same statement.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id6b341b45-482b-4365-8c8c-5925a298cf5f"><p class="p Opt"><span class="keyword ParameterName Optional">BY CELL</span> —
+An optional keyword that classifies PRINT POLYGONS results by cell. The
+tool creates a separate check for each cell that has cell-specific
+results. The check contains net polygons reported in that cell.
+All results are reported in top-level coordinate space. Flat applications
+ignore this keyword.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id34c53389-0294-4506-a0fe-8cd2c7a26cea"><p class="p Opt"><span class="keyword ParameterName Optional">FLAT</span> —
+An optional keyword that specifies PRINT POLYGON results to be flat
+with cell-specific results replicated in every placement. This keyword
+has no effect in flat applications and cannot be specified with
+BY CELL. </p>
+</li>
+</ul>
+<p class="p">Creation of empty rule checks
+by PRINT POLYGONS is controlled by the <a class="xref fm:HeadingOnly" href="Command_ErcKeepEmpty_id2115a17d.html#id2115a17d-b02a-4a02-ba9a-a0f27eab3e89__Command_ErcKeepEmpty_id2115a17d.xml#id2115a17d-b02a-4a02-ba9a-a0f27eab3e89" title="Specifies whether empty rule checks (rule checks with zero results) are retained in ERC results.">ERC Keep Empty</a> statement. The output filename
+is not created if all rule checks are empty and ERC Keep Empty NO
+is specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id2f3688cd-013e-4e65-bcb2-6877ca2d30c4">PRINT NETS “<span class="keyword ParameterName OptionalReplaceable">filename</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword followed
+by a file pathname that generates output of all nets that satisfy
+the Pathchk conditions to the file.</p>
+<p class="p">In hierarchical execution,
+the report file format is this:</p>
+<pre class="pre codeblock"><code>PATHCHK REPORT for &lt;layout primary&gt;
+PATHCHK &lt;condition&gt;:
+  cell &lt;name&gt; (&lt;placement&gt;): net1, net2, ...
+        cell &lt;name&gt; (&lt;placement&gt;): net1, net2, ...</code></pre><p class="p">where <span class="keyword ParameterName OptionalReplaceable">condition</span> is
+the Pathchk condition (for example, GROUND &amp;&amp; ! POWER), <span class="keyword ParameterName OptionalReplaceable">name</span> is a
+cell name where results were found, <span class="keyword ParameterName OptionalReplaceable">placement</span> is
+a representative placement of that cell, and <span class="keyword ParameterName OptionalReplaceable">netN</span> is
+a net name or number if the net has no name. Cells are listed in
+bottom-up order. Net names and numbers are in the context of the
+indicated cells. Cells for which no nets are found by Pathchk are
+not written to the report file.</p>
+<p class="p">In flat execution, the report
+file format is this:</p>
+<pre class="pre codeblock"><code>PATHCHK REPORT for &lt;layout primary&gt;
+PATHCHK &lt;condition&gt;:
+net1, net2, ...</code></pre><p class="p">If for a particular request
+no nets are found (in any cell), nothing is written out for that request.
+If all requests generate empty results, the report file is not written.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id39cc9053-e852-4a5b-87f8-57215e965335"><span class="keyword ParameterName Optional">PORTS ALSO</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies
+to output polygons or nets that are connected to top level port
+objects and that meet the other conditions of the operation. By
+default, polygons or nets that are connected to top level port objects
+are not included in the output. This option affects both PRINT POLYGONS
+and PRINT NETS output. Port objects can be specified with <a class="xref fm:HeadingOnly" href="Command_PortLayerText_idd1b41503.html#idd1b41503-cf78-45d7-b30b-c5cf6f6dd327__Command_PortLayerText_idd1b41503.xml#idd1b41503-cf78-45d7-b30b-c5cf6f6dd327" title="For input layout databases, causes text objects on the specified layer(s) in the top-level cell to be read and treated as text ports. Used only in Calibre nmLVS, Calibre nmLVS-H, Calibre PERC, and Calibre xRC.">Port Layer Text</a> or <a class="xref fm:HeadingOnly" href="Command_PortLayerPolygon_idaef4826f.html#idaef4826f-75c0-492b-a760-2845a4ae0bdd__Command_PortLayerPolygon_idaef4826f.xml#idaef4826f-75c0-492b-a760-2845a4ae0bdd" title="For input layout databases, causes shapes on the specified layer(s) in the top-level cell to be read and treated as geometric ports. Used only in Calibre nmLVS, Calibre nmLVS-H, Calibre PERC, and Calibre xRC.">Port Layer Polygon</a> in Calibre
+and with $make_port() in Pyxis layout.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idb122b8fe-ae54-4740-92f2-579516dfd12d"><span class="keyword ParameterName Optional">NOFLOAT</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that instructs
+the statement to ignore nets not connected to any devices.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idd909d26d-9cf4-418b-b9e8-59a02fca1c61"><span class="keyword ParameterName Optional">BREAK FILTERED</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that causes
+the operation to stop path tracing at the pins of devices specified
+by <a class="xref fm:HeadingOnly" href="Command_LvsFilter_id873b982a.html#id873b982a-2d33-49e2-a752-62a443c57fb3__Command_LvsFilter_id873b982a.xml#id873b982a-2d33-49e2-a752-62a443c57fb3" title="Filters out source and layout instances having properties with the specified values.">LVS Filter</a> … OPEN
+[LAYOUT] [MASK] statements without properties. This keyword can
+be especially effective used in conjunction with the EXCLUDE UNUSED option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id80caa530-1e6b-4c7c-acfd-58a3eb807ab0">EXCLUDE SUPPLY</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that excludes
+power and ground nets from the results of a Pathchk operation containing
+at least one of the keywords <span class="keyword ParameterName Required">POWER</span> or <span class="keyword ParameterName Required">GROUND</span> (and
+not preceded by the ! operator). Supply nets are included if EXCLUDE
+SUPPLY is not specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id10d04730-27bb-42ea-b744-f6adcd757b99"><span class="keyword ParameterName Optional">EXCLUDE UNUSED</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that excludes
+polygons or nets connected only to unused devices from Pathchk output.
+Unused devices are specified with <a class="xref fm:HeadingOnly" href="Command_LvsFilterUnusedOption_id3f15fb5d.html#id3f15fb5d-7fc5-41d0-bb22-dbc7aa1e4a8c__Command_LvsFilterUnusedOption_id3f15fb5d.xml#id3f15fb5d-7fc5-41d0-bb22-dbc7aa1e4a8c" title="Controls the filtering of unused devices.">LVS Filter Unused Option</a> or equivalent LVS
+Filter Unused statements. Filter options P and Q are not supported
+with EXCLUDE UNUSED. Filter options O, H, I, and IH are only supported
+when LVS Filter Unused Option is not specified with the DEVICES
+keyword.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id3f8f1dc9-bec0-4a2e-aa3f-cb05abe40e4d">POWERNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>” </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and parameter
+that specifies which nets should serve as power nets in the current
+Pathchk operation. It overrides the <a class="xref fm:HeadingOnly" href="Command_LvsPowerName_id6f8b1ecc.html#id6f8b1ecc-d5d7-4352-8035-be7e509843cb__Command_LvsPowerName_id6f8b1ecc.xml#id6f8b1ecc-d5d7-4352-8035-be7e509843cb" title="Specifies a list of power net names.">LVS Power Name</a> list in the current operation.
+This option can only be specified when the [!] <span class="keyword ParameterName Required">POWER</span> keyword
+is used. More than one <span class="keyword ParameterName OptionalReplaceable">name</span> may
+be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id38f6feda-01a7-4232-8dfb-b2c1e178fa6e">GROUNDNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and parameter
+that specifies which nets should serve as ground nets in the current
+Pathchk operation. It overrides the <a class="xref fm:HeadingOnly" href="Command_LvsGroundName_idf53d81ac.html#idf53d81ac-9acb-4bbb-8ae7-b098a3907769__Command_LvsGroundName_idf53d81ac.xml#idf53d81ac-9acb-4bbb-8ae7-b098a3907769" title="Specifies a list of ground net names.">LVS Ground Name</a> list in the current operation.
+This option can only be specified when the [!] <span class="keyword ParameterName Required">GROUND</span> keyword
+is used. More than one <span class="keyword ParameterName OptionalReplaceable">name</span> may
+be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idb426baa8-38bb-4acd-b436-ea54d3a0bdfa">LABELNAME “<span class="keyword ParameterName OptionalReplaceable">name</span>” </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and parameter
+that specifies which nets should be treated as labeled in the current
+Pathchk operation. This option can only be specified when the [!] <span class="keyword ParameterName Required">LABELED</span> keyword
+is used. More than one <span class="keyword ParameterName OptionalReplaceable">name</span> may
+be specified.</p>
+<p class="p">The string %_p_ can be used
+as the <span class="keyword ParameterName OptionalReplaceable">name</span> to
+specify all ports in the top cell. Top-level port names are substituted
+automatically.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id444d1c22-e47e-460b-bb6d-a915ab785d4c">BREAKNAME {“<span class="keyword ParameterName OptionalReplaceable">break_net</span>” | {“<span class="keyword ParameterName OptionalReplaceable">cell_name</span> ‘(’ <span class="keyword ParameterName OptionalReplaceable">break_net</span> [<span class="keyword ParameterName OptionalReplaceable">break_net</span> …] ‘)’ ”}} …</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and parameter
+group that specifies the names of nets that break paths. The net
+names can be specified for individual cells. The parameters are
+as follows:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id9751c841-3ea9-42fe-8f5d-063dfaf74390"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">break_net</span> —
+A name of a net that breaks paths to supply or labeled nets. If
+the only path to some net N goes through at least one <span class="keyword ParameterName OptionalReplaceable">break_net</span>,
+then N is considered as not having a path to the supply nets or
+labeled pads. If specified without a <span class="keyword ParameterName OptionalReplaceable">cell_name</span> parameter, the <span class="keyword ParameterName OptionalReplaceable">break_net</span> is
+considered to be a top-level net and breaks paths in all instantiated hierarchy.
+A list of <span class="keyword ParameterName OptionalReplaceable">break_net</span> names
+may be specified. The “?” wildcard character matches zero or more
+characters in a net name.</p>
+</li>
+<li class="li ArgOption" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id98a79d0b-c57b-4046-9a79-dec21a889c3e"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">cell_name</span> —
+A name of a cell in which specified <span class="keyword ParameterName OptionalReplaceable">break_net</span> names
+are found. When <span class="keyword ParameterName OptionalReplaceable">cell_name</span> is
+specified, the <span class="keyword ParameterName OptionalReplaceable">break_net</span> names
+associated with it must appear in a space-delimited list in parentheses.
+In this case, a <span class="keyword ParameterName OptionalReplaceable">break_net</span> has
+the effect of breaking paths in the cell in which it is specified
+and in that cell’s sub-hierarchy. However, no breaking occurs on
+nets connected to a <span class="keyword ParameterName OptionalReplaceable">break_net</span> at
+a higher level of hierarchy. More than one <span class="keyword ParameterName OptionalReplaceable">cell_name</span> group
+may be specified. No wildcards may be used for cell names in this
+case. Cell names are always case-insensitive.</p>
+</li>
+</ul>
+<p class="p">See the example with <a class="xref fm:Figure" href="#idbee83a3b-8172-4740-9f6d-6f429bf36843__idc06239d5-f06e-440f-b4b2-a8c271aa9932">Figure 1</a> for one use of the BREAKNAME keyword.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">This operation constructs layers
+consisting of layout net polygons that do or do not have a path to
+top-level power nets, ground nets, labeled nets, or nets that satisfy
+a combination of these conditions. This layer operation is not node-preserving.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">You
+cannot use a derived layer from a Pathchk operation in <a class="xref fm:HeadingOnly" href="Command_Connect_idad14388e.html#idad14388e-13c4-4ed2-ba74-d731e8dcdebb__Command_Connect_idad14388e.xml#idad14388e-13c4-4ed2-ba74-d731e8dcdebb" title="Defines electrical connections on input layers.">Connect</a>, <a class="xref fm:HeadingOnly" href="Command_Sconnect_id92404882.html#id92404882-732c-417e-9003-93872909e542__Command_Sconnect_id92404882.xml#id92404882-732c-417e-9003-93872909e542" title="Specifies one-directional connection between objects on specified layers. Used in detection of soft connections. Syntax 1 establishes the connection through a contact layer while Syntax 2 does not. Used in conjunction with LVS Softchk or the lvs::softchk compile-time TVF function.">Sconnect</a>, or <a class="xref fm:HeadingOnly" href="Command_Device_id89f67149.html#id89f67149-593d-4a42-bf07-d2052c906774__Command_Device_id89f67149.xml#id89f67149-593d-4a42-bf07-d2052c906774" title="Defines devices and calculates properties for circuit extraction.">Device</a> operations, nor use such a layer
+to derive other layers that appear in these operations.</p>
+</div>
+<p class="p">By default, a <span class="ph FontProperty emphasis">path</span> is
+any route that leads through source/drain pins of built-in MOS devices
+or pos/neg pins of built-in resistor devices. To qualify, a MOS
+device (types M, ME, MD, MN, MP, or any of the LDD-type devices)
+must have at least the following pins: G (or gate), S (or source),
+and D (or drain). Paths through LDD-type device pins are formed
+in both directions. Capacitor, diode, or bipolar devices can also
+be added to the path as specified in <a class="xref fm:HeadingOnly" href="Command_ErcPathAlso_ide0ba8828.html#ide0ba8828-5db4-422e-8c5d-b9132b061d46__Command_ErcPathAlso_ide0ba8828.xml#ide0ba8828-5db4-422e-8c5d-b9132b061d46" title="Allows capacitors, diodes, and bipolar transistors to be considered part of a “path” in ERC path checks.">ERC Path Also</a> statements. </p>
+<p class="p">If you want user-defined devices
+to participate in Pathchk (user-defined devices do not participate
+by default), then you must map these devices and their pins to built-in
+devices and pins. This is done using the <a class="xref fm:HeadingOnly" href="Command_LvsDeviceType_id50088b54.html#id50088b54-d628-4752-bf9f-b00b43e825f8__Command_LvsDeviceType_id50088b54.xml#id50088b54-d628-4752-bf9f-b00b43e825f8" title="Specifies instances having non-built-in device names to be treated as instances of built-in devices in ERC and LVS comparison. Devices are not renamed by this statement.">LVS Device Type</a> specification statement. See “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'User-Defined Devices in Path Check Operations', 'calbr_ver_user'); return false;">User-Defined Devices in Path Check Operations</a>” in the <cite class="cite">Calibre Verification
+User’s Manual</cite>.</p>
+<p class="p">The hierarchical level from which
+text objects are read is controlled by the <a class="xref fm:HeadingOnly" href="Command_TextDepth_idccb4a96c.html#idccb4a96c-3615-48d8-adc3-7fdd917bb427__Command_TextDepth_idccb4a96c.xml#idccb4a96c-3615-48d8-adc3-7fdd917bb427" title="Specifies the hierarchical depth for reading text objects from the layout database for the connectivity extractor.">Text Depth</a> statement.</p>
+<p class="p">Power and ground nets are specified
+with LVS Power Name and LVS Ground Name, respectively. Power and
+ground nets break paths in Pathchk (but not by default in Calibre PERC).</p>
+<p class="p"><span class="keyword ParameterName Required">LABELED</span> nets
+are those with connectivity extraction text, but they are not power
+or ground nets. <span class="keyword ParameterName Required">LABELED</span> nets
+typically belong to top-level I/O ports.</p>
+<p class="p">By default, top-level shapes
+or nets that are connected to port objects are not output. The PORTS
+ALSO option changes this behavior so that ports are included.</p>
+<p class="p">Pathchk respects the <a class="xref fm:HeadingOnly" href="Command_LvsCompareCase_idaa01e983.html#idaa01e983-cbe6-4cc9-8fc1-2e284becc311__Command_LvsCompareCase_idaa01e983.xml#idaa01e983-cbe6-4cc9-8fc1-2e284becc311" title="Controls case sensitivity in the comparison of names.">LVS Compare Case</a> statement
+setting when tracing net names. If either the LVS Compare Case YES
+or LVS Compare Case NAMES statement is specified, then net names are
+traced in a case-sensitive manner; otherwise they are case insensitive.
+These rules on case sensitivity apply to LVS Power Name and LVS
+Ground Name nets, and to names specified in POWERNAME, GROUNDNAME,
+LABELNAME, and BREAKNAME options.</p>
+<p class="p">By default, each Pathchk operation’s result output is limited
+to 12.5 million polygons. This can be changed through the <a class="xref fm:HeadingOnly" href="Command_LVSPathchkMaximumResults_id6cee90bf.html#id6cee90bf-70a9-4c17-a3c2-6268a343b197__Command_LVSPathchkMaximumResults_id6cee90bf.xml#id6cee90bf-70a9-4c17-a3c2-6268a343b197" title="Specifies an upper limit on the number of polygons output by ERC Pathchk statements and Pathchk operations.">LVS Pathchk Maximum Results</a> statement.</p>
+<p class="p">The path search features in Calibre
+RVE for LVS may also be of interest—see “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Find Path', 'calbr_rve_user'); return false;">Find Path</a>”
+and “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Isolate Path on Layout Net', 'calbr_rve_user'); return false;">Isolate Path on Layout Net</a>” in the <cite class="cite">Calibre RVE User’s Manual</cite>.</p>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id5a8339e6-dd35-42c1-8981-b2fa9c735bdb"><h2 class="title Subheading sectiontitle">Supply
+Name Behaviors</h2><p class="p">Power and ground nets are included
+in the result for the keywords <span class="keyword ParameterName Required">POWER</span> and <span class="keyword ParameterName Required">GROUND</span>. For
+example, supply nets are included if you specify the following in
+a rule check:</p>
+<p class="lines ApplCommand">PATHCHK POWER</p>
+<p class="p">You can exclude supply nets by
+specifying EXCLUDE SUPPLY. When specifying EXCLUDE SUPPLY, at least
+one of the <span class="keyword ParameterName Required">POWER</span> or <span class="keyword ParameterName Required">GROUND</span> keywords
+must also be specified in the operation. The EXCLUDE SUPPLY keyword
+does not apply to the <span class="keyword ParameterName Required">! POWER</span> or <span class="keyword ParameterName Required">! GROUND</span> keywords.
+For example, this operation is allowed:</p>
+<p class="lines ApplCommand">PATHCHK POWER &amp;&amp; !GROUND EXCLUDE SUPPLY</p>
+<p class="p">However, this syntax causes a
+compiler error:</p>
+<p class="lines ApplCommand">PATHCHK ! POWER &amp;&amp; ! GROUND EXCLUDE SUPPLY // bad syntax</p>
+<p class="p">Power and ground nets are not
+included in the result for <span class="keyword ParameterName Required">! POWER</span> and <span class="keyword ParameterName Required">! GROUND</span> keywords. For
+example, the supply net itself is not selected by this:</p>
+<p class="lines ApplCommand">PATHCHK ! GROUND </p>
+<p class="p">even if there is no path from
+power to ground.</p>
+<p class="p">If a net in the design matches
+more than one of LVS Power Name, LVS Ground Name, POWERNAME, GROUNDNAME,
+or LABELNAME patterns, a warning is issued and the conflicts are
+resolved according to the following priority rules: </p>
+<ul class="ul"><li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id49b9f679-d2a2-4b42-9bfc-1229312463e4"><p class="p">Pathchk keyword overrides
+are given priority over LVS Power Name or LVS Ground Name settings. </p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id1bbe1b01-0ec2-4a96-a32b-c48e3861e536"><p class="p">Power names are given priority
+over ground names.</p>
+</li>
+</ul>
+<p class="p">Pathchk observes the <a class="xref fm:HeadingOnly" href="Command_LayoutPreserveCase_idc4575af4.html#idc4575af4-51ad-46ee-b97f-f16ed6ade3c4__Command_LayoutPreserveCase_idc4575af4.xml#idc4575af4-51ad-46ee-b97f-f16ed6ade3c4" title="Specifies whether matching net or device property names that differ only by case are treated as identical or different during circuit extraction. Used only by Calibre nmLVS/Calibre nmLVS-H, Calibre PERC, and certain Calibre YieldAnalyzer applications.">Layout Preserve Case</a> specification
+statement for case-sensitivity of net names. See “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Case Sensitivity of Supply Net Names', 'calbr_ver_user'); return false;">Case Sensitivity of Supply Net Names</a>” in the <cite class="cite">Calibre Verification User’s
+Manual</cite> for more details about power and ground names.</p>
+</div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__ide8140e77-9cf7-4ba1-8f7e-fb4bb64306b8"><h2 class="title Subheading sectiontitle">BREAKNAME
+Behavior</h2><p class="p">BREAKNAME nets are traced to
+GROUND, POWER, and LABELED nets. BREAKNAME nets are included in
+the normal output of the operation when they are traced to nets
+satisfying the criteria of the operation. BREAKNAME nets are also
+reported in PRINT NETS results, but they are not reported in PRINT
+POLYGONS results.</p>
+<p class="p">BREAKNAME nets interrupt paths at the primary level of a BREAKNAME
+cell (top level by default) and throughout the hierarchy of such
+a cell. BREAKNAME nets do not interrupt paths in the hierarchy above
+a BREAKNAME cell.</p>
+<p class="p">Pathchk operation criteria can be mimicked in Calibre PERC initialization
+procedures; however, the results from the two tools can differ.
+For example, this Pathchk operation:</p>
+<pre class="pre codeblock"><code>LVS POWER NAME VCC
+
+PATHCHK POWER POWERNAME VCC BREAKNAME C1(netA)</code></pre><p class="p">performs a similar function as this Calibre PERC code:</p>
+<pre class="pre codeblock"><code>LVS POWER NAME VCC
+
+TVF FUNCTION erc_pathchk [/*
+  package require CalibreLVS_PERC
+
+  proc init {} {
+    perc::define_net_type "Power" {VCC}
+    perc::define_net_type "stop" {netA} -cellName {C1}
+    perc::create_lvs_path -break {Power || stop}
+}
+
+proc test {} {
+  perc::check_net -pathType {Power} 
+}</code></pre><p class="p">(The handling of ground nets has been omitted here, but it can
+be handled similarly to Power.) Pathchk breaks paths at supply nets
+but Calibre PERC does not by default, so the perc::create_lvs_path
+-break option is used. You exclude the VCC net in the “test” proc
+results by adding the “‑exclude {Power}” option to perc::create_lvs_path.
+Pathchk includes supply nets in the output by default, but they
+can be omitted with the EXCLUDE SUPPLY keyword.</p>
+</div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idc0891926-ab25-4917-8f0c-c36b1da319fc"><h2 class="title Subheading sectiontitle">Execution
+of Pathchk Operations</h2><p class="p">Pathchk is used by Calibre nmLVS/Calibre
+nmLVS-H and Mask-mode ICverify. It is executed during circuit extraction
+and only when the layout is geometric. You must use <a class="xref fm:HeadingOnly" href="Command_ErcSelectCheck_id1a7d5b1a.html#id1a7d5b1a-1ccc-4f2d-b92d-5078f637731c__Command_ErcSelectCheck_id1a7d5b1a.xml#id1a7d5b1a-1ccc-4f2d-b92d-5078f637731c" title="Selects rule check statements and rule check groups to be executed by ERC.">ERC Select Check</a> to enable ERC rule checks in an
+LVS run. LVS Execute ERC NO disables ERC checks that would otherwise
+be performed. The following Calibre commands execute this statement:</p>
+<pre class="pre codeblock"><code>calibre -lvs -flatten       // executed flat
+calibre -lvs -tl            // executed flat
+calibre -lvs -hier          // executed hierarchically and 
+                            // Layout System is geometric
+calibre -spice              </code></pre><p class="p">The following Pyxis Layout commands
+execute this statement:</p>
+<pre class="pre codeblock"><code>$lvs_mask()        // executed flat
+$write_mask_cnet() // executed flat</code></pre><p class="p">Note these important considerations:</p>
+<ul class="ul"><li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id113fd7f7-cc60-4df3-a68a-31486dc1d537"><p class="p">The <span class="keyword ParameterName Required">POWER</span>, <span class="keyword ParameterName Required">GROUND</span>,
+and <span class="keyword ParameterName Required">LABELED</span> options
+(without the ! operator) are not recommended because they can generate
+very large files, consume large amounts of memory, and cause long
+runtimes. In hierarchical execution, such requests flatten the design
+hierarchy.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id3e292f52-1a32-4114-bcd1-b4b3ffde0157"><p class="p">Pathchk operations are not
+executed if the specified net is not present. For example, if there
+is no power net in the layout, then Pathchk ! POWER generates a
+warning message and produces no output. ERC rule checks involving
+Pathchk operations that abort are annotated in the ERC Summary Report
+as follows:</p>
+<p class="p">NOT EXECUTED DUE TO PATHCHK ERRORS</p>
+<p class="p">Rule checks involving layers
+derived from Pathchk operations that abort are annotated in the
+ERC Summary Report as follows:</p>
+<p class="p">FAILED PATHCHK IN LAYER DERIVATION</p>
+<p class="p">Rule checks that fail with either
+of the preceding annotations receive the following comment in the
+ERC Results Database:</p>
+<p class="p">ERROR IN PATHCHK</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id4b596994-be2c-400a-b239-6af1f110eaec"><p class="p">LVS Power Name and LVS Ground
+Name nets always break paths regardless of POWERNAME or GROUNDNAME
+overrides. In addition, nets specified in POWERNAME and GROUNDNAME
+break paths as well.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id51420570-8bdd-4ca4-b076-77ecf7380b94"><p class="p">Determination of power and
+ground names for the purpose of the EXCLUDE UNUSED option is controlled
+exclusively by the LVS Power Name and LVS Ground Name specification
+statements; the POWERNAME and GROUNDNAME overrides do not apply.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idbd73b945-7bbf-4c64-9fbb-0737bc9f0da4"><p class="p">The POWERNAME, GROUNDNAME,
+and LABELNAME options can be specified in any order, but must be
+the last options of the Pathchk statement. They work both flat and hierarchically,
+and they do not apply to <a class="xref fm:HeadingOnly" href="Command_ErcPathchk_idb78443a7.html#idb78443a7-c349-4a01-9739-ee693f55f76f__Command_ErcPathchk_idb78443a7.xml#idb78443a7-c349-4a01-9739-ee693f55f76f" title="Reports polygons from nets that do or do not have a path to power, ground, or labeled nets, or that satisfy a combination of these conditions. Used during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and ICtrace Mask mode.">ERC Pathchk</a> statements.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id54cef089-92e6-45c6-bc38-885bc27e8bc2"><p class="p">In Calibre nmDRC/Calibre
+nmDRC-H and ICrules, the Pathchk operation produces an empty result
+layer and generates a warning, and PRINT options are not executed. </p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id3669b768-35a6-4285-92cd-959d59c08942"><p class="p">Pathchk includes floating
+nets when they fit the specified request and you do not specify the
+NOFLOAT parameter. For example, the following statement’s output
+includes any floating nets that exist:</p>
+<p class="lines ApplCommand">PATHCHK ! POWER</p>
+<p class="p">while the following statement’s
+output does not include any floating nets:</p>
+<p class="lines ApplCommand">PATHCHK ! POWER &amp;&amp; GROUND NOFLOAT</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id5980b58c-a31f-48a3-aa25-29bdfd774131"><p class="p">In the default mode (neither
+FLAT nor BY CELL specified), the PRINT POLYGONS output may contain
+polygons belonging to a cell in two ways.</p>
+<ul class="ul"><li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id03afe4b4-bb1e-4c06-9ab1-01d00e011186"><p class="p">If a net in the cell violates
+the specified requirements in some but not all placements of this
+cell, the polygons are written out for each placement where the
+violation occurs in top-level coordinate space.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__ida0cf51b8-cfa0-49d3-89f0-a47501f0fc3c"><p class="p">If, for a given net, the
+violation occurs in all placements of the cell, the polygons of this
+net are written out only once in the lowest leftmost placement of
+the cell.</p>
+</li>
+</ul>
+<p class="p">This could be difficult to interpret
+because, in the same cell, some polygons may be displayed in many
+placements while other polygons only appear in one placement.</p>
+<p class="p">If the results are difficult
+to interpret, you can use the BY CELL option to separate cell-specific
+results in different checks. The FLAT option can also be used to
+force Calibre to output cell-specific results in all placements.
+This eliminates any confusion, but increases both memory consumption
+and the size of the polygon file. Output using the PRINT NETS option
+is unambiguous.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idf9d0f87d-f1bf-4068-ad0e-ae482d203f83"><p class="p">Results of the operation
+are optimized for the different outputs produced. Specifically, the
+output layer produced from a given input layer preserves hierarchy
+as much as possible, resulting in more compact data with less promotion.
+Such operations are most commonly used as part of a more complex
+rule file script where the result layer serves as an input layer
+for other layer operations involved in ERC checks.</p>
+</li>
+<li class="li" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id1b44395d-bc7c-4e97-ba40-e6994cb6d28c"><p class="p">The output layer of the operation
+without an input layer parameter specified, which is commonly used
+for results presentation, is optimized for readability and clarity.
+For each net selected by Pathchk which is a pin of a cell, all geometries
+are promoted to the containing cell and reported in its context
+as a part of the parent net. Output generated by <a class="xref fm:HeadingOnly" href="Command_ErcPathchk_idb78443a7.html#idb78443a7-c349-4a01-9739-ee693f55f76f__Command_ErcPathchk_idb78443a7.xml#idb78443a7-c349-4a01-9739-ee693f55f76f" title="Reports polygons from nets that do or do not have a path to power, ground, or labeled nets, or that satisfy a combination of these conditions. Used during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and ICtrace Mask mode.">ERC Pathchk</a> and the PRINT POLYGONS option
+of Pathchk is optimized in the same way, since it is also intended
+for results viewing. In no case are the same polygons reported in
+both child and parent cells.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__ida5120a5c-91b8-47a9-95c2-2974eb2f6377"><h2 class="title Subheading sectiontitle">Performance
+Considerations</h2><p class="p">Pathchk operations that specify
+the same set of net name overrides (POWERNAME, GROUNDNAME, LABELNAME)
+are executed concurrently as a single operation with multiple output
+layers. The concurrency of Pathchk operations saves some computations
+that are the same for all concurrent operations.</p>
+<p class="p">For example, if the rule file
+contains the following Pathchk operations:</p>
+<pre class="pre codeblock"><code>PATHCHK POWER &amp;&amp;  GROUND POWERNAME VDD       // 1
+PATHCHK POWER &amp;&amp; !GROUND POWERNAME VDD       // 1
+PATHCHK POWER pgate POWERNAME VDD            // 1
+PATHCHK POWER ngate POWERNAME VDD            // 1
+PATHCHK POWER &amp;&amp;  GROUND GROUNDNAME VSS      // 2
+PATHCHK POWER &amp;&amp; !GROUND GROUNDNAME VSS      // 2
+PATHCHK POWER pgate GROUNDNAME VSS           // 2
+PATHCHK POWER ngate GROUNDNAME VSS           // 2
+PATHCHK POWER &amp;&amp;  GROUND                     // 3
+PATHCHK POWER &amp;&amp; !GROUND                     // 3
+PATHCHK POWER pgate                          // 3
+PATHCHK POWER ngate                          // 3</code></pre><p class="p">then three concurrent sets are
+executed as shown by the comments above. Notice that Pathchk operations
+with no overrides are executed in a separate concurrency set.</p>
+<p class="p">Hyperscaling does not employ
+concurrency by default in all HDBs. To enable this, use the ‑hyper
+pathchk command line option. Be aware that enabling concurrency
+in all HDBs requires additional memory.</p>
+<p class="p">Hierarchical Calibre operations
+impose a size limit on intermediate data structures generated by Pathchk.
+The limit is approximately 400 MB and should not be reached under
+normal conditions. It is applied independently to each Pathchk operation.
+If the limit is reached, Pathchk generates incomplete results (some
+polygons may be omitted from the output) and issues the following
+warning:</p>
+<pre class="pre codeblock"><code>WARNING: ERC operation exhausted allowed memory allocation.</code></pre><p class="p">Calibre issues the warning in
+both the transcript and the circuit extraction report. This limit applies
+only to polygon output (that is, construction of a result layer)
+and the PRINT POLYGONS option. Net reporting from the PRINT NETS
+option is always complete.</p>
+<p class="p">This limit exists to protect
+against excessive memory usage in rare cases when a very large net is
+selected by Pathchk (for example, a power or ground net), and cases
+where a very large part of the design is selected. </p>
+<p class="p">Positive requests like “Pathchk
+POWER” can generate very large files, consume much memory, and take
+a long time to complete. In particular, in hierarchical execution
+such positive requests essentially flatten the design hierarchy.
+Hence, these types of operations are typically best avoided.</p>
+<p class="p">In certain situations, the Pathchk
+operation consumes large amounts of memory and time if the operation
+generates large results, and those results are output directly to
+the results database. For example, consider a design where the power
+pad is not properly connected to the actual power net, so that a
+check like this: </p>
+<pre class="pre codeblock"><code>ERR { PATHCHK ! POWER }</code></pre><p class="p">attempts to return essentially
+the entire (disconnected) power routing. This can be very time-consuming,
+especially when the power routing has the form of a grid. The result
+can be a huge, flat polygon consisting of all the power routing
+layers merged together. In such cases, the Pathchk single-layer
+mode (using the <span class="keyword ParameterName OptionalReplaceable">layer</span> argument
+and writing individual per-layer checks) is likely to reduce resource
+consumption. Another solution is to use the PRINT NETS option instead
+of writing the full shapes to the results database. Also, the <a class="xref fm:HeadingOnly" href="Command_ErcPathchk_idb78443a7.html#idb78443a7-c349-4a01-9739-ee693f55f76f__Command_ErcPathchk_idb78443a7.xml#idb78443a7-c349-4a01-9739-ee693f55f76f" title="Reports polygons from nets that do or do not have a path to power, ground, or labeled nets, or that satisfy a combination of these conditions. Used during circuit extraction in Calibre nmLVS, Calibre nmLVS-H, and ICtrace Mask mode.">ERC Pathchk</a> specification statement
+is better optimized to handle such cases. </p>
+<p class="p">Note that if the Pathchk result
+is operated upon before being output to the results database, then resource
+consumption may not be an issue. For example, the following is likely
+to work because the final amount of data written to the results
+database is reduced:</p>
+<pre class="pre codeblock"><code>A = PATHCHK ! POWER 
+ERR { A AND CONTACT }</code></pre></div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id57fa2ddc-b641-4840-b173-f1da9fc26edf"><h2 class="title Subheading sectiontitle">Example 1</h2><p class="p">The following example creates a
+derived layer named erc_poly_layer containing a representation of
+all shapes on the ipoly layer with no path to POWER.</p>
+<pre class="pre codeblock"><code>erc_poly_layer = PATHCHK ! POWER ipoly</code></pre></div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id9d57bd2a-f8e7-4341-b1d9-cc81c6cf22f3"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">The following example creates a
+file named <span class="ph filepath">pathchk_no_pwr_nets</span> containing output
+of all nets with no path to POWER.</p>
+<pre class="pre codeblock"><code>erc_rule {PATHCHK ! POWER PRINT NETS "pathchk_no_pwr_nets"}</code></pre></div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id502ea4e2-c006-45aa-bf58-4a7c570f12f3"><h2 class="title Subheading sectiontitle">Example 3</h2><p class="p">See <a class="xref fm:HeadingOnly" href="Command_ErcPathchk_idb78443a7.html#idb78443a7-c349-4a01-9739-ee693f55f76f__id21045d6c-de1a-45af-ba71-b85ccee994db">Example 2</a> under ERC
+Pathchk for a discussion of supply-related option combinations.</p>
+</div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id4039882c-5cd5-4827-90fd-1376c70e4149"><h2 class="title Subheading sectiontitle">Example 4</h2><p class="p">This shows a check for polygons
+on the ipoly layer that do not have paths to top-level labeled nets
+in1a and in1b. Shapes from top-level nets connected to port objects
+are included.</p>
+<pre class="pre codeblock"><code>pathchk_not_labelname{
+    PATHCHK ! LABELED ipoly PORTS ALSO LABELNAME in1b in1a
+}</code></pre></div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idc2d788d3-18fa-4e72-8dc0-b354f3865921"><h2 class="title Subheading sectiontitle">Example 5</h2><p class="p">This example shows a check for gates
+that are not connected either to power or ground.</p>
+<pre class="pre codeblock"><code>CONNECT gate poly</code></pre><pre class="pre codeblock"><code>gate_not_pwr_or_gnd { PATHCHK !POWER &amp;&amp; !GROUND gate }</code></pre><pre class="pre codeblock"><code>LVS EXECUTE ERC YES
+ERC SELECT CHECK gate_not_pwr_or_gnd</code></pre></div>
+<div class="section Subsection" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__id64698ee0-32c8-4216-a167-dab19e419464"><h2 class="title Subheading sectiontitle">Example 6</h2><p class="p">This example illustrates the use
+of the BREAKNAME keyword. In <a class="xref fm:Figure" href="#idbee83a3b-8172-4740-9f6d-6f429bf36843__idc06239d5-f06e-440f-b4b2-a8c271aa9932">Figure 1</a>, net B1 has a path to the ground signal
+VSS in the top cell through two resistors. Net B2 has a path to
+VSS through two resistors in cell C2, as well as through a top-level
+resistor.</p>
+<div class="fig fignone" id="idbee83a3b-8172-4740-9f6d-6f429bf36843__idc06239d5-f06e-440f-b4b2-a8c271aa9932"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Pathchk BREAKNAME</span><br /><div class="imageleft"><img class="image imageleft" height="201" src="../graphics/pathchk.png" width="468" /></div><br /></div>
+<p class="p">You can use Pathchk to find all
+nets with a path to ground (VSS) and designate net A as a break net
+in cell C1: </p>
+<pre class="pre codeblock"><code>C1_break {PATHCHK GROUND BREAKNAME C1(A)}</code></pre><p class="p">In this case, net B1 has a path
+to ground because the break net A in cell C1 has no effect outside of
+cell C1. However, net B2 does not have a path to ground because
+net A breaks paths in cell C1 and C2, which is contained in C1.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_ReferenceDictionaryPartFour_iddc7b0f44.html" title="This chapter contains descriptions for the statements and operations that can be used in a rule file. These appear in alphabetical order and this chapter contains those starting with letters P through Z.">Reference Dictionary P - Z</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Pathchk"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Pathchk_idbee83a3b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

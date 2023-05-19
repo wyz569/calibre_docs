@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Metal Fill Modeling" />
+<meta name="abstract" content="By default, the Calibre xRC tool treats floating signal nets as fixed (grounded) and does not extract them. However, floating nets are not ignored when calculating the capacitance of non-floating nets." />
+<meta name="description" content="By default, the Calibre xRC tool treats floating signal nets as fixed (grounded) and does not extract them. However, floating nets are not ignored when calculating the capacitance of non-floating nets." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id69e0935b-e67b-4e22-882c-ee3f19e6e73c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Metal Fill Modeling</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Metal Fill Modeling" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id69e0935b-e67b-4e22-882c-ee3f19e6e73c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Metal
+Fill Modeling</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">By default,
+the Calibre xRC tool treats floating signal nets as fixed (grounded)
+and does not extract them. However, floating nets are not ignored
+when calculating the capacitance of non-floating nets.</span>
+</div>
+<p class="p">Assuming that floating signals are grounded results
+in some error for floating nets like metal fill. You can control
+how metal fill, and floating nets in general, are treated during
+extraction with the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Floating Nets', 'svrf_ur'); return false;">PEX Extract Floating Nets</a> statement. In the Calibre Interactive interface,
+this is accessed through <span class="ph menucascade"><span class="ph uicontrol">PEX Options</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Netlist</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Extract Metal Fill</span></span>. </p>
+<p class="p">To model the coupling resulting from metal
+fill, run parasitic extraction in -rc or -rcc mode and specify the
+SVRF statement as follows: </p>
+<pre class="pre codeblock leveled"><code>PEX EXTRACT FLOATING NETS ALL  </code></pre><p class="p">This allows the metal fill to float, which
+gives a better approximation of real conditions. This may increase
+extraction time and the netlist size. If the netlists are too large
+to simulate, use <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Reduce CC', 'svrf_ur'); return false;">PEX Reduce CC</a> statement for targeted reduction. </p>
+<p class="p">For lumped capacitance extraction, which treats
+all neighbor nets as grounded, you need to extract the metal fill
+nets so that they can be simulated. To extract nets associated with
+the metal fill, set the statement as follows: </p>
+<pre class="pre codeblock leveled"><code>PEX EXTRACT FLOATING NETS GROUNDED </code></pre><p class="p">Floating nets and signal nets are extracted
+in the same manner. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If the metal fill
+has not been added yet, set the target density using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Density Estimate', 'svrf_ur'); return false;">PEX Density Estimate</a> statement. In-die tables must be included in the
+calibrated rule file for the process technology.</p>
+</div>
+<p class="p">Many metal fill configurations are supported. <a class="xref fm:Figure" href="#id69e0935b-e67b-4e22-882c-ee3f19e6e73c__idc7b5a4b9-ef24-40ba-9482-b86e1e18c100">Figure 1</a> shows an example of simple square or rectangular
+fill between nets drawn on the same metal layer. <a class="xref fm:Figure" href="#id69e0935b-e67b-4e22-882c-ee3f19e6e73c__idc75dd60e-0122-4450-9ee2-84ec48fee521">Figure 2</a> shows multi-layer fill and nets. <a class="xref fm:Figure" href="#id69e0935b-e67b-4e22-882c-ee3f19e6e73c__ide4554896-02f0-4245-8137-e56fe5bdec1a">Figure 3</a> also shows a non-square fill with multiple
+nets.</p>
+<div class="fig fignone" id="id69e0935b-e67b-4e22-882c-ee3f19e6e73c__idc7b5a4b9-ef24-40ba-9482-b86e1e18c100"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Simple Metal Fill on a Single
+Layer</span><br /><div class="imagecenter"><img class="image imagecenter" height="122" src="../graphics/Fill_Metal_1.gif" width="315" /></div><br /></div>
+<div class="fig fignone" id="id69e0935b-e67b-4e22-882c-ee3f19e6e73c__idc75dd60e-0122-4450-9ee2-84ec48fee521"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Metal Fill on Multiple Layers
+With Multiple Nets</span><br /><div class="imagecenter"><img class="image imagecenter" height="196" src="../graphics/Fill_Metal_2.gif" width="345" /></div><br /></div>
+<div class="fig fignone" id="id69e0935b-e67b-4e22-882c-ee3f19e6e73c__ide4554896-02f0-4245-8137-e56fe5bdec1a"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Non-Square Fill With Multiple
+Nets</span><br /><div class="imagecenter"><img class="image imagecenter" height="167" src="../graphics/Fill_Metal_3.gif" width="280" /></div><br /></div>
+<p class="p">For a more general discussion of floating nets,
+see “<a class="xref fm:HeadingOnly" href="Concept_IgnoringExtractingFloatingNets_id9bb85150.html#id9bb85150-f911-44f2-aae1-0bb74ce37a43__Concept_IgnoringExtractingFloatingNets_id9bb85150.xml#id9bb85150-f911-44f2-aae1-0bb74ce37a43" title="By default, floating nets are treated as grounded during extraction. A floating net is defined as one not connected to a device and lacking port text. (The shapes comprising the floating net may have text attached in other ways such as by Attach without Port Layer Text. Because this does not define port placement, connectivity is not defined and the net remains floating.)">Ignoring or Extracting Floating Nets</a>”.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_HandlingInput_idf173adaf.html" title="Basic extraction processes can be modified to handle different types of input.">Handling Input</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Metal Fill Modeling"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_MetalFillModeling_id69e0935b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Best Practice: Using Tcl with Calibre OPCverify" />
+<meta name="abstract" content="The Calibre OPCverify setup file supports Tcl script constructs. You can use conditional and looping Tcl code to simplify the setup and SVRF code for Calibre OPCverify. All lines in the setup file are evaluated at the beginning of the Calibre OPCverify job for Tcl code, and are converted to the raw commands." />
+<meta name="description" content="The Calibre OPCverify setup file supports Tcl script constructs. You can use conditional and looping Tcl code to simplify the setup and SVRF code for Calibre OPCverify. All lines in the setup file are evaluated at the beginning of the Calibre OPCverify job for Tcl code, and are converted to the raw commands." />
+<meta name="DC.subject" content="OPCverify, using Tcl, Tcl and OPCverify" />
+<meta name="keywords" content="OPCverify, using Tcl, Tcl and OPCverify" />
+<meta name="prodname" content="Calibre OPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="no" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® OPCverify™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2b466b2f-0472-4c14-8bb0-925af5692b71" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Best Practice: Using Tcl with Calibre OPCverify</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Best Practice: Using Tcl with Calibre OPCverify" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2b466b2f-0472-4c14-8bb0-925af5692b71">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Best Practice:
+Using Tcl with Calibre OPCverify</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The Calibre
+OPCverify setup file supports Tcl script constructs. You can use
+conditional and looping Tcl code to simplify the setup and SVRF
+code for Calibre OPCverify. All lines in the setup file are evaluated
+at the beginning of the Calibre OPCverify job for Tcl code, and
+are converted to the raw commands. </span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id2b466b2f-0472-4c14-8bb0-925af5692b71__id51685e34-3810-4381-bc0c-678e92d319d7"><h2 class="title Subheading sectiontitle">Examples</h2><h2 class="title Subheading sectiontitle">Varying the Dose</h2><p class="p">For example, the following code in the setup
+file:</p>
+<pre class="pre codeblock leveled"><code>-------------------------- 
+OPCverify setup file code: 
+-------------------------- 
+set cnt 1 
+foreach dose {0.96 0.92 0.88 0.84 0.80} { 
+setlayer i${cnt} = image optical o1 aerial_contour .3 dose $dose 
+incr cnt 
+} </code></pre><p class="p">Will translate to:</p>
+<pre class="pre codeblock leveled"><code>setlayer i1 = image optical o1 aerial_contour 0.3 dose 0.96 
+setlayer i2 = image optical o1 aerial_contour 0.3 dose 0.92 
+setlayer i3 = image optical o1 aerial_contour 0.3 dose 0.88 
+setlayer i4 = image optical o1 aerial_contour 0.3 dose 0.84 
+setlayer i5 = image optical o1 aerial_contour 0.3 dose 0.80 </code></pre><p class="p">When you use TVF (Tcl Verification Format)
+in the rule file instead of SVRF, you can insert concurrent calls
+to LITHO OPCVERIFY into a Tcl loop. This coordinated use of Tcl
+in the setup file and in the rule file (TVF) can greatly enhance
+the ease-of-use of verification scripts.</p>
+<pre class="pre codeblock leveled"><code>---------- 
+TVF code: 
+---------- 
+set output 101 
+foreach val { ti to i1 i2 i3 i4 i5 i6 smallCD bigCD} { 
+	SETLAYER $val "LITHO OPCVERIFY FILE opcverify.in POLY MASK MAP $val" 
+	RULECHECK $val "COPY $val" 
+	DRC CHECK MAP $val $output 
+	incr output} </code></pre><h2 class="title Subheading sectiontitle">Varying the Tolerance</h2><p class="p">Another effective example use of Tcl looping
+code is with the <a class="xref fm:HeadingOnly" href="Command_MeasureCd_id60cd4826.html#id60cd4826-78d8-49e2-b6ec-085e96b7099f__Command_MeasureCd_id60cd4826.xml#id60cd4826-78d8-49e2-b6ec-085e96b7099f" title="Checks accuracy of printed space or width CDs.">measure_cd</a> command. Creating a variation
+using the tolerance values as the loop variable creates a concurrently
+executable command block that can be used in a binning test, as
+shown in this fragment:</p>
+<pre class="pre codeblock leveled"><code>setlayer contour = image optical f0 resist_model vt5 
+        set startCD 0.080 
+        set stepCD 0.002 
+        set numsteps 15 
+        for {set i 0} {$i &lt;=$numsteps} {incr i} { 
+        set hibin [expr $startCD + ($i+1)*$stepCD] 
+        set lobin [expr $startCD + $i*$stepCD] 
+	setlayer cd$lobin$hibin = measure_cd contour target_layer internal \ 
+		inside island_layer \ 
+		cd_min 0.09 cd_max 0.110 cd_min_length 0.001 max_search 0.03 \ 
+	tol &gt;= $lobin &lt; $hibin absolute cdeffective  
+} </code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_UsingCalibreOpcverify_ide7c6766b.html" title="In this chapter, you will learn how to set up and run Calibre OPCverify in batch command mode. Using this chapter requires knowledge of SVRF commands and DRC rule file creation.">Using Calibre OPCverify</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcv_useref"
+                DocTitle = "Calibre® OPCverify™ User’s and Reference Manual"
+                PageTitle = "Best Practice: Using Tcl with Calibre OPCverify"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_BestPracticeUsingTclCalibreOpcverify_id2b466b2f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCverify™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

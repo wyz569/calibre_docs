@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="CMP Model" />
+<meta name="abstract" content="The CMP model is an overall model used for optimizing parameters related to the CMP step. It has several interacting submodels." />
+<meta name="description" content="The CMP model is an overall model used for optimizing parameters related to the CMP step. It has several interacting submodels." />
+<meta name="prodname" content="Calibre CMP Model Builder User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Documentation for CMP Modeling. Condition Subtitle used for internal information." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="NONE" />
+<meta name="SourceHandle" content="calbr_cmp_model_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 9, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® CMP Model Builder User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="Alpha" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CMP Model</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CMP Model" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CMP Model</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The CMP model is an overall model
+used for optimizing parameters related to the CMP step. It has several
+interacting submodels.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idc5cb7d83-bfd2-4b87-8e3f-07ea8bf7c1d5"><p class="p">The CMP model is run after deposition.
+Its initial input is a single-material surface of varying height
+and the geometry of the trench region. The geometry may include
+trench width, trench spacing, length, area, and density depending
+on which values are provided.</p>
+<p class="p">The CMP simulation takes into account
+long-range effects such as pad deformation and short-range effects
+such as varying depths of trenches. It computes both erosion and
+dishing variations of the surface based on the local pressure.</p>
+</div>
+<div class="section Subsection" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__ida45c9a33-6d45-4bfb-afbe-b69c9448d6e1"><h2 class="title Subheading sectiontitle">Perimeter</h2><p class="p">The perimeter model is useful when your measured data suggests
+that areas with many narrow trenches are more polished than initial
+simulations predicted. This most commonly occurs when designs have
+large variations in trench width while maintaining a consistent
+density.</p>
+<p class="p">The perimeter model is part of the overall model for material
+removal for CMP of platens. The perimeter model has two forms, exponential
+and logarithmic. Generally the logarithmic form has a smoother response.</p>
+<p class="p">The enhanced perimeter model (EPM) is used to
+modify the removal rate of the material depending on the contact
+area of the different materials along the pattern perimeter. It
+is a generalization of the removal rate correction by the perimeter
+model. </p>
+<h2 class="title Subheading sectiontitle">Parameters</h2><div class="fig fignone" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id70f5dfcc-1636-4062-8714-b330c2818ea1"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Parameters for Perimeter Model in CmpModel Dialog Box</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/CMPModel_Perim_Params.png" /></div><br /></div>
+<p class="p">More information on the effect of the fields is provided in the
+following table. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id7df6e5cd-03c3-4088-8482-db6c095361ca" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Perimeter Model Fields </span></caption><colgroup><col style="width:1.315in" /><col style="width:3.119in" /><col style="width:2.065in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32102e172"><p class="p">Field</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32102e175"><p class="p">Description</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d32102e178"><p class="p">Values</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">PerimeterFactor</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">Indicates whether to
+use the exponential or logarithmic calculation.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id089a0f82-c229-42d5-bed7-10c2c48c02ea"><p class="p">Exp </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id3422cb41-7347-49f1-a45f-f7c10f7744f2"><p class="p">Log (default)</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">Delta0s</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">The delta (δ) value to
+be used for topmost material. When the second material is exposed,
+the model uses Delta0 instead.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idc24a40c6-c1f2-4e06-958b-28db5e4df880"><p class="p">Symbolic name (value to be optimized) </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id7be4b048-ded7-4d56-9732-8c258025095b"><p class="p">Exp: 0 ≤ δ ≤ 1</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idc7faa2d3-a237-412d-95fc-50ed27279b81"><p class="p">Log: 0 ≤ δ ≤ 5</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">Delta0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">The delta value to be
+used for exposed material. If Delta0s is not specified, Delta0 is also
+used for the topmost material.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id0327fc94-a5af-4448-8179-dbeda2d96307"><p class="p">Symbolic name (value to be optimized) </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id22f1aff2-0397-485c-96b5-06939ce1a493"><p class="p">Exp: 0 ≤ δ ≤ 1</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id5f521533-e2d3-4a04-812f-31de28e11c9f"><p class="p">Log: 0 ≤ δ ≤ 5 </p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">AlphaPs</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">The alpha (α) value to
+be used for topmost material. When the second material is exposed,
+the model uses AlphaP instead.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id1df99b86-3669-4f93-a971-96ba3ecec660"><p class="p">Symbolic name (value to be optimized) </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id44e13b55-a13c-4cc5-8ab1-be50dc93b9ac"><p class="p">0 ≤ α ≤ 5</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">AlphaP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">The alpha value to be
+used for exposed material.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id9512cf16-e8dc-4bbd-8d47-04a873af785f"><p class="p">Symbolic name (value to be optimized) </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idbbbf56b7-c049-4692-8dcd-18c78b55a62c"><p class="p">0 ≤ α ≤ 5</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">WB</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">An optional width bias
+(wb) parameter value in microns used for the enhanced perimeter model
+(EPM). It affects the removal rate of the material. Specify together
+with RFB.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idfb03bbaa-9141-4956-841b-ff41dae2c55f"><p class="p">Argument
+name (and numeric value to be applied)</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id911bdd47-ccd7-4bf4-8bb9-89751e7f9e4d"><p class="p">wb &gt; 0 enables parameter</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e172 "><p class="p">RFB</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e175 "><p class="p">An optional rate‑factor
+bias (rfb) parameter value used for the enhanced perimeter model (EPM).
+Specifies a rate correction for the material due to transitions
+between trench and non‑trench patterns. It affects the removal rate
+of the material. Specify together with WB.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d32102e178 "><ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idb3983234-16e0-48aa-951b-704713248629"><p class="p">Argument
+name (and numeric value to be applied)</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__ida3bce0c6-8832-4f64-93d5-c988694f3ffb"><p class="p">rfb &gt; 1 means to increase the polishing rate </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id975901b4-926e-4872-8b82-da3ef96ab4f3"><p class="p">rfb &lt; 1 means to decrease the polishing rate </p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idf567b3a8-74e5-4aa2-bb60-2114e65bc74b"><p class="p">rfb &gt; 0 enables parameter</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 class="title Subheading sectiontitle">Usage Notes</h2><p class="p">The perimeter model increases the removal rate in areas with
+narrow trenches.</p>
+<p class="p">Those same sites are also affected by the
+Chekina theoretical model which calculates global pressure. The
+Chekina model is trying to reduce pressure there. The interaction
+between these models can significantly increase the pad stiffness
+parameter, SPAD.</p>
+<p class="p">The perimeter model reflects how chip topography
+affects dishing and erosion. The three cross-sections shown in <a class="xref fm:Figure" href="#idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idd82f1c09-4f7d-41fb-a33b-0b4d72609aa7">Figure 2</a> all have 50% density. The top layout
+has many shallow trenches; the middle layout has several wide trenches;
+and the bottom one is a single wide metal area. The perimeter is
+calculated as the sum of the perimeters of the metal areas in the
+frame being modeled. (Note that this is not the same as the perimeter
+of the full shape.) This means that the top layout with many trenches
+has a larger perimeter than the fewer wide trenches, which is wider
+still than the single metal area. Another term for this value is
+“surface roughness.” </p>
+<div class="fig fignone" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idd82f1c09-4f7d-41fb-a33b-0b4d72609aa7"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Same Density, Different Perimeters</span><br /><div class="imagecenter"><img class="image imagecenter" height="304" src="../graphics/surface_roughness.gif" width="352" /></div><br /></div>
+</div>
+<div class="section Subsection" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idb3ce1b4f-d810-43fa-aa46-14731c69aba6"><h2 class="title Subheading sectiontitle">Preston</h2><p class="p">The Preston model is a theoretical
+model that is used by default for simulating bulk copper polishing.
+It reduces initial height variations to achieve relative planarity
+between trench and non-trench regions. There are no controls to
+enable it, as it is always on.</p>
+<p class="p">The CMP process initially deals with
+a structure that is completely covered by copper. During polishing,
+the original height variations decrease towards zero.</p>
+<h2 class="title Subheading sectiontitle">Equations</h2><p class="p">The Preston equation specifies the relation between removal rate
+and the pad’s pressure and motion.</p>
+<br /><div class="imagecenter"><img class="image imagecenter" height="22" src="../graphics/model_details_apx6.png" width="74" /></div><br /><p class="p">where</p>
+<ul class="ul"><li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id18f164f5-6e25-4f1b-84d3-08b45c52ed9c"><p class="p"><span class="ph FontProperty equationvariable">R</span> is
+the removal rate</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__ide8d09718-48c3-472d-ad44-9b7725fb2e86"><p class="p"><span class="ph FontProperty equationvariable">k</span> <span class="ph FontProperty VariableSubScript">cu</span> is
+a constant</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__idb965fce0-1b23-4252-880a-19ed7be6f3dc"><p class="p"><span class="ph FontProperty equationvariable">P</span> is
+the pressure, and varies by height</p>
+</li>
+<li class="li" id="idd75a1acf-eaa7-49d3-bb4d-96930ea1b309__id87e96a54-0c20-444b-9075-38a59bc75ec8"><p class="p"><span class="ph FontProperty equationvariable">V</span> is
+the relative velocity between pad and wafer</p>
+</li>
+</ul>
+<h2 class="title Subheading sectiontitle">GUI Fields</h2><p class="p">In the CmpModel dialog box, the only field that affects the Preston
+model is Hex. The Hex field indicates the variation in height (|z1
+- z2|) at which the pad no longer applies direct pressure to the
+lowest copper areas. This field should usually be set to a symbolic
+name so that its value will be optimized.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_DetailsOnTheoreticalModels_id5f5d780c.html" title="A CMP Model is composed of various theoretical models that are used by the CMP Optimization tool.">Details on Theoretical Models</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmp_model_useref"
+                DocTitle = "Calibre® CMP Model Builder User’s and Reference Manual"
+                PageTitle = "CMP Model"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_CmpModel_idd75a1acf.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® CMP Model Builder User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

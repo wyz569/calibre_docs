@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Litho Model Format" />
+<meta name="abstract" content="The litho model consolidates all of the model and mask information into a single object in order to define a manufacturing technology configuration. It is intended to unify simulation conditions across Calibre tools to reduce the possibility of errors." />
+<meta name="description" content="The litho model consolidates all of the model and mask information into a single object in order to define a manufacturing technology configuration. It is intended to unify simulation conditions across Calibre tools to reduce the possibility of errors." />
+<meta name="DC.subject" content="Litho model format" />
+<meta name="keywords" content="Litho model format" />
+<meta name="prodname" content="Calibre OPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="no" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® OPCverify™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Litho Model Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Litho Model Format" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Litho
+Model Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Calibre OPCverify
+File Format</p>
+<p class="p ContextMGC">Input for: <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a></p>
+<p class="shortdesc">The litho model consolidates
+all of the model and mask information into a single object in order to
+define a manufacturing technology configuration. It is intended
+to unify simulation conditions across Calibre tools to reduce the
+possibility of errors.</p>
+<p class="p">A litho model is loaded when its directory
+name is specified in an <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> block for the setlayer <a class="xref fm:HeadingOnly" href="Command_Image_id5bb94d61.html#id5bb94d61-3305-4d5c-bf95-bbc777414ef5__Command_Image_id5bb94d61.xml#id5bb94d61-3305-4d5c-bf95-bbc777414ef5" title="Creates an image contour.">image</a> command
+or in a post-tapeout product’s denseopc_options block.</p>
+<p class="p">The current methods of specifying the information
+contained in the litho model are backwards compatible, but may be
+deprecated in a future release. </p>
+<p class="p">Litho models affect the following Calibre
+OPCverify commands: </p>
+<ul class="ul"><li class="li" id="id52b27469-fb89-4f47-82ed-3b33785fef6f"><p class="p">Any <a class="xref fm:HeadingOnly" href="Command_Background_id2ff6e3c6.html#id2ff6e3c6-1593-4019-9f02-6402b00ac513__Command_Background_id2ff6e3c6.xml#id2ff6e3c6-1593-4019-9f02-6402b00ac513" title="Defines the background transmission values of the mask for each exposure for a Calibre OPCverify command file.">background</a>, <a class="xref fm:HeadingOnly" href="Command_ResistModelLoad_id32654e67.html#id32654e67-e0fd-41be-af0f-570a20478941__Command_ResistModelLoad_id32654e67.xml#id32654e67-e0fd-41be-af0f-570a20478941" title="Loads a resist model into Calibre OPCverify.">resist_model_load</a>, and <a class="xref fm:HeadingOnly" href="Command_OpticalModelLoad_id11de692d.html#id11de692d-4fd4-4406-b0b8-ccf3119a8ac1__Command_OpticalModelLoad_id11de692d.xml#id11de692d-4fd4-4406-b0b8-ccf3119a8ac1" title="Loads an optical model. At least one optical_load_command must be present unless a litho model is loaded.">optical_model_load</a> commands in the setup command
+file are ignored. The values in the litho model are used instead. </p>
+</li>
+<li class="li" id="id24b18b1c-8bad-4c60-9edc-b7f3f76fd041"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_Layer_idd4d8879b.html#idd4d8879b-d2a4-4f37-af06-664c993eebfa__Command_Layer_idd4d8879b.xml#idd4d8879b-d2a4-4f37-af06-664c993eebfa" title="Declares a layer input to a Calibre OPCverify command file.">layer</a> command is only used to set the
+association-by-order of SVRF input layers to the names used in the
+setup file, and requires only the name alias of the layer. Other parameters
+for transmission and type are ignored. </p>
+</li>
+<li class="li" id="id658ef3af-7b6a-4eb5-9488-011a279d9782"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_Image_id5bb94d61.html#id5bb94d61-3305-4d5c-bf95-bbc777414ef5__Command_Image_id5bb94d61.xml#id5bb94d61-3305-4d5c-bf95-bbc777414ef5" title="Creates an image contour.">image</a> command uses a specified <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> command block to find its litho model
+and layer mapping information. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">It is possible
+to mix the previous and litho model file versions of the image command, but
+it is not recommended. </p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A litho model must conform to the
+following restrictions:</p>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id603ef316-1b12-492d-b0a5-9ba3ac7a4581"><p class="p">The collection of files that
+comprise a litho model is a directory that must be in the existing <a class="xref fm:HeadingOnly" href="Command_Modelpath_id3a11a692.html#id3a11a692-18f8-4a88-bdef-e4e27cea0e9a__Command_Modelpath_id3a11a692.xml#id3a11a692-18f8-4a88-bdef-e4e27cea0e9a" title="Specifies the directories to search for optical and resist models.">modelpath</a>.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idff995f87-fde6-48f0-872e-732c7452e93f"><p class="p">Can be produced by Calibre WORKbench
+(in Calibre nmModelflow, CM1 Center, <a class="xref Link" href="../../calbr_wbench_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'modelflow_v2', 'calbr_wbench_useref'); return false;">modelflow_v2</a>,
+and the Litho Model Tool) or created in a text editor.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idee15fa96-316d-446a-b992-833eb8be2cf6"><p class="p">The directory must contain a
+text file named <span class="ph FontProperty emphasis">Lithomodel</span> consisting
+of multiple configuration commands. The name of the directory containing
+the <span class="ph FontProperty emphasis">Lithomodel</span> file location
+is the argument used by the <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> command to locate this file. </p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__ideb056625-f796-4902-bd90-f8bb2cafc5dd"><p class="p">A <span class="ph FontProperty emphasis">Lithomodel</span> file
+uses the following format: </p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName Required">version 1</span> 
+<span class="keyword ParameterName Required">resist</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> 
+[image_threshold <span class="keyword ParameterName OptionalReplaceable">value</span>] 
+[etch <span class="keyword ParameterName OptionalReplaceable">filename</span>] 
+[topo <span class="keyword ParameterName OptionalReplaceable">filename</span>]  
+[flare <span class="keyword ParameterName OptionalReplaceable">filename</span> 
+[black_border <span class="keyword ParameterName OptionalReplaceable">filename</span>]] 
+[shadow_bias <span class="keyword ParameterName OptionalReplaceable">filename</span>] 
+[cdsa <span class="keyword ParameterName OptionalReplaceable">filename</span>]
+[stochastic <span class="keyword ParameterName OptionalReplaceable">filename</span>]
+[zplanes <span class="keyword ParameterName OptionalReplaceable">filename</span>]
+[{n2r_model | n2e_model} <span class="keyword ParameterName OptionalReplaceable">filename</span>]
+<span class="keyword ParameterName Required">mask</span> <span class="keyword ParameterName RequiredReplaceable">n</span> { 
+	<span class="keyword ParameterName Required">background</span> <span class="keyword ParameterName RequiredReplaceable">trans</span> 
+	<span class="keyword ParameterName Required">mask_layer</span> <span class="keyword ParameterName RequiredReplaceable">m</span> [TRANS <span class="keyword ParameterName OptionalReplaceable">transmission</span>] [CX <span class="keyword ParameterName OptionalReplaceable">val</span>] [CC <span class="keyword ParameterName OptionalReplaceable">val</span>] [ALL_ANGLES]
+			[CHOP_FULL_EDGE 0|1][CHOP_NOTCHES diag | rect | all | none]
+			[BIAS <span class="keyword ParameterName OptionalReplaceable">val</span>] [XBIAS <span class="keyword ParameterName OptionalReplaceable">xval</span>] [YBIAS <span class="keyword ParameterName OptionalReplaceable">yval</span>]  
+			[XSHIFT <span class="keyword ParameterName OptionalReplaceable">xval</span>] [YSHIFT <span class="keyword ParameterName OptionalReplaceable">yval</span>] 
+			[DDM <span class="keyword ParameterName OptionalReplaceable">filename</span>] 
+			[CATEGORY <span class="keyword ParameterName OptionalReplaceable">name</span>]
+	{<span class="keyword ParameterName Required">optical</span> <span class="keyword ParameterName RequiredReplaceable">filename</span>[focus <span class="keyword ParameterName OptionalReplaceable">f</span>nm]}+ 
+	[dose <span class="keyword ParameterName OptionalReplaceable">val</span>] 
+} </code></pre></li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd8929d7b-86d7-47c3-aac2-9404478b3c63"><span class="keyword ParameterName Required">version 1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter that specifies the version of the litho model. This must
+be the first line in the file. Currently, the only available version
+is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id32ffe845-af00-473e-b7ab-8d9a3222cf5f"><span class="keyword ParameterName Required">resist</span> <span class="keyword ParameterName RequiredReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter that specifies the resist model that is used for all exposures.
+Only one resist parameter is allowed in each <span class="ph filepath">Lithomodel</span> file. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idec0a63b1-12a9-4c5d-ac77-ebaeed0f6d07">image_threshold <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the best constant threshold value to use,
+typically derived from the calibration flow. If specified, this
+parameter will be used in the <a class="xref fm:HeadingOnly" href="Command_Image_id5bb94d61.html#id5bb94d61-3305-4d5c-bf95-bbc777414ef5__Command_Image_id5bb94d61.xml#id5bb94d61-3305-4d5c-bf95-bbc777414ef5" title="Creates an image contour.">image</a> command when “aerial model” is
+specified. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd04c488e-3b01-4c74-b0c6-f907cdfb298b">etch <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies a VEB etch model that is used for all exposures.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id39da411d-b5bb-433a-98f5-97839e35a071">topo <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies a topographical (topo) model that is used
+for all exposures. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id7744ee4d-b800-499a-90a3-16d75f860c67">flare <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies an EUV flare model that is used for all
+exposures. Intended for use with LITHO EUV OPCVERIFY commands. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id79c2cb57-fcd1-4289-91e7-408a5efe7ba1">black_border <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies an EUV black border model, which is only
+used in conjunction with a flare model.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id5cd61b7b-272a-42e9-b718-45462669dd43">shadow_bias <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies an EUV shadow bias model file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id9fcd35f4-b768-4ac6-b8a2-233248fe3a04">cdsa <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies a compact
+DSA model file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd13b879f-ce9e-4a95-8894-e6d03024e1bd">stochastic <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies a stochastic
+compact model file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id068fba5a-df54-4b10-8e3f-05b99fb10f6c">zplanes <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies a filename
+containing additional information for special imaging conditions
+used for SRAF print avoidance or 3D images for toploss models.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__ide39b964a-9a59-4069-ad14-c850003dd16b">{n2r_model | n2e_model} <span class="keyword ParameterName OptionalReplaceable">directory_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies a directory
+containing a machine learning model (n2r for resist, n2e for etch)
+to be applied during simulation. Only machine learning models supported
+by the simulation may be loaded through the litho model interface. </p>
+<p class="p">The machine learning directory should contain a <span class="ph filepath">frozen_model.pb</span> file
+and a machine learning description file named <span class="ph filepath">model.txt</span> using
+the following format:</p>
+<pre class="pre codeblock"><code>version 1
+framework tensorflow<a class="xref fm:Footnote" href="#id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idc7f77b30-9f12-453c-b4a4-3f29ce48ac2d"><sup>1</sup></a>
+filename frozen_model.pb
+mltype {N2R | N2E}</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">The “ml_model” or “nnam_model” parameters can also be used
+to specify a machine learning model, but it is preserved only for
+backwards compatibility. </p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id6af3b2f5-62df-4391-990d-4c0d06fb9939"><span class="keyword ParameterName Required">mask</span> <span class="keyword ParameterName RequiredReplaceable">n</span> ‘<span class="keyword ParameterName Required">{</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter identifying the start of a mask definition block, which
+must be enclosed in braces ({ }). At least one mask block is required
+for mask <span class="keyword ParameterName RequiredReplaceable">n</span>=0.
+If multiple mask statements are used to define multiple exposures,
+further masks must use different values for <span class="keyword ParameterName RequiredReplaceable">n</span>. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id641cccdd-8baa-4119-9459-040ef8125ab1"><span class="keyword ParameterName Required">background</span> <span class="keyword ParameterName RequiredReplaceable">trans</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter inside the mask definition block that defines the background characteristics
+for the mask. It replaces the values specified for the <a class="xref fm:HeadingOnly" href="Command_Background_id2ff6e3c6.html#id2ff6e3c6-1593-4019-9f02-6402b00ac513__Command_Background_id2ff6e3c6.xml#id2ff6e3c6-1593-4019-9f02-6402b00ac513" title="Defines the background transmission values of the mask for each exposure for a Calibre OPCverify command file.">background</a> statement in the Calibre OPCverify
+command file. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id24363fe0-4aa1-419c-b46d-1f4bd89e737c"><span class="keyword ParameterName Required">mask_layer</span> <span class="keyword ParameterName RequiredReplaceable">m</span> [TRANS <span class="keyword ParameterName OptionalReplaceable">transmission</span>] [CX <span class="keyword ParameterName OptionalReplaceable">val</span>] [CC <span class="keyword ParameterName OptionalReplaceable">val</span>] [CHOP_FULL_EDGE 0 | 1] [CHOP_NOTCHES diag | rect | all | none] [BIAS <span class="keyword ParameterName OptionalReplaceable">val</span>] [XBIAS <span class="keyword ParameterName OptionalReplaceable">xval</span>] [YBIAS <span class="keyword ParameterName OptionalReplaceable">yval</span>] [XSHIFT <span class="keyword ParameterName OptionalReplaceable">xval</span>] [YSHIFT <span class="keyword ParameterName OptionalReplaceable">yval</span>] [DDM <span class="keyword ParameterName OptionalReplaceable">filename</span>] [CATEGORY <span class="keyword ParameterName OptionalReplaceable">name</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter that specifies the characteristics of a mask layer template
+inside the mask block. It replaces the values specified for the <a class="xref fm:HeadingOnly" href="Command_Layer_idd4d8879b.html#idd4d8879b-d2a4-4f37-af06-664c993eebfa__Command_Layer_idd4d8879b.xml#idd4d8879b-d2a4-4f37-af06-664c993eebfa" title="Declares a layer input to a Calibre OPCverify command file.">layer</a> statement in the Calibre OPCverify command
+file. </p>
+<p class="p">At least one mask_layer statement
+is required (<span class="keyword ParameterName RequiredReplaceable">m</span>=0).
+Additional mask_layer statements must use incrementally larger values
+for <span class="keyword ParameterName RequiredReplaceable">m</span>,
+and are associated with layer statements inside an <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> block. </p>
+<p class="p">Each mask_layer statement
+consists of the following arguments: </p>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd344a3e4-6b39-46a0-869f-342fb4e8112e"><p class="p">TRANS <span class="keyword ParameterName OptionalReplaceable">transmission</span> —
+A keyword that specifies the transmission type of the mask_layer
+template. <span class="keyword ParameterName RequiredReplaceable">transmission</span> must
+be one of the following types: dark, clear, atten <span class="keyword ParameterName OptionalReplaceable">x</span>,
+phase90, phase270, phase180, or a <span class="keyword ParameterName OptionalReplaceable">real imaginary</span> pair.
+This argument is required except when this layer will be designated
+as an asraf layer in the <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> block, in which case it is prohibited,
+because asraf layers are holes that use the background transmission
+value.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idda0fbc57-f679-44ab-80df-fd91f36319f8"><p class="p">CX, CC — A keyword set that
+specifies convex and concave cornerchop values respectively, in
+microns, to be applied to the mask layer before using it in simulation.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For
+litho model flows, corner chopping defaults to chopping right-angled
+corners only. This differs from non-litho model flows, where the <a class="xref fm:HeadingOnly" href="Command_Cornerchop_id57a017ca.html#id57a017ca-e5ae-49b8-b180-f5a4b2717b1c__Command_Cornerchop_id57a017ca.xml#id57a017ca-e5ae-49b8-b180-f5a4b2717b1c" title="Chops convex and concave corners on polygon layers.">cornerchop</a> and the Calibre nmOPC <a class="xref Link" href="../../calbr_nmopc_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'mask_chip_corner', 'calbr_nmopc_useref'); return false;">mask_chip_corner</a> commands
+chop all corners, regardless of angle, by default.</p>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For negative SRAFs (layers of type asraf in the image_options
+block) the values of CX and CC must be swapped, because they model
+holes instead of polygon shapes. Use the original value of CC for
+CX and the value of CX for CC. </p>
+</div>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id8ac84a01-ee3c-46c6-85d3-c88515a1a1a9"><p class="p">CHOP_FULL_EDGE
+0 |1</p>
+<p class="p">A keyword that specifies the maximum size of a chopped corner.
+A value of 0 chops a corner that exceeds the half length of an edge
+on either side. A value of 1 chops a corner that exceeds the full
+length of an edge on either side.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__ide21ea21c-6248-47fd-a1b8-ebe72c524ae4"><p class="p">CHOP_NOTCHES
+diag | rect | all | none</p>
+<p class="p">A keyword that specifies how existing chopped corners and notches
+are handled before corner chop calculations.</p>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id3a04c7ab-43c7-4644-b37f-1bc7caffc3c2"><p class="p">diag —
+Existing chopped corners smaller than the CC or CX values are removed before
+chopping.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd86bebd9-cfe9-431b-ac86-28554773bc80"><p class="p">rect — Existing
+orthogonal notches at corners are removed if they have both edge
+lengths smaller than the corner chop length (CC or CX) and an area
+less than the area of the corner (CC<span class="ph FontProperty LiteralSuperScript">2</span>/2.0
+or CX<span class="ph FontProperty LiteralSuperScript">2</span>/2.0)
+multiplied by the area limit scale factor set by the user environment
+variable LITHO_CHOP_NOTCHES_AREA_LIMIT_SCALE.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The default value of LITHO_CHOP_NOTCHES_AREA_LIMIT_SCALE
+is 0.88.</p>
+</div>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id595a0c9f-db2e-4b5a-af12-ee3a1e723623"><p class="p">all — Both
+existing chopped corners and orthogonal notches are removed.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__ide65c9dc0-b275-4cd7-aa03-07e17b39cb1f"><p class="p">none — Removes
+nothing before performing corner chop calculations.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__ida55feca4-072d-4f80-aad0-4a13c5a172ab"><p class="p">BIAS, XBIAS, YBIAS, XSHIFT,
+YSHIFT — An optional keyword set that specifies geometry preprocessing
+characteristics. </p>
+<ul class="ul"><li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id0c9b96e1-753b-4020-a76f-2b1f58730e38"><p class="p">When BIAS is specified in
+the image command as well as in this litho model, Calibre OPCverify
+adds the values of BIAS together.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id0851ce1f-c509-4263-b0a3-ed8e2e921e90"><p class="p">How BIAS affects holes and
+negative SRAFs depends on the layer type. For asraf layers, positive
+values for BIAS makes the shapes defining the negative SRAFs larger.
+This means that the holes created by the asraf cutouts will also
+be larger. However, if the negative SRAFs are included as holes
+in the main feature layer, increasing the BIAS value makes the holes
+smaller. </p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id73ebc2e8-1026-49c1-a451-d9a518b26c08"><p class="p">If BIAS is specified, XBIAS
+and YBIAS are not permitted, and vice versa. </p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idac677feb-5dc2-40d8-8393-7db5ef896af1"><p class="p">If a mask_layer specifying
+XBIAS, YBIAS, XSHIFT or YSHIFT is used in an <a class="xref fm:HeadingOnly" href="Command_Image_id5bb94d61.html#id5bb94d61-3305-4d5c-bf95-bbc777414ef5__Command_Image_id5bb94d61.xml#id5bb94d61-3305-4d5c-bf95-bbc777414ef5" title="Creates an image contour.">image</a> command or in Calibre nmOPC, Calibre
+clones all rotated or reflected cell transforms.</p>
+</li>
+</ul>
+<p class="p">Geometry preprocessing before
+simulation is applied in the following order:</p>
+<p class="p">1) BIAS</p>
+<p class="p">2) XSHIFT and YSHIFT</p>
+<p class="p">3) XBIAS and YBIAS</p>
+<p class="p">4) Corner chopping</p>
+<p class="p">Large values of XSHIFT and YSHIFT
+are not permitted for performance reasons. It is recommended that
+shifts be &lt;= 1.0 microns. For larger values, use the SVRF SHIFT
+command.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id51052f93-0fa1-400b-a5f7-dcd588229261"><p class="p">DDM <span class="keyword ParameterName OptionalReplaceable">filename</span> —
+Specifies a DDM model to associate with the layer. The model must
+be located in the modelpath directory. This option cannot be used
+with an asraf layer.</p>
+</li>
+<li class="li" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idd57a4bdd-d285-4ad6-b6bc-04b8b6c75a49"><p class="p">CATEGORY <span class="keyword ParameterName OptionalReplaceable">name</span> —
+Specifies an identifying comment. This is not used by Calibre OPCverify. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id0fae8e92-57c9-46eb-bcb7-5231cca43bed"><span class="keyword ParameterName Required">optical</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> [focus <span class="keyword ParameterName OptionalReplaceable">f</span>nm]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter specifying an optical model. At least one optical parameter
+is required inside a mask block to specify the nominal focus optical
+model. A mask block can have multiple optical statements, but each
+one must have a unique focus value. If no focus parameter is specified,
+the file is treated as the nominal optical model.</p>
+<p class="p">The optional focus parameter
+is a symbolic name for an off-focus optical model, where <span class="keyword ParameterName OptionalReplaceable">f </span>is
+a positive or negative integer in nanometers. (Note the “nm” is
+a literal part of the argument, such as “-20nm”, and the decimal
+form of the integer is also accepted, such as “20.000nm”, but “20.334nm”
+is treated as 20 nanometers). </p>
+<p class="p">If focus is not specified,
+nominal focus (focus 0nm) is assumed.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__id25554ded-1337-413c-afa5-45a6e27985b9">dose <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter inside a mask block that defines the <span class="keyword ParameterName Required">relative</span> base
+dose for a mask. If not specified, 1.0 is assumed. This parameter
+is intended for multiple exposure setups, where the mask exposures
+may have different relative doses.</p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">When
+dose arguments are specified both in the litho model file and in
+the <a class="xref fm:HeadingOnly" href="Command_Image_id5bb94d61.html#id5bb94d61-3305-4d5c-bf95-bbc777414ef5__Command_Image_id5bb94d61.xml#id5bb94d61-3305-4d5c-bf95-bbc777414ef5" title="Creates an image contour.">image</a> command in Calibre OPCverify,
+or in the image or pw_condition commands in Calibre nmOPC, the actual
+dose used is derived by multiplying the litho model value by the
+dose argument in the Calibre OPCverify or Calibre nmOPC command.
+This may give unexpected results in regression testing. </p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="note note"><span class="notetitle">Note:</span> <p class="p">For an
+example of the invocation of the litho model file, see the <a class="xref fm:HeadingOnly" href="Command_ImageOptions_id34aa9db0.html#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84__Command_ImageOptions_id34aa9db0.xml#id34aa9db0-1615-4cb9-83e7-8465f8e3fe84" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a> command.</p>
+</div>
+<p class="p">The following example code shows
+a basic <span class="ph FontProperty emphasis">Lithomodel</span> and
+the corresponding OPC model directory structure.</p>
+<pre class="pre codeblock leveled"><code>% cat duv10/Lithomodel 
+version 1  
+resist    mymodel.mod 
+mask 0 { 
+background clear 
+mask_layer 0 TRANS dark CATEGORY main 
+optical   duv193_nom 
+} 
+% ls duv10 
+Lithomodel 
+duv193_nom 
+mymodel.mod </code></pre><p class="p">The following example code shows
+a complex <span class="ph FontProperty emphasis">Lithomodel</span> defining
+a double exposure (two mask statements), multiple focus values,
+and a different CTR threshold.</p>
+<pre class="pre codeblock leveled"><code>% cat duv10_2/Lithomodel 
+version 1 
+resist mymodel.mod 
+image_threshold 0.125 
+mask 0 { 
+background clear 
+mask_layer 0 TRANS atten 0.06 CATEGORY main 
+optical   duv193_nom 
+optical   duv193_m20x focus -20nm 
+optical   duv193_p20x focus  20nm 
+} 
+mask 1 {  
+background clear 
+mask_layer 0 TRANS atten 0.06 CATEGORY main 
+optical   duv193_nomy  
+optical   duv193_m20y focus -20nm 
+optical   duv193_p20y focus  20nm 
+dose 1.1 
+} </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreOpcverifyFunctionReference_ide56226ca.html" title="Calibre OPCverify is a command language that has an extensive set of setup commands and operations.">Calibre OPCverify Function Reference</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_Image_id5bb94d61.html" title="Creates an image contour.">image</a></div>
+<div><a class="link" href="../topics/Command_Background_id2ff6e3c6.html" title="Defines the background transmission values of the mask for each exposure for a Calibre OPCverify command file.">background</a></div>
+<div><a class="link" href="../topics/Command_ImageOptions_id34aa9db0.html" title="Creates a named option block containing settings for use with the image command in litho model mode.">image_options</a></div>
+<div><a class="link" href="../topics/Command_OpticalModelLoad_id11de692d.html" title="Loads an optical model. At least one optical_load_command must be present unless a litho model is loaded.">optical_model_load</a></div>
+<div><a class="link" href="../topics/Command_Layer_idd4d8879b.html" title="Declares a layer input to a Calibre OPCverify command file.">layer</a></div>
+<div><a class="link" href="../topics/Command_ResistModelLoad_id32654e67.html" title="Loads a resist model into Calibre OPCverify.">resist_model_load</a></div>
+<div><a class="link" href="../topics/FileRef_ZplanesModelFormat_id666bc4d8.html" title="The ZPlanes model describes resist 3D profiles for applications which require additional model parameters to match metrology or observed results.">ZPlanes Model Format</a></div>
+<div><a class="link" href="../topics/FileRef_EuvThroughSlitLithoModelExtension_id2b6db77d.html" title="An EUV through-slit litho model is an extended form of a litho model that supports multiple DDM and optical models (referred to as sub-litho models) at multiple x-coordinates in the EUV field.">EUV Through-Slit Litho Model Extension</a></div></div>
+</div></div>
+<div class="fn"><a id="id55954ab1-93c0-4cda-b5b9-4f40ffb7c049__idc7f77b30-9f12-453c-b4a4-3f29ce48ac2d"><sup>1</sup></a>  <span class="ph">TensorFlow, the TensorFlow logo, and any related marks are trademarks of Google Inc.</span></div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcv_useref"
+                DocTitle = "Calibre® OPCverify™ User’s and Reference Manual"
+                PageTitle = "Litho Model Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_LithoModelFormat_id55954ab1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCverify™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

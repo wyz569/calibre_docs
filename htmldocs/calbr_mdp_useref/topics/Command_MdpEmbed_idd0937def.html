@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="MDP EMBED" />
+<meta name="abstract" content="SVRF mask data preparation command for section-based processing." />
+<meta name="description" content="SVRF mask data preparation command for section-based processing." />
+<meta name="DC.subject" content="MDP EMBED, MDP EMBED" />
+<meta name="keywords" content="MDP EMBED, MDP EMBED" />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd0937def-f989-49bc-9f20-7ee1285ce78b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>MDP EMBED</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="MDP EMBED" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idd0937def-f989-49bc-9f20-7ee1285ce78b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">MDP EMBED</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><span class="shortdesc">SVRF mask
+data preparation command for section-based processing.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">MDP EMBED</span> <span class="keyword ParameterName RequiredReplaceable">input_layer</span> [...<span class="keyword ParameterName OptionalReplaceable">input_layerN</span>] [MAP <span class="keyword ParameterName OptionalReplaceable">output_layer</span> [EDGE]] <br />
+{<span class="keyword ParameterName Required">FILE</span> <span class="keyword ParameterName RequiredReplaceable">litho_file_block </span>| <span class="keyword ParameterName Required"><br />
+  FILE</span>‘<span class="keyword ParameterName Required">[</span>’ <br />
+   [section_size <span class="keyword ParameterName OptionalReplaceable">sec_value</span>]<br />
+<span class="keyword ParameterName Required">   maximum_output_count </span><span class="keyword ParameterName RequiredReplaceable">count<br />
+</span><span class="keyword ParameterName Required">   </span>[svrf_range<span class="keyword ParameterName RequiredReplaceable"> </span><span class="keyword ParameterName OptionalReplaceable">r</span>]<br />
+<br />
+   [vboasis_path <span class="keyword ParameterName OptionalReplaceable">filepath</span> [-noCheck] [-fastindex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]]] <br />
+   [svrf_layer_name {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> |<br />
+         {<span class="keyword ParameterName OptionalReplaceable">layer_name oasis_layer_number </span>[<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}]<br />
+   [vboasis_precision_multiplier {<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}]<br />
+   [vboasis_layout_magnify <span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>]]<br />
+   [vboasis_injection [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1] [-force]]<br />
+<br />
+   [vboasis_path2 <span class="keyword ParameterName OptionalReplaceable">filepath</span> [-noCheck] [-fastindex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]]] <br />
+   [svrf_layer_name2 {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | <br />
+         {<span class="keyword ParameterName OptionalReplaceable">layer_name oasis_layer_number </span>[<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}]<br />
+   [vboasis_precision_multiplier2 {<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}]<br />
+   [vboasis_layout_magnify2 <span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>]]<br />
+   [vboasis_injection2 [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1]]<br />
+<br />
+   [vboasis_path3 <span class="keyword ParameterName OptionalReplaceable">filepath</span> [-noCheck] [-fastindex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]]] <br />
+   [svrf_layer_name3 {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | <br />
+         {<span class="keyword ParameterName OptionalReplaceable">layer_name oasis_layer_number </span>[<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}]<br />
+   [vboasis_precision_multiplier3{<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}]<br />
+   [vboasis_layout_magnify3 <span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>]]<br />
+   [vboasis_injection3 [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1]]<br />
+<br />
+   [vboasis_path4 <span class="keyword ParameterName OptionalReplaceable">filepath</span> [-noCheck] [-fastindex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]]] <br />
+   [svrf_layer_name4 {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | <br />
+         {<span class="keyword ParameterName OptionalReplaceable">layer_name oasis_layer_number </span>[<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}]<br />
+   [vboasis_precision_multiplier4 {<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}]<br />
+   [vboasis_layout_magnify4 <span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>]]<br />
+   [vboasis_injection4 [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1]]<br />
+<br />
+   jobdeck[2] <span class="keyword ParameterName OptionalReplaceable">path</span>[-ejobdeck_clipping_severity {1 | 2}] [-ejobdeck_pattern_suffix <span class="keyword ParameterName OptionalReplaceable">suffix</span>] <br />
+         [-data_search_path <span class="keyword ParameterName OptionalReplaceable">path</span>]<br />
+   [data_extent {<span class="keyword ParameterName OptionalDefault">HDB</span> | FILE | FILE2 | FILE3 | FILE4| DIRECTIN}]<br />
+   [index_options [-topcell <span class="keyword ParameterName OptionalReplaceable">cellname</span>] [-parallelCblocks]]<br />
+   [oasis_output_path {-RDB | [-perSection] <span class="keyword ParameterName OptionalReplaceable">path</span> | -INDEX [NOVIEW]}]<br />
+   [oasis_output_layers {<span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">datatype</span>] | {<span class="keyword ParameterName OptionalReplaceable">map_name</span> <span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">datatype</span>]}...}]<br />
+   [oasis_output_primary [HDB | DIRECTIN | FILE | -explicit <span class="keyword ParameterName OptionalReplaceable">topcell_name</span>]<br />
+   [oasis_output_options [-cblock] [-maximum_vertex {<span class="keyword ParameterName OptionalReplaceable">mv </span>| ALL}] [-precision <span class="keyword ParameterName OptionalReplaceable">val</span>] <br />
+         [-magnify <span class="keyword ParameterName OptionalReplaceable">val</span>]]<br />
+   [direct_FS_access [INPUT] [INTERMEDIATE]]<br />
+   [mrc_only {<span class="keyword ParameterName OptionalDefault">0</span> | 1}]<br />
+   [mdp_remote_tmp <span class="keyword ParameterName OptionalReplaceableDefault">dir</span>]<br />
+   [&lt;SVRFSTART&gt;<br />
+          <span class="keyword ParameterName OptionalReplaceable">svrf_statements<br />
+</span>   &lt;SVRFEND&gt;]<br />
+  ‘<span class="keyword ParameterName Required">]</span>’<br />
+}</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The MDP EMBED command provides
+section-based processing for SVRF commands.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idf9ac41ad-731f-4559-a30d-7fb3096b6fbe"><span class="keyword ParameterName RequiredReplaceable">input_layer</span>[...<span class="keyword ParameterName OptionalReplaceable">input_layerN</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies the name of an original or derived polygon
+layer(s). This is the layer that contains the data to which Calibre
+applies the embedded SVRF functionality. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id8e1726b6-4155-4852-92ac-f3272385031e">MAP <span class="keyword ParameterName OptionalReplaceable">output_layer </span>[EDGE]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies
+the output layer. When not specified, the one output layer in the
+embedded SVRF statement group is used for the output of the MDP
+EMBED operator. This parameter is necessary when there are multiple
+output layers, in which case there must be exactly one MDP EMBED
+statement for each output layer. By default, the MAP <span class="keyword ParameterName OptionalReplaceable">output_layer</span> string
+is used as the output layer name in the OASIS direct output files (although
+the -perSection mode does not support layer names). All layers in
+the output file contain layer names that match the MAP <span class="keyword ParameterName OptionalReplaceable">output_layer </span>string.
+If the output is an edge-type layer, then the EDGE keyword must
+also be used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id5a7d777b-3d23-487c-8eb5-5dba6085e8ff"><span class="keyword ParameterName Required">FILE</span><span class="keyword ParameterName RequiredReplaceable"> litho_file_block</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies that the map size parameters are contained
+in a reusable parameter block defined using the LITHO FILE SVRF
+statement.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id3b45a843-7d10-4c8a-9a01-2e703e8cf2c7"><span class="keyword ParameterName Required">FILE</span>‘<span class="keyword ParameterName Required">[</span>’ <span class="keyword ParameterName Optional">...</span>‘<span class="keyword ParameterName Required">]</span>’<span class="keyword ParameterName Required"></span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+keyword that specifies that the map size parameters are contained
+inline within the square brackets ([ ]). Square brackets must surround
+all parameters appearing after the keyword FILE. In addition, everything
+within the square brackets must comply with the following requirements:</p>
+<ul class="ul"><li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc01f39c7-3fa7-4fbd-b3f3-48c45bd828ea"><p class="p">Keywords and parameters must
+be on lines strictly between the left and right brackets (that is,
+cannot be on the same line).</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__ida866517d-3851-4b57-8f69-6e4d0fe60ce3"><p class="p">You can include comments within
+the section of the operation set off by square brackets, if you
+begin the comments with a double forward slash (//). This comment character
+indicates that all text until the next newline is comment text.
+The “/* */” style of comments are not permitted.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__ida5251e92-9e31-4436-9721-d37c94182414">section_size <span class="keyword ParameterName OptionalReplaceable">sec_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies the desired size (height and width) of the
+square section in user units. No implication is made between this
+parameter and the location of “boundaries” in embedded SVRF. The
+default is 250 microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id58ea0d5f-909c-4c28-83d7-57b56bc86632"><span class="keyword ParameterName Required">maximum_output_count</span><span class="keyword ParameterName OptionalReplaceable"> count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies the limit of number shapes for output from
+MDP EMBED. The default is to output all shapes (recommended). The
+default is all.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id7e9e2c8d-ae2b-4964-8a57-82f1ee2ddc2f">svrf_range <span class="keyword ParameterName OptionalReplaceable">r</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies the buffer size for section processing.
+The default is determined automatically and is specified in user
+units.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__iddf7959dc-d516-40f7-bfdf-227652282d53">vboasis_path[2 | 3 | 4] <span class="keyword ParameterName OptionalReplaceable">filepath</span> [-noCheck] [-fastindex [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]] </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that sllows MDP EMBED to take input from an OASIS DDE file. The
+data is placed on an SVRF layer named by the next keyword. To use
+this functionality, the Calibre database must be non-MCPO, or a
+run time error results. </p>
+<p class="p">The embedded SVRF is computed
+within the extent of the Calibre top cell, so the OASIS top cell
+extent must be explicitly assigned, either through the dummy layer
+extent called from the HDB or by using the data_extent keyword.
+A run time warning is issued if there is no overlap.</p>
+<p class="p">If vboasis_path2, vboasis_path3,
+and vboasis_path4 are specified (in conjunction with vboasis_path),
+this means that a second, third, and fourth OASIS input are needed. </p>
+<p class="p">The -noCheck option can be specified
+when checks on the input OASIS DDE layout file are not possible
+because it has not been generated. This would typically happen when
+the file is expected to be generated by another SVRF command in
+the same rule file and thus is not available during parsing for
+checking purpose. When using -noCheck, use extra care when specifying
+the file path and associated PRECISION values to avoid errors that
+are encountered much later.</p>
+<p class="p">The -fastIndex keyword enables a “fast mode” of index generation
+if the input file is an OASIS.MASK file. The file created in fast
+mode is valid only if the input OASIS.MASK file contains a single
+layer-datatype pair. Fast mode index generation should be avoided when
+there are multiple layers or datatypes in the input. By default,
+fast mode index generation assumes layer-datatype of 0-0. You can
+override these values by specifying layer-datatype pair as an argument
+to -fastIndex option.</p>
+<p class="p">Several restrictions and caveats
+apply to the use of this alternate input method, documented in the
+Direct OASIS Input arguments described in “<a class="xref fm:HeadingAndPage" href="Command_GlobalCalibreFractureArguments_id19a28c69.html#id19a28c69-e162-415f-a099-033f38e5c913__Command_GlobalCalibreFractureArguments_id19a28c69.xml#id19a28c69-e162-415f-a099-033f38e5c913" title="There is a common list of arguments that apply to all FRACTURE formats.">Global Calibre FRACTURE Arguments</a>”.</p>
+<p class="p">Compressed layouts (those ending in the extension .gz) are not
+supported by vboasis_path.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id740ecbc5-7d5c-4b76-9895-b79f0c6a55d0">svrf_layer_name[2 | 3 | 4]{<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> <span class="keyword ParameterName OptionalReplaceable">oasis_layer_number</span> [<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies the names, numbers, and optional data types
+of the embedded SVRF layers corresponding to OASIS DDE geometry.
+If embedded SVRF is used with the vboasis_path keyword, both HDB
+and OASIS DDE data may be input to the embedded operation. The SVRF
+layer names for the OASIS DDE layers must be specified with the
+keyword. For a single layer, the <span class="keyword ParameterName OptionalReplaceable">layer_name</span> only
+is used. For multiple layers, each name and corresponding layer
+number in the OASIS file must be specified.When OASIS DDE input
+is used with HDB input, the PRECISION settings of the HDB and OASIS
+DDE file must match.</p>
+<p class="p">The svrf_layer_name2 keyword
+is used to map layers read from vboasis_path2, svrf_layer_name3
+maps layers from vboasis_path3, and svrf_layer_name4 maps layers
+from vboasis_path4.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc7283d87-e794-49e5-a710-62c3d4136b20">vboasis_precision_multiplier[2 | 3 | 4] {<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that multiplies the PRECISION value by the supplied number <span class="keyword ParameterName OptionalReplaceable">n</span>,
+and then scale the data from the file by the same amount to retain
+the same absolute scale as the original PRECISION setting. The default
+value for <span class="keyword ParameterName OptionalReplaceable">n</span> is
+1. The /<span class="keyword ParameterName OptionalReplaceable">d</span> is
+used to express a rational number as a fraction (for example, a
+multiplier of 1.5x is declared as “3/2”).</p>
+<p class="p">There may be occasions when
+you want to re-interpret the PRECISION setting of the OASIS DDE
+file as specified using the vboasis_path keyword. For instance,
+you may want a larger PRECISION setting to allow finer shape modifications
+in embedded SVRF code.</p>
+<p class="p">If AUTO is supplied instead
+of a ratio, Calibre attempts to infer the correct ratio but fails
+if it is not a rational number, or if the combination of inferred
+numerator and denominator would cause arithmetic overflow. This
+keyword requires the use of embedded SVRF.</p>
+<p class="p">If vboasis_precision_multiplier2,
+vboasis_precision_multiplier3, and vboasis_precision_multiplier4
+are specified (in conjunction with vboasis_precision_multiplier),
+the PRECISION scale is applied to the second OASIS input specified
+by vboasis_path2, vboasis_path3, and vboasis_path4, respectively.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc3a8208c-c036-461d-972e-d1c1a1c978f2">vboasis_layout_magnify[2 | 3 | 4] <span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable">d</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that aligns the OASIS-direct-input coordinate system with
+the HDB coordinate system by adjusting its scale. The scale is specified
+as the numerator and denominator of a rational number.</p>
+<p class="p">This keyword is primarily used
+to apply embedded SVRF at the scale of the mask, but after all inverse
+transforms have been applied to align the MDP file inputs with the
+HDB coordinate system. In this case, scale up the HDB coordinate
+system using LAYOUT MAGNIFY and use this keyword to apply the same
+scale to the direct-input database.</p>
+<p class="p">If vboasis_layout_magnify2,
+vboasis_layout_magnify3, and vboasis_layout_magnify4 are specified
+(in conjunction vboasis_layout_magnify), the scale is applied to
+the second, third, and fourth OASIS input specified by vboasis_path2,
+vboasis_path3, and vboasis_path4, respectively.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id95f91a36-fc89-4b55-b7a2-bdb458f2562a">vboasis_injection[2 | 3 | 4] [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span>| -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1] [-force]</dt>
+<dd class="dd ArgumentDescription"><p class="p">The OASIS DDE file specified
+using vboasis_path may contain cells that have large amounts of
+data and have a large extent. These large cells degrade performance
+in section mode processing. To overcome this issue, cells can be
+partitioned into bins. </p>
+<p class="p">The sizes of the cells that
+are binned and the size of each bin (<span class="keyword ParameterName OptionalReplaceable">bin_size</span>)
+is determined automatically by default when vboasis_injection is
+specified. You can control the bin size by providing a size multiplier
+using the option -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier </span>(the
+default value is 1.0).</p>
+<p class="p">Alternately, the <span class="keyword ParameterName OptionalReplaceable">bin_size </span>can
+be explicitly specified using the option -size <span class="keyword ParameterName OptionalReplaceable">bin_size </span>in microns.
+Any cell whose extent has width or height more the <span class="keyword ParameterName OptionalReplaceable">bin_size</span> is
+considered for binning.</p>
+<p class="p">The vboasis_injection option
+creates temporary data which may be reused if it is preserved using
+the -preserve option (the default is 0). Use the -force option to
+ignore any existing data.</p>
+<p class="p">The temporary data is read or
+written in a directory named <span class="keyword ParameterName OptionalReplaceable">file_path</span>.lcb
+where <span class="keyword ParameterName OptionalReplaceable">file_path </span>is argument
+specified to vboasis_path. The location of this directory is the
+same as that of file_path. This behavior can be changed by specifying
+a colon-separated list of directories using the UNIX environment
+variable MDPIndexSearchPath (refer to the section “Setting the Location
+of the Index File” in the <a class="xref LinkItalic" href="../../calbr_mdpview_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_mdpview_useref'); return false;">Calibre MDPview User’s and Reference Manual</a> for full details). The
+directories are searched in the order they are listed for reading
+or writing to the temporary directory.</p>
+<p class="p">If job deck input is used, the
+options apply to all OASIS files referenced by the job deck. </p>
+<p class="p">If vboasis_injection2, vboasis_injection3,
+and vboasis_injection 4 are specified (in conjunction with vboasis_injection),
+the options apply to the second, third, and fourth OASIS input files
+specified by vboasis_path2, vboasis_path3, and vboasis_path4, respectively.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id42b6c53c-087e-4edb-bf26-8f6ba45040b4">jobdeck[2] <span class="keyword ParameterName OptionalReplaceable">path</span>[-ejobdeck_clipping_severity {1 | 2}] [-ejobdeck_pattern_suffix <span class="keyword ParameterName OptionalReplaceable">suffix</span>] [-data_search_path <span class="keyword ParameterName OptionalReplaceable">path</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this optional
+argument set is specified, input is taken directly from a MEBES-extended job
+deck. Such job decks may reference MEBES or OASIS chip files. The
+following options are available for job deck loading through the
+viewer: </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc8bd73d8-be16-452b-a00c-c111112c142d"><p class="p Opt">-ejobdeck_clipping_severity
+{1 | 2} — Allows the display of data larger than the described extent
+in the job deck. By default, if Calibre encounters data larger than
+the extent, it generates an error and does not load the job deck.
+If set to 1, Calibre produces a warning message instead and the
+job deck is loaded. If set to 2, Calibre ignores the condition entirely
+and loads the job deck.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id06a13dde-a120-4bcd-8e44-5f6b2150aa29"><p class="p Opt">-ejobdeck_pattern_suffix <span class="keyword ParameterName OptionalReplaceable">suffix </span>—
+Allows pattern files with different nomenclature (such as the OASIS
+.oas extension) to be read in MEBES extended job decks.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idfdb96f6e-06ea-4307-b332-f75c13e6c76d"><p class="p Opt">-data_search_path <span class="keyword ParameterName OptionalReplaceable">path — </span>Specifies
+the path for a data search.</p>
+</li>
+</ul>
+<p class="p">The
+PRECISION setting for the job deck is set to the HDB PRECISION setting.
+The keywords jobdeck and jobdeck2 are mutually exclusive with several
+other direct-input keywords:</p>
+<ul class="ul"><li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idda002277-4b20-43e1-8f7d-616129a96de6"><p class="p">vboasis_path</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc77fda4d-3040-4205-9628-e48a6aa9efb2"><p class="p">vboasis_precision_multiplier</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idcfda8d4e-fe66-47ed-a2ec-929036270235"><p class="p">vboasis_layout_magnify</p>
+</li>
+</ul>
+<p class="p">This keyword also interacts
+with several other MDP EMBED keywords:</p>
+<ul class="ul"><li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id68c1c52c-a588-4d80-99a2-6a3beae8e2c2"><p class="p">svrf_layer_name</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id51d9d977-6c71-46ea-9f01-c7a9541ef327"><p class="p">data_extent</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id90ce9c66-f486-4474-8389-5afa51c9782c"><p class="p">vboasis_injection</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idb9a0a786-c664-43c2-a8fa-c8287a472b3d"><p class="p">direct_FS_access</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id5dca7ef0-26ea-4b0a-88a2-77b7efdccafa">data_extent {<span class="keyword ParameterName OptionalDefault">HDB</span> | FILE | FILE2 | FILE3 | FILE4 | DIRECTIN}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that, when vboasis_path option is specified, uses the extent
+specified from one of the following options:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__ida5145b7c-7184-45b1-9aaf-e4d061b54e7f"><p class="p Opt">HDB
+— Use the cell extent from the hierarchical database (refer to “<a class="xref fm:HeadingAndPage" href="Contain_EmbedSvrfCommandsInMdpEmbedStatement_idab02769f.html#idab02769f-f65c-4413-ad3f-dd821f143053__Contain_EmbedSvrfCommandsInMdpEmbedStatement_idab02769f.xml#idab02769f-f65c-4413-ad3f-dd821f143053" title="The MDP EMBED command provides section-based processing for some SVRF commands, essentially providing section-based DRC capability.">Embed SVRF Commands in an MDP EMBED Statement</a>” for further details on cell extents
+in HDBs). This is the default value.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id8ef25759-741b-4bcf-944e-aff585fcf22e"><p class="p Opt">FILE
+— Use the extent from vboasis_path.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id5c377b30-17d3-4072-be4e-3440b389b2f5"><p class="p Opt">FILE2
+— Use the extent from vboasis_path2.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id2dc9719b-054b-4318-9163-bf33f88a9d2b"><p class="p Opt">FILE3
+— Use the extent from vboasis_path3.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id1740f572-cc3c-4fd5-91aa-a399fef9ec1f"><p class="p Opt">FILE4
+— Use the extent from vboasis_path4.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id70ef00ab-e771-4c4d-9994-f479e56caaa6"><p class="p Opt">DIRECTIN
+— Use the extent of the logical OR of all direct inputs (vboasis_path[2]).</p>
+</li>
+</ul>
+<p class="p">If you specify data_extent FILE or data_extent DIRECTIN, the
+extent is defined as (0,0)-(152400, 152400) um which is the full
+mask extent. If you only need to verify a smaller region of the
+mask, specify data_extent HDB and define the desired extent using
+an SVRF POLYGON statement to define the exact extent desired.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id7d80888b-5527-4be9-ad63-446c79065031">index_options [-topcell <span class="keyword ParameterName OptionalReplaceable">cellname</span>] [-parallelCblocks]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+that sets OASIS input module and indexing options. The -topcell option
+specifies the top cell name for indexing. The -parallelCblocks keyword
+enables parallel indexing for non-strict CBLOCK OASIS data. The
+cell cblocks is parsed in parallel during sequential parsing of
+non-strict OASIS files for faster index creation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id1a7801a0-b1b9-44ac-9001-1f033f1e9e5c">oasis_output_path {-RDB | [-perSection] <span class="keyword ParameterName OptionalReplaceable">path</span> | -INDEX [NOVIEW]}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that diverts output geometry from the HDB to one or more
+new OASIS files. This creates a single OASIS file located at <span class="keyword ParameterName OptionalReplaceable">path</span>,
+unless -perSection is specified, in which case the output for each
+section is placed into a separate, syntactically complete OASIS
+file and no full result OASIS is created.</p>
+<p class="p">The -RDB keyword takes output
+file information from the DRC CHECK MAP statements in the embedded
+rule file; only a subset of DRC CHECK MAP functionality is supported. Specifically:</p>
+<ul class="ul"><li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id47028c1e-aa4c-437f-955e-d63c3511d7eb"><p class="p">Only OASIS type is allowed.</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id29aa26fb-63ca-4bcb-931e-25eba1998695"><p class="p">The filename must be explicitly
+stated.</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idd1cfc313-68e4-475a-bd89-e29ef59ffb60"><p class="p">The AREF, AUTOREF, MAXIMUM
+VERTEX, MAXIMUM RESULTS, TEXTTAG, PREFIX NAME, APPEND NAME, and
+PROPERTIES features are not currently supported.</p>
+</li>
+</ul>
+<p class="p">All output files should be on
+a high-performance file system. The OASIS files have a two-level
+hierarchy in which the MDP EMBED sections form uniquely placed cells.
+The PRECISION setting of the OASIS file matches the PRECISION setting
+of the HDB. </p>
+<p class="p">The optional -INDEX [NOVIEW] keywords specify that an OASIS-type
+DDO database created by this command is to be indexed. The NOVIEW
+option generates the index faster in exchange for a slower drawing
+speed in the viewer.</p>
+<p class="p">The following example illustrates
+using -RDB to create multiple DDO OASIS files for different checks
+(enabling limited DRC CHECK MAP functionality for OASIS files only):</p>
+<pre class="pre codeblock leveled"><code>LITHO FILE eMRC [ 
+	oasis_output_path <span class="keyword ParameterName Required">-</span><span class="keyword ParameterName Required">RDB</span> 
+ 
+	&lt;SVRFSTART&gt; 
+		mrc_1 { EXT inp_1 inp_2 &lt; 0.05 REGION } \
+			<span class="keyword ParameterName Required">DRC CHECK MAP</span> mrc_1  OASIS 0 “output/mrc_err.oas” 
+		mrc_2 { INT inp_1 &lt; 0.05 REGION }
+			<span class="keyword ParameterName Required">DRC CHECK MAP</span> mrc_2  OASIS 1  “output/mrc_err.oas” \ 
+		sized { SIZE inp_1 BY 0.05 } \
+			<span class="keyword ParameterName Required">DRC CHECK MAP</span> sized   OASIS 0  “output/sized.oas” 
+	&lt;SVRFEND&gt; 
+] 
+ </code></pre><p class="p">The following example illustrates
+using -perSection to create multiple DDO files for each section:</p>
+<pre class="pre codeblock leveled"><code>LITHO FILE eMRC [ 	 
+	oasis_output_path -<span class="keyword ParameterName Required">perSection</span> output/ddo_files 
+	// This creates a directory “output/ddo_files” with 
+	// s_#.oas file for each section 
+ 
+	&lt;SVRFSTART&gt;	 
+		sized { SIZE inp_1 BY 0.05 } 
+	&lt;SVRFEND&gt; 
+	] 
+ </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id6404ed81-c599-4f58-a3d3-1caff8eb2115">oasis_output_layers {<span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">datatype</span>] | {<span class="keyword ParameterName OptionalReplaceable">map_name</span><span class="keyword ParameterName OptionalReplaceable">layer </span>[<span class="keyword ParameterName OptionalReplaceable">datatype</span>]}...}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies the OASIS layer and data type numbers for
+SVRF layers written to an OASIS file. This keyword requires specification
+of the oasis_output_path keyword. There are two possible forms:</p>
+<ul class="ul"><li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id267eab21-f6c5-4c75-aebd-7da2601aaadf"><p class="p">The first form is used if
+the embedded rule deck produces only a single layer:</p>
+<p class="p">oasis_output_layers <span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">datatype</span>]</p>
+<p class="p">where <span class="keyword ParameterName OptionalReplaceable">layer</span> is
+the layer name and <span class="keyword ParameterName OptionalReplaceable">datatype </span>is
+the OASIS data type.</p>
+</li>
+<li class="li" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id0e59f915-0fe0-49a4-afc9-abbfb2210c97"><p class="p">The second form is used for
+multiple layers and requires the use of the MAP secondary keyword
+in the MDP EMBED SVRF calls:</p>
+<p class="p">oasis_output_layers {<span class="keyword ParameterName OptionalReplaceable">map_name</span><span class="keyword ParameterName OptionalReplaceable">layer </span>[<span class="keyword ParameterName OptionalReplaceable">datatype</span>]}...</p>
+<p class="p">The map string in the SVRF call
+must match the <span class="keyword ParameterName OptionalReplaceable">map_name</span> value
+in this keyword specification. All output layers must be mapped
+using this keyword.</p>
+</li>
+</ul>
+<p class="p">When oasis_output_layers is
+specified in section-based processing, additional information appears
+in the transcript, reporting the DDO per-rule output shape counts.
+For example:</p>
+<pre class="pre codeblock leveled"><code>DIRECT OUTPUT RuleCheck flat1::&lt;1&gt; COMPLETED. Number of Results = 3375 (3375) 
+DIRECT OUTPUT RuleCheck flat2::&lt;1&gt; COMPLETED. Number of Results = 3375 (3375) </code></pre><p class="p">The oasis_output_path keyword supports multiple MDP EMBED blocks
+writing to a single OASIS file. If multiple outputs are written
+to a single OASIS file, then the outputs from all the blocks are
+added to the OASIS file. For example: </p>
+<pre class="pre codeblock"><code>LITHO FILE ESVRF_1 [
+//maximum_output_count 1000000000
+//DDO
+    oasis_output_path "./out.oas"
+    oasis_output_primary HDB
+    oasis_output_options -cblock -maximum_vertex ALL
+    oasis_output_layers A_out 1 0 B_out 2 0 D_out 4 0
+]
+A_out = MDP EMBED A_in B_in FILE ESVRF_1 MAP A_out
+B_out = MDP EMBED A_in B_in FILE ESVRF_1 MAP B_out
+D_out = MDP EMBED A_in B_in FILE ESVRF_1 MAP D_out
+
+LITHO FILE ESVRF_2 [
+//DDO
+    oasis_output_path "./out.oas"
+    oasis_output_primary HDB
+    oasis_output_options -cblock -maximum_vertex ALL
+    oasis_output_layers C_out 3 0 E_out 5 0 F_out 6 0]
+C_out = MDP EMBED C_in E_in FILE ESVRF_1 MAP C_out
+E_out = MDP EMBED C_in E_in FILE ESVRF_1 MAP E_out
+F_out = MDP EMBED C_in E_in FILE ESVRF_1 MAP D_out
+</code></pre><p class="p">Each of these separate blocks are written to a single OASIS file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id4138bba3-cf18-485f-81db-f23daa077dcd">oasis_output_primary [HDB | DIRECTIN | FILE | -explicit <span class="keyword ParameterName OptionalReplaceable">topcell_name</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies the source of the top cell name in OASIS
+output. The values are as follows:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id63165d36-50be-45c3-a5bc-248c39872a63"><p class="p Opt">HDB
+— The topcell name from the HDB as the topcell name of OASIS output
+is used.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idbff8fc0b-7b71-469a-87eb-a11db0dd0c28"><p class="p Opt">DIRECTIN
+or FILE — The topcell name from the vboasis_path input is used.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id14e4a4af-0e20-49ff-8078-20a6e7071c17"><p class="p Opt">-explicit <span class="keyword ParameterName OptionalReplaceable">topcell_name</span>—
+The names specified by <span class="keyword ParameterName OptionalReplaceable">topcell_name</span>. </p>
+</li>
+</ul>
+<p class="p">The default setting for oasis_output_primary
+is -explicit top.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id5d8a824a-31e1-4cd4-be2c-ba41870f1660">oasis_output_options [-cblock] [-maximum_vertex {<span class="keyword ParameterName OptionalReplaceable">mv</span>| ALL}] [-precision <span class="keyword ParameterName OptionalReplaceable">val</span>] [-magnify <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies options for OASIS output. With the -cblock
+option, the OASIS output is compressed using CBLOCK record. The
+use of cblock can reduce the output file size. </p>
+<p class="p">The maximum number of vertices
+(<span class="keyword ParameterName OptionalReplaceable">mv</span>)
+in output polygons can be limited using the -maximum_vertex parameter.
+The default is 8192 and the symbolic value ALL corresponds to the
+maximum setting of 4294967295.</p>
+<p class="p">The -precision keyword specifies the precision of the OASIS output.
+The -magnify keyword is used to align the OASIS output coordinate
+system with the HDB coordinate system.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id1b2bbee6-9df6-4e31-80fd-fbab2432f5fe">direct_FS_access [INPUT] [INTERMEDIATE]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that permits remote processes in a Calibre MTflex invocation
+to directly access a file system.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id4fea595f-e21d-4969-b476-257a03fecf87"><p class="p Opt">INPUT
+— Causes remote processes to directly access the argument to vboasis_path (including
+adjunct data such as injection files) and any VSB12 and OASIS files
+that are arguments to input_file.</p>
+</li>
+<li class="li ArgOption" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__ide858121e-18a8-4ebe-acae-7839d2e2a0b6"><p class="p Opt">INTERMEDIATE
+— Causes direct writing of temporary intermediate files relating
+to use of the oasis_output_path keyword.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id77037e64-71e2-4fee-9735-41ef0009946f">mrc_only {<span class="keyword ParameterName OptionalDefault">0</span> | 1}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that, when set to 1,
+reduces memory usage particularly when using small (100 um or less)
+section sizes. This keyword is used only for MRC flows that use MDP
+EMBED where the output is written to file. The default setting is
+0 (off).</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">This keyword deactivates an internal setup code that outputs
+MDP EMBED data into the HDB. Without this setup code, the data is
+placed flat into the HDB at the top level. This does not affect
+MRC flows as there are typically very small amounts of output data produced.
+However, if the output of MDP EMBED is used in a subsequent SVRF
+block in the same rule deck, then the flat data can degrade the
+performance of those SVRF blocks.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id41fc3604-5946-4632-a3e3-61e1dc269e41">mdp_remote_tmp</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that sets the temporary
+directory for Calibre MTflex processes. A single path is used for
+all computers used by the invocation of Calibre. The path must be visible
+to all computers or run time exceptions will occur. The default
+value is <span class="ph filepath">/tmp</span>.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">This directory should be on a file system local to each
+computer. If this is not done, it will introduce system performance
+issues.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idc3cb8936-7603-403a-8dde-793cdb1d7beb">&lt;SVRFSTART&gt;</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword indicating
+the beginning of the embedded SVRF statement group.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id5461dea2-6aaa-433c-a767-e7d40accb04f"><span class="keyword ParameterName OptionalReplaceable">svrf_statements</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Each SVRF statement must be
+on a line of its own. Calibre truncates any SVRF line to 1023 characters
+if you exceed this value.</p>
+<p class="p">You can specify multiple rule
+checks within the embedded SVRF statement group. The output of these
+rule checks must only be polygon data, not edge or error data. Refer
+to the <a class="xref LinkItalic" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_ver_user'); return false;">Calibre Verification User’s Manual</a> for more information about rule
+checks.</p>
+<p class="p">You cannot specify left- or
+right-brackets within the embedded SVRF statement group. Therefore,
+any occurrence of brackets must be replaced as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__id2aad0d6f-a611-45ef-ad9c-f029e71a9a0a" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Brackets
+in Embedded SVRF</span></caption><colgroup><col style="width:2.438in" /><col style="width:2.438in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Left
+bracket ( [ )</p>
+</td>
+<td class="entry cell-norowborder default-entry" style="vertical-align:top;"><p class="p">&lt;LB&gt; </p>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p">Right bracket
+( ] )</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">&lt;RB&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The PRECISION setting of the
+embedded SVRF statements must match that of the Calibre rule deck
+containing the PRECISION statement.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd0937def-f989-49bc-9f20-7ee1285ce78b__idb6379036-fbaa-451e-8181-bc7b0162262c">&lt;SVRFEND&gt;</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword indicating
+the end of the embedded SVRF statement group. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The left
+and right angle brackets (&lt; &gt;) for &lt;SVRFSTART&gt;, &lt;SVRFEND&gt;,
+&lt;LB&gt;, and &lt;RB&gt; are literal and required.</p>
+</div>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="General_SvrfCommandSupportInEmbeddedSvrf_iddaf01e43.html#iddaf01e43-68d4-4c0e-8bd5-8c140171b688__General_SvrfCommandSupportInEmbeddedSvrf_iddaf01e43.xml#iddaf01e43-68d4-4c0e-8bd5-8c140171b688" title="There is a subset of SVRF operations that can be embedded into a FRACTURE, MDPVERIFY, MDP EMBED, or DENSITY CONVOLVE statement.">SVRF Command Support in Embedded SVRF</a>” for
+a list of SVRF operations that are supported in embedded SVRF statements.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following is a basic example of
+MDP EMBED:</p>
+<p class="p"><img class="image" height="311" src="../graphics/embedded_svrf7.png" width="468" /></p>
+<p class="p">The following shows an example of
+MDP EMBED with two input OASIS files:</p>
+<pre class="pre codeblock leveled"><code>LAYOUT PATH "dummy.oas" mag auto 
+LAYOUT PRIMARY "*" 
+LAYOUT SYSTEM OASIS 
+PRECISION 4000 
+ 
+DRC MAXIMUM RESULTS ALL 
+DRC RESULTS DATABASE "dummy_mdp_dde_dual.oas" oasis 
+ 
+LAYER dde_extent 9951  
+POLYGON 0 0 26653 21271 dde_extent 
+ 
+xor_lyr { 
+  MDP EMBED dde_extent MAP xor_lyr FILE my_mdp_embed 
+} DRC CHECK MAP xor_lyr 999 
+ 
+LITHO FILE my_mdp_embed [ 
+  section_size 100 
+ 
+  oasis_output_path "ddo_mdp_dde_dual.oas" 
+  oasis_output_layers 0 
+ 
+// First OASIS Input 
+	vboasis_path "input1.oas"  
+  	svrf_layer_name in_lyr1 50 306  
+ 	vboasis_injection -size 100 
+ 	vboasis_precision_multiplier auto 
+ 
+//Second OASIS Input 
+  	vboasis_path2 "input2.oas"  
+  	svrf_layer_name2 in_lyr2 50 306 
+  	vboasis_injection2 -size 100 
+  	vboasis_precision_multiplier2 auto 
+ 
+ 	&lt;SVRFSTART&gt; 
+		 xor_lyr  { in_lyr1 xor in_lyr2 } 
+  	&lt;SVRFEND&gt; 
+] </code></pre><p class="p">The following is an example rule file that performs the XOR on
+two extended MEBES job decks and also performs width checks for
+each of the layers:</p>
+<pre class="pre codeblock"><code>layout path "/mywkdr/oas_in/dummy_1000.oas"
+layout primary "*"
+layout system oasis
+layout ultra flex yes
+
+precision 1000
+
+drc maximum results all
+drc results database "/mywkdr/oas_out/output.hdb.oas" oasis
+drc summary report "/mywkdr/summaryrep_out/output.hdb.rep"
+
+layer dataextent 99
+polygon 0 0 152400 152400 dataextent
+//polygon 0 0 1000 1000 dataextent 
+//use a smaller extent to verify a limited region of the job deck
+
+LITHO FILE my_mdp_embed [
+  jobdeck "/mywkdr/jobdeck/jb1.ejb"
+  jobdeck2 "/mywkdr/jobdeck/jb2.ejb"
+  svrf_layer_name jb1_1 1
+  svrf_layer_name2 jb2_1 1
+  oasis_output_path "/mywkdr/oas_out/output.ddo.oas"
+  oasis_output_layers width_jb1_1 11 width_jb2_1 12 xor_lay1_lay2 13
+  direct_FS_access INPUT INTERMEDIATE
+  &lt;SVRFSTART&gt;
+    width_jb1_1 { INT jb1_1 &lt; .2 ABUT &lt; 90 SINGULAR REGION }
+    width_jb2_1 { INT jb2_1 &lt; .2 ABUT &lt; 90 SINGULAR REGION }
+    xor_lay1_lay2 { xor jb1_1 jb2_1 }
+  &lt;SVRFEND&gt;
+]
+
+width_jb1_1 {
+  MDP EMBED dataextent MAP width_jb1_1 FILE my_mdp_embed
+} DRC CHECK MAP width_jb1_1 11
+
+width_jb2_1 {
+  MDP EMBED dataextent MAP width_jb2_1 FILE my_mdp_embed
+} DRC CHECK MAP width_jb2_1 12
+
+xor_lay1_lay2 {  MDP EMBED dataextent MAP xor_lay1_lay2 FILE my_mdp_embed
+} DRC CHECK MAP xor_lay1_lay2 13</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_EmbedSvrfCommandsInMdpEmbedStatement_idab02769f.html" title="The MDP EMBED command provides section-based processing for some SVRF commands, essentially providing section-based DRC capability.">Embed SVRF Commands in an MDP EMBED Statement</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "MDP EMBED"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_MdpEmbed_idd0937def.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

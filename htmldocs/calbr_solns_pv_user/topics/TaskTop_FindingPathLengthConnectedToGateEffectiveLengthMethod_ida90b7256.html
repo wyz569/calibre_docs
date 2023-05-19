@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Finding the Length of a Net Path Connected to Gate: Effective Length Method" />
+<meta name="abstract" content="This check measures the path lengths of nets connected to MOS gates on the first two layers of metal interconnect. An effective length of each polygon in the path is estimated using an equation." />
+<meta name="description" content="This check measures the path lengths of nets connected to MOS gates on the first two layers of metal interconnect. An effective length of each polygon in the path is estimated using an equation." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida90b7256-d095-4abc-ab22-cea927121392" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Finding the Length of a Net Path Connected to Gate: Effective Length Method</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Finding the Length of a Net Path Connected to Gate: Effective Length Method" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida90b7256-d095-4abc-ab22-cea927121392">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Finding the Length of a Net Path Connected to Gate: Effective
+Length Method</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">This check measures the path lengths of
+nets connected to MOS gates on the first two layers of metal interconnect.
+An effective length of each polygon in the path is estimated using
+an equation.</p>
+<p class="p">The following figure shows the polygons in the path connected
+to the top and bottom gates. </p>
+<div class="fig fignone" id="id5d40493f-3eee-4728-92be-b12790e58c88"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Net Path
+Connected to Gate</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adv_drc/adv_drc_pathlength_effective.png" /></div><br /></div>
+<div class="p">The effective length of a polygon is given by this equation,
+where P is the polygon perimeter and A is the area:<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adv_drc/adv_drc_effective_lenght_eq.png" /></div><br /></div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idce654946-980d-4f1d-b475-059d54f63288" class="table" frame="hsides" border="1" rules="cols"><colgroup><col style="width:0.989in" /><col style="width:5.186in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p">    <span class="ph FontProperty HeadingLabel">Try It!</span> </p>
+<img class="image fmdpi:96" src="../graphics/try_it_note_small.png" /></td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre Advanced DRC (eqDRC) Tutorial and Example Kit</span></p>
+<p class="p">Go to <a class="xref" href="http://supportnet.mentor.com/infohub.cfm?infohub=ver_ih&amp;link=cal_ekit_IC" target="_blank">this page</a> on Support Center
+to download the complete eKit.</p>
+<p class="p">This example is in the device_routing_checks/gate_net_path_length/effective_length_method
+example directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__id69c10b42-4289-4c23-b7f0-629f62b85998"><span class="ph cmd">Make sure
+code similar to the following exists in your rules for connecting
+device gates up through the interconnect layer stack:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>gate = POLY AND ACTIVE
+
+CONNECT POLY gate 
+CONNECT MET1 POLY by CONT
+CONNECT MET2 MET1 by VIA1</code></pre></div></li>
+<li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__idabbb051d-b593-4fa5-a812-81e569e17e7d"><span class="ph cmd">Add the
+following code as a macro to calculate the effective length for
+polygons on the input layer:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// effective length = (P + (sqrt(P^2 -16*A)))/4
+// P = perimeter, A = area
+
+DMACRO EffectiveLength layer_in layer_out {
+       layer_out = DFM PROPERTY layer_in
+           [leff = (PERIM(layer_in)
+                    +SQRT(FMAX(PERIM(layer_in)*PERIM(layer_in) 
+                          - 16*AREA(layer_in),0)))/4 ]
+           [Netname = NETID(layer_in)]
+}</code></pre><p class="p">The property leff contains the effective length. The netID of
+the input layer is attached for debugging purposes. </p>
+</div></li>
+<li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__id11d2aeb2-f854-4f98-b9db-2f686e4991b2"><span class="ph cmd">Find the
+MET1 and MET2 shapes on nets attached to gates, </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// find metal layers on same net as gate polygon
+M1 = <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Net Area Ratio', 'svrf_ur'); return false;">NET AREA RATIO</a> MET1 gate [!!AREA(gate)] == 1
+M2 = NET AREA RATIO MET2 gate [!!AREA(gate)] == 1 </code></pre></div></li>
+<li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__id2101e233-0d71-4300-849c-90d7c2f97ba8"><span class="ph cmd">Pass the
+M1 and M2 layers from the previous step to the macro from Step <a class="xref fm:NumberOnlyBlack" href="#ida90b7256-d095-4abc-ab22-cea927121392__idabbb051d-b593-4fa5-a812-81e569e17e7d">2</a>. Then sum the
+path length properties on the gate polygons and attach the sum as
+the property EffLength_M1M2.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// Call a macro to calculate effective lengths for layers M1 and M2. 
+// The output layers M1_len and M2_len have the property leff 
+// attached to each shape. 
+<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Macros99CMACRO', 'svrf_ur'); return false;">CMACRO</a> EffectiveLength M1 M1_len 
+CMACRO EffectiveLength M2 M2_len
+
+// Sum the lengths of M1 and M2 shapes on the same net as gate. 
+// Do not generate output if M2 shapes are not part of the path. 
+// Use this layer as an input for calculating path lengths on MET3
+// if needed.
+
+M1M2_gate =  DFM PROPERTY gate M1_len M2_len NODAL MULTI
+          [ EffLength_M1M2 = (PROPERTY(M2_len,leff) == 0) ? 0 : 
+               PROPERTY(M1_len,leff) +  PROPERTY(M2_len,leff) ] &gt; 0
+          [ Netname = NETID(gate) ]</code></pre></div></li>
+<li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__id71f7a9ae-9522-428d-a9dd-a3f58b6c0c32"><span class="ph cmd">Output
+the results. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>// Set default options for DFM RDB operations 
+DFM DEFAULTS RDB CELL SPACE ALL CELLS CHECKNAME "%_l_" 
+effective_path_length { 
+    DFM RDB M1M2_gate "eqdrc_effective_length.rdb"  
+}</code></pre></div></li>
+<li class="li step stepexpand" id="ida90b7256-d095-4abc-ab22-cea927121392__ida71936cb-f347-4fe3-b7da-7210be5c9cf2"><span class="ph cmd">If debug
+output is desired, comment out the DRC Unselect Check statement
+to run the debug check. The M1_len and M2_len layers have individual
+M1 and M2 shapes with attached properties leff and Netname. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>DRC UNSELECT CHECK path_length_debug
+path_length_debug {
+    DFM RDB M1_len "eqdrc_effective_length.rdb" 
+    DFM RDB M2_len "eqdrc_effective_length.rdb" 
+    DFM RDB M3_len "eqdrc_effective_length.rdb" 
+}</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Open the <cite class="cite">eqdrc_effective_length.rdb</cite> file in Calibre
+RVE to view the path length property EffLength_M1M2 for each gate.
+Choose <span class="ph menucascade"><span class="ph uicontrol">View</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Result
+Options</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Details</span></span> to
+view the results in table format. </p>
+<div class="fig fignone" id="ida90b7256-d095-4abc-ab22-cea927121392__id482c50ef-73a5-4244-920d-4730436fa32d"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adv_drc/adv_drc_eff_path_length_rve.png" /></div><br /></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_FindingPathLengthConnectedToGate_idfa4bdf99.html" title="The two rule checks in this section measure the path lengths of nets connected to MOS gates on the first two layers of metal interconnect.">Finding the Length of a Net Path Connected to Gate</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Finding the Length of a Net Path Connected to Gate: Effective Length Method"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_FindingPathLengthConnectedToGateEffectiveLengthMethod_ida90b7256.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

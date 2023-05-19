@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Calculating the ILS for a Layer" />
+<meta name="abstract" content="In some cases, measuring the Image Log Slope (ILS) and related information at a target edge is more useful than the image intensity at the simulation contour edge." />
+<meta name="description" content="In some cases, measuring the Image Log Slope (ILS) and related information at a target edge is more useful than the image intensity at the simulation contour edge." />
+<meta name="prodname" content="Calibre® nmModelflow™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all" />
+<meta name="HighlightColor" content="Pale Blue" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmdf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® nmModelflow™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calculating the ILS for a Layer</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calculating the ILS for a Layer" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calculating the ILS for a Layer</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">In some cases, measuring
+the Image Log Slope (ILS) and related information at a target edge
+is more useful than the image intensity at the simulation contour
+edge.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__idbe465919-212c-4b6d-a586-36964deaefc3"><p class="p">A gauge
+file </p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id0c00d45d-f59b-46da-8c26-62ae7e94eeee"><p class="p">The corresponding
+design file</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__idbd557bd6-a1f1-429b-8409-947a7e8dbfcf"><p class="p">Calibre nmModelflow
+invoked</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id10efffff-9e14-493e-a3e4-8eba1b8b796e"><span class="ph cmd">Load the
+gauge file and design file (either using a batch file call to Calibre nmModelflow
+or with the Calibre nmModelflow GUI from the <span class="ph uicontrol">Database
+Browser</span> tab).</span></li>
+<li class="li step stepexpand" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id22b6ab2c-862f-408d-a86b-d8590139ec7c"><span class="ph cmd">Enter the
+following command:</span><div class="itemgroup info StepInfo"><p class="lines ApplCommand">mdf gauges computeils -layer <span class="keyword ParameterName RequiredReplaceable">n</span> <span class="keyword ParameterName Optional">[-simtype {aerial | full | both}]</span></p>
+<p class="p">where:</p>
+<ul class="ul"><li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id8248a7f6-a980-4ff1-b065-15a91b120510"><p class="p">-layer <span class="keyword ParameterName OptionalReplaceable">n</span> —
+Specifies a layer containing edges to be tested against the gauges.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id9151f5ac-3af5-47ae-a6b8-f5f349572aeb"><p class="p">-simtype <span class="keyword ParameterName OptionalDefault">aerial</span> |
+full | both — Sets the mode of the ILS computation for the gauge cutlines
+as aerial image, full resist, or both. </p>
+</li>
+</ul>
+<p class="p">The command computes the following items:</p>
+<ul class="ul"><li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id44caba05-039f-46f0-9aa2-fd3eb9e9a137"><p class="p">Image Log Slope (ILS) in inverse microns, calculated
+as:</p>
+<pre class="pre codeblock"><code>(1/I) * dI/dx </code></pre></li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__iddb1d65f3-c57e-408f-b846-9c8ed5e3d33b"><p class="p">Normalized Image Log Slope (NILS), which is
+CDDrawn * ILS.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__idc7a6a13b-cc4e-466d-8e93-5f654796ab77"><p class="p">Edge
+Placement Error (EPE), which is the difference between simulated
+and drawn edge locations taken at the crossing points of each gauge
+using the two nearest edges to the left and right of the gauge midpoint.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id43de243c-5178-4104-aa20-d4cf479c2cf9"><span class="ph cmd">If you
+are working from the command line, write the gauge output to a file.
+If you are using the Calibre nmModelflow GUI, switch to the <span class="ph uicontrol">Gauge
+Analysis</span> tab.</span></li>
+<li class="li step stepexpand" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id1d12cfee-c2fa-40a4-8917-91010c053060"><span class="ph cmd">Examine
+the resulting gauge object for the following new columns:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__idaf33d2ae-2d8b-4380-82fa-35b99301364c"><p class="p">TshiftCtr and Tshift — Shift for the aerial image
+(Ctr) and resist image with respect to target edges.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id650b5875-caf2-4618-a436-e7d30f3c55e9"><p class="p">(XL,YL) and (XR,YR) — Coordinates of the left
+and right edge crossing points in dbu.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id745f6cf9-2c7a-4347-af3e-de9e87805645"><p class="p">IlsLCtr and IlsRCtr — Left and right edge
+ILS values for the aerial image.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__idf4d81948-5601-47ea-bfc1-54b829983161"><p class="p">IlsL and IlsR — Left and right edge ILS values
+for full resist.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id841f0fb0-e651-454a-9037-93ad8ad325cc"><p class="p">NilsLCtr and NilsRCtr — Left and Right edge
+NILS values for the aerial image.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id79c9397d-12f2-41c8-b0af-b784c1e7fa2d"><p class="p">NilsL and NilsR — Left and right edge NILS
+values for full resist.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id1ad46e90-67cc-4942-b093-0e4702549be6"><p class="p">EpeLCtr and EpeRCtr — Left and right edge
+EPE values for the aerial image.</p>
+</li>
+<li class="li" id="id9f2aaf0b-8bfb-47ae-b3eb-93a3ea81455e__id82d09720-98d6-4782-b917-d8ddcadeeae6"><p class="p">EpeL and EpeR — Left and right edge EPE values
+for full resist.</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The aerial threshold used
+for the various Ctr entries is set using the mdf threshold aerial command,
+and defaults to the best RMS value found during optimization.</p>
+</div>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_GaugeRelatedTasksAndConcepts_id8debc209.html" title="Gauges contain measurement data used during calibration and simulation. Most stages operate on gauge data, or subsets of gauge data.">Gauge-Related Tasks and Concepts</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmdf_useref"
+                DocTitle = "Calibre® nmModelflow™ User’s and Reference Manual"
+                PageTitle = "Calculating the ILS for a Layer"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CalculatingTheIlsForALayer_id9f2aaf0b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmModelflow™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="lineendmerge" />
+<meta name="abstract" content="Merges SRAF line-ends during SRAF cleanup. Used by RET SBAR and RET MBSRAF." />
+<meta name="description" content="Merges SRAF line-ends during SRAF cleanup. Used by RET SBAR and RET MBSRAF." />
+<meta name="prodname" content="Calibre® nmSRAF™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmsraf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 23, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmSRAF™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id503f6f84-1061-460e-9ea1-45dd3cf32a41" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>lineendmerge</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="lineendmerge" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">lineendmerge</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC"><a class="xref fm:HeadingOnly" href="Contain_CleanupKeywords_id3a83f999.html#id3a83f055-5994-41ca-98ce-e3983b41d1fb__Contain_CleanupKeywords_id3a83f999.xml#id3a83f055-5994-41ca-98ce-e3983b41d1fb" title="Calibre nmSRAF invokes SRAF cleanup after generation.">Cleanup Keywords</a></p>
+<p class="shortdesc">Merges SRAF line-ends during SRAF cleanup.
+Used by RET SBAR and RET MBSRAF.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Optional">lineendmerge</span> {<span class="keyword ParameterName OptionalReplaceable">value</span> | <span class="keyword ParameterName Optional">no</span> | <span class="keyword ParameterName Optional">0</span>}</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id59c3447a-2f1a-41fd-83b0-6c07e0f462c0"><span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+positive floating point number establishing a limit for line-end
+merging.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id10956fb6-6204-4410-8f11-76fe6efef947"><span class="keyword ParameterName Optional">no</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Disables
+all line-end merging. Existing overlapping SRAFs are separated.
+Use of lineendmerge no is incompatible with the interpriorityalign,
+intrapriorityalign, and intersection keywords. The no option is
+incompatible with <a class="xref fm:HeadingOnly" href="Command_Cleanupversion_id54eeee37.html#id54eeee37-f967-4c16-953d-3286888e6208__Command_Cleanupversion_id54eeee37.xml#id54eeee37-f967-4c16-953d-3286888e6208" title="Specifies the version of SRAF cleanup. Used by RET SBAR only.">cleanupversion</a> 0 and
+results in a compile-time error.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id3270f87d-eda2-412f-95c0-1c4df7a86bb1"><span class="keyword ParameterName Optional">0</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Allows line-end
+merging only of field (preliminary) SRAFs that align or overlap.
+Use of lineendmerge 0 is incompatible with the interpriorityalign,
+intrapriorityalign, and intersection keywords. The 0 option is incompatible
+with cleanupversion 0 and results in a compile-time error.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">An optional keyword used to merge
+SRAFs at line-ends. The keyword can be specified globally or by
+priority. Conditions and behaviors include:</p>
+<ul class="ul"><li class="li" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__idb7130aab-7c77-464f-a9e6-298179d24762"><p class="p">SRAFs must be exactly aligned,
+so that no jogs result after merging.</p>
+</li>
+<li class="li" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__idde4513bf-6ec4-45a7-afc7-3284b1ae3174"><p class="p">Distances between two SRAFs
+are less than or equal to the specified value. There is no default
+value for lineendmerge.</p>
+</li>
+<li class="li" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id3c6f6688-8d7f-4bf2-9b73-895ce29da89e"><p class="p">If the recipe
+specifies cleanupversion 0, dynamicsizing may need to be used to
+achieve intended results of lineendmerge in some cases.</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When lineendmerge is specified globally, line-ends of different
+priorities may be merged. Therefore, Siemens EDA recommends only specifying
+lineendmerge by priority.</p>
+</div>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_Intrapriorityalign_id399ef785.html#ida18935ec-bc06-4b13-9f54-0c134fd7316b__Command_Intrapriorityalign_id399ef785.xml#ida18935ec-bc06-4b13-9f54-0c134fd7316b" title="Aligns SRAFs of same priorities during cleanup. Used by RET SBAR and RET MBSRAF.">intrapriorityalign</a> and <a class="xref fm:HeadingOnly" href="Command_Interpriorityalign_id399ef0ww.html#id637b0b93-92ec-4e77-bbca-563efa7a5597__Command_Interpriorityalign_id399ef0ww.xml#id637b0b93-92ec-4e77-bbca-563efa7a5597" title="Aligns SRAFs of different priorities during cleanup. Used by RET SBAR and RET MBSRAF.">interpriorityalign</a> keywords
+cannot be used with lineendmerge 0 or lineendmerge no. The lineendmerge
+keyword requires a floating-point value to be used with intrapriorityalign
+and interpriorityalign. If selective SRAF merging is required using
+tags, Siemens EDA recommends using unique tags and templates for those
+cases and setting lineendmerge by priority to continue using intrapriorityalign
+and interpriorityalign keywords globally. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id1e335b82-06cb-4b58-80e2-de8ed948543b"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">This example shows the lineendmerge
+keyword called by a rectedge template to merge SRAFs.</p>
+<div class="fig fignone" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__idcb2da97e-7532-4f77-9a17-3efc13b588fc"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Using lineendmerge With
+rectedge</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/cnsraf_syntax70.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id5b7c3f95-7758-46d3-a31e-4eec8d57b557"><h2 class="title Subheading sectiontitle">Example
+2</h2><p class="p">These examples show various lineendmerge
+parameter settings and their respective behavior. The first picture
+demonstrates lineendmerge no, where uniform line-end pullback at
+the specified minoffset value is applied for gaps of any value,
+or overlapping field SRAFs.</p>
+<p class="p">The second picture demonstrates lineendmerge no, where line-end
+pullback at the specified minoffset value is applied only for gaps
+of any value in field SRAFs.</p>
+<p class="p">The third picture demonstrates lineendmerge with a specified
+value (in this case 0.010), where line-end pullback is only applied
+to field SRAFs exceeding the specified value.</p>
+<div class="fig fignone" id="id503f6f84-1061-460e-9ea1-45dd3cf32a41__id84d34fac-b826-4512-9e10-359dd179875a"><span class="figcap"><span class="fig--title-label">Figure 2. </span>lineendmerge Parameters
+and Their Behavior</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lem_behavior.png" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CleanupKeywords_id3a83f999.html" title="Calibre nmSRAF invokes SRAF cleanup after generation.">Cleanup Keywords</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmsraf_useref"
+                DocTitle = "Calibre® nmSRAF™ User’s and Reference Manual"
+                PageTitle = "lineendmerge"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Lineendmerge_id503f6f84.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmSRAF™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

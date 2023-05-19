@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Adaptation Example: Callback Function" />
+<meta name="abstract" content="The Tcl customization file uses CUSTOM::setOKCallback to associate a function with the OK button in the Customization GUI. The callback function is executed if a checkbox in the Customization GUI is checked. The new configuration file creates a button and uses the connect() function to connect a a function to the button click." />
+<meta name="description" content="The Tcl customization file uses CUSTOM::setOKCallback to associate a function with the OK button in the Customization GUI. The callback function is executed if a checkbox in the Customization GUI is checked. The new configuration file creates a button and uses the connect() function to connect a a function to the button click." />
+<meta name="prodname" content="Calibre Interactive (New GUI) User’s Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_n_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="3" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ (New GUI) User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="no" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id92154d77-80e7-4525-8f57-4284eb5980e2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Adaptation Example: Callback Function</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Adaptation Example: Callback Function" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id92154d77-80e7-4525-8f57-4284eb5980e2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Adaptation Example: Callback
+Function</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The Tcl customization file uses CUSTOM::setOKCallback
+to associate a function with the OK button in the Customization
+GUI. The callback function is executed if a checkbox in the Customization
+GUI is checked. The new configuration file creates a button and
+uses the connect() function to connect a a function to the button
+click. </span>
+</div>
+<p class="p">The original Tcl customization file creates a checkbox
+and attaches a callback function to the OK button in the Customization
+GUI. The callback function checks the state of the checkbox. </p>
+<p class="p">The new configuration file makes changes directly in the Calibre
+Interactive GUI, so there is not an OK button, as with the Customization
+GUI. Two ways to obtain the same functionality are demonstrated:</p>
+<ul class="ul"><li class="li" id="id92154d77-80e7-4525-8f57-4284eb5980e2__ideaa88489-9420-4816-9ffb-9dbfec2a479b"><p class="p"><a class="xref fm:NumberOnly" href="#id92154d77-80e7-4525-8f57-4284eb5980e2__ideb1dab0c-af9f-4bc5-bbb8-f320026715aa">New Configuration File to Create a Button with an Associated Function</a><a class="xref fm:HeadingOnly" href="#id92154d77-80e7-4525-8f57-4284eb5980e2__ideb1dab0c-af9f-4bc5-bbb8-f320026715aa">New Configuration File to Create a Button with an Associated Function</a></p>
+</li>
+<li class="li" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id82de4bfc-ff11-4d7c-a210-473084ec96b9"><p class="p"><a class="xref fm:HeadingOnly" href="#id92154d77-80e7-4525-8f57-4284eb5980e2__id31ec58cb-1667-471a-975a-079b7e1e4069">New Configuration File to Attach a Callback Function to a DEFINE Control</a></p>
+</li>
+<li class="li" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id274e5470-06cf-44f0-86b7-4604dfd67f20"><p class="p"><a class="xref fm:HeadingOnly" href="#id92154d77-80e7-4525-8f57-4284eb5980e2__id4ae50fe2-101e-4010-99b4-aef2c4e327f6">Attach Callback Function to Run Button</a></p>
+</li>
+</ul>
+<div class="section Subsections"><div class="section Subsection" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id45b2ee3b-c546-4c69-a15d-7c390dd283c6"><h2 class="title Subheading sectiontitle">Tcl Customization File with Callback Function</h2><p class="p">This example Tcl customization file is written for Calibre Interactive
+nmLVS. It creates one checkbox in the Customization GUI. If the
+checkbox is checked, all SVDB options are set. CUSTOM::setOKCallback
+is used to specify a function that is executed when the OK button
+is clicked in the Customization GUI. The callback function sets
+the appropriate runset options if the checkbox is checked. </p>
+<pre class="pre codeblock"><code>### Tcl Customization File for Classic Calibre Interactive
+# checkbox to specify whether to set SVDB options
+     set setSVDBon [CUSTOM::DEFINE -name "setSVDB_on" \
+	-select 0 -tool LVS  \
+	-prompt "Turn on SVDB options" ]
+## callback proc for OK button
+</code></pre><pre class="pre codeblock"><code>proc myOKCallback { } {
+    global setSVDBon
+    
+	# use cget -bvar to get checkbox setting for setSVDBon
+	set wb_setSVDBon [$setSVDBon cget -bvar]
+</code></pre><pre class="pre codeblock"><code>	# if checkbox is checked, set all the SVDB options
+	if {[set $wb_setSVDBon] } {
+		if {[CUSTOM::runsetVarExists lvsCreateSVDB]} {
+			CUSTOM::setRunsetVarValue lvsCreateSVDB 1
+		}
+		if {[CUSTOM::runsetVarExists lvsSVDBxcal]} {
+			CUSTOM::setRunsetVarValue lvsSVDBxcal 1
+		}
+		if {[CUSTOM::runsetVarExists lvsSVDBtxref]} {
+			CUSTOM::setRunsetVarValue lvsSVDBtxref 1
+		}
+		if {[CUSTOM::runsetVarExists lvsSVDBnopinloc]} {
+			CUSTOM::setRunsetVarValue lvsSVDBnopinloc 1
+		}
+		if {[CUSTOM::runsetVarExists lvsSVDBcci]} {
+			CUSTOM::setRunsetVarValue lvsSVDBcci 1
+		} 
+    }
+}
+    
+CUSTOM::setOKCallback myOKCallback</code></pre></div>
+<div class="section Subsection" id="id92154d77-80e7-4525-8f57-4284eb5980e2__ideb1dab0c-af9f-4bc5-bbb8-f320026715aa"><h2 class="title Subheading sectiontitle">New
+Configuration File to Create a Button with an Associated Function</h2><p class="p">The following new configuration file accomplishes the same function
+as the previous code, but is applicable to the Calibre Interactive
+PERC and Calibre Interactive XACT applications, in addition to Calibre
+Interactive LVS. </p>
+<p class="p">The configuration file adds a button on the Custom page, which
+is the default location for new controls. The activated.<a class="xref fm:HeadingOnly" href="Command_Connect_id4d645644.html#id4d645644-5e3f-4057-9da2-3a0ed3bb9463__Command_Connect_id4d645644.xml#id4d645644-5e3f-4057-9da2-3a0ed3bb9463" title="Specifies a function to execute on a signal from the Calibre Interactive GUI.">connect</a>() function
+is used to associate the setSVDBOn() function with the button. The
+code tests for the existence of options that are not common across
+the three applications. </p>
+<p class="p">For a general procedure to find the option name corresponding
+to a GUI option, see “<a class="xref fm:HeadingAndPage" href="TaskTop_FindingOptionsNamesToUseInTheConfigurationFile_id1e61c863.html#id1e61c863-43a5-4dad-816b-0964a1e03124__TaskTop_FindingOptionsNamesToUseInTheConfigurationFile_id1e61c863.xml#id1e61c863-43a5-4dad-816b-0964a1e03124" title="The configuration file uses the same option names as the runset file. You can determine option names by saving a runset in which only the options of interest have non-default settings.">Finding Option Names to Use in the Configuration File</a>”. </p>
+<pre class="pre codeblock"><code>// New Configuration File for Calibre Interactive
+Configuration {
+	onInitialized: {
+		tool.transcript("tool name " + tool.name);
+		// add button to turn on svdb options for xact, lvs, and perc
+		// "pex" is the tool.name for Calibre Interactive xACT
+		if ( (tool.name == "lvs") || (tool.name == "perc") 
+				|| (tool.name == "pex") ) {
+			var bSVDB = tool.addAction("SVDBon");   //name is internal
+			bSVDB.label = "Turn on SVDB options"; // the button label
+			// tooltip
+			bSVDB.description = "Turn on SVDB and all the options"; 
+			bSVDB.activated.connect(setSVDBOn);
+			bSVDB.location = Location.Body;   // default location is Footer
+		}
+	} // end onInitialized
+</code></pre><pre class="pre codeblock"><code>// define function to set SVDB options if SVDBon button is clicked 
+function setSVDBOn() {
+		tool.svdb.query.value = true;
+		tool.svdb.asciixref.value = true;
+		tool.svdb.cci.value = true;
+		tool.svdb.pinloc.specified = true;
+		tool.svdb.pinloc.value = "PINLOC";
+		if ( tool.svdb.xrc != undefined ) {
+			tool.svdb.xrc.value = true; // lvs and perc only
+		}
+		if ( tool.svdb.genParasiticData != undefined ) {
+			tool.svdb.genParasiticData.value = true; // xact only
+		}
+		if ( tool.svdb.muwdb != undefined ) { 
+			tool.svdb.muwdb.value = true; // perc only
+		}
+}
+} // end Configuration</code></pre><p class="p">The results of the two code examples are shown below.</p>
+<div class="fig fignone" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id243e898c-52aa-4445-bb12-3cff5011645d"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Configuration
+File Example with Callback Function</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/ci_general/custom_button_callback.png" /></div><br /></div>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_Connect_id4d645644.html#id4d645644-5e3f-4057-9da2-3a0ed3bb9463__Command_Connect_id4d645644.xml#id4d645644-5e3f-4057-9da2-3a0ed3bb9463" title="Specifies a function to execute on a signal from the Calibre Interactive GUI.">connect</a> function
+can also be used to associate a function with a change signal from
+an property—this is shown in the next example.</p>
+</div>
+<div class="section Subsection" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id31ec58cb-1667-471a-975a-079b7e1e4069"><h2 class="title Subheading sectiontitle">New
+Configuration File to Attach a Callback Function to a DEFINE Control</h2><p class="p">This example creates an <a class="xref fm:HeadingOnly" href="Command_Adddefine_idb9c24136.html#idb9c24136-8734-4124-8edf-c2ac21d99ef0__Command_Adddefine_idb9c24136.xml#idb9c24136-8734-4124-8edf-c2ac21d99ef0" title="Adds a control to specify a #DEFINE or #UNDEFINE statement with no value to the Calibre Interactive GUI. The statement is added to the control file.">addDefine</a> control,
+which has only a checkbox. The connect() function specifies to execute
+the function setSVDBOn when the state of the checkbox changes. If
+the checkbox value is true, the function turns on several options
+related to the SVDB database. The variable for the addDefine object
+is declared in the Configuration section so that it has a global scope—this
+is necessary so that the function setSVDBOn can test the state of
+the checkbox. </p>
+<pre class="pre codeblock"><code>// JavaScript Configuration File for Calibre Interactive
+Configuration {
+	property variant def_svdb; // make the control variable global
+	
+	onInitialized: {
+		tool.transcript("tool name " + tool.name);
+		// add a checkbox with a function connect to the change signal
+		// from the checkbox state
+		if ( (tool.name == "lvs") || (tool.name == "perc") 
+				|| (tool.name == "pex") ) {
+			def_svdb = tool.addDefine("SVDBon");   //name is internal
+			def_svdb.label = "Turn on SVDB options"; // the button label
+			def_svdb.description = "Turn on SVDB and all the options"; 
+			// tooltip
+			def_svdb.valueChanged.connect(setSVDBOn);
+		}
+	} // end onInitialized</code></pre><pre class="pre codeblock"><code>// define function to set SVDB options when SVDBon checkbox is changed 
+// and checkbox is checked 
+function setSVDBOn() {
+		tool.transcript("checkbox is " + def_svdb.value);
+		// only turn on options if checkbox is on (true)
+		if (def_svdb.value) {               
+			tool.svdb.query.value = true;
+			tool.svdb.asciixref.value = true;
+			tool.svdb.cci.value = true;
+			tool.svdb.pinloc.specified = true;
+			tool.svdb.pinloc.value = "PINLOC";
+			if ( tool.svdb.xrc != undefined ) {
+				tool.svdb.xrc.value = true; // lvs and perc only
+			}
+			if ( tool.svdb.genParasiticData != undefined ) {
+				tool.svdb.genParasiticData.value = true; // xact only
+			}
+			if ( tool.svdb.muwdb != undefined ) { 
+				tool.svdb.muwdb.value = true; // perc only
+			}
+		}
+}</code></pre></div>
+<div class="section Subsection" id="id92154d77-80e7-4525-8f57-4284eb5980e2__id4ae50fe2-101e-4010-99b4-aef2c4e327f6"><h2 class="title Subheading sectiontitle">Attach Callback Function to Run Button</h2><p class="p">You can also attach a callback function to
+the Run button using the runCallback tool property. See “<a class="xref fm:HeadingAndPage" href="General_ToolProperties_id84c28397.html#id84c28397-0974-465f-9b19-c5c91351a85e__id79b0216d-8894-4169-bd42-50431c7e6af6">Example: Attach Callback Function to Run Button With tool.runCallback</a>” in the section “<a class="xref fm:HeadingOnly" href="General_ToolProperties_id84c28397.html#id84c28397-0974-465f-9b19-c5c91351a85e__General_ToolProperties_id84c28397.xml#id84c28397-0974-465f-9b19-c5c91351a85e" title="Certain properties apply at the tool level to set overall behavior and appearance of the Calibre Interactive GUI. For example, you can specify the pages that are visible in the GUI.">Tool Properties</a>.” </p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_GuideAndExamplesForConvertingTclCustomizationFilesToQmlConfigurationFiles_idfaa780b0.html" title="This section provides a conversion guide and examples to assist in converting existing Tcl-based customization files to the new configuration file format for Calibre Interactive.">Guide and Examples for Converting Tcl Customization Files to New Configuration Files</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_n_user"
+                DocTitle = "Calibre® Interactive™ (New GUI) User’s Manual"
+                PageTitle = "Adaptation Example: Callback Function"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_AdaptationExampleCallbackFunction_id92154d77.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ (New GUI) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

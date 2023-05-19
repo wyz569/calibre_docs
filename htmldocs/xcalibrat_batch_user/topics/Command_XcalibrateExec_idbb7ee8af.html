@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="xcalibrate -exec" />
+<meta name="abstract" content="The xCalibrate invocation command, which performs calibration to produce encrypted capacitance and resistance rule files, rules.C, rules.R, rules.xact, and rules.ptf. xCalibrate accepts MIPT or ITF technology files as input." />
+<meta name="description" content="The xCalibrate invocation command, which performs calibration to produce encrypted capacitance and resistance rule files, rules.C, rules.R, rules.xact, and rules.ptf. xCalibrate accepts MIPT or ITF technology files as input." />
+<meta name="prodname" content="xCalibrate Batch User's Manual" />
+<meta name="version" content="None" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xcalibrat_batch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="LicenseType" content="EULA" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="xCalibrate™ Batch User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>xcalibrate -exec</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="xcalibrate -exec" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">xcalibrate -exec</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">The xCalibrate
+invocation command, which performs calibration to produce encrypted capacitance
+and resistance rule files, <span class="ph filepath italic">rules.C</span>, <span class="ph filepath italic">rules.R</span>, <span class="ph filepath italic">rules.xact</span>,
+and <span class="ph filepath">rules.ptf</span>. xCalibrate accepts MIPT or ITF
+technology files as input.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">xcalibrate</span> <span class="keyword ParameterName Required">‑exec</span><br />
+[-turbo <span class="keyword ParameterName OptionalReplaceable">number_of_cpus</span>]<br />
+[‑remote <span class="keyword ParameterName OptionalReplaceable">host</span>[,<span class="keyword ParameterName OptionalReplaceable">host</span>…] | ‑remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> ] <br />
+[-noheader]<br />
+[-tech <span class="keyword ParameterName OptionalReplaceable">tech_directory</span>]<br />
+[[-xact3d | -xrc3d] [-tcad] | -rperc | -tsv]<br />
+[-rulefile <span class="keyword ParameterName OptionalReplaceable">rule_file_name</span>] <br />
+[-retry <span class="keyword ParameterName OptionalReplaceable">n</span>] [-start <span class="keyword ParameterName OptionalReplaceable">start_stage</span>] [-end <span class="keyword ParameterName OptionalReplaceable">end_stage</span>]<br />
+[-hidden]<br />
+[-svrf_check]<br />
+{<span class="keyword ParameterName RequiredReplaceable">mipt_file_name</span> [-corner "<span class="keyword ParameterName OptionalReplaceable">corner_name</span>" ] [-aux <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span>] | <br />
+   {<span class="keyword ParameterName Required">-itf </span>[-corner "<span class="keyword ParameterName OptionalReplaceable">corner_name</span>" ] <span class="keyword ParameterName RequiredReplaceable">itf_file_name</span> [-aux <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span>] <br />
+   [[-separate] -itfmap <span class="keyword ParameterName OptionalReplaceable">map_file_name </span>[<span class="keyword ParameterName OptionalReplaceable">map_file_name ... </span>]]}}<br />
+[-interface <span class="keyword ParameterName OptionalReplaceable">mapfile</span>] <br />
+[-interface <span class="keyword ParameterName OptionalReplaceable">dfmdb_path</span> -top <span class="keyword ParameterName OptionalReplaceable">top_filename</span> -bot <span class="keyword ParameterName OptionalReplaceable">bot_filename</span>]<br />
+[-cpp]<br />
+[-smart_cal]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id8cfec525-f95c-4b01-9c4a-e483ecad394a"><span class="keyword ParameterName Required">-exec</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required argument used to run calibration.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id1022ba5e-9f6d-4e8d-803a-fb9016ccdcb9">‑turbo <span class="keyword ParameterName OptionalReplaceable">number_of_cpus</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set that specifies the number of cpus to use for multi-threaded
+parallel processing for calibration. The <span class="keyword ParameterName OptionalReplaceable">number_of_cpus</span> argument
+is a positive integer specifying the number of processors (CPUs)
+to use during processing. If you omit this number, the xCalibrate
+tool runs on the maximum available for which you have licenses.
+If you do not apply the -turbo option, the tool defaults to running
+on one processor. </p>
+<p class="p">For more information on this
+option, refer to <a class="xref LinkItalic" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_admin_gd'); return false;">Calibre Administrator’s Guide</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idd37c6b3c-3fc5-4be1-988e-13f05c84c92d"><span class="keyword ParameterName Optional">‑remote </span><span class="keyword ParameterName OptionalReplaceable">host</span>[,<span class="keyword ParameterName OptionalReplaceable">host</span>…]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set that specifies the name of one or more remote hosts
+on which to run calibration. For more information, refer to “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '-remote', 'calbr_admin_gd'); return false;">-remote</a>” in the <span class="ph FontProperty ManualTitle">Calibre Administrator’s Guide</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idd38f698b-ff3b-45e6-a928-bdf715747d90">‑remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set that specifies the Calibre MTflex configuration <span class="keyword ParameterName OptionalReplaceable">filename</span> which includes
+information about the primary and remote hosts, how to partition
+the run, and the launch method. </p>
+<p class="p">For more
+information, refer to “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '-remotefile', 'calbr_admin_gd'); return false;">-remotefile</a>” in the <a class="xref LinkItalic" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_admin_gd'); return false;">Calibre Administrator’s Guide</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id5d804760-97d4-4829-9f05-77ea78ff77dd">‑noheader</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that omits
+the layer stack information and hides the process variation table
+information from the beginning of the generated rule file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id364aa330-558d-4fb2-a992-732e6220a85c">‑tech <span class="keyword ParameterName OptionalReplaceable">tech_directory</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set that specifies where to generate the calibration directory
+structure. The default is the current working directory.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__ida60a9830-997f-4103-b1ae-2fa152edee91">‑xact3d</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that creates
+rules for the Calibre xACT 3D calibration flow. Generates an xACT
+3D rule file (<span class="ph filepath italic">rules.FS</span>)
+that contains resistance rules and device definitions, and a <span class="ph filepath">rules.ptf</span> file.
+The <span class="ph filepath">rules.FS</span> file references the <span class="ph filepath">rules.ptf</span> file.
+Use this argument to create the <span class="ph filepath">rules.FS</span> file
+that must be included when running either the Calibre xACT 3D direct
+netlisting or the Calibre xACT 3D PDB flows. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id34d00b42-ba58-4d3c-85f6-8f64cbe641c2">-xrc3d</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that creates rules for the Calibre xACT 3D calibration
+flow. Generates an xACT 3D rule file (<span class="ph filepath italic">rules.FS</span>)
+that contains resistance rules and device definitions, a <span class="ph filepath">rules.xact</span> file
+that references the <span class="ph filepath">rules.ptf</span> file, and a <span class="ph filepath">rules.ptf</span> file.
+Include the <span class="ph filepath">rules.FS</span> file when running the
+Calibre xACT 3D PDB flow. Include the <span class="ph filepath">rules.xact</span> file
+when running the Calibre xACT 3D direct netlisting flow. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__ida62c6308-615f-4bfe-8c03-a55796ab5466">-tcad</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument used with either -xact3d or -xrc3d, that specifies to calibrate
+layers based on the order they are defined in the MIPT file (not
+by their elevations). </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__ide9144a72-a175-48e7-ae4d-873731d319cf">‑rperc</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that creates
+resistance only rules and can only be run on a metal only stack
+(no dielectrics). Generates a single resistance rule file (<span class="ph filepath italic">rules.RO</span>)
+that also contains the capacitance rule file header. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id6d100ad0-3810-465f-a944-c02a3a9bfb66">‑tsv</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that allows
+partial calibration of the 3D stack (SUBSTRATE + bottom stack description).
+Generates SUBSTRATE + bottom stack rule files (<span class="ph filepath italic">rules_TSV.R</span> and <span class="ph filepath italic">rules_TSV.C</span>)
+that can be combined with the top stack rule files (<span class="ph filepath italic">rules.R</span> and <span class="ph filepath italic">rules.C</span>)
+in order to create the full stack description. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id11444fa2-8037-425b-9576-205500a44f6a">-cpp</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies to preprocess
+the MIPT file using C preprocessor directives. Use this option with
+the ‑exec option to preprocess the MIPT file then run calibration.
+For more information on how to specify the C preprocessor directives
+in your MIPT file, see “<a class="xref fm:HeadingAndPage" href="Concept_CPreprocessorDirectives_id73d5a2e1.html#id73d5a2e1-5079-4320-b7df-c88476ef63c0__Concept_CPreprocessorDirectives_id73d5a2e1.xml#id73d5a2e1-5079-4320-b7df-c88476ef63c0" title="The C preprocessor directives and the -cpp command line option can be used to control which portions of the MIPT file are processed.">C Preprocessor Directives</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id36fbb0de-a6c0-4729-87fe-8dfb0fa6dc10">-smart_cal</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies to only
+recalibrate conductor layers whose parameter values have been added
+or modified after an initial calibration run. You must run calibration at
+least once before using this option in order to generate the <span class="ph filepath">calibration.db</span> file.
+If the <span class="ph filepath">calibration.db</span> file does not exist or
+is not found when this option is specified, calibration stops with
+an error. </p>
+<p class="p">Use this option only when you want to make minor changes to the
+MIPT file and recalibrate only those changed layers. Conductor layers
+types that support this option are conductor, contact, device_li,
+diffusion, li, multigate, pcaux, poly, ronly, seed, src_drn, and
+via.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__ide58683ba-efb3-4a37-af12-a824e43c850c">‑rulefile <span class="keyword ParameterName OptionalReplaceable">rule_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies the common filename prefix for all of the rule file(s) generated
+by calibration. The default filename prefix is “rules”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idfac487ea-8e60-4f6d-b24f-64e4f04b185c">-retry <span class="keyword ParameterName OptionalReplaceable">n</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies the number of times to retry the calibration run. Use this
+keyword for occasional field solver failures. If <span class="keyword ParameterName OptionalReplaceable">n</span> is
+not specified, the default is 10.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__ide5dd0b86-e8f4-4723-9381-8022c60138ff">-start <span class="keyword ParameterName OptionalReplaceable">start_stage</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies the name of the stage from which to restart the calibration;
+for example, masterGenerateModel. The following are examples of
+stages that appear in the transcript:</p>
+<pre class="pre codeblock leveled"><code>modInitialize
+masterGenerateModel
+masterExecModel
+sux
+gen_rules
+</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id444df188-aa6b-4910-8003-86c54d757116">-end <span class="keyword ParameterName OptionalReplaceable">end_stage</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies the name of the stage at which to end the calibration run.
+The default is to run to the end of the calibration.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id53628893-3fa9-4b0a-9fdf-2829c028dd59">‑hidden</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that specifies to encrypt all layer information in the
+calibrated rule files.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idf31b87ab-3499-4e16-8e58-cc17527a2f87">-svrf_check</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+used to verify the syntax of the SVRF statements generated during calibration.
+SVRF statements specified using the <a class="xref fm:HeadingOnly" href="Command_SvrfVerbatim_idcde7bc82.html#idcde7bc82-e560-4856-9d4f-337f966d802f__Command_SvrfVerbatim_idcde7bc82.xml#idcde7bc82-e560-4856-9d4f-337f966d802f" title="An optional global parameter that specifies a text string or text block that allows the insertion of SVRF statements into the calibrated rule file.">svrf_verbatim</a> parameter
+are not checked. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id8b60c789-bb42-450c-a4b3-02db1dd9be04"><span class="keyword ParameterName RequiredReplaceable">mipt_file_name</span> [-aux <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span>] </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies the path to and name of the MIPT file. </p>
+<p class="p">Use the optional -aux <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span> parameter
+set to include additional MIPT layer specification statements defined
+in the <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span> in
+the calibration. For details about the auxiliary file format, see “<a class="xref fm:HeadingAndPage" href="Concept_AuxiliaryFileFormat_idf3010ba9.html#idf3010ba9-6286-4ead-8487-e1339b38988f__Concept_AuxiliaryFileFormat_idf3010ba9.xml#idf3010ba9-6286-4ead-8487-e1339b38988f" title="Use the auxiliary file (itf.aux) to specify global parameters, override specific syntax, or include additional layer information in the MIPT file produced with the ITF translation options.">Auxiliary File Format</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id92349807-c725-456b-a147-ce2ab8b6530f"><span class="keyword ParameterName Required">-itf</span> <span class="keyword ParameterName RequiredReplaceable">itf_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument set used to specify the name of an ITF file. The ITF file
+is converted to an MIPT file (<span class="ph filepath italic">out.mipt</span>)
+before calibration begins.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__iddbc59c73-d27c-472d-9ea4-243fbf22f559"><span class="keyword ParameterName Optional">‑corner</span> “<span class="keyword ParameterName OptionalReplaceable">corner_name</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set used to specify the process corner variation type for
+the MIPT file. The <span class="keyword ParameterName OptionalReplaceable">corner_name</span> must
+be enclosed in quotes (“ ”). The process corner variation choices
+are typical, cbest, rcbest, cworst, and rcworst. This option can
+only be used with ITF or MIPT file types. </p>
+<p class="p">The default is the <a class="xref fm:HeadingOnly" href="Command_Process_id00fb8bba.html#id00fb8bba-bf03-4400-81e3-36c9d1b1ca67__Command_Process_id00fb8bba.xml#id00fb8bba-bf03-4400-81e3-36c9d1b1ca67" title="A required global parameter used to create filenames and directories of results. It can only be specified once. It must be a single string without spaces or special characters.">process</a> name
+if neither this option or the global keyword corner is specified.
+This parameter set takes precedence when the global keyword <a class="xref fm:HeadingOnly" href="Command_Corner_id8a34c817.html#id8a34c817-6b6d-4ab8-972e-6763d977d4c3__Command_Corner_id8a34c817.xml#id8a34c817-6b6d-4ab8-972e-6763d977d4c3" title="An optional global parameter that specifies the corner variation to be applied during extraction.">corner</a> is also specified. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id4c6b8939-28d7-4290-8884-582fcb23f9e6"><span class="keyword ParameterName Optional">‑aux </span> <span class="keyword ParameterName OptionalReplaceable">auxiliary_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set used to specify the auxiliary file containing any missing
+MIPT information needed during ITF file translation. This option
+can only be used with ITF file types.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idb9e65d88-a440-4ebb-bb8f-5492352be110"><span class="keyword ParameterName Optional">[-separate] ‑itfmap </span><span class="keyword ParameterName OptionalReplaceable">map_file_name </span>[<span class="keyword ParameterName OptionalReplaceable">map_file_name ... </span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set used with the -itf parameter to convert an ITF file
+with one or more ITF mapping files to an MIPT file (<span class="ph filepath">out.mipt</span>)
+with embedded SVRF mapping and ignore statements. This option can
+only be used with ITF file types.</p>
+<p class="p">Specify the optional -separate argument just before
+the -itfmap argument in the command line to write the SVRF statements
+that would otherwise be found in the <a class="xref fm:HeadingOnly" href="Command_SvrfVerbatim_idcde7bc82.html#idcde7bc82-e560-4856-9d4f-337f966d802f__Command_SvrfVerbatim_idcde7bc82.xml#idcde7bc82-e560-4856-9d4f-337f966d802f" title="An optional global parameter that specifies a text string or text block that allows the insertion of SVRF statements into the calibrated rule file.">svrf_verbatim</a> section of the generated MIPT file (<span class="ph filepath">out.mipt</span>)
+into a separate mapfile called <span class="ph filepath">out.map</span>. </p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Since the
+-separate argument writes the SVRF statements generated by the ITF translator
+to a separate file, any SVRF rules that are converted that would
+have been found in the svrf_verbatim section are not included in
+the calibrated rule files. This may cause changes in expected results.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__idfe576ef4-5730-46f2-b02b-b5f2b9b726d8">-interface <span class="keyword ParameterName OptionalReplaceable">mapfile</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+set that specifies to generate the calibrated rule files for a pair
+of 3DIC components defined in the interface <span class="keyword ParameterName OptionalReplaceable">mapfile</span>.
+3DIC components can be a die, a fanout package, or interposer. See “<a class="xref fm:HeadingAndPage" href="Concept_InterfaceMapfile_id0aecfe3d.html#id0aecfe3d-a0b0-4096-abb3-fe5fde2b0a05__Concept_InterfaceMapfile_id0aecfe3d.xml#id0aecfe3d-a0b0-4096-abb3-fe5fde2b0a05" title="The interface mapfile is used to create an interface MIPT file for a pair of 3DIC components. 3DIC components can be die, fanout package, or interposer.">Interface Mapfile</a>” for more
+information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id5c020a3f-a841-4ded-8acd-fd1bcd64fc70">-interface <span class="keyword ParameterName OptionalReplaceable">dfmdb_path</span> -top <span class="keyword ParameterName OptionalReplaceable">top_filename</span> -bot <span class="keyword ParameterName OptionalReplaceable">bot_filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+set that specifies to generate the calibrated rule files for a set
+of 3DIC component files.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id91ed4986-a1ca-4ad6-8de4-0f401c36077c"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">dfmdb_path</span> —
+Specifies the pathname to the dfmdb directory. This directory contains the
+mapfile generated by Calibre 3DStack. xCalibrate searches the <span class="keyword ParameterName OptionalReplaceable">dfmdb_path</span> and executes
+with the first mapfile encountered. The dfmdb directory name must
+use the .<span class="ph filepath">dfmdb </span>extension. The mapfile names
+in the dfmdb directory must be named <span class="ph filepath">xcalibrate_map</span> or <span class="ph filepath">xcalibrate.map</span>.</p>
+</li>
+<li class="li ArgOption" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id3c862f09-cac9-4207-9dea-38961172e3f4"><p class="p Opt">-top <span class="keyword ParameterName OptionalReplaceable">top_filename</span> —
+Specifies the name of the top (TOP) component MIPT file. An iRCX
+component file can also be specified in place of the MIPT component
+file. </p>
+</li>
+<li class="li ArgOption" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__iddb952ca1-f203-444f-b29f-9a7527755b0a"><p class="p Opt">-bot <span class="keyword ParameterName OptionalReplaceable">bot_filename</span> —
+Specifies the name of the bottom (BOT) component MIPT file. An iRCX
+component file can also be specified in place of the MIPT component
+file. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">To restart the calibration at the
+masterGenerateModel stage, enter the following command line:</p>
+<pre class="pre codeblock leveled"><code>xcalibrate -exec -start masterExecModel techfile.mipt</code></pre><p class="p">The calibration produces:</p>
+<ul class="ul"><li class="li" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id6691a7fe-89bb-4902-8f53-8339b4b97525"><p class="p">a directory called <span class="ph filepath italic">process</span></p>
+</li>
+<li class="li" id="idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__id45046624-a51e-4c1a-933e-eca16e21ca04"><p class="p">encrypted calibrated rule files, <span class="ph filepath italic">rules.R</span>, <span class="ph filepath italic">rules.C</span>,
+and <span class="ph filepath italic">rules.xact</span>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CommandDescriptions_id54c4a1cf.html" title="The xCalibrate tool can be invoked to perform various operations.">Command Descriptions</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xcalibrat_batch_user"
+                DocTitle = "xCalibrate™ Batch User’s Manual"
+                PageTitle = "xcalibrate -exec"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_XcalibrateExec_idbb7ee8af.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">xCalibrate™ Batch User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

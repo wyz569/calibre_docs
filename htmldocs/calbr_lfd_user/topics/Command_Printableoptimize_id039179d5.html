@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="printableoptimize" />
+<meta name="abstract" content="A Calibre WORKbench Tcl command that performs optimization of printable models to be used with the LFD::PrintableCheck and LFD::PrintableBand operations." />
+<meta name="description" content="A Calibre WORKbench Tcl command that performs optimization of printable models to be used with the LFD::PrintableCheck and LFD::PrintableBand operations." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id039179d5-4ee9-455d-afd8-594d31e89c87" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>printableoptimize</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="printableoptimize" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id039179d5-4ee9-455d-afd8-594d31e89c87">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">printableoptimize</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">A Calibre
+WORKbench Tcl command that performs optimization of printable models
+to be used with the LFD::PrintableCheck and LFD::PrintableBand operations.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If you need to cancel
+execution of the printableoptimize command, Control-C does not work.
+Instead, terminate the parent Calibre WORKbench process using the
+“kill -9 <span class="ph FontProperty emphasis">calibrewb_process_id</span>”
+shell command.</p>
+</div>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">printableoptimize</span><br />
+<span class="keyword ParameterName Required">-Input</span><br />
+   <span class="keyword ParameterName Required">layout_system</span> <span class="keyword ParameterName RequiredReplaceable">layout_system_type</span><br />
+   <span class="keyword ParameterName Required">layout_path</span> <span class="keyword ParameterName RequiredReplaceable">layout_path</span><br />
+   <span class="keyword ParameterName Required">layout_primary</span><span class="keyword ParameterName RequiredReplaceable"> layout_primary</span><br />
+   <span class="keyword ParameterName Required">layout_precision</span> <span class="keyword ParameterName RequiredReplaceable">layout_precision</span><br />
+   <span class="keyword ParameterName Required">reference_layer</span> <span class="keyword ParameterName RequiredReplaceable">reference_layer_name</span><br />
+   <span class="keyword ParameterName Required">target_band</span> <span class="keyword ParameterName RequiredReplaceable">contour_layer_name</span><br />
+   <span class="keyword ParameterName Required">dose</span> <span class="keyword ParameterName RequiredReplaceable">dose1</span> <span class="keyword ParameterName RequiredReplaceable">dose2</span><br />
+   <span class="keyword ParameterName Required">optical_modelpath</span> <span class="keyword ParameterName RequiredReplaceable">optical_model_path</span><br />
+   <span class="keyword ParameterName Required">optical_modelname</span> <span class="keyword ParameterName RequiredReplaceable">optical_model_name</span><br />
+<span class="keyword ParameterName Required">-Output</span><br />
+   <span class="keyword ParameterName Required">printable_model_path</span> <span class="keyword ParameterName RequiredReplaceable">printable_model_path</span><br />
+   <span class="keyword ParameterName Required">printable_model_name</span> <span class="keyword ParameterName RequiredReplaceable">printable_model_name</span><br />
+<span class="keyword ParameterName Required">-Constant_parameters</span><br />
+   <span class="keyword ParameterName Required">frame_size</span>  <span class="keyword ParameterName RequiredReplaceable">frame_size</span><br />
+   <span class="keyword ParameterName Required">frame_extra</span>  <span class="keyword ParameterName RequiredReplaceable">frame_extra</span><br />
+   <span class="keyword ParameterName Required">mask_tone </span>{<span class="keyword ParameterName Required">dark</span> | <span class="keyword ParameterName Required">clear</span>}<br />
+   <span class="keyword ParameterName Required">mask_background</span> <span class="keyword ParameterName RequiredReplaceable">transmission_fraction</span> <span class="keyword ParameterName RequiredReplaceable">phase_degrees<br />
+</span>   <span class="keyword ParameterName Required">mask_foreground</span> <span class="keyword ParameterName RequiredReplaceable">transmission_fraction</span> <span class="keyword ParameterName RequiredReplaceable">phase_degrees</span><br />
+<span class="keyword ParameterName Required">-Variable_parameters</span><br />
+   <span class="keyword ParameterName Required">explore</span> <span class="keyword ParameterName RequiredReplaceable">count_unsigned_int</span><br />
+   [mtf_threshold <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [intensity_threshold <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [edge_constraint_offset <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [edge_contrast <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [max_iterations <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [convex_corner_radius <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]<br />
+   [concave_corner_radius <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span>]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id8f88b678-5f69-4c16-9c59-a3b2c84aa56d"><span class="keyword ParameterName Required">-Input</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that marks
+the start of the input parameters for printability model optimization. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idd31997a0-559b-47bc-b835-63e6f65154bc"><p class="p Opt"><span class="keyword ParameterName Required">layout_system</span> <span class="keyword ParameterName RequiredReplaceable">layout_system_type</span></p>
+<p class="p">Required keyword and argument
+defining the type of the input layout file. Refer to the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a> statement
+in the <cite class="cite">Standard Verification Rule Format (SVRF) Manual </cite>for
+further information.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idab6be3f2-246c-4575-93e5-d9967a2d009c"><p class="p Opt"><span class="keyword ParameterName Required">layout_path</span> <span class="keyword ParameterName RequiredReplaceable">layout_path</span></p>
+<p class="p">Required keyword and argument
+defining the path of the input layout file containing the target
+PV-band that is used in the calibration process.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id8636d7d5-5ebe-4cab-9e6c-dc2a802e21d1"><p class="p Opt"><span class="keyword ParameterName Required">layout_primary</span> <span class="keyword ParameterName RequiredReplaceable">layout_primary</span></p>
+<p class="p">Required keyword and number
+used to specify the top-level cell in the layout file. Refer to
+the SVRF <span class="keyword ParameterName Required">Layout Primary</span> statement
+for further information.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idad02fc58-64ed-4dcd-b2b3-01f0ed0c26a6"><p class="p Opt"><span class="keyword ParameterName Required">layout_precision</span> <span class="keyword ParameterName RequiredReplaceable">layout_precision</span></p>
+<p class="p">Required keyword and argument
+defining the precision of the input layout file. Refer to the SVRF <span class="keyword ParameterName Required">Layout Precision</span> statement
+for further information.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id8243ccbf-d090-4d6b-a576-68d3360e79e3"><p class="p Opt"><span class="keyword ParameterName Required">reference_layer</span> <span class="keyword ParameterName RequiredReplaceable">reference_layer_name</span></p>
+<p class="p">Required keyword and argument
+defining the input drawn layer to be manipulated by the optimizer
+to produce PV-bands that match the <span class="keyword ParameterName Required">target_band</span> as
+closely as possible.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id0ce0c24c-196d-49ca-af11-f2d80b924a95"><p class="p Opt"><span class="keyword ParameterName Required">target_band </span> <span class="keyword ParameterName RequiredReplaceable">contour_layer_name</span> </p>
+<p class="p">Required keyword and argument
+defining the reference PV-band which represents the goal for the
+printability-model optimization.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id460dac8c-6ce4-4e48-a3b8-2c1eb8b1fd8d"><p class="p Opt"><span class="keyword ParameterName Required">dose</span> <span class="keyword ParameterName RequiredReplaceable">dose1</span> <span class="keyword ParameterName RequiredReplaceable">dose2</span></p>
+<p class="p">Required keyword and argument
+defining the dose variations at which the intermediate printability
+models generates the PV-bands. These values are mapped to two concurrent
+printability calls, which differ only by the <span class="keyword ParameterName Required">dose</span> parameter.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">dose1</span> and <span class="keyword ParameterName RequiredReplaceable">dose2</span> arguments
+define the minimum and maximum dose variations, and they is typically
+set to approximately 0.95 and 1.05 (+/- 5% respectively).</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id97b521cf-7c86-42ee-9116-60e0ca987146"><p class="p Opt"><span class="keyword ParameterName Required">optical_modelpath</span> <span class="keyword ParameterName RequiredReplaceable">optical_model_path</span></p>
+<p class="p">Required keyword and argument
+defining the path to a valid Calibre optical model.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__iddaf52511-470b-467d-a3b1-77439a2347ff"><p class="p Opt"><span class="keyword ParameterName Required">optical_modelname</span> <span class="keyword ParameterName RequiredReplaceable">optical_model_name</span></p>
+<p class="p">Required keyword and argument
+defining the name of the input optical model whose location is determined
+by the <span class="keyword ParameterName Required">optical_modelpath</span> keyword.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id98a73286-1207-445d-8587-fea25ff947d6"><span class="keyword ParameterName Required">-Output</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that marks
+the start of the output parameters defining the name and the path
+of the output printable model.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idd609411d-b72a-4d15-8fb7-136deba21638"><p class="p Opt"><span class="keyword ParameterName Required">printable_model_path</span> <span class="keyword ParameterName RequiredReplaceable">printable_model_path</span></p>
+<p class="p">Required keyword and argument
+defining the path to the output calibrated printable model.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id2b148443-e1a2-4092-b2bc-def222903445"><p class="p Opt"><span class="keyword ParameterName Required">printable_model_name</span> <span class="keyword ParameterName RequiredReplaceable">printable_model_name</span></p>
+<p class="p">Required keyword and argument
+defining the name of the output calibrated printable model whose
+location is determined by the <span class="keyword ParameterName Required">printable_model_path</span> option.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id6356dd64-0091-4c78-9068-18632ccd4c43"><span class="keyword ParameterName Required">-Constant_parameters</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that marks
+the start of the constant parameters that are not used in the optimization
+process. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id29416b17-efb6-4864-af45-d08088875f66"><p class="p Opt"><span class="keyword ParameterName Required">frame_size </span> <span class="keyword ParameterName RequiredReplaceable">frame_size</span></p>
+<p class="p">Required keyword and argument
+defining the area in which internally printability solves the feasibility
+problem. It is a level of numerical approximation. Lower numbers
+improve performance, however they may cause inaccuracies. The frame
+size is in microns.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id1c879e86-a787-4a56-852a-67ae525192cb"><p class="p Opt"><span class="keyword ParameterName Required">frame_extra </span> <span class="keyword ParameterName RequiredReplaceable">frame_extra</span></p>
+<p class="p">Required keyword and argument
+defining the context area around the <span class="keyword ParameterName Required">frame_size</span>.
+Smaller numbers improve performance, but at convergence and accuracy’s
+expense. The <span class="keyword ParameterName RequiredReplaceable">frame_extra</span> is
+in microns.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id76e8e08e-36cf-4117-a1af-ea1f802f2cc9"><p class="p Opt"><span class="keyword ParameterName Required">mask_tone </span>{<span class="keyword ParameterName Required">dark</span> | <span class="keyword ParameterName Required">clear</span>}</p>
+<p class="p">Required keyword and argument
+defining the <span class="keyword ParameterName OptionalReplaceable">background_is_clear</span> parameter
+in the printableoptimize command. For dark tone: <span class="keyword ParameterName OptionalReplaceable">background_is_clear</span> 0;
+For clear tone: <span class="keyword ParameterName OptionalReplaceable">background_is_clear</span> 1.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id4608729f-d69f-41bc-8c91-30db9d0e1a6f"><p class="p Opt"><span class="keyword ParameterName Required">mask_background</span> <span class="keyword ParameterName RequiredReplaceable">transmission_fraction</span> <span class="keyword ParameterName RequiredReplaceable">phase_degrees</span></p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id48638f2a-a8f7-437b-b62f-b52718621f84"><p class="p Opt"><span class="keyword ParameterName Required">mask_foreground</span> <span class="keyword ParameterName RequiredReplaceable">transmission_fraction</span> <span class="keyword ParameterName RequiredReplaceable">phase_degrees</span></p>
+<p class="p">Required keywords and arguments used to calculate
+the <span class="keyword ParameterName OptionalReplaceable">min_mask_transmission</span> and <span class="keyword ParameterName OptionalReplaceable">max_mask_transmission</span> parameters
+of the printableoptimize command.</p>
+</li>
+</ul>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="#id039179d5-4ee9-455d-afd8-594d31e89c87__id6b3c6e22-ac85-450e-a192-ed2e4ad845c6">Example 2</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id7cfc560e-e729-40ac-bb46-ec30bfbc0155"><span class="keyword ParameterName Required">-Variable_parameters</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that marks
+the start of the variable parameters that are optimized.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__ide4abb9be-1c77-4431-90d4-36fa891fdbee"><p class="p Opt"><span class="keyword ParameterName Required">explore</span> <span class="keyword ParameterName RequiredReplaceable">count_unsigned_int</span></p>
+<p class="p">Required keyword and argument
+defining the number of full explorations to find the optimal parameters.
+Typical values are between 10 and 1000.</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idbe4322d3-7329-4b7c-bab6-6fdd06cb889c"><p class="p Opt">mtf_threshold <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the threshold to use with the MTF. K-vector components
+whose MTF is below this value are <span class="ph FontProperty emphasis">not</span> included
+in the optimization.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for mtf_threshold.</p>
+<p class="p">Example: mtf_threshold 0.0001
+0.1</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id6ccb5157-2eb4-496d-a6ff-fa1739194822"><p class="p Opt">intensity_threshold <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the threshold at which the process is centered. The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for intensity_threshold.</p>
+<p class="p">Example: intensity_threshold
+0.2 0.4</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id60318dcb-5a8a-4e2a-a3e7-cb960e43b895"><p class="p Opt">edge_constraint_offset <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining how much tolerance is on each side. Is comparable to the
+width of the PV-band in general. The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for edge_constraint_offset.</p>
+<p class="p">Example: edge_constraint_offset
+0.002 0.005</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id3dbe7b39-a07c-4cf3-9c65-d36f1e4dc4fd"><p class="p Opt">edge_contrast <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the change of intensity per change in length. The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for edge_contrast.</p>
+<p class="p">Example: edge_contrast 0.001
+0.01</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__ide1b74e0e-3302-44d2-b488-bc5b5a93c7cb"><p class="p Opt">max_iterations <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the maximum number of iterations while solving the LP problem.
+The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for max_iterations.</p>
+<p class="p">Example: max_iterations 10
+20</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id0cfc9b7f-291d-44cc-a738-514e01adfd80"><p class="p Opt">convex_corner_radius <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the softening constraints around convex corners. The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for convex_corner_radius</p>
+<p class="p">Example: convex_corner_radius
+0.04 0.07</p>
+</li>
+<li class="li ArgOption" id="id039179d5-4ee9-455d-afd8-594d31e89c87__idfda9d520-cf3d-4485-840c-63c87d423609"><p class="p Opt">concave_corner_radius <span class="keyword ParameterName OptionalReplaceable">min_real</span> <span class="keyword ParameterName OptionalReplaceable">max_real</span></p>
+<p class="p">Optional keyword and argument
+defining the softening constraints around concave corners. The <span class="keyword ParameterName OptionalReplaceable">min_real</span> and
+the <span class="keyword ParameterName OptionalReplaceable">max_real</span> numbers
+form the range within which the optimizer finds an optimum value
+for concave_corner_radius.</p>
+<p class="p">Example: concave_corner_radius
+0.04 0.07</p>
+</li>
+</ul>
+<p class="p">If any of the variable parameters
+is not mentioned, the package does not optimize it. In such cases,
+the printableoptimize command assigns a constant default value.
+If you want to set a variable parameter to any value other than
+the default value, you have to specify the variable parameter and
+assign both <span class="keyword ParameterName OptionalReplaceable">min_real</span> and <span class="keyword ParameterName OptionalReplaceable">max_real</span> the
+desired value. This is shown in the following example:</p>
+<pre class="pre codeblock leveled"><code>printableoptimize \
+	... 
+	... 
+	-Variable_parameters \ 
+		explore 50 \ 
+		intensity_threshold 0.2 0.4 \ 
+		concave_corner_radius 0.021 0.021 
+ </code></pre><p class="p">In this case the intensity_threshold
+parameter is optimized within the range of 0.2 to 0.4, while the
+concave_corner_radius parameter is not optimized. The value 0.021
+is assigned to the concave_corner_radius parameter instead of the
+default value.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id039179d5-4ee9-455d-afd8-594d31e89c87__ideb228c70-e317-4c7f-b1d4-b3ed84c63796"><h2 class="title Subheading sectiontitle">Example 1</h2><pre class="pre codeblock leveled"><code>printableoptimize \ 
+	-Input \ 
+		layout_system OASIS \ 
+		layout_path ./input/LAYOUT/ref_layout.oas \ 
+		layout_primary ICV_75 \ 
+		layout_precision 4000 \ 
+		reference_layer target 7 \ 
+		target_band target_band 9 \ 
+		dose 1.0 0.90 \ 
+		optical_modelpath ./models \ 
+		optical_modelname M1_D0 \ 
+	-Output \ 
+		printable_model_path “./output” \ 
+		printable_model_name output_model.dat \ 
+	-Constant_parameters \ 
+		frame_size 0.5 \ 
+		frame_extra 0.3 \ 
+		mask_tone dark \ 
+		mask_background 0 0 \ 
+		mask_foreground 1 0 \ 
+	-Variable_parameters \ 
+		explore 50 \ 
+		intensity_threshold 0.2 0.4 \ 
+		edge_constraint_offset 0.002 0.0023 
+ </code></pre></div>
+<div class="section Subsection" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id6b3c6e22-ac85-450e-a192-ed2e4ad845c6"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">Here are some example settings for
+the ‑Constant_parameters arguments:</p>
+<ul class="ul"><li class="li" id="id039179d5-4ee9-455d-afd8-594d31e89c87__ida0a11227-c132-453c-ba7e-bbab692ee320"><p class="p">Binary dark field:</p>
+<pre class="pre codeblock leveled"><code>mask_tone dark 
+mask_background 0 0 
+mask_foreground 1 0 
+ </code></pre></li>
+<li class="li" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id16ea36f4-3ca4-4625-8247-559bade5ddf3"><p class="p">Binary clear field:</p>
+<pre class="pre codeblock leveled"><code>mask_tone clear 
+mask_background 1 0 
+mask_foreground 0 0 
+ </code></pre></li>
+<li class="li" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id7e873ca4-8b23-4572-bccf-c761afff00d6"><p class="p">Attenuated 6% dark field:</p>
+<pre class="pre codeblock leveled"><code>mask_tone dark 
+mask_background 0.06 180 
+mask_foreground 1 0 
+ </code></pre></li>
+<li class="li" id="id039179d5-4ee9-455d-afd8-594d31e89c87__id9f561d00-edde-4e72-8076-2c5bfd4aaed8"><p class="p">Attenuated 6% clear field:</p>
+<pre class="pre codeblock leveled"><code>mask_tone clear 
+mask_background 1 0 
+mask_foreground 0.06 180 
+ </code></pre></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_PrintabilityCommands_id3e49c9b3.html" title="The LFD::PrintableCheck and LFD::PrintableBand operations are used with the printableoptimize Calibre WORKbench Tcl batch command.">Printability Commands</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_Printablecheck_id66b621d1.html#id66b621d1-b3a2-429d-9f3b-07577e959e3a__" title="Categorizes error markers defined in prior checks into either layout-problem or OPC-problem categories.">PrintableCheck</a></div>
+<div><a class="link" href="../topics/Command_Printableband_idd1583c25.html#idd1583c25-e24d-4dfc-a1a7-a998a159510c__" title="Simulates expected lithographic PV-bands in the absence of an RET recipe.">PrintableBand</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "printableoptimize"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Printableoptimize_id039179d5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

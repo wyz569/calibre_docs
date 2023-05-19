@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Using Path Isolation to Debug Shorts" />
+<meta name="abstract" content="Shorts can often be difficult to debug in the context of the whole design. Calibre 3DSTACK includes optional features that can help identify only the physical objects that are involved in a connectivity short." />
+<meta name="description" content="Shorts can often be difficult to debug in the context of the whole design. Calibre 3DSTACK includes optional features that can help identify only the physical objects that are involved in a connectivity short." />
+<meta name="prodname" content="Calibre 3DSTACK User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_3dstack_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® 3DSTACK User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id09824455-7c5a-4218-9500-b7359697c377" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using Path Isolation to Debug Shorts</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using Path Isolation to Debug Shorts" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id09824455-7c5a-4218-9500-b7359697c377">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using Path Isolation to
+Debug Shorts</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Shorts can
+often be difficult to debug in the context of the whole design.
+Calibre 3DSTACK includes optional features that can help identify
+only the physical objects that are involved in a connectivity short.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd5aca3b6-d579-42c0-b3ae-40164672aa67" class="table" frame="hsides" border="1" rules="cols"><colgroup><col style="width:1.081in" /><col style="width:5.419in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p">    <span class="ph FontProperty HeadingLabel">Try It!</span> </p>
+<img class="image fmdpi:96" src="../graphics/try_it_note.png" /></td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre 3DSTACK Debugging Shorts Tutorial and Example Kit (eKit)</span></p>
+<p class="p">This eKit uses example data to demonstrate
+how to find shorts using path isolation in Calibre 3DSTACK. </p>
+<p class="p">Go to <a class="xref" href="http://supportnet.mentor.com/infohub.cfm?infohub=calbr_ih&amp;link=cal_ekit_IC" target="_blank">this page</a> on Support Center
+to download the eKit (Documentation tab, Document Types=Getting
+Started Guide). The link goes to the latest release.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__ide125fbf6-6a95-47b6-aca2-1dbaae72ad1b"><span class="ph cmd">Ensure that your rule file contains a connected
+check, for example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>connected -check_name Connect.Full_Assembly \
+    -comment "Incorrect connection."</code></pre></div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__idaf7910eb-1b4d-4ac8-828f-f573dda42858"><span class="ph cmd">Run Calibre 3DSTACK and open the results in
+Calibre RVE.</span></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__id7e08c739-0066-423a-9be5-61e8c42bcc6e"><span class="ph cmd">In Calibre RVE, right-click the “<var class="keyword varname">connect_check_name</var>”
+check and choose <span class="ph uicontrol">Highlight</span>.</span><div class="itemgroup info StepInfo"><p class="p">In the following figure,
+the path isolation feature has not been enabled and there are 479 connected
+results. Since the results are distributed throughout the layout,
+finding the cause of the short is difficult.</p>
+<div class="fig fignone" id="id09824455-7c5a-4218-9500-b7359697c377__iddde56048-01f0-461e-af5c-e6496d3c4c74"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/isolation_none.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__id47f43fc2-ee34-4081-9510-c47865bec017"><span class="ph cmd">Close Calibre RVE and add the -isolate_path
+option to a connected check in your rules:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>connected -isolate_path …</code></pre></div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__idb4ebf4bb-a997-45eb-acd1-b1fe5e762d8f"><span class="ph cmd">Re-run Calibre 3DSTACK and open the results
+in Calibre RVE.</span><div class="itemgroup info StepInfo"><p class="p">The results now include
+an additional check named <var class="keyword varname">connect_check_name</var>_isolated. </p>
+</div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__id129a57d4-77be-4f90-ad6e-4cea7be44866"><span class="ph cmd">In Calibre RVE, right-click the same “<var class="keyword varname">connect_check_name</var>”
+check that you viewed in the previous run and choose <span class="ph uicontrol">Highlight</span>.</span><div class="itemgroup info StepInfo"><p class="p">The highlighted layout
+now includes only the physical pins associated with the short instead
+of all of the objects on the involved nets.</p>
+<div class="fig fignone" id="id09824455-7c5a-4218-9500-b7359697c377__id750e3126-8aab-43a2-a047-bb0771c932e6"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/isolation_short_pins_highlighted.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__idb5900b31-46fc-4ddf-ae53-9e03370c3572"><span class="ph cmd">Highlight the <var class="keyword varname">connect_check_name</var>_isolated
+check in Calibre RVE.</span><div class="itemgroup info StepInfo"><p class="p">The highlighted path
+now includes only the physical objects associated with the short instead
+of all of the objects on the involved nets.</p>
+<div class="fig fignone" id="id09824455-7c5a-4218-9500-b7359697c377__idcd78c4af-d407-4967-ba8c-e8ac0d2729f9"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/isolation_enabled.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__idbc188bfa-f2c0-4a79-8ed0-777a0553f9ea"><span class="ph cmd">Investigate the most congested areas of the
+path. For example, the following areas should be reviewed for shorts:</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id09824455-7c5a-4218-9500-b7359697c377__id92843a72-9b9a-407f-a1a8-60c1dbc8cd10"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/isolation_suspects.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id09824455-7c5a-4218-9500-b7359697c377__ide0ae2204-8036-4ddc-93ee-90049dbe8cca"><span class="ph cmd">Continue investigating high-density areas until
+you identify all shorts in the design.</span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_Calibre3dstackResultsAnalysisExamples_id7f5f844d.html" title="You can view and analyze verification results produced by Calibre 3DSTACK using a combination of Calibre RVE and Calibre DESIGNrev. Reports in text format are also available after a run.">Calibre 3DSTACK Results Analysis Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_3dstack_user"
+                DocTitle = "Calibre® 3DSTACK User’s Manual"
+                PageTitle = "Using Path Isolation to Debug Shorts"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_UsingPathIsolationToDebugShorts_id09824455.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® 3DSTACK User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

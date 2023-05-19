@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="SVRF Statements Mapped to Compile-Time TVF" />
+<meta name="abstract" content="Most SVRF specification statements, device extraction statements, connectivity extraction operations, and fracture operations are mapped to TVF commands. The initial keyword of the statement is mapped to a command in the tvf:: namespace, with remaining secondary keywords and parameters passed in as arguments. Most layer operations are not mapped to TVF commands but handled instead with the tvf::SETLAYER and tvf::OUTLAYER functions." />
+<meta name="description" content="Most SVRF specification statements, device extraction statements, connectivity extraction operations, and fracture operations are mapped to TVF commands. The initial keyword of the statement is mapped to a command in the tvf:: namespace, with remaining secondary keywords and parameters passed in as arguments. Most layer operations are not mapped to TVF commands but handled instead with the tvf::SETLAYER and tvf::OUTLAYER functions." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id874ec191-f0bd-4efc-a4d4-a0c865c0a461" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>SVRF Statements Mapped to Compile-Time TVF</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="SVRF Statements Mapped to Compile-Time TVF" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id874ec191-f0bd-4efc-a4d4-a0c865c0a461">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">SVRF Statements Mapped to Compile-Time TVF</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Most SVRF specification
+statements, device extraction statements, connectivity extraction operations,
+and fracture operations are mapped to TVF commands. The initial
+keyword of the statement is mapped to a command in the tvf<span class="ph fmvar:double_colon">::</span> namespace, with remaining secondary
+keywords and parameters passed in as arguments. Most layer operations
+are not mapped to TVF commands but handled instead with the tvf<span class="ph fmvar:double_colon">::</span>SETLAYER and tvf<span class="ph fmvar:double_colon">::</span>OUTLAYER functions.</span>
+</div>
+<p class="p">For example, the DRC Select
+Check statement is mapped in TVF as:</p>
+<pre class="pre codeblock leveled"><code>tvf<span class="ph fmvar:double_colon">::</span>DRC SELECT CHECK width_rule</code></pre><p class="p">or</p>
+<pre class="pre codeblock leveled"><code>tvf<span class="ph fmvar:double_colon">::</span>drc Select Check width_rule</code></pre><p class="p">The TVF command name is tvf<span class="ph fmvar:double_colon">::</span>DRC or tvf::drc, with the remainder
+of the SVRF syntax passed as arguments to the command, which the
+SVRF compiler interprets. The arguments after the TVF command name
+are case-insensitive.</p>
+<p class="p">The list of SVRF commands and statement families
+that are mapped to TVF is given in the following table. All commands
+have lowercase versions except SOURCE, TRACE, VARIABLE, and UNIT.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id874ec191-f0bd-4efc-a4d4-a0c865c0a461__idf5d04334-48a2-45a0-9a88-746b6d9683c3" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>SVRF Commands and Statement Families
+Mapped to TVF Commands</span></caption><colgroup><col style="width:1.381in" /><col style="width:1.381in" /><col style="width:1.381in" /><col style="width:1.381in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">ATTACH</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">FLATTEN<span class="ph FontProperty LiteralSuperScript">3</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">MDP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">RESOLUTION</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">CAPACITANCE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">FRACTURE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">MDPMERGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SCONNECT</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">CONNECT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">GROUP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">MDPSTAT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SNAP<span class="ph FontProperty LiteralSuperScript">7</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">COPY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">HCELL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">MDPVERIFY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SOURCE<span class="ph FontProperty LiteralSuperScript">1</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">DBCLASSIFY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">INCLUDE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PARASITIC VARIATION</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SVRF</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">DEVICE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">INDUCTANCE WIRE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PERC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">TEXT</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">DFM</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LABEL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PEX<span class="ph FontProperty LiteralSuperScript">5</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">TITLE</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">DISCONNECT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LAYER</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">POLYGON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">TRACE<span class="ph FontProperty LiteralSuperScript">1</span> PROPERTY</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">DRC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LAYOUT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PORT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">TVF FUNCTION</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">ERC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LITHO<span class="ph FontProperty LiteralSuperScript">4</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PRECISION</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">UNIT<span class="ph FontProperty LiteralSuperScript">1</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">EXCLUDE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LVS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">PUSH<span class="ph FontProperty LiteralSuperScript">6</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">VARIABLE<span class="ph FontProperty LiteralSuperScript">1</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">EXPAND<span class="ph FontProperty LiteralSuperScript">2</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">MASK</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">RESISTANCE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">VIRTUAL</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">FLAG</p>
+</td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"> </td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id874ec191-f0bd-4efc-a4d4-a0c865c0a461__id1ee108dd-8d66-4a0e-89f6-3b8bb4176fee" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:5.850in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty LiteralSuperScript">1</span> SOURCE,
+TRACE, VARIABLE, and UNIT do not have lowercase versions.</p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">2</span> The
+Expand Edge and Expand Text layer operations are not included.</p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">3</span> The
+Flatten layer operation is not mapped.</p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">4</span> Litho
+setup files do not use TVF. </p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">5</span> PEX
+Inductance statements are not included. </p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">6</span> The
+Push layer operation is not included. </p>
+<p class="p"><span class="ph FontProperty LiteralSuperScript">7</span> The
+Snap layer operation is not included.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id874ec191-f0bd-4efc-a4d4-a0c865c0a461__id37b8b2ef-1f83-4305-bba2-8d141724b4df"><h2 class="title Subheading sectiontitle">Layer Operations Mapped to TVF
+Commands</h2><p class="p">Most layer operations are not mapped directly
+to TVF commands. Instead, layer assignment, layer derivation, and
+rule check output is handled with the <a class="xref fm:HeadingOnly" href="Command_Tvfsetlayer_idc7add3b2.html#idc7add3b2-e246-4ced-bf05-2a0adb888d3f__Command_Tvfsetlayer_idc7add3b2.xml#idc7add3b2-e246-4ced-bf05-2a0adb888d3f" title="Used for layer derivation in both compile-time and runtime TVF. The command executes a layer operation and stores the output in a specified layer. Options are available in compile-time TVF to return a list of layers that were derived using the SETLAYER command and to return the layer operation expression for a given layer.">tvf::SETLAYER</a>, <a class="xref fm:HeadingOnly" href="Command_Tvfoutlayer_id0d3b4a7c.html#id0d3b4a7c-2924-4c23-bbef-f0fa2dc10e26__Command_Tvfoutlayer_id0d3b4a7c.xml#id0d3b4a7c-2924-4c23-bbef-f0fa2dc10e26" title="Specifies a layer operation in compile-time and runtime TVF and outputs the results. The output method depends on whether the command is called in runtime or compile-time TVF.">tvf::OUTLAYER</a>, and <a class="xref fm:HeadingOnly" href="Command_Tvfrulecheck_id2e157e95.html#id2e157e95-5346-4669-b579-fe492d7f2f91__Command_Tvfrulecheck_id2e157e95.xml#id2e157e95-5346-4669-b579-fe492d7f2f91" title="Denotes a Calibre nmDRC rule check in compile-time TVF.">tvf::RULECHECK</a> TVF commands and the layer operation
+is passed in as command arguments. </p>
+<p class="p">However, exceptions exist for the Copy operation
+and the DFM and MDP families of layer operations. For example, you
+may use “tvf<span class="ph fmvar:double_colon">::</span>COPY <span class="keyword ParameterName OptionalReplaceable">layer</span>”
+instead of “tvf<span class="ph fmvar:double_colon">::</span>OUTLAYER Copy <span class="keyword ParameterName OptionalReplaceable">layer</span>”
+within a tvf<span class="ph fmvar:double_colon">::</span>RULECHECK
+body for results output. The tvf::SETLAYER command must still be
+used for layer assignment. </p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Concept_LayerDefinitionsAssignments_id3a6803af.html#id3a6803af-3240-4989-b0ca-75e693c962c6__Concept_LayerDefinitionsAssignments_id3a6803af.xml#id3a6803af-3240-4989-b0ca-75e693c962c6" title="The tvf::SETLAYER command is used to assign derived layers to a new layer name.">Layer Definitions and Assignments</a>” and “<a class="xref fm:HeadingAndPage" href="Concept_MappingSvrfCommandsTvf_id2ee1b278.html#id2ee1b278-47ce-47ad-9397-8c1ad06f4548__Concept_MappingSvrfCommandsTvf_id2ee1b278.xml#id2ee1b278-47ce-47ad-9397-8c1ad06f4548" title="SVRF specification statements and layer operations are handled differently in TVF commands due to the different way in which the commands can appear in the SVRF language.">Mapping of SVRF Commands to TVF</a>” for additional information.</p>
+</div>
+<div class="section Subsection" id="id874ec191-f0bd-4efc-a4d4-a0c865c0a461__idedd44492-3314-4c60-ae24-6b09f667c0ae"><h2 class="title Subheading sectiontitle">Example: SVRF to TVF Translation</h2><p class="p">This example shows how SVRF specification
+statements are translated into TVF commands.</p>
+<p class="p">SVRF: </p>
+<pre class="pre codeblock leveled"><code>Layout System GDSII        // (1) use of case insensitivity 
+Layout Path $input_layout  // (2) use of environment variable for pathname
+Layout Primary TOP</code></pre><pre class="pre codeblock leveled"><code>Source System SPICE        // (3) "source" is a Tcl command
+Source Path $input_source
+Source Primary TOP</code></pre><p class="p">TVF:</p>
+<pre class="pre codeblock leveled"><code>tvf<span class="ph fmvar:double_colon">::</span>layout System GDSII
+# (1) use all upper- or lowercase letters for command names; 
+# "System GDSII" are parameters passed to the tvf<span class="ph fmvar:double_colon">::</span>layout command and 
+# are not case-sensitive
+tvf<span class="ph fmvar:double_colon">::</span>LAYOUT PATH $env(input_layout)
+# (2) Tcl environment variable mechanism
+tvf<span class="ph fmvar:double_colon">::</span>LAYOUT PRIMARY TOP</code></pre><pre class="pre codeblock leveled"><code>tvf<span class="ph fmvar:double_colon">::</span>SOURCE System SPICE
+# (3) SOURCE must be uppercase to avoid collision with Tcl source command
+tvf<span class="ph fmvar:double_colon">::</span>SOURCE PATH $env(input_source)
+tvf<span class="ph fmvar:double_colon">::</span>SOURCE PRIMARY TOP</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CompileTimeTvfFileElements_id1041a485.html" title="A compile-time TVF file includes a required opening line and elements for layer definitions, specification statements, rule checks, comments, and other TVF commands. The file can include Tcl procs and standard Tcl constructs such as loops, conditional statements, and lists.">Compile-Time TVF File Elements</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_SvrfStatementsNotMappedTvf_iddbeea102.html#iddbeea102-ad7f-47b3-8d58-060c86fef000__" title="The PEX Inductance family of statements is not mapped to TVF. This is the only family of specification statements for which this is true. Most layer operations are not mapped to TVF commands.">SVRF Statements Not Mapped to TVF</a></div>
+<div><a class="link" href="../topics/Concept_LayerDefinitionsAssignments_id3a6803af.html#id3a6803af-3240-4989-b0ca-75e693c962c6__" title="The tvf::SETLAYER command is used to assign derived layers to a new layer name.">Layer Definitions and Assignments</a></div>
+<div><a class="link" href="../topics/Concept_RuleChecksInCompileTimeTvf_id8e74f476.html#id8e74f476-e1b0-4b05-93af-f5782c8fc896__" title="The SVRF rule check construct is handled with the tvf::RULECHECK command in compile-time TVF. Rule checks in SVRF have user-given names, so the SVRF syntax cannot be used in TVF.">Rule Checks in Compile-Time TVF</a></div>
+<div><a class="link" href="../topics/Contain_CompileTimeTvfFileElements_id1041a485.html#id1041a485-4952-4b9b-b488-438f4bff923d__" title="A compile-time TVF file includes a required opening line and elements for layer definitions, specification statements, rule checks, comments, and other TVF commands. The file can include Tcl procs and standard Tcl constructs such as loops, conditional statements, and lists.">Compile-Time TVF File Elements</a></div>
+<div><a class="link" href="../topics/Concept_MappingSvrfCommandsTvf_id2ee1b278.html#id2ee1b278-47ce-47ad-9397-8c1ad06f4548__" title="SVRF specification statements and layer operations are handled differently in TVF commands due to the different way in which the commands can appear in the SVRF language.">Mapping of SVRF Commands to TVF</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "SVRF Statements Mapped to Compile-Time TVF"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_SvrfStatementsMappedCompileTimeTvf_id874ec191.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Stage With the Flow Stage Wizard" />
+<meta name="abstract" content="Stages represent simulation and calibration commands in a job. When you create a stage with the Flow Stage Wizard, you define simulation commands and set parameters and optimizer settings for an optimization run. Calibration jobs can be run independently, or can be linked with the results of another calibration job." />
+<meta name="description" content="Stages represent simulation and calibration commands in a job. When you create a stage with the Flow Stage Wizard, you define simulation commands and set parameters and optimizer settings for an optimization run. Calibration jobs can be run independently, or can be linked with the results of another calibration job." />
+<meta name="prodname" content="Calibre® nmModelflow™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all" />
+<meta name="HighlightColor" content="Pale Blue" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmdf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® nmModelflow™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id04f111af-a783-4272-a968-ee346ff5c713" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Stage With the Flow Stage Wizard</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Stage With the Flow Stage Wizard" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id04f111af-a783-4272-a968-ee346ff5c713">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating
+a Stage With the Flow Stage Wizard</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Stages represent
+simulation and calibration commands in a job. When you create a
+stage with the Flow Stage Wizard, you define simulation commands
+and set parameters and optimizer settings for an optimization run.
+Calibration jobs can be run independently, or can be linked with
+the results of another calibration job. </span>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id04f111af-a783-4272-a968-ee346ff5c713__id00367daf-82d6-4871-b737-d89bda0c61db"><span class="ph cmd">Raise the <span class="ph uicontrol">Database
+Browser</span> tab in the list of primary display tabs. </span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id04f111af-a783-4272-a968-ee346ff5c713__id827370da-2f05-4b5d-9f38-1546f9219dda"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Starting the Flow
+Stage Wizard</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/raise_database_browser_stage.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id04f111af-a783-4272-a968-ee346ff5c713__ida04e6683-c1c8-4bc9-ad03-76029b699db2"><span class="ph cmd">Click <span class="ph uicontrol">Stage</span> in
+the left column. </span></li>
+<li class="li step stepexpand" id="id04f111af-a783-4272-a968-ee346ff5c713__ide5210d8c-3492-436c-a973-00ef59f8f64e"><span class="ph cmd">Click the <span class="ph uicontrol">Add Calibration
+Stage</span> button. </span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id04f111af-a783-4272-a968-ee346ff5c713__id456700df-3b04-4e5a-a61d-106ad5ca8652"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:140" src="../graphics/stage_add_calibration.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id04f111af-a783-4272-a968-ee346ff5c713__id5ac98e7d-89a2-4d6d-b005-6fff0915621c"><span class="ph cmd">In the Select Stage Type wizard,
+choose the type of stage to create, then click <span class="ph uicontrol">Next</span>. </span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id04f111af-a783-4272-a968-ee346ff5c713__idf97150ac-cded-46d1-b7a1-84b748f93470"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Select Stage Type
+Dialog</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:108" src="../graphics/flow_stage_wizard_ml.png" /></div><br /></div>
+<p class="p">Each type you select configures
+a different set of options relevant to the stage type. Some options
+require additional configuration choices; other options are preset
+options that cannot be changed. </p>
+<p class="p">Some stages bring up the Optimizer
+Settings wizard, which enables you to select optimizer options.
+The contents of the wizard vary depending on what you chose as the stage
+type.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id04f111af-a783-4272-a968-ee346ff5c713__id0775f832-c376-4e80-a247-14e06e0998d3" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Flow Stage Wizard Choices </span></caption><colgroup><col style="width:2.367in" /><col style="width:1.932in" /><col style="width:2.201in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d53783e217"><p class="p">Type</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d53783e220"><p class="p">Description</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d53783e223"><p class="p">Notes</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d53783e217 d53783e220 d53783e223 "><p class="p"><span class="ph FontProperty HeadingLabel">Calibrate Group</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Calibrate</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id5b163bf6-d9cd-4242-a728-6cd0f414e8f6"><p class="p">Mask</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id2491bcbb-7589-4acd-8502-a2e14aaafdfa"><p class="p">Optics</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id207187a2-c849-4b22-a6f3-7bc9847c4cfa"><p class="p">Etch</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idce62567a-808b-4e2e-be08-d3906472e2e1"><p class="p">ZPlanes</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id9f6898c2-df6a-4142-a418-d5702a74ab60"><p class="p">Resist</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id05716924-2dcd-4b78-8918-c28dbe356cc2"><p class="p">EUV Black Border
+(described in the <a class="xref LinkItalic" href="../../calbr_wbench_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Setting up an EUV Calibration Stage', 'calbr_wbench_useref'); return false;">Calibre WORKbench User’s and Reference Manual</a>)</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id27c0c973-6fd0-4b3e-bb45-9787341f5c2e"><p class="p">TOPO</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idc65668c0-0d79-46bd-970f-3d5d4b0b2051"><p class="p">N2R</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id3c1cd0e6-da53-4ecc-8d56-99b943f4c6ec"><p class="p">N2E</p>
+</li>
+</ul>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a calibration
+run similar to a CM1 Center run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idb4ee0668-8aa1-47c7-b323-0d04b1a23762"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardMaskCalibration_id64168615.html#id64168615-b5e5-4d37-b841-bc9c3d5c1c98__GUIRefT_FlowStageWizardMaskCalibration_id64168615.xml#id64168615-b5e5-4d37-b841-bc9c3d5c1c98" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Mask check box selected.">Flow Stage Wizard, Mask Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idae6636b4-59e8-43b4-86d3-154f316c81f9"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardOpticsCalibration_idf434d6d7.html#idf434d6d7-b769-41d3-b3df-73becc645ce9__GUIRefT_FlowStageWizardOpticsCalibration_idf434d6d7.xml#idf434d6d7-b769-41d3-b3df-73becc645ce9" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Optics check box selected. It sets the calibration parameters for the optical model.">Flow Stage Wizard, Optics Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id543741ad-8b44-4bb4-b203-8fd000a85722"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardZplanesCalibration_ida7c30cb1.html#ida7c30cb1-eb14-4bdb-9ce2-d5b9be8d6358__GUIRefT_FlowStageWizardZplanesCalibration_ida7c30cb1.xml#ida7c30cb1-eb14-4bdb-9ce2-d5b9be8d6358" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the ZPlanes check box selected. It sets the calibration parameters for the ZPlanes model.">Flow Stage Wizard, ZPlanes Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idb457e1f7-a90e-4bd8-ad9e-5b816b6ec9a9"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardResistCalibration_id4977c4e0.html#id4977c4e0-010e-4f43-bdd2-cd82d1ce105c__GUIRefT_FlowStageWizardResistCalibration_id4977c4e0.xml#id4977c4e0-010e-4f43-bdd2-cd82d1ce105c" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Resist check box selected.">Flow Stage Wizard, Resist Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id7be7d516-a299-452d-a06a-983c502706df"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardTopoCalibration_id44d231e2.html#id44d231e2-ad10-4100-af8f-2992ccfb178f__GUIRefT_FlowStageWizardTopoCalibration_id44d231e2.xml#id44d231e2-ad10-4100-af8f-2992ccfb178f" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the TOPO check box selected. Additionally, Topo signals terms can be set when the default Fasttopo value is set to 2 (the default).">Flow Stage Wizard, TOPO Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id0309e00b-2254-4e89-bfca-6a194c259065"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardEtchCalibration_id9cb90003.html#id9cb90003-ea1a-4433-89a1-3b9f69f3aa32__GUIRefT_FlowStageWizardEtchCalibration_id9cb90003.xml#id9cb90003-ea1a-4433-89a1-3b9f69f3aa32" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Etch check box selected.">Flow Stage Wizard, Etch Calibration</a></p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idd3eb4266-cef9-498c-9e00-97dbfe7841e3"><p class="p">“<a class="xref fm:HeadingAndPage" href="GUIRefT_FlowStageWizardN2RN2ECalibration_ida826d6d5.html#ida826d6d5-03dd-439e-a5eb-c31ad8f94707__GUIRefT_FlowStageWizardN2RN2ECalibration_ida826d6d5.xml#ida826d6d5-03dd-439e-a5eb-c31ad8f94707" title="This wizard appears when you choose the N2R or N2E checkboxes in the Calibrate section of the Stage Wizard dialog.">Flow Stage Wizard, N2R/N2E Calibration</a>”</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">CDSA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a CDSA calibration stage.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">Creates additional screens to load CDSA
+files. See the <a class="xref LinkItalic" href="../../calbr_dsa_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_dsa_useref'); return false;">Calibre Directed Self-Assembly User’s and Reference Manual</a>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d53783e217 d53783e220 d53783e223 "><p class="p"><span class="ph FontProperty HeadingLabel">Simulate Group</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Simulate</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a simulation
+run. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Simulate with Etch</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a simulation run with etch simulation added.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">Select between absolute and relative etch
+simulation on the secondary wizard screen.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Simulate Gridshift</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Adds calculated grid shift information to
+the results.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">Opens a subpanel with options for the “mdf
+simulate gridshift” command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d53783e217 d53783e220 d53783e223 "><p class="p"><span class="ph FontProperty HeadingLabel">Center Focus Group</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Defocus Start Search + Center Focus on Through-Focus
+Data</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Adjusts both defocus_start and beamfocus
+as a single stage.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__ide30e205c-2d98-4c7e-b4e5-209ed37f996a"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardDefocusStartSearchAndCenterFocusOnThroughFocusData_id949590f6.html#id949590f6-31cd-417e-b93e-90ab48bf9240__GUIRefT_FlowStageWizardDefocusStartSearchAndCenterFocusOnThroughFocusData_id949590f6.xml#id949590f6-31cd-417e-b93e-90ab48bf9240" title="This stage optimizes beamfocus by optimizing defocus_start independently and then minimizing the mean focus shift. This option is used for process window configurations where the focus center is determined as the parabolic fit to the through-focus CD at each dose.">Flow Stage Wizard, Defocus Start Search and Center Focus on Through-Focus Data</a></p>
+</li>
+</ul>
+<p class="p">Used with process window data only.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Defocus Start Search + Center Focus on Nominal
+Data</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Similar to the Defocus Start Search + Center Focus
+on Through-Focus Data option, but for single focus conditions. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id4a5979e5-9e7d-41af-bbd4-a7af8899524d"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardDefocusStartSearchAndCenterFocusOnNominalData_idc273e3e9.html#idc273e3e9-2d67-4e5f-abc1-252dbed9cb72__GUIRefT_FlowStageWizardDefocusStartSearchAndCenterFocusOnNominalData_idc273e3e9.xml#idc273e3e9-2d67-4e5f-abc1-252dbed9cb72" title="This stage optimizes beamfocus by optimizing defocus_start independently and then minimizing the mean focus shift. This option is used for a single focus condition.">Flow Stage Wizard, Defocus Start Search and Center Focus on Nominal Data</a></p>
+</li>
+</ul>
+<p class="p">Used only with nominal condition data.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Center Focus By Bossung
+Adjust on Nominal Data</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Similar to the Center
+Focus By Bossung Adjust option, but allows you to specify a desired
+focus center.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id83df5bde-c902-492f-b21a-8f1040175dfa"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnNominalData_id2df48c8f.html#id2df48c8f-4d83-41b5-8f99-98751728d108__GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnNominalData_id2df48c8f.xml#id2df48c8f-4d83-41b5-8f99-98751728d108" title="This wizard appears when you choose the Center Focus By Bossung Adjust on Nominal Data option of the Stage Wizard.">Flow Stage Wizard, Center Focus By Bossung Adjust on Nominal Data</a></p>
+</li>
+</ul>
+<p class="p">Used only with nominal condition data. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Center Focus By Bossung
+Adjust on Through-Focus Data</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Adjusts the beamfocus
+by minimizing the mean focus shift value after running a Bossung
+filter on the initial data. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idf6a0f330-cc62-4559-aeea-8ad42d70454a"><p class="p"><a class="xref fm:HeadingOnly" href="GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnThroughFocusData_id6bc0aa55.html#id6bc0aa55-5755-45db-a0c6-8fa2e3d3793b__GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnThroughFocusData_id6bc0aa55.xml#id6bc0aa55-5755-45db-a0c6-8fa2e3d3793b" title="This wizard appears when you choose either the Center Focus By Bossung Adjust on Through-Focus Data option in the Stage Wizard.">Flow Stage Wizard, Center Focus By Bossung Adjust on Through-Focus Data</a></p>
+</li>
+</ul>
+<p class="p">Used with process window data only. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Beamfocus/Defocus Start
+Full Search + Center Focus on Through Focus Data </p>
+<p class="p">(Formerly <span class="keyword ParameterName OptionalReplaceable">MGC Best Practice for Beam Focus / Defocus Calibration</span>)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a beamfocus and defocus
+calibration run with preset commands, using best practice settings that
+are current for the release.</p>
+<p class="p">These commands require focus-sensitive process window
+gauges. The stage uses a CTR model and applies Bossung adjustments
+after calibration. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d53783e217 d53783e220 d53783e223 "><p class="p"><span class="ph FontProperty HeadingLabel">Build Group</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">CTR Threshold Optimize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up an optimization
+run for the threshold with a CTR (modelform 0) model.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Stochastic Optimize</p>
+<p class="p">(described in the <a class="xref LinkItalic" href="../../calbr_wbench_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibrating Stochastic Models in Calibre nmModelflow', 'calbr_wbench_useref'); return false;">Calibre WORKbench User’s and Reference Manual</a>)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a run where the included stochastic
+model is calibrated for use with the associated CM1 model.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">You are prompted to select which stochastic
+parameter to optimize and the search bounds.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Threshold Optimize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up an optimization
+run for the default resist model.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See <a class="xref fm:HeadingOnly" href="Concept_FlowStageWizardBuildGroup_idfcfdbb4a.html#idfcfdbb4a-1ac3-4cb3-8a3d-c47dd6b86864__Concept_FlowStageWizardBuildGroup_idfcfdbb4a.xml#idfcfdbb4a-1ac3-4cb3-8a3d-c47dd6b86864" title="Wizard stages in this group optimize and build results using the litho model specified for the stage.">Flow Stage Wizard, Build Group</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Build TOPO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a run in which linear
+and quadratic topological model terms are tuned.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Build Resist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a run where the resist
+model is rebuilt by optimizing linear term coefficients and the
+model threshold.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Build Etch</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Sets up a run where the etch
+model is rebuilt by optimizing linear term coefficients and a constant bias.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard
+screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Pattern Specific Kernel Optimize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Builds an improved model by optimizing a
+subset of the gauges.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_OptimizingResultsWithPatternSpecificKernels_idba00b2c9.html#idba00b2c9-74bd-43d3-9da9-98df861f6d8e__TaskTop_OptimizingResultsWithPatternSpecificKernels_idba00b2c9.xml#idba00b2c9-74bd-43d3-9da9-98df861f6d8e" title="After completing a calibration run, you may have a number of features with large simulation errors. Creating Pattern Specific Kernels (PSK) allows you to fix the high simulation error gauges in a targeted fashion.">Optimizing Results With Pattern-Specific Kernels</a>”</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p"><span class="ph FontProperty HeadingLabel">Etch Bias Table Generation</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Creates an etch bias table for use with
+Calibre Rule-Based OPC.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See “<a class="xref fm:HeadingAndPage" href="GUIRefT_FlowStageWizardEtchBiasTableGeneration_id44fa93d3.html#id44fa93d3-a2ca-43bd-9b61-e9b499144d1a__GUIRefT_FlowStageWizardEtchBiasTableGeneration_id44fa93d3.xml#id44fa93d3-a2ca-43bd-9b61-e9b499144d1a" title="An etch bias table is used by the Calibre nmBIAS BIASRULE command to move edge fragments based on their critical dimension measurement during OPC. Calibre nmModelflow uses the Etch Bias Table Generation wizard to create tables based on your input.">Flow Stage Wizard, Etch Bias Table Generation</a>”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d53783e217 d53783e220 d53783e223 "><p class="p"><span class="ph FontProperty HeadingLabel">Gauges Optimization Section</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Center and Resize Gauges
+for Optimal Runtime</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Using this option is recommended. </p>
+</div>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">When selected, this option adjusts
+gauge lengths to optimize runtime while maintaining accuracy.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_CenteringGauges_id24e49a74.html#id24e49a74-6e42-429f-91ed-421e26a38587__TaskTop_CenteringGauges_id24e49a74.xml#id24e49a74-6e42-429f-91ed-421e26a38587" title="Calibre nmModelflow has the capability to recenter gauges that may not be aligned well with the geometry of the associated target layer.">Centering Gauges</a>” for more
+information on the options activated when you select this checkbox.</p>
+<p class="p">No additional wizard screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Gauges Symmetrize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Adds an “mdf gauges symmetrize” command
+to the stage.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_AdjustingGaugeSymmetry_id74acf896.html#id74acf896-137e-4f89-8931-f43fd5387dc2__TaskTop_AdjustingGaugeSymmetry_id74acf896.xml#id74acf896-137e-4f89-8931-f43fd5387dc2" title="You may need to adjust gauge locations when gauges are not correctly placed in the position where the CDs are actually measured on the wafer. Gauges that are poorly placed near line ends (A), corners (B), and 45 degree edges of contours (C) may give unexpected EPE results.">Adjusting Gauge Symmetry</a>” for more information
+on this operation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Calculate MEEF</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">When selected, this option calculates the
+mask error enhancement factor (MEEF).</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">No additional wizard screens are created.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">CM1 Model Analysis</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Adds CM1 resist model analysis information
+to the results.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">Available only when <span class="ph uicontrol">OPC &gt; Calibrate
+&gt; Resist</span>, <span class="ph uicontrol">OPC &gt; Simulate</span>, or <span class="ph uicontrol">OPC
+&gt; Build &gt; Build Resist</span> are selected.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Model Consistency Check</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Activates additional consistency check functionality. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><p class="p">See the Results section.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e217 "><p class="p">Model Quality Check</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e220 "><p class="p">Activates a post-calibration check for model
+quality using 95% CI values.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d53783e223 "><ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idd58bfa99-50d9-408f-81ca-3c303e85a233"><p class="p">Adds a User
+Metrics section to the Calibration Job Report.</p>
+<p class="p">See the Results section.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id1780c864-5022-4cb0-a0b7-211bbee8039f"><p class="p">Also adds MEEF, CtrMEEF,
+MeefQ, and ErrCIQ columns to the resulting gauge object.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+<li class="li step stepexpand" id="id04f111af-a783-4272-a968-ee346ff5c713__id33488aeb-6331-481c-a10a-ed16096bc2c2"><span class="ph cmd">The final screen of the Flow
+Stage Wizard displays the commands that Calibre nmModelflow runs
+in a calibration job that uses that stage when you click <span class="ph uicontrol">Finish</span>.</span><div class="itemgroup info StepInfo"><p class="p">Optionally, you can click <span class="ph uicontrol">Edit</span> before
+you click <span class="ph uicontrol">Finish</span> and add or modify commands that
+might not be available as GUI choices, but can be found on the online
+help. Some example options are:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id2bf0fd60-0d1f-4e9f-9301-de2bc707964d"><p class="p"><span class="ph FontProperty HeadingLabel">mdf optimize set_resist metrics on</span> —
+Causes Calibre nmModelflow to generate metrics for each iteration
+(the default is off, which only calculates metrics on the final
+set of data).</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id5475a45b-eae5-4550-a089-69b3f6a0ce69"><p class="p"><span class="ph FontProperty HeadingLabel">mdf optimize set_resist cleartodarkfieldctl off</span> —
+Deactivates the automatic generation of clear-to-dark field cutlines
+(they are automatically included by default in order to prevent
+printing of extra holes in large geometries).</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id5baada1a-0493-475a-ac53-0c00a21befe1"><p class="p"><span class="ph FontProperty HeadingLabel">mdf optimize set_resist gridshiftconsistency</span> —
+Activates grid shift consistency checks for a resist model stage.
+Available options are:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id58e4a61a-7788-4f60-9ce5-a911358d7690"><p class="p">-shiftnum <span class="keyword ParameterName OptionalReplaceable">value</span> —
+Specifies checks at the specified number of intervals (S<span class="ph FontProperty LiteralSubScript">max</span>/<span class="keyword ParameterName OptionalReplaceable">value</span>)
+in both x and y directions.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id74bb7aea-be01-4947-aca7-f82535df8f31"><p class="p">-xshiftnum <span class="keyword ParameterName OptionalReplaceable">value</span> -yshiftnum <span class="keyword ParameterName OptionalReplaceable">value</span> —
+A pair of parameters that checks the specified number of intervals
+(S<span class="ph FontProperty LiteralSubScript">max</span>/<span class="keyword ParameterName OptionalReplaceable">value</span>)
+separately for X and Y directions. </p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id0e5a00e0-8ae6-4155-af8a-2fccd8eba72a"><p class="p">-shiftmax <span class="keyword ParameterName OptionalReplaceable">mult</span> —
+The maximum gridshift value to check, using the formula S<span class="ph FontProperty LiteralSubScript">max</span>= <span class="keyword ParameterName OptionalReplaceable">mult</span> *
+Nyquist_optical_pixel_size.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__ideee615d0-d355-43e3-b1ce-a82fdf59c35f"><p class="p">-shiftweight <span class="keyword ParameterName OptionalReplaceable">value</span> —
+The weight of the grid shift simulation data in the objective function.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idd8eb1734-4782-4938-8974-3be579d5009a"><p class="p">-obj_type {rms | tol | inspec} — Specifies the
+objective metric:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idb2481846-0d01-448c-817f-9df888416608"><p class="p">rms — Square root of of the sum of the squares
+of the difference between the grid shifted CDs and average CDs across
+all of the shifts.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id889c071b-c6b3-4733-b904-c6420c71db05"><p class="p">tol — Error tolerance based objective of norm
+1. Uses the precision arguments (-prec1D and -prec2D, which must
+be positive values).</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id5722a6f7-f24d-47ae-94fd-111a9d9d54df"><p class="p">inspec — Percentage of gauges that meet the gridshift
+consistency criteria set using the precision arguments (-prec1D
+and -prec2D).</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id8a644954-1787-4578-9828-6994c95ca95a"><p class="p">-prec1D and -prec2D — Gridshift consistency tolerance
+for 1D and 2D gauges, respectively.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id8efec9f4-60d9-4478-b844-ce180b346461"><p class="p"><span class="ph FontProperty HeadingLabel">mdf optimize set_resist mem_report</span> —
+Adds a memory usage report to the output for resist stages that
+include contour calibration. Available arguments are:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idf0b84f9b-e199-4b21-af23-80a9558e3465"><p class="p">off — Never
+prints memory report (default behavior).</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id2b445762-6463-4493-831a-37dbb23da2e1"><p class="p">on — Prints
+the estimated memory requirement before calibration, and continues the
+calibration as usual.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idbd946100-e09f-4f12-b05b-f87ed8dab1e5"><p class="p">printonly —
+Only prints the estimated memory requirement without running the calibration.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">A new entry is added to the Stage
+table in the database.</p>
+<p class="p">If you selected the Model Consistency Check option (or added
+the mdf optimize do_consistency_check on command to a script), the
+resulting calibration job report contains additional information
+in the CONSISTENCY REPORT and 1D/2D CONSISTENCY REPORT sections:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__ida878bb83-a621-490f-9fee-5774e13149a1"><p class="p"><span class="ph FontProperty HeadingLabel">OPCV CS1</span> —
+Data calculated using the Calibre nmOPC simulation_consistency 1 setting.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id94dcf322-e359-440a-80af-d5a1e6b98e2a"><p class="p"><span class="ph FontProperty HeadingLabel">OPCV CS3</span> —
+Data calculated using the Calibre nmOPC simulation_consistency 3 setting.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id1c6c885c-dfa5-44be-b74f-9e132232d25b"><p class="p"><span class="ph FontProperty HeadingLabel">OPCV BP</span> —
+Data calculated using the current Calibre OPCverify 2018.4 best
+practices settings for DUV: </p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idf83b3714-08b9-4c84-a739-d0a61d7b0030"><p class="p">imagegrid
+aerial 3 8</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id51198556-ee0b-45e5-88e8-7169bc0b4ac4"><p class="p">final_upsample
+1</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id3c3dfdfa-c828-4623-a528-19188ddf7a46"><p class="p">optical_transform_size
+768</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id013062da-97ee-4f34-aff0-3b34560e5164"><p class="p">contour_options
+interp_algo cubic</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idcf192167-1724-4443-8d82-9513b2722ac0"><p class="p">In addition,
+the CD CONSISTENCY REPORT shows a comparison between each of the data
+values as optimized versus Try:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idfa4fba5a-5b53-456a-b26d-3ccb17c0d858"><p class="p">OPCV_CS1-TRY,
+OPCV_CS3-TRY, and OPCV_BP-TRY for DUV </p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idb35dbbc0-0e05-43ac-a496-771a0126e091"><p class="p">OPC EUV and
+OPCV EUV for EUV</p>
+</li>
+</ul>
+<p class="p">If you included the mdf optimize set_resist gridshiftconsistency
+command in your resist calibration stage, a separate “OPTIMIZE Gridshift
+consistency objective” entry is added to the final report.</p>
+<p class="p">DUV results can be viewed and used as filters in the <span class="ph uicontrol">Gauge
+Analysis</span> tab as the Cs1Diff, Cs2Diff, and BpDiff columns,
+respectively. </p>
+<p class="p">EUV results are output as the OpcEuvDiff and OPCvEuvDiff columns,
+and use modified Calibre OPCverify settings:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idc8ea8b4f-96ff-412e-98ac-7efd66ff9ec7"><p class="p">rasterizer_upsample_factor
+2 1</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__idca94afbc-09bd-47a4-a903-8217486a7e79"><p class="p">imagegrid aerial
+1 1</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id7e61ce0d-6088-4647-90fe-064dda1f39fe"><p class="p">final_upsample
+1</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id17b469e2-c22c-4322-ad70-2406d88ec6f7"><p class="p">optical_transform_size
+1024</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id6e89a70e-5ecd-4991-ace8-f147544ea33b"><p class="p">contour_options
+interp_algo lagrange interp_degree 5 </p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">If you selected the Model Quality Check option, the resulting
+calibration job report contains additional information in the USER
+METRICS section:</p>
+<ul class="ul"><li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id6ba7a9c0-f42a-456c-a5bf-098319ae22f6"><p class="p">Mean (MeefQ)
+for CtrlMEEF or MEEF values larger than 0.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id625d7195-f594-479b-9f03-267c458a241e"><p class="p">Sum of any
+95% CI values greater than 0.</p>
+</li>
+<li class="li" id="id04f111af-a783-4272-a968-ee346ff5c713__id30f69895-eda0-476e-91f2-10e2a9fd43dc"><p class="p">Sum of ErrCIQ
+for 95% CI values greater than 0.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_StageCreation_idbf6d670c.html" title="After you have litho models, gauges, and layouts in your database, you create stages to operate on them. Multiple types of stages are available in Calibre nmModelflow.">Stage Creation</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardMaskCalibration_id64168615.html" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Mask check box selected.">Flow Stage Wizard, Mask Calibration</a></div>
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardOpticsCalibration_idf434d6d7.html" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Optics check box selected. It sets the calibration parameters for the optical model.">Flow Stage Wizard, Optics Calibration</a></div>
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardResistCalibration_id4977c4e0.html" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Resist check box selected.">Flow Stage Wizard, Resist Calibration</a></div>
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardEtchCalibration_id9cb90003.html" title="This wizard appears when you choose the Calibrate option of the Stage Wizard with the Etch check box selected.">Flow Stage Wizard, Etch Calibration</a></div>
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnThroughFocusData_id6bc0aa55.html" title="This wizard appears when you choose either the Center Focus By Bossung Adjust on Through-Focus Data option in the Stage Wizard.">Flow Stage Wizard, Center Focus By Bossung Adjust on Through-Focus Data</a></div>
+<div><a class="link" href="../topics/GUIRefT_FlowStageWizardCenterFocusByBossungAdjustOnNominalData_id2df48c8f.html" title="This wizard appears when you choose the Center Focus By Bossung Adjust on Nominal Data option of the Stage Wizard.">Flow Stage Wizard, Center Focus By Bossung Adjust on Nominal Data</a></div>
+<div><a class="link" href="../topics/TaskTop_PerformingCm1ModelAnalysis_id3c05f6b1.html" title="Calibre nmModelflow stages that include a CM1 resist model can have additional analysis information added to the job results. This information can be used to simplify the model (by reducing the number of terms in the model) such that it simulates faster with a very similar result.">Performing CM1 Model Analysis</a></div>
+<div><a class="link" href="../topics/TaskTop_SettingUpCalibrationJob_id48961e80.html" title="Calibration jobs are the core of optimization for Calibre nmModelflow. You must set up a calibration job in order to generate output.">Setting up a Calibration Job</a></div>
+<div><a class="link" href="../topics/Concept_FastRigorousModelFRMConsiderations_idac93f842.html" title="The Fast Rigorous Model (FRM) is designed for use with CM1 resist models. It interacts with other resist model settings during the creation of a calibration stage, and may result in a different version of the active model.">Fast Rigorous Model (FRM) Considerations</a></div>
+<div><a class="link" href="../topics/FileRef_FastRigorousModelFrmFileFormat_ide507c4ed.html" title="The Fast Rigorous Model (FRM) is a compact resist model used for full chip simulations. It can be used in place of or in conjunction with the CM1 resist model. It is not intended for 3D resist simulations.">Fast Rigorous Model (FRM) File Format</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmdf_useref"
+                DocTitle = "Calibre® nmModelflow™ User’s and Reference Manual"
+                PageTitle = "Creating a Stage With the Flow Stage Wizard"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingAStageWithTheFlowStageWizard_id04f111af.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmModelflow™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

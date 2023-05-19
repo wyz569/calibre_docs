@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="DBdiff Usage Examples" />
+<meta name="abstract" content="The DBdiff invocation syntax depends on the type of library and the information that you want to report." />
+<meta name="description" content="The DBdiff invocation syntax depends on the type of library and the information that you want to report." />
+<meta name="prodname" content="Calibre Layout Comparison and Translation Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="DBdiff, FastXOR, fdi2gds, fdi2oasis, and fdiBA" />
+<meta name="SourceHandle" content="calbr_lvl_fdi_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Layout Comparison and Translation Guide" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida010f0b5-8f6a-4178-8955-3297d2d6924d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DBdiff Usage Examples</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DBdiff Usage Examples" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DBdiff
+Usage Examples</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The DBdiff
+invocation syntax depends on the type of library and the information
+that you want to report.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idfd34c8e8-8b42-4b62-816d-01737d50707d"><p class="p">The following examples demonstrate the syntax
+for different DBdiff operations.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id48d1bef0-9aab-4a5b-b196-5eace35881cf" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>DBdiff Usage Examples</span></caption><colgroup><col style="width:3.205in" /><col style="width:3.294in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d56555e186"><p class="p">Example</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d56555e189"><p class="p">Command Line</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idd0d64810-13ad-4524-8674-273a9c160a4c">Compare Two Homogeneous Databases with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system GDS -refsystem GDS   ‑design DIGBLK.gds 
+  -refdesign DIGBLK2.gds</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idac2871a1-5e38-454c-95e6-d9237a656d0b">Compare Two Heterogeneous Databases with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system GDS -refsystem OASIS   ‑design DIGBLK.gds 
+  -refdesign DIGBLK2.oas</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id3fef47bf-70bb-4fb8-bd08-23024c415484">Compare LEF designs with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system LEFDEF 
+  -lef tech.lef NEW/DAC.lef 
+  -reflef tech.lef OLD/DAC.lef 
+  -report dbdiff_lef.report 
+  -rdb DAC_lef_comparison.rdb</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id267b6c06-dea9-4d1a-9669-f08a8108de48">Generate an ASCII Comparison Report with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system GDS 
+  -design DIGBLK.gds TOPCELL 
+  -refdesign DIGBLK2.gds TOPCELL 
+  -report digblk.report</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id425f9c98-7482-49c3-aaef-b30abaa9196d">Generate a Calibre RVE Results Database (RDB) File with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system GDS 
+  -design DIGBLK_v2.gds DIGBLK 
+  -refdesign DIGBLK_v1.gds DIGBLK
+  -rdb digblk.rdb</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idb3a8264c-3f65-4576-9017-667658df2071">Use -automatch with pcells in DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff -system GDS 
+  -design DIGBLK_v2.gds DIGBLK 
+  -refdesign DIGBLK_v1.gds 
+  -automatch automatch_file.txt 
+  -multimatch</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id8176fc8b-6abb-43e8-8fb4-e3f5f2a4ac12">Handling Hierarchy Changes in DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock leveled"><code>dbdiff -system GDS -design ip.gds TOP  
+  -refdesign chip.gds CHIP 
+  -automatch -multimatch -nocompare  
+  -report ip_check.report </code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__iddf58a7fb-facb-4a79-a0e1-365e368b3f2c">Use -automatch to identify Third-Party IP in a Database with DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock leveled"><code>dbdiff -system GDS -design ip.gds TOP  
+  -refdesign chip.gds CHIP 
+  -automatch -multimatch -nocompare   ‑report ipcheck.report</code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idc963ddfa-12f2-4dd0-b19e-11447cf933e1">Errors when using ‑write_xor_rules with CURrent and REFerence in DBdiff</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><p class="p">N/A</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id746ab295-1b1f-453e-9229-4c4ec0eabdf3">DBdiff -enhanced option output</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><p class="p">N/A</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e186 "><p class="p"><a class="xref fm:HeadingOnly" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id3b63d821-5482-494d-9b5a-3e4c027148dd">Write XOR Usage Example</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d56555e189 "><pre class="pre codeblock"><code>dbdiff … -write_xor_rules</code></pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idd0d64810-13ad-4524-8674-273a9c160a4c"><h2 class="title Subheading sectiontitle">Compare Two Homogeneous
+Databases with DBdiff</h2><p class="p">The following example compares two databases
+together using the DBdiff application:</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -design DIGBLK.gds TOPCELL -refdesign DIGBLK2.gds TOPCELL</code></pre><p class="p">The DBdiff output shows the two designs are
+different.</p>
+<pre class="pre codeblock leveled"><code>//  Calibre dbdiff v2013.3_8.0008 Wed Jul 24 13:24:23 PDT 2013 
+// 
+//                  Copyright Mentor Graphics Corporation 2008-2013 
+//                             All Rights Reserved. 
+//         THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION 
+//             WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION 
+//               OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS. 
+// 
+//  Mentor Graphics software executing under x86-64 Linux 
+//  64 bit virtual addressing enabled 
+
+READING DESIGN DIGBLK.gds ELAPSED TIME = 0 
+READING DESIGN DIGBLK2.gds ELAPSED TIME = 0 
+COMPARING DESIGNS 
+
+COMPARED CELL NewCell with NewCell(REF DESIGN) 
+CELLS COMPLETE = 1 OF 2  ELAPSED TIME = 1 
+COMPARED CELL TOPCELL with TOPCELL(REF DESIGN) 
+CELLS COMPLETE = 2 OF 2  ELAPSED TIME = 1
+ 
+<span class="ph CodeHighlight orange">Cells in comparison are DIFFERENT </span>
+
+Data Read Time  :: 0 Seconds 
+Compare Time    :: 1 Seconds
+ 
+************** Summary Report ************************ 
+
+
+Total Elapsed Time      :: 1 Seconds 
+Peak Virtual Memory     :: 33.69 MB</code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idac2871a1-5e38-454c-95e6-d9237a656d0b"><h2 class="title Subheading sectiontitle">Compare Two Heterogeneous
+Databases with DBdiff</h2><p class="p">The following example compares two different
+types of databases together using the DBdiff application:</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -refsystem OASIS -design DIGBLK.gds -refdesign  DIGBLK2.oas</code></pre><p class="p">The DBdiff output shows the two heterogeneous
+designs are different.</p>
+<pre class="pre codeblock leveled"><code>//  Calibre dbdiff v2013.3_8.0008 Wed Jul 24 13:24:23 PDT 2013 
+// 
+//                  Copyright Mentor Graphics Corporation 2008-2013 
+//                             All Rights Reserved. 
+//         THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION 
+//             WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION 
+//               OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS. 
+// 
+// 
+//  Mentor Graphics software executing under x86-64 Linux 
+// 
+//  Command: $MGC_HOME/bin/dbdiff -system GDS -design DIGBLK_6x6.gds  ‑refsystem OASIS  -refdesign DIGBLK_6x6_rev2.oas  
+
+READING DESIGN DIGBLK_6x6.gds ELAPSED TIME = 0 
+READING DESIGN DIGBLK_6x6_rev2.oas ELAPSED TIME = 3 
+
+COMPARING DESIGNS 
+
+<span class="ph CodeHighlight orange">TOP CELL TOPCELL AND TOPCELL (REF DESIGN) ARE DIFFERENT 
+MISSING TOP CELL IN CURRENT DESIGN TOP_WB27 
+MISSING TOP CELL IN CURRENT DESIGN TOP_WB41 
+MISSING TOP CELL IN CURRENT DESIGN TOP_WB49 
+</span>
+DESIGNS IN COMPARISON ARE DIFFERENT 
+
+
+Data Read Time  :: 4 Seconds 
+Compare Time    :: 2 Seconds 
+
+************** Summary Report ************************ 
+
+
+Total Elapsed Time      :: 6 Seconds 
+Total Elapsed CPU Time  :: 6 Seconds 
+Peak Virtual Memory     :: 225.46 MB</code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id3fef47bf-70bb-4fb8-bd08-23024c415484"><h2 class="title Subheading sectiontitle">Compare LEF designs with
+DBdiff</h2><p class="p">The following example demonstrates how to
+compare two LEF designs using DBdiff:</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system LEFDEF \
+	-lef tech.lef NEW/DAC.lef \
+	-reflef tech.lef OLD/DAC.lef \
+	-report dbdiff_lef.report -rdb DAC_lef_comparison.rdb</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">To achieve the best results, it is recommended to first
+translate third-party databases to GDS or OASIS before running a
+comparison.</p>
+</div>
+<p class="p">In this example, new metal shapes are placed
+on the M5 layer of the new DAC design. The generated report describes
+the differences in detail:</p>
+<pre class="pre codeblock leveled"><code>//  dbdiff v2014.2_x 
+
+Current   Lib Name : tech.lef NEW/DAC.lef 
+Reference Lib Name : tech.lef OLD/DAC.lef 
+MGC_HOME	 	    :   /&lt;calibre_install&gt;/ 
+HostName 	   	 :    hostname 
+Time 			    :   Thu Apr 17 13:01:31 2014 
+
+TOP CELL DETECTED IN CURRENT DESIGN  : dac6_op2 
+TOP CELL DETECTED IN REFERENCE DESIGN  : dac6_op2 
+
+… 
+
+In below table * ,if any ,denotes the difference in the instance due to Master Cell change  
+------------------------------ Difference Table ------------------------- 
+| Design | Cell Name| Difference| Type      | Bounding Box             |… 
+| Current| dac6_op2 | New Object |Rectangle |71255   76140  161950   79130  
+| Current| dac6_op2 | New Object |Rectangle | 71255    4665   72755   10640  
+
+************** Summary Report**************************************  
+
+****************Shape difference summary begin*************************** 
+Layer  Datatype  NewObjs  MissingObjs  TotalDiffObjs  DesignObjs  RefdesignObjs    TotalObjs   Change (%)  
+10        0         2        0             2               2               0               2      100.00         
+****************Shape difference summary end**************************** 
+
+****************Different cells summary begin**************************** 
+
+CellName            ReferenceCellName    
+
+dac6_op2            dac6_op2             
+****************Different cells summary end****************************** 
+
+Command Line Executed  : dbdiff -system LEFDEF -lef tech.lef NEW/DAC.lef ‑reflef tech.lef OLD/DAC.lef -report dbdiff_lef.report 
+-rdb DAC_lef_comparison.rdb 
+
+Total Elapsed Time      :: 1 Seconds 
+Total Elapsed CPU Time  :: 0 Seconds 
+Peak Virtual Memory     :: 61.05 MB </code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id267b6c06-dea9-4d1a-9669-f08a8108de48"><h2 class="title Subheading sectiontitle">Generate an ASCII Comparison
+Report with DBdiff</h2><p class="p">The following example generates an ASCII
+report highlighting the differences between the two layout databases:</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -design DIGBLK.gds TOPCELL -refdesign DIGBLK2.gds TOPCELL -report digblk.report</code></pre><p class="p">In this example, a new polygon on layer 1
+was added to DIGBLK, and a polygon on layer 1 was removed.</p>
+<pre class="pre codeblock leveled"><code>//  dbdiff v2013.3_8.008  
+
+Current   Lib Name :   DIGBLK.gds 
+Current   Top Cell :   TOPCELL 
+Reference Lib Name :   DIGBLK2.gds 
+Reference Top Cell :   TOPCELL 
+MGC_HOME                    :   /mynet/my_dir/Mgc_home 
+HostName                    :    my_host 
+Time                        :   Wed Jul 31 13:52:09 2013 
+
+<span class="ph CodeHighlight orange">In table * ,if any ,denotes the difference in the instance due to Master Cell change 
+------------------------------ Difference Table -------------------------
+| Design  |Cell Name |   Difference |      Type  |          Bounding Box |Layer | DataType | 
+
+| Current | TOPCELL |     New Object | Rectangle | 800  1100   900  1700 |    1 |  0       | 
+| Current | TOPCELL | Missing Object | Rectangle |   0     0    10    10 |    1 |  0       | 
+</span>
+************** Summary Report************************************** 
+
+Command Line Executed  : dbdiff -system GDS -design DIGBLK.gds TOPCELL 
+-refdesign DIGBLK2.gds TOPCELL -report /mynet/dir/calibre/digblk.report 
+
+Total Elapsed Time      : 3 Seconds 
+Total Elapsed CPU Time      : 0 Seconds 
+Peak Virtual memory: 33.69 MB</code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id425f9c98-7482-49c3-aaef-b30abaa9196d"><h2 class="title Subheading sectiontitle">Generate a Calibre RVE
+Results Database (RDB) File with DBdiff</h2><p class="p">The following example shows how to use the
+DBdiff application to generate a RDB output file digblk.rdb.</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -design DIGBLK_v2.gds DIGBLK -refdesign DIGBLK_v1.gds DIGBLK -rdb digblk.rdb</code></pre><p class="p">To view the layout differences in Calibre
+RVE, follow these steps:</p>
+<ol class="ol"><li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id4f5b512e-1dcb-4947-8baa-04de0e0869a8"><p class="p">Open
+the design being evaluated in a supported layout viewer.</p>
+</li>
+<li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idef94682d-f5ba-42ce-8065-9bd2d14a82c4"><p class="p">Start
+Calibre RVE, using <span class="ph menucascade"><span class="ph uicontrol">Verification</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Start RVE</span></span> from DESIGNrev, or
+using <span class="ph menucascade"><span class="ph uicontrol">Calibre</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Start
+RVE</span></span> from other supported layout viewers.</p>
+</li>
+<li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id531ba4c5-e6ea-4b1b-bfaf-0dfe4d5111fb"><p class="p">In the
+Calibre RVE dialog box, select <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Open Database</span></span>. Enter the name
+of the RDB in the database field and select a database type of DRC/ERC.
+The layout differences are shown as checks in Calibre RVE. See “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Using Calibre RVE for DRC', 'calbr_rve_user'); return false;">Using Calibre RVE for DRC</a>” in the <cite class="cite">Calibre RVE User’s Manual</cite>.</p>
+</li>
+</ol>
+</div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idb3a8264c-3f65-4576-9017-667658df2071"><h2 class="title Subheading sectiontitle">Use -automatch
+with pcells in DBdiff</h2><p class="p">If your design contains pcells, the names
+generated in the GDS file when these pcells are streamed out are
+cellname$$&lt;number&gt;. If you generate two versions of the same
+design, the number at the end of the pcell name can be different.
+By default, DBdiff interprets these pcells to be different even
+though they are geometrically identical.</p>
+<p class="p">Follow these steps to use the
+‑automatch option to enable DBdiff to interpret these pcells as being
+the same:</p>
+<ol class="ol"><li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id27982d36-ddfe-46d2-b19f-7784b76ec79c"><p class="p">Create
+the automatch driver file. Create the file automatch_file.txt, and
+enter the following line: </p>
+<pre class="pre codeblock leveled"><code>*$$* *$$*</code></pre><p class="p">This string instructs DBdiff to apply automatching
+between any cell in the reference design that contains $$ and any
+cell in the current design that contains $$.</p>
+</li>
+<li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id6e18d8b6-4433-44b5-8a30-76bbd2eccea1"><p class="p">If the
+cell names have changed between design versions, you may want to
+add an additional second line to the file as shown:</p>
+<pre class="pre codeblock"><code>*$$* *$$*</code></pre><pre class="pre codeblock"><code>* *</code></pre><p class="p">This instructs automatch to first try to
+automatch any cells that have $$ and then to try to match all other
+cells afterwards. </p>
+</li>
+<li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idf32157a9-9669-456f-b0ad-ee419df88ef6"><p class="p">Run
+DBdiff:</p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -design DIGBLK_v2.gds DIGBLK -refdesign DIGBLK_v1.gds -automatch automatch_file.txt -multimatch</code></pre></li>
+</ol>
+</div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id8176fc8b-6abb-43e8-8fb4-e3f5f2a4ac12"><h2 class="title Subheading sectiontitle">Handling
+Hierarchy Changes in DBdiff</h2><p class="p">A change in the design hierarchy can result
+in many differences being reported by DBdiff. Flattening the hierarchy
+may give a better match between the two designs. You can use the ‑flattencell
+option to provide DBdiff with a more equal hierarchy for comparing
+the two designs. </p>
+<p class="p">The following figure illustrates a case when
+you might want to use the ‑flattencell option:</p>
+<div class="fig fignone" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idcfbd5db3-85d4-41ac-9982-aeee71533489"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Hierarchy Changes</span><br /><div class="imagecenter"><img class="image imagecenter" height="144" src="../graphics/dbdiff5.png" width="365" /></div><br /></div>
+<p class="p">In <a class="xref fm:Figure" href="#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idcfbd5db3-85d4-41ac-9982-aeee71533489">Figure 1</a> the cell block_eco has been added to
+the hierarchy in the current design. Without the ‑flattencell option,
+this design change causes DBdiff to report the entire region of
+block_eco as a difference. </p>
+<p class="p">To instruct DBdiff to flatten the cell block_eco,
+add this command line option:</p>
+<pre class="pre codeblock leveled"><code>-flattencell <span class="keyword ParameterName OptionalReplaceable">flatten_file</span></code></pre><p class="p">where <span class="ph filepath">flatten_file</span> is
+a text file with this line in it:</p>
+<pre class="pre codeblock leveled"><code>block_eco current</code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__iddf58a7fb-facb-4a79-a0e1-365e368b3f2c"><h2 class="title Subheading sectiontitle">Use -automatch to identify
+Third-Party IP in a Database with DBdiff</h2><p class="p">Follow this process to find a known golden
+cell or IP cell named my_ip in your current design. The current
+design is named chip.gds with a top-level cell name of CHIP. </p>
+<ol class="ol"><li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id66ae4049-4034-464e-8816-613102b9da92"><p class="p">Create
+a new layout database named ip.gds and instantiate the cell my_ip
+in the top level. </p>
+</li>
+<li class="li" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id980b16b2-12c5-4681-a306-9a2fe2fc9825"><p class="p">Run
+DBdiff with the ‑automatch and ‑nocompare options: </p>
+<pre class="pre codeblock leveled"><code>dbdiff -system GDS -design ip.gds TOP \ 
+-refdesign chip.gds CHIP -automatch -multimatch -nocompare \ 
+-report ip_check.report  </code></pre><p class="p">In the transcript, you should see the automatching
+information about matching cells: </p>
+<pre class="pre codeblock leveled"><code>... 
+AUTOMATCHED CELLS my_ip TO cell_1
+AUTOMATCHED CELLS my_ip TO cell_2
+GEOMETRICALLY EQUIVALENT CELL SETS IN CURRENT DESIGN
+SET 1 (
+cell_1
+cell_2
+)  
+...  </code></pre><p class="p">Or, you can find the same information in
+the report file: </p>
+<pre class="pre codeblock leveled"><code>...
+ Automatching Report Start: 
+---------------- AutoMatched Cell Table -----------------------
+Current design cellname | Reference design cellname  
+my_ip | cell_1
+my_ip | cell_2 
+GEOMETRICAL EQUIVALENT CELLS IN CURRENT DESIGN  
+SET 1 (
+cell_1
+cell_2
+) Automatching report End ...  </code></pre></li>
+</ol>
+<p class="p">This indicates that DBdiff found two geometric
+matches (cell_1 and cell_2) for my_ip in chip.gds. </p>
+<p class="p">You can use the ‑include_layer option to
+do the same comparison but focus on specific layers such as poly
+or diffusion. The cell matching process takes place only on the
+layers specified in the ‑include_layer list.</p>
+</div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__idc963ddfa-12f2-4dd0-b19e-11447cf933e1"><h2 class="title Subheading sectiontitle">Errors when using ‑write_xor_rules
+with CURrent and REFerence in DBdiff</h2><p class="p">If the layer map file contains this:</p>
+<pre class="pre codeblock leveled"><code>1   0 A    CUR 
+2   0 A    CUR 
+3   0 A    CUR 
+6   0 A    REF 
+5   2 C    REF 
+10  2 met1 </code></pre><p class="p">Then an error is generated for layer number
+10. If one of the lines uses the CUR or REF keyword, then all of
+them must.</p>
+<p class="p">If the final line of the layer map file is
+removed, then the generated rule file would be this:</p>
+<pre class="pre codeblock leveled"><code>LAYER  MAP  1      DATATYPE 0  65535 
+LAYER  MAP  2      DATATYPE 0  65534 
+LAYER  MAP  3      DATATYPE 0  65533 
+LAYER  MAP  106    DATATYPE 0  65531 
+LAYER  A    65535  65534  65533 
+LAYER  B_A  65531 
+DRC CHECK MAP A GDSII 1 0 "rules.gds" 
+DRC CHECK MAP A ASCII 
+  A { @ compare layer A 
+        XOR A  B_A 
+}</code></pre><p class="p">A warning is issued for layer number 5. Layer
+C is specified as a REF layer, but not a CUR layer.</p>
+</div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id746ab295-1b1f-453e-9229-4c4ec0eabdf3"><h2 class="title Subheading sectiontitle">DBdiff -enhanced option
+output</h2><p class="p">Here is an example output when the -enhanced
+option is used. Notice the inclusion of the NOT operations.</p>
+<pre class="pre codeblock leveled"><code>LAYER MAP 1 DATATYPE 0 65535 
+LAYER MAP 16 DATATYPE 0 65534 
+LAYER L1_D0 65535 
+LAYER B_L1_D0 65534 
+DRC CHECK MAP L1_D0 GDSII 1 0 "rules.gds" 
+DRC CHECK MAP L1_D0 ASCII 
+L1_D0 { @ compare layer 1 datatype 0 
+        XOR L1_D0 B_L1_D0 
+} 
+//=============================================== 
+DRC CHECK MAP L1_D0_NEW_SHAPES GDSII 65535 0 "rules.gds" 
+DRC CHECK MAP L1_D0_NEW_SHAPES ASCII 
+L1_D0_NEW_SHAPES { @ New shapes in layout path on layer 1 datatype 0 
+L1_D0 NOT B_L1_D0 
+} 
+//============================================== 
+DRC CHECK MAP L1_D0_MISSING_SHAPES GDSII 65534 0 "rules.gds" 
+DRC CHECK MAP L1_D0_MISSING_SHAPES ASCII 
+L1_D0_MISSING_SHAPES { @ missing shapes in layout path on layer 1 datatype 0 
+B_L1_D0 NOT L1_D0 
+} 
+//========================================= </code></pre></div>
+<div class="section Subsection" id="ida010f0b5-8f6a-4178-8955-3297d2d6924d__id3b63d821-5482-494d-9b5a-3e4c027148dd"><h2 class="title Subheading sectiontitle">Write XOR Usage Example</h2><p class="p">The rule file created with the ‑write_xor_rules
+argument includes the following SVRF specification statements:</p>
+<pre class="pre codeblock leveled"><code>LAYOUT ERROR ON INPUT NO 
+DRC KEEP EMPTY NO 
+DRC CELL NAME YES CELL SPACE XFORM 
+DRC MAXIMUM RESULTS ALL 
+LAYOUT USE DATABASE PRECISION YES 
+LAYOUT PROCESS BOX RECORD YES 
+LAYOUT INPUT EXCEPTION SEVERITY DATATYPE_MAP_TARGET 2 </code></pre><p class="p">If the -include_rules option is used, then
+these statements are written to the output rule file:</p>
+<pre class="pre codeblock leveled"><code>DRC CELL NAME YES CELL SPACE XFORM 
+DRC MAXIMUM RESULTS ALL 
+LAYOUT PROCESS BOX RECORD YES 
+LAYOUT INPUT EXCEPTION SEVERITY DATATYPE_MAP_TARGET 2 </code></pre><p class="p">in addition to the statements specified in
+the -include_rules file.</p>
+<p class="p">For additional information on the generated
+rule file, see the section “<a class="xref fm:HeadingAndPage" href="TaskTop_GeneratingLvlComparisonRuleFile_idf1a4d959.html#idf1a4d959-112c-45e5-be72-e31926dbc12b__TaskTop_GeneratingLvlComparisonRuleFile_idf1a4d959.xml#idf1a4d959-112c-45e5-be72-e31926dbc12b" title="Produce an LVL rule file using DBdiff. The rule file employs XOR rule checks to find differences between two designs. The layers used in the layouts are assumed to correspond by number.">Generating the LVL Comparison Rule File</a>”.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_GettingStartedWithDbdiff_idba3cd241.html" title="DBdiff provides a summary of differences between two layout databases. Differences are written to a report file and an optional Calibre results database. The application can also generate XOR rules for use with standard XOR or FastXOR.">Getting Started with DBdiff</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/General_DbdiffErrorWarningMessages_id640e452c.html#id640e452c-8ab8-4a02-9f64-2185c37d4d4c__" title="Use these error and warning summary tables to debug errors in DBdiff.">DBdiff Messages</a></div>
+<div><a class="link" href="../topics/Command_WriteXorRulesCommandLineSyntax_idcc5e1dc0.html#idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__" title="The -write_xor_rules DBdiff command syntax is used for automatic generation of XOR rules.">Write XOR Rules Command Line Syntax</a></div>
+<div><a class="link" href="../topics/Concept_InputOutput_idfdfb0854.html#idfdfb0854-a737-433e-bf81-c2509dd13b12__" title="DBdiff accepts GDS and OASIS databases in addition to the supported third-party layout databases.">Input and Output</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lvl_fdi_gd"
+                DocTitle = "Calibre® Layout Comparison and Translation Guide"
+                PageTitle = "DBdiff Usage Examples"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_DbdiffUsageExamples_ida010f0b5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Layout Comparison and Translation Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

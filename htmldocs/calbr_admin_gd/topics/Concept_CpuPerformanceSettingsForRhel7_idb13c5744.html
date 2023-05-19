@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="CPU Performance Settings for RHEL 7" />
+<meta name="abstract" content="If you experience a performance degradation when running Calibre on an RHEL 7 operating system, there is a utility and profile available with RHEL 7 that you can use to improve performance." />
+<meta name="description" content="If you experience a performance degradation when running Calibre on an RHEL 7 operating system, there is a utility and profile available with RHEL 7 that you can use to improve performance." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb13c5744-746d-48ee-993d-0efcaaaca608" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CPU Performance Settings for RHEL 7</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CPU Performance Settings for RHEL 7" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb13c5744-746d-48ee-993d-0efcaaaca608">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CPU Performance Settings
+for RHEL 7</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">If you experience a performance degradation
+when running Calibre on an RHEL 7 operating system, there is a utility
+and profile available with RHEL 7 that you can use to improve performance.</span>
+</div>
+<p class="p">In RHEL 7, there is a daemon process named “tuned”
+that monitors connected devices and tunes system settings according
+to a selected profile. You may experience a performance degradation
+with Calibre depending on the profile you are using. RHEL 7 includes
+a utility named “<a class="xref" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/performance_tuning_guide/sect-red_hat_enterprise_linux-performance_tuning_guide-tool_reference-tuned_adm" target="_blank">tuned-adm</a>” that you can
+use to modify the active profile on a physical system. To use the
+tuned-adm utility, the tuned daemon process must be running and
+the utility must be executed as root.</p>
+<p class="p">A server profile named “throughput-performance” is included with
+RHEL 7 that focuses on improving throughput and is recommended for
+most systems. To view the currently activated profile, enter the
+following command:</p>
+<pre class="pre codeblock"><code># /sbin/tuned-adm active</code></pre><p class="p">If the throughput-performance profile is active, you will see
+the following message:</p>
+<pre class="pre codeblock"><code>Current active profile: throughput-performance</code></pre><p class="p">If Calibre detects that tuned-adm exists on the host machine,
+and the performance profile is not set to throughput-performance
+(or virtual-guest on VMs, where this setting cannot be changed),
+then this warning is given in the transcript:</p>
+<pre class="pre codeblock"><code>WARNING: Please enable throughput-performance profile for best performance</code></pre><p class="p">To activate the throughput-performance profile, enter the following
+command:</p>
+<pre class="pre codeblock"><code># /sbin/tuned-adm profile throughput-performance</code></pre><p class="p">For more information on tuned, refer to the <a class="xref LinkItalic" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Performance_Tuning_Guide/chap-Red_Hat_Enterprise_Linux-Performance_Tuning_Guide-Tuned.html" target="_blank">RHEL
+7 Performance Tuning Guide</a>. Also see the tuned-adm “man”
+page.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreConfigurationInformation_idb037386f.html" title="Configuration tasks may include configuring virtual machines in order to run older versions of Calibre on newer hardware, monitoring multithreaded Calibre runs, and configuring the log file output.">Calibre Configuration Information</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "CPU Performance Settings for RHEL 7"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CpuPerformanceSettingsForRhel7_idb13c5744.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

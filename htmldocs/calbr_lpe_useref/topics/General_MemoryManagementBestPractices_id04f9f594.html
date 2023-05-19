@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Memory Management Best Practices" />
+<meta name="abstract" content="A common cause of a hung or failed run is not enough memory on the remote hosts. The settings summarized here make the best use of memory on remote hosts, allowing even triple-patterning LPE-pxOPC runs to complete." />
+<meta name="description" content="A common cause of a hung or failed run is not enough memory on the remote hosts. The settings summarized here make the best use of memory on remote hosts, allowing even triple-patterning LPE-pxOPC runs to complete." />
+<meta name="DC.subject" content="Multi-patterning, Memory best practices, Virtual cores, Hyperscaling, Full-chip best practices" />
+<meta name="keywords" content="Multi-patterning, Memory best practices, Virtual cores, Hyperscaling, Full-chip best practices" />
+<meta name="prodname" content="Calibre LPE User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre LPE User's and Reference Manual" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lpe_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsinChangeLog" content="All" />
+<meta name="HighlightColor" content="Light Blue" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="NONE" />
+<meta name="DraftDate" content="March 20, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Local Printability Enhancement User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id04f9f594-81de-485e-906d-7aeabaf0dbfb" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Memory Management Best Practices</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Memory Management Best Practices" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id04f9f594-81de-485e-906d-7aeabaf0dbfb">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Memory Management Best Practices</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">A common cause of a hung or failed
+run is not enough memory on the remote hosts. The settings summarized
+here make the best use of memory on remote hosts, allowing even
+triple-patterning LPE-pxOPC runs to complete.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id04f9f594-81de-485e-906d-7aeabaf0dbfb__id38d0b09d-8f9f-4480-95e3-7d5dc2bcbf2c"><h2 class="title Subheading sectiontitle">Disable
+SMT</h2><p class="p">Simultaneous multithreading (SMT) treats each physical core as
+two logical CPU cores (one physical and one virtual). The processor
+causes the operating system to behave as if there are twice as many
+CPU cores. This halves the available memory per core. See the cautions
+in “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Simultaneous Multithreading With Virtual CPUs', 'calbr_admin_gd'); return false;">Simultaneous Multithreading With Virtual CPUs</a>” in the <cite class="cite">Calibre Administrator’s Guide</cite>.</p>
+<p class="p">To turn off SMT, set the environment variable CALIBRE_MT_SMT_FACTOR
+to 0.</p>
+<p class="p">If you are using hyperscaling, you must additionally disable
+SMT in the remote configuration file. Ensure the remote configuration
+file contains the following line:</p>
+<pre class="pre codeblock"><code>HYPER SMTFACTOR 0</code></pre><h2 class="title Subheading sectiontitle">C Shell</h2><pre class="pre codeblock"><code>% setenv CALIBRE_MT_SMT_FACTOR 0</code></pre><h2 class="title Subheading sectiontitle">Bourne/Korn Shell</h2><pre class="pre codeblock"><code>$ CALIBRE_MT_SMT_FACTOR=0
+$ export CALIBRE_MT_SMT_FACTOR</code></pre></div>
+<div class="section Subsection" id="id04f9f594-81de-485e-906d-7aeabaf0dbfb__idd884524a-2eae-4086-8d07-f4811111865d"><h2 class="title Subheading sectiontitle">Use
+SOCS Shared Memory</h2><p class="p">Manufacturing processes that require multi-patterning typically
+use advanced optical models that include SOCS kernels. From Calibre
+version 2016.4 and forward, processes running on the same physical
+host can share the directory that contains SOCS calculations. </p>
+<p class="p">See “<a class="xref Link" href="../../calbr_pto_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LITHO_SOCS_KERNELS_SHARED', 'calbr_pto_user'); return false;">LITHO_SOCS_KERNELS_SHARED</a>”
+in the <cite class="cite">Calibre Post-Tapeout Flow User’s Manual</cite> for
+details on monitoring shared memory.</p>
+<p class="p">To enable, set the environment variable LITHO_SOCS_KERNELS_SHARED
+to 1.</p>
+<h2 class="title Subheading sectiontitle">C Shell</h2><pre class="pre codeblock"><code>% setenv LITHO_SOCS_KERNELS_SHARED 1</code></pre><h2 class="title Subheading sectiontitle">Bourne/Korn Shell</h2><pre class="pre codeblock"><code>$ LITHO_SOCS_KERNELS_SHARED=1
+$ export LITHO_SOCS_KERNELS_SHARED</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreLpeBestPractices_id7b760a78.html" title="Best practices are proven settings that Siemens EDA generally recommends, but does not require.">Calibre LPE Best Practices</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Shared Memory Guidelines for Distributed Calibre', 'calbr_admin_gd'); return false;">Shared Memory Guidelines for Distributed Calibre [Calibre Administrator's Guide]</a></div>
+<div><a class="link" href="../../calbr_pto_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_pto_user'); return false;">Calibre Post-Tapeout
+Flow User’s Manual</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lpe_useref"
+                DocTitle = "Calibre® Local Printability Enhancement User’s and Reference Manual"
+                PageTitle = "Memory Management Best Practices"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_MemoryManagementBestPractices_id04f9f594.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Local Printability Enhancement User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Dynamically Adjusting the Budget and Priority" />
+<meta name="abstract" content="This procedure describes how to use the TAT calcm_send_message and set_priority_bump commands to dynamically adjust the budget and priority for a job running under CalCM." />
+<meta name="description" content="This procedure describes how to use the TAT calcm_send_message and set_priority_bump commands to dynamically adjust the budget and priority for a job running under CalCM." />
+<meta name="prodname" content="Calibre Cluster Manager (CalCM) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cm_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Cluster Manager (CalCM) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.1" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2f559729-bf23-481b-b2dd-251512d140a4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Dynamically Adjusting the Budget and Priority</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Dynamically Adjusting the Budget and Priority" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2f559729-bf23-481b-b2dd-251512d140a4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Dynamically Adjusting the Budget and Priority</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">This procedure
+describes how to use the TAT calcm_send_message and set_priority_bump
+commands to dynamically adjust the budget and priority for a job
+running under CalCM.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id2f559729-bf23-481b-b2dd-251512d140a4__id834f05bb-eb10-4238-8a67-f075062b4a3f"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_CalibreEnableSetlayerErt_id58b9ba74.html#id58b9ba74-2744-49e3-9565-f50877f268bd__Command_CalibreEnableSetlayerErt_id58b9ba74.xml#id58b9ba74-2744-49e3-9565-f50877f268bd" title="Environment variable that enables setlayer ERT features.">CALIBRE_ENABLE_SETLAYER_ERT</a> environment variable must be set.</p>
+</li>
+<li class="li" id="id2f559729-bf23-481b-b2dd-251512d140a4__id8f3c8fc0-2fff-4a1c-8565-190387381475"><p class="p">The
+jobs you submitted in the procedure “<a class="xref fm:HeadingAndPage" href="TaskTop_ExecutingCalibreJobsTatApplication_id71ea61d7.html#id71ea61d7-4ecd-43d9-ae1e-89b205621bed__TaskTop_ExecutingCalibreJobsTatApplication_id71ea61d7.xml#id71ea61d7-4ecd-43d9-ae1e-89b205621bed" title="This procedure describes how to submit jobs that run under CalCM TAT and use the budget defined for the jobs.">Executing Calibre Jobs with the TAT Application</a>” must be running.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id2f559729-bf23-481b-b2dd-251512d140a4__idb62c1fb3-1a8a-4480-86cb-e1459c30b6c8"><span class="ph cmd">Verify the current job budget
+that is defined in the job configuration file.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>JOB BUDGET dens_out=80,opcv_out=25,_EXTRA_=5 
+ </code></pre><p class="p">You can also review the transcript
+for this host:</p>
+<pre class="pre codeblock leveled"><code>	Received connection request from calmisc:41987 
+:	host:41987: announce_job host:41985:41986 id="1" resource=""
+		key="opc_job1" flag=0 quota="DEPT2/jsmith" cluster="1:2:500:500:2"
+		<span class="ph CodeHighlight orange">budget="dens_out=80,opcv_out=25,_EXTRA_=5"
+</span>		directory="&lt;path&gt;/CALCM_HOME/jobqueue/job1" rule="sim.drc"
+		priority=0 log="rules.1.log" tat_priority_bump="20" mode="MTFLEX"
+		start=1340225222 user="jsmith" 
+	Job "1" (calmisc:41985) is announced. 
+	... 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="id2f559729-bf23-481b-b2dd-251512d140a4__id3bb2cc9b-ab83-4aad-b5ab-107d03ccf518"><span class="ph cmd">Use the <a class="xref fm:HeadingOnly" href="Command_SetBudget_idccfa96bd.html#idccfa96bd-91c9-4f9c-8402-0cf8d6c10c04__Command_SetBudget_idccfa96bd.xml#idccfa96bd-91c9-4f9c-8402-0cf8d6c10c04" title="Sets or changes the budget for the specified job.">set_budget</a> messaging command with the calcm_send_message
+script to change the budget of job1. The syntax is:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>	calcm_send_message set_budget <span class="keyword ParameterName OptionalReplaceable">job_id</span> <span class="keyword ParameterName OptionalReplaceable">budget_string</span> </code></pre><p class="p">For example:</p>
+<pre class="pre ShellCommand">	calcm_send_message set_budget 1 "dens_out=100,opcv_out=30, /
+		_EXTRA_=30"</pre>
+</div></li>
+<li class="li step stepexpand" id="id2f559729-bf23-481b-b2dd-251512d140a4__idafac2fd7-af99-4f98-bd22-2f3d392c425c"><span class="ph cmd">Use the <a class="xref fm:HeadingOnly" href="Command_SetPriorityBump_id81074b4f.html#id81074b4f-a4b8-4be5-84a9-94a87a3426e0__Command_SetPriorityBump_id81074b4f.xml#id81074b4f-a4b8-4be5-84a9-94a87a3426e0" title="Sets or changes the priority for the specified job.">set_priority_bump</a> messaging command with the calcm_send_message
+script to change the priority of job2. The syntax is:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>	set_priority_bump <span class="keyword ParameterName OptionalReplaceable">job_id</span> <span class="keyword ParameterName OptionalReplaceable">priority_bump</span></code></pre><p class="p">For example:</p>
+<pre class="pre ShellCommand">	calcm_send_message set_priority_bump 2 40 </pre>
+<p class="p">The CalCM daemon transcripts
+the following message in return:</p>
+<pre class="pre codeblock leveled"><code>... 
+Received connection request from &lt;host&gt;:46280 
+&lt;host&gt;:46280: set_priority_bump 2 40 
+TAT: Set new priority bump 40 to job '2' 
+Connection with &lt;host&gt;:46280 closed 
+... 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="id2f559729-bf23-481b-b2dd-251512d140a4__idabf86f10-8792-4a27-93b2-53aa256e4a04"><span class="ph cmd">CalCM regularly performs an
+application update to collect information on the current status,
+calculate whether any adjustments need to be made to current jobs,
+and implement those adjustments. On the next update cycle, CalCM
+adjusts the resources for job 2 based on the new priority.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>--- APP UPDATE (Tue May 22 15:31:28 2012) ---</code></pre></div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ConfiguringUsingCalcmTatApplication_id36e1c9f7.html" title="This section includes procedures that explain how to set up and run the TAT application with CalCM.">Configuring and Using the CalCM TAT Application</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_SetBudget_idccfa96bd.html#idccfa96bd-91c9-4f9c-8402-0cf8d6c10c04__" title="Sets or changes the budget for the specified job.">set_budget</a></div>
+<div><a class="link" href="../topics/Command_SetPriorityBump_id81074b4f.html#id81074b4f-a4b8-4be5-84a9-94a87a3426e0__" title="Sets or changes the priority for the specified job.">set_priority_bump</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cm_user"
+                DocTitle = "Calibre® Cluster Manager (CalCM) User’s Manual"
+                PageTitle = "Dynamically Adjusting the Budget and Priority"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DynamicallyAdjustingBudgetPriority_id2f559729.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Cluster Manager (CalCM) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

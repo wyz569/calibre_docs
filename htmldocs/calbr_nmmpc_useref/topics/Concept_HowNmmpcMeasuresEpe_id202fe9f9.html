@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="How Calibre nmMPC Measures EPE" />
+<meta name="abstract" content="Edge placement error (EPE) is the difference between the drawn edge of a polygon and either the simulated silicon edge or actual silicon edge when printed. How EPE is measured varies according to the feature (such as if a fragment is adjacent to a convex or concave corner, at a line end, or if it is a non-corner edge)." />
+<meta name="description" content="Edge placement error (EPE) is the difference between the drawn edge of a polygon and either the simulated silicon edge or actual silicon edge when printed. How EPE is measured varies according to the feature (such as if a fragment is adjacent to a convex or concave corner, at a line end, or if it is a non-corner edge)." />
+<meta name="prodname" content="Calibre nmMPC and Calibre nmCLMPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmpc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id202fe9f9-81ad-4491-a149-c1d590e49c7a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>How Calibre nmMPC Measures EPE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="How Calibre nmMPC Measures EPE" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id202fe9f9-81ad-4491-a149-c1d590e49c7a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">How Calibre nmMPC Measures EPE</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Edge placement
+error (EPE) is the difference between the drawn edge of a polygon
+and either the simulated silicon edge or actual silicon edge when
+printed. How EPE is measured varies according to the feature (such
+as if a fragment is adjacent to a convex or concave corner, at a line
+end, or if it is a non-corner edge). </span>
+</div>
+<p class="p">In
+Calibre nmMPC:</p>
+<ul class="ul"><li class="li" id="id202fe9f9-81ad-4491-a149-c1d590e49c7a__idbcb6592e-ed54-4613-b794-0fb2a1aac699"><p class="p">In post-MPC data,
+every fragment has 2 corners.</p>
+</li>
+<li class="li" id="id202fe9f9-81ad-4491-a149-c1d590e49c7a__id037baeff-8e5b-4763-9be4-362549c3de8b"><p class="p">Corner rounding effects must be considered.</p>
+</li>
+<li class="li" id="id202fe9f9-81ad-4491-a149-c1d590e49c7a__id5102181e-ba54-4cc7-bf7a-4381098912dc"><p class="p">The initial measurement
+point is centered in a normal fragment and ripple outward from the
+initial measurement point, just as in nmOPC. The measurement points
+are spaced epe_spacing apart, the default value for nmMPC being
+40 nm</p>
+</li>
+<li class="li" id="id202fe9f9-81ad-4491-a149-c1d590e49c7a__idf279abab-66fb-48ee-81a5-bf21976fca23"><p class="p">In Calibre nmMPC,
+adjacent edges have no effect on the measurement of an edge.</p>
+</li>
+<li class="li" id="id202fe9f9-81ad-4491-a149-c1d590e49c7a__id0a15b18f-b2d4-4509-8f29-a9ee1a6dbab1"><p class="p">The distance for filtering
+out EPEs at corners depends only on the smallest sigma value among
+the e-beam kernels. No EPE measurement points are placed within
+three times the smallest e-beam sigma from a corner. For example,
+if you have a 200 nm edge (fragment) and the smallest e-beam kernel
+has a sigma of 20 nm, then Calibre nmMPC does not place any EPE
+measurement points within 60 nm from both end-points of the edge.
+Only the middle 80 nm portion has EPE evaluation points placed.
+If the fragment length less than 6 times of smallest ebeam sigma,
+then the EPE measurement will be in the center of the fragment.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CorrectVerifyDesign_idf5f009d6.html" title="With the long-range and proximity models now calibrated, a rule deck can be constructed to simulate the mask and apply corrections to the layout (as well as perform a FRACTURE in the same run).">Correct and Verify the Design</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmpc_useref"
+                DocTitle = "Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual"
+                PageTitle = "How Calibre nmMPC Measures EPE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_HowNmmpcMeasuresEpe_id202fe9f9.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

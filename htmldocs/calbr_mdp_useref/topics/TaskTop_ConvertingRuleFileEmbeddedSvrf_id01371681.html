@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Converting a Rule File to Embedded SVRF" />
+<meta name="abstract" content="If you have an existing rule file and want to implement section processing, the original rules must be split into those that go either inside or outside the embedded SVRF block." />
+<meta name="description" content="If you have an existing rule file and want to implement section processing, the original rules must be split into those that go either inside or outside the embedded SVRF block." />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id01371681-ae23-4d39-a20e-27820248cc9e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Converting a Rule File to Embedded SVRF</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Converting a Rule File to Embedded SVRF" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id01371681-ae23-4d39-a20e-27820248cc9e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Converting a Rule File to Embedded SVRF</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">If you have an
+existing rule file and want to implement section processing, the
+original rules must be split into those that go either inside or
+outside the embedded SVRF block. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idbc55454c-ad7a-432e-9c73-5ca2fb842f40"><p class="p">An
+existing SVRF deck</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__id4b3a2779-6d44-4823-bab0-41744c31dc5d"><span class="ph cmd">The process to convert a rule
+deck to an embedded SVRF structure is as follows:</span></li>
+<li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__id2a380d3f-cfcc-4518-889e-06d2ad5631da"><span class="ph cmd">Split the original SVRF deck
+into two sections: a header and an embedded section.</span><ol type="a" class="ol substeps"><li class="li substep" id="id01371681-ae23-4d39-a20e-27820248cc9e__id6f25a458-1516-4ffc-964c-ecad4ab13e3c"><span class="ph cmd">The header contains specification
+and layer statements that are not allowed in the embedded SVRF section.
+The following SVRF commands are included in the header section:</span><div class="itemgroup info SubStepInfo"><ul class="ul"><li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idf040c6f4-f044-4e5a-b942-c7baa6e7f71e"><p class="p">LAYOUT</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__id7f956487-5f9f-45e7-a6a6-36883859ba94"><p class="p">DRC</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__id8a111eab-55c0-4b21-b46e-cf047f7b5bb2"><p class="p">FLAG</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__id8aa5494d-a758-4e43-84b5-543997e8af96"><p class="p">PRECISION</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idecc1d50b-dbb2-4104-8f6b-75c4c8b81dd9"><p class="p">RESOLUTION </p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idee65d160-56e5-48cd-a4ae-264f468b95c9"><p class="p">LAYER</p>
+</li>
+</ul>
+</div></li>
+<li class="li substep" id="id01371681-ae23-4d39-a20e-27820248cc9e__id574468ce-2d6b-4369-b20a-d8dbaedf8f68"><span class="ph cmd">The embedded section contains
+variables, derivations, and one output layer per MDP EMBED or MDPVERIFY
+command. </span><div class="itemgroup info SubStepInfo"><ul class="ul"><li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idce908673-ef50-4535-8fd7-f0d5b16c89ca"><p class="p">VARIABLE ...</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__idc9196291-8fa2-46f2-9ea7-49b728d19305"><p class="p"><span class="keyword ParameterName OptionalReplaceable">layer</span> =
+...</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__id171c6af3-3995-4596-9c61-dbe309e8b1b3"><p class="p"><span class="keyword ParameterName OptionalReplaceable">rule</span>{
+... }</p>
+</li>
+<li class="li" id="id01371681-ae23-4d39-a20e-27820248cc9e__id60841b13-bcf1-4f75-bd61-1fafb47eae3a"><p class="p">DRC CHECK MAP (optional)</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When converting a rule file
+to embedded SVRF, exception handling SVRF commands such as LAYOUT ERROR ON INPUT used for OASIS file
+indexing are not supported and are ignored during the run. Use the MDP_MISSING_REFERENCE
+environment variable to specify exception handling behavior instead.
+Refer to “<a class="xref Link" href="../../calbr_mdpview_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'OASIS File Indexing', 'calbr_mdpview_useref'); return false;">OASIS File Indexing</a>”
+in the <cite class="cite">Calibre MDPview User’s and Reference Manual</cite> for
+details.</p>
+</div>
+</div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__id3fbdc9f1-4c26-4a0d-834e-e2b2e7f57434"><span class="ph cmd">Remove any extra outputs.</span><div class="itemgroup info StepInfo"><p class="p">The number of output layers
+in the embedded section must be exactly the same number as MDP EMBED
+or MDPVERIFY statements) and DRC CHECK MAP statements for removed
+output layers must also be removed.</p>
+</div></li>
+<li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__idfdce8ce2-5dbc-403f-b8ce-783e15ea5bad"><span class="ph cmd">Replace the square brackets
+in the embedded section.</span><ol type="a" class="ol substeps"><li class="li substep" id="id01371681-ae23-4d39-a20e-27820248cc9e__id6e5b2841-9480-4467-97b6-8b8080b3cb91"><span class="ph cmd">Replace all left square brackets
+([) with “&lt;LB&gt;”.</span></li>
+<li class="li substep" id="id01371681-ae23-4d39-a20e-27820248cc9e__id805b2b45-df21-4faa-b835-888b13ea4f68"><span class="ph cmd">Replace all right square brackets
+(]) with “&lt;RB&gt;”.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__id011b9234-627b-4b1e-941e-8f4a7e53df03"><span class="ph cmd">Pass the embedded output layer
+to a top-level rule and DRC CHECK MAP.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>		flat1 { COPY flat1 } DRC CHECK MAP flat1 101 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="id01371681-ae23-4d39-a20e-27820248cc9e__id70b1f779-3ce5-404d-85a7-a80de6e2bc07"><span class="ph cmd">Wrap the embedded section
+in an MDP EMBED command. For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>		flat1 =  MDP EMBED layer_i MAP layer_o FILE [ 
+			&lt;SVRFSTART&gt; 
+			include ../embedded.inc 
+			&lt;SVRFEND&gt; 
+ 		 ] </code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">You should have an SVRF file converted
+for section-based processing.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following is an example with
+an optional shell rule file showing the top-level structure of the
+embedded SVRF rule file:</p>
+<pre class="pre codeblock leveled"><code>include ../header.inc 
+ 
+flat1 =  MDP EMBED layer_i MAP layer_0 FILE [ 
+&lt;SVRFSTART&gt; 
+   include ../embedded.inc 
+&lt;SVRFEND&gt; 
+   ] 
+ 
+flat1 { COPY flat1 } DRC CHECK MAP flat1 101 </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SectionBasedProcessingCalibreEmbeddedSvrfMdpEmbed_idd6446eb5.html" title="Calibre MDP Embedded SVRF provides a method of performing SVRF operations for section-based processing of design databases.">Section-Based Processing, Calibre Embedded SVRF, and MDP EMBED</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "Converting a Rule File to Embedded SVRF"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ConvertingRuleFileEmbeddedSvrf_id01371681.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

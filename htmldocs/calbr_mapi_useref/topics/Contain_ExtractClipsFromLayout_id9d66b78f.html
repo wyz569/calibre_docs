@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Extract Clips from a Layout" />
+<meta name="abstract" content="MAPI provides two functions, mapiDumpToGds and mapiDumpToLayout, to clip portions of a layout and output the contents (either to an external file or to the layout viewer directly). These functions are commonly used to extract small clips from a layout which are used for alignment reference in metrology machines." />
+<meta name="description" content="MAPI provides two functions, mapiDumpToGds and mapiDumpToLayout, to clip portions of a layout and output the contents (either to an external file or to the layout viewer directly). These functions are commonly used to extract small clips from a layout which are used for alignment reference in metrology machines." />
+<meta name="prodname" content="Calibre Metrology API (MAPI) User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mapi_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Metrology API (MAPI) User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9d66b78f-f76c-4efe-8835-049b69255772" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Extract Clips from a Layout</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Extract Clips from a Layout" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9d66b78f-f76c-4efe-8835-049b69255772">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Extract Clips from a Layout</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">MAPI
+provides two functions, <span class="keyword ParameterName Required">mapiDumpToGds</span> and <span class="keyword ParameterName Required">mapiDumpToLayout</span>,
+to clip portions of a layout and output the contents (either to
+an external file or to the layout viewer directly). These functions
+are commonly used to extract small clips from a layout which are
+used for alignment reference in metrology machines.</span>
+</div>
+<p class="p">Complete details of the structures
+involved can be found in Appendix <a class="xref fm:NumberOnly" href="MGCAppe_MapiInterfaces_id81942161.html#id81942161-6ca6-4faf-b0e6-ce045b74e233__MGCAppe_MapiInterfaces_id81942161.xml#id81942161-6ca6-4faf-b0e6-ce045b74e233" title="All Calibre MAPI interfaces can be found in the mdp_mapi.itcl file distributed with the Calibre MAPI product.">MAPI Interfaces</a>, “<a class="xref fm:HeadingOnly" href="MGCAppe_MapiInterfaces_id81942161.html#id81942161-6ca6-4faf-b0e6-ce045b74e233__MGCAppe_MapiInterfaces_id81942161.xml#id81942161-6ca6-4faf-b0e6-ce045b74e233" title="All Calibre MAPI interfaces can be found in the mdp_mapi.itcl file distributed with the Calibre MAPI product.">MAPI Interfaces</a>.”</p>
+<p class="p">The following are covered in this section:</p>
+<ul class="ul"><li class="li" id="id9d66b78f-f76c-4efe-8835-049b69255772__id0d73d978-847b-4867-a342-43daa7095795"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Mapidumptogds_id6483d17a.html#id6483d17a-7e3d-4d47-a9b2-aa85a7b235d9__Command_Mapidumptogds_id6483d17a.xml#id6483d17a-7e3d-4d47-a9b2-aa85a7b235d9" title="The mapiDumpToGds function clips a portion of a layout and creates a GDS file containing the shapes from the specified cell on the specified layer within the rectangle. The output is single-layer, flattened, and merged. The input layout must be previously loaded into the viewer. The input layout format can be GDSII, OASIS, mask pattern, or mask job deck.">mapiDumpToGds</a> — Clips a portion of a layout
+and creates a GDS file containing the shapes from the specified
+cell on the specified layer within the rectangle.</p>
+</li>
+<li class="li" id="id9d66b78f-f76c-4efe-8835-049b69255772__id1bb26a30-2205-45b6-9b9c-7f55f41a81b8"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Mapidumptooasis_ida851b1cd.html#ida851b1cd-8bfa-49a1-b80c-6ad03c43c941__Command_Mapidumptooasis_ida851b1cd.xml#ida851b1cd-8bfa-49a1-b80c-6ad03c43c941" title="The mapiDumpToOasis function clips a portion of a layout and creates an OASIS file containing the shapes from the specified cell on the specified layer within the rectangle. The output is single-layer, flattened, and merged. The input layout must be previously loaded into the viewer. The input layout format can be GDSII, OASIS, mask pattern, or mask job deck.">mapiDumpToOasis</a> — Clips a portion of a layout
+and creates an OASIS<sup>®</sup><a class="xref fm:Footnote" href="#id9d66b78f-f76c-4efe-8835-049b69255772__id1f692cf1-51a3-4f1d-9c12-efbc9c15150b"><sup>1</sup></a> file containing the shapes from the specified
+cell on the specified layer within the rectangle.</p>
+</li>
+<li class="li" id="id9d66b78f-f76c-4efe-8835-049b69255772__id71031267-95d3-4855-b600-9532d66dca80"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Mapidumptolayout_id8834c2e9.html#id8834c2e9-0847-402a-adfb-a05dcbb5870f__Command_Mapidumptolayout_id8834c2e9.xml#id8834c2e9-0847-402a-adfb-a05dcbb5870f" title="The mapiDumpToLayout function clips a portion of the layout and outputs it to a layout in the viewer rather than an external file. The return value is the layout handle of the clip.">mapiDumpToLayout</a> — Clips a portion of the layout
+and outputs it to a layout in the viewer rather than an external
+file.</p>
+</li>
+</ul>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Command_Mapidumptogds_id6483d17a.html" title="The mapiDumpToGds function clips a portion of a layout and creates a GDS file containing the shapes from the specified cell on the specified layer within the rectangle. The output is single-layer, flattened, and merged. The input layout must be previously loaded into the viewer. The input layout format can be GDSII, OASIS, mask pattern, or mask job deck.">mapiDumpToGds</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Mapidumptooasis_ida851b1cd.html" title="The mapiDumpToOasis function clips a portion of a layout and creates an OASIS file containing the shapes from the specified cell on the specified layer within the rectangle. The output is single-layer, flattened, and merged. The input layout must be previously loaded into the viewer. The input layout format can be GDSII, OASIS, mask pattern, or mask job deck.">mapiDumpToOasis</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Mapidumptolayout_id8834c2e9.html" title="The mapiDumpToLayout function clips a portion of the layout and outputs it to a layout in the viewer rather than an external file. The return value is the layout handle of the clip.">mapiDumpToLayout</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreMapiReference_id03a91caf.html" title="The Calibre MAPI interface is composed of Tcl-based batch scripting commands.">Calibre MAPI Reference</a></div>
+</div>
+</div></div>
+<div class="fn"><a id="id9d66b78f-f76c-4efe-8835-049b69255772__id1f692cf1-51a3-4f1d-9c12-efbc9c15150b"><sup>1</sup></a>  OASIS<sup>®</sup> is
+a registered trademark of Thomas Grebinski and licensed for use
+to SEMI<sup>®</sup>, San Jose. SEMI<sup>®</sup> is
+a registered trademark of Semiconductor Equipment and Materials
+International.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mapi_useref"
+                DocTitle = "Calibre® Metrology API (MAPI) User’s and Reference Manual"
+                PageTitle = "Extract Clips from a Layout"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_ExtractClipsFromLayout_id9d66b78f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Metrology API (MAPI) User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

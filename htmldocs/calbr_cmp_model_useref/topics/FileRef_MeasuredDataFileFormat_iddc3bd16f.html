@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Measured Data File Format" />
+<meta name="abstract" content="Measured data (MD) files are spreadsheet-style ASCII files for storing measured and simulated data. They are required file for CMP model optimization. The file browser assumes a suffix of .dat, but this is not required." />
+<meta name="description" content="Measured data (MD) files are spreadsheet-style ASCII files for storing measured and simulated data. They are required file for CMP model optimization. The file browser assumes a suffix of .dat, but this is not required." />
+<meta name="prodname" content="Calibre CMP Model Builder User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Documentation for CMP Modeling. Condition Subtitle used for internal information." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="NONE" />
+<meta name="SourceHandle" content="calbr_cmp_model_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 9, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® CMP Model Builder User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="Alpha" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddc3bd16f-54a1-4da6-b682-620dfff3213b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Measured Data File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Measured Data File Format" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="iddc3bd16f-54a1-4da6-b682-620dfff3213b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Measured Data File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Generated by: spreadsheet of measurements
+in <span class="ph filepath">.csv</span> format, or <span class="ph menucascade"><span class="ph uicontrol">Measured</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Testchip</span></span> dialog</p>
+<p class="shortdesc">Measured data (MD) files are spreadsheet-style ASCII
+files for storing measured and simulated data. They are required
+file for CMP model optimization. The file browser assumes a suffix
+of <span class="ph filepath">.dat</span>, but this is not required.</p>
+<p class="p">One or more lines
+define a measured point. Each line defines up to five different
+model characteristics. When a measured point is represented by multiple
+lines, each line should have a different snapshot value.</p>
+<p class="p">The values in the MD file can be arbitrarily precise. However,
+most values are whole numbers because measurements are in angstroms
+by default. The CMP Model Builder window’s <span class="ph uicontrol">Measured</span> tab
+displays a maximum of 11 digits. Log files display up to six digits
+past the decimal point.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The values in the MD file are arranged as a table. The table
+can be preceded by an optional header. When written from the CMP
+Model Builder GUI, the header lists the Calibre version and column
+headings. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Calibre CMP Model Builder can handle version
+3 or version 4 MD files. Version 3 files do not include the comment
+column. Version 4 files, available from 2016.1, have the comment
+column as the first column.</p>
+</div>
+<p class="p">The table has the following arrangement:</p>
+<ul class="ul"><li class="li" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id3e9b34ed-d3b2-42f9-a79d-2e791b3ad14a"><p class="p">Rows are
+the measured and simulated values for a particular point on a layout.
+There must be at least one non-comment row.</p>
+</li>
+<li class="li" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idc54d37ae-96e3-4490-9535-0d813a487f62"><p class="p">Columns are
+separated by whitespace, and represent particular parameters such
+as coordinates or thickness at those coordinates. There must be
+between 14 and 34 columns.</p>
+<p class="p">An “empty” cell is given the value 0.</p>
+</li>
+</ul>
+<p class="p">When an MD file is written by the CMP Model Builder GUI, non-table
+content, such as the header, must begin with a #. Lines beginning
+with # are ignored.</p>
+<p class="p">When an MD file is loaded to the <span class="ph uicontrol">Measured</span> tab,
+the values are assigned to the parameters in the order listed following.
+To show hidden columns in the GUI, click the <span class="ph uicontrol">+</span> button
+in the row of buttons above the table.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idf1216143-4dfa-4af0-b792-1b38e3318401">Comment</dt>
+<dd class="dd ArgumentDescription"><div class="note note"><span class="notetitle">Note:</span> <p class="p">Version 4 and newer
+only.</p>
+</div>
+<p class="p">An optional value to use for naming measurement sites. The value
+must not contain whitespace or the characters # or $.</p>
+<p class="p">The default value is //. This value is automatically supplied
+when loading a version 3 MD file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idbccba818-58cb-477e-8787-3ffd3e56618f">X</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required value giving the point’s X coordinate.
+This is the horizontal offset in microns relative to the origin.</p>
+<p class="p">Each measurement should be at least one full grid point away
+from any other measurement, typically 20 microns. The grid size
+is defined by the initialize command.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idb52884b8-c669-4c33-be34-bd3ae0160d9f">Y</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required value giving the point’s Y coordinate.
+This is the vertical offset in microns relative to the origin.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id16fc9320-0ef3-498c-930f-1c396c5762d7">Snapshot</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+positive integer indicating when the manufacturing process data
+was collected (either measured or simulated). The snapshot reflects
+both a layer in the layer stack and the state that resulted from
+a physical action. For instance, the snapshot may represent a specific TaN
+layer after deposition.</p>
+<p class="p">The Snapshot number must match either a mask number for a metal
+layer or a Snapshot number defined within the corresponding commands
+in the Process Recipe File.</p>
+<ul class="ul"><li class="li" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id994d2d85-e0b5-4e42-a9d6-8449247bcee0"><p class="p">To associate
+the data with a specific metal layer, the Snapshot number must match the
+layer number specified using the mask keyword in the corresponding
+etch command in the Process Recipe File.</p>
+</li>
+<li class="li" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id343fd7db-52ab-481b-83a4-02c99eaac1c3"><p class="p">To associate
+the data with a particular process state, the Snapshot number must match
+the number specified using the Snapshot keyword in the corresponding deposit,
+etch, or cmp commands in the Process Recipe File.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id0a0411f4-8cb0-41b9-b6e6-4e92482791f7">WE</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required number between 0 and 1 inclusive
+that specifies a weighting factor for erosion calculations. Low
+values imply low confidence in the measurement. Use 0 to remove
+the erosion value in this row from the model fitting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id11de5442-baeb-4182-956d-2be84bbb2592">ES</dt>
+<dd class="dd ArgumentDescription"><p class="p">An integer value that identifies another
+row that represents the field region within which the data was sampled.
+This parameter establishes a link from the current row in the Measured Data
+File to another row in the same file.</p>
+<p class="p">You typically collect profilometry measurements at multiple sampling
+sites within a single field region. The position (XY) indicated
+by the ES value defines the position in the non-trench region (a
+z1 value) that is taken as reference for the computation of the
+simulated erosion value. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id7a17c6f4-7aeb-40e1-8dca-1a0a3bc9f517">Erosion</dt>
+<dd class="dd ArgumentDescription"><p class="p">The measured value for erosion in angstroms
+at the X Y position.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__ide663cced-c67e-4722-b59a-b1d5b4e6c17a">SErosion</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated erosion value in angstroms.
+The user-supplied value is a placeholder that is replaced during
+simulation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idb8af7bb0-a082-4a94-841b-0d5e0041b3e5">W</dt>
+<dd class="dd ArgumentDescription"><div class="note note"><span class="notetitle">Note:</span> <p class="p">This is a version 3
+column. Do not include it in MD files that have a Comment column.</p>
+</div>
+<p class="p">A parameter that indicates which method of calculating trench
+width should be used. When a version 3 file is read by the current
+version of CMP Model Builder, this column’s setting is ignored.</p>
+<p class="p">To retain this column when saving from the GUI with <span class="ph menucascade"><span class="ph uicontrol">Measured</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Save</span></span>,
+set the File type field to “Old Format Measured (*.odat).”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id75bca3a9-1d88-4e7b-a2b5-054cb9ebd4da">WD</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required number between 0 and 1 inclusive
+that specifies a weighting factor for dishing calculations. Low
+values imply low confidence in the measurement. Use 0 to remove
+the dishing value in this row from the model fitting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idc28a8771-9a76-4fc4-85a6-d9ca7df39f75">Dishing</dt>
+<dd class="dd ArgumentDescription"><p class="p">The measured value for dishing in angstroms
+at X Y. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idb230b5b8-5ee1-4cda-b6df-ac15ef99ec62">SDishing</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated dishing value in angstroms.
+The user-supplied value is a placeholder that is replaced during
+simulation. It is computed as the difference of the vertical position
+over nontrench regions (Z1) and trench (Z2).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id2ddb34b5-ecc0-4ac9-8ff1-9b871d41ebe4">WTT</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required number between 0 and 1 inclusive
+that specifies a weighting factor for thickness calculations. Low
+values imply low confidence in the measurement. Use 0 to remove
+the thickness value in this row from the model fitting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idf4222bc0-d2ef-4a3c-a40b-7c399ad23bde">ThickT</dt>
+<dd class="dd ArgumentDescription"><p class="p">The absolute thickness in angstroms of the
+layer at this location. Thickness is typically calculated based
+on Z1 and Z2 data. It represents the distance from the top of the
+previous layer, which is assumed to be completely flat, to the top
+of the Snapshot layer. Measurements are generally taken from ellipsometer
+data.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">ThickT is the last column that requires an
+entry for ASCII MD files. SThickT and forward do not require a value
+when creating initial tables from spreadsheets.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id8b23ab71-9367-4958-b410-8deb4fcd38ae">SThickT</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated thickness of the copper line
+in angstroms at the given location. The user-supplied value is a
+placeholder that is replaced during simulation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idd96503b5-f9fa-4f26-9375-be65782fe01b">WTNT</dt>
+<dd class="dd ArgumentDescription"><p class="p">A weighting factor that defines how much
+the thickness of the exposed material outside trench regions contributes
+to the objective function.</p>
+<p class="p">If a positive WTNT value is provided, the thickness of the exposed
+material is extracted from the simulation and considered in RMS
+calculations. If the WTNT value is not positive, the simulated thickness
+value (SThickNT) is extracted but not included in RMS calculations.</p>
+<p class="p">Do not specify a positive WTNT value for snapshots that represent
+the soft landing (platen 2) because there may or may not be thin
+residual films of copper or barrier layer in some frames and the
+exposed material may change from frame to frame.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idf5cb5058-98f2-46fd-9212-60d8cfc8a207">ThickNT</dt>
+<dd class="dd ArgumentDescription"><p class="p">The thickness in angstroms of the exposed
+material outside of the trenches at the given location. This parameter
+can specify the absolute measured thickness of the exposed material.
+After electroplating and after platen 1, this is the absolute copper
+thickness, measured in field regions, between arrays of lines and
+spaces. In the final CMP snapshot (ILD overpolish) this is the (remaining)
+thickness of the topmost layer in the residual ILD stack. </p>
+<p class="p">Using WTNT and ThickNT eliminates the need for the initial position
+specification for the measured thickness values and simplifies your
+measured data files.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id8d055265-9499-464b-b435-05c50e36e921">SThickNT</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated thickness in angstroms of
+the exposed material outside of the trenches at the given location.
+It is computed as the difference (Z1- Z<span class="ph FontProperty LiteralSubScript">layer</span>).
+Z1 is the height over nontrench regions. Z<span class="ph FontProperty LiteralSubScript">layer</span> is
+the topmost position of any layer less than Z1.</p>
+<p class="p">Note that the exposed material may change from frame to frame.
+If there is some residual thin film of material left, its thickness
+is reported. This happens frequently during the soft landing, when
+some frames still may be covered by a thin film of barrier material
+while in other frames the barrier material has already been polished
+off. Therefore, it is not recommended to specify positive WTNT values
+for the snapshots that represent the soft landing CMP step. If no
+positive weight WTNT is specified, the simulated exposed material thickness
+value is still extracted from the simulation result, but it is not
+considered in RMS calculations.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id36f8a348-5630-4c25-b34f-a4d0c920dbc4">WZ1</dt>
+<dd class="dd ArgumentDescription"><p class="p">A number between 0 and 1 inclusive that
+specifies a weighting factor for the height of the nontrench regions
+in fitting the model. Low values imply low confidence in the measurement.
+Use 0 to remove the Z1 value in this row from the model fitting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__idec984497-2812-42ce-b1b5-f25e856e429b">Z1</dt>
+<dd class="dd ArgumentDescription"><p class="p">The measured position in angstroms of the
+surface of the nontrench regions at the given location. This a local
+average reflecting the height in the test structure area, not the
+field area.</p>
+<p class="p">Depending on the exposed material at the given location in the
+current layer stack, this can be the position of the copper, barrier
+layer, or oxide, though it is most commonly the oxide layer. The
+parameter Z1 can be used to specify absolute thickness measurements
+for copper layer after electroplating, platen 1, or platen 2 and
+absolute values for dielectric layer thickness at the end of the
+CMP step.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id32297f61-1ad3-4eca-bd4a-31c7fa9d5aa9">SZ1</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated position of the surface over
+nontrench regions in angstroms at the given location. The user-supplied
+value is a placeholder value that is replaced during simulation. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id55d9bfbb-1482-4572-aafb-4d01b914e49a">WZ2</dt>
+<dd class="dd ArgumentDescription"><p class="p">A number between 0 and 1 inclusive that
+specifies a weighting factor for the height of the trench regions
+in fitting the model. Low values imply low confidence in the measurement. Use
+0 to remove the Z2 value in this row from the model fitting.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id5d53edb5-c8c7-4df4-8217-656c55c59500">Z2</dt>
+<dd class="dd ArgumentDescription"><p class="p">The measured position in angstroms of the
+surface of the trench regions at the given location.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__id2fa78d3e-3214-422a-b233-c4bb063e5c96">SZ2</dt>
+<dd class="dd ArgumentDescription"><p class="p">The simulated position over trench regions
+in angstroms at the given location. The user-supplied value is a
+placeholder value that is replaced during simulation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="iddc3bd16f-54a1-4da6-b682-620dfff3213b__ided916ae0-3b04-44f7-b352-76700529166b">TMP1 … TMP10</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional columns for parameters to use in
+expressions. These columns are not included in MD files written
+by the GUI unless you enter a non-zero value in at least one of
+the cells.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">A minimum MD file contains only rows of 14 values. The following
+example shows the values for 6 sampling points associated with snapshot
+21.</p>
+<pre class="pre codeblock"><code>// 250 23800 21 1.0 -1 201.2 0.4 0.0 1.0 7.2 2100.0 1.0 0
+// 1250 23800 21 1.0 -1 204.6 0.2 0.0 1.0 6.2 0.0 1.0 0
+// 1950 23800 21 1.0 -1 206.2 0.1 0.0 1.0 5.1 0.0 1.0 0
+// 250 22200 21 1.0 -1 2.8 3.3 0.0 1.0 71.4 2100.0 1.0 0
+// 1250 22200 21 1.0 -1 0.6 1.7 0.0 1.0 71/4 0.0 1.0 0
+// 1950 22200 21 1.0 -1 -0 0.4 0.0 1.0 69.4 0.0 1.0 0</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CmpModelingReference_id75bb6d3c.html" title="This chapter discusses the modeling commands for the process recipe file and the MD file.">CMP Modeling Reference</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/TaskTop_CreatingMeasuredDataFileInMeasuredTab_id6c1712e3.html" title="Measured data files (MD file, also called an MD table (MDT)) are required for the initial optimization runs. The initial file includes only the measured data and is based on the test layout.">Creating a Measured Data File</a></div>
+<div><a class="link" href="../topics/TaskTop_OptimizingParameterizedExpressions_id5e7e370a.html" title="Expression-based optimizations work differently from typical multi-parameter optimizations. A major difference is that the recipe must contain only the expression step.">Optimizing Parameterized Expressions</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmp_model_useref"
+                DocTitle = "Calibre® CMP Model Builder User’s and Reference Manual"
+                PageTitle = "Measured Data File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_MeasuredDataFileFormat_iddc3bd16f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® CMP Model Builder User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

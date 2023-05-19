@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Embedding the Setup File in the Rule File" />
+<meta name="abstract" content="Setup files are required for generating PV-bands. To encrypt the setup file, you embed it in the rule file then encrypt the rule file." />
+<meta name="description" content="Setup files are required for generating PV-bands. To encrypt the setup file, you embed it in the rule file then encrypt the rule file." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5f80ece4-22c2-44fa-8b71-60ff184bacd7" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Embedding the Setup File in the Rule File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Embedding the Setup File in the Rule File" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Embedding the Setup File in the Rule File</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Setup files are
+required for generating PV-bands. To encrypt the setup file, you
+embed it in the rule file then encrypt the rule file.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__iddd8ae6aa-258a-488f-9a44-723a4f19e8dc"><p class="p">This
+procedure assumes you have a fully debugged rule file for performing
+OPC, and this rule file references one or more standalone setup files.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__id914b13e5-dee2-46ca-bbe8-de9ae0600c97"><span class="ph cmd">Open the rule file in a text
+editor.</span></li>
+<li class="li step stepexpand" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__id0e542852-4fc2-4bae-b124-e48ef0d880c2"><span class="ph cmd">For each setup file required:</span><ol type="a" class="ol substeps"><li class="li substep" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__id1867196e-42d1-451a-abbd-17e0a5aadae3"><span class="ph cmd">Add the LITHO FILE command.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>LITHO FILE name [ 
+	inline_file 
+] 
+ </code></pre></div></li>
+<li class="li substep" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__ida0abdbba-ca90-4df2-8478-39ced1cc4706"><span class="ph cmd">Open the setup file, then
+select and copy the contents.</span></li>
+<li class="li substep" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__id561d6077-8e18-4e38-8cf8-5d13ca6244e9"><span class="ph cmd">In the rule file, replace
+“name” with the name by which you reference the setup file. Each
+inline file must have a unique name.</span></li>
+<li class="li substep" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__idf5833252-94f6-4598-8d3c-5d7b700755f8"><span class="ph cmd">Delete “inline_file” and paste
+the setup file data in its place.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__ide039edd6-26d7-4b6b-be73-fe3e42e8dd00"><span class="ph cmd">For each LITHO command, replace
+the setup file name with the name of the associated inline setup
+file.</span></li>
+<li class="li step stepexpand" id="id5f80ece4-22c2-44fa-8b71-60ff184bacd7__id74e26285-aac7-43ed-bb90-417a5c549fba"><span class="ph cmd">Save the edited rule file.</span><div class="itemgroup info StepInfo"><p class="p">For a complete discussion of
+embedded setup files, refer to the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual</a>.</p>
+</div></li>
+</ol>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following code shows a rule file
+with an embedded setup file.</p>
+<pre class="pre codeblock leveled"><code>LAYOUT SYSTEM GDSII 
+LAYOUT PRIMARY "PUB26" 
+LAYOUT PATH "../GDS/pub26.gds" 
+ 
+PRECISION 1000 
+RESOLUTION 5 
+LAYOUT ERROR ON INPUT NO 
+ 
+FLAG SKEW YES 
+FLAG ACUTE YES 
+FLAG OFFGRID YES 
+ 
+DRC MAXIMUM RESULTS ALL 
+DRC RESULTS DATABASE result.gds GDSII PSEUDO 
+DRC SUMMARY REPORT   result.rep 
+DRC MAXIMUM VERTEX 199 
+ 
+LAYER POLY 2 
+ 
+LITHO FILE poly_setup [ 
+# ---------------- Simulation models --------------- 
+modelpath .:models:~/.calibrewb_workspace/models 
+opticalmodel mcoptimopt  
+resistpolyfile inline 
+# ------------------ OPC algorithm ----------------- 
+iterations 4  
+tilemicrons 100  
+stepsize 0.002  
+gridsize 0.001  
+aspect 0.0  
+cornerSiteStyle CONSERVATIVE  
+lineEndAdjDist 0.19  
+convexAdjDist 0.19  
+concaveAdjDist 0.19  
+# ------------------- Fragmentation ---------------- 
+minfeature 0.20  
+minedgelength 0.05  
+maxedgelength 100  
+cornedge 0.05 .05 0.05  
+concavecorn 0.05 .05 0.05  
+interfeature -interdistance 0.8 -ripplelen 0.18 -num 5 -ripplestyle 1  
+seriftype 0  
+minjog 0.17  
+lineEndLength 0.45  
+# -------------------- Layer info ------------------ 
+background clear  
+# Layers 
+layer 237 L1 17 0 opc dark   
+#------------Inline Resist Model ------------------- 
+inline_resist { 
+type VT-5 
+version 3 
+referenceThreshold 0.2 
+hoodpix 1.28 
+kerngrid 0.01 
+CKERNEL D1 "gauss 0.2" 
+CKERNEL D2 "gauss 1.7" 
+BPAR SLOPE D1 D2 
+btermCount 3 
+BTERM 0.073 SLOPE 1 
+BTERM 0.09 D1 1 
+BTERM -0.027 D2 1 
+maxBias 0.080 
+} 
+#--- Arbitrary commands can follow this line. Don't delete this line! ---- 
+concavedepth 0.02 
+] 
+ 
+POLY_OPC {  
+  LITHO OPCPRO FILE poly_setup POLY 
+} 
+POLY {COPY POLY} 
+DRC CHECK MAP POLY 2 
+DRC CHECK MAP POLY_OPC 3 </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CadGroup_id384a62fc.html" title="Encrypting IP for distribution to customers requires three additional steps for the CAD group.">For the CAD Group</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_EncryptionDebugging_id447a5061.html#id447a5061-5ae2-4933-a695-773b1b3993ee__" title="During Calibre LFD kit development, it is recommended that you use the variable CALIBRE_ENCRYPTED_TVF_NO 296578. This simplifies debugging as it runs the byte-compiled package rather than the encrypted package. With the byte-compiled package, full error messages are enabled containing details useful to Calibre LFD kit developers. In addition, the kit developer can use the Calibre -E option to echo SVRF code related to running Calibre LFD to produced files.">Encryption Debugging</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Embedding the Setup File in the Rule File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_EmbeddingSetupFileInRuleFile_id5f80ece4.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

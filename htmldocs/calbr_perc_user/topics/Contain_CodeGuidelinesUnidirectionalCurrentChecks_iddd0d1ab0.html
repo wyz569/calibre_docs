@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Code Guidelines for Unidirectional Current Checks" />
+<meta name="abstract" content="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming." />
+<meta name="description" content="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddd0d1ab0-d5fb-49c0-8083-7893862fc978" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Code Guidelines for Unidirectional Current Checks</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Code Guidelines for Unidirectional Current Checks" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Code Guidelines for Unidirectional Current Checks</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">Vector-less
+voltage propagation can cause impossible voltage configurations
+to be reported. For instance, MOSFETs have interchangeable S and
+D pins. In a passgate configuration, current can flow either from
+source to drain or from drain to source. Frequently, only one of
+these directions can logically occur, but it is generally difficult
+or impossible for Calibre PERC to determine which one without additional
+user programming. </span>
+</div>
+<p class="p">Here are some examples:</p>
+<ul class="ul"><li class="li" id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978__id6bb896b6-06c6-4e1e-90c6-9af762ef88d4"><p class="p">Several passgates tied together
+at one end. This configuration can function either as a MUX (many-to-one)
+or a decoder (one-to-many).</p>
+</li>
+<li class="li" id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978__id51efe32b-7595-40da-987f-c25b7218ca7e"><p class="p">A pair of tied passgates one of
+which is driven by CNTRL and the other by CNTRL*, where both sets
+of passgates cannot be on at the same time.</p>
+</li>
+</ul>
+<p class="p">If a configuration like these exists
+and reports unreasonable voltages, this is where unidirectional
+current checks are useful in eliminating unwanted results.</p>
+<p class="p">There are several methods of employing
+unidirectional checks: </p>
+<ul class="ul"><li class="li" id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978__id01fb2b46-1f44-4aed-940c-966449c2caa2"><p class="p">The simplest
+is with a <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> -pinVoltage
+procedure. This can also be the least compute-intensive. To use
+this method, you must know in advance the pin on which a voltage
+is applied.</p>
+</li>
+<li class="li" id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978__id3c7bcfba-55b0-4c00-ab7d-916ec6e37f43"><p class="p">If pin swapping
+can occur, such as with MOS source and drain pins, unidirectional
+pin specification is a bottom-up approach. You can add unidirectional
+pins sequentially to specific instances and devices to cause unwanted
+errors not to be reported.</p>
+</li>
+<li class="li" id="iddd0d1ab0-d5fb-49c0-8083-7893862fc978__id13dfc1e4-ca2b-44f2-a5af-05c04fc1b788"><p class="p">If the set of device pins you need
+to mark is known only generally, or must be matched by a pattern,
+use unidirectional path checking. </p>
+</li>
+</ul>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Concept_UnidirectionalPinSpecification_id863d95d1.html" title="Unidirectional pin specification employs the perc::define_unidirectional_pin command. It is used to mark selected device pins as unidirectional. This is a simple approach because all it requires is to add this command as many times as needed to your initialization procedure.">Unidirectional Pin Specification</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_UnidirectionalPathSpecification_ida9406698.html" title="Unidirectional path specification can employ either the perc::create_unidirectional_path command, or the perc::create_voltage_path command with a -pinVoltage procedure. ">Unidirectional Path Specification</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Code Guidelines for Unidirectional Current Checks"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

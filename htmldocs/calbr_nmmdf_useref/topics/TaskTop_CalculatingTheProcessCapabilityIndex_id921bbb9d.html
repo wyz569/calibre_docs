@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Calculating the Process Capability Index" />
+<meta name="abstract" content="Calibre nmModelflow can calculate the Process Capability Index (Cpk) for groups in a gauge file given upper and lower limits. Currently, this functionality is only available via a Calibre nmModelflow Tcl command." />
+<meta name="description" content="Calibre nmModelflow can calculate the Process Capability Index (Cpk) for groups in a gauge file given upper and lower limits. Currently, this functionality is only available via a Calibre nmModelflow Tcl command." />
+<meta name="prodname" content="Calibre® nmModelflow™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all" />
+<meta name="HighlightColor" content="Pale Blue" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmdf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® nmModelflow™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id921bbb9d-992c-425e-aa8e-c2f050dbc078" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calculating the Process Capability Index</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calculating the Process Capability Index" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id921bbb9d-992c-425e-aa8e-c2f050dbc078">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calculating the Process
+Capability Index</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Calibre nmModelflow
+can calculate the Process Capability Index (Cpk) for groups in a
+gauge file given upper and lower limits. Currently, this functionality
+is only available via a Calibre nmModelflow Tcl command.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__idd5387990-a241-4847-a9fd-a9321523d676"><p class="p">A standard CM1 gauge file, which must have the
+following columns filled in:</p>
+<p class="p">Prec — The precision for the gauge in nm, as the
+absolute error for the measured data.</p>
+<p class="p">Sim, SEtch, or CtrSim — The simulation data used
+to calculate the Cpk value, for resist, etch, and aerial images,
+respectively.</p>
+<p class="p">Group — Groups gauges by two or more group names.
+This is used to calculate group statistics.</p>
+</li>
+<li class="li" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__idcd5d2b5b-5006-483b-8ac3-b678480712b1"><p class="p">Calibre nmModelflow invoked.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id987852bd-8a0a-4b98-9812-3f2709bf289d"><span class="ph cmd">Load the gauge file into Calibre nmModelflow
+and switch to the <span class="ph uicontrol">Gauge Analysis</span> tab.</span></li>
+<li class="li step stepexpand" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id4f93110e-ae68-49b3-910c-0ede81da60ce"><span class="ph cmd">Right-click the name of any visible column to
+raise the shortcut menu, then select <span class="ph uicontrol">Column
+Manager</span>.</span></li>
+<li class="li step stepexpand" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__idce28001b-8cb7-489b-9012-5b4d3005c599"><span class="ph cmd">In the Column Manager, type in the green Filter
+field to search for and select the column entries for Prec and Group
+if they are not already visible.</span></li>
+<li class="li step stepexpand" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id0da02713-b77e-4e16-b7f5-e8730c4fd8ed"><span class="ph cmd">In the Command Window, enter the following command: </span><div class="itemgroup info StepInfo"><p class="lines ApplCommand">mdf gauges groupstat [-out <span class="keyword ParameterName RequiredReplaceable">filename</span>] <br />
+   [-cdtype resist | aerial | {etch [-fit absolute | relative]}]</p>
+<ul class="ul"><li class="li" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id7bae0872-7924-4a31-b501-c30d3ba431ae"><p class="p">If you do not supply an -out argument, the default
+filename is groupstat.csv.</p>
+</li>
+<li class="li" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id1d8eda55-a9e5-4f37-b482-810c502740dd"><p class="p">If
+you do not specify a -cdtype argument, “resist” is used by default,
+which calculates the Cpk value on the Sim column values.</p>
+</li>
+<li class="li" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__id73ca0062-39d1-4bb0-a927-c0f6c5d17d85"><p class="p">If
+you specify -cdtype “etch”, you can also set which method for computing
+the etch error statistics is used with the optional -fit option;
+the default is absolute error calculations.</p>
+</li>
+</ul>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The command runs, and an output CSV file is placed
+in the current working directory. The file contains a group statistics
+file with the following data:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id921bbb9d-992c-425e-aa8e-c2f050dbc078__idb766b1ee-c67f-42c9-b0f3-c00bf5460204" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Cpk Results List</span></caption><colgroup><col style="width:2.132in" /><col style="width:4.368in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5775e223"><p class="p">Column</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5775e226"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Group</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the group name.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Total</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the number of enabled
+gauges in the group.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">InSpec </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the number of gauges
+whose errors are within precision (automatically set to 0 if Prec
+was not specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Rate </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the percentage
+of gauges that were in spec, 100*InSpec / Total (or NA if Prec was
+not specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Cpk</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the process capability
+index computed using UwMean and UwStDev (or NA if Prec was not specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Tolerance1 </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the weighted error-tolerance-based
+objective of norm 1 (or NA if Prec was not specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Tolerance2 </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the weighted error-tolerance-based
+objective of norm 2 (or NA if Prec was not specified).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">RMS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the weighted group
+RMS without taking into account process window weights.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Mean </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the weighted mean
+error.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">StDev</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the weighted standard
+deviation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">UwRMS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the unweighted
+group RMS.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">UwMean </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the unweighted
+mean error.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">UwStDev</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the unweighted
+standard deviation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">MinErr </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the minimal error.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">MaxErr </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the maximal error.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e223 "><p class="p">Range</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5775e226 "><p class="p">Specifies the error range
+(calculated as MaxErr - MinErr).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_GaugeRelatedTasksAndConcepts_id8debc209.html" title="Gauges contain measurement data used during calibration and simulation. Most stages operate on gauge data, or subsets of gauge data.">Gauge-Related Tasks and Concepts</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmdf_useref"
+                DocTitle = "Calibre® nmModelflow™ User’s and Reference Manual"
+                PageTitle = "Calculating the Process Capability Index"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CalculatingTheProcessCapabilityIndex_id921bbb9d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmModelflow™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

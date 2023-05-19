@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Initialization and Rule Check Procedures" />
+<meta name="abstract" content="Calibre PERC rule checks appear within a construct called TVF Function in a Calibre rule file. Rule checks are written in two basic parts: initialization procedures and rule check procedures. Initialization procedures set up the run by classifying nets through various means. Rule check procedures perform checks on various objects in a netlist." />
+<meta name="description" content="Calibre PERC rule checks appear within a construct called TVF Function in a Calibre rule file. Rule checks are written in two basic parts: initialization procedures and rule check procedures. Initialization procedures set up the run by classifying nets through various means. Rule check procedures perform checks on various objects in a netlist." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id80a3e4d3-69c5-4c94-93fd-df13ff666153" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Initialization and Rule Check Procedures</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Initialization and Rule Check Procedures" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id80a3e4d3-69c5-4c94-93fd-df13ff666153">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Initialization and Rule Check Procedures</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre PERC
+rule checks appear within a construct called TVF Function in a Calibre
+rule file. Rule checks are written in two basic parts: initialization procedures
+and rule check procedures. Initialization procedures set up the
+run by classifying nets through various means. Rule check procedures
+perform checks on various objects in a netlist.</span>
+</div>
+<ul class="ul"><li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__id3c07c808-4a26-47ad-b35d-23a0081b1df2"><p class="p"><span class="ph FontProperty HeadingLabel">Initialization procedure</span> —
+Tcl proc that sets up labels for net types and path types that are
+referenced in the rule check procedures. There is at most one initialization procedure
+for a set of related rule check procedures (initialization procedures
+are not mandatory, but are often used). These are useful definitions
+in this context:</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Net</span> —
+By convention, a net is a connection between device pins or ports. </p>
+<p class="p">Note that pins and ports in a SPICE netlist
+are identified by their syntactical locations. Pin and port names
+are the names of nets connected to the pin or port. As such, a pin
+or port is distinct from its associated net.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Net type</span> —
+An assigned label for a net or group of related nets. The nets are
+related in any way meaningful to the designer; they are not necessarily
+electrically related. Net types are defined and associated with
+specific nets by the <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a>, <a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByDevice_idddb1d861.html#idddb1d861-3213-4dfe-ac19-676ee8821ebc__Command_PercdefineNetTypeByDevice_idddb1d861.xml#idddb1d861-3213-4dfe-ac19-676ee8821ebc" title="Assigns a net type to nets that are connected to selected devices.">perc::define_net_type_by_device</a>, <a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByPlacement_id6c10ba02.html#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb__Command_PercdefineNetTypeByPlacement_id6c10ba02.xml#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb" title="Assigns a net type to nets that are connected to selected placements.">perc::define_net_type_by_placement</a>, and <a class="xref fm:HeadingOnly" href="Command_PercdefineTypeSet_id4729110c.html#id4729110c-e73f-4c7b-8772-d111b3fd3cf4__Command_PercdefineTypeSet_id4729110c.xml#id4729110c-e73f-4c7b-8772-d111b3fd3cf4" title="Creates and assigns a new net type set from a list of net types.">perc::define_type_set</a> commands. Net types are only associated with
+the nets specified in these commands and those nets connected directly
+to them throughout the hierarchy without going through any device
+pins. Any net with a net type label automatically gets a path type
+label of the same name.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Path</span> —
+By convention, a path is a set of topologically connected nets,
+device pins, or ports between two such objects in a network. A path
+contains at least one net. A net trivially is its own path.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Path type</span> —
+Recall that a net with an assigned net type label also has an assigned
+path type label of the same name. Assigned path type labels on nets
+are iteratively propagated to other nets through pins and devices,
+and each label defines what is referred to as a path type. A path
+type maps to a set of nets that are all part of the same path. The <a class="xref fm:HeadingOnly" href="Command_PerccreateLvsPath_id82ee12a9.html#id82ee12a9-f3da-4c82-823a-a3a3bba94d04__Command_PerccreateLvsPath_id82ee12a9.xml#id82ee12a9-f3da-4c82-823a-a3a3bba94d04" title="Enables path type propagation through devices and pins according to the usual LVS ERC path checking conventions.">perc::create_lvs_path</a> and <a class="xref fm:HeadingOnly" href="Command_PerccreateNetPath_id10b2258b.html#id10b2258b-2c17-4da0-b38b-accfa06ccbb1__Command_PerccreateNetPath_id10b2258b.xml#id10b2258b-2c17-4da0-b38b-accfa06ccbb1" title="Enables path type propagation through selected devices and pins. Assigns path types, which correspond to the net type names of all the nets connected through the devices and pins selected by this command.">perc::create_net_path</a> commands determine the pins and
+devices for path type label propagation. </p>
+<p class="p">This example
+illustrates these definitions:</p>
+<div class="fig fignone" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__idb0ea01bd-00a1-4b1b-8941-ed5b837cf23c"><br /><div class="imagecenter"><img class="image imagecenter" src="../graphics/topo_checks01a.png" /></div><br /></div>
+<p class="p">This example shows default net and path type
+propagation. Typically you would want to stop path type propagation
+at supply nets so power and ground paths remain distinct. This is
+possible through a -break keyword, which is discussed in the reference documentation.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__ided1bf2b4-2e00-4cd6-abc5-772cdacd70eb"><p class="p"><span class="ph FontProperty HeadingLabel">Rule check procedures</span> —
+Tcl procs that contain the conditions to check for in the layout
+or source netlist. There are two main commands for writing rule
+checks: <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> and <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a>. For most rules, either one can
+be used to write the desired checks. However, the quality of the
+results can vary depending on the nature of the rules. Here are some guidelines: </p>
+<ul class="ul"><li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__ida5eb9e61-6972-4b7f-86b2-55f3bdd915f7"><p class="p">For rules checking conditions of a single
+device, such as device properties or net or path types, use <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a>.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__iddaebd9d7-569d-4b72-afe0-0ffe0a35aba4"><p class="p">For rules checking conditions of a single
+net, such as net or path types, use <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a>.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__id73666d9b-2e9b-46fb-b1ce-e0edbf0e5588"><p class="p">For rules checking conditions of a group
+of devices and nets, such as circuit topology or property ratios
+of connected devices, use <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a>. For these rules, use the following commands
+in the -condition proc to do netlist traversal:</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_Percexists_id24411517.html#id24411517-3545-4fa0-971f-ef3671ac5edc__Command_Percexists_id24411517.xml#id24411517-3545-4fa0-971f-ef3671ac5edc" title="Indicates whether the number of devices in a list meets a constraint interval.">perc::exists</a> — Determines if the number of
+devices meets a constraint.</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> — Finds number of devices connected
+to a net.</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_Percequal_id6694e74a.html#id6694e74a-ec3f-4390-be3a-cfbbc4310f02__Command_Percequal_id6694e74a.xml#id6694e74a-ec3f-4390-be3a-cfbbc4310f02" title="Returns TRUE if two iterators point to the same element.">perc::equal</a> — Determines if two nets are connected.</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> — Finds the net connected to a
+device through a certain pin.</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_PercgetOtherNetOnInstance_id85c3d2b2.html#id85c3d2b2-1b55-49a9-ae53-4cda904a9176__Command_PercgetOtherNetOnInstance_id85c3d2b2.xml#id85c3d2b2-1b55-49a9-ae53-4cda904a9176" title="Creates a net iterator.">perc::get_other_net_on_instance</a> — Jumps from one net of a device
+to another.</p>
+<p class="p BlockIndent"><a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInSeries_id99f054f0.html#id99f054f0-66da-4cf9-aaa2-015f3552d176__Command_PercgetInstancesInSeries_id99f054f0.xml#id99f054f0-66da-4cf9-aaa2-015f3552d176" title="Returns a list of instance iterators containing instances connected in series.">perc::get_instances_in_series</a> — Finds devices connected in series.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__id825d9365-a182-45eb-a8e6-0b9aa7ecae43"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_PerccheckDeviceAndNet_id05043298.html#id05043298-b80d-45d8-a794-a7cd30bbdc71__Command_PerccheckDeviceAndNet_id05043298.xml#id05043298-b80d-45d8-a794-a7cd30bbdc71" title="Checks devices and nets in the design for ones that match any specified conditions.">perc::check_device_and_net</a> command is intended for specialized
+rules where pre-processed cell device data can help speed up checking
+nets. This can be the case for very large nets like power or ground signals.
+Use this command only if both perc::check_device and perc::check_net cannot
+deliver the desired performance.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__ida32b496a-6585-4ae5-9eb0-2addf96c023c"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_PerccheckData_idc670986d.html#idc670986d-b894-4123-8cd4-29430c23fb66__Command_PerccheckData_idc670986d.xml#idc670986d-b894-4123-8cd4-29430c23fb66" title="Calls a user-provided procedure to perform a check.">perc::check_data</a> command is infrequently used but
+is needed for rules that check global conditions such as the total
+number of ESD devices in a design, or the ratio between the maximum
+MOS width and the minimum MOS width in a design.</p>
+</li>
+<li class="li" id="id80a3e4d3-69c5-4c94-93fd-df13ff666153__idd2aebf3b-eb8b-454b-b3e1-82f73340641f"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_Percsetoftypes_id4cca009a.html#id4cca009a-f6ce-41cd-beb0-cb804851c959__Command_Percsetoftypes_id4cca009a.xml#id4cca009a-f6ce-41cd-beb0-cb804851c959" title="Creates or manipulates a set of types object. Enables efficient Boolean operations on net or path types encapsulated by a set of types object.">perc::set_of_types</a> command
+facilitates efficient manipulation of large numbers of net and path
+types. The general recommendation is to use as few net types as
+possible in order to accomplish your rule checks. But in certain
+applications, the number of net types may be large (many thousands),
+and this is an especially useful command in that situation.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">Calibre PERC also has voltage checking capability,
+which relies on voltage assignment and propagation. Voltage propagation
+is similar to net and path type propagation, and many of the same
+commands support both methods for rule checks. The Calibre PERC
+voltage interface is discussed under “<a class="xref fm:HeadingAndPage" href="MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html#id2b941fd5-3a81-4450-ae0a-ad59dc90189e__MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.xml#id2b941fd5-3a81-4450-ae0a-ad59dc90189e" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a>”.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.html" title="The core of the Calibre PERC functionality is topological rule checking. Topological rule checks are written in the Calibre PERC extension of TVF. This chapter contains naming conventions used when writing topology rule checks and working examples of initialization and rule check procedures.">Calibre PERC Topology Rule Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'TVF Function', 'svrf_ur'); return false;">TVF Function [Standard Verification Rule Format (SVRF) Manual]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Initialization and Rule Check Procedures"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_InitializationRuleCheckProcedures_id80a3e4d3.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating an Average Contour" />
+<meta name="abstract" content="Model calibration uses sets of contours, which should have outliers removed. A ContourCal MDF script can output an average contour using input contours and a clip layer." />
+<meta name="description" content="Model calibration uses sets of contours, which should have outliers removed. A ContourCal MDF script can output an average contour using input contours and a clip layer." />
+<meta name="prodname" content="Calibre Directed Self-Assembly User’s and Reference Manual" />
+<meta name="version" content="v1" />
+<meta name="release" content="2014.09" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2015-10-13" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_dsa_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 20, 2021" />
+<meta name="DocumentTitle" content="Calibre® Directed Self-Assembly User’s and Reference Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd012e887-fe26-4781-baa9-abec808bd462" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating an Average Contour</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating an Average Contour" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idd012e887-fe26-4781-baa9-abec808bd462">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating an Average Contour</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Model calibration uses sets of contours,
+which should have outliers removed. A ContourCal MDF script can
+output an average contour using input contours and a clip layer. </p>
+<p class="p"><a class="xref fm:Figure" href="#idd012e887-fe26-4781-baa9-abec808bd462__id2cb9252b-b8d5-44c3-80d7-3d51a8b421de">Figure 1</a> summarizes the procedure.</p>
+<div class="fig fignone" id="id2cb9252b-b8d5-44c3-80d7-3d51a8b421de"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Creating
+an Average Contour</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/avg_contour.png" /></div><br /></div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idd012e887-fe26-4781-baa9-abec808bd462__idec6318e7-f475-4347-ac39-da56d08296cd"><p class="p">A layout
+with two or more contours for each structure that will be used in
+model calibration</p>
+</li>
+<li class="li" id="idd012e887-fe26-4781-baa9-abec808bd462__id473e3b20-03a3-4fb6-95bd-89d5a883cb0e"><p class="p">At least one
+layer containing polygons that each enclose a single contour (the
+clip layer)</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idd012e887-fe26-4781-baa9-abec808bd462__id7c2840d1-749e-4f0c-8645-d2daa230967e"><span class="ph cmd">Open the
+layout file in Calibre WORKbench. Remove outlier contours.</span><div class="itemgroup info StepInfo"><p class="p">In <a class="xref fm:Figure" href="#idd012e887-fe26-4781-baa9-abec808bd462__idd52802a3-fa95-4015-8e04-456fb6dede23">Figure 2</a>, the two contour sets
+on the left contain outliers.The two contour sets on the right more
+closely represent ideal contours and are thus more useful for creating
+an average contour. If the outlier contour forms a single line,
+right-click the contour and select <span class="ph uicontrol">Delete</span>.
+This may not be the case for imported SEM images, in which several segments
+must be selected and deleted. </p>
+<div class="fig fignone" id="idd012e887-fe26-4781-baa9-abec808bd462__idd52802a3-fa95-4015-8e04-456fb6dede23"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Removing
+Outliers From Contour Sets</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/outliers.png" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="idd012e887-fe26-4781-baa9-abec808bd462__idbf776a4b-945a-4e33-b324-13b4a4833e94"><span class="ph cmd">Create
+a Contour Layer Info (CLI) file.</span><div class="itemgroup info StepInfo"><p class="p">A CLI file describes a clip layer contained in a design
+file, and can be used to identify the layer information and averaging
+options. An example CLI file is shown:</p>
+<pre class="pre codeblock"><code>version 1
+contourSetCount 1
+contourLog 0.0 100000
+contourCostMethod dense
+contourAverage on 1 // Turns on averaging
+contourSet 1 {
+contourlayer 101  // Identifies layer with contours to average.
+contourlayer 102  // Can be one layer with multiple ’paths’ or 
+						// multiple contourlayer statements with polygon
+						// layers.
+cliplayer 2000     
+dose 1.00         
+defocus 0.00
+weight 1
+outstartlayer 2001 3
+}</code></pre><p class="p">For more information, see “<a class="xref Link" href="../../calbr_wbench_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Contour Layer Info (CLI) File Format', 'calbr_wbench_useref'); return false;">Contour Layer Info (CLI) File Format</a>” in the <span class="keyword ParameterName OptionalReplaceable">Calibre WORKbench User’s and Reference Manual</span>.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If the contours are paths, contours need to be on the same
+layer, and thus the CLI file will only contain one layer reference. </p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idd012e887-fe26-4781-baa9-abec808bd462__id7f11303d-ede2-4d81-9b77-3c5ab5617f6e"><span class="ph cmd">Create
+a Calibre nmModelflow script that loads the layout and CLI file,
+and runs a simulation. The script should also save the output layout
+(for example, an OASIS<sup>®</sup><a class="xref fm:Footnote" href="#idd012e887-fe26-4781-baa9-abec808bd462__idaf36c24c-492b-4561-986f-ae6fa45230b8"><sup>1</sup></a> file). An example script is shown:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>#Load the layout file.
+mdf contour layout gds/contour.gds</code></pre><pre class="pre codeblock"><code>#Load the CLI file with contour input data.
+mdf contour cli cli/contour.cli -average_only</code></pre><pre class="pre codeblock"><code>#Run the simulation.
+mdf simulate</code></pre><pre class="pre codeblock"><code>#Save the layout to a different file.
+mdf contour output layout averaged_contour.oas oasis</code></pre></div></li>
+<li class="li step stepexpand" id="idd012e887-fe26-4781-baa9-abec808bd462__id6c83323d-d2ee-46c8-9713-5d72309a0f06"><span class="ph cmd">Run the
+Calibre nmModelflow script from step 3. In the shell prompt, enter
+the following, using the name of your script:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibrewb <span class="ph FontProperty emphasis">mdf_script</span></code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The script outputs a layout file containing the average contour. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DsaModelCreationAndVerification_id9725a643.html" title="Accurate DSA models can be created through proper calibration and verification. Proper calibration requires contour sets. Averaged contour sets can be created from initial contour data sets. These contour sets provide better calibration results.">DSA Model Creation and Verification</a></div>
+</div>
+</div></div>
+<div class="fn"><a id="idd012e887-fe26-4781-baa9-abec808bd462__idaf36c24c-492b-4561-986f-ae6fa45230b8"><sup>1</sup></a>  OASIS<sup>®</sup> is
+a registered trademark of Thomas Grebinski and licensed for use
+to SEMI<sup>®</sup>, San Jose. SEMI<sup>®</sup> is
+a registered trademark of Semiconductor Equipment and Materials
+International.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_dsa_useref"
+                DocTitle = "Calibre® Directed Self-Assembly User’s and Reference Manual"
+                PageTitle = "Creating an Average Contour"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingAnAverageContour_idd012e887.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Directed Self-Assembly User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

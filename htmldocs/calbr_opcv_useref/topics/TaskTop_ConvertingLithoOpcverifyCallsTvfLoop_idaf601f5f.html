@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Converting LITHO OPCVERIFY Calls to a TVF Loop" />
+<meta name="abstract" content="Since LITHO OPCVERIFY calls have the same basic structure, you can use a TVF loop to consolidate multiple calls into a single loop. This method can be used to easily expand the number of derived layers retrieved from a Calibre OPCverify file." />
+<meta name="description" content="Since LITHO OPCVERIFY calls have the same basic structure, you can use a TVF loop to consolidate multiple calls into a single loop. This method can be used to easily expand the number of derived layers retrieved from a Calibre OPCverify file." />
+<meta name="prodname" content="Calibre OPCverify User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-16" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="no" />
+<meta name="Draft" content="none" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcv_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="DocumentTitle" content="Calibre® OPCverify™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="None" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idaf601f5f-d681-4fd8-925c-e7871dffd193" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Converting LITHO OPCVERIFY Calls to a TVF Loop</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Converting LITHO OPCVERIFY Calls to a TVF Loop" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10120,product.id.P10115,product.id.P10110" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idaf601f5f-d681-4fd8-925c-e7871dffd193">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Converting LITHO OPCVERIFY Calls
+to a TVF Loop</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Since LITHO OPCVERIFY
+calls have the same basic structure, you can use a TVF loop to consolidate
+multiple calls into a single loop. This method can be used to easily
+expand the number of derived layers retrieved from a Calibre OPCverify
+file. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__idc79b2d3e-dadd-475e-9225-e1b36f27d27c"><p class="p">Completed
+the task “<a class="xref fm:HeadingAndPage" href="TaskTop_AddingTvfHeaderVerbatimBlocks_idc382b4cd.html#idc382b4cd-c9dc-44ea-9c27-4860a1f342f3__TaskTop_AddingTvfHeaderVerbatimBlocks_idc382b4cd.xml#idc382b4cd-c9dc-44ea-9c27-4860a1f342f3" title="Similar to designating a text file as a shell script or HTML file, a single header command at the top of an SVRF rule file indicates to the Calibre engine that it should treat the file as a TVF file.">Adding a TVF Header and VERBATIM Blocks</a>”.</p>
+</li>
+<li class="li" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__id54479dcd-59c9-405a-8e8c-9290292ce78e"><p class="p">For
+this example, an understanding of the following code from Section
+3. There are two distinct blocks in the sample code: the LITHO OPCVERIFY
+call and the DRC CHECK MAP calls. </p>
+<pre class="pre codeblock flushLeft"><code>///////////////////////////////
+// 3. Verification Layer IO ///
+///////////////////////////////
+// Simulation poly contours  
+// NOTE: Some of these contours were intentionally
+// commented out to reduce processing time, but are
+// provided for reference.</code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d100_nom = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d100_nom  
+img_d100_n050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d100_n050 
+img_d100_p050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d100_p050 
+img_d100_n100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d100_n100 
+img_d100_p100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d100_p100 </span></code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d095_nom = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d095_nom  
+img_d095_n050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d095_n050 
+img_d095_p050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d095_p050 
+img_d095_n100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d095_n100 
+img_d095_p100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP img_d095_p100 </span></code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d105_nom = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP   img_d105_nom  
+img_d105_n050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP   img_d105_n050 
+img_d105_p050 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP   img_d105_p050 
+img_d105_n100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP   img_d105_n100 
+img_d105_p100 = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP   img_d105_p100 </span></code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d100_nom { COPY img_d100_nom } DRC CHECK MAP img_d100_nom         11
+img_d100_n050 { COPY img_d100_n050 } DRC CHECK MAP img_d100_n050        12
+img_d100_p050 { COPY img_d100_p050 } DRC CHECK MAP img_d100_p050        13
+img_d100_n100 { COPY img_d100_n100 } DRC CHECK MAP img_d100_n100        14
+img_d100_p100 { COPY img_d100_p100 } DRC CHECK MAP img_d100_p100        15</span></code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d095_nom { COPY img_d095_nom } DRC CHECK MAP img_d095_nom 21
+// img_d095_n050 { COPY img_d095_n050 } DRC CHECK MAP img_d095_n050 22
+// img_d095_p050 { COPY img_d095_p050 } DRC CHECK MAP img_d095_p050 23
+img_d095_n100 { COPY img_d095_n100 } DRC CHECK MAP img_d095_n100 24
+img_d095_p100 { COPY img_d095_p100 } DRC CHECK MAP img_d095_p100 25</span></code></pre><pre class="pre codeblock flushLeft"><code><span class="ph FontProperty P8">img_d105_nom { COPY img_d105_nom } DRC CHECK MAP img_d105_nom 31
+// img_d105_n050 { COPY img_d105_n050 } DRC CHECK MAP img_d105_n050 32
+// img_d105_p050 { COPY img_d105_p050 } DRC CHECK MAP img_d105_p050 33
+img_d105_n100 { COPY img_d105_n100 } DRC CHECK MAP img_d105_n100 34
+img_d105_p100 { COPY img_d105_p100 } DRC CHECK MAP img_d105_p100 35</span></code></pre></li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__idd561ef1f-6f09-4a2d-b79e-c874d7dabf42"><span class="ph cmd">If possible, set aliases for
+common strings, such as the list of input layers.</span><div class="itemgroup info StepInfo"><p class="p">Since all the input layers
+sent to LITHO OPCVERIFY contain the same list, they can be assigned
+to a single variable:</p>
+<pre class="pre codeblock leveled"><code>		set input_list { POLY POLY_OPC ACTIVE }</code></pre></div></li>
+<li class="li step stepexpand" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__ida42f400c-a819-40d6-b5a2-214748d91685"><span class="ph cmd">Analyze the code, then create
+lists containing the variations on the LITHO OPCVERIFY calls. </span><div class="itemgroup info StepInfo"><p class="p">In the code above, there are
+three sets of five LITHO OPCVERIFY calls with the dose as the variation,
+found by looking at the DRC CHECK MAP calls:</p>
+<ul class="ul"><li class="li" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__idb1ba219a-c87d-46f1-997e-122d399ee871"><p class="p">Layers 11, 12, 13, 14,
+and 15 have d100 in common, start with nom, then alternate n and
+p, and have two 050 layers followed by two 100 layers.</p>
+</li>
+<li class="li" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__idc41b810b-7bb9-464e-88b3-78892480be37"><p class="p">Layers 21, 22, 23, 24,
+and 25 have d095 in common, start with nom, alternate n and p, and
+have two 050 layers followed by two 100 layers.</p>
+</li>
+<li class="li" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__id38b0fa1e-fb84-4bed-ad2a-2c87864b9a71"><p class="p">Layers 31, 32, 33, 34,
+and 35 have d105 in common, start with nom, alternate n and p, and
+have two 050 layers followed by two 100 layers.</p>
+</li>
+</ul>
+<p class="p">This repeating loop can be
+implemented in a number of ways, but the least complex solution
+is to create 1-dimensional lists for each variable element (layer
+number and composite name).</p>
+<pre class="pre codeblock leveled"><code>set lyrlist {11 12 13 14 15 21 22 23 24 25 31 32 33 34 35}
+set lyrname {d100_nom d100_n050 d100_p050 d100_n100 d100_p100
+d095_nom d095_n050 d095_p050 d095_n100 d095_p100 d105_nom
+	d105_n050 d105_p050 d105_n100 d105_p100}</code></pre></div></li>
+<li class="li step stepexpand" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__idfc4f4e21-ce59-4cd1-a614-61debab74823"><span class="ph cmd">Write a Tcl loop to replace
+the individual calls with the list substitution. Note that the LITHO
+OPCVERIFY call for TVF is slightly different. A simple count variable
+is used to keep track of which element of the list to retrieve.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>	set lnum 0
+	foreach layerloop $lyrlist {
+
+tvf::setlayer img_[lindex $lyrname $lnum] = “LITHO OPCVERIFY
+ $input_list FILE OPCV_POLY_SETUP MAP img_[lindex $lyrname $lnum]”
+
+tvf::RULECHECK img_[lindex $lyrname $lnum] 
+	“tvf::COPY img_[lindex $lyrname $lnum]”
+
+tvf::DRC “CHECK MAP img_[lindex $lyrname $lnum] $layerloop”
+	incr lnum
+
+	}</code></pre></div></li>
+<li class="li step stepexpand" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__id01f924df-f1ed-497e-8c64-338b2bdf4720"><span class="ph cmd">Add the start of a new VERBATIM
+block below the loop to encapsulate everything that was after the
+TVF loop into the block. In other words, this includes any additional
+inline calls to the Calibre OPCverify command file from this example
+code that were not part of the TVF loop. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>tvf::VERBATIM { 
+
+poly_pvb = LITHO OPCVERIFY POLY POLY_OPC ACTIVE FILE OPCV_POLY_SETUP MAP poly_pvb      
+
+poly_pvb { COPY poly_pvb             } DRC CHECK MAP poly_pvb             40
+
+...</code></pre></div></li>
+<li class="li step stepexpand" id="idaf601f5f-d681-4fd8-925c-e7871dffd193__id68c43b98-c0a5-4095-a9c4-2c2c8f2d6cfa"><span class="ph cmd">After the end of the example
+code (after the closing square bracket (*/])), close the VERBATIM
+block.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>	layers pvb_width pvb_inner pvb_outer {
+		file_prefix pvb_width   
+	}
+}
+*/]
+
+}</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The code should now have two distinct
+VERBATIM blocks, one above and one below the TVF loop you have implemented. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ConvertingModuleTvf_idf43fd7e3.html" title="Tcl Verification Format (TVF) is an enhancement to the Calibre Tools engine that allows Tcl programmers to implement Tcl as part of an SVRF rule file. Calibre OPCverify itself is a Tcl-based language, and therefore also supports Tcl intermixed with its commands.">Converting This Module to TVF</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcv_useref"
+                DocTitle = "Calibre® OPCverify™ User’s and Reference Manual"
+                PageTitle = "Converting LITHO OPCVERIFY Calls to a TVF Loop"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ConvertingLithoOpcverifyCallsTvfLoop_idaf601f5f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCverify™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

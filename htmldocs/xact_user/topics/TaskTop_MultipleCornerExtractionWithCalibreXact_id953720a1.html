@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Extracting Multiple Corners with Calibre xACT" />
+<meta name="abstract" content="The Calibre xACT and Calibre xACT 3D direct netlisting flows support the extraction of multiple process corners in a single run." />
+<meta name="description" content="The Calibre xACT and Calibre xACT 3D direct netlisting flows support the extraction of multiple process corners in a single run." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id953720a1-56b5-48e7-9c28-28e33a1fb534" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Extracting Multiple Corners with Calibre xACT</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Extracting Multiple Corners with Calibre xACT" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id953720a1-56b5-48e7-9c28-28e33a1fb534">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Extracting Multiple
+Corners with Calibre xACT</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The Calibre
+xACT and Calibre xACT 3D direct netlisting flows support the extraction
+of multiple process corners in a single run. </p>
+<p class="p">Follow this procedure
+when you want to simultaneously extract and netlist all process,
+multi-patterning, and/or temperature corners in a single run using
+Calibre xACT. Process
+corners refer to the variations on a “typical” process; for instance,
+metal thickness may not be exactly controlled. The flow can be run
+on multiple remote machines or on one multi-CPU machine.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id901a055c-5c89-44e3-b65e-1d1d46b001e8"><p class="p">A
+rules directory containing the following SVRF rule files for the
+target technology and metal scheme:</p>
+<ul class="ul"><li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id42f08aa9-94bb-4dbb-b0d0-122360db21c9"><p class="p">A
+top-level control file (<span class="ph filepath">top.rules</span>).</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id62c44807-718c-435b-9aaf-83c73aec38cc"><p class="p">A
+capacitance rule file (<span class="ph filepath">rules.C</span>)
+for each process corner.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id11d6fbfe-9e5e-44a6-9c09-42ff0e9c7aa6"><p class="p">A
+resistance rule file (<span class="ph filepath">rules.R</span>)
+for each process corner.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Calibrated capacitance and
+resistance rule files must be created with xCalibrate version 2015.1
+or later.</p>
+</div>
+</li>
+</ul>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__idce66e8a9-90b4-4df8-807f-74f273c43030"><p class="p">A Calibre xACT rule file (<span class="ph filepath">rules.xact</span>)
+for each process corner.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id7f01f6d2-a04d-4016-a843-d38a6d002ac0"><p class="p">An LVS rule file.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__idcb56409d-210d-4edb-8660-3b84987e9f9c"><p class="p">The following design files:</p>
+<ul class="ul"><li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__idcfb3f02a-fe8e-4b7d-9a96-cbc6168e3830"><p class="p">GDS
+or OASIS file.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__idcb4e7e50-cbbc-4082-8bda-567963645384"><p class="p">Source
+netlist, if source names are desired.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id7a4441ee-e72c-44f1-b020-27c495c39592"><span class="ph cmd">Create a top-level SVRF control file. It should
+look similar to the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>LAYOUT PRIMARY “topcell” 
+LAYOUT PATH “./design/topcell.gds” 
+LAYOUT SYSTEM GDSII 
+SOURCE PRIMARY “topcell”
+SOURCE PATH “./design/topcell.src.net”
+SOURCE SYSTEM SPICE
+UNIT CAPACITANCE fF 
+INCLUDE calibre_lvs_rules.svrf 
+
+PEX EXTRACT EXCLUDE SOURCENAMES VDD VSS
+PEX NETLIST CAPACITANCE UNIT fF 
+PEX EXTRACT TEMPERATURE 27 
+PEX REDUCE ANALOG YES </code></pre></div></li>
+<li class="li step stepexpand" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id7ef7e633-cbe7-4454-aebb-82762ebdcbd6"><span class="ph cmd">To netlist multiple process corners use the
+PEX Netlist statement. For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>PEX NETLIST “netlist_%xactProcessCorner%_%xactDpCorner%_%xactTemperature%.dspf” DSPF SOURCENAMES</code></pre><p class="p">In the example, the file name uses substitution
+variables.</p>
+<ul class="ul"><li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id0ba27ae9-e27a-4407-a45b-eeff487f69a8"><p class="p">%xactProcessCorner% — is set to the process corner
+name.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id34f84866-ff77-4f81-ae25-0378f2391312"><p class="p">%xactDpCorner% — is set to a particular corner
+name if double patterning corners are present.</p>
+</li>
+<li class="li" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__idd9b8b4a9-cf70-4b62-8eb4-527e344f16c2"><p class="p">%xactTemperature% — is set to temperature values
+defined using either PEX Extract Temperature or PEX XACT Corner
+... TEMPERATURE statements.</p>
+</li>
+</ul>
+<p class="p">These variables are not case sensitive and can
+be placed anywhere within the filename. They are replaced during
+execution with predefined names for all possible combinations.</p>
+</div></li>
+<li class="li step stepexpand" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id428db92b-90ea-4488-9039-e82b5c1d710c"><span class="ph cmd">To extract
+multiple process corners, use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX XACT Corner', 'svrf_ur'); return false;">PEX XACT Corner </a>statement. The PEX XACT Corner statement tells Calibre
+xACT the name of the process corner. Add these statements to your
+top-level SVRF control file. In this example the three process corners are
+typical, cworst, and rcbest. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>PEX XACT CORNER typical 
+PEX XACT CORNER cworst 
+PEX XACT CORNER rcbest TEMPERATURE 27 140 
+#IFDEF $XACT_CORNER typical
+	DFM DATABASE dfmdb.typical OVERWRITE
+	INCLUDE “./typical/rules.C” 
+	INCLUDE “./typical/rules.R” 
+	INCLUDE “./typical/rules.XACT”
+#ENDIF
+#IFDEF $XACT_CORNER min
+	DFM DATABASE dfmdb.cworst OVERWRITE
+	INCLUDE “./cworst/rules.C” 
+	INCLUDE “./cworst/rules.R” 
+	INCLUDE “./cworst/rules.XACT”
+#ENDIF
+#IFDEF $XACT_CORNER max
+	DFM DATABASE dfmdb.rcbest OVERWRITE
+	INCLUDE “./rcbest/rules.C” 
+	INCLUDE “./rcbest/rules.R” 
+	INCLUDE “./rcbest/rules.XACT”
+#ENDIF
+#IFNDEF $XACT_CORNER
+	DFM DATABASE dfmdb OVERWRITE
+	INCLUDE “./typical/rules.C” 
+	INCLUDE “./typical/rules.R” 
+	INCLUDE “./typical/rules.XACT”
+#ENDIF
+</code></pre></div><div class="itemgroup info StepInfo"><p class="p">The variable $XACT_CORNER
+is set internally by Calibre and each case carries the value of
+one of the process corners. The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">Include</a> statements
+inside of the #IFDEF conditional use the value of the $XACT_CORNER
+variable to locate the capacitance and resistance decks for each
+corner. The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Include', 'svrf_ur'); return false;">Include</a> statements
+following the #IFNDEF statement are required for Calibre. </p>
+</div></li>
+<li class="li step stepexpand" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__id1e27dd05-3cb1-494a-98da-5b9dc1ee4893"><span class="ph cmd">To netlist a single double patterning process
+corner, include the following statement:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PEX XACT CORNER cworst DP "CCworst"</code></pre></div></li>
+<li class="li step stepexpand" id="id953720a1-56b5-48e7-9c28-28e33a1fb534__ide2b51661-847c-4847-8886-91ebb2067abb"><span class="ph cmd">Run the extraction step. For
+example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -xact -rcc -turbo xact_multicorner.svrf</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Calibre
+xACT generates one or multiple netlists for each PEX XACT Corner
+statement, depending on the number of DP and/or temperature corners
+specified.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_ControllingNetlisting_idf566955d.html" title="Netlist content can vary greatly depending on your design and analysis goals.">Controlling Netlisting</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Extracting Multiple Corners with Calibre xACT"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_MultipleCornerExtractionWithCalibreXact_id953720a1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

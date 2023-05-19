@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Collections and Collection Iterators" />
+<meta name="abstract" content="A collection is a data structure that is especially useful in two situations. The first is to get around the inherent Tcl limit on list size. The second is to save data internally for lookup during the run. This second usage can circumvent file I/O issues associated with saving runtime data to disk. Collection iterators reference objects in collections and behave mostly as other Calibre PERC iterators do." />
+<meta name="description" content="A collection is a data structure that is especially useful in two situations. The first is to get around the inherent Tcl limit on list size. The second is to save data internally for lookup during the run. This second usage can circumvent file I/O issues associated with saving runtime data to disk. Collection iterators reference objects in collections and behave mostly as other Calibre PERC iterators do." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id866db00e-656e-419c-a896-5a75bd7c1d9f" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Collections and Collection Iterators</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Collections and Collection Iterators" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id866db00e-656e-419c-a896-5a75bd7c1d9f">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Collections and Collection
+Iterators</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">A collection is a data structure that
+is especially useful in two situations. The first is to get around
+the inherent Tcl limit on list size. The second is to save data
+internally for lookup during the run. This second usage can circumvent
+file I/O issues associated with saving runtime data to disk. Collection
+iterators reference objects in collections and behave mostly as
+other Calibre PERC iterators do.</span>
+</div>
+<p class="p">A <span class="ph FontProperty emphasis">collection</span> is
+a structure having two basic forms: <span class="ph FontProperty emphasis">sequential</span> (list-like)
+and associative array. The latter type is hereafter called a <span class="ph FontProperty emphasis">hash</span> collection.</p>
+<div class="section Subsections"><div class="section Subsection" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__idd5495dcc-8818-4c19-aef9-862381429d74"><h2 class="title Subheading sectiontitle">Sequential Collections</h2><p class="p">Sequential collections get around a Tcl limitation on the size
+of lists. Tcl internal processes restrict lists to roughly 4E5 elements,
+but collections have no such limitation.</p>
+<p class="p">For any sequential collection, all elements have the same type.
+This is enforced by the commands that create such collections: <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> -collection
+and <a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> -collection. There
+is no other means to create a sequential collection than those commands.</p>
+<p class="p">There is no way to interact directly with a sequential collection.
+Access to elements in a sequential collection is obtained through
+a collection iterator (coll_iterator). The behavior of a coll_iterator
+is the same as for all other iterators with the exception that a
+coll_iterator may only be dereferenced by the <a class="xref fm:HeadingOnly" href="Command_Perccollection_id01127e08.html#id01127e08-7773-4f86-9c93-f48a26bfd673__Command_Perccollection_id01127e08.xml#id01127e08-7773-4f86-9c93-f48a26bfd673" title="Returns data from a collection iterator. Creates a hash collection, adds data to it, returns data from it, and can delete it. Returns a collection iterator from a hash collection.">perc::collection</a> command.
+That is, a coll_iterator cannot be modified, it is opaque, the order
+of the elements is not generally predictable, the elements are traversed
+in sequential order from beginning to end, it may not be reset after
+it reaches its end, and it may only be referenced from within the
+rule check in which it was created.</p>
+<p class="p">A coll_iterator references objects as follows:</p>
+<ul class="ul"><li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id5fea57c2-6881-45b9-bb5c-7a92d9296107"><p class="p">perc::count
+-collection creates a coll_iterator referencing instance iterators.</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id64692369-4f34-46e9-b0fb-08f9493cf329"><p class="p">perc::count
+-collection -pinAlso creates a coll_iterator referencing ordered
+pairs of instance iterators and Tcl lists of pin names associated
+with each instance referenced by an instance iterator.</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id9ed20e14-4ca2-4a76-aab5-0d50a922b302"><p class="p">perc::name
+-collection creates a coll_iterator referencing strings.</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id4309c13b-514f-4c46-8646-5cdd7d02586f"><p class="p">A sequential
+collection exists until there are no more collection iterators referencing
+that collection.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id390d2a25-2197-4a32-9c75-7210466b15b9"><h2 class="title Subheading sectiontitle">Hash
+Collections</h2><p class="p">Hash collections obviate the need to save data to files for lookup
+during runtime, among other uses, because these collections can
+persist longer than the current rule in which they are created.</p>
+<p class="p">Elements in a hash collection are (key,value)
+pairs. The key is a unique case-sensitive string, and the value
+is a Tcl list, possibly of just one element. A value may consist
+of strings, instance iterators, or net iterators. All values in
+a collection must be of exactly one of those three types (intermixing
+of types is disallowed). If a value contains things that cannot
+be classified as net or instance iterators, it is treated as a string.</p>
+<p class="p">There is no inherent order to a hash collection. Elements in
+the collection may be retrieved by a key, which returns the associated
+value, or by querying the collection through a collection iterator
+to get the key and value for the current element referenced by the
+iterator.</p>
+<p class="p">Hash collections may be interacted with directly through a handle.
+A hash collection is created and its handle is returned through
+the perc::collection -create command, such as this:</p>
+<pre class="pre codeblock"><code>set coll_handle [perc::collection -create -name "my collection" \
+                                    -lifetime currentRule]</code></pre><p class="p">A handle may also be obtained using the perc::collection -get
+option when the collection already exists. (This can circumvent
+the use of global variables, which should be avoided in multi-threaded
+runs.)</p>
+<p class="p">Interaction with a hash collection occurs by dereferencing the
+handle in an appropriate perc::collection command. (Notice a collection
+handle is distinct from a collection iterator, which was described
+previously.) Interactions with a hash collection include retrieving
+its handle, querying its keys and values, adding elements to it,
+and deleting it. A hash collection may not be added to if a collection
+iterator exists for the collection, even if the iterator’s index has
+reached the end.</p>
+<p class="p">Hash collections have three scopes (referred to as a lifetime):
+intra-rule, intra-load, and global. Intra-rule means the collection
+only applies within the current rule and is specified by a currentRule
+keyword. Intra-load means the collection applies across procedures
+specified in the same PERC Load statement and is specified by a
+currentLoad keyword. Global means the collection applies for any
+called procedure in the run and is specified by a currentRun keyword. Intra-load
+and global collections may be defined in an initialization procedure,
+but an intra-rule collection may not because an INIT proc can span
+multiple rule checks.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Named hash collections are global data. Such collections
+used in an initialization procedure could result in unexpected outcomes
+in multithreaded runs. The tool employs heuristics to avoid such
+outcomes, but it is possible data conflicts can arise despite these
+heuristics. If unexpected outcomes occur for such a hash collection,
+moving the collection into rule check procedures and observing the
+guidance that follows is a possible remedy.</p>
+</div>
+<p class="p">For intra-load and global collections that are used in multithreaded
+runs, it is important to ensure the collection has been completely
+populated with the expected objects before attempting to access
+them. Remember that the order of rule check execution in multithreaded mode
+is not predictable by default.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">It is a recommended practice to have rule
+checks that, respectively, create, populate, and read from the same
+collection sequentially. In single-threaded mode, rule checks are
+executed in the order they are listed in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC Load</a> statement.
+In multi-threaded mode, you can specify a rule check group in the
+SELECT PARALLEL keyword set by using parentheses. The rule checks
+in the parentheses are executed sequentially. Sequential execution
+order is also possible at the PERC Load level within limits. The
+tool determines the PERC Load order by a set of heuristics, but
+this is predictable and is discussed in the statement’s reference
+documentation.</p>
+</div>
+<p class="p">Collection iterators may be created from a hash collection, and
+these iterators behave in the same way as for sequential collections
+with a few exceptions:</p>
+<ul class="ul"><li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__idd86ebe30-9320-4573-ae0a-790a875e464d"><p class="p">It is possible
+to create a collection iterator that is indexed to its first element
+from a hash collection without using perc::clone. This capability
+exists through the perc::collection ‑begin option.</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id066073f9-c53a-4c4d-b6fe-68de4b631b1d"><p class="p">The current
+key referenced by the collection iterator can be queried (collection
+iterators produced from a sequential collection have no key associations).</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id664ad506-6c89-4359-9e14-82295a20b7a7"><p class="p">A value referenced
+by the collection iterator is always a Tcl list, possibly with a
+single element.</p>
+</li>
+</ul>
+<p class="p">As with sequential collection iterators, an iterator to a hash
+collection is “read only.” The iterator has no ability to alter
+the collection it references.</p>
+<p class="p">A hash collection exists until the lifetime of the collection
+is exceeded, or the collection is deliberately removed by the user's
+code.</p>
+<h2 class="title Subheading sectiontitle">Collection Descendant Iterators</h2><p class="p">An iterator to device instances or nets can be retrieved directly
+from a hash collection. Such an iterator can then be passed to other
+commands that generate iterators from the ones that came directly
+from a hash collection. In either case, we refer to the iterator
+as a <span class="keyword ParameterName OptionalReplaceable">collection descendant</span>; in
+the first case, we refer to the iterator as a <span class="keyword ParameterName OptionalReplaceable">direct collection descendant</span>. </p>
+<p class="p">Commands in <a class="xref fm:Table" href="#id866db00e-656e-419c-a896-5a75bd7c1d9f__id09aa4d37-d01e-41e3-8566-33fb77899078">Table 1</a> do not accept the following
+iterators:</p>
+<ul class="ul"><li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__ide40eea85-8bbf-4068-9d34-bde1de6a51f7"><p class="p">any collection
+descendant instance iterator</p>
+</li>
+<li class="li" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__idd34785f8-1353-4778-b1d6-5de466a8d168"><p class="p">any collection
+descendant net iterator that is not a direct descendant</p>
+</li>
+</ul>
+<p class="p">Direct collection descendant net iterators may be used in any
+of the commands in <a class="xref fm:Table" href="#id866db00e-656e-419c-a896-5a75bd7c1d9f__id09aa4d37-d01e-41e3-8566-33fb77899078">Table 1</a> except perc::cache_net. </p>
+<p class="p">The first column in the table consists of all the “math commands.”
+The second column contains other commands that span hierarchy.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id866db00e-656e-419c-a896-5a75bd7c1d9f__id09aa4d37-d01e-41e3-8566-33fb77899078" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Commands
+Not Accepting Collection Descendant Iterators</span></caption><colgroup><col style="width:1.622in" /><col style="width:2.278in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::adjacent_count</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::cache_device</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::count</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::cache_net</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::exists</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::descend</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::max</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::get_instances_in_parallel</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::min</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::get_instances_in_series</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::prod</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::get_one_pattern</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::sum</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">perc::set_annotation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">Following is a notional example of a problematic use of a collection
+descendant iterator.</p>
+<pre class="pre codeblock"><code>  set devItr [lindex [perc::collection ... -value] 0]
+# devItr came from a hash collection
+  set netItr [perc::get_nets ${devItr} -name "D"]
+# netItr derived from iterator that came from a hash collection
+  perc::count -net ${netItr} ...
+# invalid -- netItr is a collection descendant</code></pre><p class="p">In cases where improper use of collection descendant iterators
+occur, this error is produced:</p>
+<p class="p BlockIndent">ERROR: Invalid to pass {instance | net} iterator {derived
+| fetched} from a hash collection.</p>
+<p class="p">The word “fetched” is used for a direct collection descendant
+iterator, and “derived” is used otherwise.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_RuleCheckProceduresCommands_id5cf67804.html" title="A rule check in Calibre PERC is a Tcl procedure called with the check_proc argument of the PERC Load specification statement. Rule checks evaluate various aspects of a design and produce results of those evaluations. Multiple rule check procedures can be specified. The rule check procedure is defined within a TVF Function statement.">Rule Check Procedures and Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Collections and Collection Iterators"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CollectionsAndCollectionIterators_id866db00e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

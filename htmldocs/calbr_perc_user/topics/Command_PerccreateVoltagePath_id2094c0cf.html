@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="perc::create_voltage_path" />
+<meta name="abstract" content="Enables voltage propagation through selected devices and pins." />
+<meta name="description" content="Enables voltage propagation through selected devices and pins." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2094c0cf-1da3-41d7-9049-860de10b6ca7" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>perc::create_voltage_path</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="perc::create_voltage_path" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">perc::create_voltage_path</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Calibre
+PERC initialization command.</p>
+<p class="shortdesc">Enables voltage propagation
+through selected devices and pins.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">perc::create_voltage_path</span> <span class="keyword ParameterName Required">-pin</span> “<span class="keyword ParameterName RequiredReplaceable">pin1 pin2</span>”<br />
+[-type <span class="keyword ParameterName OptionalReplaceable">type_list</span>] <br />
+[-<span class="keyword ParameterName Optional">subtype</span> <span class="keyword ParameterName OptionalReplaceable">subtype_list</span>] <br />
+[-<span class="keyword ParameterName Optional">property</span> “<span class="keyword ParameterName OptionalReplaceable">constraint_str</span>”] <br />
+[-on “<span class="keyword ParameterName OptionalReplaceable">pin_name</span>{+|-} <span class="keyword ParameterName OptionalReplaceable">constraint</span>”]<br />
+[-pinLimit <span class="keyword ParameterName OptionalReplaceable">limit_proc</span>]<br />
+[-pinNetType {{<span class="keyword ParameterName OptionalReplaceable">pin_name_list</span>} {<span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span>} …}]<br />
+[-pinVoltage <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span>]<br />
+[-condition <span class="keyword ParameterName OptionalReplaceable">cond_proc</span>]<br />
+[-<span class="keyword ParameterName Optional">break</span> <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span> ]</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Enables voltage propagation through
+the specified pins of selected devices and along net paths. If this
+command is not used, then voltages assigned to nets through <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> and <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a> commands are not propagated across
+devices but remain on the assigned nets. This command can only be
+used in a Calibre PERC initialization procedure.</p>
+<p class="p">The <span class="keyword ParameterName Required">-pin</span> parameter
+set is required. If no other options are specified, voltage propagation
+occurs across all devices having the specified pin names. If more
+than one perc::create_voltage_path command applies to the same device,
+then each command is examined to determine the pins and propagation
+conditions applied to them. For disjoint sets of pin pairs, each
+set of conditions is applied to those sets of pins separately, and
+each disjoint set of pins defines a distinct propagation path for
+that device. But if sets of pin pairs have pins common to them,
+then those pins are considered topologically connected, and the
+propagation conditions for any of the common pins apply to all the
+pins in the non-disjoint sets.</p>
+<p class="p">The -type <span class="keyword ParameterName OptionalReplaceable">type_list </span>specifies
+the list of <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> types that
+participate in voltage propagation. The options ‑subtype and ‑property
+further limit which devices participate.</p>
+<p class="p">Input-pin-driven evaluations
+(vectored mode) are often used to determine whether proper voltages
+exist in a circuit for a specific test vector (for example, reset
+or power-on) while vector-less evaluations are often used to determine
+possible worst-case voltage conditions (over- or under-driven nodes,
+or incorrectly-connected voltage domains). See “<a class="xref fm:HeadingAndPage" href="Concept_VoltageCheckCoding_id11b112f0.html#id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id678045a6-27f7-4bdd-833a-ce458744b881">Vectored Versus Vector-Less Voltage Analysis</a>” for a discussion of these modes.</p>
+<p class="p">Vector-less evaluation is used
+when the -on option <span class="ph FontProperty emphasis">is not specified</span>.
+Calibre PERC assumes selected device pins are always connected and
+proceeds with a vector-less evaluation. In vector-less mode, input
+voltages are ignored except for comparison purposes (for example,
+if you want to compare an input gate pin voltage to the voltage
+on a device drain). You need only power supply voltages, although
+you may provide an arbitrary number of voltages to an input net. </p>
+<p class="p">Be aware that vector-less evaluations
+can report impossible situations like a logic gate switching when
+two exclusive signals are both high or low. For example, if A is
+the input to an inverter and A* is the output, both signals being
+high or both being low is not physically possible, but this can
+be reported as being the case in vector-less mode. Such situations
+can be mitigated by using unidirectional current checks as discussed
+under “<a class="xref fm:HeadingAndPage" href="Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html#iddd0d1ab0-d5fb-49c0-8083-7893862fc978__Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.xml#iddd0d1ab0-d5fb-49c0-8083-7893862fc978" title="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming.">Code Guidelines for Unidirectional Current Checks</a>”. Care must be taken not to
+suppress real errors when using this method.</p>
+<p class="p">In vectored mode (-on is specified),
+you must provide all supply voltages and all input pin voltages
+of interest. You should provide a single voltage for all input nets
+of interest. Calibre PERC applies the user‑specified voltages to
+input pins and propagates the subsequent voltages downstream. </p>
+<p class="p">The -on option conditionally
+controls whether or not voltage propagation occurs through selected
+device pins. For example, here are two commands for MOS devices:</p>
+<pre class="pre codeblock leveled"><code>perc::create_voltage_path -type {MN} -pin {S D} -on "G+ &gt; 2.0" 
+perc::create_voltage_path -type {MP} -pin {S D} -on "G- &gt; 2.0" </code></pre><p class="p">Calibre PERC checks the voltages
+of the pins marked S and D and proceeds as follows:</p>
+<ul class="ul"><li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id29399592-130a-4042-bf90-8e4610883e46"><p class="p">If no voltage currently exists
+on either of these pins, then no connectivity computation is possible,
+and the S/D pins remain unconnected. </p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ide6cfb617-edb4-44fc-9032-052221a838e1"><p class="p">The -on condition does not
+apply to diode-connected MOS devices (see <a class="xref fm:HeadingOnly" href="Command_PercenableMosDiodeDetection_id8a68d1a5.html#id8a68d1a5-da8d-434a-8202-fb67110467a0__Command_PercenableMosDiodeDetection_id8a68d1a5.xml#id8a68d1a5-da8d-434a-8202-fb67110467a0" title="Specifies how diode-connected MOSFET devices are handled during voltage-aware path traversal.">perc::enable_mos_diode_detection</a>). Conventional gate-drain diode-connected
+MOS devices are treated as conducting (that is, S/D pins are connected)
+but gate-source diode-connected devices are normally treated as
+non-conducting. An exception to the latter rule is if the drain
+of an NMOS gate-source diode is connected to an LVS Ground Name net
+or if the drain of a PMOS gate-source diode is connected to an LVS
+Power Name net, then the device is considered to be conducting.</p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id66f4dee8-bc78-41a2-bf6e-bf9e88a58ef2"><p class="p">If only one of the S or D
+pins has a voltage on it (the other pin’s voltage is undefined), then
+that pin is assumed to be the S pin, and the magnitude of the difference
+between the S and G pins is compared to the constraint. If that
+magnitude satisfies the constraint, then the S/D pins are connected.</p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idfa8ca0e2-2385-4961-aaf9-e8adac40a38a"><p class="p">If the S and D pins have
+differing voltages, then the following occurs. If the device is
+N-channel, then the difference between the G pin voltage and the
+lower of the S/D voltages is compared to the constraint. If the
+constraint is met, then the S/D pins are connected. If the device
+is P-channel, then the difference between the higher of the S/D
+voltages and the G pin voltage is compared to the constraint. If
+the constraint is met, then the S/D pins are connected.</p>
+<p class="p">If there are different voltages
+on the S and D pins and the device is on, this places multiple voltages
+on the S and D nets. On a subsequent iteration in vectored mode,
+it is likely a message like this will be written to the transcript:</p>
+<pre class="pre codeblock leveled"><code>MULTIPLE DRAIN/SOURCE VOLTAGES found on instance: &lt;instance&gt; net: &lt;net&gt; = &lt;list_of_voltages&gt; </code></pre></li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id93279756-e6b8-4afd-b4c1-8cb66297e2c4"><p class="p">If there are multiple voltages
+on a G pin node, then the following message is written to the transcript:</p>
+<pre class="pre codeblock leveled"><code>MULTIPLE GATE VOLTAGES found on instance: &lt;instance&gt; net: &lt;net&gt; = &lt;list of voltages&gt; </code></pre><p class="p">and propagation is aborted. This
+is indicated in the PERC Report.</p>
+</li>
+</ul>
+<p class="p">If one of the S/D pin voltages
+is defined, but the other is either undefined or has a different value:</p>
+<ul class="ul"><li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idf03629c6-2e6f-4451-9cd2-a0bc32e65e58"><p class="p">For the first command shown
+previously, if the difference between the G and S pins is greater
+than 2.0, then the S/D pins are connected.</p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id96d2c5a1-8e63-4ed7-83b2-805d38a7682b"><p class="p">For the second command shown
+previously, if the difference between the S and G pins is greater
+than 2.0, then the S/D pins are connected.</p>
+</li>
+</ul>
+<p class="p">Pin voltages may be initially
+unknown. Calibre PERC evaluates a circuit until all voltages that can
+be established are set. It is possible that some nets will remain
+undriven or unreachable. In such cases, their voltage lists remain
+empty. If there are inconsistencies in voltages on a net or in voltages
+driving a transistor, this generates warning messages in the run
+transcript.</p>
+<p class="p">When in vectored mode, N-channel transistors of types MN or Q
+must have model names that start with the letter N. P-channel transistors
+of the types MP or Q must begin with the letter P. If any of these
+conditions is not satisfied, a warning is issued, and the relevant
+devices are considered to be in the “off” state.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">It is
+possible both vectored and vector-less commands might apply to a
+given device. In such a case, the tool takes a conservative approach
+and performs vectored propagation only.</p>
+</div>
+<p class="p">If the -pinNetType option is
+specified, a device must meet the criteria set by the <span class="keyword ParameterName OptionalReplaceable">pin_name_list </span>and <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span> in
+order to participate in voltage propagation. For example, this call:</p>
+<pre class="pre codeblock leveled"><code>  perc::create_voltage_path -type R -pinNetType {{p n} Pad} -pin {p n} </code></pre><p class="p">propagates voltages across pos
+and neg pins of resistors that are connected to nets having the Pad
+net type.</p>
+<p class="p">The -pinLimit and -pinVoltage
+options perform separate functions. The -pinLimit <span class="keyword ParameterName OptionalReplaceable">limit_proc</span> sets
+pin voltage limits on an input pin to the proc before voltage propagation.
+The -pinVoltage <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> can
+modify existing voltages for an input pin to the proc during voltage propagation.</p>
+<p class="p">If the -pinLimit option is specified,
+voltage limits are set on specific nets after any path types are propagated
+by <a class="xref fm:HeadingOnly" href="Command_PerccreateNetPath_id10b2258b.html#id10b2258b-2c17-4da0-b38b-accfa06ccbb1__Command_PerccreateNetPath_id10b2258b.xml#id10b2258b-2c17-4da0-b38b-accfa06ccbb1" title="Enables path type propagation through selected devices and pins. Assigns path types, which correspond to the net type names of all the nets connected through the devices and pins selected by this command.">perc::create_net_path</a> commands
+but before voltages are propagated. This is accomplished through
+the <span class="keyword ParameterName OptionalReplaceable">limit_proc</span> Tcl
+procedure. (Note that voltages on nets can exist prior to propagation
+through the <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> or <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a> commands when voltage limits are
+set.) Voltages cannot be changed or removed inside the <span class="keyword ParameterName OptionalReplaceable">limit_proc</span>.
+Therefore, using the <a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> command with the -path option,
+or the <a class="xref fm:HeadingOnly" href="Command_PercvoltageMin_id209a3f13.html#id209a3f13-3368-4085-b325-0678fbe219d8__Command_PercvoltageMin_id209a3f13.xml#id209a3f13-3368-4085-b325-0678fbe219d8" title="Returns the minimum voltage for an instance’s pin.">perc::voltage_min</a> or <a class="xref fm:HeadingOnly" href="Command_PercvoltageMax_ida5217c7b.html#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee__Command_PercvoltageMax_ida5217c7b.xml#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee" title="Returns the maximum voltage for an instance’s pin.">perc::voltage_max</a> commands within this proc is precluded. </p>
+<p class="p">Conversely, voltage limits cannot
+be set inside the -pinVoltage <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span>.
+Therefore, using <a class="xref fm:HeadingOnly" href="Command_PercsetVoltageLimit_id06c5c5c0.html#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6__Command_PercsetVoltageLimit_id06c5c5c0.xml#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6" title="Specifies maximum and minimum voltages for a net.">perc::set_voltage_limit</a> within a <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> is
+precluded. The <a class="xref fm:HeadingOnly" href="Command_PercgetVoltageLimit_idc02e5b26.html#idc02e5b26-0018-41f7-9b0c-1b01689fa989__Command_PercgetVoltageLimit_idc02e5b26.xml#idc02e5b26-0018-41f7-9b0c-1b01689fa989" title="Returns maximum or minimum voltage limit values for a net.">perc::get_voltage_limit</a> command
+can be used inside the <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> for
+querying voltage limits, however.</p>
+<p class="p">The -pinVoltage option modifies
+an existing voltage (or set of voltages) on a device node. This is
+done through a Tcl procedure referenced by the <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> argument.
+(See “<a class="xref fm:HeadingAndPage" href="Concept_VoltageCheckCoding_id11b112f0.html#id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id7e0607dd-15a0-4ff2-83a3-7cc1668dd806">Voltage Propagation Control</a>” for important
+advice regarding the -pinVoltage and ‑condition options.)</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> must
+return at least one numeric, or non-numeric value, or both. Non-numeric values
+must be symbolic voltage names, (non-symbolic) group names, the
+word “default”, or the word “none”. If a numeric value is returned,
+Calibre PERC uses the nearest voltage value to the return value
+as determined by the system for propagation. If the value is a symbolic
+voltage, it must have an underlying numeric value if the voltage
+is used in such a way that a numeric value must be available. If
+the value is a group name, any underlying numeric values are returned.
+An empty return value causes a runtime error. A non-numeric return
+value that is not a symbolic name, a numeric group name, the keyword
+default, or the keyword none causes a runtime error and the tool
+quits.</p>
+<p class="p">A special non-numeric <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> return
+value is “default” (case-sensitive). This return value means the
+value that ordinarily would be propagated if the ‑pinVoltage option
+were not used at all is the one that gets used. Another special
+non-numeric return value for making no changes to existing values
+is “none” (case-sensitive). This return value causes any existing
+propagated voltages on a net to remain unchanged. See <a class="xref fm:HeadingOnly" href="#id2094c0cf-1da3-41d7-9049-860de10b6ca7__idc592a85e-3dbc-4ea4-ad19-daeafc2a35e4">Example 5</a> for a discussion of how to use
+the default and none return values to control the direction of voltage
+propagation.</p>
+<p class="p">Unlike other initialization procedures,
+the <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> procedure
+can execute rule check commands, which are normally reserved for
+rule check procedures specified with the PERC Load SELECT keyword.
+Because voltage propagation throughout a design is iterative, a <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> needs
+to call a rule check command to determine if certain conditions
+are met before propagating voltages. See the Examples subsection
+for sample coded procedures.</p>
+<p class="p">If -pinVoltage is specified but
+-on is not, then any voltage calculated by the <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> is applied.</p>
+<p class="p">If both -pinVoltage and -on are
+both specified, then any voltage calculated by the <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> is
+only applied if the device is connected (on). If the device is not
+connected (off), then the present voltages on the device’s pins
+remain the same.</p>
+<p class="p">If -pinLimit or -pinVoltage is
+specified, but the associated proc does not create new voltages (ones
+in addition to initialized values), then you should specify <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageInterval_id97b2b367.html#id97b2b367-5449-4921-859a-30bc2e61d886__Command_PercdefineVoltageInterval_id97b2b367.xml#id97b2b367-5449-4921-859a-30bc2e61d886" title="Specifies voltage resolution.">perc::define_voltage_interval</a> with the “‑interval none” keyword
+set. This is a performance optimization. This setting frequently
+applies when voltages are symbolic, but it is applicable any time
+only initialized voltage values are applied.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">Set perc::define_voltage_interval
+-interval “none” whenever possible. If this is not possible and your
+design is large, set a -interval value that is larger than the default
+of 0.01. A value of 0.1 or larger is a better choice if that is
+reasonable.</p>
+</div>
+<p class="p">If a -pinLimit or -pinVoltage procedure produces a voltage that
+is the same as what default propagation would assign to a net, then
+the assigned voltage is considered to be the default and the voltage
+is marked “ideal” in <a class="xref fm:HeadingOnly" href="Command_Perctrace_ide2aa1b71.html#ide2aa1b71-703a-4734-824c-5432877d3c51__Command_Perctrace_ide2aa1b71.xml#ide2aa1b71-703a-4734-824c-5432877d3c51" title="Returns pin voltage attributes traced from an input net.">perc::trace</a> or <a class="xref fm:HeadingOnly" href="Command_Perctracepath_id4c73d7f6.html#id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c__Command_Perctracepath_id4c73d7f6.xml#id4c73d7f6-92ae-4e5b-9983-d9c2e2809d1c" title="Given a net or an instance pin, determines a minimal set of devices in a voltage propagation path that exist between that node and nets of a specified voltage. Either a device count or instance paths are returned. The connecting nets in the path can optionally be included in the output.">perc::trace_path</a> results.</p>
+<p class="p">By default, voltage propagation
+continues until it reaches a device not selected by the command or
+a port in the top cell. The -break option defines net types of nets
+that break voltage paths. In many cases, specifying supply net types
+in a -break condition is desirable. Note that the perc::create_voltage_path
+-break command’s net types act independently of <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> -break command net types, and
+apply only to voltage propagation.</p>
+<p class="p">Nets that
+are connected through device pins selected by this command have
+all the voltages of the connected nets, and by default include the
+voltages of nets having -break net types.</p>
+<p class="p">This command
+is used only in voltage propagation initialization procedures and
+can be called any number of times. Calibre PERC accumulates the
+conditions specified in each call and propagates voltages based
+upon the entire set of calls. However, the -break option can be specified
+at most once within the same initialization procedure. If a ‑break
+option is specified in one perc::create_voltage_path call, the tool
+uses the -break optionin the combined voltage path definition. </p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idb3f04a25-9b65-4576-bbc2-4e291e60b85e"><span class="keyword ParameterName Required">-pin </span> <span class="keyword ParameterName RequiredReplaceable">“pin1 pin2”</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument set that
+specifies a list of two device pin names. Only the listed pins participate
+in voltage propagation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idad242971-d626-4c53-8523-5f6e85b635a9">-type <span class="keyword ParameterName OptionalReplaceable">type_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set, where <span class="keyword ParameterName OptionalReplaceable">type_list</span> must
+be a Tcl list consisting of one or more Device types, and possibly
+starting with the exclamation point (!). If the exclamation point is
+not present, then only devices with the listed types are selected.
+If the exclamation point is present, then only devices with types
+other than those listed are selected. </p>
+<p class="p">Examples of <span class="keyword ParameterName OptionalReplaceable">type_list</span> are
+these: {MN MP} or {! MN MP}.</p>
+<p class="p">Each device type may contain
+one or more asterisk (*) characters. The * character matches zero
+or more characters.</p>
+<p class="p">Voltage propagation occurs only
+through devices that are in <span class="keyword ParameterName OptionalReplaceable">type_list</span>.
+All device types are in the <span class="keyword ParameterName OptionalReplaceable">type_list</span> when
+this option is unspecified.</p>
+<p class="p">If a subcircuit name is used in the <span class="keyword ParameterName OptionalReplaceable">type_list</span>,
+it is silently ignored.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idb3112ec6-5bcf-44dc-8b00-52d945c15a1b"><span class="keyword ParameterName Optional">-subtype</span> <span class="keyword ParameterName OptionalReplaceable">subtype_list</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set, where <span class="keyword ParameterName OptionalReplaceable">subtype_list</span> must
+be a Tcl list consisting of one or more subtypes, and possibly starting
+with the exclamation point (!). If the exclamation point is not present,
+then only devices with the listed subtypes are selected. If the
+exclamation point is present, then only devices with models other
+than those listed are selected. </p>
+<p class="p">Examples of <span class="keyword ParameterName OptionalReplaceable">subtype_list</span> are
+these: {model_1 model_2} or {! model_3 model_4}.</p>
+<p class="p">Each device subtype may contain
+one or more asterisk (*) characters. The * character matches zero
+or more characters, but it does not match the absence of a subtype.</p>
+<p class="p">Subtypes are also known as model
+names.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ide69fcc04-18f2-4b08-b8e1-827190b2dcba">-<span class="keyword ParameterName Optional">property</span> “<span class="keyword ParameterName OptionalReplaceable">constraint_str</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set, where <span class="keyword ParameterName OptionalReplaceable">constraint_str</span> must
+be a non-empty string (enclosed in double quotation marks) specifying
+a property name followed by a constraint limiting the value of the
+property. For example:</p>
+<pre class="pre codeblock leveled"><code>-property "R &gt; 100" </code></pre><p class="p">The constraint notation is given
+in the “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '99TABLE Constraints', 'svrf_ur'); return false;">Constraints</a>”
+table of the <cite class="cite">SVRF Manual</cite>.</p>
+<p class="p">Only devices satisfying <span class="keyword ParameterName OptionalReplaceable">constraint_str</span> are
+selected.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id0d3ab3e3-2ea1-4535-88f5-40a6c828d803">-on “<span class="keyword ParameterName OptionalReplaceable">pin_name</span>{+/-} <span class="keyword ParameterName OptionalReplaceable">constraint</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies to use vectored mode evaluation and controls whether or
+not voltages are passed through selected device pins. The parameter
+list must be quoted as shown.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">pin_name</span> is
+the name of a device pin (case-insensitive). Voltages are measured between
+this pin and pins of the <span class="keyword ParameterName Required">-pin</span> argument.
+The “+” operator means voltages are measured from the <span class="keyword ParameterName OptionalReplaceable">pin_name</span>.
+The “-” operator means voltages are measured to the <span class="keyword ParameterName OptionalReplaceable">pin_name</span>.</p>
+<p class="p">For type M (MOS) devices, the <span class="keyword ParameterName OptionalReplaceable">pin_name</span> must
+be G. For type Q (BJT) devices, the <span class="keyword ParameterName OptionalReplaceable">pin_name</span> must
+be B. Failure to conform to these requirements results in a fatal
+error.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">constraint</span> is
+an expression similar to the -property option constraint; however,
+the supported operators are limited to &gt;, &gt;=, &lt;, and &lt;=.</p>
+<p class="p">When the conditions of this
+option are met, selected device pins are treated as equipotential.</p>
+<p class="p">Calibre PERC attempts to satisfy
+the specified <span class="keyword ParameterName OptionalReplaceable">constraint</span> whenever
+possible. For the <span class="keyword ParameterName Required">-pin</span> pair
+where only one pin has a voltage specified (the other is undefined),
+Calibre PERC uses that voltage to compare against the <span class="keyword ParameterName OptionalReplaceable">pin_name</span> voltage.
+If both pins of the <span class="keyword ParameterName Required">-pin</span> pair
+have voltages, Calibre PERC uses the most likely value to satisfy
+the constraint.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id0a5db4a9-e47a-4191-bee2-c99b9eb3c8d0">-pinLimit <span class="keyword ParameterName OptionalReplaceable">limit_proc</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies user-calculated voltage limits on nets after net types, net
+voltages, and path types are created, but before voltage path values
+are propagated. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">limit_proc</span> is
+a Tcl procedure that defines voltage limits (not voltage values)
+such as through the perc::set_voltage_limit command. The proc takes
+an instance iterator and pin name as input parameters. See <a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInParallel_idb1ea3d7e.html#idb1ea3d7e-5223-448f-ae87-6456a062a7d0__Command_PercgetInstancesInParallel_idb1ea3d7e.xml#idb1ea3d7e-5223-448f-ae87-6456a062a7d0" title="Returns a list of instance iterators containing instances connected in parallel.">perc::get_instances_in_parallel</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInPattern_idaa4801f2.html#idaa4801f2-6232-41a4-8661-57ec3ea1aaee__Command_PercgetInstancesInPattern_idaa4801f2.xml#idaa4801f2-6232-41a4-8661-57ec3ea1aaee" title="Returns a list of instance iterators from a matched pattern.">perc::get_instances_in_pattern</a>, and <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInSeries_id99f054f0.html#id99f054f0-66da-4cf9-aaa2-015f3552d176__Command_PercgetInstancesInSeries_id99f054f0.xml#id99f054f0-66da-4cf9-aaa2-015f3552d176" title="Returns a list of instance iterators containing instances connected in series.">perc::get_instances_in_series</a> for commands that return instance
+iterators. The pin names of built-in devices are always single-letter
+names as shown in “<a class="xref" href="Concept_DeviceTypesPinNamesLogicStructures_id8e3344f0.html#id8e3344f0-3505-4459-954c-e886900e4999__idfa408952-5cac-4a68-834b-181a22ddff02">Built-in Devices and Pins</a>.”
+The specified pin is the one for which voltages are evaluated and
+assigned.</p>
+<p class="p">Voltage limits are propagated
+across cell boundaries. </p>
+<p class="p">If the <span class="keyword ParameterName OptionalReplaceable">limit_proc</span> returns a
+0, then any voltage limits calculated in the proc are not applied.
+If the proc returns a 1, then the voltage limits are applied. No
+other return values are permitted.</p>
+<p class="p">See Examples 3 and 4.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id88c11909-363a-47b3-a98e-a1d97174978f">-pinNetType {{<span class="keyword ParameterName OptionalReplaceable">pin_name_list</span>} {<span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span>} …}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+defines conditions a device must satisfy in order to participate in
+voltage propagation. The specified pins are checked to see if they
+have the specified net types.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> is
+a Tcl list consisting of one or more pin names. At least one <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> with
+a corresponding <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span> must
+be specified. If -type specifies a .SUBCKT name, then pin names
+in the <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> come
+from the .SUBCKT definition.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span> must
+be a Tcl list that defines a logical expression involving net types.
+This is the allowed form:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idd67f805b-61f6-46d2-b84e-e6c5385bd6a1"><p class="p Opt">{[!]<span class="keyword ParameterName OptionalReplaceable">type_1</span> [<span class="keyword ParameterName OptionalReplaceable">operator</span> [!]<span class="keyword ParameterName OptionalReplaceable">type_2</span> [<span class="keyword ParameterName OptionalReplaceable">operator</span> …
+[!]<span class="keyword ParameterName OptionalReplaceable">type_N</span>]]}</p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">type_N</span> arguments
+are net types such as are created with the <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a>, <a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByDevice_idddb1d861.html#idddb1d861-3213-4dfe-ac19-676ee8821ebc__Command_PercdefineNetTypeByDevice_idddb1d861.xml#idddb1d861-3213-4dfe-ac19-676ee8821ebc" title="Assigns a net type to nets that are connected to selected devices.">perc::define_net_type_by_device</a>, <a class="xref fm:HeadingOnly" href="Command_PercdefineNetTypeByPlacement_id6c10ba02.html#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb__Command_PercdefineNetTypeByPlacement_id6c10ba02.xml#id6c10ba02-b9c5-4b5e-bd00-3a53f90691bb" title="Assigns a net type to nets that are connected to selected placements.">perc::define_net_type_by_placement</a>, or <a class="xref fm:HeadingOnly" href="Command_PercdefineTypeSet_id4729110c.html#id4729110c-e73f-4c7b-8772-d111b3fd3cf4__Command_PercdefineTypeSet_id4729110c.xml#id4729110c-e73f-4c7b-8772-d111b3fd3cf4" title="Creates and assigns a new net type set from a list of net types.">perc::define_type_set</a> commands. If there is only one
+net type, then the <span class="keyword ParameterName OptionalReplaceable">operator</span> is
+omitted.</p>
+<p class="p">The exclamation point (!) causes
+logical negation of the net type following it. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">operator</span> is
+either logical AND (&amp;&amp;) or logical OR (||). The &amp;&amp;
+operator has precedence over ||. For example, this expression:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id2f7172dd-502c-4840-bf0e-f8e0d5725b29"><p class="p Opt">{labelA
+|| labelB &amp;&amp; !ground}</p>
+</li>
+</ul>
+<p class="p">means “labelA OR (labelB AND
+not ground)”. You can manage the precedence by using type sets.
+For example, suppose you have this command:</p>
+<pre class="pre codeblock leveled"><code>perc::define_type_set any_label  {labelA || labelB} </code></pre><p class="p">Then the following expression:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id96520aa6-bee6-4947-8d6d-dfd9662dc53f"><p class="p Opt">{any_label
+&amp;&amp; !ground}</p>
+</li>
+</ul>
+<p class="p">means “(labelA OR labelB) AND
+not ground”.</p>
+<p class="p">A device meets the criteria
+if <a class="xref fm:HeadingOnly" href="Command_PercisPinOfNetType_id6039ace9.html#id6039ace9-f4c6-409f-b83a-1104554eb691__Command_PercisPinOfNetType_id6039ace9.xml#id6039ace9-f4c6-409f-b83a-1104554eb691" title="Returns TRUE if at least one net meets the net type criteria for the given pins.">perc::is_pin_of_net_type</a> returns the value of 1 when applied to
+the device and each pair of <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> and <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span>.
+In other words, for each pair of <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> and <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span>,
+at least one of the nets connected to the pins in <span class="keyword ParameterName OptionalReplaceable">pin_name_list</span> must
+satisfy the corresponding <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list. </span>See “<a class="xref fm:HeadingAndPage" href="Concept_ImplicitBooleanOperationsInPinLists_ida46d06be.html#ida46d06be-d916-4f63-a2d9-bc6c8b39ae51__Concept_ImplicitBooleanOperationsInPinLists_ida46d06be.xml#ida46d06be-d916-4f63-a2d9-bc6c8b39ae51" title="Some Calibre PERC commands allow the specification of pin lists together with net or path types. Depending upon how the lists are specified, the lists can be interpreted as Boolean AND or OR conditions on the pins.">Implicit Boolean Operations in Pin Lists</a>” for details on specifying AND
+and OR conditions for pin lists.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id22d40748-cfa9-40b7-ab39-dc1417510241">-pinVoltage <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+modifies an existing voltage on any device node. Voltages are defined
+using <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> or <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a>.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">voltage_proc</span> is
+the name of a Tcl procedure that sets the propagated voltage. It
+takes an instance iterator and pin name as input parameters. See <a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInParallel_idb1ea3d7e.html#idb1ea3d7e-5223-448f-ae87-6456a062a7d0__Command_PercgetInstancesInParallel_idb1ea3d7e.xml#idb1ea3d7e-5223-448f-ae87-6456a062a7d0" title="Returns a list of instance iterators containing instances connected in parallel.">perc::get_instances_in_parallel</a>, <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInPattern_idaa4801f2.html#idaa4801f2-6232-41a4-8661-57ec3ea1aaee__Command_PercgetInstancesInPattern_idaa4801f2.xml#idaa4801f2-6232-41a4-8661-57ec3ea1aaee" title="Returns a list of instance iterators from a matched pattern.">perc::get_instances_in_pattern</a>, and <a class="xref fm:HeadingOnly" href="Command_PercgetInstancesInSeries_id99f054f0.html#id99f054f0-66da-4cf9-aaa2-015f3552d176__Command_PercgetInstancesInSeries_id99f054f0.xml#id99f054f0-66da-4cf9-aaa2-015f3552d176" title="Returns a list of instance iterators containing instances connected in series.">perc::get_instances_in_series</a> for commands that return instance
+iterators. The pin names of built-in devices are always single-letter
+names as shown in <a class="xref fm:Table" href="Concept_DeviceTypesPinNamesLogicStructures_id8e3344f0.html#id8e3344f0-3505-4459-954c-e886900e4999__idfa408952-5cac-4a68-834b-181a22ddff02">Table 1</a>. The specified pin is the one for which
+voltages are evaluated and applied. Numeric return values determine
+a numeric voltage for the net. Non-numeric return values indicate
+symbolic voltages, voltage groups, or one of two other special values.</p>
+<p class="p">The return value “default” means
+that the usual voltage propagation behavior of the command is used.
+The return value “none” means no changes are made to existing voltage values
+on the net (if any). No other strings may be used for these purposes.</p>
+<p class="p">See the Examples section for
+uses of this option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ida237c28f-3865-42c0-86f2-26bc11502f6c">-condition <span class="keyword ParameterName OptionalReplaceable">cond_proc</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set, where <span class="keyword ParameterName OptionalReplaceable">cond_proc</span> is
+a Tcl procedure that takes an instance iterator passed from the
+command as its only argument. The <span class="keyword ParameterName OptionalReplaceable">cond_proc</span> must
+return the value of 1 if the device instance meets its condition
+and 0 otherwise. No other return values are permitted. </p>
+<p class="p">Once a device
+instance is determined to exist, it persists, and the <span class="keyword ParameterName OptionalReplaceable">cond_proc</span> is
+no longer evaluated for that instance during succeeding voltage
+propagation iterations (this is enforced starting in 2018.2). </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id55273045-3401-4030-b1f3-056a0e81f795">-<span class="keyword ParameterName Optional">break</span> <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that
+specifies net types that stop voltage propagation. The <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list</span> must
+be a Tcl list that defines a logical expression. Nets that satisfy the
+logical expression are selected. This is the allowed form:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id0d4f4708-7bca-44c4-b063-6223e5dc5e28"><p class="p Opt">{[!]<span class="keyword ParameterName OptionalReplaceable">type_1</span> [<span class="keyword ParameterName OptionalReplaceable">operator</span> [!]<span class="keyword ParameterName OptionalReplaceable">type_2</span> [<span class="keyword ParameterName OptionalReplaceable">operator</span> …
+[!]<span class="keyword ParameterName OptionalReplaceable">type_N</span>]]}</p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">type_N</span> arguments
+are net types or type sets. If there is only one net type or type
+set, then the <span class="keyword ParameterName OptionalReplaceable">operator</span> is
+omitted.</p>
+<p class="p">The exclamation point (!) causes
+logical negation of the net type following it. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">operator</span> is
+either logical AND (&amp;&amp;) or logical OR (||). The &amp;&amp;
+operator has precedence over ||. For example, this expression:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id31bf9c93-1ccc-47fd-b6ce-65095eb9ad39"><p class="p Opt">{labelA
+|| labelB &amp;&amp; !ground}</p>
+</li>
+</ul>
+<p class="p">means “labelA OR (labelB AND
+not ground)”. You can manage the precedence by using type sets.
+For example, suppose you have this command:</p>
+<pre class="pre codeblock leveled"><code>perc::define_type_set any_label  {labelA || labelB} </code></pre><p class="p">Then the following expression:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ide1879221-d4af-4115-b69d-ada13c632969"><p class="p Opt">{any_label
+&amp;&amp; !ground}</p>
+</li>
+</ul>
+<p class="p">means “(labelA OR labelB) AND
+not ground”.</p>
+<p class="p">If ‑break is specified, then
+propagation stops when it reaches one of the following:</p>
+<ul class="ul"><li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id815d4127-1070-422d-af45-35460a358a44"><p class="p">A net that meets the criteria
+of <span class="keyword ParameterName OptionalReplaceable">net_type_condition_list.</span> </p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ide86ee61b-b818-42a9-bef3-f48d03890b6e"><p class="p">A device not selected to participate
+in voltage propagation. </p>
+</li>
+<li class="li" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id59da0f47-5353-4e71-b24d-6f0b86f627c7"><p class="p">A port in the top cell. </p>
+</li>
+</ul>
+<p class="p">Even though
+the break net does not participate in voltage propagation, its voltages
+are propagated to nets not selected by the -break option.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">None. </p>
+</div>
+<div class="section Examples" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id17997bfe-d36a-497b-8e73-16e4ab5cfc2b"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id2febff68-a3d7-4acb-b75f-a2a45cddd3dc"><h2 class="title Subheading sectiontitle">Example 1</h2><pre class="pre codeblock leveled"><code>TVF FUNCTION test_create_voltage_path [/* 
+  package require CalibreLVS_PERC 
+ 
+  proc voltage_path_init_1 {} { 
+ 
+# net voltages defined in separate file 
+    source net_voltages.txt  
+ 
+# Required to define -break net types 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power  "VDD?" 
+    perc::define_net_type ground "VSS?" 
+ 
+# Propagate voltages that stop at break nets 
+    perc::create_voltage_path -type {MN} -pin {s d} -on "g+ &gt; 2.5" \
+      -break { power || ground } 
+ 
+    perc::create_voltage_path -type {MP} -pin {s d} -on "g- &gt; 2.5" 
+  } 
+*/] </code></pre><p class="p">Tcl proc voltage_path_init_1 first
+sets up power and ground net types. These are used later as break
+nets for voltage propagation.</p>
+<p class="p">The first perc::create_voltage_path
+statement enables voltage propagation through the S and D pins of
+MN devices where the G-to-S or G-to-D voltage is greater than 2.5
+volts. In this case, power or ground nets stop propagation.</p>
+<p class="p">The second perc::create_voltage_path
+statement enables voltage propagation through the S and D pins of
+MP devices where the S-to-G or D-to-G voltage is greater than 2.5
+volts.</p>
+</div>
+<div class="section Subsection" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__ida674ee4b-0100-4942-b6da-4e730cea7e95"><h2 class="title Subheading sectiontitle">Example 2</h2><pre class="pre codeblock leveled"><code>TVF FUNCTION test_create_voltage_path [/* 
+  package require CalibreLVS_PERC 
+ 
+# net voltages defined in separate file 
+    source net_voltages.txt  
+ 
+  proc voltage_path_init_2 {} { 
+# Required to define -break net types 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power  "VDD?" 
+    perc::define_net_type ground "VSS?" 
+ 
+    perc::create_voltage_path -type {MN} -pin {s d} -on "g+ &gt; 0.6" \
+      -pinVoltage setNPinVoltage -break { power || ground } 
+    perc::create_voltage_path -type {MP} -pin {s d} -on "g- &gt; 0.6" \
+      -pinVoltage setPPinVoltage 
+  } </code></pre><pre class="pre codeblock leveled"><code># In this case only pins S and D are active, as given in the "-pin"  
+# argument to perc::create_voltage_path. Voltage is set on pin_name.
+# get the pin nets.
+  proc setNPinVoltage {inst pin_name} { 
+    set gate   [<a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> $inst -name g] 
+    set source [perc::get_nets $inst -name s] 
+    set drain  [perc::get_nets $inst -name d] 
+    set bulk   [perc::get_nets $inst -name b] 
+# get the voltages of the g, s, d, and b pins 
+    set gv [<a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> [<a class="xref fm:HeadingOnly" href="Command_PercgetPins_idcfb94cf6.html#idcfb94cf6-a4dc-4442-ac03-614d308693ed__Command_PercgetPins_idcfb94cf6.xml#idcfb94cf6-a4dc-4442-ac03-614d308693ed" title="Creates a pin iterator.">perc::get_pins</a> $inst -name g] -path] 
+    set sv [perc::voltage [perc::get_pins $inst -name s] -path] 
+    set dv [perc::voltage [perc::get_pins $inst -name d] -path] 
+    set bv [perc::voltage [perc::get_pins $inst -name b] -path] 
+# set the voltage boundaries 
+    set von  0.6 
+    set vthn 0.8 
+# check the drain pin 
+    if { $pin_name == "d" } { 
+      if { [llength $gv] != 1 || [llength $sv] != 1 } {  
+        return "default"  
+      } 
+# check if gate-to-source voltage &gt; von 
+# these voltage comparisons are OK because the vectors are of length 1, 
+# and this is a vectored simulation, so the voltages are final.
+      if {[expr {($gv - $sv) &gt; $von}]} { 
+# set the drain voltage to the source voltage 
+        set new_dv $sv 
+# check if the drain (source) voltage &gt; gate voltage - vthn (threshold) 
+        if { [expr {$new_dv &gt; ($gv - $vthn)}] } { 
+          set new_dv [expr {$gv - $vthn}] 
+        } 
+        return $new_dv 
+      } else { 
+# gate-to-source voltage &lt;= von 
+          return "default" 
+      } 
+# check the source pin 
+    } elseif { $pin_name == "s" } { 
+      if { [llength $gv] != 1 || [llength $dv] != 1 } {  
+        return "default"  
+      } 
+# check if gate-to-drain voltage &gt; von.
+# these voltage comparisons are OK because the vectors are of length 1, 
+# and this is a vectored simulation, so the voltages are final.
+      if {[expr {($gv - $dv) &gt; $von}]} { 
+# set the source voltage to the drain voltage 
+        set new_sv $dv 
+# check if the source (drain) voltage &gt; gate voltage - vthn (threshold) 
+        if { [expr {$new_sv &gt; ($gv - $vthn)}] } { 
+          set new_sv [expr {$gv - $vthn}] 
+        } 
+        return $new_sv 
+      } else { 
+# gate-to-drain voltage &lt;= von 
+      return "default" 
+    }; # end elseif 
+  }; # end proc setNPinVoltage </code></pre><pre class="pre codeblock leveled"><code># In this case only pins S and D are active, as given in the "-pin"  
+# argument to perc::create_voltage_path. Voltage is set on pin_name.
+# get the pin nets 
+  proc setPPinVoltage {inst pin_name} { 
+    set gate   [perc::get_nets $inst -name g] 
+    set source [perc::get_nets $inst -name s] 
+    set drain  [perc::get_nets $inst -name d] 
+    set bulk   [perc::get_nets $inst -name b] 
+# get the voltages of the g, s, d, and b pins 
+    set gv [perc::voltage [perc::get_pins $inst -name g] -path] 
+    set sv [perc::voltage [perc::get_pins $inst -name s] -path] 
+    set dv [perc::voltage [perc::get_pins $inst -name d] -path] 
+    set bv [perc::voltage [perc::get_pins $inst -name b] -path] 
+# set the voltage boundaries 
+    set von  0.6 
+    set vthp 0.8 
+# check the drain pin 
+    if { $pin_name == "d" } { 
+      if { [llength $gv] != 1 || [llength $sv] != 1 } {  
+        return "default"  
+      } 
+# check if source-to-gate voltage &gt; von.
+# these voltage comparisons are OK because the vectors are of length 1, 
+# and this is a vectored simulation, so the voltages are final.
+      if {[expr {($sv - $gv) &gt; $von}]} { 
+# set the drain voltage to the source voltage 
+        set new_dv $sv 
+# check if the drain (source) voltage &lt; gate voltage + vthp (threshold) 
+        if { [expr {$new_dv &lt; ($gv + $vthp)}] } { 
+          set new_dv [expr {$gv + $vthp}] 
+        } 
+        return $new_dv 
+      } else { 
+# source-to-gate voltage &lt;= von 
+          return "default" 
+      } 
+# check the source pin 
+    } elseif { $pin_name == "s" } { 
+      if { [llength $gv] != 1 || [llength $dv] != 1 } {  
+        return "default"  
+      } 
+# check if drain-to-gate voltage &gt; von.
+# these voltage comparisons are OK because the vectors are of length 1, 
+# and this is a vectored simulation, so the voltages are final.
+      if {[expr {($dv - $gv) &gt; $von}]} { 
+# set the source voltage to the drain voltage 
+        set new_sv $dv 
+# check if the source (drain) voltage &lt; gate voltage + vthp (threshold) 
+        if { [expr {$new_sv &lt; ($gv + $vthp)}] } { 
+          set new_sv [expr {$gv + $vthp}] 
+        } 
+        return $new_sv 
+      } else { 
+# drain-to-gate voltage &lt;= von 
+         return "default" 
+      } 
+    }; # end elseif 
+  }; # end proc setPPinVoltage 
+*/] </code></pre><p class="p">Tcl proc voltage_path_init_2 shows
+the use of the perc::create_voltage_path -pinVoltage option, which
+specifies a voltage definition procedure. The purpose of the two
+-pinVoltage procs shown in this example is to calculate the voltage
+on S and D pins of MOS devices. First, the pin nets are determined,
+then the voltages on the pins, then those voltages are checked against
+certain switching and threshold conditions.</p>
+<p class="p">There are a number of cases where voltage values are compared
+using inequalities. This should only be done if the voltages are
+the final voltages after propagation has settled to its final iteration.
+This is a vectored check, and the voltage vectors are of length
+1, so the voltages are final and the comparisons work as expected.</p>
+<p class="p">Notice that two arguments are supplied
+to these ‑pinVoltage procs: the instance iterator and the string
+name of the particular pin on the device that is of interest.</p>
+<p class="p">The return value “default” causes
+default voltage propagation across the device.</p>
+<p class="p">If a numeric voltage is calculated
+by the -pinVoltage proc, it is rounded to the nearest user-provided
+voltage value as specified with <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageInterval_id97b2b367.html#id97b2b367-5449-4921-859a-30bc2e61d886__Command_PercdefineVoltageInterval_id97b2b367.xml#id97b2b367-5449-4921-859a-30bc2e61d886" title="Specifies voltage resolution.">perc::define_voltage_interval</a>. There is no means to print out
+the nearest voltage directly, though you can query the voltage on
+a net or pin by using the <a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> command.</p>
+</div>
+<div class="section Subsection" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__id8a0d7680-3eb9-4231-b5e8-e81d93b9b6b8"><h2 class="title Subheading sectiontitle">Example 3</h2><pre class="pre codeblock leveled"><code>TVF FUNCTION test_create_voltage_path [/* 
+  package require CalibreLVS_PERC 
+ 
+  proc voltage_path_init_3 {} { 
+ 
+# net voltages defined in separate file 
+    source net_voltages.txt  
+ 
+# Required to define -break net types 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power  "VDD?" 
+    perc::define_net_type ground "VSS?" 
+ 
+    perc::create_voltage_path -type {MP} -pin {s d} -pinLimit pmos_limit \
+      -pinVoltage pmos_voltage -break { power || ground } 
+
+# additional initialization commands
+#  ... 
+  } 
+ 
+# set path voltage limits on the input pin. 
+# voltages exist on nets if defined. 
+  proc pmos_limit {dev pin} { 
+    set bulk_net [<a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> $dev -name b] 
+    set bulk_voltage [<a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> $bulk_net] 
+ 
+# test whether the bulk pin is a power net 
+    if { [lsearch [<a class="xref fm:HeadingOnly" href="Command_Perctype_id19c43fdf.html#id19c43fdf-9288-4113-8906-7d1cf825ce84__Command_Perctype_id19c43fdf.xml#id19c43fdf-9288-4113-8906-7d1cf825ce84" title="Returns the type of the referenced instance, the net, or a pin’s net types or path types. For a cell instance, it returns the cell name.">perc::type</a> $bulk_net] "VDD"] &gt;= 0 } { 
+# then transfer the bulk's voltage to $pin as a maximum voltage limit 
+<a class="xref fm:HeadingOnly" href="Command_PercsetVoltageLimit_id06c5c5c0.html#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6__Command_PercsetVoltageLimit_id06c5c5c0.xml#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6" title="Specifies maximum and minimum voltages for a net.">perc::set_voltage_limit</a> $dev $pin -max $bulk_voltage 
+    } 
+ 
+    set bulk_max_limit [<a class="xref fm:HeadingOnly" href="Command_PercgetVoltageLimit_idc02e5b26.html#idc02e5b26-0018-41f7-9b0c-1b01689fa989__Command_PercgetVoltageLimit_idc02e5b26.xml#idc02e5b26-0018-41f7-9b0c-1b01689fa989" title="Returns maximum or minimum voltage limit values for a net.">perc::get_voltage_limit</a> $dev b -max ] 
+ 
+# test whether a maximum bulk pin voltage limit has been established
+    if { $bulk_max_limit != "" } { 
+# then transfer the bulk's maximum voltage limit to $pin 
+# as a maximum voltage limit 
+      perc::set_voltage_limit $dev $pin -max $bulk_max_limit 
+    } 
+# required 
+    return 1 
+  } 
+ 
+  proc pmos_voltage {dev pin} { 
+# code for setting path voltages on the input pin
+#  ... 
+  } 
+*/] </code></pre><p class="p">Tcl proc voltage_path_init_3 shows
+the use of the perc::create_voltage_path -pinLimit option. The pmos_limit
+proc defines the maximum voltage value on nets attached to S/D pins
+of MP devices. This might be applicable in a situation where an
+explicit or parasitic diode becomes forward-biased, thus placing
+the maximum voltage on the net.</p>
+<p class="p">In contrast to other Tcl procedures
+in Calibre PERC, two arguments are supplied to ‑pinVoltage and -pinLimit
+procs.</p>
+</div>
+<div class="section Subsection" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__iddc639f15-1371-4cc4-b261-f6b5d9916310"><h2 class="title Subheading sectiontitle">Example 4</h2><p class="p">For this example, assume two power
+domains of differing voltages. Further assume you want to check
+worst-case voltage values for device pins that could be fed by either
+power supply. Also assume there are voltage drops across devices.</p>
+<div class="fig fignone" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idf1a93e76-f6e2-4c42-b098-b8ac653d6d12"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Resistor Network with
+Voltage Drops</span><br /><div class="imageleft"><img class="image imageleft" height="175" src="../graphics/init_proc05a.png" width="468" /></div><br /></div>
+<p class="p">In this circuit, each resistor drops
+0.1 V. At the node in the middle, we want to show 2.8 V (PWR2 voltage
+with two drops) rather than 1.7 V (PWR1 voltage with one drop).
+Then for the horizontal branch, we want the drop to be applied based
+on the voltage at the middle node.</p>
+<p class="p">Here is the code:</p>
+<pre class="pre codeblock leveled"><code>TVF FUNCTION test_create_voltage_path [/* 
+  package require CalibreLVS_PERC 
+ 
+  proc voltage_path_init_4 {} { 
+  # define net types
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power lvsPower 
+    perc::define_net_type ground lvsGround 
+    perc::define_type_set supply {power || ground} 
+ 
+  # define supply voltages
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> 3.0 {PWR2} 
+    perc::define_net_voltage 1.8 {PWR1} 
+    perc::define_net_voltage 0 {GND} 
+     
+  # propagate voltages through resistor pins. 
+  # supply nets are break nets. 
+  # pin voltages are assigned by res_pinV proc.  
+  # pin voltage limits are assigned by res_pinL proc. 
+  # limits are set prior to propagation.
+    perc::create_voltage_path -type {R} -pin {p n} -pinLimit res_pinL \
+      -pinVoltage res_pinV -break supply 
+  } </code></pre><pre class="pre codeblock leveled"><code>
+# drop voltages across resistors and set minimum voltage limits on
+# the input pin. this is done prior to propagation.
+  proc res_vdrop {dev pin vdrop} { 
+  # find the assigned voltages on pos and neg pins
+    set pnet [<a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> $dev -name p] 
+    set nnet [perc::get_nets $dev -name n] 
+    set pv [<a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> $pnet] 
+    set nv [perc::voltage $nnet] 
+  # get assigned minimum voltage limits on both pins
+    set p_min_limit [<a class="xref fm:HeadingOnly" href="Command_PercgetVoltageLimit_idc02e5b26.html#idc02e5b26-0018-41f7-9b0c-1b01689fa989__Command_PercgetVoltageLimit_idc02e5b26.xml#idc02e5b26-0018-41f7-9b0c-1b01689fa989" title="Returns maximum or minimum voltage limit values for a net.">perc::get_voltage_limit</a> $dev p -min] 
+    set n_min_limit [perc::get_voltage_limit $dev n -min] 
+ 
+  # manage n pin voltage limits
+    if {$pin == "n"} { 
+  # if the p pin is on a  power net, set the n minimum voltage limit to the
+  # assigned p voltage minus the drop. 
+  # if p min voltage limit is present but n is not, or if the p min limit
+  # is greater than the n min limit, then set the n min voltage limit
+  # to be the p pin's min limit minus the drop. otherwise, set the n min
+  # voltage limit to the n min limit minus the drop.
+      if { [lsearch [<a class="xref fm:HeadingOnly" href="Command_Perctype_id19c43fdf.html#id19c43fdf-9288-4113-8906-7d1cf825ce84__Command_Perctype_id19c43fdf.xml#id19c43fdf-9288-4113-8906-7d1cf825ce84" title="Returns the type of the referenced instance, the net, or a pin’s net types or path types. For a cell instance, it returns the cell name.">perc::type</a> $pnet] "power"] &gt;= 0 } {  
+        <a class="xref fm:HeadingOnly" href="Command_PercsetVoltageLimit_id06c5c5c0.html#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6__Command_PercsetVoltageLimit_id06c5c5c0.xml#id06c5c5c0-4d79-44bd-b6ea-d5ca68c333f6" title="Specifies maximum and minimum voltages for a net.">perc::set_voltage_limit</a> $dev n -min [expr {$pv - $vdrop}] 
+      } elseif { ($p_min_limit != "") &amp;&amp; ($n_min_limit == "") } { 
+        perc::set_voltage_limit $dev n -min [expr $p_min_limit - $vdrop] 
+      } elseif { $p_min_limit &gt; $n_min_limit } {
+        perc::set_voltage_limit $dev n -min [expr $p_min_limit - $vdrop]
+      } else {
+        perc::set_voltage_limit $dev n -min [expr $n_min_limit - $vdrop]
+      }
+      return 1 
+    } 
+ 
+  # manage p pin voltage limits
+    if {$pin == "p"} { 
+  # if the n pin is on a power net, set the p minimum voltage limit to the
+  # assigned voltage p voltage minus the drop.
+  # if n voltage limit is present but p is not, or if the n min limit
+  # is greater than the p min limit, then set the p min voltage limit 
+  # to be the n pin's min limit minus the drop. otherwise, set the p min
+  # voltage limit to the p min limit minus the drop.
+      if { [lsearch [perc::type $nnet] "power"] &gt;= 0 } { 
+        perc::set_voltage_limit $dev p -min [expr {$nv - $vdrop}] 
+      } elseif { ($n_min_limit != "") &amp;&amp; ($p_min_limit == "") } { 
+        perc::set_voltage_limit $dev p -min [expr $n_min_limit - $vdrop] 
+      } elseif { $n_min_limit &gt; $p_min_limit } {
+        perc::set_voltage_limit $dev p -min [expr $n_min_limit - $vdrop]
+      } else {
+        perc::set_voltage_limit $dev p -min [expr $p_min_limit - $vdrop]
+      } 
+      return 1 
+    }    
+  } ; # end res_vdrop 
+ 
+# set the resistor pin voltage limits using a drop of 0.1 volt on the
+# input pin.
+  proc res_pinL {dev pin} { 
+    res_vdrop $dev $pin 0.1 
+  } 
+ 
+# set n and p voltages. this occurs during propagation.
+  proc res_pinV {dev pin} { 
+    if {$pin == "n"} { 
+      set n_limit [perc::get_voltage_limit $dev n -min] 
+      return "$n_limit"  
+    } 
+ 
+    if {$pin == "p"} { 
+      set p_limit [perc::get_voltage_limit $dev p -min] 
+      return "$p_limit"
+    }    
+  } ; # end res_pinV 
+ 
+# --------------------------------------------------------------------- 
+# This check is for testing purposes. Everything before the line is for 
+# initialization and voltage propagation. 
+
+# for all non-supply nets, print the voltages to the report 
+  proc check_voltage {} { 
+    perc::check_net -netType {!supply} -condition print_voltages
+  }  
+
+  proc print_voltages {net} {
+    set name [perc::name $net]
+    set V [perc::voltage $net -path]
+    perc::report_base_result -value "Net: $name $V V"
+    return 1
+  }
+*/] </code></pre><p class="p">Tcl proc voltage_path_init_4 sets
+up the net and voltage types in vector-less mode. The perc::create_voltage_path
+command sets up voltage propagation through R devices. It uses a ‑pinLimit
+and -pinVoltage proc to govern the voltage drops across the R devices.
+Other devices could be added to this scheme as desired.</p>
+<p class="p">The res_pinL proc defines the voltage
+drop across each resistor. It calls the res_vdrop proc, which sets
+the minimum voltage limits on the resistor pin nets. This proc guarantees
+that if two voltages could appear on a net, the larger of the two
+is chosen.</p>
+<p class="p">The res_pinV proc sets the net voltages
+for the pins.</p>
+<p class="p">The check_voltage proc is simply
+for testing the voltage propagation code for the network of resistors.
+For example, you could see PERC Report results like this for the
+network shown in <a class="xref fm:Figure" href="#id2094c0cf-1da3-41d7-9049-860de10b6ca7__idf1a93e76-f6e2-4c42-b098-b8ac653d6d12">Figure 1</a>:</p>
+<pre class="pre codeblock leveled"><code>1    Net  3 [ ] [ ] [ ] [ 2.7 ] 
+ 
+2    Net  2 [ ] [ ] [ ] [ 2.8 ] 
+ 
+3    Net  1 [ ] [ ] [ ] [ 2.9 ] </code></pre><p class="p">This shows net 2 has 2.8 volts,
+as desired.</p>
+<p class="p">See also “<a class="xref fm:HeadingAndPage" href="TaskTop_ExampleFindingFloatingGates_id47d5ad77.html#id47d5ad77-1635-47f7-869c-462069b1f3bb__TaskTop_ExampleFindingFloatingGates_id47d5ad77.xml#id47d5ad77-1635-47f7-869c-462069b1f3bb" title="This example uses perc::voltage to find MOS gates where the device is MN or MP, and the gate is undriven. This check employs vectored analysis, so source voltages and input signal voltages are specified.">Example: Finding Floating Gates</a>” for another complete rule check.</p>
+</div>
+<div class="section Subsection" id="id2094c0cf-1da3-41d7-9049-860de10b6ca7__idc592a85e-3dbc-4ea4-ad19-daeafc2a35e4"><h2 class="title Subheading sectiontitle">Example 5</h2><p class="p">This example discusses how to use
+the -pinVoltage procedure to control whether voltage propagation
+is unidirectional or bidirectional.</p>
+<p class="p">Assume
+a diode chain, like this:</p>
+<pre class="pre codeblock leveled"><code>.sub dchain VSS VDD 
+D0 VDD  net0 dmodel 
+D1 net0 net1 dmodel 
+D2 net1 net2 dmodel 
+D3 net2 VSS  dmodel 
+.ends 
+ 
+.sub top VSS VDD 
+X0 VSS VDD dchain 
+.ends </code></pre><p class="p">The goal is to control the direction
+of voltage propagation across the diodes. Here are the rules.</p>
+<pre class="pre codeblock leveled"><code>TVF FUNCTION test_create_voltage_path [/* 
+  package require CalibreLVS_PERC 
+ 
+  proc voltage_path_init_5 {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageInterval_id97b2b367.html#id97b2b367-5449-4921-859a-30bc2e61d886__Command_PercdefineVoltageInterval_id97b2b367.xml#id97b2b367-5449-4921-859a-30bc2e61d886" title="Specifies voltage resolution.">perc::define_voltage_interval</a> -interval none 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> 0   {VSS} 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> GROUND {VSS} 
+    perc::define_net_voltage 1   {VDD} 
+    perc::define_net_type POWER  {VDD} 
+ 
+    perc::create_voltage_path -type {D} -pin {p n} -pinVoltage uni_diode \
+     -break {POWER || GROUND} 
+  } 
+ 
+# propagation occurs in p -&gt; n direction only.
+# $pin is the TO pin. the pin with the propagated voltage (the FROM pin, 
+# if any) is from the perc::create_voltage_path command -pin option.
+# in this case, if the TO pin is n, then it receives the voltage of the
+# FROM pin p (p -&gt; n is allowed). if the TO pin is p, it does not receive
+# any voltage (n -&gt; p is disallowed).
+  proc uni_diode {dev pin} { 
+# allow n pin to receive voltages from p
+    if {$pin == "n"} { return "default" } 
+# for UNIDIRECTIONAL p -&gt; n propagation 
+    if {$pin == "p"} { return "none" } 
+# allow BIDIRECTIONAL p &lt;-&gt; n propagation; in this case, -pinVoltage is
+# unnecessary.
+#   if {$pin == "p"} { return "default" } 
+} </code></pre><pre class="pre codeblock leveled"><code>  proc report_nets {net} { 
+    set net_name [<a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> $net] 
+    set voltages [<a class="xref fm:HeadingOnly" href="Command_Percvoltage_id84e75b60.html#id84e75b60-58d3-47f4-b206-1f2333157773__Command_Percvoltage_id84e75b60.xml#id84e75b60-58d3-47f4-b206-1f2333157773" title="Returns voltage values for a net or pin.">perc::voltage</a> $net -path] 
+    puts "ENTERED: net=$net_name path voltages:$voltages" 
+    <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> -value "Path voltages: $voltages" 
+    return 1 
+  } 
+ 
+  proc check_nets {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a> -condition report_nets -comment "check all nets" 
+  } 
+*/] </code></pre><p class="p">Tcl proc uni_diode demonstrates
+the use of the “default” and “none” keywords for voltage propagation
+across pins. In the preceding configuration, propagation only occurs
+from “p” to “n” (or pos to neg) pins in that direction. If you comment
+out the “return "none"” line for “p” pins and use the “return "default"”
+line instead, you will see propagation in two directions.</p>
+<p class="p">After running Calibre PERC, this
+appears in the run transcript due to the report_nets proc:</p>
+<pre class="pre codeblock leveled"><code>ENTERED: net=NET0 path voltages:1 
+ENTERED: net=NET1 path voltages:1 
+ENTERED: net=NET2 path voltages:1 
+ENTERED: net=VSS path voltages:0 
+ENTERED: net=VDD path voltages:1 </code></pre><p class="p">Notice the path voltage is 1 except
+for the VSS net. This is because VSS has an assigned voltage of
+0, and the supply nets are break nets.</p>
+<p class="p">In the PERC Report, this appears:</p>
+<pre class="pre codeblock leveled"><code>  1    Net  net2 [ ] [ ] [ ] [ 1 ] (1 placement, LIST# = L1) 
+       Path voltages: 1 
+        
+ 
+  2    Net  net1 [ ] [ ] [ ] [ 1 ] (1 placement, LIST# = L1) 
+       Path voltages: 1 
+        
+ 
+  3    Net  net0 [ ] [ ] [ ] [ 1 ] (1 placement, LIST# = L1) 
+       Path voltages: 1 
+... 
+ 
+  1    Net  VDD [ POWER ] [ POWER ] [ 1 ] [ 1 ] 
+       Path voltages: 1 
+        
+ 
+  2    Net  VSS [ GROUND ] [ GROUND ] [ 0 ] [ 0 ] 
+       Path voltages: 0 1 </code></pre><p class="p">This shows the same information
+as the transcript, along with net types, initialized voltages, and propagated
+voltages.</p>
+<p class="p">If the uni_diode proc is changed
+to allow bidirectional voltage propagation (see the comments in
+the rule file code), this appears in the transcript:</p>
+<pre class="pre codeblock leveled"><code>ENTERED: net=NET0 path voltages:0 1 
+ENTERED: net=NET1 path voltages:0 1 
+ENTERED: net=NET2 path voltages:0 1 
+ENTERED: net=VSS path voltages:0 
+ENTERED: net=VDD path voltages:1 </code></pre><p class="p">Notice that the propagated voltages
+are now 0 and 1 for the non-supply nets. Propagation has occurred
+in both directions across the diode pins.</p>
+<p class="p">By controlling the configuration
+of the uni_diode proc, specifically the use of the “default” and “none”
+return values, you can cause unidirectional or bidirectional propagation.</p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_Perctrace_ide2aa1b71.html#ide2aa1b71-703a-4734-824c-5432877d3c51__Command_Perctrace_ide2aa1b71.xml#ide2aa1b71-703a-4734-824c-5432877d3c51" title="Returns pin voltage attributes traced from an input net.">perc::trace</a> command can be useful for results
+debugging in rule checks based upon code in examples like this one.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_InitializationCommands_id23266ed9.html" title="Initialization procedure commands appear in an init proc and set up the netlist for checking.">Initialization Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "perc::create_voltage_path"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_PerccreateVoltagePath_id2094c0cf.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

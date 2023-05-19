@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Table Syntax" />
+<meta name="abstract" content="Tables provide a unified way to input process variation information into xCalibrate." />
+<meta name="description" content="Tables provide a unified way to input process variation information into xCalibrate." />
+<meta name="prodname" content="xCalibrate Batch User's Manual" />
+<meta name="version" content="None" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xcalibrat_batch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="LicenseType" content="EULA" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="xCalibrate™ Batch User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id23232dba-06fc-4138-874f-2c69f5db7f86" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Table Syntax</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Table Syntax" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id23232dba-06fc-4138-874f-2c69f5db7f86">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Table
+Syntax</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">Tables
+provide a unified way to input process variation information into
+xCalibrate. </span>
+</div>
+<p class="p">Tables are typically specified in-line in the
+MIPT file, but can also be referenced using the use keyword. Providing
+the table data in-line avoids having to keep track of multiple files
+for a calibration. See <a class="xref fm:HeadingOnly" href="Concept_UseDirective_id6fe379fc.html#id6fe379fc-fc67-4063-82e7-507fe3ddd2c2__Concept_UseDirective_id6fe379fc.xml#id6fe379fc-fc67-4063-82e7-507fe3ddd2c2" title="The use keyword is an optional text string that enables you to reuse named objects to create new objects. This is a special keyword that may be used more than once.">Use Directive</a> for more information on the use
+keyword.</p>
+<p class="p">Layout data contains shapes that are
+at desired or drawn dimensions. The actual width of each conductor
+varies from drawn dimension due to deterministic process variation.
+For example, the actual width of a metal path may be more narrow
+than the drawn width. </p>
+<p class="p">The on-chip variation effects can be
+modeled in Calibre xRC. This tool uses the variation data described
+by tables of discrete values in the MIPT file. Local density, width,
+and spacing data are used to make adjustments to the drawn shapes.
+The adjusted shapes are used when calculating parasitic effects.
+Some foundries also supply loading effects in their in-die information
+in order to model the changes in conductor thickness after reactive
+ion-etching.</p>
+<p class="p">Tables can be defined for any supported
+process variation parameter such as width, thickness, sheet resistance,
+resistivity, temperature coefficients tc1 and tc2, gate fringe,
+and contact bias. </p>
+<p class="p">You can specify tables to be resistive
+(R), capacitive (C), or both (RC). Each type of table has a default
+setting. The user must specify what type of table property information
+is stored. If a table applies only to resistance, such as RSH, then
+specifying it to be a C or RC table will generate an error message.</p>
+<p class="p">Most table data is specified as DRAWN
+dimensions (dim_type = drawn). Some data can be specified in ACTUAL
+dimensions, by setting dim_type = actual in the table.</p>
+<p class="p">Tables specified in-line are always associated
+with a layer. A layer may have zero or more tables associated with
+it. The order of the tables within a layer is not relevant. Tables
+are supported
+for layer types:</p>
+<ul class="ul"><li class="li" id="id23232dba-06fc-4138-874f-2c69f5db7f86__iddb128cbd-266b-4fb3-bb4d-41b20a310fe9"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_Conductor_id706c44b5.html#id706c44b5-231a-4abe-ae99-4fa57b0ea35b__Concept_Conductor_id706c44b5.xml#id706c44b5-231a-4abe-ae99-4fa57b0ea35b" title="The conductor keyword is a required keyword used to define electrical and physical characteristics of conducting layers, also referred to as metal layers.">Conductor</a> </p>
+</li>
+<li class="li" id="id23232dba-06fc-4138-874f-2c69f5db7f86__idddb9dd9b-f639-433d-ab19-4df61a51767a"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_Poly_id8133729b.html#id8133729b-30b4-46bf-bfef-a30bc84e2a31__Concept_Poly_id8133729b.xml#id8133729b-30b4-46bf-bfef-a30bc84e2a31" title="The poly keyword is an optional keyword used to define electrical and physical characteristics of conducting layers, also referred to as metal layers.">Poly</a> </p>
+</li>
+<li class="li" id="id23232dba-06fc-4138-874f-2c69f5db7f86__id839117ff-87e1-44aa-a387-ce20f5b9ca2d"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_Diffusion_id0a08b4aa.html#id0a08b4aa-0134-4a97-b25e-106ffb0800d8__Concept_Diffusion_id0a08b4aa.xml#id0a08b4aa-0134-4a97-b25e-106ffb0800d8" title="The diffusion keyword is an optional keyword used to define electrical and physical characteristics of conducting layers, also referred to as metal layers.">Diffusion</a> </p>
+</li>
+<li class="li" id="id23232dba-06fc-4138-874f-2c69f5db7f86__id43135a3d-cfc4-4c08-be8a-96067675c43c"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_Contact_idd71b3bc2.html#idd71b3bc2-7f0f-4374-a783-cbe646fab9ad__Concept_Contact_idd71b3bc2.xml#idd71b3bc2-7f0f-4374-a783-cbe646fab9ad" title="The contact keyword is an optional keyword used to define electrical and physical characteristics of contact layers. Contact layers are optional.">Contact</a> </p>
+</li>
+<li class="li" id="id23232dba-06fc-4138-874f-2c69f5db7f86__id99a73025-5d6a-4698-98f5-a0270a7efa99"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_Via_id19b0b21a.html#id19b0b21a-1805-47cf-92f8-7eaedaf14bd8__Concept_Via_id19b0b21a.xml#id19b0b21a-1805-47cf-92f8-7eaedaf14bd8" title="The via layer syntax defines the electrical and physical characteristics of the connections between layers. Via layers are optional.">Via</a> </p>
+</li>
+</ul>
+<p class="p">For dielectric layers, inter- and intra-layer
+dielectric thickness are adjusted automatically during calibration
+based on the conductor thickness variation. So no table support
+is needed for dielectric layers.</p>
+<p class="p">Each table type is associated with a
+specific set of ordered variables. A one dimensional table has a
+single variable. When a table is used to describe a parameter, such
+as tc1, that singleton parameter is no longer required in the layer
+definition since it has a table representation.</p>
+<p class="p">A one dimensional table syntax is:</p>
+<pre class="pre codeblock leveled"><code>table = <span class="ph FontProperty emphasis">table_reference_name</span> {
+	property = <span class="ph FontProperty emphasis">table_property</span>
+	table_type = {R | C | RC}
+	dim_type = {drawn | actual}
+	value_type = {absolute | delta}
+	equation = {&lt;equation to evaluate, optional&gt;}
+	<span class="ph FontProperty emphasis">variable</span><span class="ph FontProperty LiteralSubScript">1</span> = {w<span class="ph FontProperty LiteralSubScript">1</span> w<span class="ph FontProperty LiteralSubScript">2</span>  ... w<span class="ph FontProperty LiteralSubScript">n</span>}
+	value = {v<span class="ph FontProperty LiteralSubScript">(w1)</span> v<span class="ph FontProperty LiteralSubScript">(w2)</span> ... v<span class="ph FontProperty LiteralSubScript">(wn)</span> }
+}</code></pre><p class="p">Two dimensional table syntax
+has two variables:</p>
+<pre class="pre codeblock leveled"><code>table = <span class="ph FontProperty emphasis">table_reference_name</span> {
+	property = <span class="ph FontProperty emphasis">table_property</span>
+	table_type = {R | C | RC}
+	dim_type = {drawn | actual}
+	value_type = {absolute | delta}
+	bias_type = {preferred | nonpreferred}
+	enclosure = {<span class="keyword ParameterName OptionalDefault">max</span> | min}
+	layers = { up | down | <span class="keyword ParameterName OptionalDefault">both</span> }
+	equation = {&lt;equation to evaluate, optional&gt;}
+	via_size = { x y }
+	<span class="ph FontProperty emphasis">variable</span><span class="ph FontProperty LiteralSubScript">1</span> = {w<span class="ph FontProperty LiteralSubScript">1</span> w<span class="ph FontProperty LiteralSubScript">2</span>  ... w<span class="ph FontProperty LiteralSubScript">n</span>}
+	<span class="ph FontProperty emphasis">variable</span><span class="ph FontProperty LiteralSubScript">2</span>  = {s<span class="ph FontProperty LiteralSubScript">1</span> s<span class="ph FontProperty LiteralSubScript">2</span>  ... s<span class="ph FontProperty LiteralSubScript">n</span>}
+	value = { v<span class="ph FontProperty LiteralSubScript">(w1,s1)</span> v<span class="ph FontProperty LiteralSubScript">(w1,s2)</span> ... v<span class="ph FontProperty LiteralSubScript">(w1,sn)</span>,
+			 	...,
+				v<span class="ph FontProperty LiteralSubScript">(wn,s1)</span> v<span class="ph FontProperty LiteralSubScript">(wn,s2)</span> ... v<span class="ph FontProperty LiteralSubScript">(wn,sn)</span>}
+}</code></pre><p class="p">and so forth. </p>
+<p class="p"><a class="xref fm:Table" href="#id23232dba-06fc-4138-874f-2c69f5db7f86__id452049aa-bb68-4601-95e2-b33672b3d945">Table 1</a> describes the Table keyword.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id23232dba-06fc-4138-874f-2c69f5db7f86__id452049aa-bb68-4601-95e2-b33672b3d945" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Table Keyword</span></caption><colgroup><col style="width:2.370in" /><col style="width:4.130in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4400e347"><p class="p">Table Keyword</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4400e354"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e347 "><p class="p"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_Table_id42424e3e.html#id42424e3e-bee8-4979-9393-38493b087566__Command_Table_id42424e3e.xml#id42424e3e-bee8-4979-9393-38493b087566" title="An optional structure definition keyword used to provide a unified way to input process variation information to xCalibrate.">table</a></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e354 "><p class="p">Required keyword used
+to define a table construct.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e347 "><p class="p"><span class="keyword ParameterName RequiredReplaceable">table_reference_name</span> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e354 "><p class="p">Required user specified
+name that identifies the structure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p"> <a class="xref fm:Table" href="#id23232dba-06fc-4138-874f-2c69f5db7f86__id76f92939-5de6-4097-baa7-8453daab5a80">Table 2</a> lists the Table parameters.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id23232dba-06fc-4138-874f-2c69f5db7f86__id76f92939-5de6-4097-baa7-8453daab5a80" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Table Parameters </span></caption><colgroup><col style="width:2.370in" /><col style="width:4.130in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4400e395"><p class="p">Table Parameters</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d4400e402"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_Property_idf4142ba0.html#idf4142ba0-43d3-4952-a00b-a4626a5d5f0c__Command_Property_idf4142ba0.xml#idf4142ba0-43d3-4952-a00b-a4626a5d5f0c" title="A required table structure parameter that specifies the property type of the table.">property</a></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Required keyword whose
+value specifies the property type of the table. See <a class="xref fm:Table" href="Contain_TableProperty_ideafeaa5b.html#ideafeaa5b-bc88-4998-b397-a4dfcba00d06__id32bef585-d496-4175-85e6-3ec71c0e00ce">Table 1</a> for a complete list of valid table property
+types.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_TableType_id64c3281a.html#id64c3281a-25a3-415a-b33f-59f6fde8438c__Command_TableType_id64c3281a.xml#id64c3281a-25a3-415a-b33f-59f6fde8438c" title="A required table structure parameter used to specify how the table affects capacitance and resistance extraction calculations for the layer.">table_type</a></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Required keyword whose
+value specifies the type of table being described. Must be either
+R, C, or RC.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_DimType_id7adaa084.html#id7adaa084-90ba-4388-93ed-bd7812253a21__Command_DimType_id7adaa084.xml#id7adaa084-90ba-4388-93ed-bd7812253a21" title="A required table structure parameter that must be either drawn or actual. Note that not every keyword is supported with every table type.">dim_type</a></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Required keyword whose
+value specifies the type of dimensions being used. Must be either
+drawn or actual. Not required for rpv_vs_count table.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_ValueType_ide5a56fd2.html#ide5a56fd2-ed93-416f-b97b-dc8af23f9742__Command_ValueType_ide5a56fd2.xml#ide5a56fd2-ed93-416f-b97b-dc8af23f9742" title="A required table structure parameter used to specify how the values provided in the table are treated.">value_type</a></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Required keyword whose
+value specifies the type of values being used. Must be either absolute
+or delta.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_BiasType_id0eff286d.html#id0eff286d-2528-4846-a3c0-98912c05cd36__Command_BiasType_id0eff286d.xml#id0eff286d-2528-4846-a3c0-98912c05cd36" title="An optional table structure parameter used to specify whether the actual width values described in the table are for the preferred or non-preferred direction. This parameter may only be used in two-dimensional width or multi_bias property tables.">bias_type</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Optional keyword whose
+value specifies whether the table describes the actual width in
+the preferred or non-preferred direction. Must be defined as either
+preferred or nonpreferred. Can only be used in two-dimensional width
+or multi_bias property tables.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Enclosure_ided71d137.html#ided71d137-a8ba-4125-b83c-d5b372aca528__Command_Enclosure_ided71d137.xml#ided71d137-a8ba-4125-b83c-d5b372aca528" title="An optional table structure parameter used to specify whether to use the min or max values from the up and down via_resistance or via_resistance2 table structure. This parameter may only be used in two-dimensional via_resistance or via_resistance2 property tables.">enclosure</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Optional keyword that
+specifies whether to use the min or max values from the up and down
+via_resistance or via_resistance2 table structure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Equation_id1489ac52.html#id1489ac52-d291-4b4a-8282-b14c9c191406__Command_Equation_id1489ac52.xml#id1489ac52-d291-4b4a-8282-b14c9c191406" title="An optional table structure parameter used to specify an in-die equation.">equation</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Optional keyword whose
+value specifies an equation to evaluate in the table structure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Layers_idb8ef9316.html#idb8ef9316-f55d-46cd-b199-75dba508d0fd__Command_Layers_idb8ef9316.xml#idb8ef9316-f55d-46cd-b199-75dba508d0fd" title="An optional table structure parameter used to specify whether the via resistance is dependent on the upper, lower, or both upper and lower layer’s enclosure defined with a via_resistance or via_resistance2 table structure. This parameter may only be used in two-dimensional via_resistance or via_resistance2 property tables.">layers</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Optional keyword that
+specifies whether the via resistance is dependent on the upper,
+lower, or both upper and lower layer’s enclosure. Can only be used
+in the via_resistance or via_resistance2 table structure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_ViaSize_id95beab3e.html#id95beab3e-ed96-4ef1-98bb-2d7b6777bdbd__Command_ViaSize_id95beab3e.xml#id95beab3e-ed96-4ef1-98bb-2d7b6777bdbd" title="An optional parameter whose values specify the x,y dimensions of a square via. Can only be used in the two-dimensional via_resistance2 property table.">via_size</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Optional parameter whose
+values specify the x,y dimensions of a square via enclosed in braces
+({ }). Can only be used in the two-dimensional via_resistance2 property
+table.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><span class="ph FontProperty emphasis"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_Variable_idff0b5771.html#idff0b5771-4aa7-45d7-8ebe-323058c5e49a__Command_Variable_idff0b5771.xml#idff0b5771-4aa7-45d7-8ebe-323058c5e49a" title="A required table structure parameter used to specify variables that will be affected by the table definition.">variable</a></span></span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">Required
+parameter that specifies the type of values being used. The values
+specified for a <span class="keyword ParameterName RequiredReplaceable">variable</span> are
+enclosed in braces and must be listed in ascending order (smallest
+to largest). See <a class="xref fm:Table" href="Concept_VariableKeywords_id9bb72f08.html#id9bb72f08-f980-4065-8d96-84f7c78d4302__idefa3f75c-ffcd-4da6-be14-33da22a22e60">Table 1</a> which lists the available variable keywords
+and their unit value. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e395 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Value_idfdc0d5d6.html#idfdc0d5d6-10d4-4c69-bbab-a920bc43919d__Command_Value_idfdc0d5d6.xml#idfdc0d5d6-10d4-4c69-bbab-a920bc43919d" title="A required table structure parameter used to specify a space-delimited set of values enclosed in braces that represent value variations for the property.">value</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d4400e402 "><p class="p">A
+keyword whose value specifies the values applied to the associated
+variable in the table definition. Values supplied must be either
+absolute or delta to match the value_type setting. For rpv_vs_count,
+value is replaced with ratio.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="related-links TopicTOC levels:2">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Contain_TableProperty_ideafeaa5b.html" title="The property parameter defines the table’s property. The table_type is required and must be either R, C, or RC. If both are present, the table is applied to both resistance and capacitance. Not every keyword is supported with every table type. For example, if the R keyword is specified with a capacitance table, then an error message is generated and calibration will stop. ">Table Property</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_VariableKeywords_id9bb72f08.html" title="The variable parameter is a table keyword. ">Variable Keywords</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_TableExamples_ide433bd4a.html" title="Various examples are provided to demonstrate table structure usage. ">Table Examples</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_ProcessVariation_idae73b10a.html" title="Process variation occurs due to many systematic and random factors. xCalibrate provides MIPT syntax used to account for process variation when performing parasitic extraction.">Process Variation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xcalibrat_batch_user"
+                DocTitle = "xCalibrate™ Batch User’s Manual"
+                PageTitle = "Table Syntax"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_TableSyntax_id23232dba.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">xCalibrate™ Batch User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

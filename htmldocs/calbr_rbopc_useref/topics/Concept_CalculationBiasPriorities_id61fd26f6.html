@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calculation of Bias Priorities" />
+<meta name="abstract" content="When OPCBIAS identifies a short edge and a neighbor it can merge, it calculates the bias to use for the result. OPCBIAS determines priority of bias by comparing all biases, and space and width categories." />
+<meta name="description" content="When OPCBIAS identifies a short edge and a neighbor it can merge, it calculates the bias to use for the result. OPCBIAS determines priority of bias by comparing all biases, and space and width categories." />
+<meta name="prodname" content="Calibre Rule-Based OPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-01-30" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rbopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Rule-Based OPC User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id61fd26f6-7a51-438d-b5f1-9907f466b7d6" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calculation of Bias Priorities</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calculation of Bias Priorities" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calculation
+of Bias Priorities</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">When OPCBIAS
+identifies a short edge and a neighbor it can merge, it calculates
+the bias to use for the result. OPCBIAS determines priority of bias
+by comparing all biases, and space and width categories.</span>
+</div>
+<p class="p">The OPCBIAS operation chooses
+the prioritized edge as follows:</p>
+<ol class="ol"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id2ec67389-eb06-4b85-9e9d-294405a244de"><p class="p">If both biases are positive:</p>
+<ol class="ol" type="a"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__iddda393c2-0977-45ba-8977-781f51309ab0"><p class="p">Consider the space category. The edge with
+the closest space category takes priority.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id24c216ed-c93d-42ba-ae95-b0597b9f5dac"><p class="p">If the space category is the same, the edge
+with the closest width category takes priority.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id1ad84739-315e-4c09-9b09-ca5f212bbacd"><p class="p">If the width category is also the same, the
+longest edge takes priority.</p>
+</li>
+</ol>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id2c689327-c25a-425f-a3a2-246b436fd33c"><p class="p">If both biases are negative:</p>
+<ol class="ol" type="a"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id007ff395-d353-4c0f-8c90-90ebd5144ebe"><p class="p">Consider the width category. The edge with
+the closest width category takes priority.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idbb4ec14d-52db-4368-b6b0-2f54899031f8"><p class="p">If the width category is the same, the edge
+with the closest space category takes priority.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id1ff01fbe-b8ce-47f1-8a0c-fbc1cbdf9071"><p class="p">If the space category is also the same, the
+longest edge takes priority.</p>
+</li>
+</ol>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id5a31030e-889c-4208-8462-e1d82419c0df"><p class="p">If biases are mixed (one bias is &lt; 0, the
+other is &gt; 0):</p>
+<ol class="ol" type="a"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idc990a5ab-caed-49dd-a8d4-9192f4c7540e"><p class="p">Consider the space category. The edge with
+the closest space category takes priority. </p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idc1c6232b-2ddd-433c-953c-3cda4722019a"><p class="p">If priorities are the same, the positive bias
+takes priority.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p class="p">Tables <a class="xref fm:NumberOnly" href="#id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id99ccfdad-4cf8-4cbc-ae07-5f7259ca63b4">Table 1</a> through <a class="xref fm:NumberOnly" href="#id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id59ea92cd-ff60-4aea-99be-3355ec014d81">Table 3</a> summarize these
+three situations:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id99ccfdad-4cf8-4cbc-ae07-5f7259ca63b4" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Prioritized Bias — Both Positive — Evaluate
+SPACE First</span></caption><colgroup><col style="width:1.056in" /><col style="width:1.056in" /><col style="width:1.056in" /><col style="width:1.056in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Edge Bias</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SPACE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">WIDTH</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LENGTH</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Positive Positive</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Closest edge takes priority</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not considered</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not considered</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Positive Positive</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Closest edge takes priority</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not considered</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Positive Positive</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Longest edge takes priority</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id4e5ddf47-fc29-4268-938e-ef6a1df1906e" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Prioritized Bias — Both Negative — Evaluate
+WIDTH First</span></caption><colgroup><col style="width:1.028in" /><col style="width:1.065in" /><col style="width:1.065in" /><col style="width:1.065in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Edge Bias</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">WIDTH</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SPACE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">LENGTH</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Negative Negative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Closest edge takes priority</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not Considered</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not Considered</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Negative Negative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Closest edge takes priority</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Not Considered</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Negative Negative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Longest edge takes priority</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id59ea92cd-ff60-4aea-99be-3355ec014d81" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Prioritized Bias — Mixed Bias — Evaluate
+SPACE First</span></caption><colgroup><col style="width:1.056in" /><col style="width:1.056in" /><col style="width:1.056in" /><col style="width:1.056in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Edge Bias</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">SPACE</p>
+</td>
+<td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;"><p class="p">Positive/Negative</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Positive Negative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Closest edge takes priority</p>
+</td>
+<td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;"><p class="p">Not considered</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Positive Negative</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Arbitrary</p>
+</td>
+<td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;"><p class="p">Positive
+edge takes priority</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section Subsections" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idc4e9ee8d-42f2-42fa-9597-faf0212c809d"><div class="section Subsection" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id5c2c67dd-3c58-4d0d-bc0f-3e68237b09cf"><h2 class="title Subheading sectiontitle">Calculation of Treatment for Edges Selected
+by Priority</h2><p class="p">After selecting the prioritized
+edge, the OPCBIAS operation calculates the treatment the edge should
+receive by examining the selected bias and the lengths of the two
+edges:</p>
+<ul class="ul"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idc021021e-79b1-4fb2-a89a-a21e41297f39"><p class="p">The OPCBIAS operation widens the short
+edge if the short edge has the selected bias, and the edge next
+to it is long enough that, after widening, both are greater than MINBIASLENGTH.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id9ead1d80-d504-4ef8-924b-885a2d797beb"><p class="p">The OPCBIAS operation merges the two
+edges and selects the resulting edge if the short edge is not selected
+or the short edge is selected, but the other edge is also considered short.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Generally, edges
+are combined with one neighbor, but there are exceptions in places where
+a short edge is widened in both directions, where doing so preserves
+symmetry. This process is order-dependent and the results may vary
+from the order the edges are encountered.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id56c4a35b-4e50-4e4c-a08f-d8a48d04bd0f"><h2 class="title Subheading sectiontitle">Treatment of Short Edges Between
+Two Long Edges</h2><p class="p">When a short fragment is
+between two long fragments, the heuristics described in “<a class="xref fm:HeadingAndPage" href="Concept_OpcbiasCleanupTasks_id1f7f6636.html#id1f7f6636-660a-468e-ac29-933867e9e791__id0123914d-8b19-4f3d-87dd-958201f3b058">Treatment of Short Edges (Pre-Bias)</a>” may not be clear regarding
+when and how to widen. Consider the following situation, typically
+caused by a line-end that is shorter than MINBIASLENGTH influencing
+bias of an adjacent edge:</p>
+<ul class="ul"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idbeab952f-66c0-4c73-be1e-b2817270f38a"><p class="p">There is a short fragment with long fragments
+on either side.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__id0f483547-2f93-4d4c-a8ab-ab2093267c58"><p class="p">The short fragment has the highest priority
+of the three. </p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__ide5898929-2cf8-4ee8-80b8-11dbf00cf337"><p class="p">The long fragments both have the same
+bias.</p>
+</li>
+</ul>
+<p class="p">These situations are resolved by widening the
+short fragment by an equal amount in each direction. </p>
+<div class="fig fignone" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__ida266989a-48b5-421a-a8ce-d850032870da"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Treating Short Edges Between
+Long Edges with Same Bias</span><br /><div class="imagecenter"><img class="image imagecenter" height="89" src="../graphics/opcbias14.png" width="390" /></div><br /></div>
+<p class="p">By default, this process applies only when
+the long fragments on either side of the short fragment have the
+same bias. When the two fragments on either side of the short fragment
+have different biases, the application widens the short fragment
+into the fragment whose bias is closest to that of the short fragment. </p>
+<p class="p">If you
+want to widen short fragments with long fragments on either side,
+regardless of whether the biases of the two long fragments is the
+same, you can override the default behavior shown in <a class="xref fm:Figure" href="#id61fd26f6-7a51-438d-b5f1-9907f466b7d6__ida266989a-48b5-421a-a8ce-d850032870da">Figure 1</a> using the keyword CLOSERSYMMETRIC:</p>
+<pre class="pre codeblock leveled"><code>OPCBIAS poly MINBIASLENGTH 0.2 CLOSERSYMMETRIC</code></pre><p class="p">Specifying this keyword widens all short edges
+that meet the following two conditions: </p>
+<ul class="ul"><li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__idd6ed4052-4b1f-4398-9745-7bf10879138f"><p class="p">There is a short fragment with long fragments
+on either side.</p>
+</li>
+<li class="li" id="id61fd26f6-7a51-438d-b5f1-9907f466b7d6__ide168a797-996b-4a5d-b124-e2ea0f424cb3"><p class="p">The short fragment has the highest priority
+of the three. </p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_OpcbiasCommand_idb8da7214.html" title="The OPCBIAS command performs edge biasing on target shapes.">OPCBIAS Command</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rbopc_useref"
+                DocTitle = "Calibre® Rule-Based OPC User’s and Reference Manual"
+                PageTitle = "Calculation of Bias Priorities"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalculationBiasPriorities_id61fd26f6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Rule-Based OPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

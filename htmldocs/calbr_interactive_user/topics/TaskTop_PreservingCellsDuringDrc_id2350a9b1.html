@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Preserving Cells During DRC" />
+<meta name="abstract" content="When performing hierarchical DRC, Calibre may expand certain cells for improved performance. The process of expanding a cell removes one level of hierarchy by promoting it into the parent cell. If a DRC error occurs in a cell that gets expanded, it is reported in the parent cell." />
+<meta name="description" content="When performing hierarchical DRC, Calibre may expand certain cells for improved performance. The process of expanding a cell removes one level of hierarchy by promoting it into the parent cell. If a DRC error occurs in a cell that gets expanded, it is reported in the parent cell." />
+<meta name="prodname" content="Calibre Interactive User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2350a9b1-d23c-4db2-858f-236fd82585fb" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Preserving Cells During DRC</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Preserving Cells During DRC" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2350a9b1-d23c-4db2-858f-236fd82585fb">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Preserving
+Cells During DRC</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">When performing
+hierarchical DRC, Calibre may expand certain cells for improved performance.
+The process of expanding a cell removes one level of hierarchy by
+promoting it into the parent cell. If a DRC error occurs in a cell
+that gets expanded, it is reported in the parent cell. </p>
+<p class="p">If you used Calibre
+RVE for DRC to waive certain errors from a previous Calibre nmDRC
+run, it is possible that an error in a waived cell will be reported
+in a parent cell if the cell with the waived result is expanded.
+For information on waiving results, see “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Waiving, Marking, Sorting, and Grouping DRC Results in Calibre RVE', 'calbr_rve_user'); return false;">Waiving, Marking, Sorting, and Grouping DRC Results in Calibre RVE</a>” in the <cite class="cite">Calibre
+RVE User’s Manual</cite>.</p>
+<p class="p">If you used Calibre RVE to waive cell-resident
+errors from a prior run and you do <span class="ph FontProperty emphasis">not</span> want
+the cells containing those errors to be expanded, you can specify
+that certain cells are preserved from expansion.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__id8c40ebbe-d8e2-4e21-9b41-340c0e25bc0f"><p class="p">You
+are running hierarchical Calibre nmDRC.</p>
+</li>
+<li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__idbdfb2fbf-54f5-4a3a-b56d-ffc2d715fade"><p class="p">You
+know one of the following in order to specify which cells containing
+waived results should not be expanded during the Calibre nmDRC run:</p>
+<ul class="ul"><li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__idbd99e825-0940-4a19-9202-5b8bd947028d"><p class="p">Names
+of the cells that contain waived errors. </p>
+</li>
+<li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__ide8d0111d-bed0-4d6d-bcf1-cfa707dc588b"><p class="p">Name
+of the <span class="ph filepath">.waived</span> file used by Calibre RVE for
+DRC. The file is automatically named <var class="keyword varname italic">drc_results_database</var>.<span class="ph filepath">waived</span>,
+where <var class="keyword varname italic">drc_results_database</var> is
+the name of the DRC results database. </p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__id7bd43c6f-ab64-474e-8355-c4e5faeb97b4"><span class="ph cmd">Click <span class="ph uicontrol">DRC Options</span> on
+the left panel. If the DRC Options button is not present, choose <span class="ph menucascade"><span class="ph uicontrol">Setup</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">DRC Options</span></span> from
+the menu to display it.</span></li>
+<li class="li step stepexpand" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__id4cd547e0-dcfc-4331-890f-bcf47a5c0a9b"><span class="ph cmd">Click the <span class="ph uicontrol">Cells</span> tab.</span></li>
+<li class="li step stepexpand" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__id98bf143e-cafb-434f-819a-f65865b35080"><span class="ph cmd">If you wish to preserve all
+cells that contain waived results in the <span class="ph filepath">.waived</span> file,
+enable “Preserve cells from RVE waiver files” and enter a filename
+in the associated text entry box. </span><div class="itemgroup info StepInfo"><p class="p">If you choose this option,
+the specified <span class="ph filepath">.waived</span> file is automatically
+loaded into Calibre RVE for DRC if you start Calibre RVE from your
+Calibre Interactive session.</p>
+</div></li>
+<li class="li step stepexpand" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__idca1b43b8-4501-4617-85db-282a88872df4"><span class="ph cmd">Enable “Preserve Cells from
+list” to specify individual cells that are protected from expansion.
+You can enter cell names in these ways:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__idf186f7eb-028b-4478-8aeb-174fee841c64"><p class="p">Enter a space-separated
+list of cells in the text entry box.</p>
+</li>
+<li class="li" id="id2350a9b1-d23c-4db2-858f-236fd82585fb__ida158fa84-2227-405f-b1a9-a9cd8abfaff9"><p class="p">Read cell names from an
+existing waiver file — Click the <span class="ph uicontrol">Import from RVE Waiver
+File</span> button and select a <span class="ph filepath">.waived</span> file.
+All the cells that contain waived results are entered into the cell
+list. You can then delete or add cell names as needed.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Choosing
+to preserve cells from automatic expansion may increase run times
+in some cases.</p>
+</div>
+</li>
+</ul>
+<p class="p">Corresponding rule file statements: <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Cell List', 'svrf_ur'); return false;">Layout Cell List</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Preserve Cell List', 'svrf_ur'); return false;">Layout Preserve Cell List</a>.</p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_SettingDrcOptions_id5ceb3c21.html" title="Calibre Interactive provides access to a wide range of Calibre nmDRC options. Some are available in the Setup menu, others from the Inputs and Outputs panes, and others are available through the DRC Options pane.">DRC Options in Calibre Interactive</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_user"
+                DocTitle = "Calibre® Interactive™ User’s Manual"
+                PageTitle = "Preserving Cells During DRC"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_PreservingCellsDuringDrc_id2350a9b1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

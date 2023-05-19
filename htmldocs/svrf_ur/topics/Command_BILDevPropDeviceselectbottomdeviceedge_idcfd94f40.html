@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="device::select_bottom_device_edge" />
+<meta name="abstract" content="Returns a derived edge layer containing marker edges coincident with the bottom edges of device seed shapes (where “bottom” can change due to cell placement transformations, but is always consistent with a certain device edge). Input layers must be rectangular with edges parallel to the database axes. Pin shapes must be coincident with edges of seed shapes on each side of a seed shape. Devices that do not conform to these criteria cause the function to have empty output. This function is always called in the context of a tvf::SETLAYER command." />
+<meta name="description" content="Returns a derived edge layer containing marker edges coincident with the bottom edges of device seed shapes (where “bottom” can change due to cell placement transformations, but is always consistent with a certain device edge). Input layers must be rectangular with edges parallel to the database axes. Pin shapes must be coincident with edges of seed shapes on each side of a seed shape. Devices that do not conform to these criteria cause the function to have empty output. This function is always called in the context of a tvf::SETLAYER command." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>device::select_bottom_device_edge</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="device::select_bottom_device_edge" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">device::select_bottom_device_edge</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Device TVF
+layer generation function. Used only in a compile-time TVF rule
+file.</p>
+<p class="shortdesc">Returns a derived edge layer
+containing marker edges coincident with the bottom edges of device
+seed shapes (where “bottom” can change due to cell placement transformations,
+but is always consistent with a certain device edge). Input layers
+must be rectangular with edges parallel to the database axes. Pin
+shapes must be coincident with edges of seed shapes on each side
+of a seed shape. Devices that do not conform to these criteria cause
+the function to have empty output. This function is always called
+in the context of a tvf::SETLAYER command.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">device::select_bottom_device_edge</span> <span class="keyword ParameterName RequiredReplaceable">seed_layer</span> <span class="keyword ParameterName RequiredReplaceable">pin_layer</span> <span class="keyword ParameterName RequiredReplaceable">marker_width</span><span class="keyword ParameterName Optional"> [‑help | ?]</span></p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b__id00a5687f-e491-4c41-b74b-77f5622678e7"><span class="keyword ParameterName RequiredReplaceable">seed_layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that specifies
+a device seed layer. Usually this is the gate layer of a MOS transistor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b__idea0edd41-18b0-48db-9d09-8247d30d74e4"><span class="keyword ParameterName RequiredReplaceable">pin_layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument set that
+defines a pin layer having shapes that touch the <span class="keyword ParameterName RequiredReplaceable">seed_layer</span>. Usually
+this is a source/drain layer of a MOS transistor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b__idfb0cb557-a7ab-4211-8a25-c6f642325c42"><span class="keyword ParameterName RequiredReplaceable">marker_width</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that specifies
+a floating-point number in user units of length. This value must
+be less than one half the length of the minimum seed shape edge
+or no output occurs.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b__id1958dd30-61cd-4769-9d40-7f431cda4b2a">-help | ? </dt>
+<dd class="dd ArgumentDescription"><p class="p">Prints the usage message for
+this function in a Tcl shell.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">Derived edge layer.</p>
+</div>
+<div class="section Examples" id="idcfd94f40-43d5-4ccb-85b1-20ac6ca9f16b__id2b73c0f0-6f93-4ff9-a29b-e53b5daaea48"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following rule file code shows the use of the device orientation
+layer generation functions in the context of the pushdown separated
+properties (PDSP) flow.</p>
+<p class="p">This example shows the calculation of well
+enclosure or stress effect (strained silicon) properties. This example
+is based upon the method shown under “<a class="xref fm:HeadingAndPage" href="Concept_WellEnclosureStressEffectCalculationsDfmProperty_idc3cc8e33.html#idc3cc8e33-e128-402f-89e3-75857c21aee8__Concept_WellEnclosureStressEffectCalculationsDfmProperty_idc3cc8e33.xml#idc3cc8e33-e128-402f-89e3-75857c21aee8" title="The DFM Property operation is useful for calculating complex device properties. It allows attachment of values to polygons in order to report stress effect properties in a netlist.">Well Enclosure or Stress Effect Calculations with DFM Property</a>” and contains
+modifications to that code for device annotation.</p>
+<p class="p">The PAR and PER enclosure properties calculated
+in this example are for MOS devices and are measured vertically
+and horizontally from the “width” edges of gate polygons. The device
+pin layers consist of ngate, nsd, pwell, pgate, psd, and nwell.</p>
+<pre class="pre codeblock leveled"><code>#! tvf
+
+package require CalibreDFM_DEVICE 
+namespace import tvf::// tvf::setlayer tvf::outlayer tvf::verbatim \tvf::rulecheck
+
+verbatim {
+// include layer definitions and connectivity rules.
+
+// required for the PDSP annotation flow
+MASK SVDB DIRECTORY svdb QUERY CCI
+LVS PUSH DEVICES SEPARATE PROPERTIES YES
+}</code></pre><pre class="pre codeblock leveled"><code>// Globally set the maximum perpendicular and parallel enclosure 
+// distances.
+   set device::max_par 5.0
+   set device::max_per 5.0
+
+// Define the enclosure property layers.
+   setlayer ngate_prop.par = [ \
+     device::enclosure_parallel_measurements -base ngate \
+     -measurement pwell -orient nsd \
+   ]
+
+   setlayer ngate_prop.per = [ \
+     device::enclosure_perpendicular_measurements -base ngate \
+     -measurement pwell -orient nsd \
+   ]
+
+   setlayer pgate_prop.par = [ \
+     device::enclosure_parallel_measurements -base pgate \
+     -measurement nwell -orient psd \
+   ]
+
+   setlayer pgate_prop.per = [ \
+     device::enclosure_perpendicular_measurements -base pgate \
+     -measurement nwell -orient psd \
+   ]</code></pre><pre class="pre codeblock"><code>// Define device orientation layers.
+// 0.004 is arbitrary, but must be less than 0.5*seed polygon width.
+   setlayer ngate_top = [ 
+     device::select_top_device_edge ngate nsd 0.004
+   ]
+   setlayer ngate_bottom = [ 
+     device::select_bottom_device_edge ngate nsd 0.004
+   ]
+   setlayer ngate_left = [ 
+     device::select_left_device_edge ngate nsd 0.004
+   ]
+   setlayer ngate_right = [ 
+     device::select_right_device_edge ngate nsd 0.004
+   ]
+   setlayer pgate_top = [ 
+     device::select_top_device_edge pgate psd 0.004
+   ]
+   setlayer pgate_bottom = [ 
+     device::select_bottom_device_edge pgate psd 0.004
+   ]
+   setlayer pgate_left = [ 
+     device::select_left_device_edge pgate psd 0.004
+   ]
+   setlayer pgate_right = [ 
+     device::select_right_device_edge pgate psd 0.004
+   ]</code></pre><pre class="pre codeblock"><code>verbatim {
+// Transfer enclosure vector properties onto gate edges.
+ngate_top_p    = DFM PROPERTY ngate_top ngate_prop.par 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PAR_top = VPROPERTY( ngate_prop.par, PAR ) ]
+ngate_bottom_p = DFM PROPERTY ngate_bottom ngate_prop.par 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PAR_bottom = VPROPERTY( ngate_prop.par, PAR ) ]
+ngate_left_p   = DFM PROPERTY ngate_left ngate_prop.per 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PER_left = VPROPERTY( ngate_prop.per, PER ) ]
+ngate_right_p  = DFM PROPERTY ngate_right ngate_prop.per 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PER_right = VPROPERTY( ngate_prop.per, PER ) ]
+ 
+pgate_top_p    = DFM PROPERTY pgate_top pgate_prop.par 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PAR_top = VPROPERTY( pgate_prop.par, PAR ) ]
+pgate_bottom_p = DFM PROPERTY pgate_bottom pgate_prop.par 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PAR_bottom = VPROPERTY( pgate_prop.par, PAR ) ]
+pgate_left_p   = DFM PROPERTY pgate_left pgate_prop.per 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PER_left = VPROPERTY( pgate_prop.per, PER ) ]
+pgate_right_p  = DFM PROPERTY pgate_right pgate_prop.per 
+                 OVERLAP ABUT ALSO MULTI
+                 [ PER_right = VPROPERTY( pgate_prop.per, PER ) 
+]</code></pre><pre class="pre codeblock leveled"><code>
+// This macro defines four enclosure measurement properties 
+// for each device. The parA, parB, perA, and perB objects
+// are stored with the DFM property layers that are passed in.
+
+DMACRO mos_prop top bottom left right gate_layer sd_layer {
+  [
+    PROPERTY W, L
+    W = perim_co(gate_layer,sd_layer)/2
+    L = area(gate_layer)/W
+  ]
+&lt;top&gt; &lt;bottom&gt; &lt;left&gt; &lt;right&gt;
+  [
+    PROPERTY parA, parB, perA, perB
+ // get the four vectors from the vector property layers.
+    par_dfm_A = dfm_vector_value(top,"PAR_top")
+    par_dfm_B = dfm_vec_val(bottom,"PAR_bottom")
+    per_dfm_A = dfm_vec_val(left,"PER_left")
+    per_dfm_B = dfm_vec_val(right,"PER_right")
+// calculate the enclosure values on the four sides
+// of the gate. 
+    parA = tvf_num_fun::device_func::calc_eff_par(par_dfm_A, W, L, \
+             unit_length())
+    parB = tvf_num_fun::device_func::calc_eff_par(par_dfm_B, W, L, \
+             unit_length())
+    perA = tvf_num_fun::device_func::calc_eff_per(per_dfm_A, W, L, \
+             unit_length())
+    perB = tvf_num_fun::device_func::calc_eff_per(per_dfm_B, W, L, \
+             unit_length())
+  ] 
+}</code></pre><pre class="pre codeblock leveled"><code>TVF FUNCTION device_func [/*
+  package require CalibreLVS_DEVICE_DFM
+
+  proc calc_eff_per { enc_prop W L unit_length } {
+    set scale_factor [ $unit_length ]
+    set enc_list [ device::scaled_dfm_vec_measurements $enc_prop \
+      $scale_factor ]
+    set accum 0.0
+    set half_L [ expr { 0.5 * [$L] } ]
+    foreach segment $enc_list {
+      foreach { width length } $segment {
+        set seg [ expr { ($width / ( $length + $half_L )) } ]
+        set accum [ expr { $accum + $seg } ]
+      }
+    }
+    return [ expr { ( [$W] / $accum ) - $half_L } ]
+  }</code></pre><pre class="pre codeblock leveled"><code>   proc calc_eff_par { enc_prop W L unit_length } {
+    set scale_factor [ $unit_length ]
+    set enc_list [ device::scaled_dfm_vec_measurements $enc_prop \
+      $scale_factor ]
+    set accum 0.0
+    set half_W [ expr { 0.5 * [$W] } ]
+    foreach segment $enc_list {
+      foreach { width length } $segment {
+        set seg [ expr { ($width / ( $length + $half_W )) } ]
+        set accum [ expr { $accum + $seg } ]
+      }
+    }
+    return [ expr { $half_W - ( [$L] / $accum ) } ]
+  }
+*/]  
+                 
+DEVICE MN ngate ngate(G) nsd(S) nsd(D) pwell(B) 
+CMACRO mos_prop ngate_top_p ngate_bottom_p ngate_left_p ngate_right_p 
+ngate nsd
+
+DEVICE MP pgate pgate(G) psd(S) psd(D) nwell(B) 
+CMACRO mos_prop pgate_top_p pgate_bottom_p pgate_left_p pgate_right_p 
+pgate psd
+
+TRACE PROPERTY MN l l 0
+TRACE PROPERTY MN w w 0
+TRACE PROPERTY MP l l 0
+TRACE PROPERTY MP w w 0</code></pre><p class="p">After running connectivity extraction with
+the preceding code, you can run the Calibre Connectivity Interface
+using the Query Server Tcl shell command script shown here: </p>
+<pre class="pre codeblock"><code>dfm::set_layout_netlist_options -separated_properties YES
+dfm::set_layout_netlist_options -pin_locations YES
+dfm::set_layout_netlist_options -trivial_pins YES 
+dfm::set_layout_netlist_options -empty_cells YES 
+dfm::set_layout_netlist_options -names NONE 
+dfm::set_layout_netlist_options -primitive_device_subckts NO 
+dfm::set_layout_netlist_options -device_templates YES 
+dfm::set_layout_netlist_options -hierarchy AGF 
+qs::write_separated_properties props.data
+dfm::write_spice_netlist cci_pdsp.netlist</code></pre><p class="p">For a related example using the LVS Annotate Devices flow, see <a class="xref fm:HeadingOnly" href="Concept_ExampleDeviceLayerAnnotateProgramsUsingDfmProperty_id834a8436.html#id834a8436-ffb5-42a8-a234-19c777df4304__id5279d747-7ca0-41f0-b71b-e3119ee1c215">Example 3</a> under “<a class="xref fm:HeadingAndPage" href="Concept_ExampleDeviceLayerAnnotateProgramsUsingDfmProperty_id834a8436.html#id834a8436-ffb5-42a8-a234-19c777df4304__Concept_ExampleDeviceLayerAnnotateProgramsUsingDfmProperty_id834a8436.xml#id834a8436-ffb5-42a8-a234-19c777df4304" title="The Device Annotation Built-In Language provides a means for combining DFM Property measurements with devices recognized using Calibre nmLVS. DFM Property is an efficient and versatile operation for collecting and combining complex device property measurements used in parasitic extraction flows.">Example Device Annotation Programs Using DFM Property</a>”.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DeviceAnnotationBuiltInLanguage_id7f618268.html" title="The Device annotation built-in language is useful for MOS device well proximity and shallow trench isolation (STI) stress effect property calculations and similar applications. It is primarily used to extract physical parameters for the newer BSIM4 models.">Device Annotation Built-In Language</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "device::select_bottom_device_edge"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_BILDevPropDeviceselectbottomdeviceedge_idcfd94f40.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

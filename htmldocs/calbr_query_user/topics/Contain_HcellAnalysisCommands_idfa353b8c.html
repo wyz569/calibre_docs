@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Hcell Analysis Commands" />
+<meta name="abstract" content="This set of commands reads netlists, identifies hcells through various manual or automatic means, and produces reports detailing effectiveness of hcells, statistics on contained instances, and so forth. Hcell lists can also be output." />
+<meta name="description" content="This set of commands reads netlists, identifies hcells through various manual or automatic means, and produces reports detailing effectiveness of hcells, statistics on contained instances, and so forth. Hcell lists can also be output." />
+<meta name="DC.subject" content="Hcell analysis, standard commands (non-Tcl)" />
+<meta name="keywords" content="Hcell analysis, standard commands (non-Tcl)" />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idfa353b8c-dc7d-4594-ae0e-31004ff1786c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Hcell Analysis Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Hcell Analysis Commands" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idfa353b8c-dc7d-4594-ae0e-31004ff1786c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Hcell
+Analysis Commands</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">This
+set of commands reads netlists, identifies hcells through various
+manual or automatic means, and produces reports detailing effectiveness
+of hcells, statistics on contained instances, and so forth. Hcell
+lists can also be output.</span>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+commands in this section are superseded by the corresponding commands
+in the Query Server Tcl shell, which are documented in the chapter “<a class="xref fm:HeadingAndPage" href="MGCChap_HcellHierarchicalAnalysis_id86fc4afd.html#id86fc4afd-89c0-4c60-b827-0d7cfc3993d8__MGCChap_HcellHierarchicalAnalysis_id86fc4afd.xml#id86fc4afd-89c0-4c60-b827-0d7cfc3993d8" title="Hcells define correspondences between layout and source cells in hierarchical LVS. Calibre nmLVS-H cannot generally determine these correspondences if the subcircuit names are different in the two designs, so a user-defined hcell list is needed in that case. Furthermore, simply because cell names may match between layout and source designs does not mean the pair will make good hcells. The Query Server can assist in finding a prospective set of hcells that act as design partitions to improve comparison efficiency and to make debugging simpler.">Hcell and Hierarchical Analysis</a>”.</p>
+</div>
+<p class="p">The query netlist commands may be used
+in any order. For example, a new hcell file can be read in without
+re-reading the netlists to see the effects of adding a particular
+hcell to the hcell file. However, the contents of the output reports
+is dependent on the prevailing conditions at the time the reports
+are generated.</p>
+<p class="p">See “<a class="xref fm:HeadingOnly" href="Contain_HcellListManagementUsingStandardCommands_id1114e459.html#id1114e459-aa54-44c3-b2c0-32d79ecf7cc3__Contain_HcellListManagementUsingStandardCommands_id1114e459.xml#id1114e459-aa54-44c3-b2c0-32d79ecf7cc3" title="Hcell lists specify cells that correspond between layout and source netlists. Judicious selection of hcells can make Calibre nmLVS-H comparison run much faster than otherwise is possible. The Query Server can assist in constructing hcell lists.">Hcell List Management Using Standard Commands</a>” for detailed usage information regarding
+the commands in this section.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idfa353b8c-dc7d-4594-ae0e-31004ff1786c__id826e18b2-b339-496c-a638-4154af5a5113" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Netlist and Hierarchy Analysis Commands</span></caption><colgroup><col style="width:2.512in" /><col style="width:3.012in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d29049e198"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d29049e201"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistAddMatchingHcells_id4e4762a8.html#id4e4762a8-7483-4c8b-8bfb-45312d01cf54__Command_NetlistAddMatchingHcells_id4e4762a8.xml#id4e4762a8-7483-4c8b-8bfb-45312d01cf54" title="Adds cells identified with the NETLIST AUTOMATCH or NETLIST PLACEMENTMATCH command heuristics to the system hcell list.">NETLIST ADD MATCHING HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Adds cells matched by
+NETLIST AUTOMATCH or NETLIST PLACEMENTMATCH to the system hcell list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistAutomatch_id85a1d6cd.html#id85a1d6cd-7c6e-4915-8484-95ea00f830a3__Command_NetlistAutomatch_id85a1d6cd.xml#id85a1d6cd-7c6e-4915-8484-95ea00f830a3" title="Specifies that candidate hcells are matched by name.">NETLIST AUTOMATCH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Specifies that candidate
+hcells are matched by name.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistClearHcell_id476d008a.html#id476d008a-ef36-4206-ab44-04233986961f__Command_NetlistClearHcell_id476d008a.xml#id476d008a-ef36-4206-ab44-04233986961f" title="Removes a cell pair from the current hcell list maintained by the system.">NETLIST CLEAR HCELL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Removes a cell pair from
+the current hcell list maintained by the system.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistClearHcells_id96680f9d.html#id96680f9d-f39f-4673-95f1-bc72427bb366__Command_NetlistClearHcells_id96680f9d.xml#id96680f9d-f39f-4673-95f1-bc72427bb366" title="Removes all hcell pairs from the current hcell list.">NETLIST CLEAR HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Removes all hcell pairs
+from the current hcell list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistEvaluateCurrentHcells_id62f4af53.html#id62f4af53-a828-43eb-93d5-8697dcf5072e__Command_NetlistEvaluateCurrentHcells_id62f4af53.xml#id62f4af53-a828-43eb-93d5-8697dcf5072e" title="Specifies whether hcells in the current hcell list undergo evaluation.">NETLIST EVALUATE CURRENT HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Specifies whether hcells
+in the current hcell list undergo evaluation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistEvaluationThreshold_idcf695b16.html#idcf695b16-ddd5-4f81-a081-10aaea652004__Command_NetlistEvaluationThreshold_idcf695b16.xml#idcf695b16-ddd5-4f81-a081-10aaea652004" title="Specifies threshold values for evaluating hcell effectiveness.">NETLIST EVALUATION THRESHOLD</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Specifies threshold values
+for evaluating hcell effectiveness.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistExpandUnbalanced_ide1ad0b2e.html#ide1ad0b2e-d120-45fd-8a97-92583fd1f7f5__Command_NetlistExpandUnbalanced_ide1ad0b2e.xml#ide1ad0b2e-d120-45fd-8a97-92583fd1f7f5" title="Specifies how to handle unbalanced hcell expansion.">NETLIST EXPAND UNBALANCED</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Specifies how to handle
+unbalanced hcell expansion.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistHcell_id66c12277.html#id66c12277-c964-4ba4-ae58-10b4a6e336c9__Command_NetlistHcell_id66c12277.xml#id66c12277-c964-4ba4-ae58-10b4a6e336c9" title="Adds an hcell pair to the current hcell list maintained by the system.">NETLIST HCELL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Adds an hcell pair to
+the system hcell list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistHcells_idbd8611dd.html#idbd8611dd-8aae-410b-ba68-bce34648255c__Command_NetlistHcells_idbd8611dd.xml#idbd8611dd-8aae-410b-ba68-bce34648255c" title="Reads in an existing hcell list.">NETLIST HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Reads in an existing
+hcell list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistPlacementmatch_ida96231e8.html#ida96231e8-d077-43ae-a93c-50d10eb6474e__Command_NetlistPlacementmatch_ida96231e8.xml#ida96231e8-d077-43ae-a93c-50d10eb6474e" title="Specifies that candidate hcells are matched by placement count.">NETLIST PLACEMENTMATCH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Specifies that candidate
+hcells are matched by placement count.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistRead_idaaa54029.html#idaaa54029-2df9-47f7-8027-66279d1605c4__Command_NetlistRead_idaaa54029.xml#idaaa54029-2df9-47f7-8027-66279d1605c4" title="Reads the rule file for netlist information.">NETLIST READ</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Reads the rule file for
+netlist information.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistReportHcells_id939ee88b.html#id939ee88b-82da-4036-8b72-5dde6c4231db__Command_NetlistReportHcells_id939ee88b.xml#id939ee88b-82da-4036-8b72-5dde6c4231db" title="Writes the current hcell list maintained by the system.">NETLIST REPORT HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Writes the current hcell
+list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistReportHierarchy_id8cc8f592.html#id8cc8f592-9f5b-4299-bbe8-ed191cc87973__Command_NetlistReportHierarchy_id8cc8f592.xml#id8cc8f592-9f5b-4299-bbe8-ed191cc87973" title="Writes a design hierarchy report.">NETLIST REPORT HIERARCHY</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Writes a design hierarchy
+report.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistSelectHcells_idf6950ed6.html#idf6950ed6-f4c7-4f75-b68b-83c78e892e62__Command_NetlistSelectHcells_idf6950ed6.xml#idf6950ed6-f4c7-4f75-b68b-83c78e892e62" title="Sets the current hcell list and generates an evaluation report.">NETLIST SELECT HCELLS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Sets
+the current hcell list using hcell effectiveness evaluation thresholds
+and generates an evaluation report.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e198 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_NetlistStatus_id00a86347.html#id00a86347-72d9-4b38-a1b5-400a6b41b5bb__Command_NetlistStatus_id00a86347.xml#id00a86347-72d9-4b38-a1b5-400a6b41b5bb" title="Lists the current status of netlist analysis commands and whether the netlists and rule file have been read.">NETLIST STATUS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29049e201 "><p class="p">Returns the current command
+settings for hcell analysis.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "Hcell Analysis Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_HcellAnalysisCommands_idfa353b8c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

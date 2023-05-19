@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Binary Polygon Format (BPF) Database" />
+<meta name="abstract" content="The BPF database provides an interface from flat Calibre nmLVS to external tools. It provides access to shapes on layers involved in circuit extraction and device recognition, and to some other related information. You create the BPF database with the -bpf command line option in flat LVS (-lvs with no -flatten option). You cannot create the BPF database in Calibre nmLVS‑H." />
+<meta name="description" content="The BPF database provides an interface from flat Calibre nmLVS to external tools. It provides access to shapes on layers involved in circuit extraction and device recognition, and to some other related information. You create the BPF database with the -bpf command line option in flat LVS (-lvs with no -flatten option). You cannot create the BPF database in Calibre nmLVS‑H." />
+<meta name="DC.subject" content="Binary polygon file (BPF)" />
+<meta name="keywords" content="Binary polygon file (BPF)" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Binary Polygon Format (BPF) Database</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Binary Polygon Format (BPF) Database" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Binary Polygon Format (BPF) Database</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The BPF
+database provides an interface from flat Calibre nmLVS to external
+tools. It provides access to shapes on layers involved in circuit
+extraction and device recognition, and to some other related information.
+You create the BPF database with the -bpf command line option in
+flat LVS (-lvs with no -flatten option). You cannot create the BPF
+database in Calibre nmLVS‑H. </span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9__ida5ab6e8e-70ca-4341-af6d-e408c57783ad"><p class="p">The database consists of a set of files. File
+names in the BPF database are based on the rule file <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a> specification
+statement. If no LVS Report statement is specified in the rule file,
+then the name icv is used for the report prefix.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">BPF Polygon Files </span>—
+BPF files contain polygons from certain layers of interest. The
+BPF files created have names of the form <span class="ph filepath italic">lvs_report_name</span>.<span class="ph filepath italic">layer_name</span>.bpf.
+The <span class="ph filepath italic">layer_name</span> field
+is the rule file layer name. By default, all <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> seed layers are
+reported. You can use the LVS ‑dblayers command line option to select
+layers for generation explicitly.</p>
+<p class="p">Polygons in BPF files are annotated with node
+numbers (for Connect layers, Device pin layers, and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Stamp', 'svrf_ur'); return false;">Stamp</a> layers) or with device numbers
+(for Device seed layers). In case of conflict, node numbers are
+stored and the device numbers are not preserved. For example, if
+a layer serves as both a pin layer and a device seed layer, then
+the respective BPF file contains node numbers and the device numbers
+are lost. If you need the device numbers as well, then you can copy
+the seed layer so that separate layers can be used. For example:</p>
+<pre class="pre codeblock leveled"><code>ngate1 = COPY ngate 
+DEVICE MN ngate1 ngate(G) nact(S) nact(D) dpsub(B) </code></pre><p class="p">Situations where the same layer is used in
+a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> operation
+and as a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> seed
+layer are reported with warnings in the Calibre transcript. </p>
+<p class="p">For example:</p>
+<pre class="pre codeblock leveled"><code>WARNING: BPF file for DEVICE seed layer ngate contains NET IDs, 
+not DEVICE IDs. </code></pre><p class="p">The following BNF summarizes the binary
+polygon format:</p>
+<pre class="pre codeblock leveled"><code>&lt;bpf file&gt; -&gt; &lt;bpf record&gt; [ ... &lt;bpf record&gt; ] EOF 
+
+&lt;bpf_record&gt; -&gt; &lt;node record&gt; | &lt;non-node record&gt; 
+
+&lt;node record&gt; -&gt; &lt;node vertex count&gt; &lt;node number&gt; &lt;vertices&gt; 
+&lt;non-node record&gt; -&gt; &lt;vertex count&gt; &lt;vertices&gt; 
+
+&lt;node vertex count&gt; -&gt; &lt;short16 with MSB set&gt; 
+&lt;vertex count&gt; -&gt; &lt;short16 with MSB unset&gt; 
+&lt;vertices&gt; -&gt; &lt;vertex&gt; [ ... &lt;vertex&gt; ]  
+
+&lt;vertex&gt; -&gt; &lt;x&gt; &lt;y&gt; 
+
+&lt;x&gt; -&gt; &lt;int32&gt; 
+&lt;y&gt; -&gt; &lt;int32&gt; 
+
+&lt;node_number&gt; -&gt; &lt;int32&gt; </code></pre><p class="p"><span class="ph FontProperty HeadingLabel">BPF Layout Cross Reference File</span> —
+The layout cross-reference file, <span class="ph filepath italic">lvs_report_name</span><span class="keyword ParameterName Optional">.lxf, is a text file that provides a cross reference between internal net numbers and layout text names. </span></p>
+<p class="p"><span class="ph FontProperty HeadingLabel">BPF Ports File</span> —
+The <span class="ph filepath italic">lvs_report_name</span>.ports
+file is a text file that contains information about top-level ports.
+This file contains one line for each top-level port (unattached
+ports are not reported). Each line has the following fields:</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">port_name node_number node_name port_location port_layer_attached</span></p>
+<p class="p">where each field is defined as follows:</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">port_name</span>—
+The layout name of the port object. For example, the GDSII text
+string when using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Port Layer Text', 'svrf_ur'); return false;">Port Layer Text</a>. Or UNNAMED if the port is not named.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">node_number</span> —
+The layout node number to which the port is connected.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">node_name</span> —
+The layout node name to which the port is connected; layout node
+number if the node is unnamed.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">port_location</span> —
+The coordinates (dbu) of the database text object when using Port
+Layer Text, or of a vertex on the port polygon marker when using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Port Layer Polygon', 'svrf_ur'); return false;">Port Layer Polygon</a>, or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Port Layer Merged Polygon', 'svrf_ur'); return false;">Port Layer Merged Polygon</a>.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">port_layer_attached</span> —
+The layer of the polygon to which the port was attached. Rule file
+layer name or rule file layer number if the layer is unnamed. This
+layer appears in a Connect or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Sconnect', 'svrf_ur'); return false;">Sconnect</a> operation.</p>
+<p class="p">Examples:</p>
+<pre class="pre codeblock leveled"><code>CONF3 5 CONF -98000 -90000 metal 
+CONF3 5 5 -98000 -90000 metal 
+&lt;UNNAMED&gt; 5 5 -98000 -90000 metal 
+CONF 5 CONF -98000 -90000 17 </code></pre><p class="p"><span class="ph FontProperty HeadingLabel">Warning for Connect Layers</span> —
+The BPF interface provides a warning for situations where a layer
+is used in a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> operation that
+is also a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> seed
+layer. The BPF interface was designed with the assumption that Device
+seed layers would not be used in Connect operations. However, in
+some cases, rule files may use Device seed layers in Connect operations.
+As a result, the BPF output file has net IDs rather than the expected
+device IDs. This can break downstream flows that expect device IDs.
+The warning helps to detect and correct these situations. </p>
+<p class="p">Note that, in general, it is not necessary
+for Device seed layers to appear in Connect operations. In certain
+rare situations, layer derivations may require that connectivity
+be established through Device seed layers. In these cases, the layer
+intended for use as a Device seed layer can be copied for that purpose.</p>
+<p class="p">For example if a Device seed layer “nfet” also
+appears in a Connect operation and the -bpf option is used:</p>
+<pre class="pre codeblock leveled"><code>CONNECT nfet poly 
+DEVICE MN nfet poly sd sd nwell </code></pre><p class="p">Then the following warning appears in the transcript:</p>
+<pre class="pre codeblock leveled"><code>WARNING: BPF file for DEVICE seed layer nfet contains NET IDs, 
+not DEVICE IDs.</code></pre><p class="p">This situation may be rectified in one of two
+ways:</p>
+<ul class="ul"><li class="li" id="id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9__id5a867ef1-e829-4390-b452-fed5142f3a01"><p class="p">If
+the Connect operation is not adding required connectivity to the extraction,
+remove it from the rule file. This saves processing time.</p>
+</li>
+<li class="li" id="id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9__id90dd2447-ef66-4d30-82c0-2e2b53298a8d"><p class="p">If
+the Connect operation is adding required connectivity to the extraction, make
+a copy of the “nfet” layer for use in the device operation:</p>
+<pre class="pre codeblock leveled"><code>nfet:1 = COPY nfet 
+CONNECT nfet poly 
+DEVICE MN nfet:1 poly sd sd nwell </code></pre></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_LvsResults_id3723f7f6.html" title="Calibre nmLVS and Calibre nmLVS generate an LVS Report along with various other results files such as a circuit extraction report and any requested results databases. The run transcript also has useful information for interpreting results.">LVS Results</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Binary Polygon Format (BPF) Database"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_BinaryPolygonFormatBpfDatabase_id8cf7e7c0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

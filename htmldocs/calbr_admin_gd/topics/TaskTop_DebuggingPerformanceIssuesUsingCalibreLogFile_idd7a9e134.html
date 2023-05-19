@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Debugging Performance Issues Using a Calibre Log File" />
+<meta name="abstract" content="The Calibre log file includes a considerable amount of information that can be helpful in debugging performance issues encountered during a Calibre run. The following procedure identifies specific items to look for in the log file that may help improve performance for a subsequent run." />
+<meta name="description" content="The Calibre log file includes a considerable amount of information that can be helpful in debugging performance issues encountered during a Calibre run. The following procedure identifies specific items to look for in the log file that may help improve performance for a subsequent run." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd7a9e134-a3c9-4285-943d-5a51408d7141" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Debugging Performance Issues Using a Calibre Log File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Debugging Performance Issues Using a Calibre Log File" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idd7a9e134-a3c9-4285-943d-5a51408d7141">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Debugging Performance Issues Using a Calibre Log File</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">The Calibre log
+file includes a considerable amount of information that can be helpful
+in debugging performance issues encountered during a Calibre run.
+The following procedure identifies specific items to look for in
+the log file that may help improve performance for a subsequent
+run. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><p class="p">None. It is recommended that
+you have a log file from a Calibre run that you can refer to for
+comparison purposes.</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id1eaa55ba-ecb5-47d8-a2aa-3aef7851f552"><span class="ph cmd">Review the header information
+in the log file.</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id4a6181fa-53a7-4dbb-8949-201ff02cd990"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:100" src="../graphics/debug_performance_issues_transcript.png" /></div><br /></div>
+<p class="p">Be sure
+to note the Calibre version, hardware configuration, and Calibre command
+line. If using remotes, you should confirm that all Calibre versions match.</p>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__idfa0a2f9f-8d1d-43e4-99d6-63c9fe763128"><span class="ph cmd">Verify the final LVHEAP is
+within the machine’s capacity.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>...
+HDB 0-4 TOTAL LVHEAP = 9386
+...</code></pre><p class="p">In this example, the LVHEAP
+number is reporting the maximum memory requirement of the application.</p>
+<p class="p">The LVHEAP numbers, which appear
+with all derived layer statistics in the log file, report approximate
+current memory usage in MBytes for <span class="ph fmvar:Toolset_Name">Calibre
+tools</span>.
+The format of the memory usage report is:</p>
+<p class="p BlockIndent">LVHEAP = memory currently used / memory allocated /
+maximum memory allocated </p>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id962f4d2b-811b-4a0d-adbe-03fe70f3bc4f"><span class="ph cmd">Check whether the hardware
+is fully utilized by searching the log file for HDB and PROCESSOR
+COUNT.</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id34e8b204-532c-4fd7-9e89-526f341698cf"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:100" src="../graphics/debug_performance_issues_transcript_step3.png" /></div><br /></div>
+<p class="p">To save remote host log files,
+which are normally deleted after the run, set the <a class="xref fm:HeadingOnly" href="Command_CalibreMtflexSaveLogs_idebfd138e.html#idebfd138e-6bc9-4058-9a1d-f118d4a07d8e__Command_CalibreMtflexSaveLogs_idebfd138e.xml#idebfd138e-6bc9-4058-9a1d-f118d4a07d8e" title="Specifies whether the Remote Compute Server (RCS) log files and CalibreRRLog file are saved at the end of a run.">CALIBRE_MTFLEX_SAVE_LOGS</a> environment
+variable to a non-null character. For example:</p>
+<pre class="pre ShellCommand">setenv CALIBRE_MTFLEX_SAVE_LOGS 1</pre>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id0129b796-6cfc-470b-b717-19431ca9660f"><span class="ph cmd">Search for the keyword SHARED.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>HIERARCHICAL DATABASE CONSTRUCTOR COMPLETE.
+CPU TIME = 1 + 0  REAL TIME = 1  LVHEAP = 5/11/11  SHARED = 1/32</code></pre><p class="p">SHARED data is a subset of
+the LVHEAP data and, of the LVHEAP memory used, represents the amount
+in the SHARED section that was shared with other HDB(s). </p>
+<p class="p">When the available RDS (Remote
+Data Server) memory is filled then overflow data is stored on the
+local (server) host. Shared memory is undesirable when running RDS
+and Hyper Remote. Reducing memory by using RDS is preferred over
+using shared memory. As a result, if you are running RDS and getting
+significant shared memory, it can indicate you are not using enough
+memory from the remotes. Getting large amounts of shared memory
+while not using RDS can indicate that you will see an improvement
+by using RDS.</p>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id46910703-b491-4b5d-be69-6342d2f35ddb"><span class="ph cmd">Review the CELL AND PLACEMENT
+SUMMARY.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>-------------------------------------------------------------------
+-----                CELL AND PLACEMENT SUMMARY                ----
+-------------------------------------------------------------------
+CELL TYPE         CELLS          PLACEMENTS         FLAT PLACEMENTS
+-------------------------------------------------------------------
+USER               2328             3095277                75000240
+ VERY SMALL           0                   0                       0
+ TOP LAYER           10                  54                     312
+  VERY SMALL          0                   0                       0
+PSEUDO             5132             2407677                13406674
+TOTAL              7460             5502954                88406914</code></pre><p class="p">A high number of user cells
+(2328 in this example) with respect to the TOTAL (7460) indicates
+poor re-use of cells. A ratio of hierarchical and flat placement
+counts less than 1:10 may indicate a poor hierarchy. The hierarchy
+in this example is okay since the ratio is 1:16 (5502954:88406914).</p>
+<p class="p">In cases where the number of
+pseudo cells (5132 in this example) is high relative to the number
+of user cells (2328), this can indicate that Calibre is having to
+move too much data around and had to create an intermediate hierarchy
+to store the results internally. In turn, this can mean the original
+hierarchy has a very high percentage of cell instances that are
+overlapping or that the Layout Base Layer or Layout Top Layer statements
+need adjusting.</p>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id9cf39395-122c-45c8-bf41-dfc6b75a8537"><span class="ph cmd">Look for HIGH-COST HCELLS.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>HIGH-COST HCELLS
+	cap_dac (EXPANDING DENSE OVERLAPS: 18.0)
+	NMOS_VTL_23 (EXPANDING DENSE OVERLAPS: 12.6)
+HIERARCHICAL DATABASE CONSTRUCTOR COMPLETE.</code></pre><p class="p">It may be possible to improve
+extraction performance by removing these hcells from the hcell list
+for future runs. Beginning with the 2009.4 Calibre release, you
+can try using the LVS Auto Expand Hcells PRESET statement.</p>
+</div></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id57805692-1cd7-4762-91ea-d624ddf8671f"><span class="ph cmd">Look for flattened or merged
+layers that are used in downstream operations.</span></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__id815395f2-32d4-4b25-a8d2-f818678b93f2"><span class="ph cmd">Look for other operations
+that may cause the overall job to run slow, such as Layout Magnify
+or Magnify.</span></li>
+<li class="li step stepexpand" id="idd7a9e134-a3c9-4285-943d-5a51408d7141__ida9f12f76-3f62-45d2-82a6-8ccf2b6a6864"><span class="ph cmd">Search for lines in the log
+file that provide runtime or memory usage information. You can use
+grep and sort to extract the desired string and perform a sort based
+on the number of columns.</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">grep ’OPS COMPLETE’ log &gt; ops</pre>
+<pre class="pre ShellCommand">sort -nk 8 ops &gt; ops.s</pre>
+<p class="p">You can then use the results
+of this operation to identify strings or OPERATION numbers to search
+for in the log file in order to identify the actual statement that
+was run.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">You should now have an idea of items
+to look for in the Calibre log file that can help in debugging performance
+issues.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DistributedCalibreExecutingMonitoring_idd93c9d2e.html" title="Some of the more common scenarios for running a distributed Calibre job involve using the multithreaded (MT) or Calibre MTflex capabilities, with or without hyperscaling mode. Monitoring utilities allow you to track how the job is distributed along with the performance of the local and remote hosts.">Distributed Calibre: Executing and Monitoring</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Debugging Performance Issues Using a Calibre Log File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DebuggingPerformanceIssuesUsingCalibreLogFile_idd7a9e134.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

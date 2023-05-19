@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="DFM DP OPTIMIZE" />
+<meta name="abstract" content="Optimizes mask coloring through application of priority-based expressions applied to layers." />
+<meta name="description" content="Optimizes mask coloring through application of priority-based expressions applied to layers." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DFM DP OPTIMIZE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DFM DP OPTIMIZE" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DFM DP OPTIMIZE</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC"><a class="xref fm:HeadingOnly" href="Contain_MultiPatterningSVRFCommands_id2565a2fa.html#id2565a2fa-34a4-4ef5-bcff-f3cd6d51901e__Contain_MultiPatterningSVRFCommands_id2565a2fa.xml#id2565a2fa-34a4-4ef5-bcff-f3cd6d51901e" title="A typical SVRF rule file containing double-, triple-, and quadruple-patterning may also contain other SVRF commands that declare input layers, perform preliminary layer manipulation, and save output layers.">Multi-Patterning SVRF Commands</a></p>
+<p class="shortdesc">Optimizes mask coloring through
+application of priority-based expressions applied to layers.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName RequiredReplaceable">final_mask</span> <span class="keyword ParameterName Required">=</span> <span class="keyword ParameterName Required">DFM DP OPTIMIZE</span> <br />
+{<span class="keyword ParameterName Required">MASK0</span> | <span class="keyword ParameterName Required">MASK1</span>}<br />
+<span class="keyword ParameterName RequiredReplaceable">initial_mask_0</span>‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">MASK0</span>‘<span class="keyword ParameterName Required">)</span>’<br />
+<span class="keyword ParameterName RequiredReplaceable">initial_mask_1</span>‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">MASK1</span>‘<span class="keyword ParameterName Required">)</span>’<br />
+<span class="keyword ParameterName RequiredReplaceable">constraint_layer</span>‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">CONSTRAINTS</span> <span class="keyword ParameterName RequiredReplaceable">priority</span> <span class="keyword ParameterName Required">TARGET</span> ‘<span class="keyword ParameterName Required">[</span>’<span class="keyword ParameterName RequiredReplaceable">expression</span>‘<span class="keyword ParameterName Required">]</span>’‘<span class="keyword ParameterName Required">)</span>’<br />
+[<span class="keyword ParameterName OptionalReplaceable">constraint_layerN</span>‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName Optional">CONSTRAINTS</span> <span class="keyword ParameterName OptionalReplaceable">priority</span> <span class="keyword ParameterName Optional">TARGET</span> ‘<span class="keyword ParameterName Optional">[</span>’<span class="keyword ParameterName OptionalReplaceable">expression</span>‘<span class="keyword ParameterName Optional">]</span>’‘<span class="keyword ParameterName Optional">)</span>’ ...]<br />
+<span class="keyword ParameterName RequiredReplaceable">expression_layer</span> [<span class="keyword ParameterName OptionalReplaceable">expression_layerN ...</span>]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id600ea0b7-7915-48ca-96c9-e4c8dc8c14d4"><span class="keyword ParameterName RequiredReplaceable">final_mask</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required layer containing the final output
+layer of DFM DP OPTIMIZE. The final_layer is a polygon layer (layer-type
+1).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id12e805fa-275d-47d0-afb2-aa05c107afdd"><span class="keyword ParameterName Required">MASK0</span> | <span class="keyword ParameterName Required">MASK1</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+one of two mask keywords, indicating which mask to generate. There
+is no default mask keyword.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id9e513ba4-2e29-4aa3-be1f-e5699a92f8a5"><span class="keyword ParameterName RequiredReplaceable">initial_mask_0</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">MASK0</span>‘<span class="keyword ParameterName Required">)</span>’ <span class="keyword ParameterName RequiredReplaceable">initial_mask_1</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">MASK1</span>‘<span class="keyword ParameterName Required">)</span>’ </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument couplet
+specifying the mask layer that must be output by DFM DP, and its
+mapping mask keyword. The initial_mask layers must be polygons (layer‑type
+1).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__idc0160add-8b15-4bbd-a263-cf21be03a833"><span class="keyword ParameterName RequiredReplaceable">constraint_layer </span>‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">CONSTRAINTS</span> <span class="keyword ParameterName RequiredReplaceable">priority</span> <span class="keyword ParameterName Required">TARGET</span> ‘<span class="keyword ParameterName Required">[</span>’<span class="keyword ParameterName RequiredReplaceable">expression</span>‘<span class="keyword ParameterName Required">]</span>’‘<span class="keyword ParameterName Required">)</span>’ ...</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required layer containing the constraints
+of the target layer for the specified priority. This layer must
+be generated by <a class="xref fm:HeadingOnly" href="Command_DFMDPOPTIMIZERCONSTRAINTS_id4813d06b.html#id4813d06b-9dee-457e-a6c9-737cf8192f19__Command_DFMDPOPTIMIZERCONSTRAINTS_id4813d06b.xml#id4813d06b-9dee-457e-a6c9-737cf8192f19" title="Generates constraint layers from DFM DP based on priority.">DFM DP OPTIMIZER_CONSTRAINTS</a>. The
+constraint_layer must be a polygon layer (layer-type 1).</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id34888d4f-40bd-442d-9f62-3e6ef31d1c81"><p class="p Opt"><span class="keyword ParameterName Required">CONSTRAINTS</span> <span class="keyword ParameterName RequiredReplaceable">priority</span></p>
+<p class="p">A required keyword and integer pair specifying a constraint.
+The priority is an integer inversely specifying the applied priority
+of the constraint; a lower number indicates a higher priority.</p>
+</li>
+<li class="li ArgOption" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id480e13fe-64f3-4d82-a17a-5cc2f4c2f204"><p class="p Opt"><span class="keyword ParameterName Required">TARGET</span> ‘<span class="keyword ParameterName Required">[</span>’<span class="keyword ParameterName RequiredReplaceable">expression</span>‘<span class="keyword ParameterName Required">]</span>’</p>
+<p class="p">A required keyword and argument specifying an numeric expression.
+Expressions provide customizable control over operational computations.
+Expressions define calculations using the specified target layers.
+An expression may contain numbers (including numeric variables),
+operators, parentheses and the functions listed in <a class="xref fm:Table" href="#ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id0a68a946-e3bb-43d1-b556-700bcbd3b289">Table 1</a>. </p>
+<p class="p">The argument <span class="ph FontProperty emphasis">x</span> (held
+by some expressions shown in the table) is a numeric argument, including
+numeric variables and other numeric-valued expressions. There is
+no compile-time or runtime exception checking on arguments of these
+functions and unreasonable or undefined values may result from certain
+arguments. Division by zero does not satisfy any constraint. Parentheses
+have the highest precedence for the calculation of numeric values
+and may be used for grouping of terms.</p>
+</li>
+</ul>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id0a68a946-e3bb-43d1-b556-700bcbd3b289" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Expressions</span></caption><colgroup><col style="width:2.846in" /><col style="width:4.304in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e399"><p class="p">Function</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e402"><p class="p">Definition</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">AREA‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Area of input_layer in user units of length
+squared.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">AREA_MASK0‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Area of polygons that interact with mask0
+target polygons on the input_layer in user units of length squared.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">AREA_MASK1‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Area of polygons that interact with mask1
+target polygons on the input_layer in user units of length squared.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">COUNT‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Count of polygons on the input_layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">COUNT_MASK0‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Count of polygons that interact with mask0
+target polygons on the input_layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">COUNT_MASK1‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Count of polygons that interact with mask1
+target polygons on the input_layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">PERIMETER‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Total perimeter of polygons on the input_layer
+in user units.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">PERIMETER_MASK0‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Total perimeter of polygons that interact
+with mask0 target polygons on the input_layer in user units.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">PERIMETER_MASK1‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">input_layer</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Total perimeter of polygons that interact
+with mask1 target polygons on the input_layer in user units.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">SQRT‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The square root of x.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">EXP‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The exponential (base e) of x.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">LOG‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The natural logarithm of x</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">SIN‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The sine of x in radians.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">COS‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The cosine of x in radians.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">TAN‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">x</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">The tangent of x in radians.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">MIN‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">expression1</span>, <span class="keyword ParameterName OptionalReplaceable">expression2</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Returns the lesser value of the two expressions.
+The expressions must be of the same form as the primary DFM DP OPTIMIZE
+expression, but without the square brackets.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e399 "><p class="p">MAX‘<span class="keyword ParameterName Optional">(</span>’<span class="keyword ParameterName OptionalReplaceable">expression1</span>, <span class="keyword ParameterName OptionalReplaceable">expression2</span>‘<span class="keyword ParameterName Optional">)</span>’</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e402 "><p class="p">Returns the maximum value of the two expressions.
+The expressions must be of the same form as the primary DFM DP OPTIMIZE
+expression, but without the square brackets.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Unary and Binary Operators</h2><p class="p">Unary operators (<span class="ph FontProperty emphasis">+</span>, <span class="ph FontProperty emphasis">-</span>, <span class="ph FontProperty emphasis">!</span>, <span class="ph FontProperty emphasis">~</span>)
+require one numeric argument, and unary operators have the same precedence.
+The <span class="ph FontProperty emphasis">+</span> and <span class="ph FontProperty emphasis">-</span> unary
+operators are positive and negative signs, respectively. The <span class="ph FontProperty emphasis">!</span> operator
+returns 0 (or false) if its argument is non-zero and 1 (or true)
+if its argument is 0. The <span class="ph FontProperty emphasis">~</span> operator
+returns 0 (or false) if the argument is positive and 1 (or true)
+if the argument is non-positive. The Operators table shows some
+useful combinations of the ~ and ! operators.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Unary ~ and ! Operators</span></caption><colgroup><col style="width:0.828in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /><col style="width:0.790in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e730"><p class="p">x</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e733"><p class="p">!(x)</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e736"><p class="p">!!(x)</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e739"><p class="p">!(x-1)</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e742"><p class="p">!!(x-1)</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e745"><p class="p">~x</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e748"><p class="p">~~x</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e751"><p class="p">~(x-1)</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d44570e754"><p class="p">~~(x-1)</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">3</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">-1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">-2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e730 "><p class="p">-3</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e733 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e736 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e739 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e742 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e745 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e748 "><p class="p">0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e751 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d44570e754 "><p class="p">0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The binary operators <span class="ph FontProperty emphasis">^</span>, <span class="ph FontProperty emphasis">*</span>, <span class="ph FontProperty emphasis">/</span>, <span class="ph FontProperty emphasis">+</span>,
+and <span class="ph FontProperty emphasis">-</span> require
+two numeric arguments. The <span class="ph FontProperty emphasis">^</span> operator
+is the same as the C language <span class="ph FontProperty emphasis">pow( )</span> function,
+where <span class="ph FontProperty emphasis">x^y</span> means <span class="ph FontProperty emphasis">x</span> raised
+to the<span class="ph FontProperty emphasis"> y</span> power.
+The <span class="ph FontProperty emphasis">*</span>, <span class="ph FontProperty emphasis">/</span>, <span class="ph FontProperty emphasis">+</span>,
+and <span class="ph FontProperty emphasis">-</span> operators
+are multiplication, division, addition, and subtraction, respectively,
+and have their customary precedence applied. The <span class="ph FontProperty emphasis">^</span> operator
+has the same precedence as <span class="ph FontProperty emphasis">*</span> and <span class="ph FontProperty emphasis">/</span>.
+The binary operators <span class="ph FontProperty emphasis">||</span> (OR)
+and <span class="ph FontProperty emphasis">&amp;&amp;</span> (AND)
+are the same as the C language operators of the same type, except
+they have the same precedence as the binary operators <span class="ph FontProperty emphasis">+</span> and <span class="ph FontProperty emphasis">-</span>.
+They must be specified with numeric-valued inputs. For example, <span class="ph FontProperty emphasis">AREA(via) &amp;&amp; AREA(met)</span> return
+1 if both inputs are non-zero, and 0 otherwise. <span class="ph FontProperty emphasis">AREA(via) || AREA(met)</span> return
+1 if either input is non-zero, and 0 otherwise.</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">DFM DP OPTIMIZE evaluates expressions enabling mask coloring.
+The results of mask output from DFM DP are based on calculations
+using additional polygonal layers. A component is defined as a group
+of polygons sharing separator edges between them. All polygons within
+a component are constrained based on priority and are subject to
+mutual color flipping. For a given non-anchored component, if the
+resulting value of the expression is greater than or equal to 0,
+then the color of the polygons in that component is not changed.
+If the resulting value is negative, coloring of polygons in the
+component is enabled. We can also change their coloring where the
+priority allows.</p>
+<p class="p">The DFM DP OPTIMIZE command is the culmination of a three-step
+process:</p>
+<ol class="ol"><li class="li" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id4d60e3e4-681f-49b4-9153-3a8d22b3140a"><p class="p">Generate the initial mask layers with <a class="xref fm:HeadingOnly" href="Command_DfmDp_id238a34ab.html#id96bcc792-6ad8-4032-8de9-bd905d28d060__Command_DfmDp_id238a34ab.xml#id96bcc792-6ad8-4032-8de9-bd905d28d060" title="Invokes Calibre double-patterning. Splits the target layer into two masks and generates error layers.">DFM DP</a>.</p>
+</li>
+<li class="li" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__idade64011-18ec-4592-8db3-59ca4e758886"><p class="p">Obtain constraints of given priorities by
+executing DFM DP OPTIMIZER_CONSTRAINTS. Priority values specified
+have an inverse relationship to application; the lower a priority
+number is, the higher the priority application. The constraints
+identify components formed with a given priority (where separators
+of a priority are less than or equal to the specified priority)
+and also determine if a component is anchored. A component can be
+anchored if the anchor has a priority less than or equal to the
+specified priority.</p>
+</li>
+<li class="li" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id8432fa55-9e8a-41ec-bb98-e39c962da418"><p class="p">Execute the DFM DP OPTIMIZE operation using
+the mask output, constraints, and by evaluating a required expression.
+The result of the expression determines whether polygon color within
+a component should stay the same or be flipped. </p>
+</li>
+</ol>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id76ff3674-d687-428c-8ee7-20d7fce89584"><h2 class="title Subheading sectiontitle">A
+Sample Design to be Processed by DFM DP OPTIMIZE.</h2><p class="p">This design contains a target layer, separator guides and seeds.
+Seeds are polygons that guide the evaluation of expressions. Each
+of these layers are processed by DFM DP OPTIMIZE to obtain an optimal
+coloring solution. The constraints used in this example employ COUNT_MASK
+expressions. Where expressions evaluate to negative values, coloring
+is enabled.</p>
+<div class="fig fignone" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__idbf7a07eb-95c6-4dd6-9374-fcd4be5035d2"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Original
+Design</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/dfm_opt_1.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__iddaf5aad0-4761-4d2b-b06d-209c5cb2f46b"><h2 class="title Subheading sectiontitle">Step
+1 — Separator Derivation and DFM DP Generation of Initial Mask Layers.</h2><pre class="pre codeblock"><code>// Separator derivation
+sep = EXT (guide COINCIDENT EDGE target) OPPOSITE &lt;= 0.5
+sep_opt = EXT (guide_opt COINCIDENT EDGE target) OPPOSITE &lt;= 0.5</code></pre><pre class="pre codeblock"><code>// Output initial layer for mask0 (highlighted in red)
+<span class="ph CodeHighlight red">tmp_mask0</span> = DFM DP MASK0 target
+	sep
+	sep_opt(opposite 1)</code></pre><pre class="pre codeblock"><code>// Output initial layer for mask1 (highlighted in green)
+<span class="ph CodeHighlight red">tmp_mask1</span> = DFM DP MASK1 target
+	sep
+	sep_opt(opposite 1)</code></pre><div class="fig fignone" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id9f53dda2-dc45-41b4-ae11-5f3f9766a189"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Design
+as Processed by DFM DP</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/dfm_opt_2.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id1c17595d-5d72-4f36-b12a-786192dd295a"><h2 class="title Subheading sectiontitle">Step
+2 — DFM DP OPTIMIZER_CONSTRAINTS Generates Priority-Based Constraints.</h2><p class="p">As seen in <a class="xref fm:Figure" href="#ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id9f53dda2-dc45-41b4-ae11-5f3f9766a189">Figure 2</a>, two independent chains
+of polygons connected by required separators are represented by
+constraint_0. For this example, the boundaries of the independent
+polygon chains are determined over optional separators.</p>
+<pre class="pre codeblock"><code>// Output constraints by priority (highlighted in magenta)
+// These constraint layers are not viewable.
+// This constraint is priority 0.
+// Constraints are formed using priority-0 edges only.
+<span class="ph CodeHighlight magenta">constraint_0</span> = DFM DP OPTIMIZER_CONSTRAINTS(0)
+	target
+	sep
+	sep_opt(opposite 1)</code></pre><pre class="pre codeblock"><code>// This constraint is priority 1.
+// Constraints are formed using priority-0 and priority-1 edges.
+<span class="ph CodeHighlight magenta">constraint_1</span> = DFM DP OPTIMIZER_CONSTRAINTS(1)
+	target
+	sep
+	sep_opt(opposite 1)</code></pre></div>
+<div class="section Subsection" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id3778912e-a836-4a5d-aca4-aba5bdf7e6ee"><h2 class="title Subheading sectiontitle">Step
+3 — DFM DP OPTIMIZER Generates Final Masks Using Expressions Specified
+by Priority-Based Constraints.</h2><p class="p">For constraint_0, component 1 as depicted in <a class="xref fm:Figure" href="#ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id9f53dda2-dc45-41b4-ae11-5f3f9766a189">Figure 2</a>, the applied expression, <span class="ph FontProperty equationvariable">2*COUNT_MASK0(anchor0) - COUNT_MASK0(anchor1)</span> evaluates
+to <span class="ph FontProperty equationvariable">2*0 - 1 = -1</span>,
+a negative number enabling optimization-based color changes. For
+component 2, the same expression evaluates to <span class="ph FontProperty equationvariable">2*1 - 0 = 2</span>,
+a non-negative number resulting in no color changes.</p>
+<p class="p">For constraint_1, both components 1 and 2, as depicted in <a class="xref fm:Figure" href="#ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id9f53dda2-dc45-41b4-ae11-5f3f9766a189">Figure 2</a>, the applied expression, <span class="ph FontProperty equationvariable">2*COUNT_MASK0(anchor0) - COUNT_MASK0(anchor1)</span> evaluates
+to <span class="ph FontProperty equationvariable">2*1 - 1 = 1</span>,
+a positive number disabling optimization-based color changes. However,
+this constraint is of a lower priority; no color changes take effect
+on this component.</p>
+<pre class="pre codeblock"><code>// Output final mask0
+mask0 = DFM DP OPTIMIZE MASK0
+	<span class="ph CodeHighlight red">tmp_mask0</span>(MASK0)
+	<span class="ph CodeHighlight green">tmp_mask1</span>(MASK1)
+	<span class="ph CodeHighlight magenta">constraint_0</span>(CONSTRAINTS 0
+		TARGET [ (2*COUNT_MASK0(anchor0)) - COUNT_MASK0(anchor1) ]
+   )
+	<span class="ph CodeHighlight magenta">constraint_1</span>(CONSTRAINTS 1
+		TARGET [ (2*COUNT_MASK1(anchor1)) - COUNT_MASK0(anchor0) ]
+	)
+	anchor0 anchor1</code></pre><pre class="pre codeblock"><code>// Output final mask1
+mask1 = DFM DP OPTIMIZE MASK1
+	<span class="ph CodeHighlight red">tmp_mask0</span>(MASK0)
+	<span class="ph CodeHighlight green">tmp_mask1</span>(MASK1)
+	<span class="ph CodeHighlight magenta">constraint_0</span>(CONSTRAINTS 0
+		TARGET [ (2*COUNT_MASK0(anchor0)) - COUNT_MASK0(anchor1) ]
+	)
+	<span class="ph CodeHighlight magenta">constraint_1</span>(CONSTRAINTS 1
+		TARGET [ (2*COUNT_MASK1(anchor1)) - COUNT_MASK0(anchor0) ]
+	)
+	anchor0 anchor1</code></pre><div class="fig fignone" id="ided5f8dba-1357-42d5-b1c5-88e8c5f79b7e__id0211e1b6-55ee-4354-8d7a-cd792c8ea26a"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Final
+Optimized Design After Applied Constraints</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/dfm_opt_3.png" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MultiPatterningSVRFCommands_id2565a2fa.html" title="A typical SVRF rule file containing double-, triple-, and quadruple-patterning may also contain other SVRF commands that declare input layers, perform preliminary layer manipulation, and save output layers.">Multi-Patterning SVRF Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "DFM DP OPTIMIZE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_DFMDPOPTIMIZE_ided5f8dba.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

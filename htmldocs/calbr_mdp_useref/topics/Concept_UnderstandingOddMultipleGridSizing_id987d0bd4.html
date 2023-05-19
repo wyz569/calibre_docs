@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Understanding Odd-Multiple Grid Sizing" />
+<meta name="abstract" content="The SIZE operation sizes each edge rather than the entire polygon. Because of this, to size an entire polygon by N using the SIZE operation, you must size each edge by (N/2)." />
+<meta name="description" content="The SIZE operation sizes each edge rather than the entire polygon. Because of this, to size an entire polygon by N using the SIZE operation, you must size each edge by (N/2)." />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Understanding Odd-Multiple Grid Sizing</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Understanding Odd-Multiple Grid Sizing" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Understanding
+Odd-Multiple Grid Sizing</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The SIZE operation
+sizes each edge rather than the entire polygon. Because of this,
+to size an entire polygon by N using the SIZE operation, you must
+size each edge by (N/2). </span>
+</div>
+<p class="p">This is described in Chapter <a class="xref fm:NumberOnly" href="MGCChap_PreprocessingSvrf_id60680448.html#id60680448-65c7-4dca-b351-9664526ded34__MGCChap_PreprocessingSvrf_id60680448.xml#id60680448-65c7-4dca-b351-9664526ded34" title="Before invoking the fracture software, you can perform various preprocessing tasks on mask data using functionality provided by the Calibre nmDRC hierarchical engine. There are several SVRF statements and operations that are most applicable to mask data preparation.">Preprocessing With SVRF</a>, “<a class="xref fm:HeadingOnly" href="MGCChap_PreprocessingSvrf_id60680448.html#id60680448-65c7-4dca-b351-9664526ded34__MGCChap_PreprocessingSvrf_id60680448.xml#id60680448-65c7-4dca-b351-9664526ded34" title="Before invoking the fracture software, you can perform various preprocessing tasks on mask data using functionality provided by the Calibre nmDRC hierarchical engine. There are several SVRF statements and operations that are most applicable to mask data preparation.">Preprocessing With SVRF</a>.”</p>
+<p class="p"><a class="xref fm:Figure" href="#id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e__idf9f49532-2a58-4441-ae26-65ed41c2d8b8">Figure 1</a> shows the sizing required to obtain
+a polygon that is 3 units larger than the original, using the operation
+SIZE BY (3/2). Notice the vertices are 1/2 AU off-grid relative
+to the address unit grid.</p>
+<div class="fig fignone" id="id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e__idf9f49532-2a58-4441-ae26-65ed41c2d8b8"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Off-Grid Data Caused by Odd-Multiple Sizing</span><br /><div class="imagecenter"><img class="image imagecenter" height="151" src="../graphics/off-grid-data.jpg" width="322" /></div><br /></div>
+<p class="p">The Calibre FRACTURE operation automatically
+snaps off-grid data onto the address unit grid, shifting the data
+to the nearest grid point. When a vertex lies exactly between two
+address unit grid locations, which is the situation after odd-multiple
+sizing, the operation snaps it to the larger grid location, that
+is, up and to the right, as shown by the green shape in <a class="xref fm:Figure" href="#id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e__id4faf6aed-a70d-494d-bd3c-eee96b443aa6">Figure 2</a>.</p>
+<div class="fig fignone" id="id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e__id4faf6aed-a70d-494d-bd3c-eee96b443aa6"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Snapping Corrects
+Off-Grid Data</span><br /><div class="imagecenter"><img class="image imagecenter" height="135" src="../graphics/off-grid-snap.jpg" width="315" /></div><br /></div>
+<p class="p">One side-effect of the snapping is that the
+center of the resulting figure is not in line with the center of
+the original data.</p>
+<div class="fig fignone" id="id987d0bd4-241f-4e1e-bfce-a9b73a8c5f8e__idd2477810-bebe-41e7-b4fd-30875974e38c"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Center-Shifting
+After Snapping</span><br /><div class="imagecenter"><img class="image imagecenter" height="134" src="../graphics/center-shift.jpg" width="329" /></div><br /></div>
+<p class="p">In most situations, the snapping of off-grid
+data after sizing does not cause any problems because the center-shifting
+affects all the data equally. As a result, all the centers are still
+in the same positions relative to one another. However, they are
+not in the same positions relative to the region’s center, because
+the region itself is not snapped. As a result, when you use a job deck
+to combine multiple fractured files, the centers in one fractured
+file would be shifted relative to the centers of the other files.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_OddMultipleGridSizing_id30d010ee.html" title="Sizing data by an odd multiple of address units before fracturing results in that data being off-grid relative to the fracture address unit grid. This has an impact on your data and there are some possible work-arounds that allow you to retain your chosen address unit for optimum mask writing time.">Odd-Multiple Grid Sizing</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "Understanding Odd-Multiple Grid Sizing"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_UnderstandingOddMultipleGridSizing_id987d0bd4.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

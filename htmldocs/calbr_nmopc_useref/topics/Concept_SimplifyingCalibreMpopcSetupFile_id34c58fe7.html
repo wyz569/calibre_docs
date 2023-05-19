@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Simplifying a Calibre mpOPC Setup File" />
+<meta name="abstract" content="Calibre mpOPC is used for double and multi-pattern mask correction. This is implemented in a standard Calibre nmOPC setup file using the mpopc command. Double- and triple-patterning significantly increases the complexity of the setup file because you are required to define fragmentation and MRC constraints for every pattern. Often, the fragmentation and constraints are the same for every pattern, but they are still explicitly defined for each combination of patterns." />
+<meta name="description" content="Calibre mpOPC is used for double and multi-pattern mask correction. This is implemented in a standard Calibre nmOPC setup file using the mpopc command. Double- and triple-patterning significantly increases the complexity of the setup file because you are required to define fragmentation and MRC constraints for every pattern. Often, the fragmentation and constraints are the same for every pattern, but they are still explicitly defined for each combination of patterns." />
+<meta name="DC.subject" content="Multi-patterning example, Double-patterning example" />
+<meta name="keywords" content="Multi-patterning example, Double-patterning example" />
+<meta name="prodname" content="Calibre nmOPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="None" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® nmOPC™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id34c58fe7-7878-45fd-8b6b-bac2538b4ced" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Simplifying a Calibre mpOPC Setup File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Simplifying a Calibre mpOPC Setup File" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id34c58fe7-7878-45fd-8b6b-bac2538b4ced">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Simplifying a Calibre mpOPC Setup File</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre mpOPC
+is used for double and multi-pattern mask correction. This is implemented
+in a standard Calibre nmOPC setup file using the mpopc command.
+Double- and triple-patterning significantly increases the complexity
+of the setup file because you are required to define fragmentation
+and MRC constraints for every pattern. Often, the fragmentation
+and constraints are the same for every pattern, but they are still
+explicitly defined for each combination of patterns. </span>
+</div>
+<p class="p">You can simplify the rule file
+by creating Tcl command blocks that only need to be defined once,
+then reused for each pattern combination. The basic structure is
+as follows:</p>
+<pre class="pre codeblock leveled"><code>set fragmentation_block_name {…} 
+set mrc_block_name {…} </code></pre><pre class="pre codeblock leveled"><code>fragment_layer layer_name "{[subst -nocommands $block_name]}" 
+mrc_rule <span class="keyword ParameterName OptionalReplaceable">type</span>  layer_name [layer_name] "{[subst -nocommands $block_name]}" </code></pre><p class="p">To pass a layer name into a block, use the
+following Tcl construct with $layer_name_variable in the same block:</p>
+<pre class="pre codeblock leveled"><code>set <span class="keyword ParameterName OptionalReplaceable">layer_name_variable</span> layer_name </code></pre><p class="p">The following example assumes double-patterning
+with two OPC patterns and two SRAF patterns. This example setup
+illustrates how to simplify a rule deck by defining fragmentation and
+MRC rules once and reuse them as many times as needed.</p>
+<pre class="pre codeblock leveled"><code>layer opc_layer_p0 opc pattern 0 
+layer opc_layer_p1 opc pattern 1 
+layer sraf_layer_p0 sraf pattern 0 
+layer sraf_layer_p1 sraf pattern 1 
+… </code></pre><pre class="pre codeblock leveled"><code>################################# 
+# Fragmentation setup 
+# Here, the fragmentation only needs to be defined once, then re-used by 
+# all pattern combinations 
+################################# 
+ 
+… 
+set opc_frag_rules { 
+… 
+} </code></pre><pre class="pre codeblock leveled"><code>set sraf_frag_rules { 
+… 
+}  </code></pre><pre class="pre codeblock leveled"><code>fragment_layer opc_layer_p0 "{[subst -nocommands $ opc_frag_rules]}" 
+fragment_layer opc_layer_p1 "{[subst -nocommands $ opc_frag_rules]}" </code></pre><pre class="pre codeblock leveled"><code>fragment_layer sraf_layer_p0 "{[subst -nocommands $ sraf_frag_rules]}" 
+fragment_layer sraf_layer_p1 "{[subst -nocommands $ sraf_frag_rules]}" </code></pre><pre class="pre codeblock leveled"><code>################################# 
+# MRC rule setup 
+# These constraints will be reused by all pattern combinations 
+################################# 
+ 
+set mrc_ext_opc_rules { 
+… 
+} 
+set mrc_int_opc_rules { 
+… 
+} 
+set mrc_opc_sraf_rules { 
+use … 
+} 
+set mrc_sraf_int_rules { 
+… 
+} 
+set area_rules { 
+… 
+}  </code></pre><pre class="pre codeblock leveled"><code>mrc_rule internal opc_layer_p0 "{[subst -nocommands $mrc_opc_ext_rules]}" 
+mrc_rule external opc_layer_p0 "{[subst -nocommands $mrc_opc_int_rules]}" </code></pre><pre class="pre codeblock leveled"><code>mrc_rule internal opc_layer_p1 "{[subst -nocommands $mrc_opc_ext_rules]}" 
+mrc_rule external opc_layer_p1 "{[subst -nocommands $mrc_opc_int_rules]}" </code></pre><pre class="pre codeblock leveled"><code>mrc_rule external opc_layer_p0 sraf_layer_p0 \ 
+	"{ [subst -nocommands $mrc_opc_sraf_rules] }" 
+mrc_rule external opc_layer_p1 sraf_layer_p1 \ 
+	"{ [subst -nocommands $mrc_opc_sraf_rules]}" </code></pre><pre class="pre codeblock leveled"><code>mrc_rule internal sraf_e1 "{[subst -nocommands $mrc_sraf_int_rules]}" 
+mrc_rule internal sraf_e2 "{[subst -nocommands $mrc_sraf_int_rules]}" 
+mrc_rule area sraf_e1 "{[subst -nocommands $area_rules] }" 
+mrc_rule area sraf_e2 "{[subst -nocommands $area_rules] }" </code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreNmopcBestPractices_id7a4ea55b.html" title="There are a number best practices available when using Calibre nmOPC to correct distortions on a mask input layer introduced by optical and resist processes.">Calibre nmOPC Best Practices</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmopc_useref"
+                DocTitle = "Calibre® nmOPC™ User’s and Reference Manual"
+                PageTitle = "Simplifying a Calibre mpOPC Setup File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_SimplifyingCalibreMpopcSetupFile_id34c58fe7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmOPC™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

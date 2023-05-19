@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Running Calibre LFD with MBH" />
+<meta name="abstract" content="You can run Calibre LFD with MBH functionality to generate suggested repair hints for the identified lithography hotspots in the layout." />
+<meta name="description" content="You can run Calibre LFD with MBH functionality to generate suggested repair hints for the identified lithography hotspots in the layout." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id00ff699f-508c-43dd-adcb-94a6bac9d728" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Running Calibre LFD with MBH</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Running Calibre LFD with MBH" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id00ff699f-508c-43dd-adcb-94a6bac9d728">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Running Calibre LFD
+with MBH</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You can run Calibre
+LFD with MBH functionality to generate suggested repair hints for
+the identified lithography hotspots in the layout.</p>
+<p class="p">The input to MBH is the RDB file generated
+from a previous Calibre LFD run. This RDB file contains error markers
+showing the problematic areas in the layer shapes. MBH is used to simulate
+the region around the error markers for possible localized design
+changes that can fix these hotspots.</p>
+<p class="p">The output from MBH is a new RDB file that
+contains the same error markers with added Calibre LFD hints for
+the designer for possible fixes of the hotspots. The designer has
+the option to modify the layout using the hint information as a
+repair reference.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__id6f205880-0a98-4890-9165-e3789081c444"><p class="p">Path
+to a valid Calibre LFD software tree.</p>
+</li>
+<li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__id45bff17d-0eab-46c7-bbbf-4d64f42a3a31"><p class="p">Process‑specific
+Calibre LFD kit.</p>
+</li>
+<li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__idc2463249-266f-47db-a36d-adc79d6cca6e"><p class="p">MBH
+TVF rule file with layer information, parameters, and arguments used
+by the function LFD::<a class="xref fm:HeadingOnly" href="Command_Generatehints_idd0a03f68.html#idd0a03f68-f248-4363-a128-0644ee384736__Command_Generatehints_idd0a03f68.xml#idd0a03f68-f248-4363-a128-0644ee384736" title="Runs Calibre LFD with MBH and generates a hints file for fixing lithographic hotspots.">GenerateHints</a>. See “<a class="xref fm:HeadingAndPage" href="Concept_SampleMbhTvfRuleFile_ide37ba9f3.html#ide37ba9f3-aba2-44c6-acc0-b6c88835cb4e__Concept_SampleMbhTvfRuleFile_ide37ba9f3.xml#ide37ba9f3-aba2-44c6-acc0-b6c88835cb4e" title="The MBH TVF rule file is necessary when running LFD with MBH. This Tcl Verification Format (TVF) file calls the MBH function.">Sample MBH TVF Rule File</a>”.</p>
+</li>
+<li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__idc579c796-9964-4359-b6d3-f51f275a9acb"><p class="p">MBH
+map file that maps RDB check names to original layer names (non-derived
+layers). See “<a class="xref fm:HeadingAndPage" href="Concept_SampleMbhMapFile_idbd253b54.html#idbd253b54-8b93-44a8-a38a-de25cce0259b__Concept_SampleMbhMapFile_idbd253b54.xml#idbd253b54-8b93-44a8-a38a-de25cce0259b" title="The MBH map file, also known as the MBH error map file, defines the layer, check, and interlayer spacing DRC values that are used by MBH generation to produce hints that eliminate hotspots found from a Calibre LFD run.">Sample MBH Map File</a>”.</p>
+</li>
+<li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__id70730e4c-3dbe-43d7-ab20-3b359ffc683b"><p class="p">Layout
+database in GDS or OASIS format.</p>
+</li>
+<li class="li" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__id9a24c183-2fa5-41d7-8634-e9c1054defe9"><p class="p">Calibre
+LFD RDB file from a previous LFD run with hotspot error markers.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__idf3b9fe43-288e-4de3-8079-f696a158cd8a"><span class="ph cmd">Run Calibre LFD with MBH functionality
+and control the processing through the MBH TVF rule file. This runs
+LFD with MBH by calling the function LFD::<a class="xref fm:HeadingOnly" href="Command_Generatehints_idd0a03f68.html#idd0a03f68-f248-4363-a128-0644ee384736__Command_Generatehints_idd0a03f68.xml#idd0a03f68-f248-4363-a128-0644ee384736" title="Runs Calibre LFD with MBH and generates a hints file for fixing lithographic hotspots.">GenerateHints</a>.</span></li>
+<li class="li step" id="id00ff699f-508c-43dd-adcb-94a6bac9d728__id637d9a60-c816-44c9-92ad-16e2f513b63d"><span class="ph cmd">When the processing completes,
+view the hints in the RDB hint file, as described in “<a class="xref fm:HeadingAndPage" href="TaskTop_ViewingMbhResults_idd6f48461.html#idd6f48461-4a38-4290-80cc-0ca7dea78275__TaskTop_ViewingMbhResults_idd6f48461.xml#idd6f48461-4a38-4290-80cc-0ca7dea78275" title="This procedure shows you how to view the suggested hotspot fixes from running Calibre LFD with MBH. You display the design database in a layout viewer or editor and use Calibre RVE to view the hint sites.">Viewing MBH Results</a>”.</span></li>
+</ol>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">Here is a command line example
+of running LFD with MBH:</p>
+<pre class="pre ShellCommand leveled">calibre -lfd -hier -mbh mbh_tvf_file_name  </pre>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ModelBasedHintsMbh_id4cc13139.html" title="The MBH function of Calibre LFD generates an output file that provides the designer with repair hints on how to modify the layout to fix lithographic hotspot regions.">About Model-Based Hints (MBH)</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_ModelBasedHintsMbh_id4cc13139.html#id4cc13139-c8a3-4966-802e-3ebac44b21f5__" title="The MBH function of Calibre LFD generates an output file that provides the designer with repair hints on how to modify the layout to fix lithographic hotspot regions.">About Model-Based Hints (MBH)</a></div>
+<div><a class="link" href="../topics/Command_Generatehints_idd0a03f68.html#idd0a03f68-f248-4363-a128-0644ee384736__" title="Runs Calibre LFD with MBH and generates a hints file for fixing lithographic hotspots.">GenerateHints</a></div>
+<div><a class="link" href="../topics/Command_CalibreLfdMbh_id7e27aac4.html#id7e27aac4-ed66-4326-9bb4-b9cef9683059__" title="The -mbh switch runs Calibre LFD with model-based hints (MBH) functionality. This optional Calibre LFD feature generates a hints file for fixing lithographic hotspots. The designer can use the hint information as a repair reference.">calibre -lfd -mbh</a></div>
+<div><a class="link" href="../topics/MGCAppe_SampleCalibreLfdRuleFilePdk_id13d97411.html#id13d97411-edbb-4043-99f5-1f2af8ba7a7e__" title="An example rule file and PDK for Calibre LFD are provided.">Sample Calibre LFD Rule File and PDK</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Running Calibre LFD with MBH"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_RunningCalibreLfdMbh_id00ff699f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

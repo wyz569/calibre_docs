@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Embedding the Resist Model in the Setup File" />
+<meta name="abstract" content="Resist models and setup files are required for generating PV-bands. To encrypt the resist model, you embed it in the LITHO setup file. Embedding resist models within the LITHO setup file provides maximum IP protection because you can then embed the setup file in the rule file, and encrypt the entire rule file." />
+<meta name="description" content="Resist models and setup files are required for generating PV-bands. To encrypt the resist model, you embed it in the LITHO setup file. Embedding resist models within the LITHO setup file provides maximum IP protection because you can then embed the setup file in the rule file, and encrypt the entire rule file." />
+<meta name="DC.subject" content="Resist models, Embedding resist models in setup files" />
+<meta name="keywords" content="Resist models, Embedding resist models in setup files" />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id73d6e920-e561-4820-b613-2c0c5e8420d2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Embedding the Resist Model in the Setup File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Embedding the Resist Model in the Setup File" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id73d6e920-e561-4820-b613-2c0c5e8420d2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Embedding the Resist Model in the Setup File</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Resist models
+and setup files are required for generating PV-bands. To encrypt
+the resist model, you embed it in the LITHO setup file. Embedding
+resist models within the LITHO setup file provides maximum IP protection
+because you can then embed the setup file in the rule file, and encrypt
+the entire rule file.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__idb6f68ad4-1012-4c1e-bfcc-ce46f43b095a"><p class="p">This
+procedure assumes that both the resist model and the setup file
+have been fully tested.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__id95a8e2be-bb59-4e55-9dc7-a542bbfc5402"><span class="ph cmd">Open the setup file in the
+ASCII text editor of choice.</span></li>
+<li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__idf48999af-e372-4038-b586-b1bacc754350"><span class="ph cmd">Edit the
+argument for the resistpolyfile keyword, replacing the name of the
+resist model file with the literal string “inline”.</span></li>
+<li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__id108ae132-beb7-4f76-8b57-4ead11945a6c"><span class="ph cmd">Add the following lines of
+code directly above the first tagging command:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>inline_resist { 
+	<span class="keyword ParameterName OptionalReplaceable">model params</span> 
+} 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__ide40f0bae-de8d-4da6-ad95-a7311ff259cc"><span class="ph cmd">Open your resist model file,
+then select and copy the contents.</span></li>
+<li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__id6f3df7e7-8573-40c2-b921-d90886d715a1"><span class="ph cmd">In the setup file, delete
+“model params” and paste the resist file data in its place.</span></li>
+<li class="li step stepexpand" id="id73d6e920-e561-4820-b613-2c0c5e8420d2__id6f5963b0-c269-4d57-b476-aa69500fbcb4"><span class="ph cmd">Save the edited setup file.</span><div class="itemgroup info StepInfo"><p class="p">For a complete discussion of
+inline resist models, refer to the <a class="xref LinkItalic" href="../../calbr_rbopc_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_rbopc_useref'); return false;">Calibre Rule-Based OPC User’s and Reference Manual</a>.</p>
+</div></li>
+</ol>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following code shows a sample
+setup file with an embedded resist model.</p>
+<pre class="pre codeblock leveled"><code># ---------------- Simulation models --------------- 
+modelpath .:models:~/.calibrewb_workspace/models 
+opticalmodel mcoptimopt 
+resistpolyfile <span class="ph CodeHighlight Bold">inline</span> 
+# ------------------ OPC algorithm ----------------- 
+iterations 4 
+tilemicrons 100 
+stepsize 0.002 
+gridsize 0.001 
+aspect 0.0 
+cornerSiteStyle CONSERVATIVE 
+lineEndAdjDist 0.19 
+convexAdjDist 0.19 
+concaveAdjDist 0.19 
+# ------------------- Fragmentation ------------------ 
+minfeature 0.20 
+minedgelength 0.05 
+maxedgelength 100 
+cornedge 0.05 .05 0.05 
+concavecorn 0.05 .05 0.05 
+interfeature -interdistance 0.8 -ripplelen 0.18 -num 5 -ripplestyle 1 
+seriftype 0 
+minjog 0.17 
+lineEndLength 0.45 
+# -------------------- Layer info -------------------- 
+background clear 
+# Layers 
+layer 237 L1 17 0 opc dark 
+#------------Inline Resist Model -------------------- 
+<span class="ph CodeHighlight Bold">inline_resist {</span> 
+<span class="ph CodeHighlight Bold">type VT-5</span> 
+<span class="ph CodeHighlight Bold">version 3</span> 
+<span class="ph CodeHighlight Bold">referenceThreshold 0.2</span> 
+<span class="ph CodeHighlight Bold">hoodpix 1.28</span> 
+<span class="ph CodeHighlight Bold">kerngrid 0.01</span> 
+<span class="ph CodeHighlight Bold">CKERNEL D1 "gauss 0.2"</span> 
+<span class="ph CodeHighlight Bold">CKERNEL D2 "gauss 1.7"</span> 
+<span class="ph CodeHighlight Bold">BPAR SLOPE D1 D2</span> 
+<span class="ph CodeHighlight Bold">btermCount 3</span> 
+<span class="ph CodeHighlight Bold">BTERM 0.073 SLOPE 1</span> 
+<span class="ph CodeHighlight Bold">BTERM 0.09 D1 1</span> 
+<span class="ph CodeHighlight Bold">BTERM -0.027 D2 1</span> 
+<span class="ph CodeHighlight Bold">maxBias 0.080</span> 
+<span class="ph CodeHighlight Bold">}</span> 
+#--- Arbitrary commands can follow this line. Don't delete this line! ---- 
+concavedepth 0.02 </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_LithoTeam_ide2a77726.html" title="Encrypting IP for distribution to customers requires two additional steps for the litho team.">For the Litho Team</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_EncryptionDebugging_id447a5061.html#id447a5061-5ae2-4933-a695-773b1b3993ee__" title="During Calibre LFD kit development, it is recommended that you use the variable CALIBRE_ENCRYPTED_TVF_NO 296578. This simplifies debugging as it runs the byte-compiled package rather than the encrypted package. With the byte-compiled package, full error messages are enabled containing details useful to Calibre LFD kit developers. In addition, the kit developer can use the Calibre -E option to echo SVRF code related to running Calibre LFD to produced files.">Encryption Debugging</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Embedding the Resist Model in the Setup File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_EmbeddingResistModelInSetupFile_id73d6e920.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

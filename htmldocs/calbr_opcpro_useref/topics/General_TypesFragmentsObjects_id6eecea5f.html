@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Fragment Types and Related Objects" />
+<meta name="abstract" content="The Calibre RET model-based tools recognize the following types of fragments: edge fragments, line-end fragments, space-end fragments, and jogs. There are also several objects relating to fragments, including control sites, control points, convex and concave corners, and features. This section illustrates these terms." />
+<meta name="description" content="The Calibre RET model-based tools recognize the following types of fragments: edge fragments, line-end fragments, space-end fragments, and jogs. There are also several objects relating to fragments, including control sites, control points, convex and concave corners, and features. This section illustrates these terms." />
+<meta name="DC.subject" content="Fragments, definition" />
+<meta name="keywords" content="Fragments, definition" />
+<meta name="prodname" content="Calibre OPCpro User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcpro_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="Mar. 12, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® OPCpro™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6eecea5f-3260-4e41-961c-df1842a3e86a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Fragment Types and Related Objects</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Fragment Types and Related Objects" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id6eecea5f-3260-4e41-961c-df1842a3e86a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Fragment Types and Related Objects</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The Calibre
+RET model-based tools recognize the following types of fragments: <span class="ph FontProperty emphasis">edge fragments</span>, <span class="ph FontProperty emphasis">line-end fragments</span>, <span class="ph FontProperty emphasis">space-end fragments</span>,
+and <span class="ph FontProperty emphasis">jogs</span>.
+There are also several objects relating to <span class="ph FontProperty emphasis">fragments</span>,
+including <span class="ph FontProperty emphasis">control sites</span>, <span class="ph FontProperty emphasis">control points</span>, <span class="ph FontProperty emphasis">convex</span> and <span class="ph FontProperty emphasis">concave corners</span>,
+and <span class="ph FontProperty emphasis">features</span>.
+This section illustrates these terms.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id3645e605-289e-46c1-a7ee-2755b4bb1cc7">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id53a2e7c1-8cec-4bc2-9c23-30607f85038d" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Fragment Types and Related Objects</span></caption><colgroup><col style="width:0.934in" /><col style="width:2.049in" /><col style="width:3.518in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d78416e184"><p class="p">Fragment Type or Object</p>
+</th>
+<th class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" id="d78416e187"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Edge </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">A line segment between
+two corners.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:96" src="../graphics/key_concepts01a.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Fragment </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">A line segment between
+two vertices. Fragments, which are also called “edge fragments,”
+can be an entire edge (if the two vertices are both corners) or
+a part of an edge (if at least one vertex is not a corner).</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image" src="../graphics/key_concepts02a.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Line-end fragment </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">An entire edge that satisfies all
+of the following criteria:</p>
+<ul class="ul"><li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id788b045c-a497-4c87-a201-684e0293b387"><p class="p">Length is less than or equal to the <a class="xref fm:HeadingOnly" href="Command_Lineendlength_idd5dc9d66.html#idd5dc9d66-5f5c-49a9-a485-d9f30688c796__Command_Lineendlength_idd5dc9d66.xml#idd5dc9d66-5f5c-49a9-a485-d9f30688c796" title="Defines the distance criteria used to determine if an edge is on a line end or not.">lineEndLength</a>.</p>
+</li>
+<li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__idc32ba9f9-c082-4626-bb04-6240a94b4a7e"><p class="p">Both endpoints are convex corners. </p>
+</li>
+<li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id9667a426-ddeb-4370-ad34-e4927b29ef98"><p class="p">Adjacent edges are longer than or equal
+to lineEndLength.</p>
+</li>
+</ul>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:104" src="../graphics/key_concepts03a.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Space-end fragment </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">An entire edge that satisfies all
+of the following criteria:</p>
+<ul class="ul"><li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__idb5dcdfc9-8e98-45d8-b2f2-6a4956faddf3"><p class="p">Length is less than or equal to <a class="xref fm:HeadingOnly" href="Command_Minfeature_idd7b4317e.html#idd7b4317e-aca9-4e7e-afd8-39c55541c3be__Command_Minfeature_idd7b4317e.xml#idd7b4317e-aca9-4e7e-afd8-39c55541c3be" title="Required. Specifies the minimum design feature size in microns.">minfeature</a>.</p>
+</li>
+<li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id07c52d29-274e-458b-afcf-5bd40e9b2864"><p class="p">Both endpoints are concave corners. </p>
+</li>
+</ul>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:105" src="../graphics/key_concepts04a.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Jog </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">A fragment that satisfies all of the following
+criteria:</p>
+<ul class="ul"><li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id82bab7db-de1d-483a-9ab2-32d3b4ef1e3b"><p class="p">One endpoint is a concave corner; the
+other is a convex corner. </p>
+</li>
+<li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__idd1f80f96-3bd2-4e37-a764-7b6cd47539d1"><p class="p">Length is less than <a class="xref fm:HeadingOnly" href="Command_Minjog_idd7b04ff0.html#idd7b04ff0-fd65-42c6-b6ba-262a3e01e9c5__Command_Minjog_idd7b04ff0.xml#idd7b04ff0-fd65-42c6-b6ba-262a3e01e9c5" title="Controls the internal definition of a jog and ensures that jogs are not corrected.">minjog</a>.</p>
+</li>
+</ul>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:105" src="../graphics/key_concepts05a.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Control site </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">Locations on the opc
+layer where simulation data is evaluated for edge placement errors.
+The RET tools create on control site on every fragment except for jog
+fragments. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:96" src="../graphics/ControlSite.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Control point </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">Locations on a control
+site where the RET tools calculate the image intensities. Control
+points are numbered from the lightest area to darkest area, beginning
+with point 0. With clear background setting features, control points
+are numbered from the exterior of a figure inwards.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:96" src="../graphics/ControlPoint.png" /></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Feature </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p">A non-collinear corner. Features
+are typically corners of nearby polygons. However, they can also
+be corners on the same polygon as the edge being fragmented. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "> </td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e184 "><p class="p">Convex corner </p>
+<p class="p">Concave corner </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><ul class="ul"><li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__ide781cbaf-60f0-4b32-a521-00672939d842"><p class="p">A convex corner is where two vertices
+form an exterior (outward) angle.</p>
+</li>
+<li class="li" id="id6eecea5f-3260-4e41-961c-df1842a3e86a__id71ed16c0-7865-43ba-8d3d-30b7b9b043c2"><p class="p">A concave corner is where two vertices
+form an interior (inward) angle.</p>
+</li>
+</ul>
+<p class="p">Generally, polygon edges are traversed clockwise.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d78416e187 "><p class="p"><img class="image fmdpi:105" src="../graphics/key_concepts08a.png" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_FragmentationOverview_iddd9b0585.html" title="Fragments are important for correcting designs. A fragment can be an entire edge or part of an edge. Most fragments have a control site that measures edge placement errors (EPEs). Calibre OPCpro corrects EPEs by moving individual fragments.">Fragmentation Overview</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcpro_useref"
+                DocTitle = "Calibre® OPCpro™ User’s and Reference Manual"
+                PageTitle = "Fragment Types and Related Objects"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_TypesFragmentsObjects_id6eecea5f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCpro™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="DDM Library Input File Format" />
+<meta name="abstract" content="Defines the mask characteristics of a single 1D edge in a simplified, compact way, without exposing you to more complicated details of the generalized masksim solver." />
+<meta name="description" content="Defines the mask characteristics of a single 1D edge in a simplified, compact way, without exposing you to more complicated details of the generalized masksim solver." />
+<meta name="DC.subject" content="DDM library creation, simple format, DDM library file format, make_ddm_edge_library" />
+<meta name="keywords" content="DDM library creation, simple format, DDM library file format, make_ddm_edge_library" />
+<meta name="prodname" content="Calibre WORKbench User's and Reference Manual" />
+<meta name="version" content="2017.3" />
+<meta name="release" content="v2017.3" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre WORKbench User's and Reference Manual" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_wbench_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 20, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® WORKbench™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DDM Library Input File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DDM Library Input File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DDM Library Input File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC"><a class="xref fm:HeadingOnly" href="Concept_OpticalModelFileFormatDescriptions_id45dc53e3.html#id45dc53e3-d57f-4ff9-bfc1-f30b04ca5349__Concept_OpticalModelFileFormatDescriptions_id45dc53e3.xml#id45dc53e3-d57f-4ff9-bfc1-f30b04ca5349" title="Optical model file formats are used as inputs and outputs to optical model commands.">Optical Model File Formats</a></p>
+<p class="p ContextMGC">Input for: masksim</p>
+<p class="shortdesc">Defines the mask characteristics
+of a single 1D edge in a simplified, compact way, without exposing
+you to more complicated details of the generalized masksim solver. </p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><pre class="pre codeblock leveled"><code><span class="keyword ParameterName Required">make_ddm_edge_library</span>
+<span class="keyword ParameterName Required">wavelength</span> <span class="keyword ParameterName RequiredReplaceable">val_in_um</span> 
+<span class="keyword ParameterName Required">gridsize</span> {<span class="keyword ParameterName RequiredReplaceable">val_in_um</span> | {<span class="keyword ParameterName RequiredReplaceable">dx dy dz</span>} | 
+	{[<span class="keyword ParameterName OptionalReplaceable">dx dy</span>] <span class="keyword ParameterName Required">baseunitcells</span> [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>]}}
+edgelength <span class="keyword ParameterName OptionalReplaceable">val_in_um</span>
+mincycle <span class="keyword ParameterName OptionalReplaceable">int</span> 
+maxcycle <span class="keyword ParameterName OptionalReplaceable">int</span>
+cycles <span class="keyword ParameterName OptionalReplaceable">int</span>
+<span class="keyword ParameterName Required">substrate</span> <span class="keyword ParameterName RequiredReplaceable">n</span> 
+	[phasedepth <span class="keyword ParameterName OptionalReplaceable">phase_in_deg</span>] [underetch <span class="keyword ParameterName OptionalReplaceable">val_in_um</span>] 
+	[slope <span class="keyword ParameterName OptionalReplaceable">val_in_deg</span>] [rounding <span class="keyword ParameterName OptionalReplaceable">radius_in_um</span>]
+<span class="keyword ParameterName Required">film</span> <span class="keyword ParameterName RequiredReplaceable">t n k</span> ["<span class="keyword ParameterName OptionalReplaceable">comments</span>"] [<span class="keyword ParameterName OptionalReplaceable">local_slope_in_degrees</span>] [sidewall <span class="keyword ParameterName OptionalReplaceable">sw_w</span> <span class="keyword ParameterName OptionalReplaceable">sw_n</span> <span class="keyword ParameterName OptionalReplaceable">sw_k</span>]
+stackslope <span class="keyword ParameterName OptionalReplaceable">val_in_deg</span>
+stackrounding <span class="keyword ParameterName OptionalReplaceable">val_in_um</span>
+objectplane {<span class="keyword ParameterName OptionalReplaceable">val_in_um</span>  | 
+imageshift [mode {<span class="keyword ParameterName OptionalDefault">through_slit</span> | field_maximum | horizontal_edge}] 
+	[cd <span class="keyword ParameterName OptionalReplaceable">feature_size</span>] [background <span class="keyword ParameterName OptionalDefault">dark</span> | clear] 
+	[threshold <span class="keyword ParameterName OptionalReplaceable">value</span>][center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_value</span>]}
+<span class="keyword ParameterName Required">illumination</span> <span class="keyword ParameterName RequiredReplaceable">path_to_optical_file</span> | 
+	{<span class="keyword ParameterName Required">universal</span> [dsigma <span class="keyword ParameterName OptionalReplaceable">disgma</span>] [dphi <span class="keyword ParameterName OptionalReplaceable">dphi</span>] [na <span class="keyword ParameterName OptionalReplaceable">NA</span>] 
+	[chief_phi_range [<span class="keyword ParameterName OptionalReplaceable">phi_range</span> | nxe3400 | nxe3300 | nxe3100]}
+euv_multilayer {numbilayer <span class="keyword ParameterName OptionalReplaceable">options</span>} | {numbaseunits <span class="keyword ParameterName OptionalReplaceable">options</span>}
+capping_layer <span class="keyword ParameterName OptionalReplaceable">thickness n k</span>
+substrate_capping_layer <span class="keyword ParameterName OptionalReplaceable">thickness n k</span>
+compute_diagonals {0|1} 
+domain {spatial | fourier}
+{<span class="keyword ParameterName Required">bright_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">fname</span><span class="keyword ParameterName OptionalReplaceable"> </span>|
+<span class="keyword ParameterName Required">dark_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">fname</span> |
+{<span class="keyword ParameterName Required">bright_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">fname</span> <span class="keyword ParameterName Required">dark_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">fname</span>}}
+reduction_factor <span class="keyword ParameterName OptionalReplaceable">val</span>
+chief_ray {<span class="keyword ParameterName Optional">nxe3400_throughslit</span> | {theta <span class="keyword ParameterName OptionalReplaceable">theta_value </span>phi {<span class="keyword ParameterName OptionalReplaceable">phi_value</span>  | 
+	{<span class="keyword ParameterName OptionalReplaceable">phi_list</span> [center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_list_value</span>]}}}}
+[ddm_verbosity_snapping]
+crosstalk_model {none | bright_gap | dark_gap | all}
+[crosstalk_orientation {<span class="keyword ParameterName OptionalDefault">all</span> | horiz | vert | horizontal | vertical}]
+crosstalk_range {{[bright_gap ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">r1low</span>[:<span class="keyword ParameterName OptionalReplaceable">r1step</span>:<span class="keyword ParameterName OptionalReplaceable">r1high</span>]
+ [<span class="keyword ParameterName OptionalReplaceable">r2low</span>[:<span class="keyword ParameterName OptionalReplaceable">r2step</span>:<span class="keyword ParameterName OptionalReplaceable">r2high</span>]] ... ‘<span class="keyword ParameterName Required">]</span>’] [dark_gap ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">t1low</span>[:<span class="keyword ParameterName OptionalReplaceable">t1step</span>:<span class="keyword ParameterName OptionalReplaceable">t1high</span>]
+ [<span class="keyword ParameterName OptionalReplaceable">t2low</span>[:<span class="keyword ParameterName OptionalReplaceable">t2step</span>:<span class="keyword ParameterName OptionalReplaceable">t2high</span>]] ... ‘<span class="keyword ParameterName Required">]</span>’]} | 
+ {[bright_gap <span class="keyword ParameterName OptionalReplaceable">r1_um</span> <span class="keyword ParameterName OptionalReplaceable">r2_um</span>] [dark_gap <span class="keyword ParameterName OptionalReplaceable">r3_um</span> <span class="keyword ParameterName OptionalReplaceable">r4_um</span>]} | auto}
+crosstalk_stepsize <span class="keyword ParameterName OptionalReplaceable">val</span>
+crosstalk_domainsize <span class="keyword ParameterName OptionalReplaceable">val</span> 
+crosstalk_ddm_shortcut_file <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> 
+corner_model {<span class="keyword ParameterName OptionalDefault">none</span> | bright_corner | dark_corner | all}
+corner_type {<span class="keyword ParameterName OptionalDefault">sharp</span> | chopped | rounded}
+corner_range {{[bright_corner ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">r1low</span>[:<span class="keyword ParameterName OptionalReplaceable">r1step</span>:<span class="keyword ParameterName OptionalReplaceable">r1high</span>]
+ [<span class="keyword ParameterName OptionalReplaceable">r2low</span>[:<span class="keyword ParameterName OptionalReplaceable">r2step</span>:<span class="keyword ParameterName OptionalReplaceable">r2high</span>]] ... ‘<span class="keyword ParameterName Required">]</span>’] [dark_corner ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">t1low</span>[:<span class="keyword ParameterName OptionalReplaceable">t1step</span>:<span class="keyword ParameterName OptionalReplaceable">t1high</span>]
+ [<span class="keyword ParameterName OptionalReplaceable">t2low</span>[:<span class="keyword ParameterName OptionalReplaceable">t2step</span>:<span class="keyword ParameterName OptionalReplaceable">t2high</span>]] ... ‘<span class="keyword ParameterName Required">]</span>’]} | auto}
+corner_ddm_shortcut_file <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span>
+corner_domainsize <span class="keyword ParameterName OptionalReplaceable">val</span>
+corner_gridsize {<span class="keyword ParameterName OptionalDefault">auto</span> | disable | <span class="keyword ParameterName OptionalReplaceable">val_in_um</span> | {<span class="keyword ParameterName OptionalReplaceable">dx</span> <span class="keyword ParameterName OptionalReplaceable">dy</span> <span class="keyword ParameterName OptionalReplaceable">dz</span>} | 
+ {<span class="keyword ParameterName OptionalReplaceable">dx</span> <span class="keyword ParameterName OptionalReplaceable">dy</span> baseunitcells <span class="keyword ParameterName OptionalReplaceable">n</span>}}</code></pre></div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><div class="note note"><span class="notetitle">Note:</span> <p class="p">All parameter values for
+masksim use mask-level dimensions, and should be set accordingly. </p>
+</div>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc370696f-4540-4d10-a0f1-bf9d5a7b6d44"><span class="keyword ParameterName Required">make_ddm_edge_library</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+required keyword triggers masksim to recognize that this input file
+contains a simplified DDM library creation specification.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id2aa5c07c-6cf3-47bc-b379-0a6fab47dba4"><span class="keyword ParameterName Required">wavelength</span> <span class="keyword ParameterName RequiredReplaceable">val_in_um</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+required keyword specifies the simulation wavelength in microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9ff66c40-7afd-49a6-adda-38e2124f7acc"><span class="keyword ParameterName Required">gridsize</span> <span class="keyword ParameterName RequiredReplaceable">val_in_um</span> | {<span class="keyword ParameterName RequiredReplaceable">dx dy dz</span>} | {[<span class="keyword ParameterName OptionalReplaceable">dx dy</span>] <span class="keyword ParameterName Required">baseunitcells</span> [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>]}</dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+required keyword specifies the size of the simulation grid in microns.
+The grid size is specified using one of the following:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida040fb59-f8ca-4fab-8d55-f9df9e1a6a6f"><p class="p"><span class="keyword ParameterName RequiredReplaceable">val_in_um</span> for
+a cubic grid.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9b37b670-5dde-4335-b933-62a0408297b9"><p class="p">{<span class="keyword ParameterName RequiredReplaceable">dx dy dz</span>}
+for a non-cubic grid.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id8cf66b7b-208a-4486-bb5b-229de716d4ba"><p class="p">{[<span class="keyword ParameterName OptionalReplaceable">dx dy</span>] <span class="keyword ParameterName Required">baseunitcells</span> [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>]}
+for EUV sources.</p>
+</li>
+</ul>
+<p class="p">When a single <span class="keyword ParameterName RequiredReplaceable">val_in_um</span> is
+provided, gridsize has the following guidelines:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id2cde151b-6847-4bf5-92bd-27f9e508a501"><p class="p">The gridsize should be less
+than <span class="keyword ParameterName Required">wavelength</span>/15. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id875ac0d0-cdfd-4a6b-89e5-97184fddfb1e"><p class="p">Typically, values between
+0.001 and 0.005 give the best accuracy, but masksim run time increases
+as gridsize decreases. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9a593f74-c71e-4394-a7a4-73bec2d935df"><p class="p">In EUV, the
+multilayer period should be an integer multiple of the gridsize
+for best accuracy.</p>
+</li>
+</ul>
+<p class="p">When three arguments (<span class="keyword ParameterName RequiredReplaceable">dx</span>, <span class="keyword ParameterName RequiredReplaceable">dy</span>, <span class="keyword ParameterName RequiredReplaceable">dz</span>) are
+specified, gridsize uses a non-cubic grid. It has the following
+guidelines:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__iddb68d15a-6567-4d18-8a81-60af933e5652"><p class="p">The <span class="keyword ParameterName RequiredReplaceable">dx</span> and <span class="keyword ParameterName RequiredReplaceable">dy</span> values
+must be equal (for example, gridsize 0.001 0.001 0.008).</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idef13ccbb-0b85-4088-b50c-b4f33f9c67b2"><p class="p">The relative
+relationship between <span class="keyword ParameterName RequiredReplaceable">dx</span> and <span class="keyword ParameterName RequiredReplaceable">dz</span> should
+not be larger than 8, in order to prevent numerical calculation
+issues.</p>
+</li>
+</ul>
+<p class="p">For EUV sources only, specifying the baseunitcells argument ([<span class="keyword ParameterName OptionalReplaceable">dx</span> <span class="keyword ParameterName OptionalReplaceable">dy</span>] <span class="keyword ParameterName RequiredReplaceable">baseunitcells</span> [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>])
+creates non-cubic grid cells based on the thickness of the defined
+bilayer or multilayer. It requires that the “euv_multilayer numbaseunits”
+or “euv_multilayer numbilayers” parameter must be specified. </p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id56fb208f-4867-4c02-806c-1cf692768334"><p class="p">The optional <span class="keyword ParameterName OptionalReplaceable">dx</span> and <span class="keyword ParameterName OptionalReplaceable">dy</span> arguments
+set the cell X and Y dimensions. They are set to 1 nm by default.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida841eff8-944e-4ca5-9ac2-94d75332d335"><p class="p">The <span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span> argument
+sets the cell height for the euv_multilayer <span class="keyword ParameterName OptionalReplaceable">dz</span> as
+the total thickness of the bilayers or multilayer in the euv_multilayer
+parameter / <span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>.
+The default is 10; any value specified must be an integer value
+of 10 or greater. </p>
+</li>
+</ul>
+<p class="p">Suggested <span class="keyword ParameterName RequiredReplaceable">val_in_um</span> values
+are:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id785d0a0c-982a-46a8-98fa-c3623f79b480"><p class="p">0.002 for
+DUV.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id739df352-b450-4c66-a761-d713798237db"><p class="p">1/10 of the
+bilayer thickness for EUV multilayer.</p>
+</li>
+</ul>
+<p class="p">However, there is an additional
+check performed for cells per wavelength (cpw):</p>
+<p class="p">            cpw = wavelength/(max_n
+× gridsize)</p>
+<p class="p">where max_n is the maximum real part of the refractive index
+of the mask film stack.</p>
+<p class="p">On rare occasions when cpw
+is smaller than 18, the gridsize is adjusted to:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7b23e067-899c-4e29-8a15-ddbc908e9134"><p class="p">DUV: wavelength/(18
+× max_n)</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id2c1501e3-6ca2-4a53-97dc-3b7fccc3a557"><p class="p">EUV: bilayer_thickness/ceiling(18
+× bilayer_thickness × max_n/wavelength)</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idbc68bdca-d8af-4222-853f-65c6be7d006e"><span class="keyword ParameterName Optional">edgelength</span> <span class="keyword ParameterName OptionalReplaceable">val_in_um</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The length
+in microns of the edge to be stored in the library. Uses mask dimensions
+(4X). The value is rounded during generation to make it an integer multiple
+of twice the grid size.</p>
+<p class="p">(DUV default = 8.0; EUV default
+= 2.0)</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc8624f49-f6bc-4795-8ab2-694d300fc946">mincycle <span class="keyword ParameterName OptionalReplaceable">int</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Minimum
+number of time periods that masksim will compute. </p>
+<p class="p">(Default = floor[edgelength/(2
+× wavelength)])</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id5e2dc1ca-d049-4ae0-9a3b-0e2f02d3c35a">maxcycle <span class="keyword ParameterName OptionalReplaceable">int</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Maximum
+number of time periods that masksim will compute.</p>
+<p class="p">(Default = floor[edgelength/(2
+× wavelength)])</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc184f919-c489-4916-be47-60195c1f06c2">cycles <span class="keyword ParameterName OptionalReplaceable">int</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Total
+number of time periods that masksim will compute. This effectively
+sets the maxcycle and mincycle to the same value <span class="keyword ParameterName OptionalReplaceable">int</span>. </p>
+<p class="p">(default = floor[edgelength/(2
+× wavelength)])</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id963efa6e-ff8b-4e3e-bf7d-13676eba226b"><span class="keyword ParameterName Required">substrate</span> <span class="keyword ParameterName RequiredReplaceable">n</span> [phasedepth <span class="keyword ParameterName OptionalReplaceable">phase_in_deg</span>] [underetch <span class="keyword ParameterName OptionalReplaceable">val_in_um</span>] [slope <span class="keyword ParameterName OptionalReplaceable">val_in_deg</span>] [rounding <span class="keyword ParameterName OptionalReplaceable">radius_in_um</span>] </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter that specifies information about the substrate. The refractive
+index (real number) is the only required parameter, and can be for glass
+or other materials. The phasedepth, underetch, slope, and rounding
+are shown in <a class="xref fm:Figure" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id36a41d0a-7a09-4080-adb5-582286f49f3a">Figure 1</a> and defined as follows:</p>
+<div class="fig fignone" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id36a41d0a-7a09-4080-adb5-582286f49f3a"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Example Substrate
+Description</span><br /><div class="imagecenter"><img class="image imagecenter" height="133" src="../graphics/ddm_useref18.png" width="379" /></div><br /></div>
+<p class="p">Sub-keywords
+to <span class="keyword ParameterName Required">substrate</span>:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9a770d5e-3396-41c7-9078-14f48860d615"><p class="p Opt">phasedepth — The phase (in
+degrees) of the associated etch into the substrate material created
+for Phase Shifting Masks (PSMs). A 180 degree phase well would be
+specified as phasedepth 180.</p>
+<p class="p">Default = 0.0</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idfa670f78-2a47-4a1e-94de-aee55991c1fe"><p class="p Opt">underetch — Describes how
+far the substrate material is etched back (in microns) away from
+the given film edge. </p>
+<p class="p">Default = 0.0</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id3569dcbd-85b0-452a-86ab-3c5eec9b21b8"><p class="p Opt">rounding — Describes the
+radius (in microns) of a circle that inscribes the rounded corner.</p>
+<p class="p">Default = 0.0.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id57c9fcfb-4633-47bf-afab-582ed47fad84"><p class="p Opt">slope — The angle (in degrees)
+of the slope associated with the substrate walls due to phase etching.
+A 90 degree value represents a perfectly vertical sidewall. </p>
+<p class="p">Default = 90.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idb616740b-a086-44dc-9bfc-ae01985d2b79"><span class="keyword ParameterName Required">film</span> <span class="keyword ParameterName RequiredReplaceable">t n k</span> [“<span class="keyword ParameterName OptionalReplaceable">comments</span>”] [<span class="keyword ParameterName OptionalReplaceable">local_slope_in_degrees</span>] [sidewall <span class="keyword ParameterName OptionalReplaceable">sw_w</span> <span class="keyword ParameterName OptionalReplaceable">sw_n</span> <span class="keyword ParameterName OptionalReplaceable">sw_k</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter defining the film(s) in the mask stack. Each film is given
+its own line, and four parameters must be defined for each film:
+the thickness in microns, the real and imaginary part of the refractive
+index, and a comment. The optional comments must be contained within
+quotation marks (“ ”). </p>
+<p class="p">The optional <span class="keyword ParameterName OptionalReplaceable">local_slope_in_degrees</span> argument
+follows the comment. If specified, it overwrites the universal film
+slope defined in the stackslope argument, and sets the slope for
+this film only; all other films that do not also have a <span class="keyword ParameterName OptionalReplaceable">local_slope_in_degrees</span> argument
+are given a default slope of 90 degrees (a perfectly vertical sidewall).
+In addition, if the global slope is invalid, the stackrounding only
+affects the last film, no matter how large the rounding radius is.</p>
+<p class="p">The optional sidewall argument can be specified to represent
+the sidewall coating at the film boundary. The sidewall is specified
+with a width of <span class="keyword ParameterName OptionalReplaceable">sw_w</span> in
+microns in the X and Y directions, and is assumed to have a film
+thickness equal to the film. The sidewall is also specified with
+its own independent refractive indexes <span class="keyword ParameterName OptionalReplaceable">sw_n</span> and <span class="keyword ParameterName OptionalReplaceable">sw_k</span>.
+The sidewall coating is given the same stackslope and rounding properties
+as the related film. </p>
+<p class="p">Note that the first film is
+assumed to be the one closest to the substrate. The sign of k (imaginary
+part of refractive index) is not relevant, with the understanding
+that the simulation code models lossy media.</p>
+<p class="p">You define the shape of the <span class="keyword ParameterName Required">entire</span> film
+stack using the keywords as shown in <a class="xref fm:Figure" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7fd9cffd-455f-4cf3-89a9-23b970478584">Figure 2</a>.</p>
+<div class="fig fignone" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7fd9cffd-455f-4cf3-89a9-23b970478584"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Example
+Film Description (DUV)</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/ddm_useref19.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idfe53d4e6-0e6f-4ef4-bd2a-d00c2ffd7630">stackslope <span class="keyword ParameterName OptionalReplaceable">val_in_deg</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The slope
+of the mask edge at the film stack. A value of 90 is a perfectly
+vertical sidewall. However, note that if the <span class="keyword ParameterName OptionalReplaceable">local_slope_in_degrees</span> argument
+is specified with any film parameter, this argument is ignored. </p>
+<p class="p">(Default = 90; recommended
+best practice value is 86)</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida736f8ec-c68b-4a77-994f-13f528c8741e">stackrounding <span class="keyword ParameterName OptionalReplaceable">val_in_um</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Defines
+corner rounding at the top (farthest from substrate) of the film
+stack. </p>
+<p class="p">(Default = 0.)</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__iddc12108b-26ca-4a37-a85b-d6d4d217059e">objectplane <span class="keyword ParameterName OptionalReplaceable">val_in_um</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">objectplane imageshift [mode {<span class="keyword ParameterName OptionalDefault">through_slit</span> |
+field_maximum | horizontal_edge}] [cd <span class="keyword ParameterName OptionalReplaceable">feature_size</span>]
+[background <span class="keyword ParameterName OptionalDefault">dark</span> |
+clear] [threshold <span class="keyword ParameterName OptionalReplaceable">value</span>]
+[center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_value</span>]</p>
+<p class="p">The location(s) of the plane
+to which the scattered electric field is propagated. </p>
+<p class="p">When a single value is specified, <span class="keyword ParameterName OptionalReplaceable">val_in_um</span> is
+considered to be measured with respect to the end of the last film
+(farthest film from the substrate), with positive values being in
+the direction moving away from the substrate and towards the wafer
+(downwards). For universal libraries with DDM version 4 or later,
+use the default 0um and <a class="xref fm:HeadingOnly" href="Command_Interpolatedddmsectors_idb47832ab.html#idb47832ab-45fb-437f-9396-8481de71219d__Command_Interpolatedddmsectors_idb47832ab.xml#idb47832ab-45fb-437f-9396-8481de71219d" title="Creates a DDM output library from a universal DDM library.">interpolateddmsectors</a> specifies
+the objectplane value. (Default = 0um.)</p>
+<p class="p">If more than one object file is specified, output filenames are
+generated with modified filenames starting with “bright_outputfile”
+or “dark_outputfile”, appending the objectplane value in %5f format
+and ending in “.ddm,” such as “<span class="ph filepath">dark_outputfile0.05323.ddm</span>”.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Objectplane imageshift should only be used with EUV lithography
+due to the non-telecentric illumination of EUV systems. </p>
+</div>
+<p class="p">Use the imageshift argument
+to calculate an object plane with the best minimized shift based
+on the specified mode. When run, masksim outputs the DDM library
+for that object plane.</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id918c078f-d446-46cb-b4a3-5263d20b2dff"><p class="p">mode {through_slit
+| field_maximum | horizontal_edge}</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7a89820f-aa95-4442-8fd1-bbfca37ed27e"><p class="p">through_slit
+— Minimizes the slope of the shift for the edges of the approximate
+image of an isolated vertical line across the center slit. This
+is the default mode, except for universal libraries.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idba9f33e7-40b7-4093-822c-986b554ed2ae"><p class="p">horizontal_edge
+— Minimizes the average shift of the edges of the approximate image
+of an isolated horizontal line at the center slit.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idf596aa82-f741-4fea-a151-7bbdc738b119"><p class="p">field_maximum
+— Minimizes the shift of the maximum location of the DDM edge signal
+simulation for a horizontal feature of the center slit chief ray
+field, filtered to three orders. This was the method used for releases
+previous to version 2017.4.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id2887f7b5-b92d-4b4a-a836-2860a6d8ac2d"><p class="p">cd <span class="keyword ParameterName OptionalReplaceable">feature_size</span></p>
+<p class="p">Controls the feature size to be used for the through_slit and
+horizontal_edge modes, in microns. The default value is 0.2.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idf3d5daaf-bd6d-4a30-98d7-4d747c29490b"><p class="p">background
+dark | clear</p>
+<p class="p">Controls the mask background tone for approximate image simulations.
+The default is dark.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id8a5f6a27-242a-400b-9909-d17ca344098c"><p class="p">threshold <span class="keyword ParameterName OptionalReplaceable">value</span></p>
+<p class="p">Controls the threshold that defines the image edge for the through_slit
+and horizontal_edge modes. This value assumes an image with clearfield
+= 1.0. The default is 0.3.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ided48b05e-f1cc-4517-8f33-8538989a4bbc"><p class="p">center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_value</span></p>
+<p class="p">Computes the imageshift for
+the specified central <span class="keyword ParameterName OptionalReplaceable">phi_value</span>,
+which must be set to a value of either 90 or -90 degrees, relative
+to the +x axis. If a center_slit_phi argument is also specified
+for the chief_ray parameter, the objectplane imageshift setting
+for center_slit_phi is used in place of the chief_ray center_slit_phi
+setting. When generating a ready library at non-center slit locations,
+specify center_slit_phi and a <span class="keyword ParameterName OptionalReplaceable">phi_value</span>.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id616c83b8-11fd-4d32-8d59-f17c834f1a4a">euv_multilayer {numbilayer <span class="keyword ParameterName OptionalReplaceable">options</span>} | {numbaseunits <span class="keyword ParameterName OptionalReplaceable">options</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">For EUV use only. Creates one or more EUV
+multilayers. Specifying “numbilayer” creates bilayers. Specifying
+“numbaseunits” creates sets of multilayers.</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id15cab262-5475-474d-935b-2f24517929ca"><p class="p">euv_multilayer
+numbilayer <span class="keyword ParameterName OptionalReplaceable">num_layers </span>bottom <span class="keyword ParameterName OptionalReplaceable">thickness n k</span> top <span class="keyword ParameterName OptionalReplaceable">thickness n k</span></p>
+<p class="p">Creates an EUV multilayer with
+a number of bilayers specified with the numbilayer sub-keyword. </p>
+<p class="p">The bottom keyword gives the <span class="keyword ParameterName OptionalReplaceable">thickness</span> in
+um and refractive index (<span class="keyword ParameterName OptionalReplaceable">n</span> and <span class="keyword ParameterName OptionalReplaceable">k</span>)
+of the bottom half of each bilayer, whereas the top keyword gives
+the thickness and refractive index of the top half. </p>
+<p class="p">It is not necessary that the
+thickness values be integer multiples of the grid size. If they
+are not, masksim performs weighted averages of the permittivity
+of the top and bottom materials, depending on the amount of each
+in each Yee cell. </p>
+<div class="fig fignone" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id83c091b8-4e1c-49fa-b508-c435de690ba5"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Diagram
+Showing Bilayers and Capping Layers in EUV-DDM</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/bilayer.png" /></div><br /></div>
+<p class="p">In EUV, the film stack is above
+the capping layers, if any, and the multilayer, which in turn is
+above the substrate. You may have only one euv_multilayer command
+in your DDM input file.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6e57bc21-31fa-458d-b6e3-715be9aa0f92"><p class="p">euv_multilayer
+numbaseunits <span class="keyword ParameterName OptionalReplaceable">num_baseunits</span> {film <span class="keyword ParameterName OptionalReplaceable">film_index</span> <span class="keyword ParameterName OptionalReplaceable">thickness_in_um</span> <span class="keyword ParameterName OptionalReplaceable">n</span> <span class="keyword ParameterName OptionalReplaceable">k</span>}
+[film...]</p>
+<p class="p">For EUV use only. Creates multilayers that can be made up of
+repeating units of three or more different materials. </p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id92a6f9e1-85f3-4ddf-874c-6413586cce72"><p class="p">Each repeating
+unit is a base unit, and the number of base units is specified in <span class="keyword ParameterName OptionalReplaceable">num</span>. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id12397683-cc59-4642-b39b-392921e1797f"><p class="p">The film keyword
+set defines a base unit film, starting with the bottom (the film
+nearest the substrate). Each film keyword requires a film index, which
+must be specified in order from 1 to the number of films, then the thickness
+in microns (<span class="keyword ParameterName OptionalReplaceable">n</span>)
+and refractive index (<span class="keyword ParameterName OptionalReplaceable">k</span>).</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Only one euv_multilayer command of either
+syntax is permitted in the DDM library input file.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ideb55bcb4-a0f4-478d-84aa-89b81298a7d5">capping_layer <span class="keyword ParameterName OptionalReplaceable">thickness n k</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">For EUV
+use only. Specifies the addition of a capping layer with the given
+thickness and refractive index between the multilayer and the film
+stack. You may have multiple capping layers. Successive capping
+layers will be placed above earlier ones, and are considered farther
+from the multilayer and closer to the film stack.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida5eda3ef-33eb-4c03-819d-585d904d2f24">substrate_capping_layer <span class="keyword ParameterName OptionalReplaceable">thickness n k</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the addition of a capping layer
+with the given thickness and refractive index between the substrate
+and a second layer. For EUV masks, the substrate capping layers
+are between the substrate and the multilayer (see <a class="xref fm:Figure" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id83c091b8-4e1c-49fa-b508-c435de690ba5">Figure 3</a>). For DUV masks, the substrate
+capping layers are between and films (see <a class="xref fm:Figure" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7fd9cffd-455f-4cf3-89a9-23b970478584">Figure 2</a>). You may have multiple
+substrate capping layers. The first substrate capping layer is placed
+adjacent to the substrate; successive substrate capping layers are
+placed farther from the substrate and closer to the multilayer or
+films.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id37620735-7140-4e1d-b790-86db9ded469d"><span class="keyword ParameterName Required">illumination</span> <span class="keyword ParameterName OptionalReplaceable">path_to_optical_file </span>| {universal [dsigma <span class="keyword ParameterName OptionalReplaceable">dsigma</span>] [dphi <span class="keyword ParameterName OptionalReplaceable">dphi</span>] [na <span class="keyword ParameterName OptionalReplaceable">NA</span>] [chief_phi_range {<span class="keyword ParameterName OptionalReplaceable">phi_range</span> | nxe3400 | nxe3300 | nxe3100}]}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required.
+Adds an illumination condition from source sectors to be simulated. </p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id20e78433-b8c7-4708-b25c-e92b81dce46d"><p class="p"><span class="keyword ParameterName OptionalReplaceable">path_to_optical_file </span>specifies
+the location of an optical file that must have HHA active (the “hha
+1” setting) and a source sectorization scheme. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Previous
+versions of the DDM library input format file required manually
+setting theta and phi. This has been replaced by only specifying
+the optical file, and the sector information is automatically calculated
+by Calibre WORKbench. Older files which use the old illumination
+argument format must be converted to the new syntax starting with
+the 2013.3 release. </p>
+</div>
+<p class="p">When the <span class="keyword ParameterName Required">illumination</span> <span class="keyword ParameterName OptionalReplaceable">path_to_optical_file</span> version
+of the command is used, then the fullddm keyword passed through
+to the DDM library is determined by the <a class="xref fm:HeadingOnly" href="Command_DdmModel_id7fef96d0.html#id7fef96d0-e5ab-459e-8553-ecd6836ec22a__Command_DdmModel_id7fef96d0.xml#id7fef96d0-e5ab-459e-8553-ecd6836ec22a" title="Defines the generation and type of domain decomposition method (DDM) library.">ddm_model</a> keyword in the optical file referenced. If the optical
+model file uses “ddm_model full,” then the created DDM library is
+generated with “fullddm yes”. If the optical file has “ddm_model
+approx,” then the DDM library is generated with “fullddm no”. If
+the masksim input file has more than one <span class="keyword ParameterName Required">illumination</span> line
+pointing to optical models that have different ddm_model keywords,
+an error message is generated.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id5c744f99-e566-4797-a7f9-b8031e46e7e1"><p class="p">If the universal
+keyword is supplied as the first argument to <span class="keyword ParameterName Required">illumination</span>,
+a “universal” library is created. A universal library samples the
+entire source pupil and is intended to be used to create “ready”
+libraries for a specific source by interpolation.</p>
+<p class="p">A universal library has had its EM simulations completed offline,
+and the actual scattered electric field is given in the file. It
+can only be used in three ways:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id1342c60d-1197-48d4-aea9-1f43eb058721"><p class="p">As input
+to the <a class="xref fm:HeadingOnly" href="Command_Interpolatedddmsectors_idb47832ab.html#idb47832ab-45fb-437f-9396-8481de71219d__Command_Interpolatedddmsectors_idb47832ab.xml#idb47832ab-45fb-437f-9396-8481de71219d" title="Creates a DDM output library from a universal DDM library.">interpolateddmsectors</a> function,
+which generates a “ready” DDM library</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ide57afe27-e1f9-429e-b44f-45364a5a6154"><p class="p">As a crosstalk_ddm_shortcut_file
+or corner_ddm_shortcut_file to generate a “universal” DDM library</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idcd351046-1ae5-4a94-880b-48f4d9b94e5d"><p class="p">As input to
+Calibre<sup>®</sup> pxSMO™</p>
+</li>
+</ul>
+<p class="p">The density of the sampling can be controlled by the dsigma,
+dphi, na, and chief_phi_range arguments. </p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idf2e8694f-b798-4302-8f5c-03b84e176be4"><p class="p">dsigma
+sets the approximate step size in the radial direction. It has units
+of sigma. The default value for dsigma is <span class="keyword ParameterName OptionalDefault">0.1</span>.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc7ed80af-3303-4880-a2c9-dfad028713e6"><p class="p">dphi sets the
+approximate stepsize at sigma=1 in the azimuthal direction. It has
+units of degrees. The default value for dphi is <span class="keyword ParameterName OptionalDefault">4.0</span>.</p>
+<p class="p">dphi and dsigma are approximate, because the software will round
+them to the nearest value which evenly samples the source. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__iddcc241a9-daf0-48bd-a386-36485f789bf3"><p class="p">na is the wafer
+NA of the lithography system. It is needed to calculate the angles
+of plane waves in the DDM library. The default value for na is <span class="keyword ParameterName OptionalDefault">1.35</span>. </p>
+<p class="p">These default values were chosen to produce approximately 500
+physical sectors in the source.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id4db0522f-7e8f-49cd-875c-d2e0f388ff57"><p class="p">chief_phi_range
+specifies the range of chief_ray phi values for which signals are
+generated. This parameter allows a single universal DDM library
+to contain signals for a full EUV slit. It accepts one of the following parameters:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idbce8c415-256b-4454-a345-6bf827feeb7a"><p class="p"><span class="keyword ParameterName OptionalReplaceable">phi_range</span> — Specifies
+a range in degrees to include. Half of the specified range is used
+on either side of 0 degrees, so a <span class="keyword ParameterName OptionalReplaceable">phi_range</span> of
+60 runs the range from -30 to 30. The default is 0. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida23141f7-e707-47f4-9ffe-e62564709562"><p class="p">nxe3100, nxe3300,
+and nxe3400 — Specifies that the range generated is set to the values
+appropriate for the full range of the specified ASML tool.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6e3ff4a4-1885-4ff5-9c0b-7051e842b6af">compute_diagonals {0 | <span class="keyword ParameterName OptionalDefault">1</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">If the
+value 0 is specified, the signals for the 45-degree edges will not
+be computed. Turning off computation of the 45-degree edges will
+cut the run time roughly in half. (Default = 1.)</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida5b6211d-f1d0-4ac1-9db3-13015acdc4ae">domain {<span class="keyword ParameterName OptionalDefault">spatial</span> | fourier}</dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+optional parameter specifies whether the output electric field is
+reported either in the spatial or Fourier domain. (Default = spatial.)
+Fourier is not currently supported.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id521e6143-e7f3-4757-8997-55069bad43f6">{<span class="keyword ParameterName Required">bright_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> | <span class="keyword ParameterName Required">dark_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> | {<span class="keyword ParameterName Required">bright_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> <span class="keyword ParameterName Required">dark_outputfile</span> <span class="keyword ParameterName RequiredReplaceable">filename</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Both <span class="keyword ParameterName Required">bright_outputfile</span> and <span class="keyword ParameterName Required">dark_outputfile</span> can
+be specified to generate two libraries, but at least one must be
+specified.</p>
+<p class="p">Specifies the output <span class="keyword ParameterName RequiredReplaceable">filename</span> to
+contain the DDM library information for a bright field mask or dark
+field mask, respectively. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id00c457dc-4a95-4926-9916-de1b332e39fa">reduction_factor <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the reduction factor to be used for DDM. This value is only passed
+into the output edge library for use by DDM later, and is not used
+by Calibre MaskSim. However, this value affects the gridsize parameter.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idef8eed52-7fae-4fbe-8f53-b4182f2e7b8b">chief_ray nxe3400_throughslit | {theta <span class="keyword ParameterName OptionalReplaceable">theta_value</span> phi {<span class="keyword ParameterName OptionalReplaceable">phi_value</span> | {‘[’<span class="keyword ParameterName OptionalReplaceable">phi_list</span>‘]’ center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_list_value</span>}}}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the off-axis (theta) and azimuthal (phi) angle in degrees of the
+direction that is to be used by default for simulation. The following
+rules apply for theta, phi, and center_slit_phi values:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id88ca7c1d-fb47-470f-be7f-80c84b85f475"><p class="p">theta cannot
+be negative, and it must be less than 45 degrees.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idafa6ec1b-7877-412d-8178-d94d39bd1f9d"><p class="p">If theta equals
+zero, phi must also equal zero.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id42cfa77e-918f-4af1-9587-06ed280c359b"><p class="p">If theta is
+greater than zero, the absolute value of phi must be between 0 and
+180 degrees.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idd90b6c7a-3a08-4474-afac-a9527323a6d5"><p class="p">center_slit_phi
+can only be 90 or -90.</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The chief ray parameter
+is required in EUV, because the non-telecentric system requires
+a non-zero chief ray. Chief ray no longer has a default setting
+for EUV. (The default for DUV is theta=0 phi=0.)</p>
+<p class="p">Previous to 2016.3, the default
+for center slit EUV was theta=6 phi=90 for ASML ADT and NXE3100,
+and theta=6 phi=-90 for ASML NXE3300.</p>
+</div>
+<p class="p">Multiple angles can be specified for EUV center slit purposes
+by supplying a <span class="keyword ParameterName OptionalReplaceable">phi_list</span> that
+lists each angle of incidence for the source. The multiple angle
+syntax uses the following MATLAB-style<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a> conventions: </p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id06b42b9a-33b3-4299-9b42-aacfde9903cb"><p class="p">The entire
+list must be enclosed in brackets (“[ ]”). A single value not enclosed
+in brackets reverts to the single phi_value behavior above.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id865ea40e-49e0-4ff7-a93f-36b0d44275f4"><p class="p">List values
+must be in increasing order, and separated by commas.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idb6a33c70-246d-421b-92da-24a3d2fb68ab"><p class="p">List values
+are relative to the angle of incidence, and are listed from left to
+right, corresponding to the EUV slit aperture.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idfe736561-5660-42e5-b1fd-e25655090121"><p class="p">List values
+must either be single integers or a start:step:end range (for example,
+[‑1:2:10] generates the values -1,1,3,5,7,9).</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id8f9dcc6d-6ecd-4da1-bc13-a588c0dd7650"><p class="p">List entries
+can have mixed range and single values (for example, [1:2:10,15,
+19,20:3:30]).</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idb7d0327a-cb91-4a5e-a24d-a43f087bf3b1"><p class="p">For ASML NXE3400
+EUV scanners, the “chief_ray <span class="keyword ParameterName Optional">nxe3400_throughslit</span>”
+option is recommended. The “chief_ray nxe3400_throughslit” option
+is the exact equivalent of the following setting:</p>
+<pre class="pre codeblock"><code>chief_ray theta 6 phi [-110 -108 -105 -102 -99 -96 -93 -90 -87
+ ‑84 -81 -78 -75- 72 -70] center_slit_phi -90</code></pre><p class="p">For other EUV scanners, the “center_slit_phi <span class="keyword ParameterName OptionalReplaceable">phi_list_value</span>”
+argument is required. It specifies one of the listed angles as the
+main phi (center slit) value. Starting with the 2016.3 release, <span class="keyword ParameterName OptionalReplaceable">phi_list_value</span> must
+be 90 or -90.</p>
+<p class="p">In addition, if the “objectplane imageshift” parameter is set,
+the objectplane computed with the main phi will be reused for all
+other phis. If “objectplane imageshift center_slit_phi” is set,
+it overrides the center_slit_phi value set for chief_ray.</p>
+</li>
+</ul>
+<p class="p">When you generate a DDM library using the EUV list syntax, Calibre
+WORKbench creates multiple DDM libraries. Calibre WORKbench names
+the libraries by appending “_phi_<span class="keyword ParameterName OptionalReplaceable">phi_value</span>.ddm”
+to the original name, and each phi library contains the same center_slit_phi
+argument to indicate which file is the center slit library.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id926ef858-0de0-4f89-9f0b-ad95cc656b23">ddm_verbosity snapping</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+an optional argument that adds the line “verbosity snapping” to
+the output DDM file. This flag instructs Calibre WORKbench to report
+in an INFO line when an HHA simulation chooses a DDM signal of a
+different angle or polarization than actually requested.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9e00bbe5-9fd2-4f3b-87d9-659a5400f1eb"><h2 class="title Subheading sectiontitle">Cross Talk Input
+Parameters</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6ac4baba-d804-47db-8b0a-48ced073027a">crosstalk_model {none | bright_gap | dark_gap | all}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword that controls the generation of a cross talk model.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6cc3e267-dc2c-428e-ada8-a1df2f78e533"><p class="p Opt">none — Specifies that no
+cross talk model is created. This is the default for EUV models. </p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7c85e288-b55d-4353-8554-c05afbda767d"><p class="p Opt">bright_gap — Specifies that
+cross talk signals are generated only for opposing edges when the
+space between them corresponds to the higher mask transmission (the
+maximum absolute value between the transmission of the layer and the
+background). </p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida48bebde-a788-48e5-9f04-f633d66ae1cf"><p class="p Opt">dark_gap — Specifies that
+cross talk signals are generated only for opposing edges when the
+space between them corresponds to the smaller mask transmission
+(the minimum absolute value between the transmission of the layer
+and the background). </p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida7b74e5b-6fdc-46a3-8c2e-c5f73471ac18"><p class="p Opt">all — Specifies that cross
+talk signals are generated for both types of opposing edges (separate
+cross talk signals for opposing edges surrounding bright_gap space
+or dark_gap space). This is the default for DUV models.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id5112352e-c258-44b6-99a7-61a41239003f">crosstalk_orientation {<span class="keyword ParameterName OptionalDefault">all</span> | horiz | vert | horizontal | vertical}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls
+whether to compute crosstalk values for horizontal or vertical gaps.
+The default value of “all” computes both signals.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ide767bd33-7c6b-41ff-a222-f38ae22c2be8">crosstalk_range [bright_gap ‘<span class="keyword ParameterName Required">[</span>’ <span class="keyword ParameterName OptionalReplaceable">r1low</span>[:<span class="keyword ParameterName OptionalReplaceable">r1step</span>:<span class="keyword ParameterName OptionalReplaceable">r1high</span>] [<span class="keyword ParameterName OptionalReplaceable">r2low</span>[:<span class="keyword ParameterName OptionalReplaceable">r2step</span>:<span class="keyword ParameterName OptionalReplaceable">r2high</span>]] … ‘<span class="keyword ParameterName Required">]</span>’] [dark_gap ‘<span class="keyword ParameterName Required">[</span>’ <span class="keyword ParameterName OptionalReplaceable">t1low</span>[:<span class="keyword ParameterName OptionalReplaceable">t1step</span>:<span class="keyword ParameterName OptionalReplaceable">t1high</span>] [<span class="keyword ParameterName OptionalReplaceable">t2low</span>[:<span class="keyword ParameterName OptionalReplaceable">t2step</span>:<span class="keyword ParameterName OptionalReplaceable">t2high</span>]] … ‘<span class="keyword ParameterName Required">]</span>’]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword for crosstalk modeling that sets the lower and upper bounds
+of distances between opposing edges for which cross talk signals will
+be generated. (See also the sections “<a class="xref" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6e4f4270-4705-4902-87ab-e7e006f17517">Older Format
+for crosstalk_range</a>” and “<a class="xref" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id410b469a-9e41-4440-800e-7cec791a704b">"auto"
+Behavior for crosstalk_range</a>”.) </p>
+<p class="p">Values are specified in <span class="keyword ParameterName OptionalDefault">mask dimensions</span>. </p>
+<p class="p">Arguments use one of the following
+formats to define a value or a group of values, separated by spaces:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7ef42673-7c4b-4777-9d03-8c9e59e375ca"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">low — </span>An
+individual value can be used for <span class="keyword ParameterName OptionalReplaceable">low</span> if :<span class="keyword ParameterName OptionalReplaceable">step</span>:<span class="keyword ParameterName OptionalReplaceable">high</span> is
+not also specified.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc6c7ccc8-c4f0-4f6d-9bea-1d3a761f134a"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">low</span>:<span class="keyword ParameterName OptionalReplaceable">step</span>:<span class="keyword ParameterName OptionalReplaceable">high</span> —
+A range of values with a step spacing amount to increment from the
+low to the high value, with each element separated by colons (:).
+The step element must exactly divide between the low and high values.</p>
+</li>
+</ul>
+<p class="p">Additionally, the entire range
+must be enclosed in brackets ([ ]) as part of the syntax. </p>
+<p class="p">For example, the following
+code defines the values for bright_gap as 0.04 to 0.40 incremented
+in steps of 0.01 (37 elements) followed by values of 0.45 to 0.5
+in steps of 0.05 (2 elements), and dark_gap is defined as the values
+0.07, 0.09, then 0.1 to 0.3 in steps of 0.1 (3 elements).</p>
+<pre class="pre codeblock not-leveled"><code>crosstalk_range bright_gap [0.04:0.01:0.400 0.45:0.05:0.500] dark_gap \
+ [0.07 0.09 0.1:0.1:0.3]</code></pre></dd>
+</dl>
+</div>
+<div class="section ArgumentSet" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6e4f4270-4705-4902-87ab-e7e006f17517"><h2 class="title Subheading sectiontitle">Older Format for
+crosstalk_range</h2><p class="p">Previous to the 2013.3 release,
+the syntax for the arguments was:</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id83518c4e-037f-4796-9b99-8a1f1042e055">[bright_gap <span class="keyword ParameterName OptionalReplaceable">r1_um r2_um</span>] [dark_gap <span class="keyword ParameterName OptionalReplaceable">r3_um r4_um</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">where
+values were limited such that 0&lt; <span class="keyword ParameterName OptionalReplaceable">r1_um</span> &lt; <span class="keyword ParameterName OptionalReplaceable">r2_um</span> and
+0 &lt; <span class="keyword ParameterName OptionalReplaceable">r3_um</span> &lt; <span class="keyword ParameterName OptionalReplaceable">r4_um</span>.
+Also, the difference between <span class="keyword ParameterName OptionalReplaceable">r2_um</span> and <span class="keyword ParameterName OptionalReplaceable">r1_um</span> must
+be an exact multiple of the crosstalk stepsize, as must the difference
+between <span class="keyword ParameterName OptionalReplaceable">r4_um</span> and <span class="keyword ParameterName OptionalReplaceable">r3_um</span>.
+That is, the endpoints of the range must be hit exactly. Also, neither <span class="keyword ParameterName OptionalReplaceable">r2_um</span> nor <span class="keyword ParameterName OptionalReplaceable">r4_um</span> may
+exceed the domain size. We recommend that you set the range to be
+slightly smaller than the smallest anticipated mask feature (SRAFs
+included) up to 480nm (4x). </p>
+<p class="p">Both the old and new syntaxes
+are supported, but cannot be mixed within a single crosstalk_range
+statement.</p>
+<p class="p">At least one range (for bright_gap
+or dark_gap) must be specified. This line is copied as-is to the
+output ddm model file.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id410b469a-9e41-4440-800e-7cec791a704b"><h2 class="title Subheading sectiontitle">“auto” Behavior
+for crosstalk_range</h2><p class="p">If crosstalk_range is not
+specified or “crosstalk_range auto” is specified, a line is added to
+the output ddm model file showing the lowest and highest values
+for bright_gap and dark_gap, in the older format.</p>
+<p class="p">The “auto” mode directs masksim
+to automatically choose crosstalk distances, with no further input
+from the user. In particular, crosstalk_stepsize is not allowed
+and returns an error. The program performs the following actions: </p>
+<p class="p">- Allocates a fixed number
+(currently 60) of crosstalk distances to simulate. </p>
+<p class="p">- Distributes the distances
+from a low value of 20 nm (mask scale; that is, 5 nm wafer scale
+for DUV) to a high value of 40% of the domain size. It distributes
+them as evenly as possible on a logarithmic scale between these
+two values, subject to the constraint that every gap size must be
+a multiple of twice the Yee-cell size. The total number of distances
+simulated may be less than the number attempted because of this
+constraint.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idd65baf5c-1abe-4175-b6a9-c0216529cace"><span class="keyword ParameterName Optional">crosstalk_stepsize</span> <span class="keyword ParameterName OptionalReplaceable">val</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword (required for cross talk models) specifying the pixel size
+in microns of the cross talk signal, or equivalently the distance
+in microns between consecutive points of the cross talk signal.
+This parameter must be specified in mask dimensions (dividing by
+the reduction factor converts this to wafer dimensions). </p>
+<p class="p">The value of this parameter
+controls the number of simulations executed when computing the cross
+talk model. For this reason, it has a significant effect on the
+runtime. Recommended values of crosstalk_stepsize are approximately
+5-10nm in 193nm wavelength.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">This
+option is only used if the argument specified for crosstalk_range
+is the “start end” range format. It is ignored if the argument is
+the “<span class="keyword ParameterName OptionalReplaceable">low</span>:<span class="keyword ParameterName OptionalReplaceable">step</span>:<span class="keyword ParameterName OptionalReplaceable">high</span>”
+range format.</p>
+<p class="p">This option cannot be used
+with the “crosstalk_range auto” setting and returns an error.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id05c59b24-b89d-4241-8b8f-c353714dc845"><span class="keyword ParameterName Optional">crosstalk_domainsize</span> <span class="keyword ParameterName OptionalReplaceable">val</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword that specifies the size of the mask domain used for masksim
+simulations in order to generate the cross talk signals. The size
+is specified in micrometers. Note that this parameter must be specified
+in mask dimensions (dividing by the reduction factor converts this
+to wafer dimensions). The default value is 2um.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id3b60a5e3-8513-467d-813e-29dff028573b">crosstalk_ddm_shortcut_file <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword that imports DDM signals from an existing library and then
+has masksim just generate the crosstalk signals. The <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> must
+be a bright-background DDM file. </p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Use
+this feature carefully. Only minimal checking is done to verify
+the DDM signals in the <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> are consistent
+with the other settings in the input file.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Corner
+Model Input Parameters</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idadf80948-77d5-4bcc-be46-f26b34500318">corner_model {<span class="keyword ParameterName OptionalDefault">none</span> | bright_corner | dark_corner | all}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword set that controls the generation of corner signals. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idb18f9f67-9a54-4ced-bd76-e11eef9c6370"><p class="p Opt"><span class="keyword ParameterName OptionalDefault">none</span> —
+Do not compute corner signals. This is the default.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc686319f-cd56-475f-85de-18e7f8ce5566"><p class="p Opt">bright_corner — Compute corner
+signals for bright features.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idf34f4b6b-0944-482a-b0e6-82954c5c3e17"><p class="p Opt">dark_corner — Compute corner
+signals for dark features.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id93c4cc82-0712-4d42-9930-f6d40aff2f39"><p class="p Opt">all — Compute corner signals
+for all types of corners (bright and dark).</p>
+</li>
+</ul>
+<p class="p">The tone in bright_corner or dark_corner refers to the tone of
+the region between the two edges as shown in <a class="xref fm:Figure" href="#id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id878fef50-1516-41d3-89d7-1706e5c56e18">Figure 4</a>.</p>
+<div class="fig fignone" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id878fef50-1516-41d3-89d7-1706e5c56e18"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Bright Corner and
+Dark Corner</span><br /><div class="imagecenter"><img class="image imagecenter" height="125" src="../graphics/ddm_useref24.png" width="422" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7b5f69ec-05f5-46ba-98cd-c2db74292337">corner_type {<span class="keyword ParameterName OptionalDefault">sharp</span> | chopped | rounded}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword set that defines the shape of the corners being modeled.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idd1057980-7e45-4cd9-99b4-4c42cc059e41"><p class="p Opt">sharp — Creates a library
+with only sharp 90-degree corners. This is the default.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida35afaed-db21-444b-a38c-57e17bb59e60"><p class="p Opt">chopped — Creates a library
+which may contain both sharp 90-degree and chopped corners using
+corner_range to specify the corner chop size.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id6723ec77-f337-45c7-9f87-06d488f2e23f"><p class="p Opt">rounded — Creates a library
+which may contain both sharp 90-degree and rounded corners using
+corner_range to specify the corner rounding size.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id0efd3984-bc17-4346-a3c7-5d9b1fd39eb0">corner_range {[bright_corner ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">r1low</span>[:<span class="keyword ParameterName OptionalReplaceable">r1step</span>:<span class="keyword ParameterName OptionalReplaceable">r1high</span>]  [<span class="keyword ParameterName OptionalReplaceable">r2low</span>[:<span class="keyword ParameterName OptionalReplaceable">r2step</span>:<span class="keyword ParameterName OptionalReplaceable">r2high</span>]]... ‘<span class="keyword ParameterName Required">]</span>’]   [dark_corner ‘<span class="keyword ParameterName Required">[</span>‘ <span class="keyword ParameterName OptionalReplaceable">t1low</span>[:<span class="keyword ParameterName OptionalReplaceable">t1step</span>:<span class="keyword ParameterName OptionalReplaceable">t1high</span>]  [<span class="keyword ParameterName OptionalReplaceable">t2low</span>[:<span class="keyword ParameterName OptionalReplaceable">t2step</span>:<span class="keyword ParameterName OptionalReplaceable">t2high</span>]]... ‘<span class="keyword ParameterName Required">]</span>’]} | auto</dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword
+set required with “corner_type chopped” and “corner_type rounded”
+but may not be specified with “corner_type sharp”. Values represent the
+corner chop or corner rounding size specified in <span class="keyword ParameterName OptionalDefault">mask dimensions</span>.
+A corner chop or corner rounding size of 0 is equivalent to a sharp
+90-degree corner.</p>
+<p class="p">At least one of auto, bright_corner, or dark_corner must be specified.
+You can also specify both bright_corner and dark_corner. The keyword
+auto cannot be combined with the others.</p>
+<p class="p">Arguments use one of the following
+formats to define a value or a group of values, separated by spaces:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida54299c8-9b21-44d1-80e7-92c5e3aa9ad2"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">low — </span>An
+individual value can be used for <span class="keyword ParameterName OptionalReplaceable">low</span> if :<span class="keyword ParameterName OptionalReplaceable">step</span>:<span class="keyword ParameterName OptionalReplaceable">high</span> is
+not also specified.</p>
+</li>
+<li class="li ArgOption" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9ead6dca-c0e8-423f-a715-2d0669f852fe"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">low</span>:<span class="keyword ParameterName OptionalReplaceable">step</span>:<span class="keyword ParameterName OptionalReplaceable">high</span> —
+A range of values with a step spacing amount to increment from the
+low to the high value, with each element separated by colons (:).
+The step element must exactly divide between the low and high values.</p>
+</li>
+</ul>
+<p class="p">Additionally, the entire range
+must be enclosed in brackets ([ ]) as part of the syntax. </p>
+<p class="p">For example, the following
+code defines the values for bright_corner as 0.04 to 0.40 incremented
+in steps of 0.01 (37 elements) followed by values of 0.45 to 0.5
+in steps of 0.05 (2 elements), and dark_corner is defined as the
+values 0.07, 0.09, then 0.1 to 0.3 in steps of 0.1 (3 elements).</p>
+<pre class="pre codeblock leveled"><code>corner_range bright_corner [0.04:0.01:0.400 0.45:0.05:0.500] \
+dark_corner [0.07 0.09 0.1:0.1:0.3]</code></pre><p class="p">The keyword auto is approximately equivalent to 0:gridsize:0.08.
+This range accurately and efficiently samples the range of corner
+chop and corner rounding values applicable to deep submicron photomasks.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idb09d252f-dcf2-483c-b1d7-7db63b7d75c1">corner_ddm_shortcut_file <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span></dt>
+<dd class="dd ArgumentDescription"><div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Use this feature carefully.
+Only minimal checking is done to verify the DDM signals in the <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> are
+consistent with the other settings in the input file.</p>
+</div>
+<p class="p">An optional keyword that imports
+DDM signals from an existing library and then has masksim generate
+the corner signals only. The <span class="keyword ParameterName OptionalReplaceable">existing_ddmfile</span> must
+be a bright-background DDM file. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ida6e2a386-5f7e-4948-b978-2eaa491e3aee">corner_domainsize <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that specifies the size
+of the simulation domain used for rigorous corner simulation. The
+domain is square with side lengths of <span class="keyword ParameterName OptionalReplaceable">val</span> microns.
+For DUV, the default <span class="keyword ParameterName OptionalReplaceable">val</span> is
+2.0. For EUV, the default <span class="keyword ParameterName OptionalReplaceable">val</span> is
+0.512 for DDM version 5 or later and 0.6 otherwise.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc95e7408-cb2a-4144-b851-6ee834fa8af8">corner_gridsize {<span class="keyword ParameterName OptionalDefault">auto</span> | disable | <span class="keyword ParameterName OptionalReplaceable">val_in_um</span> | {<span class="keyword ParameterName OptionalReplaceable">dx dy dz</span>} | {[<span class="keyword ParameterName OptionalReplaceable">dx dy</span>] baseunitcells [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>]}}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+keyword that specifies the cell size used in the FDTD simulations
+for corner DDM signal calculation. The cell size is specified using
+one of the following:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id9361b522-c2a6-4685-aaec-73e05bb1ef63"><p class="p"><span class="keyword ParameterName OptionalDefault">auto</span> sets
+the corner <span class="keyword ParameterName OptionalReplaceable">dx</span> and <span class="keyword ParameterName OptionalReplaceable">dy</span> values
+to the maximum of <span class="keyword ParameterName RequiredReplaceable">dx</span> from <span class="keyword ParameterName Required">gridsize</span> and:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id06b235bc-e293-4969-9922-ad45ea99a1b0"><p class="p">For DUV,
+5 nm.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id8ff80b0d-b53a-4cbf-b599-fb581fb92eba"><p class="p">For EUV, 2
+nm for DDM version &lt; 5 and 4 nm otherwise.</p>
+</li>
+</ul>
+<p class="p">The corner <span class="keyword ParameterName OptionalReplaceable">dz</span> value
+is set by wavelength and DDM version:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id58409adb-c9f4-4db9-a53a-feb726ae82f6"><p class="p">For DUV,
+the maximum of <span class="keyword ParameterName RequiredReplaceable">dz</span> from <span class="keyword ParameterName Required">gridsize</span> and
+5 nm.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id2ab573e3-a947-478a-bfc6-4efb95ada2f2"><p class="p">For EUV, the
+value of <span class="keyword ParameterName RequiredReplaceable">dz</span> from <span class="keyword ParameterName Required">gridsize</span> for
+DDM version &lt; 5 and the dz-equivalent of 5 baseunitcells otherwise.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id95f90a79-d409-4f77-9218-21c117662c9e"><p class="p"><span class="keyword ParameterName Optional">disable</span> sets
+the corner <span class="keyword ParameterName OptionalReplaceable">dx</span>, <span class="keyword ParameterName OptionalReplaceable">dy</span>,
+and <span class="keyword ParameterName OptionalReplaceable">dz</span> values
+to the <span class="keyword ParameterName Required">gridsize</span> values.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idddb78666-9ece-4a9b-91c8-51c91cfd7bb3"><p class="p"><span class="keyword ParameterName OptionalReplaceable">val_in_um</span> sets
+the lengths for a cubic cell. The corner cell length values must
+be greater than or equal to the values for equivalent <span class="keyword ParameterName Required">gridsize</span> lengths. </p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id0917735e-e0ae-4da4-a27a-714f3a3e4ccf"><p class="p">{<span class="keyword ParameterName OptionalReplaceable">dx dy dz</span>}
+sets the lengths for a non-cubic cell. The corner cell length values
+must be greater than or equal to the values for equivalent <span class="keyword ParameterName Required">gridsize</span> lengths.
+The <span class="keyword ParameterName OptionalReplaceable">dx</span> and <span class="keyword ParameterName OptionalReplaceable">dy</span> values
+must be equal.</p>
+</li>
+<li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idd93c7220-b81b-4694-ae1f-c451218a9084"><p class="p">{[<span class="keyword ParameterName OptionalReplaceable">dx dy</span>] <span class="keyword ParameterName Optional">baseunitcells</span> [<span class="keyword ParameterName OptionalReplaceable">num_cells_per_baseunit</span>]}
+creates non‑cubic corner cells only for EUV sources based on the
+thickness of the defined bilayer or multilayer. For more information,
+see the <span class="keyword ParameterName Required">gridsize</span> description
+of <span class="keyword ParameterName Required">baseunitcells</span>.</p>
+</li>
+</ul>
+<p class="p">The limits for corner_gridsize
+are the same as <span class="keyword ParameterName Required">gridsize</span>. </p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__id7720617b-bfb5-475d-8b0b-26954cea437e"><h2 class="title Subheading sectiontitle">Example
+1 (Two Films)</h2><p class="p">The following example code makes
+a library for a mask with a film stack sloped 86 degrees containing
+two films:</p>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ide1121335-87c3-4f17-9af7-18009e60404c"><p class="p">A chrome film with a thickness
+of 0.07 um</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__ide0e20f4c-29e5-47e9-8898-938df66e1ee1"><p class="p">An ARC film with a thickness
+of 0.012 um</p>
+<div class="fig fignone" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idf348586c-87cc-48b4-b6ce-ac45f41f88b4"><span class="figcap"><span class="fig--title-label">Figure 5. </span>DDM Input Example Film</span><br /><div class="imagecenter"><img class="image imagecenter" height="217" src="../graphics/ddm_example.jpg" width="389" /></div><br /></div>
+</li>
+</ul>
+<p class="p">The composite sectorization will
+break the source into two sectors with TE illumination, one for
+each pole in the ASML_DIPOLE source. The output library ddm_bright.ddm
+will contain DDM signals for these two sectors.</p>
+<h2 class="title Subheading sectiontitle">Masksim Input File</h2><pre class="pre codeblock leveled"><code>make_ddm_edge_library
+wavelength 0.1930 
+reduction_factor 4
+gridsize 0.002
+substrate 1.563
+objectplane 0
+film 0.07 0.84 1.65 "Chrome"
+film 0.012 1.2 1.65 "ARC"
+stackslope 86
+bright_outputfile ddm_bright.ddm
+illumination dipole.opt</code></pre><h2 class="title Subheading sectiontitle">Contents of dipole.opt</h2><pre class="pre codeblock leveled"><code>version 8
+engine rapidTCC
+opticalsystem 0.193 1.35
+defocuslevels 1 0.05 0.02
+magnification 4
+approxorder 80
+hoodpix 1.6
+kerngrid 0.00625
+forcePower2LUT 0
+illumtype COMPOSITE
+ASML_DIPOLE SHARP weight 1 sigma 1 sigma_in 0.4 illumangle 40 rotangle 0 TE 1
+hha 1
+hha_sectorization energy
+film 0.10 1.5 -0.06 "Wafer Film #1"
+film 0.03 1.7 -0.2 "Wafer Film #2"
+film 0.2 1.5 -0.5 "Wafer Film #3"
+substrate 0.9 -2.75
+beamfocus 0.0
+vectormodelflag 1
+ambient 1.436
+ddm_model full</code></pre></div>
+<div class="section Subsection" id="id48e9a8b6-d5b9-4932-aafa-cee4eadb398a__idc57c7af4-b9a2-4d07-8ed1-a6553dfe1d9c"><h2 class="title Subheading sectiontitle">Example
+2 (Dark Field, Two Films With Corner Signals)</h2><p class="p">The following example code makes a library for a dark field mask
+with two films (notice that this masksim input file includes corner
+signals):</p>
+<pre class="pre codeblock"><code>make_ddm_edge_library
+wavelength 0.1930
+reduction_factor 4
+gridsize 0.002
+substrate 1.563
+objectplane 0
+film 0.07 0.84 1.65 "Chrome"
+film 0.012 1.2 1.65 "ARC"
+stackslope 86
+dark_outputfile ddm_dark.ddm
+illumination dipole.opt
+corner_model all
+corner_type chopped
+corner_range auto</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_3dMaskModelingReference_id2b4698a4.html" title="3D Mask Modeling uses a number of separate file reference formats to define its input and output libraries.">3D Mask Modeling Reference</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  MATLAB is owned by MathWorks.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_wbench_useref"
+                DocTitle = "Calibre® WORKbench™ User’s and Reference Manual"
+                PageTitle = "DDM Library Input File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_DdmLibraryInputFileFormat_id48e9a8b6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® WORKbench™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

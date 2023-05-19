@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calibre DRA Mode of Operation" />
+<meta name="abstract" content="Calibre DRA uses a Calibre command line." />
+<meta name="description" content="Calibre DRA uses a Calibre command line." />
+<meta name="prodname" content="Calibre Dynamic Resource Allocator (DRA) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_dra_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Dynamic Resource Allocator (DRA) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.1" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id3bf00302-7433-47d1-96e1-75e46c98b81e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre DRA Mode of Operation</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre DRA Mode of Operation" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id3bf00302-7433-47d1-96e1-75e46c98b81e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre DRA Mode of Operation</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre DRA uses a Calibre command line.</span>
+</div>
+<p class="p">Calibre
+DRA is specified with the ‑dra switch at the Calibre command line
+along with typical options for running a Calibre run with Calibre
+MTflex processing. For example, </p>
+<pre class="pre codeblock"><code>$MGC_HOME/bin/calibre ‑dra ‑remotefile mtflex.dra ‑drc ‑hier ‑turbo \
+	 rules.svrf &gt;&amp; calibre.log &amp;</code></pre><p class="p">During the Calibre job, Calibre DRA command line options are
+used interactively through the <a class="xref fm:HeadingOnly" href="Command_CalibreDra_id2b5ebaae.html#id2b5ebaae-b77c-422c-a447-e0938a9e523b__Command_CalibreDra_id2b5ebaae.xml#id2b5ebaae-b77c-422c-a447-e0938a9e523b" title="You use the calibre_dra command to obtain status information and to adjust the resources for a Calibre job that is running.">calibre_dra</a> command
+to get status information and to dynamically adjust the number of resources
+for the job.</p>
+<p class="p">Calibre DRA can be used stand‑alone with the remote hosts manually
+specified, or alternatively, it can be used with a platform like
+Platform LSF™ (LSF) or Univa<sup>®</sup> Grid
+Engine<sup>®</sup> with the remote hosts coordinated
+through a job scheduler. See “<a class="xref fm:HeadingAndPage" href="TaskTop_ConfiguringTheCalibreMTflexFileForCalibreDRA_id3e643ae0.html#id3e643ae0-ac37-4713-9227-e149482506e4__TaskTop_ConfiguringTheCalibreMTflexFileForCalibreDRA_id3e643ae0.xml#id3e643ae0-ac37-4713-9227-e149482506e4" title="This procedure includes the additional statements and arguments used to customize your Calibre MTflex configuration file for executing Calibre jobs with Calibre DRA.">Configuring the Calibre MTflex File for Calibre DRA</a>” and “<a class="xref fm:HeadingAndPage" href="General_CalibreDRAStandAloneConfigurationExample_id3d86484e.html#id3d86484e-f92b-45aa-b590-ab53862d9438__General_CalibreDRAStandAloneConfigurationExample_id3d86484e.xml#id3d86484e-f92b-45aa-b590-ab53862d9438" title="This example shows the configuration for using Calibre DRA stand‑alone. In this case, the user is responsible to provide the exact host names as specified in REMOTE COMMAND DYNAMIC or the status output, including full qualification, the CPU counts, and the commands for interacting with the running Calibre job.">Calibre DRA Stand-Alone Configuration Example</a>” for more
+information.</p>
+<p class="p">The Calibre DRA Direct Connect mode can be used
+to connect extra remote resources to a running Calibre job using
+the <a class="xref fm:HeadingOnly" href="Command_CalibreDraRemote_id81b388b0.html#id81b388b0-4832-47e3-a999-70d2e0bc1314__Command_CalibreDraRemote_id81b388b0.xml#id81b388b0-4832-47e3-a999-70d2e0bc1314" title="You can use calibre_dra_remote to connect available remotes launched through an external system to a Calibre primary process running with Calibre DRA.">calibre_dra_remote</a> command. This mode provides an interface to an existing
+external system or job scheduler to connect the extra remote resources.
+The job status information from “calibre_dra ‑status” helps the
+user determine the resource adjustment. See “<a class="xref fm:HeadingAndPage" href="General_CalibreDRADirectConnectMode_idd16d3128.html#idd16d3128-0c81-4990-b5f9-9214ef664999__General_CalibreDRADirectConnectMode_idd16d3128.xml#idd16d3128-0c81-4990-b5f9-9214ef664999" title="The Calibre DRA Direct Connect mode is similar to Calibre DRA with the exception that the Calibre job is not responsible to launch extra remote processes. The Calibre job simply accepts the remote connections. An external system, such as a job scheduler or user, decides when and how to launch the extra remotes.">Calibre DRA Direct Connect Mode</a>” and “<a class="xref fm:HeadingAndPage" href="Command_CalibreDraRemote_id81b388b0.html#id81b388b0-4832-47e3-a999-70d2e0bc1314__Command_CalibreDraRemote_id81b388b0.xml#id81b388b0-4832-47e3-a999-70d2e0bc1314" title="You can use calibre_dra_remote to connect available remotes launched through an external system to a Calibre primary process running with Calibre DRA.">calibre_dra_remote</a>”.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_IntroductionToCalibreDynamicResourceAllocatorDra_ide71b2d91.html" title="This section introduces Calibre Dynamic Resource Allocator (DRA). It begins with an overview of the product, followed by the flow, some key concepts, the requirements, the syntax conventions, and how to invoke this interactive software tool.">Introduction to Calibre Dynamic Resource Allocator (DRA)</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_CalibreDra_id4cad18d1.html" title="Initiates a Calibre run with Calibre DRA using typical command line options for launching a Calibre job with design rule checking and Calibre MTflex processing, or alternatively, launches a Calibre post‑tapeout run with Calibre DRA and Calibre FullScale.">calibre -dra</a></div>
+<div><a class="link" href="../topics/Command_CalibreDra_id2b5ebaae.html" title="You use the calibre_dra command to obtain status information and to adjust the resources for a Calibre job that is running.">calibre_dra</a></div>
+<div><a class="link" href="../topics/Command_CalibreDraRemote_id81b388b0.html" title="You can use calibre_dra_remote to connect available remotes launched through an external system to a Calibre primary process running with Calibre DRA.">calibre_dra_remote</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_dra_user"
+                DocTitle = "Calibre® Dynamic Resource Allocator (DRA) User’s Manual"
+                PageTitle = "Calibre DRA Mode of Operation"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalibreDRAModeOfOperation_id3bf00302.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Dynamic Resource Allocator (DRA) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

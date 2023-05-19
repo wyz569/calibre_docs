@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating an Ideal Netlist from the Command Line" />
+<meta name="abstract" content="Netlists without parasitics can be created for any of the flows." />
+<meta name="description" content="Netlists without parasitics can be created for any of the flows." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida1870987-7695-4fe0-bb15-f5df30e0bacd" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating an Ideal Netlist from the Command Line</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating an Ideal Netlist from the Command Line" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida1870987-7695-4fe0-bb15-f5df30e0bacd">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating an Ideal Netlist from
+the Command Line</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Netlists without
+parasitics can be created for any of the flows. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="ida1870987-7695-4fe0-bb15-f5df30e0bacd__idea5179c8-176e-4f58-ab1d-2f0d6a284000"><p class="p">A
+valid PEX rule file for this layout including a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist Simple', 'svrf_ur'); return false;">PEX Netlist Simple</a> statement specifying the output format.</p>
+</li>
+<li class="li" id="ida1870987-7695-4fe0-bb15-f5df30e0bacd__idbb3a34a5-d9cf-4ac7-b409-b57c1e805e06"><p class="p">Layout
+database that is LVS-clean.</p>
+</li>
+<li class="li" id="ida1870987-7695-4fe0-bb15-f5df30e0bacd__idfaf6e2eb-b1b4-4d70-befd-4d9b29ac9115"><p class="p">For
+more information refer to “<a class="xref fm:HeadingOnly" href="Concept_PrerequisitesPerformingParasiticExtraction_id39c423ba.html#id39c423ba-6f46-4d51-aa02-80c32c4bd092__Concept_PrerequisitesPerformingParasiticExtraction_id39c423ba.xml#id39c423ba-6f46-4d51-aa02-80c32c4bd092" title="Running Calibre xACT extraction requires that certain conditions be met.">Prerequisites for Performing Parasitic Extraction</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ida1870987-7695-4fe0-bb15-f5df30e0bacd__ide1163565-0a0e-42bd-bd2a-c50f574bda90"><span class="ph cmd">Build the database of intentional
+devices:</span><div class="itemgroup info StepInfo"><p class="p">To use source names, run
+Calibre nmLVS-H before Calibre xACT:</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -spice $svdb_dir/top_cell.sp rules</code></pre><p class="p">To use layout names, skip step
+1 and go directly to step 2.</p>
+</div></li>
+<li class="li step stepexpand" id="ida1870987-7695-4fe0-bb15-f5df30e0bacd__id90f24d43-4d8c-4a97-8157-8c093790ac35"><span class="ph cmd">To generate
+the netlist, run Calibre xACT:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -xact <span class="ph FontProperty HeadingLabel">-simple</span> rules</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The transcript for a successful Calibre
+xACT run concludes with a count of errors and warnings. For example:</p>
+<pre class="pre codeblock leveled"><code>                CALIBRE xACT WARNING / ERROR Summary                      
+------------------------------------------------------------------------ 
+                        xACT Warnings  =  2 
+                          xACT Errors  =  0 
+  ======================================================================== </code></pre><p class="p">If there are no errors, the directory
+also contains a file with the name you specified in the PEX Netlist
+Simple statement. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_NetlistingDesignWithoutParasitics_id4e3193de.html" title="To validate Calibre xACT output you might create a netlist showing only the intentional devices. This can be done with or without the usual parasitic extraction step. The rule file still contains rules for parasitic extraction.">Netlisting a Design Without Parasitics</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Creating an Ideal Netlist from the Command Line"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingIdealNetlistFromCommandLine_ida1870987.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

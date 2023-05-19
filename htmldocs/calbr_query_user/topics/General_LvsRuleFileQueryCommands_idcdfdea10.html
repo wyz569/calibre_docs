@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="LVS Rule File Query Commands" />
+<meta name="abstract" content="The LVS rule file query commands return information about settings in the LVS rules. These commands are helpful in certain third-party tool flows that require information about the contents of the Standard Verification Database (SVDB)." />
+<meta name="description" content="The LVS rule file query commands return information about settings in the LVS rules. These commands are helpful in certain third-party tool flows that require information about the contents of the Standard Verification Database (SVDB)." />
+<meta name="DC.subject" content="Rule file query commands, Tcl shell" />
+<meta name="keywords" content="Rule file query commands, Tcl shell" />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idcdfdea10-aa75-4ce6-b7db-597b7f26b046" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>LVS Rule File Query Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="LVS Rule File Query Commands" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="idcdfdea10-aa75-4ce6-b7db-597b7f26b046">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">LVS Rule File Query Commands</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The LVS
+rule file query commands return information about settings in the
+LVS rules. These commands are helpful in certain third-party tool
+flows that require information about the contents of the Standard
+Verification Database (SVDB).</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="idcdfdea10-aa75-4ce6-b7db-597b7f26b046__iddeedfc5d-a919-4d67-ae3e-959f8bfbcc62"><p class="p">Commands
+in the dfm:: scope are documented in the <cite class="cite">Calibre YieldServer
+Reference Manual</cite>.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idcdfdea10-aa75-4ce6-b7db-597b7f26b046__id196243de-3588-44ca-8173-eee3f700f94c" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>LVS Rule File Query Commands</span></caption><colgroup><col style="width:2.751in" /><col style="width:3.423in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d36846e184"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d36846e187"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmget_layout_magnify', 'calbr_ys_ref'); return false;">dfm::get_layout_magnify</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the value of the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Magnify', 'svrf_ur'); return false;">Layout Magnify</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmget_layout_system', 'calbr_ys_ref'); return false;">dfm::get_layout_system</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmget_layout_system2', 'calbr_ys_ref'); return false;">dfm::get_layout_system2</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System2', 'svrf_ur'); return false;">Layout System2</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmget_source_system', 'calbr_ys_ref'); return false;">dfm::get_source_system</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source System', 'svrf_ur'); return false;">Source System</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsdeviceTemplatesUsed_id7623df54.html#id7623df54-986a-4f0c-8de3-e136b54728bd__Command_QsdeviceTemplatesUsed_id7623df54.xml#id7623df54-986a-4f0c-8de3-e136b54728bd" title="Returns lists of the instances formed during device recognition, along with associated statistics. Device types and subtypes that are not used to generate instances (as in LVS Box cells) are not output.">qs::device_templates_used</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns a report of the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> statements actually used
+to generate instances in the extracted netlist.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesConnectivity_id1ecf0919.html#id1ecf0919-e2ca-4fe0-bd32-c2efd5f20458__Command_QsrulesConnectivity_id1ecf0919.xml#id1ecf0919-e2ca-4fe0-bd32-c2efd5f20458" title="Returns rule file connectivity statement information.">qs::rules_connectivity</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns rule file connectivity
+statement information.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Qsrulesfilename_idf2a8494f.html#idf2a8494f-ca07-421d-b23c-43970e3cee65__Command_Qsrulesfilename_idf2a8494f.xml#idf2a8494f-ca07-421d-b23c-43970e3cee65" title="Returns the name of the rule file used to create the SVDB database.">qs::rules_file_name</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the name of the rule file used to
+create the SVDB database.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLayerTypes_id67fd12f9.html#id67fd12f9-6cbd-4581-820d-61f2a8f117b4__Command_QsrulesLayerTypes_id67fd12f9.xml#id67fd12f9-6cbd-4581-820d-61f2a8f117b4" title="Returns a Tcl list of lists of rule file layers and their types.">qs::rules_layer_types</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns a Tcl list of
+lists of rule file layers and their types.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLayoutCase_id7a271c76.html#id7a271c76-e839-4659-82be-c02c3e659b05__Command_QsrulesLayoutCase_id7a271c76.xml#id7a271c76-e839-4659-82be-c02c3e659b05" title="Returns the Layout Case setting in the rule file.">qs::rules_layout_case</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Case', 'svrf_ur'); return false;">Layout Case</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsCompareCase_id1ddaf032.html#id1ddaf032-46c5-4e9c-a781-3362522959b7__Command_QsrulesLvsCompareCase_id1ddaf032.xml#id1ddaf032-46c5-4e9c-a781-3362522959b7" title="Returns the LVS Compare Case keyword settings in the rule file: NO, YES, NAMES, TYPES, SUBTYPES, or VALUES as a Tcl list.">qs::rules_lvs_compare_case</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Compare Case', 'svrf_ur'); return false;">LVS Compare Case</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsDbLayer_idba4c2f86.html#idba4c2f86-faaf-4030-a136-43f2a67de8fd__Command_QsrulesLvsDbLayer_idba4c2f86.xml#idba4c2f86-faaf-4030-a136-43f2a67de8fd" title="Returns the LVS DB Layer parameters in the rule file as a Tcl list of layer names.">qs::rules_lvs_db_layer</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS DB Layer', 'svrf_ur'); return false;">LVS DB Layer</a> arguments.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Qsruleslvsdbconnectivitylayer_id3f700c85.html#id3f700c85-306b-4e77-9581-e2aa3124898d__Command_Qsruleslvsdbconnectivitylayer_id3f700c85.xml#id3f700c85-306b-4e77-9581-e2aa3124898d" title="Returns the LVS DB Connectivity Layer parameters in the rule file as a Tcl list of layer names.">qs::rules_lvs_db_connectivity_layer</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS DB Connectivity Layer', 'svrf_ur'); return false;">LVS DB Connectivity Layer</a> arguments.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsDowncaseDevice_id6e3dc372.html#id6e3dc372-5f3b-49b0-8b25-c795771ac751__Command_QsrulesLvsDowncaseDevice_id6e3dc372.xml#id6e3dc372-5f3b-49b0-8b25-c795771ac751" title="Returns the LVS Downcase Device setting in the rule file. 0 is NO, 1 is YES.">qs::rules_lvs_downcase_device</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Downcase Device', 'svrf_ur'); return false;">LVS Downcase Device</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsGroundName_idba0de5bf.html#idba0de5bf-c52e-4a97-a102-c454b7b81735__Command_QsrulesLvsGroundName_idba0de5bf.xml#idba0de5bf-c52e-4a97-a102-c454b7b81735" title="Returns the LVS Ground Name setting of the rule file.">qs::rules_lvs_ground_name</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Ground Name', 'svrf_ur'); return false;">LVS Ground Name</a> settings.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsPowerName_ida3ade5fd.html#ida3ade5fd-e731-4a72-ad0b-4557673ad30b__Command_QsrulesLvsPowerName_ida3ade5fd.xml#ida3ade5fd-e731-4a72-ad0b-4557673ad30b" title="Returns the LVS Power Name setting of the rule file.">qs::rules_lvs_power_name</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Power Name', 'svrf_ur'); return false;">LVS Power Name</a> settings.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesLvsSpiceReplicateDevices_id481befe3.html#id481befe3-1532-4a77-b9d4-1ca060f538a6__Command_QsrulesLvsSpiceReplicateDevices_id481befe3.xml#id481befe3-1532-4a77-b9d4-1ca060f538a6" title="Returns the LVS Spice Replicate Devices setting in the rule file. 0 is NO, 1 is YES.">qs::rules_lvs_spice_replicate_devices</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Spice Replicate Devices', 'svrf_ur'); return false;">LVS Spice Replicate Devices</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesPrecision_idf1e9b3ab.html#idf1e9b3ab-9a57-44bb-82f8-a182d1951d88__Command_QsrulesPrecision_idf1e9b3ab.xml#idf1e9b3ab-9a57-44bb-82f8-a182d1951d88" title="Returns the Precision setting in the rule file as a floating-point number.">qs::rules_precision</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Precision', 'svrf_ur'); return false;">Precision</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesSourceCase_idebcba5f1.html#idebcba5f1-1dc9-4744-b031-96e95baac475__Command_QsrulesSourceCase_idebcba5f1.xml#idebcba5f1-1dc9-4744-b031-96e95baac475" title="Returns the Source Case setting in the rule file. 0 is NO, 1 is YES.">qs::rules_source_case</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Case', 'svrf_ur'); return false;">Source Case</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QsrulesUnitLength_idb918be5b.html#idb918be5b-02b5-4d3e-aa5e-b51fb1c2ada8__Command_QsrulesUnitLength_idb918be5b.xml#idb918be5b-02b5-4d3e-aa5e-b51fb1c2ada8" title="Returns the Unit Length setting in the rule file. The return value is in meters and represented in scientific notation.">qs::rules_unit_length</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Unit Length', 'svrf_ur'); return false;">Unit Length</a> setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e184 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_QswriteLvsSettingsReport_idc8812d16.html#idc8812d16-aa26-4c8d-b603-1ca1d2419e00__Command_QswriteLvsSettingsReport_idc8812d16.xml#idc8812d16-aa26-4c8d-b603-1ca1d2419e00" title="Returns a summary report of LVS rule settings.">qs::write_lvs_settings_report</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d36846e187 "><p class="p">Returns a summary report
+of the LVS rule file settings for rule file query commands.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_QueryServerTclShellCommandSummary_id458f2778.html" title="The Query Server Tcl shell provides a number of command types that are useful for accessing data in an SVDB directory.">Query Server Tcl Shell Command Summary</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "LVS Rule File Query Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_LvsRuleFileQueryCommands_idcdfdea10.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

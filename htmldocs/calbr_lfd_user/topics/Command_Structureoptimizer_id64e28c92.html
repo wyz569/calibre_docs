@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="StructureOptimizer" />
+<meta name="abstract" content="Reduces layout data set being passed into Calibre LFD simulation, improving overall runtime performance. Pattern matching is used to find matches for patterns containing possible lithographic hotspots." />
+<meta name="description" content="Reduces layout data set being passed into Calibre LFD simulation, improving overall runtime performance. Pattern matching is used to find matches for patterns containing possible lithographic hotspots." />
+<meta name="DC.subject" content="StructureOptimizer, Commands" />
+<meta name="keywords" content="StructureOptimizer, Commands" />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id64e28c92-23d2-4d37-8c2b-ace75a184294" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>StructureOptimizer</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="StructureOptimizer" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id64e28c92-23d2-4d37-8c2b-ace75a184294">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">StructureOptimizer</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><span class="shortdesc">Reduces
+layout data set being passed into Calibre LFD simulation, improving
+overall runtime performance. Pattern matching is used to find matches
+for patterns containing possible lithographic hotspots.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">StructureOptimizer<br />
+-layer </span><span class="keyword ParameterName RequiredReplaceable">layernames<br />
+</span><span class="keyword ParameterName Required">-macro </span><span class="keyword ParameterName RequiredReplaceable">macro_name<br />
+</span><span class="keyword ParameterName Required">-file </span><span class="keyword ParameterName RequiredReplaceable">macro_file_path<br />
+</span><span class="keyword ParameterName Required">-layerOut </span><span class="keyword ParameterName RequiredReplaceable">return_layer_name<br />
+</span>[-interactDistance <span class="keyword ParameterName OptionalReplaceable">interactDistance</span>]<br />
+[-patternKey <span class="keyword ParameterName OptionalReplaceable">key_list</span>]<br />
+[-property <span class="keyword ParameterName OptionalReplaceable">property_list</span>]<br />
+[-tilesize {<span class="keyword ParameterName OptionalReplaceable">tile_size</span> | auto}<br />
+[-pdk <span class="keyword ParameterName OptionalReplaceable">pdkname</span>]<br />
+[-pdkSTOName <span class="keyword ParameterName OptionalReplaceable">pdkSTOname</span>]<br />
+[-invalidPropertyIndex <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[-expandCells <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[-progress_meter {<span class="keyword ParameterName OptionalDefault">on</span> | off | edge}]<br />
+[<span class="keyword ParameterName Optional">‑security</span> yes]<br />
+[-checkName <span class="keyword ParameterName OptionalReplaceable">check_name</span>]</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The Calibre LFD Structure Optimizer
+(STO) functionality runs pattern matching in designs to find matches
+for patterns containing possible lithographic hotspots. This command
+enables you to reduce the layout data set passed into Calibre LFD
+simulation, thus improving the overall runtime performance of Calibre
+LFD. The LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command is intended for cases in which problematic areas are known.
+This command provides a rapid method for evaluating a hotspot library
+in new databases under test, thus significantly reducing the runtime of
+Calibre LFD checks.</p>
+<p class="p">The
+command detects edge-based configurations within any arbitrary layout
+inside of Calibre. These configurations are referred to as patterns
+or structures. Collections of patterns are stored in a Siemens EDA-specific
+format known as Pattern Matching Database (PMDB). This PMDB file
+is compiled into an SVRF file that is referred to in LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command calls.
+This is a binary format defining geometric patterns using a relative
+coordinate infrastructure. Once a foundry identifies potential problematic
+structures that are possible lithographic hotspots, a hotspot library
+can be developed to capture these potentially problematic areas
+of interest.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For
+an overview of the commands used to limit the cells checked by Calibre
+LFD to improve performance, see <a class="xref fm:HeadingOnly" href="Contain_CalibreLfdFastMode_id87e4fcd4.html#id87e4fcd4-fd21-41c3-bce5-363b1507287c__Contain_CalibreLfdFastMode_id87e4fcd4.xml#id87e4fcd4-fd21-41c3-bce5-363b1507287c" title="For rapid execution, Calibre LFD enables you to restrict checking to specific layout areas. Creating OPC layers is a time-consuming process, however, with LFD Fast Mode kits only regions of interest are subjected to OPC operations. Regions of interest can be defined by pattern matching, some SVRF statements, or by marking layers.">Calibre LFD Fast Mode</a>. To provide for faster execution,
+the LFD Fast Mode uses the Calibre Pattern Matching software to
+identify only those layout areas that require detailed lithographic
+simulation.</p>
+</div>
+<p class="p">The LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command has three modes of operation, and each mode can be used
+in both a PDK and non-PDK flow.</p>
+<ul class="ul"><li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id42125fdc-b03a-4af6-8da0-e4f20d11266b"><p class="p"><span class="ph FontProperty HeadingLabel">Simulation Mode</span> —
+Calibre LFD applies checks on layers' process variability PV-bands.
+Contours of the PV-bands come from the Calibre OPCverify tool’s
+simulation using optical, resist, and etch models you define. This
+is the normal Calibre LFD mode that applies check measurements on
+PV-bands.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id06c39bd2-60a4-4ff6-8205-e6b9d4fbfb62"><p class="p"><span class="ph FontProperty HeadingLabel">No-Simulation Mode</span> —
+Calibre LFD runs checks and gets error markers without any simulation
+being applied. Problematic areas are determined using pattern matching methods.
+One of those techniques is STO, which obtains good accuracy and performance
+by identifying structure-corresponding matches. Using this matching technique,
+the Calibre LFD package bypasses the simulation step and receives
+the error markers returned by the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+function call.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id4561792d-91e2-4ae3-bf8c-4de32721c96f"><p class="p"><span class="ph FontProperty HeadingLabel">Hybrid Mode</span> —
+Calibre LFD attaches a property called <span class="ph FontProperty emphasis">match_type</span> to
+the output layer of LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+that indicates whether the patterns exactly match the layout patterns.
+The property is set to 0 if the library pattern does not contain
+any constraints. It is set to 1 if the library pattern does contain
+constraints, and the match result depends on the constraints to
+find a match. It is set to 2 if the library pattern contains constraints,
+and the match results are found without any constraint.</p>
+<p class="p">Calibre LFD does simulations
+and run checks only on the non-exact matched patterns. The output
+layer of the check is the exact matched patterns combined with the
+error markers discovered from running the check on the non-exact
+patterns as the region of simulation.</p>
+<p class="p">This command is for use both
+with and without a PDK.</p>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id7649da94-2eda-403a-b359-a2dcc7c46cb0"><span class="keyword ParameterName Required">-layer </span> <span class="keyword ParameterName RequiredReplaceable">layernames</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument
+specifying at least one input layer. This is the layer(s) containing
+the geometries to be searched. The order of layers in the command
+is associated with the layers in the patterns. The first layer in
+the pattern file is searched for on <span class="keyword ParameterName Required">-layer1</span>.
+If more than one layer is specified, then the second layer in the
+pattern file is searched for on <span class="keyword ParameterName Required">‑layer2</span>,
+and so forth.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The pattern
+file can contain patterns with different numbers of layers provided
+that the command keys allow selection of patterns with the number
+of layers matching the number of layers in the input. Selection
+of a pattern with a different number of layers than in the command
+causes an abort.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id8f614158-8a6a-412f-86ec-9eb88d02f50e"><span class="keyword ParameterName Required">-macro </span> <span class="keyword ParameterName RequiredReplaceable">macro_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument
+defining the input macro name. This option causes the command to
+use the pattern matching system for its operations, where the input
+macro defines the input pattern library and the system configuration.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idcb6021d3-dc7c-4281-ae4d-ceebd187dbf2"><span class="keyword ParameterName Required">-file </span> <span class="keyword ParameterName RequiredReplaceable">macro_file_path</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument
+defining the path to the SVRF file where the input macro is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id6655cd37-c6d5-45f5-8076-9b863980409b"><span class="keyword ParameterName Required">-layerOut </span> <span class="keyword ParameterName RequiredReplaceable">return_layer_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument
+specifying the name of the output layer containing individual pattern
+markers indicating matches with the library patterns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id0b890b82-d297-486c-96d4-0c7d5f8e702c">-interactDistance <span class="keyword ParameterName OptionalReplaceable">interactDistance</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+specifying an input parameter to the tiling mechanism. The value
+specified instructs Calibre LFD to look outward from a tile boundary
+by the user-specified amount to not miss any patterns that could
+exist at or across the boundary. During the matching process, there
+might be duplicate matches found in the border regions. Duplicates
+are resolved by the overlap merging process.</p>
+<p class="p">If the interaction distance
+is not specified, the largest pattern diameter in <span class="ph FontProperty equationvariable">x</span> or <span class="ph FontProperty equationvariable">y</span> is
+used.</p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Your <span class="keyword ParameterName OptionalReplaceable">interactDistance</span> must
+be 1nm larger than the largest pattern diameter in <span class="ph FontProperty equationvariable">x</span> or <span class="ph FontProperty equationvariable">y</span> of any
+pattern within the used pattern file. Otherwise, you risk a potentially-missed
+pattern at a tile boundary.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idca9259bc-da8c-490a-9aba-fc9ff6e757fd">-patternKey <span class="keyword ParameterName OptionalReplaceable">key_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+specifying one or more key names. Only patterns having keys matching
+all those in the command line are selected for matching. Selected
+patterns may have keys in addition to those in the command line.
+If no keys are specified in the command, then all patterns are selected.
+Any pattern with fewer keys than in the command is not selected.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idef1d24fa-cb5c-4554-9a02-2cd431f6a058">-property <span class="keyword ParameterName OptionalReplaceable">property_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+specifying whether properties are added to the output marker shapes
+from LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer.
+Properties first exist within the pattern file for any given pattern.
+Upon finding a match for a particular pattern with properties, this command
+outputs the matching marker and attaches properties to it. All property
+names are allowed. Properties attached to the output layer are classified
+into two categories:</p>
+<ul class="ul"><li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id328934d7-689e-4b66-b680-cebd789e9fa5"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre LFD Properties</span> —
+describe the output error-marker of Calibre LFD checks, such as
+PVI, Space, MinCD, and Area. If no simulation is run, Calibre LFD properties
+need to exist in the pattern file. If the patterns come from simulation, Calibre
+LFD property values are calculated based on simulation results.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id1f121324-ad62-4a7f-9716-d21ae333d54c"><p class="p"><span class="ph FontProperty HeadingLabel">Matching Properties</span> —
+provide the match characteristics of the output markers on locating
+a match. Only one of these matching properties, “sto_mode”, needs
+to exist in the pattern file as you determine its value. The underlying
+engine establishes the matching property value as a function of
+the matched output, taking into account the original pattern definition.
+The matching properties are match_source, match_type, and sto_mode,
+as described as follows:</p>
+<ul class="ul"><li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idab25386d-229b-41e1-bb00-104c42351271"><p class="p">match_source</p>
+<p class="p">This property determine whether
+the pattern comes from the pattern file. If the pattern comes from
+the pattern file, <span class="keyword ParameterName OptionalReplaceable">match_source</span> is
+set to 1, and otherwise it is set to 0. This property is only useful
+in Simulation mode. In Simulation mode, if an error marker sits
+outside of the pattern region, this property is set to 0, indicating
+that the error-marker is out of the pattern file scope.</p>
+<p class="p">In No-Simulation and Hybrid modes,
+this property always equals 1, as there is no simulation and all
+the patterns come from the pattern file.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idc56f3baf-d6c4-4bbe-82fa-fc767917dfe7"><p class="p">match_type</p>
+<p class="p">This property describes the type
+of matching between the layout pattern and the pattern file pattern.
+If the layout pattern exactly matches that in the pattern file, this
+property is set to 0. It is set to 1 if the layout pattern does
+not exactly match the pattern file patterns. If you have a constrained
+pattern and the match exactly matches the base pattern, then it
+is set to 2.</p>
+<p class="p">In hybrid mode, <span class="keyword ParameterName OptionalReplaceable">match_type</span> is
+meaningless as the output error-marker does not come from the pattern
+file. In this case, the package assigns a value of -1 to this property.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id014a0f01-e98f-4e22-b007-fc9092a283ad"><p class="p">sto_mode</p>
+<p class="p">This property determines whether
+each pattern in the pattern file is directed towards simulation
+or no-simulation. The property is used only when running the command
+in hybrid mode, where if this property is not used, the package
+runs the simulation only on the region formed by the non-exact matched
+patterns, which are determined by the <span class="keyword ParameterName OptionalReplaceable">match_type</span> property.
+Set this property if you want to direct or force a certain pattern
+to be used in simulation, regardless of whether it is non-exactly
+or exactly matched.</p>
+<p class="p">For example, if you set <span class="keyword ParameterName OptionalReplaceable">sto_mode</span> to
+1 for a certain pattern in the pattern file, any pattern in the
+layout that matches that pattern is never used in simulation, regardless
+of whether the layout pattern exactly matches the pattern file pattern. If
+you set <span class="keyword ParameterName OptionalReplaceable">sto_mode</span> to
+2 for a certain pattern in the pattern file, any pattern in the layout
+that matches that pattern is used in simulation regardless of the
+matching type of that pattern.</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id24fabfbe-0440-4885-a8fa-626a7f451548">-tilesize {<span class="keyword ParameterName OptionalReplaceable">tile_size</span> | auto}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that is used to control the tile size. This value is an integer, and
+the default value is 25 u.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id9a109dfb-3413-4c4c-9c5f-83aa95865c7e">-pdk <span class="keyword ParameterName OptionalReplaceable">pdkname</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that is used to get the PDK in which the STO is defined. If -pdk
+exists, also specify the -pdkSTOName option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id39f6eec4-472e-4bb8-9211-d46de140392b">-pdkSTOName <span class="keyword ParameterName OptionalReplaceable">pdkSTOname</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that is used to get the STO defined by the foundry in the PDK. If
+-pdkSTOName exists, also specify the -pdk option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id1ff9ef12-2cf8-47c5-86b8-3f587829ca93">-invalidPropertyIndex <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+used to enable you to pass in a real value indicating that a property
+does not exist in the pattern file pattern, to avoid the possibility
+of collisions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id5baf0706-f710-49f5-9e1f-c2072133720f">-expandCells <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that controls the <span class="keyword ParameterName OptionalReplaceable">expand_small_cells</span> statement
+in the setup file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id1840b33c-bf56-4c9a-ac54-6cd3e538f42e">-progress_meter {<span class="keyword ParameterName OptionalDefault">on</span> | off | edge}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument defining whether
+command progress is displayed in the transcript. You can provide
+one of the following options as an input to this argument:</p>
+<ul class="ul"><li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idb639d5cf-4b06-43be-bf7c-6e2e5bf4093b"><p class="p"><span class="keyword ParameterName OptionalDefault">on</span> —
+Report progress for all operations.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id6fabb6cd-cf2c-43d0-aee2-0d6c78388073"><p class="p">off — No progress meter output.</p>
+</li>
+<li class="li" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idcfb4ed06-b510-4277-9068-df9d8c0857f5"><p class="p">edge — An edge-based progress
+meter.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id7017a325-12f2-42cc-b55b-cf127111996d"><span class="keyword ParameterName Required">-</span>security yes</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument defining security
+privileges. If defined, the SVRF is encrypted. The default is for
+the SVRF to not be encrypted.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id46a5146d-6df4-414a-9d48-4efae67b2cd3">-checkName <span class="keyword ParameterName OptionalReplaceable">check_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that is used only in the No Simulation and Hybrid flows to map the
+output of an LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command to a certain check.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">These examples show how to use the
+LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command in Simulation, No‑Simulation, and Hybrid modes, with examples
+using both PDK and non-PDK flows.</p>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__ida4bce7e3-8135-46d1-920c-0099ea32ab59"><h2 class="title Subheading sectiontitle">Simulation Mode</h2><p class="p">You use the Simulation option to apply
+check measurements on PV-bands.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Addpdksto_ideb2ed0f5.html#ideb2ed0f5-b246-4b69-ae18-d3a294da491c__Command_Addpdksto_ideb2ed0f5.xml#ideb2ed0f5-b246-4b69-ae18-d3a294da491c" title="Defines a Structure Optimizer (STO) template and assigns it a name by which it can be referenced.">addPDKSTO</a> command is used in this flow.</p>
+</div>
+</div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__ide016fa63-49b3-4aed-b89a-803995c9e0ed"><h2 class="title Subheading sectiontitle">Example 1</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in Simulation
+mode, using a PDK flow.</p>
+<p class="p">In the PDK:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>createPDK { 
+	-name generic65 
+	-version 0.2 
+	-security { 
+		Checks 00 
+		Processlayers 11 
+		STO 01 
+	} 
+} 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO { 
+	-name STO1 
+	-pdk generic65 
+	-definition { 
+		-property {MinCD PVI} 
+		-macro msc_sto 
+		-file ./macro.svrf 
+		-interactDistance 2.0 
+	} 
+} 
+ </code></pre><p class="p">In the rule file:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>LoadPDK ./generic65 
+LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer -layer metal1 -pdkSTOName STO1 \ 
+	-pdk generic65 -layerOut STOoutput 
+LFD<span class="ph fmvar:double_colon">::</span>IncrementalSelect -layer metal1 -layerOut IS_Output \ 
+	-halo 0.5 -checkRegions STOoutput -minWidth 0.09 
+LFD<span class="ph fmvar:double_colon">::</span>RegisterLayer -pdk generic65 -Designlayer IS_Output \ 
+	-Processlayer pdklyr_metal1 
+LFD<span class="ph fmvar:double_colon">::</span>LFDregion -layer IS_Output  -region STOoutput  -halo 0.5 
+// Running lfd checks 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer IS_Output -pdkCheckName METAL1_MSC\ 
+	-database $lfdErrorDatabase 
+LFD<span class="ph fmvar:double_colon">::</span>End 
+ </code></pre></div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id99fba069-c43d-48cd-9c46-02d649611dde"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in Simulation
+mode, using a non‑PDK flow.</p>
+<p class="p">In the rule file:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer -layer metal1 -macro sto_patterns1 \ 
+	-file ./macro1.svrf -interactDistance 2.0 -layerOut STOoutput 
+LFD<span class="ph fmvar:double_colon">::</span>IncrementalSelect  -layer metal1 -layerOut IS_Output \ 
+	-checkRegions STOoutput -minWidth 0.09 -halo 0.5 
+LFD<span class="ph fmvar:double_colon">::</span>RegisterLayer -Designlayer IS_Output 
+LFD<span class="ph fmvar:double_colon">::</span>LFDregion -layer IS_Output  -region STOoutput -halo 0.5 
+LFD<span class="ph fmvar:double_colon">::</span>PVband -layer IS_Output\ 
+	-layerRET lfd_opc_1\ 
+	-foreground {{attenuated 0.06}}\ 
+	-background clear\ 
+	-pixel 0.02\ 
+	-modelDir {./setup/models}\ 
+	-resistFile {resist.mod}\ 
+	-opticalSpanList {{P1W_D0 P1W_D50}}\ 
+	-doseSpanList {{1.0000 1.0200}} 
+// Running lfd checks 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer IS_Output -subwindow 1 -database $DB \ 
+	-minDRCspace 0.10 -minLFDspace 0.05 \ 
+	-checkName MSC_METAL1 
+LFD<span class="ph fmvar:double_colon">::</span>End </code></pre></div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idc8a740e9-4efa-42ce-8045-ccdf61eb6344"><h2 class="title Subheading sectiontitle">No-Simulation Mode</h2><p class="p">In No-Simulation mode, Calibre LFD
+runs checks and get error markers without simulation being applied.
+The tool bypasses the simulation step, and obtains the error markers
+returned by the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command.</p>
+<p class="p">Setting the STO mode of a layer to
+No-Simulation is accomplished by adding a mapping between the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command
+and the check that bypasses the simulation. To run in No-Simulation
+(or Hybrid mode) using a PDK flow, you need to set the STO mode
+using the LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer
+-STOmode flag. The role of this argument is to set the STO mode
+of the layer defined in the Calibre LFD kit. The valid STO modes
+are Simulation, No-Simulation, or Hybrid, which are indicated through
+the -STOmode values of 1, 2, and 3 respectively. For example:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer { 
+	-name pdklyr_METAL1 
+	-pdk 45nm 
+	<span class="ph CodeHighlight Bold">-STOmode 2</span> // No-Simulation mode 
+	...  </code></pre><p class="p">This code sets the STO mode of pdklyr_METAL1
+layer to No-Simulation. Consequently, in the Calibre LFD run no
+simulations are performed on this layer and no PV-bands or contours
+are generated. Any check that operates on that layer bypasses the
+simulation and get its error markers from the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command, which
+is mapped to the check.</p>
+<p class="p">Setting the simulation mode is accomplished
+by setting the LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer
+-simEngine flag inside the PDK. For example:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer { 
+-name pdklyr_METAL1 
+-pdk 45nm 
+-STOmode 2 
+<span class="ph CodeHighlight Bold">-simEngine D2C</span> // Simulation mode is D2C 
+...  </code></pre><p class="p">The -simEngine option can be set to
+either D2C or PVband. D2C means that Calibre LFD calls the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Drawn2contour_id0ad11277.html#id0ad11277-9542-42cb-b20c-70560e5038c3__Command_Drawn2contour_id0ad11277.xml#id0ad11277-9542-42cb-b20c-70560e5038c3" title="Generate empirically calibrated PV-bands using Square Directional Kernels (SDK) when access to the exact OPC recipe and models are not available.">Drawn2Contour</a> command to do simulations for
+this layer. PVband means that Calibre LFD calls the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> command to do simulations for
+this layer.</p>
+<p class="p">Simulations are per layer so each
+layer has only one -STOmode and only one ‑simEngine.</p>
+<p class="p">Mapping between an LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer call and a certain
+check is accomplished inside the PDK, using the LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO -pdkCheckName sub-option.
+For example:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO { 
+	-name m1_msc_STO 
+	-pdk 45nm 
+	-pdkLayer pdklyr_METAL1 
+	-definition { 
+		-property {} 
+		-macro m1_msc 
+		-file ./m1_msc_macro.svrf 
+		<span class="ph CodeHighlight Bold">-pdkCheckName METAL1_MSC</span> 
+	} 
+} 
+ 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKCheck { 
+	-name METAL1_MSC 
+	-pdk 45nm 
+	-type MinSpaceCheck 
+	-security 11 
+	-definition { 
+		-subwindow 1 
+		-property Space 
+		-minDRCspace 0.100 
+		-minLFDspace 0.064 
+	} 
+} 
+ </code></pre><p class="p">The PDK mapping shown in this example
+states that the check METAL1_MSC is used only with LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in either
+No-Simulation or Hybrid mode. In the rule file, you only need to
+call the check without needing to call LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer.
+This is demonstrated in the following example.</p>
+</div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idc24e56b5-76a4-428f-8009-0f7e51feaca3"><h2 class="title Subheading sectiontitle">Example 3</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in No‑Simulation
+mode, using a PDK flow.</p>
+<p class="p">In the PDK:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer { 
+	-name pdklyr_metal1 
+	-pdk 45nm 
+	-STOmode 2 
+	-simEngine PVband 
+	-processInfo { 
+		Security { 
+			OpticalModels 00 
+		... 
+ 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO { 
+	-name m1_msc_STO 
+	-pdk my_45nm 
+	-pdkLayer pdklyr_metal1 
+	-definition { 
+		-property {} 
+		-macro m1_msc 
+		-file m1_msc.svrf 
+		-pdkCheckName METAL1_MSC 
+	} 
+} 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKCheck { 
+	-name METAL1_MSC 
+	-pdk my_45nm 
+	-type MinSpaceCheck 
+	-security 11 
+	-definition { 
+		-subwindow 1 
+		-property Space 
+		-minDRCspace 0.100 
+		-minLFDspace 0.064 
+	} 
+} 
+ </code></pre><p class="p">In the rule file:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>LoadPDK ./fa_45nm 
+LFD<span class="ph fmvar:double_colon">::</span>RegisterLayer -pdk fa_45nm -Designlayer metal1 \ 
+	-Processlayer pdklyr_METAL1 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer metal1 -pdkCheckName METAL1_MSC \ 
+	-database $lfdErrorDatabase 
+LFD<span class="ph fmvar:double_colon">::</span>End 
+ </code></pre><p class="p">From the rule file code, Calibre LFD
+knows to load the PDK, which sets the STO mode of the layer pdklyr_metal1
+to No-Simulation by setting the LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer
+-STOmode flag to 2. The mapping between the STO m1_msc_STO and the
+check METAL1_MSC is accomplished with the LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO -pdkCheckName METAL1_MSC call.
+You then call the check in the rule file, without first calling
+the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command, as it is called automatically. This example check bypasses
+the simulation and have error markers returned from the mapped LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Use the
+LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Registerlayer_id022d3318.html#id022d3318-65ac-4379-8433-997004ab008d__Command_Registerlayer_id022d3318.xml#id022d3318-65ac-4379-8433-997004ab008d" title="Registers a design layer with the Calibre LFD processing engine.">RegisterLayer</a> command in No-Simulation and Hybrid
+modes while using a PDK flow to register the drawn layer in the
+rule file prior to its usage (as illustrated in the previous example).</p>
+</div>
+</div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id9fd15423-7a08-4bb4-8bc3-688a47c8bc6c"><h2 class="title Subheading sectiontitle">Example 4</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in No‑Simulation
+mode, using a non-PDK flow.</p>
+<p class="p">To set the STOmode, you need to use
+the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Setstomode_id2282c2ac.html#id2282c2ac-ce15-4e66-b9c1-0ff85ea94326__Command_Setstomode_id2282c2ac.xml#id2282c2ac-ce15-4e66-b9c1-0ff85ea94326" title="Sets the Structure Optimizer (STO) mode.">SetSTOMode</a> command. It sets the STO mode of
+the layers, or set it globally for all layers defined in the Calibre
+LFD kit.</p>
+<p class="p">After setting the mode, you invoke
+the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command to obtain matched patterns.</p>
+<p class="p">Remember that you must perform an
+explicit “source” to incorporate the Calibre LFD pattern file created
+using LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Structureoutput_idb9428bfc.html#idb9428bfc-595a-48fd-96b9-f2e613caeb5d__Command_Structureoutput_idb9428bfc.xml#idb9428bfc-595a-48fd-96b9-f2e613caeb5d" title="Takes hotspot and target layers and creates a pattern description file.">StructureOutput</a>.</p>
+<p class="p">The following rule file fragment demonstrates
+No-Simulation mode, using a non-PDK flow:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>SetSTOMode -layer metal -mode noSimulation 
+LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer -layer metal -macro m1_msc \ 
+	-file ./macro.svrf -interactDistance $<span class="ph fmvar:double_colon">::</span>env(PM_INTERACTION_DISTANCE) \ 
+	-checkName MinSpaceCheck1 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer metal -subwindow 1 -minDRCspace 0.10 \ 
+	-minLFDspace 0.05 -checkName MinSpaceCheck1 -database $DB \ 
+	-property Space 
+LFD<span class="ph fmvar:double_colon">::</span>END 
+ </code></pre><p class="p">The LFD<span class="ph fmvar:double_colon">::</span>SetSTOMode
+call sets the metal layer to No-Simulation mode, which means that
+the Calibre LFD package for the metal layer bypasses the simulation
+step. The LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command in turn gets the violation layer and then maps itself to
+a certain check through its -checkName option holding the name of
+the check (MinSpaceCheck1).</p>
+</div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id84bf33a0-c1a8-46bb-a959-c2b93ba5b555"><h2 class="title Subheading sectiontitle">Hybrid Mode</h2><p class="p">The Hybrid mode uses a property (match_type)
+attached to the output layer of LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer.
+The match_type is set to 0 if the library pattern does not contain
+any constraints. It is set to 1 if the library pattern does contain
+constraints, and the match result depends on the constraints to
+find a match. It is set to 2 if the library pattern does contain constraints,
+and the match result are found without any constraint at all.</p>
+<p class="p">The Calibre LFD tool does simulations
+and run the check (which is mapped to that STO) only on the non-exact
+matched patterns. Finally, the output layer of the check is the
+exactly matching patterns combined with the error markers that come
+from running the check on the non-exact patterns.</p>
+<p class="p">To run in Hybrid mode for a certain
+layer, first set the STO mode of this layer to Hybrid. Second, perform
+mapping between an LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer
+command and the check that takes the output layer of the STO.</p>
+<p class="p">Setting Hybrid mode parameters is
+accomplished using the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Addpdklayer_id7cdcd4f1.html#id7cdcd4f1-560b-4047-a901-95c416cc776e__Command_Addpdklayer_id7cdcd4f1.xml#id7cdcd4f1-560b-4047-a901-95c416cc776e" title="Defines a layer process to use when investigating a design.">addPDKLayer</a> -STOInfo option. Calibre LFD applies
+simulations only on the non-exact matched patterns coming from STO.
+This is accomplished by calling LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Incrementalselect_id55080f6a.html#id55080f6a-1728-4909-84f9-0a837caaabf0__Command_Incrementalselect_id55080f6a.xml#id55080f6a-1728-4909-84f9-0a837caaabf0" title="Performs intelligent clipping of one or more input layers based on your marker layers.">IncrementalSelect</a> followed by the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Lfdregion_id08d36c22.html#id08d36c22-b1b0-47f8-92de-724f8bb9d3a9__Command_Lfdregion_id08d36c22.xml#id08d36c22-b1b0-47f8-92de-724f8bb9d3a9" title="Defines regions within the layout, which can then be used to limit checking to those areas.">LFDregion</a> command, where both the -region
+option to LFD<span class="ph fmvar:double_colon">::</span>LFDregion
+and the ‑checkRegions option to LFD<span class="ph fmvar:double_colon">::</span>IncrementalSelect
+are given the name of the layer holding the non-exact matched patterns.
+Other options to these two commands, -halo and ‑minWidth, vary the
+simulation results. Calibre LFD assigns these options default values,
+however you cannot overwrite the -minWidth option which has a default
+value of 0.01 um. You can overwrite the ‑halo option in both commands
+using the -STOInfo option in the LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer command,
+inside the PDK. An example follows:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer { 
+	-name pdklyr_METAL1 
+	-pdk 45nm 
+	-STOmode 3 
+	-STOInfo { 
+		ISHalo 0.52 
+		lfdRegionHalo 0.53 
+		STORegionsSizing 0.3 
+	} 
+... 
+} </code></pre></div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__idf6687906-94d3-4d4c-a02b-1b402c8c0095"><h2 class="title Subheading sectiontitle">Example 5</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in hybrid
+mode using a PDK flow.</p>
+<p class="p">In the PDK:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer { 
+	-name pdklyr_metal1 
+	-pdk 45nm 
+	-STOmode 3 
+	-simEngine PVband 
+	-processInfo { 
+		Security { 
+			OpticalModels 00 
+... 
+ 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKSTO { 
+	-name m1_msc_STO 
+	-pdk 45nm 
+	-pdkLayer pdklyr_metal1 
+	-definition { 
+		-property {} 
+		-macro m1_msc 
+		-file ./m1_msc_macro.svrf 
+		-pdkCheckName METAL1_MSC 
+	} 
+} 
+LFD<span class="ph fmvar:double_colon">::</span>addPDKCheck { 
+	-name METAL1_MSC 
+	-pdk 45nm 
+	-type MinSpaceCheck 
+	-security 11 
+	-definition { 
+		-subwindow 1 
+		-property Space 
+		-minDRCspace 0.100 
+		-minLFDspace 0.064 
+	} 
+} 
+ </code></pre><p class="p">In the rule file:</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>LoadPDK ./45nm 
+LFD<span class="ph fmvar:double_colon">::</span>RegisterLayer -pdk 45nm -Designlayer metal1\ 
+	-Processlayer pdklyr_METAL1 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer metal1 -pdkCheckName METAL1_MSC\ 
+	-database $lfdErrorDatabase 
+LFD<span class="ph fmvar:double_colon">::</span>End 
+ </code></pre><p class="p">In the rule file, Calibre LFD loads
+the PDK. The STO mode of the layer pdklyr_metal1 is set to Hybrid
+by setting the LFD<span class="ph fmvar:double_colon">::</span>addPDKLayer
+-STOmode flag to 3.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Exact matched
+patterns in the output layer of STO have the property <span class="ph FontProperty emphasis">match_type</span> set
+to 0. Non‑exact matching patterns are set to 1.</p>
+</div>
+</div>
+<div class="section Subsection" id="id64e28c92-23d2-4d37-8c2b-ace75a184294__id055d4633-ffea-4246-bc99-7a43d77e1f89"><h2 class="title Subheading sectiontitle">Example 6</h2><p class="p">This example uses the LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer command in Hybrid
+mode, using a non-PDK flow.</p>
+<pre class="pre codeblock leveled"><code>LFD<span class="ph fmvar:double_colon">::</span>Begin 
+LFD<span class="ph fmvar:double_colon">::</span>SetSTOMode -layer metal1 -mode Hybrid 
+LFD<span class="ph fmvar:double_colon">::</span>PVband -layer metal1\ 
+	-layerRET lfd_metal1_mopc\ 
+	-foreground {{attenuated 0.06}}\ 
+	-background clear\ 
+	-pixel 0.02\ 
+	-modelDir {./setup/metal1/models}\ 
+	-resistFile {metal1.mod}\ 
+	-opticalSpanList {{P1W_D0 P1W_D50}}\ 
+	-doseSpanList {{1.0000 1.0200}} 
+LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer -layer metal1 -macro msc_m1 \ 
+	-file ./msc_m1_macro.svrf -interactDistance 2.0 -checkName MSC_METAL1 
+LFD<span class="ph fmvar:double_colon">::</span>MinSpaceCheck -layer metal1 -subwindow 1 -minDRCspace 0.10 \ 
+	-minLFDspace 0.05 -checkName MSC_METAL1 -database $DB 
+LFD<span class="ph fmvar:double_colon">::</span>END 
+ </code></pre><p class="p">The LFD<span class="ph fmvar:double_colon">::</span>SetSTOMode
+command sets the mode of the metal layer to Hybrid. This means that the
+Calibre LFD package for the metal layer does simulations and runs
+the check only on non‑exact matched patterns within the simulation
+region.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreLfdGeneralPurposeCommands_idccb78073.html" title="This reference section contains an alphabetized list of the supported general-purpose Calibre LFD commands.">Calibre LFD General-Purpose Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "StructureOptimizer"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Structureoptimizer_id64e28c92.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

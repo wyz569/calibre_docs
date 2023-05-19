@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="compile" />
+<meta name="abstract" content="Generates an SVRF DMACRO file from the input pattern library. The DMACRO file is the compiled pattern library that is used in a pattern matching run." />
+<meta name="description" content="Generates an SVRF DMACRO file from the input pattern library. The DMACRO file is the compiled pattern library that is used in a pattern matching run." />
+<meta name="prodname" content="Calibre Pattern Matching User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_pmatch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/17/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Pattern Matching User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd97904bf-1d89-4371-9ae9-7476e34c8615" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>compile</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="compile" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idd97904bf-1d89-4371-9ae9-7476e34c8615">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">compile</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">Generates an SVRF
+DMACRO file from the input pattern library. The DMACRO file is the compiled
+pattern library that is used in a pattern matching run. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The DMACRO format
+changed in releases 2019.2 and 2021.2. DMACRO files created with Calibre
+2021.2 cannot be used by earlier versions of Calibre. DMACRO files
+created from 2019.2 to 2021.1 cannot be used in Calibre versions
+2019.1 and earlier. </p>
+<p class="p">DMACRO files created prior to 2021.2 can be used
+in later versions of Calibre. </p>
+</div>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">pdl_lib_mgr</span> [‑turbo [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]] <br />
+<span class="keyword ParameterName Required">compile</span> <span class="keyword ParameterName Required">input</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> <span class="keyword ParameterName Required">output</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> <br />
+[<span class="keyword ParameterName Optional">marker</span> <span class="keyword ParameterName OptionalReplaceable">marker_name</span> {<span class="keyword ParameterName Optional">bbox</span> | <span class="keyword ParameterName Optional">bbox10</span> | <span class="keyword ParameterName Optional">empty</span> | <span class="keyword ParameterName Optional">matched</span> | <span class="keyword ParameterName Optional">drawn</span>} [<span class="keyword ParameterName Optional">layer</span> <span class="keyword ParameterName OptionalReplaceable">layer_name</span>]] ... <br />
+[<span class="keyword ParameterName Optional">maxjog</span> <span class="keyword ParameterName OptionalReplaceable">value</span>] [<span class="keyword ParameterName Optional">tilesize</span> <span class="keyword ParameterName OptionalReplaceable">value</span>] [<span class="keyword ParameterName Optional">password</span> <span class="keyword ParameterName OptionalReplaceable">password</span>] [<span class="keyword ParameterName Optional">enable_runtime_options</span>] <br />
+[<span class="keyword ParameterName Optional">gen_count_layer</span>] [<span class="keyword ParameterName Optional">gen_pat_names</span>] [gen_all_markers] [<span class="keyword ParameterName Optional">exclude_error_patterns</span>] <br />
+[epd_marker <span class="keyword ParameterName OptionalReplaceable">epd_marker_name</span>] [patterns “<span class="keyword ParameterName OptionalReplaceable">pat1 </span>[<span class="keyword ParameterName OptionalReplaceable">pat2</span> ...]”]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id5c893712-320e-4422-b0a4-8f0dc8cc9c8d">‑turbo [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that specifies
+to use multithreaded parallel processing. The argument set must
+be specified as shown in the syntax line, before the <span class="keyword ParameterName Required">compile</span> argument. </p>
+<p class="p">The optional value <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> is
+a positive integer that specifies the number of CPUs to use for
+multithreaded processing. If <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> is
+not specified, Calibre runs on the maximum number of CPUs available
+for which you have licenses. For best performance, it is recommended
+that you avoid specifying this value.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idd05194d9-ddfb-4fae-b94f-f686434ba501"><span class="keyword ParameterName Required">input</span> <span class="keyword ParameterName RequiredReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies the input pattern library.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id392e0441-038e-4da0-83b4-c142f8c157ae"><span class="keyword ParameterName Required">output</span> <span class="keyword ParameterName RequiredReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies the name of the generated DMACRO file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id2988497e-1bca-4e2f-aa4b-6a5b4f885a35"><span class="keyword ParameterName Optional">marker</span> <span class="keyword ParameterName OptionalReplaceable">marker_name</span> {<span class="keyword ParameterName Optional">bbox</span> | <span class="keyword ParameterName Optional">bbox10</span> | <span class="keyword ParameterName Optional">empty</span> | <span class="keyword ParameterName Optional">matched</span> layer <span class="keyword ParameterName OptionalReplaceable">layer_name</span> | drawn <span class="keyword ParameterName Optional">layer</span> <span class="keyword ParameterName OptionalReplaceable">layer_name</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that defines a
+marker name (<span class="keyword ParameterName OptionalReplaceable">marker_name</span>)
+and marker type to output to the compiled DMACRO library. This argument
+set can be used to enable compilation of a library in which all
+patterns do not have the same set of markers.</p>
+<p class="p">The marker argument set can be used both to specify which markers
+in the input PMDB are output to the compiled library and to add
+new markers. If a pattern in the PMDB has the marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span>,
+the marker is output to the compiled library with the marker type used
+in the PMDB. If a pattern does not have the marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span>,
+the marker is added with the specified <span class="keyword ParameterName OptionalReplaceable">marker_type</span> (also
+termed the “backup type”). </p>
+<p class="p">The exact behavior of this argument set depends on the set of
+markers present in the PMDB and whether gen_all_markers is specified.
+See “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id23163abb-32a1-4575-aa61-624e78ce40eb">Compile-Time Markers</a>” in the “Description”
+section and “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id4adb3822-0de7-4a95-a8e0-6105703a2109">Example 3: marker and gen_all_markers</a>”. </p>
+<p class="p">The allowed marker types are: </p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idd3ccb3bc-cca3-461c-9919-c009fbc3e893"><p class="p"><span class="keyword ParameterName Optional">bbox</span></p>
+<p class="p">The output pattern marker is the
+minimum bounding box for the pattern layer, including the extent.</p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id65e96d76-9ec4-4b67-8bab-9b0e5a76a53c"><p class="p"><span class="keyword ParameterName Optional">bbox10</span></p>
+<p class="p">The output pattern marker is approximately ten percent of the
+default extent.</p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idb51c705c-57f1-4c61-bd04-013d9349fbb5"><p class="p"><span class="keyword ParameterName Optional">empty</span></p>
+<p class="p">An empty marker generates no output on the marker layer for a
+pattern match.</p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id1b17a044-9d6d-450d-899d-71b69b368728"><p class="p"><span class="keyword ParameterName Optional">matched</span> layer <span class="keyword ParameterName OptionalReplaceable">layer_name</span></p>
+<p class="p">The output pattern marker is the matched geometries on <span class="keyword ParameterName OptionalReplaceable">layer_name</span>. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id2823bf05-9193-4c68-b352-bdb9301e972b"><p class="p"><span class="keyword ParameterName Optional">drawn</span> layer <span class="keyword ParameterName OptionalReplaceable">layer_name</span></p>
+<p class="p">The output pattern marker is the pattern geometries on <span class="keyword ParameterName OptionalReplaceable">layer_name</span>. </p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For exact
+matches, the <span class="keyword ParameterName Optional">drawn_layer</span> marker
+is the same as the <span class="keyword ParameterName Optional">matched_layer</span> marker.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id57ac08a4-d26c-44c0-9a55-ba8f6da20744"><span class="keyword ParameterName Optional">maxjog</span> <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that enables the tool to
+ignore jogs equal to or less than the specified tolerance value.
+The maximum value for maxjog is two times the global constraint (2*cglobal).
+The <span class="keyword ParameterName OptionalReplaceable">value</span> argument
+is specified in microns. See “<a class="xref fm:HeadingAndPage" href="Concept_JogTolerance_id4f418e1b.html#id4f418e1b-86ee-44f3-8229-254f24539542__Concept_JogTolerance_id4f418e1b.xml#id4f418e1b-86ee-44f3-8229-254f24539542" title="You can specify a jog tolerance for all patterns in a library. Jogs within the specified tolerance are ignored in both the pattern and the layout.">Jog Tolerance in Pattern Matching</a>”.</p>
+<div class="fig fignone" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id3ac9ba50-688b-4680-85ee-6deca04a6b41"><span class="figcap"><span class="fig--title-label">Figure 1. </span>maxjog
+Removal</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/pdl_lib_mgr_batch03.png" /></div><br /></div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The maxjog
+argument should only be used when generated patterns all contain
+the cglobal parameter with the same value.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id87a19cc5-0f12-47cc-bc56-9f9b3ab4276c"><span class="keyword ParameterName Optional">tilesize</span> <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional argument set specifies the tile size used by the tool during
+the pattern matching. The minimum <span class="keyword ParameterName OptionalReplaceable">value</span> for
+tilesize is 30. The <span class="keyword ParameterName OptionalReplaceable">value</span> argument
+is a positive integer specified in microns, and the default tile
+size is automatically calculated if the ‑tilesize option is not used.
+If the tilesize <span class="keyword ParameterName OptionalReplaceable">value</span> entered
+is smaller than either 30 or the minimum calculated tilesize required,
+then a warning is generated and the user-defined tile size is ignored
+in order to prevent pattern matches from being missed.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id2690097f-7bef-4c13-8e55-dc3d0c00b739"><span class="keyword ParameterName Optional">password</span> <span class="keyword ParameterName OptionalReplaceable">password</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument set that specifies a password, where <span class="keyword ParameterName OptionalReplaceable">password</span> is
+a string containing one or more alphanumeric and underscore characters.
+The password must be provided when specifying runtime options with
+the CMACRO options string. See the ‑password argument in “<a class="xref fm:HeadingAndPage" href="Command_CmacroOptionStrings_id7335a8a6.html#id7335a8a6-8c36-4627-964c-86a4bdaa6058__Command_CmacroOptionStrings_id7335a8a6.xml#id7335a8a6-8c36-4627-964c-86a4bdaa6058" title="The CMACRO command runs pattern matching on the specified DMACRO pattern library. CMACRO creates derived layer(s) containing the marker layer shapes generated from the pattern matching process. Runtime options are specified with an option string.">CMACRO for Calibre Pattern Matching</a>”. </p>
+<p class="p">If the password argument is specified, enable_runtime_options
+is automatically used during library compilation. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id608d9c8c-c3cc-4ada-8844-fb5e84cd443a"><span class="keyword ParameterName Optional">enable_runtime_options</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that enables runtime options. Runtime options are specified
+in the CMACRO options string. </p>
+<p class="p">If the CMACRO options string is
+non-empty and enable_runtime_options was not specified when the
+pattern library was compiled, the following error occurs: ERROR:
+CMACRO (pm:<var class="keyword varname">lib</var>) - The DMACRO is protected. This
+option is not allowed to be overridden as per the macro developer's
+specification.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id8912968c-7cfb-4b17-8563-e0aae6596321"><span class="keyword ParameterName Optional">gen_count_layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that causes count markers to be added to the compiled patterns.
+The marker layer name is count_marker.</p>
+<p class="p">Count markers enable you to determine the number and location
+of matches from a pattern matching run. See “<a class="xref fm:HeadingAndPage" href="Concept_CountMarkers_idf74826a6.html#idf74826a6-904d-49c5-8e8c-48f8c78c60de__Concept_CountMarkers_idf74826a6.xml#idf74826a6-904d-49c5-8e8c-48f8c78c60de" title="You can add count markers to the results from a pattern matching run. Count markers are small, non-overlapping markers for each matched result. They can be used to determine a count of matched results. Count markers are added when you compile a pattern library.">Count Markers</a>” for information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id31952872-4147-45d2-901d-69efb7751cb9"><span class="keyword ParameterName Optional">gen_pat_names</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that adds pattern names in the DMACRO comment section.
+When the DMACRO is generated, the names of all patterns in the compiled
+library are listed in the comment section before the definition
+of the DMACRO. For example: </p>
+<pre class="pre codeblock"><code>// Patterns to search for: pat_1, pat_2</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__ida0039d73-a670-417f-ac95-baf95aa3a244">gen_all_markers</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that causes the complete
+set of all markers in the input library to be output for all patterns.
+This option can be used to enable library compilation when all patterns
+in a library do not have the same marker set. </p>
+<p class="p">The complete set of markers defined across all patterns is output.
+If a marker is missing in a particular pattern, the marker is added
+with the type empty (the default backup type). </p>
+<p class="p">The gen_all_markers option can be used with the marker argument
+set to specify new markers and to specify a different backup type
+for existing markers. See “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id23163abb-32a1-4575-aa61-624e78ce40eb">Compile-Time Markers</a>” in the
+“Description” section for details and “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id4adb3822-0de7-4a95-a8e0-6105703a2109">Example 3: marker and gen_all_markers</a>”. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id58a63af4-174f-4b06-a0e8-d126232d6b30">exclude_error_patterns</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that causes the tool to good patterns to be compiled into
+the DMACRO, while patterns with errors are noted as errors and are
+not included.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If the
+exclude_error_patterns option is not set, a library with one or
+more error patterns fails to compile. </p>
+<p class="p">If patterns in the library have different marker sets and gen_all_markers
+is not specified, the library does not compile even when exclude_error_patterns
+is specified.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id0ac4ad03-6f27-4bc0-96c4-74602f6b353b">epd_marker <span class="keyword ParameterName OptionalReplaceable">epd_marker_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies the
+marker layer to use for the string property "EPD_string", which
+reports edge movement. This option is required if edge movement reporting
+is specified with ‑epd_string in the CMACRO options string. The <span class="keyword ParameterName OptionalReplaceable">epd_marker_name</span> can
+be any of the following:</p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id4c935d77-f4bf-4c2d-8abe-b05e0e5d317f"><p class="p">A marker
+that exists in the input pattern library. The marker must exist
+on all patterns. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idefdd50ee-3e1b-43ab-8dbe-229734c98d6c"><p class="p">A compile-time
+marker that is generated with the marker option. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idf347000f-7fc7-4f31-9935-44d486a12b3c"><p class="p">The compile-time
+marker count_marker that is generated with the gen_count_layer option. </p>
+</li>
+</ul>
+<p class="p">For more information regarding the EPD_string property, see the
+-epd_string option in “<a class="xref fm:HeadingAndPage" href="Command_CmacroOptionStrings_id7335a8a6.html#id7335a8a6-8c36-4627-964c-86a4bdaa6058__Command_CmacroOptionStrings_id7335a8a6.xml#id7335a8a6-8c36-4627-964c-86a4bdaa6058" title="The CMACRO command runs pattern matching on the specified DMACRO pattern library. CMACRO creates derived layer(s) containing the marker layer shapes generated from the pattern matching process. Runtime options are specified with an option string.">CMACRO for Calibre Pattern Matching</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id81d856a3-f88f-4ef1-8871-2702139c58cc">patterns “<span class="keyword ParameterName OptionalReplaceable">pat1</span> [<span class="keyword ParameterName OptionalReplaceable">pat2</span> ...]”</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies a subset
+of patterns to compile. Only the specified patterns are included
+in the SVRF DMACRO output file; other patterns are ignored. Only the
+specified patterns are considered when running other options. If
+a specified pattern does not exist in the library, a warning is
+issued. The list of patterns must be enclosed in quotes.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The pdl_lib_mgr compile utility
+reads a pattern library (PMDB) file and produces an SVRF DMACRO
+output file. See “<a class="xref fm:HeadingAndPage" href="Concept_DMACROAndCMACRO_id00d0db99.html#id00d0db99-0ae9-40b3-86cc-5d08fd798d25__Concept_DMACROAndCMACRO_id00d0db99.xml#id00d0db99-0ae9-40b3-86cc-5d08fd798d25" title="A DMACRO file defines the patterns in a pattern library in a format that can be included in the SVRF rule file. The CMACRO command runs pattern matching on the DMACRO library and generates output layers corresponding to the output markers in the pattern library.">DMACRO and CMACRO for Pattern Matching</a>”.</p>
+<p class="p">An error is generated if the DMACRO generated from a compile
+command would have only markers of type empty, as such a library
+never generates any output. To avoid this possibility you can specify
+the marker argument set with at least one <span class="keyword ParameterName OptionalReplaceable">marker_type</span> other
+than empty. Also see “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id062f02c5-0add-4fb6-8b6f-f3d615aad103">Example 4: DMACRO Library With Only the Count Markers and Empty Markers</a>” for a relevant
+example. </p>
+<p class="p">For default operation, with no optional arguments specified,
+all patterns in the PMDB must have the same marker set in order
+for the library to compile. Compile-time markers can be used to manage
+this restriction, as explained in the next section. </p>
+<div class="section Subsection" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id23163abb-32a1-4575-aa61-624e78ce40eb"><h2 class="title Subheading sectiontitle">Compile-Time
+Markers</h2><p class="p">If the PMDB does not have the same marker set for all patterns
+you must specify either gen_all_markers or include the marker argument
+set. The markers that are output to the compiled DMACRO library
+depend on the set of markers present in the input PMDB and the marker,
+gen_count_layer, and gen_all_markers arguments. The general behavior
+is described here. See “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id4adb3822-0de7-4a95-a8e0-6105703a2109">Example 3: marker and gen_all_markers</a>” for specific
+examples. </p>
+<p class="p">The following behavior takes place in all cases:</p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__ida2dc7c9a-7df6-4100-b4aa-2a1da67184ad"><p class="p">marker
+argument set — If the marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> exists
+in a pattern it is output with the marker type used in the PMDB.
+If the marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> does
+not exist in a pattern it is added with the specified <span class="keyword ParameterName OptionalReplaceable">marker_type</span> (the
+backup type).</p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id23d89563-300f-4666-8e2a-2db980556628"><p class="p">gen_all_markers
+— The default backup type is empty; that is, if a marker is missing
+in a particular pattern, the marker is added with the type empty.
+However, if the marker argument set is specified, the specified <span class="keyword ParameterName OptionalReplaceable">marker_type</span> is
+used as the backup type for <span class="keyword ParameterName OptionalReplaceable">marker_name</span>. </p>
+</li>
+</ul>
+</div>
+<p class="p"><span class="ph FontProperty HeadingLabel">Same Markers Exist in All Patterns of the PMDB</span></p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id362cd0c7-9bdd-414f-9157-0b71abcf5527"><p class="p">Default
+(no options) </p>
+<p class="p">All markers are output. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id65cdb9a8-94f1-446a-932c-45409a8ab5e5"><p class="p">gen_count_layer</p>
+<p class="p">All markers plus the count_marker layer are output. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id3f35e725-4b4a-4fcb-96b0-bc4adacea1ee"><p class="p">gen_all_markers</p>
+<p class="p">All markers are output. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idc740f384-b40f-4483-b7cd-3840f7efdae2"><p class="p">{marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> <span class="keyword ParameterName OptionalReplaceable">marker_type</span> [layer <span class="keyword ParameterName OptionalReplaceable">layer_name</span>]}…
+[gen_count_layer]</p>
+<p class="p">Only the specified markers are output. </p>
+<p class="p">If gen_count_layer is specified, the count_marker layer is also
+output. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idd81411b4-31e8-4fc3-8bc8-f8857d0a68dd"><p class="p">{marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> <span class="keyword ParameterName OptionalReplaceable">marker_type</span> [layer
+layer_name]}… gen_all_markers [gen_count_layer]</p>
+<p class="p">All markers are output due to the presence of the gen_all_markers
+option. </p>
+<p class="p">If gen_count_layer is specified, the count_marker layer is also
+output. </p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty HeadingLabel">Differing Markers Exist in the Patterns of the PMDB</span></p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id708eafe8-3626-4222-8962-0b42bb78f953"><p class="p">Default
+(no options)</p>
+<p class="p">Error. The library does not compile. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idb64b687b-0821-448b-acdc-60b3fbb0332f"><p class="p">gen_count_layer</p>
+<p class="p">Error. The library does not compile. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id1cbbd761-1bb3-4ff6-a46f-b75ea159d554"><p class="p">gen_all_markers</p>
+<p class="p">The complete set of all markers in the input PMDB is output to
+the compiled library. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idce734f36-1797-475c-a6b8-af105421d738"><p class="p">{marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> <span class="keyword ParameterName OptionalReplaceable">marker_type</span> [layer <span class="keyword ParameterName OptionalReplaceable">layer_name</span>]}…
+[gen_count_layer]</p>
+<p class="p">Only the specified markers are output. </p>
+<p class="p">If gen_count_layer is specified the count_marker layer is also
+output. </p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idbeef685b-56ae-42cc-8501-80740580b4ab"><p class="p">{marker <span class="keyword ParameterName OptionalReplaceable">marker_name</span> <span class="keyword ParameterName OptionalReplaceable">marker_type</span> [layer
+layer_name]}… gen_all_markers [gen_count_layer]</p>
+<p class="p">The complete set of all markers in the input PMDB is output to
+the compiled library. If the marker argument specifies a new marker,
+it is added. </p>
+<p class="p">If gen_count_layer is specified the count_marker layer is also
+output. </p>
+</li>
+</ul>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idbe4ced54-cb69-4dbb-8ef6-b7e7d23ee49d"><h2 class="title Subheading sectiontitle">Example
+1: Basic Operation</h2><p class="p">This example converts a previously-generated
+PMDB file into a DMACRO file for use in a pattern matching run.</p>
+<pre class="pre codeblock leveled"><code>$ pdl_lib_mgr compile input batch_patterns.pmdb output dmacro.svrf </code></pre></div>
+<div class="section Subsection" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id8e227748-9cc8-4406-9920-6d3f04a14422"><h2 class="title Subheading sectiontitle">Example
+2: gen_pat_names</h2><p class="p">The gen_pat_names option specifies
+to include the compiled pattern names in the DMACRO file. The pattern
+names are included in the comment section before the DMACRO definition. For
+example: </p>
+<pre class="pre codeblock leveled"><code>$ pdl_lib_mgr compile input lib_a.pmdb output lib_a.dmacro gen_pat_names </code></pre><p class="p">The resulting DMACRO has these lines for a library with two compiled
+patterns named pat_1 and pat_2.</p>
+<pre class="pre codeblock"><code>// Calibre PDL compiler v2017.3 Fri Sep 1 02:57:45 PDT 2017
+
+<span class="ph CodeHighlight orange">// Patterns to search for: pat_1, pat_2</span>
+
+// PMDB library last modified Mon Mar 27 10:36:19 2017
+// DMACRO generated Fri Sep  1 10:03:58 2017
+
+DMACRO pm:lib_a in_layer1 in_layer2
+ options_string
+ out_Marker {
+#DECRYPT&lt;encrypted block&gt;
+#ENDCRYPT</code></pre></div>
+<div class="section Subsection" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id4adb3822-0de7-4a95-a8e0-6105703a2109"><h2 class="title Subheading sectiontitle">Example
+3: marker and gen_all_markers </h2><p class="p">This example demonstrates the how to use gen_all_markers and
+the marker argument set to compile a PMDB in which the patterns
+have differing markers sets. See “<a class="xref fm:HeadingAndPage" href="#idd97904bf-1d89-4371-9ae9-7476e34c8615__id23163abb-32a1-4575-aa61-624e78ce40eb">Compile-Time Markers</a>” for a general
+explanation of these options. </p>
+<p class="p">Assume the input PMDB has these two patterns with the indicated
+markers:</p>
+<ul class="ul"><li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idc5e5a0d0-f568-4d9b-8296-b22f9dbb5b80"><p class="p">Pattern_1:
+Marker_A (bbox) and Marker_B (matched)</p>
+</li>
+<li class="li" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__idb0b4e39e-630b-46bd-b8d8-e7cf778c08b7"><p class="p">Pattern_2:
+Marker_A (bbox)</p>
+</li>
+</ul>
+<p class="p">This command line is used: </p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input lib.pmdb output lib.dmacro &lt;options&gt; </code></pre><p class="p">The following table gives the results for different &lt;options&gt;
+specifications. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id4ad21fdc-ced9-49c3-ba75-81510173abab" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.198in" /><col style="width:3.977in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40118e786"><p class="p">&lt;options&gt;</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40118e789"><p class="p">Result</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Error, because the two patterns do not have
+the same markers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">marker Marker_A empty</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_A (bbox) </p>
+<p class="p">Pattern_2: Marker_A (bbox)</p>
+<p class="p">Only Marker_A is output. The backup type of empty is not used
+because Marker_A exists for both patterns in the PMDB. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">marker Marker_B empty</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_B (matched) </p>
+<p class="p">Pattern_2: Marker_B (empty)</p>
+<p class="p">Only Marker_B is output. The backup type of empty is used in
+Pattern_2 because Marker_B does not exist for Pattern_2 in the PMDB. </p>
+<p class="p">Marker layers of type empty do not generate output from a pattern
+matching run, so Pattern_2 never generates output. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">marker Marker_B bbox</p>
+<p class="p">marker Marker_C bbox10</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_B (matched) and Marker_C
+(bbox10)</p>
+<p class="p">Pattern_2: Marker_B (bbox) and Marker_C (bbox10)</p>
+<p class="p">Marker_B and Marker_C are output. The backup type of bbox for
+Marker_B is used in Pattern_2 because Marker_B does not exist for
+Pattern_2 in the PMDB. </p>
+<p class="p">Marker_C does not exist in either pattern, so it is added with
+the specified type. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">gen_all_markers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_A (bbox) and Marker_B
+(matched)</p>
+<p class="p">Pattern_2: Marker_A (bbox) and Marker_B (empty)</p>
+<p class="p">Each pattern in the DMACRO has the complete set of markers. Pattern_2
+in the PMDB does not have Marker_B, so it is added with the default
+backup type of empty. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">gen_all_markers </p>
+<p class="p">marker Marker_B bbox</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_A (bbox) and Marker_B
+(matched)</p>
+<p class="p">Pattern_2: Marker_A (bbox) and Marker_B (bbox)</p>
+<p class="p">Each pattern in the DMACRO has the complete set of markers. Pattern_2
+in the PMDB does not have Marker_B, so it is added with the specified
+backup type of bbox. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e786 "><p class="p">gen_all_markers </p>
+<p class="p">marker Marker_A (bbox10)</p>
+<p class="p">marker Marker_C (bbox10)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40118e789 "><p class="p">Pattern_1: Marker_A (bbox), Marker_B (matched), Marker_C
+(bbox10)</p>
+<p class="p">Pattern_2: Marker_A (bbox), Marker_B (empty), Marker_C (bbox10)</p>
+<p class="p">Each pattern in the DMACRO has the complete set of markers plus
+the added Marker_C. Pattern_2 in the PMDB does not have Marker_B,
+so it is added with the default backup type of empty. Marker_C is
+added to both patterns with the specified type. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p"> </p>
+</div>
+<div class="section Subsection" id="idd97904bf-1d89-4371-9ae9-7476e34c8615__id062f02c5-0add-4fb6-8b6f-f3d615aad103"><h2 class="title Subheading sectiontitle">Example
+4: DMACRO Library With Only the Count Markers and Empty Markers</h2><p class="p">You can use the compile-time marker specification to generate
+a DMACRO library with only the count_marker layer and empty markers.
+Such a library generates only the count marker output in a pattern
+matching run. </p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input lib.pmdb output lib.dmacro 
+   marker junk empty gen_count_layer</code></pre><p class="p">where the marker junk does not exist in the PMDB. </p>
+<p class="p">It is instructive to understand why other combinations of options
+do not accomplish the same result. These cases are discussed next. </p>
+<p class="p">If the PMDB does not have any markers named junk with a type
+other than empty, the following command produces an error because
+it is not allowed to compile a library that has only empty markers. </p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input lib.pmdb output lib.dmacro marker junk empty</code></pre><p class="p">The following command only succeeds if the patterns in the PMDB
+all have the same marker sets. When it does succeed all markers
+in the PMDB are output, in addition to the count_marker layer. </p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input lib.pmdb output lib.dmacro gen_count_layer</code></pre><p class="p">If a the patterns in a PMDB do not all have the same marker set,
+the gen_all_markers can be used to enable the compilation to succeed.
+However, the gen_all_markers causes all markers in the PMDB to be
+output for all patterns. The following command causes all pattern
+markers to be output, plus the new marker junk with type empty,
+plus the count_marker layer. </p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input lib.pmdb output lib.dmacro 
+   marker junk empty gen_all_markers gen_count_layer</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_PdlLibMgrUtilityOptions_id144b9f79.html" title="The pdl_lib_mgr has several different command line options.">pdl_lib_mgr Utility Options</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_pmatch_user"
+                DocTitle = "Calibre® Pattern Matching User’s Manual"
+                PageTitle = "compile"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Compile_idd97904bf.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Pattern Matching User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

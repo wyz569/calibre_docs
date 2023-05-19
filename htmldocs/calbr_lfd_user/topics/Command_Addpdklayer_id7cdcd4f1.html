@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="addPDKLayer" />
+<meta name="abstract" content="Defines a layer process to use when investigating a design." />
+<meta name="description" content="Defines a layer process to use when investigating a design." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id7cdcd4f1-560b-4047-a901-95c416cc776e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>addPDKLayer</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="addPDKLayer" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id7cdcd4f1-560b-4047-a901-95c416cc776e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">addPDKLayer</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><span class="shortdesc">Defines
+a layer process to use when investigating a design.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">addPDKLayer </span>“<span class="keyword ParameterName Required">{</span>”<br />
+<span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">layer_process_name<br />
+</span><span class="keyword ParameterName Required">-pdk</span> <span class="keyword ParameterName RequiredReplaceable">pdkName<br />
+</span>[<span class="keyword ParameterName Optional">-STOmode</span> {<span class="keyword ParameterName Optional">1</span> | <span class="keyword ParameterName Optional">2</span> | <span class="keyword ParameterName Optional">3</span>}]<br />
+[<span class="keyword ParameterName Optional">-STOInfo</span> “<span class="keyword ParameterName Required">{</span>”<br />
+   [<span class="keyword ParameterName Optional">ISHalo</span> <span class="keyword ParameterName OptionalReplaceable">is_halo</span>]<br />
+   [<span class="keyword ParameterName Optional">lfdRegionHalo</span> <span class="keyword ParameterName OptionalReplaceable">lfd_region_halo</span>]<br />
+   [<span class="keyword ParameterName Optional">STORegionsSizing</span> <span class="keyword ParameterName OptionalReplaceable">sto_regions_sizing</span>“<span class="keyword ParameterName Required">}</span>”]<br />
+[<span class="keyword ParameterName Optional">-simEngine </span>{<span class="keyword ParameterName Optional">D2C</span> | <span class="keyword ParameterName Optional">PVband</span> | <span class="keyword ParameterName Optional">PrintableBand</span>}]<br />
+<span class="keyword ParameterName Required">‑processInfo </span>“<span class="keyword ParameterName Required">{</span>”<br />
+   [<span class="keyword ParameterName Optional">Security</span> “<span class="keyword ParameterName Required">{</span>” ProcessCorrection <span class="keyword ParameterName OptionalReplaceable">rw</span> PvBands <span class="keyword ParameterName OptionalReplaceable">rw </span>   “<span class="keyword ParameterName Required">}</span>”]<br />
+<span class="keyword ParameterName Required">   OpticalModels</span> <span class="keyword ParameterName RequiredReplaceable">opt_model_list<br />
+</span>   <span class="keyword ParameterName Required">ResistModels</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName RequiredReplaceable">res_model_name1</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName RequiredReplaceable">res_model1 </span>“<span class="keyword ParameterName Required">}</span>” “<span class="keyword ParameterName Required">}</span>” <br />
+   <span class="keyword ParameterName Optional">[EtchModels </span>“<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">etch_model_name1</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">etch_model1 </span>“<span class="keyword ParameterName Required">}</span>” “<span class="keyword ParameterName Required">}</span>”]<br />
+   [<span class="keyword ParameterName Optional">ddmFiles</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName Optional">ddmFileName</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">ddmFile </span>“<span class="keyword ParameterName Required">}</span>” “<span class="keyword ParameterName Required">}</span>”]<br />
+<span class="keyword ParameterName Required">   ProcessCorrection</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName Required">CMACRO</span> <span class="keyword ParameterName RequiredReplaceable">macroName </span>“<span class="keyword ParameterName Required">}</span>”<br />
+<span class="keyword ParameterName Required">   DrawnLayer</span> <span class="keyword ParameterName RequiredReplaceable">layer<br />
+</span>   <span class="keyword ParameterName Required">OpcLayers </span><span class="keyword ParameterName RequiredReplaceable">opc_layers_list<br />
+</span>   [<span class="keyword ParameterName Optional">TargetLayer</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">layer </span>“<span class="keyword ParameterName Required">}</span>”]<br />
+   [<span class="keyword ParameterName Optional">Targetforeground</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName Optional">transmission </span>“<span class="keyword ParameterName Required">}</span>”]<br />
+   [<span class="keyword ParameterName Optional">VisibleLayers</span> <span class="keyword ParameterName OptionalReplaceable">visible_layers_list</span>]<br />
+   [<span class="keyword ParameterName Optional">Visibleforeground</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName OptionalReplaceable">transmission </span>“<span class="keyword ParameterName Required">}</span>”]<br />
+   <span class="keyword ParameterName Required">opcInLayers</span> <span class="keyword ParameterName RequiredReplaceable">opc_in_layers_list<br />
+</span>   [<span class="keyword ParameterName Optional">tags2boxes</span> <span class="keyword ParameterName OptionalReplaceable">tags_layers_list</span>]<br />
+<span class="keyword ParameterName Required">   </span>[<span class="keyword ParameterName Optional">IslandLayers</span> <span class="keyword ParameterName OptionalReplaceable">island_layers_list</span>]<br />
+   [<span class="keyword ParameterName Optional">AuxLayers</span> <span class="keyword ParameterName OptionalReplaceable">aux_layers_list</span>]<br />
+   [<span class="keyword ParameterName Optional">modelDir</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">path </span>“<span class="keyword ParameterName Required">}</span>”]<br />
+   [<span class="keyword ParameterName Optional">doublePatterning</span> {<span class="keyword ParameterName Optional">yes</span> | <span class="keyword ParameterName Optional">trim</span> | <span class="keyword ParameterName Optional">split</span>}]<br />
+   [<span class="keyword ParameterName Optional">IndependentWindows</span> <span class="keyword ParameterName Optional">yes</span>]<br />
+   <span class="keyword ParameterName Required">RetLayers</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName Optional">mask0</span> “<span class="keyword ParameterName Required">{</span>” <br />
+      <span class="keyword ParameterName RequiredReplaceable">layers layer1_list<br />
+</span>      <span class="keyword ParameterName Required">transmission</span> <span class="keyword ParameterName RequiredReplaceable">trans_list<br />
+</span>      <span class="keyword ParameterName Required">background</span> <span class="keyword ParameterName RequiredReplaceable">bkgd<br />
+      </span>[<span class="keyword ParameterName Optional">ddmFiles</span> <span class="keyword ParameterName OptionalReplaceable">ddmFilesNamesList</span>]<br />
+      “<span class="keyword ParameterName Required">}</span>”<br />
+      [<span class="keyword ParameterName Optional">mask1…</span>]…<br />
+   “<span class="keyword ParameterName Required">}</span>”<br />
+   <span class="keyword ParameterName Required">PvBands</span> <span class="keyword ParameterName RequiredReplaceable">subwindow_list<br />
+</span>   [Drawn2Contour <span class="keyword ParameterName OptionalReplaceable">layer</span>]<br />
+   [<span class="keyword ParameterName Optional">PrintableModel</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName Optional">name</span> <span class="keyword ParameterName OptionalReplaceable">printableModelPath</span> | <span class="keyword ParameterName OptionalReplaceable">inlineModel</span> “<span class="keyword ParameterName Required">}</span>”]<br />
+   [<span class="keyword ParameterName Optional">PrintableBand </span><span class="keyword ParameterName OptionalReplaceable">subwindow_list</span>]<br />
+   [<span class="keyword ParameterName Optional">PrintableSplitMasks </span>“<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">split_masks_list</span> “<span class="keyword ParameterName Required">}</span>”]<br />
+“<span class="keyword ParameterName Required">}</span>”</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Defines a layer process to use
+when investigating a design using Calibre LFD. The layer process describes
+the following:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd8f35fa1-25b0-40f2-b5ba-b8b559187b10"><p class="p">The RET corrections that
+are applied to the mask.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idf8d76bce-b3f8-469a-a2bc-27103e88049f"><p class="p">The optical and resist models
+represent the lithographic process used at the fabrication facility.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id3712d245-46c9-4ac7-b713-b57c643c0944"><p class="p">The process variation experiments
+to be investigated.</p>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><p class="p">The
+set of arguments used with this command must be enclosed in braces,
+“<span class="keyword ParameterName Required">{</span>” … “<span class="keyword ParameterName Required">}</span>”.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id15ec58c3-f496-4fad-9a3d-f164296b90be"><span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">layer_process_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword used to supply
+a name for this layer process definition.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id39fd862d-239a-499b-8cc3-f5acc4e02d7b"><span class="keyword ParameterName Required">-pdk</span> <span class="keyword ParameterName RequiredReplaceable">pdkName</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument
+defining the PDK with which this layer process is associated.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id98e771ed-ca29-4cef-97bc-26e9a52a21de">-STOmode {1 | 2 | 3}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+flag specifying the mode is to be set to the StructureOptimizer
+(STO) mode of the layer defined in the Calibre LFD kit:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ida82a755d-2adf-4800-828e-71ed94629b7a"><p class="p">1 — LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Structureoptimizer_id64e28c92.html#id64e28c92-23d2-4d37-8c2b-ace75a184294__Command_Structureoptimizer_id64e28c92.xml#id64e28c92-23d2-4d37-8c2b-ace75a184294" title="Reduces layout data set being passed into Calibre LFD simulation, improving overall runtime performance. Pattern matching is used to find matches for patterns containing possible lithographic hotspots.">StructureOptimizer</a> runs in Simulation mode for this
+layer.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd8e75bba-cd41-407b-8615-f3e70e2c08fa"><p class="p">2 — LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer runs in No-Simulation
+mode for this layer.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idf76f31c9-48cb-4ff6-aee3-58303f6d6730"><p class="p">3 — LFD<span class="ph fmvar:double_colon">::</span>StructureOptimizer runs in Hybrid mode
+for this layer.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ida0c159bf-08ef-4b74-a3d3-b0090f4fb3b5">-STOInfo {}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and arguments
+specifying the Hybrid mode STO parameters defined in the Calibre
+LFD kit:</p>
+<pre class="pre codeblock leveled"><code>	-STOInfo { 
+		ISHalo <span class="keyword ParameterName OptionalReplaceable">is_halo</span> 
+		lfdRegionHalo <span class="keyword ParameterName OptionalReplaceable">lfd_region_halo</span> 
+		STORegionsSizing <span class="keyword ParameterName OptionalReplaceable">sto_regions_sizing</span> 
+	} </code></pre><p class="p">Three parameters can be defined:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id7e6d0123-b8b3-4f29-9381-4a590c6ce15f"><p class="p"><span class="keyword ParameterName Optional">ISHalo</span> <span class="keyword ParameterName OptionalReplaceable">is_halo</span></p>
+<p class="p">Optional keyword and argument specifying
+a value to be passed to the -halo option of the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Incrementalselect_id55080f6a.html#id55080f6a-1728-4909-84f9-0a837caaabf0__Command_Incrementalselect_id55080f6a.xml#id55080f6a-1728-4909-84f9-0a837caaabf0" title="Performs intelligent clipping of one or more input layers based on your marker layers.">IncrementalSelect</a> command. If this option is not
+set, Calibre LFD assigns it a value of 0.5 um.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide86e9fd9-35f3-48fd-925e-d0763ea65a20"><p class="p"><span class="keyword ParameterName Optional">lfdRegionHalo</span> <span class="keyword ParameterName OptionalReplaceable">lfd_region_halo</span></p>
+<p class="p">Optional keyword and argument specifying
+a value to be passed to the -halo option of the LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Lfdregion_id08d36c22.html#id08d36c22-b1b0-47f8-92de-724f8bb9d3a9__Command_Lfdregion_id08d36c22.xml#id08d36c22-b1b0-47f8-92de-724f8bb9d3a9" title="Defines regions within the layout, which can then be used to limit checking to those areas.">LFDregion</a> command. If this option is not
+set, Calibre LFD assigns it a default value of 0.5 um.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The value
+for ISHalo is greater than that for lfdRegionHalo.</p>
+</div>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idabc4890f-2ef2-4ea8-9b4e-562a3f9b8664"><p class="p"><span class="keyword ParameterName Optional">STORegionsSizing</span> <span class="keyword ParameterName OptionalReplaceable">sto_regions_sizing</span></p>
+<p class="p">Optional keyword and argument used
+to size the region of the simulation non-exact region before passing
+it to the LFD<span class="ph fmvar:double_colon">::</span>IncrementalSelect
+and LFD<span class="ph fmvar:double_colon">::</span>LFDregion. commands.
+If you want to apply simulation to the region around the non-exact matched
+patterns, you need to size the simulation region by that value.
+Also running simulations on the area around non-exact matched patterns
+allows you to view complete PV-bands around the patterns. If this
+option is not set, Calibre LFD assigns it a default value of 0.2
+um.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">As the
+STORegionsSizing value increases, the simulation runtime increases
+as well.</p>
+</div>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5b61b58c-e394-417f-a243-1e81c82e663a">-simEngine {D2C | PVband}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+specifying the simulation engine to be used:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idae0463ea-dbd4-4979-996f-cf9d2bc21306"><p class="p">D2C — Calibre LFD calls LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Drawn2contour_id0ad11277.html#id0ad11277-9542-42cb-b20c-70560e5038c3__Command_Drawn2contour_id0ad11277.xml#id0ad11277-9542-42cb-b20c-70560e5038c3" title="Generate empirically calibrated PV-bands using Square Directional Kernels (SDK) when access to the exact OPC recipe and models are not available.">Drawn2Contour</a> to do simulations for this layer.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide8b770c0-6659-49c1-a860-7ae4290820dd"><p class="p">PVband — Calibre LFD calls
+LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> to do simulations for this layer.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idcb57c9f7-b407-4e05-aa24-481ec8472f6a"><span class="keyword ParameterName Required">-processInfo</span> “<span class="keyword ParameterName Required">{</span>” …“<span class="keyword ParameterName Required">}</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword introducing
+the process information for this type of layer. The process information
+includes the input layers and the simulations to be performed. The
+process information block must be enclosed in braces.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id28128f42-ff05-4bad-9666-f61b0910927e">Security “{” <span class="keyword ParameterName OptionalReplaceable">data_type</span> <span class="keyword ParameterName OptionalReplaceable">rw </span>{<span class="keyword ParameterName OptionalReplaceable">data_type</span> <span class="keyword ParameterName OptionalReplaceable">rw</span>}…“}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and security
+settings specific to this process definition. These settings override
+the default security settings defined through the security settings
+in the <a class="xref fm:HeadingOnly" href="Command_Createpdk_id3d8ffc3e.html#id3d8ffc3e-58fc-4947-be3b-a4f196148eab__Command_Createpdk_id3d8ffc3e.xml#id3d8ffc3e-58fc-4947-be3b-a4f196148eab" title="Registers the PDK, setting up the appropriate namespace within Calibre LFD.">createPDK</a> statement.</p>
+<p class="p">You
+can define read/write security for any of these <span class="keyword ParameterName OptionalReplaceable">data_types</span>:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id3bf2ce74-b190-4f40-afe1-1612aa19db93"><p class="p">ProcessCorrection — SVRF or
+TVF rule file to use for applying any needed process correction
+to the mask layers before generating the PV-bands.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd65a9d76-d402-441d-b5c5-f2d27ed06845"><p class="p">PvBands — PV-band data generated
+by Calibre LFD.</p>
+</li>
+</ul>
+<p class="p">Allowed values for any of the
+security_levels are 00, 01, 10, and 11. The first digit (or bit) defines
+the read security and the second digit defines the write security.
+In general, the settings are interpreted as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idfb767eee-f5e9-4706-b990-e8863fd058d0" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Security Settings within a Layer Process
+Definition</span></caption><colgroup><col style="width:0.786in" /><col style="width:5.063in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d45893e782"><p class="p">Setting</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d45893e785"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e782 "><p class="p">read = 0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e785 "><p class="p">When Calibre LFD is run,
+no information related to this type of data is written to the transcript
+or output to any resulting files.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e782 "><p class="p">read =1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e785 "><p class="p">When Calibre LFD is run,
+all relevant information related to this type of data is written
+to the transcript or output to any resulting files, including RDB
+files.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e782 "><p class="p">write = 0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e785 "><p class="p">Settings defined in this
+PDK to control the generation of this type of data cannot be modified
+by you through the TVF rule file used to run Calibre LFD.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e782 "><p class="p">write = 1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d45893e785 "><p class="p">Settings defined in this
+PDK to control the generation of this type of data may be modified
+by you through the TVF rule file used to run Calibre LFD.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id08ffd051-9fe1-4ca6-9f33-c813a4cd2617"><span class="keyword ParameterName Required">OpticalModels</span> <span class="keyword ParameterName RequiredReplaceable">opt_model_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword followed by
+a list of name/model pairs defining the optical models to use for
+PV-band generation. All optical models must either be supplied inline
+or reside within the model_dir directory.</p>
+<p class="p">Each optical model, whether
+supplied by name or inline, must be enclosed in braces ({}) and
+the entire list of name/model pairs must be enclosed in an outer
+pair of braces.</p>
+<p class="p">The expanded syntax is as follows:</p>
+<p class="p"><span class="keyword ParameterName Required">OpticalModels</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName RequiredReplaceable">opt_model_name1</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName RequiredReplaceable">opt_model1 </span>“<span class="keyword ParameterName Required">}</span>”
+[<span class="keyword ParameterName OptionalReplaceable">opt_model_nameN</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName OptionalReplaceable">opt_modelN </span>“<span class="keyword ParameterName Required">}</span>”…“<span class="keyword ParameterName Required">}</span>”]</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id4adc09e6-86b4-4ddb-b8cd-07f33e3b8d1c"><span class="keyword ParameterName Required">ResistModels</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName RequiredReplaceable">res_model_name1</span> “<span class="keyword ParameterName Required">{</span>”<span class="keyword ParameterName RequiredReplaceable">res_model1 </span>“<span class="keyword ParameterName Required">}</span>” “<span class="keyword ParameterName Required">}</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword defining the
+resist model to use for PV-band generation. The first argument is
+a name by which the model is referenced. The second argument is
+the resist model, and must either be supplied inline or reside within
+the model_dir directory. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5a5f2af8-122f-4a00-b531-3cac641b875b"><span class="keyword ParameterName Optional">EtchModels </span>“{”<span class="keyword ParameterName OptionalReplaceable">etch_model_name1</span> “{”<span class="keyword ParameterName OptionalReplaceable">etch_model1 </span>“}” “}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword defining the
+etch model to use for PV-band generation. The first argument is
+a name by which the model is referenced. The second argument is
+the etch model, and must either be supplied inline or reside within
+the model_dir directory. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idded0cba1-9c7a-44df-a5dd-77653fd03ca7">ddmFiles “{”ddmFileName “{”<span class="keyword ParameterName OptionalReplaceable">ddmFile</span>“}” “}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument defining a
+list of domain decomposition method (DDM) libraries. Input to ddmFiles
+can be a file name, an inline DDM model, or an environment variable. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id59ea9511-ca0d-422c-aae4-0c161a573549"><span class="keyword ParameterName Required">ProcessCorrection</span> “<span class="keyword ParameterName Required">{</span>” <span class="keyword ParameterName Required">CMACRO</span> <span class="keyword ParameterName RequiredReplaceable">macroName </span>“<span class="keyword ParameterName Required">}</span>”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and value specifying
+the RET recipe block to use for applying any needed process correction
+to the mask layers before generating the PV-bands. This block can
+take either of the following forms:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5c875d6e-0443-4103-a1c7-ad75021bd237"><p class="p">A macro defined elsewhere
+in the PDK. The argument to the ProcessCorrection keyword is always
+the macro name plus any arguments required by the macro.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id46408428-2485-4da4-b4bb-82daa92d7e93"><p class="p">Simple SVRF commands. When
+using this method, you do not benefit from the namespacing provided
+by using a macro.</p>
+</li>
+</ul>
+<p class="p">The entire
+RET recipe block must be enclosed in an outer pair of braces ({}).
+Contact your Siemens representative for support when writing the
+RET recipe block.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd05b48f0-b035-45b2-8797-71fb598c1264"><span class="keyword ParameterName Required">DrawnLayer</span> <span class="keyword ParameterName RequiredReplaceable">layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and value specifying
+the name by which the drawn layer is originally referenced inside
+of the ProcessCorrection block of code. This layer is very close,
+if not exact, to what the designer implemented prior to any retargeting
+or pre-opc processing.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5280ead7-dea5-487f-bc04-c9ea91a62eeb"><span class="keyword ParameterName Required">OpcLayers</span> <span class="keyword ParameterName RequiredReplaceable">opc_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and list defining
+the names of the output layers (corrected using OPC) generated by
+the RET recipe in the ProcessCorrection block.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p"><span class="keyword ParameterName Required">opcLayers</span> “<span class="keyword ParameterName Required">{</span>“ <span class="keyword ParameterName RequiredReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layerN</span>…]
+“<span class="keyword ParameterName Required">}</span>”</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For any
+of the keywords used to specify zero or more layers, the entire
+list must be enclosed in braces ({}).</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide51b1118-067b-497c-98d2-fa3f521da16e">TargetLayer “{” <span class="keyword ParameterName OptionalReplaceable">layer </span>“}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+to specify the name of a layer referenced in the ProcessCorrection
+block that is to be the target layer for OPC. If not specified,
+the target layer for OPC is assumed to be the DrawnLayer. This keyword
+is only used when an optimizer is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id4f31bb76-8c40-4991-936b-e03b624f7c33">Targetforeground “{” <span class="keyword ParameterName OptionalReplaceable">transmission </span>“}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+used to define a foreground transmission for the TargetLayer. This
+keyword is used when the TargetLayer is not included in the list
+of OpcInLayers. The transmission can be supplied using any of the
+following forms: dark, clear, {<span class="ph FontProperty emphasis">attenuated factor</span>},
+{<span class="ph FontProperty emphasis">real image</span>},
+which are explained in <a class="xref fm:Table" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__id4de7a560-574d-4b1b-8ffc-51ff26900681">Table 1</a>. This keyword is only used when an optimizer
+is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id64c9a324-9d70-4a83-b6dc-20b50488e57f">VisibleLayers <span class="keyword ParameterName OptionalReplaceable">visible_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list used
+to specify the names of one or more optically visible layers referenced
+in the ProcessCorrection block. This list includes layers such as
+scattering bar or fill layers. This keyword is only used when an
+optimizer is defined.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p">VisibleLayers “{“ <span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layerN</span>…]
+“}”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id29d57107-cd14-4a15-a57c-bce341f6d6cf">Visibleforeground “{“ <span class="keyword ParameterName OptionalReplaceable">transmission </span>“}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+used to define a foreground transmission for the VisibleLayers.
+This keyword is used when the VisibleLayers are not included in
+the list of RetLayers.The transmission can be supplied using any
+of the following forms: dark, clear, {<span class="ph FontProperty emphasis">attenuated factor</span>},
+{<span class="ph FontProperty emphasis">real image</span>},
+which are explained in <a class="xref fm:Table" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__id4de7a560-574d-4b1b-8ffc-51ff26900681">Table 1</a>. This keyword is only used when an optimizer
+is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide3fda6a9-406e-4916-87e6-6115a946ffc7"><span class="keyword ParameterName Required">opcInLayers</span> <span class="keyword ParameterName RequiredReplaceable">opc_in_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and list defining
+all layers referenced in the ProcessCorrection block that are to
+be passed to LITHO OPC operation in addition to the DrawnLayer.
+That is, the list does not include the name of the DrawnLayer. However,
+it may include the names of layers that are also specified as the
+TargetLayer, VisibleLayers, AuxLayers, or as tags2boxes layers.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p"><span class="keyword ParameterName Required">opcInLayers</span> “{“ <span class="keyword ParameterName RequiredReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layerN</span>…]
+“}”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5d0fd287-1510-46b8-a281-458e23d6cfc5">tags2boxes <span class="keyword ParameterName OptionalReplaceable">tags_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list used
+to specify the names of one or more layers referenced in the ProcessCorrection
+block. These are layers that are designed to hold marker geometries generated
+by the LITHO tools as a part of the process correction step.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p">tags2boxes “{“ <span class="keyword ParameterName OptionalReplaceable">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layerN</span>…]
+“}”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id282ac3f5-96f2-459d-ab6e-90f2fb0865a5">IslandLayers <span class="keyword ParameterName OptionalReplaceable">aux_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list used
+to specify the names of one or more user-supplied island layers
+of special interest or requiring special treatment.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p">IslandLayers “{“ <span class="keyword ParameterName Optional">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layer</span>N…]
+“}”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id4f990062-375a-4bbc-93b1-185b0bd3f737">AuxLayers <span class="keyword ParameterName OptionalReplaceable">aux_layers_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list used
+to specify the names of one or more additional layers referenced
+in the ProcessCorrection block. Use of these layers varies according
+to the RET recipe.</p>
+<p class="p">The expanded syntax for this
+keyword is as follows:</p>
+<p class="p">AuxLayers “{“<span class="keyword ParameterName Optional">layer</span> [<span class="keyword ParameterName OptionalReplaceable">layer</span>N…]
+“}”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd3138daf-c942-42d7-b1f3-9ecd2ac6db05"><span class="keyword ParameterName Optional">modelDir</span> “{” <span class="keyword ParameterName OptionalReplaceable">path </span>“}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+used to supply the pathname for the model directory, when models
+are not supplied inline.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idbc034a9d-3953-4a46-b729-bfde1bbbac53"><span class="keyword ParameterName Optional">doublePatterning</span> {yes | trim | <span class="keyword ParameterName Optional">split}</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+defining the type of processing to perform when specifying two mask
+layers and two sets of exposure settings. When this keyword is specified,
+you must also specify a second mask with the <span class="keyword ParameterName Required">RetLayers “{” “}” </span>keyword.</p>
+<p class="p">By default, when two mask layers
+and sets of exposure settings are defined, simulations calculate
+the PV-bands resulting from exposing the wafer surface twice before
+developing. That is, expose twice, then develop once.</p>
+<p class="p">When this keyword is specified,
+simulations calculate the PV-bands resulting from exposing and developing
+using the first mask, then exposing and developing using the second
+mask.</p>
+<p class="p">The “doublePatterning split”
+option refers to pitch-splitting techniques, and the “doublePatterning
+trim” option refers to sacrificial printing-assist features, which
+32 nm techniques often use in favor of pitch-splitting.</p>
+<p class="p">The use of the keyword doublePatterning
+does not effect the use of EtchModels. When EtchModels are defined,
+the developing is a two-step process that encompasses separate simulations,
+one for the resist process and one for the etching process.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd5683d35-b7bc-4f8d-82e5-eef07a0d6e80"><span class="keyword ParameterName Optional">IndependentWindows</span> <span class="keyword ParameterName Optional">yes</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and argument
+that modifies the default behavior in which PV-bands are calculated.
+By default subwindows are assumed to have been constructed as extensions
+to previously-created subwindows. In other words, the process conditions
+defined in “{“<span class="keyword ParameterName RequiredReplaceable">focuslist1</span>“}”
+“{“<span class="keyword ParameterName RequiredReplaceable">doselist1</span>“}”
+“{“<span class="keyword ParameterName RequiredReplaceable">sizelist1</span>“}”
+are assumed to be cumulative, and if the first subwindow explicitly
+defines two process condition and the second subwindow defines two
+different process conditions, then the PV-band for the second subwindow
+is calculated based on all four process conditions.</p>
+<p class="p">Specifying “IndependentWindows
+yes” instructs the command to calculate PV-bands based only on those
+process conditions defined explicitly for the subwindow.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id12cc5618-b71e-46be-abea-9e06eb2d5efa"><span class="keyword ParameterName Required">RetLayers</span> “{” “}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword used to introduce
+the mask data for the process layer being defined. This keyword
+is followed by a minimum of one set of mask data. Supply one mask
+description when only one mask is required to print the process
+layer, two mask descriptions when two masks are required to print
+the process layer, and so on. The complete syntax is as shown below:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">RetLayers</span> “{” “{”<span class="keyword ParameterName Required">mask0</span> “{”
+				<span class="keyword ParameterName Required">layers</span> <span class="keyword ParameterName RequiredReplaceable">layer_list</span>
+				<span class="keyword ParameterName Required">transmission</span> <span class="keyword ParameterName RequiredReplaceable">trans_list</span>
+				<span class="keyword ParameterName Required">ddmFiles</span> <span class="keyword ParameterName RequiredReplaceable">ddm_files_list</span>
+				<span class="keyword ParameterName Required">background</span> <span class="keyword ParameterName RequiredReplaceable">bkgd</span> “}” “}”
+				[“{”mask1“{”<span class="keyword ParameterName OptionalReplaceable">mask_description</span>“}”…“}”]
+			“}”</code></pre><p class="p">The secondary keywords that
+introduce the mask data are as follows:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idd41bc755-8509-451a-ba58-f3be4fe59496"><p class="p">mask0 — For the first mask.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__idac9deb3d-c040-43da-8b1f-005b44c4e787"><p class="p">mask1 — For the second mask.</p>
+</li>
+</ul>
+<p class="p">Each mask description must include
+three sets of arguments:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ida46702ac-9cbc-48f7-8a86-c8960dd6e2c9"><p class="p"><span class="keyword ParameterName Required">layers</span> <span class="keyword ParameterName RequiredReplaceable">layer_list</span></p>
+<p class="p">Required keyword and argument used
+to specify the names by which the individual mask layers used to
+generate the PV-band. These can be either original or derived polygon
+layers.</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id20996bc0-60f4-400b-8a69-8f16ea195092"><p class="p">Supply a single layer name
+when generating PV-bands from only the OPC-corrected layer.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__iddafe7dec-7942-47eb-9db1-667ac44f8877"><p class="p">Supply a list of layer names
+when generating PV-bands from the OPC-corrected layer plus SRAF
+layers and so on. When you specify a list of layer names, you must
+also specify a list as the argument for -foreground.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id025f90f5-28d9-4518-af7c-2fad12d4b8fb"><p class="p"><span class="keyword ParameterName Required">transmission</span> <span class="keyword ParameterName RequiredReplaceable">trans_list</span></p>
+<p class="p">Required argument, transmission,
+followed by the list of optical transmission values for the mask’s
+foreground. </p>
+<p class="p">The
+number of optical transmission values must match the number of layers
+in <span class="keyword ParameterName RequiredReplaceable">layer_list</span>,
+and they must be supplied in the same order with the first <span class="keyword ParameterName RequiredReplaceable">trans</span> value representing
+the transmission for the first layer, the second <span class="keyword ParameterName RequiredReplaceable">trans</span> value
+representing the transmission for the second layer, and so on. Each
+transmission value must be enclosed in braces ({}).</p>
+<p class="p">When more than
+one transmission value is specified, the entire list must be enclosed in
+braces.</p>
+<p class="p">The transmission
+can be supplied using any of the following forms: dark, clear, {<span class="ph FontProperty emphasis">attenuated factor</span>},
+{<span class="ph FontProperty emphasis">real image</span>},
+which are explained in <a class="xref fm:Table" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__id4de7a560-574d-4b1b-8ffc-51ff26900681">Table 1</a>.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id36d83d18-5478-4da8-a3b5-b9ecae7db27c"><p class="p"><span class="keyword ParameterName Required">background</span> <span class="keyword ParameterName RequiredReplaceable">bkgd </span></p>
+<p class="p">Required argument, background,
+followed by the optical transmission. </p>
+<p class="p">The
+background can be supplied using any of the following forms: dark,
+clear, {<span class="ph FontProperty emphasis">attenuated factor</span>},
+{<span class="ph FontProperty emphasis">real image</span>}.
+In addition, for each layer the background must be the compliment
+of the foreground transmission value.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ideadf3959-9cae-4ac4-855c-e86733ff067c"><p class="p">ddmFiles <span class="keyword ParameterName OptionalReplaceable">ddmFilesNamesList</span></p>
+<p class="p">Optional argument defining a list
+of domain decomposition method (DDM) libraries. Input to ddmFiles
+can be a file name, an inline DDM model, or an environment variable. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id98e63d20-8ed4-4188-9c1e-f87e3591f56f"><span class="keyword ParameterName Required">PvBands </span> <span class="keyword ParameterName RequiredReplaceable">subwindow_list</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and list defining
+the process experiments for which PV-bands are to be generated.
+The process experiments must be supplied as a list of at least one
+subwindow and experiment pair. The entire list must be enclosed
+in a Tcl list, and each list within the <span class="keyword ParameterName RequiredReplaceable">subwindow_list</span> must
+be enclosed in a Tcl list.</p>
+<p class="p">The expanded syntax for <span class="keyword ParameterName RequiredReplaceable">subwindow_list</span> is
+as follows:</p>
+<p class="p"><span class="keyword ParameterName Required">PvBands</span> “<span class="keyword ParameterName Required">{</span>“</p>
+<p class="p"><span class="keyword ParameterName Required">subwindow1</span> “{”</p>
+<p class="p">“{”<span class="keyword ParameterName RequiredReplaceable">focuslist1</span>“}”</p>
+<p class="p">“{”<span class="keyword ParameterName RequiredReplaceable">doselist1</span>“}”</p>
+<p class="p">“{”<span class="keyword ParameterName RequiredReplaceable">sizelist1</span>“}”</p>
+<p class="p">[“{”<span class="keyword ParameterName RequiredReplaceable">resistlist1</span>“}”
+“{”<span class="keyword ParameterName RequiredReplaceable">etchlist1</span>“}”]</p>
+<p class="p">“}”</p>
+<p class="p">subwindow2 “{”</p>
+<p class="p">“{”<span class="keyword ParameterName OptionalReplaceable">focuslist2</span>“}”</p>
+<p class="p">“{”<span class="keyword ParameterName OptionalReplaceable">doselist2</span>“}”</p>
+<p class="p">“{”<span class="keyword ParameterName OptionalReplaceable">sizelist2</span>“}”</p>
+<p class="p">[“{”<span class="keyword ParameterName OptionalReplaceable">resistlist2</span>“}”
+“{”<span class="keyword ParameterName OptionalReplaceable">etchlist2</span>“}”]</p>
+<p class="p">“}” …]</p>
+<p class="p">“}”</p>
+<p class="p">To use the <a class="xref fm:HeadingOnly" href="Contain_CustomizablePvBands_id022b14a0.html#id022b14a0-1a89-4497-8c4a-b6437fa6af81__Contain_CustomizablePvBands_id022b14a0.xml#id022b14a0-1a89-4497-8c4a-b6437fa6af81" title="The Calibre LFD Customizable PV-bands interface provides you with flexibility in generating simulation contours and PV-bands, and the ability to use your custom-generated contours with the Calibre LFD Checks.">Customizable PV-Bands</a> interface, you can define contours,
+PV-bands and overlay PV-bands for each subwindow, by making <a class="xref fm:HeadingOnly" href="Command_Contour_id961076dc.html#id961076dc-f5f2-4cc1-8770-2256dfe854b0__Command_Contour_id961076dc.xml#id961076dc-f5f2-4cc1-8770-2256dfe854b0" title="Creates contours which can be used to create other contours, PV-bands, or to perform checks.">Contour</a>, <a class="xref fm:HeadingOnly" href="Command_Band_id63cdc7c8.html#id63cdc7c8-c808-4016-949c-549571939149__Command_Band_id63cdc7c8.xml#id63cdc7c8-c808-4016-949c-549571939149" title="Creates PV‑bands with two input contours.">Band</a>, and <a class="xref fm:HeadingOnly" href="Command_Overlayband_id527db481.html#id527db481-0bdd-4357-93c9-66f102941005__Command_Overlayband_id527db481.xml#id527db481-0bdd-4357-93c9-66f102941005" title="Creates overlay PV-bands with two input contours.">OverlayBand</a> calls respectively. Focus, dose,
+size, etch and resist models are defined by the customized PV-bands.
+In this case, the expanded syntax for <span class="keyword ParameterName RequiredReplaceable">subwindow_list</span> is
+as follows:</p>
+<p class="p"><span class="keyword ParameterName Required">PvBands</span> “<span class="keyword ParameterName Required">{</span>“</p>
+<p class="p"><span class="keyword ParameterName Required">subwindow1</span> “{”</p>
+<p class="p">Contour “{” <span class="keyword ParameterName OptionalReplaceable">Contour_command_options</span> “}”...</p>
+<p class="p">Band “{” <span class="keyword ParameterName OptionalReplaceable">Band_command_options</span> “}”...</p>
+<p class="p">OverlayBand “{” <span class="keyword ParameterName OptionalReplaceable">OverlayBand_command_options</span> “}”...</p>
+<pre class="pre codeblock leveled"><code>			“}”
+			subwindow2 “{” 
+				Contour “{” <span class="keyword ParameterName OptionalReplaceable">Contour_command_options</span> “}”... 
+				Band “{” <span class="keyword ParameterName OptionalReplaceable">Band_command_options</span> “}”... 
+				OverlayBand “{” <span class="keyword ParameterName OptionalReplaceable">OverlayBand_command_options</span> “}”... 
+			“}” …] 
+		“}” </code></pre><p class="p">The subwindows are referenced
+as follows:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide7d7b3df-8984-4a16-9630-2dc8798bf374"><p class="p">subwindow1 — For the first
+experiment.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id6c28c19f-112d-4030-97ac-6b2a96538d4d"><p class="p">subwindow2 — For the second
+experiment.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id00775afb-a708-4075-83ba-4ddd34eead44"><p class="p">and so on.</p>
+</li>
+</ul>
+<p class="p">Each process experiment must
+take the form of list of three lists:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id4ff941ac-8995-45c1-a0f7-e804c3344118"><p class="p">the first list must be the
+focuslist.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ide1f144e7-2334-43c2-97c9-2481dcc7c1ad"><p class="p">the second list must be the
+doselist.</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id4daed2c9-c1a0-4358-a7dd-b19c4948db37"><p class="p">the third list must be the
+sizelist.</p>
+</li>
+</ul>
+<p class="p">The contents of the lists are
+as follows:</p>
+<ul class="ul"><li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id5e91e386-510c-4538-834a-1b1ab7d496e9"><p class="p">focuslist</p>
+<p class="p">A list of optical model names defining
+the models to use for PV-band generation. Optical model names must
+match the names of optical models defined through the <span class="keyword ParameterName Required">OpticalModels</span> keyword.
+Optical model names may be repeated as needed to define the conditions
+to be tested.</p>
+<p class="p">The
+list is order-dependent, with the order matching the order in the
+associated doselist<span class="ph FontProperty emphasis"> and </span>sizelist.</p>
+<p class="p">The list of optical model names
+must be enclosed in braces ({}).</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__ida3e02e7e-07b4-4a0e-838a-92dcb4465779"><p class="p">doselist</p>
+<p class="p">A list of values defining the doses
+to use for PV-band generation. Doses must be expressed as real numbers
+representing percentages.</p>
+<p class="p">The
+list is order-dependent, with the order matching the order in the
+associated focuslist<span class="ph FontProperty emphasis"> and </span>sizelist.</p>
+<p class="p">The list of doses must be enclosed
+in braces ({}).</p>
+</li>
+<li class="li" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id804a9d14-c2b3-49c2-99f7-da278f0b912e"><p class="p">sizelist</p>
+<p class="p">A list of values defining the mask
+bias to apply during PV-band generation. The mask bias must be expressed
+as real numbers representing the bias size.</p>
+<p class="p">The list is order-dependent, with
+the order matching the order in the associated focuslist <span class="ph FontProperty emphasis">and</span> doselist.</p>
+<p class="p">The list of mask bias sizes must
+be enclosed in braces ({}).</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id09b0a6a6-2cfe-456e-bbd5-3a399b6c65aa">PrintableModel “{” name <span class="keyword ParameterName OptionalReplaceable">printableModelPath</span> | <span class="keyword ParameterName OptionalReplaceable">inlineModel</span> “}”]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list containing
+the printable model name and model definition. The model definition
+can be a model path or an inline model.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id41a4aac8-9428-4339-afd2-04d4199efe19">PrintableBand <span class="keyword ParameterName OptionalReplaceable">subwindow_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and list defining
+the process experiments for which PV-bands are to be generated.
+The process experiments must be supplied as a list of at least one
+subwindow/experiment pair. The entire list must be enclosed in a
+Tcl list, and each list within the <span class="keyword ParameterName OptionalReplaceable">subwindow_list</span> must
+be enclosed in a Tcl list, as in the <span class="keyword ParameterName Required">PvBands</span> definition
+above.</p>
+<p class="p">If PrintableBand is defined,
+the PV-bands are generated using the PrintableModel, as if LFD<span class="ph fmvar:double_colon">::</span>PrintableBand has been
+called.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id383547bf-232b-483b-84c0-e56c15a43eff">PrintableSplitMasks “{” <span class="keyword ParameterName OptionalReplaceable">split_masks_list</span> “}”]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and Tcl list
+used to specify the names of one or more split masks.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id7cdcd4f1-560b-4047-a901-95c416cc776e__id823e9984-cab7-4f23-a35d-d930f9c5de2c">-d2cInfo “{” <span class="keyword ParameterName OptionalReplaceable">subwindows</span> “}”</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword introducing
+the D2C information. The -d2cInfo block <span class="keyword ParameterName OptionalReplaceable">subwindows</span> information
+must be enclosed in braces. If -d2cInfo is defined for a certain
+layer, the PV‑bands for this layer is not called by default. You
+must call either LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> or LFD<span class="ph fmvar:double_colon">::</span><a class="xref fm:HeadingOnly" href="Command_Drawn2contour_id0ad11277.html#id0ad11277-9542-42cb-b20c-70560e5038c3__Command_Drawn2contour_id0ad11277.xml#id0ad11277-9542-42cb-b20c-70560e5038c3" title="Generate empirically calibrated PV-bands using Square Directional Kernels (SDK) when access to the exact OPC recipe and models are not available.">Drawn2Contour</a>.</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">subwindow1</span> “{” <span class="keyword ParameterName Required">minBandFile</span> “{{” <span class="keyword ParameterName RequiredReplaceable">minBandFile_content</span> “}}”
+<span class="keyword ParameterName Required">maxBandFile</span> “{{” <span class="keyword ParameterName RequiredReplaceable">maxBandFile_content</span> “}}”
+[minBandSetup “{” <span class="keyword ParameterName OptionalReplaceable">setup_file_content</span> “}”]
+[maxBandSetup “{” <span class="keyword ParameterName OptionalReplaceable">setup_file_content</span> “}”]
+[maxBandTag <span class="keyword ParameterName OptionalReplaceable">max_band_tag</span>]
+[minBandTag <span class="keyword ParameterName OptionalReplaceable">min_band_tag</span>] “}”</code></pre><pre class="pre codeblock"><code><span class="keyword ParameterName Required">subwindowN</span> “{” <span class="keyword ParameterName Required">minBandFile</span> “{{” <span class="keyword ParameterName RequiredReplaceable">minBandFile_content</span> “}}”<span class="keyword ParameterName Required">
+maxBandFile</span> “{{” <span class="keyword ParameterName RequiredReplaceable">maxBandFile_content</span> “}}”
+[minBandSetup “{” <span class="keyword ParameterName OptionalReplaceable">setup_file_content</span> “}”]
+[maxBandSetup “{” <span class="keyword ParameterName OptionalReplaceable">setup_file_content</span> “}”]
+[maxBandTag <span class="keyword ParameterName OptionalReplaceable">max_band_tag</span>]
+[minBandTag <span class="keyword ParameterName OptionalReplaceable">min_band_tag</span>] “}”</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">If minBandTag and maxBandTag are set, they need to be defined
+in their respective minBandSetup and maxBandSetup content lists.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_PdkCommands_id862f8f30.html" title="A process-specific Calibre LFD kit is the set of rule files and models required for applying Calibre LFD practices to a specific design. A Calibre LFD kit can take the form of either a single file, called a Process Design Kit (PDK), or a set of individual files and directories. PDKs offer the advantages of portability, security, and ease of use.">PDK Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "addPDKLayer"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Addpdklayer_id7cdcd4f1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Rule File Format" />
+<meta name="abstract" content="An optional Calibre LSG rule file that can be used to define neighboring unit pattern placement constraints to create layout clips that are DRC realistic." />
+<meta name="description" content="An optional Calibre LSG rule file that can be used to define neighboring unit pattern placement constraints to create layout clips that are DRC realistic." />
+<meta name="prodname" content="Calibre LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="version" content="v12.2" />
+<meta name="release" content="2016_01" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2017-11-09" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lsg_user" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="2" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 25, 2021" />
+<meta name="DocumentTitle" content="Calibre® LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idfa146562-9a26-4539-a6cf-5d6132f460c9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Rule File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Rule File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idfa146562-9a26-4539-a6cf-5d6132f460c9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Rule File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input to: Calibre LSG layout clip generation </p>
+<p class="shortdesc">An optional Calibre LSG rule file
+that can be used to define neighboring unit pattern placement constraints
+to create layout clips that are DRC realistic.</p>
+<div class="note note" id="id3a56fe06-e2b4-407c-bec6-74796b4b3a7a"><span class="notetitle">Note:</span> <p class="p">You can use
+the Calibre LSG GUI to facilitate the creation of an LSG rule file.
+See “<a class="xref fm:HeadingAndPage" href="GUIRefT_CalibreLSGGUIReference_ida11962e2.html#ida11962e2-1a8c-4966-bd85-3227c54f6e08__GUIRefT_CalibreLSGGUIReference_ida11962e2.xml#ida11962e2-1a8c-4966-bd85-3227c54f6e08" title="The main window of the Calibre LSG GUI is located in the LSG tab of the Calibre LSG Layout Generation window. The Calibre LSG GUI provides the graphical user interface for setting up and testing the rules, weights, and pattern definitions used for testing and generating the Calibre LSG layout clips.">Calibre LSG GUI Reference</a>” for details
+on this interface.</p>
+</div>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">You specify a rule file using the following argument in your
+LSG options file:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Optional">rules</span>=<span class="keyword ParameterName OptionalReplaceable">rules_file</span></code></pre><p class="p">Refer to “<a class="xref fm:HeadingAndPage" href="Command_CalibreLfdLsg_id4a5f952a.html#id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__Command_CalibreLfdLsg_id4a5f952a.xml#id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793" title="Calibre LSG generates layout clips that can be used for creating initial pattern libraries and other early design phase layout applications.">calibre -lsg</a>” for
+Calibre LSG command usage and file argument descriptions.</p>
+<p class="p">The LSG rule file must conform to the following formatting and
+syntax rules:</p>
+<ul class="ul"><li class="li" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__id03694940-3ddc-4ab8-b6b5-ed6b31780585"><p class="p">A “target” unit pattern position is defined
+with a lower‑left origin point along with its adjacent neighbors
+in an x‑ and y‑axis grid. For example, the target unit pattern in <a class="xref fm:Figure" href="#idfa146562-9a26-4539-a6cf-5d6132f460c9__idf54ade5d-9f24-4e45-881f-a1f89a76cd84">Figure 1</a> has position <span class="ph FontProperty equationvariable">x</span>,<span class="ph FontProperty equationvariable">y</span> at
+0,0.</p>
+<div class="fig fignone" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__idf54ade5d-9f24-4e45-881f-a1f89a76cd84"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Neighbor
+Unit Pattern Positions</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lfd_lsg_neighbor_rule.png" /></div><br /></div>
+</li>
+<li class="li" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__idd61b88c3-c64d-4bf7-99b3-407d4f7e16c2"><p class="p">The neighboring
+unit patterns positions are referenced to the lower‑left origin
+point of the target unit pattern and are constrained to avoid patterns
+that result in DRC violations in the output layout clip.</p>
+</li>
+<li class="li" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__id88e0082a-16a8-41d6-b113-a3fba6f8d3e8"><p class="p">Target unit pattern x‑ and y‑origin point,
+neighbor unit pattern ID with weights and constraints are included
+in each line with the following syntax:</p>
+<p class="p">‘<span class="keyword ParameterName Required">[</span>’‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">x</span>,<span class="keyword ParameterName RequiredReplaceable">y</span>‘<span class="keyword ParameterName Required">}</span>’<span class="keyword ParameterName Required">,</span>‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">target_patternID</span>,…‘<span class="keyword ParameterName Required">}</span>’‘<span class="keyword ParameterName Required">]</span>’<span class="keyword ParameterName Required">;</span>‘<span class="keyword ParameterName Required">[</span>’‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">patternID</span><span class="keyword ParameterName Required">,</span><span class="keyword ParameterName RequiredReplaceable">patternWeight</span>‘<span class="keyword ParameterName Required">}</span>’;…‘<span class="keyword ParameterName Required">]</span>’ </p>
+</li>
+<li class="li" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__id3fa97c77-5116-43e9-b060-8dd1787fa2a3"><p class="p">If contradicting
+rules are defined, an error message is displayed with the contradicting rules
+and the pattern generated.</p>
+<p class="p">An example of the rule file format is shown.</p>
+<pre class="pre codeblock"><code>## Area rules
+##  At least two connected unit patterns
+[{-1,0},{3.2}];[{-2,0},{0.0,1.1,3.1}]; \
+[{-1,1},{0.0,1.1,3.2}];[{1.1,0};]
+[{0,1},{3.4}];[{1,1},{0.0,1.1}]; \
+[{-1,1},{0.0,1.1,3.1}];[{1.1,0};{3.4,0}]
+[{0,1},{3.1}];[{0,2},{0.0,1.1,3.2}]; \
+[{-1,1},{0.0,1.1,3.1}];[{1.1,0};{3.4,0}]</code></pre></li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">All unit patterns listed are
+neighbors to the target unit pattern position (<span class="ph FontProperty equationvariable">x</span>,<span class="ph FontProperty equationvariable">y</span>).
+All weights are relative to the other neighbor unit patterns specified
+(if more than one). </p>
+<p class="p">The definitions for the syntax parameters used for the rule file
+are as follows:</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__idba9de5b6-5ec6-4145-9111-99743372c72d"><span class="keyword ParameterName RequiredReplaceable">x</span>,<span class="keyword ParameterName RequiredReplaceable">y</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that
+specifies the lower‑left origin point for the target unit pattern. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__id97f15589-d1b5-4d6e-a108-2e1aadfb89f3"><span class="keyword ParameterName RequiredReplaceable">target_patternID</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that
+specifies the pattern ID for a unit pattern in the target position. You
+can specify multiple unit pattern ID numbers in a comma separated
+list.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa146562-9a26-4539-a6cf-5d6132f460c9__id6a5afed9-c243-4350-816a-8e2e1699bcf6"><span class="keyword ParameterName RequiredReplaceable">patternID</span>,<span class="keyword ParameterName RequiredReplaceable">patternWeight</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument set
+that specifies the pattern ID for a neighbor unit pattern with respect to
+the target unit pattern followed by a weight assignment for the
+neighbor unit pattern for selection priority. If the weight is zero,
+the pattern ID for that neighbor is not allowed in the layout clip.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">In this example, if the target unit pattern is
+in position <span class="ph FontProperty equationvariable">x</span>=
+‑1 and <span class="ph FontProperty equationvariable">y</span>=
+0 and is unit pattern ID 1.1, then unit pattern ID 3.4 is disabled.</p>
+<pre class="pre codeblock"><code>[{-1,0},{1.1}];[{3.4,0};]</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreLSGFileFormats_id17b077c7.html" title="Specific formatting of unit pattern priorities, definitions, and rules is required for Calibre LSG input files. This formatting is done automatically when you use the Calibre LSG GUI to create these files (recommended method). The basic format and syntax of these input files is provided as a reference for file editing or when manual file creation is the chosen option.">Calibre LSG File Formats</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lsg_user"
+                DocTitle = "Calibre® LSG for Synthetic Layout Generation User’s Manual"
+                PageTitle = "Rule File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_RuleFileFormat_idfa146562.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® LSG for Synthetic Layout Generation User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

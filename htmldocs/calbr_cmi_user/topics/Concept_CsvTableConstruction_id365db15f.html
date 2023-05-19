@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="CSV Table Construction" />
+<meta name="abstract" content="The CSV format is a general-purpose interface for measurement sites. It is available for both input and output and can be easily created and modified with a text editor, spreadsheet program, or user software." />
+<meta name="description" content="The CSV format is a general-purpose interface for measurement sites. It is available for both input and output and can be easily created and modified with a text editor, spreadsheet program, or user software." />
+<meta name="DC.subject" content="CSV table" />
+<meta name="keywords" content="CSV table" />
+<meta name="prodname" content="Calibre Metrology Interface (CMi) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre Metrology Interface product manual." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cmi_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Metrology Interface (CMi) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="none" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id365db15f-77a7-48a6-b4d7-b27deb935fb0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CSV Table Construction</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CSV Table Construction" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id365db15f-77a7-48a6-b4d7-b27deb935fb0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CSV Table
+Construction</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The CSV format
+is a general-purpose interface for measurement sites. It is available
+for both input and output and can be easily created and modified
+with a text editor, spreadsheet program, or user software.</span>
+</div>
+<p class="p">It is recommended to use a CSV
+output file as a template to modify. Output CSV files can be directly
+used as inputs to subsequent runs, and unnecessary objects are ignored.
+CSV files may be viewed or edited as text files, or more conveniently
+using a spreadsheet editor (such as Microsoft Excel). <a class="xref fm:Figure" href="#id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida4d80465-bee8-4976-bead-172628771e26">Figure 1</a> shows an example CSV table.</p>
+<div class="fig fignone" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida4d80465-bee8-4976-bead-172628771e26"><span class="figcap"><span class="fig--title-label">Figure 1. </span>CSV Table</span><br /><div class="imagecenter"><img class="image imagecenter" height="114" src="../graphics/csv1.JPG" width="434" /></div><br /></div>
+<p class="p">All parameters on a line are separated by commas.
+All strings are case sensitive. Text values may not have spaces
+within the string. Spaces adjacent to the commas are ignored. The
+context of values is top-level (mask or wafer), unless indicated
+to be in a “cell”. The cell context is indicated by the “cell” field.
+Alternatively, the context can be indicated by the suffix “(cell
+= cellname)”, where cellname must exactly match an existing cell
+name in the assembled mask layout. All numeric values in each object
+must be in the exact same context. <a class="xref fm:Figure" href="#id365db15f-77a7-48a6-b4d7-b27deb935fb0__id1d5cdeba-1575-4773-a19d-2eaa37b4c267">Figure 2</a> illustrates an example CSV for a hierarchical
+cell.</p>
+<div class="fig fignone" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id1d5cdeba-1575-4773-a19d-2eaa37b4c267"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Example of a CSV for a Hierarchical
+Cell</span><br /><div class="imagecenter"><img class="image imagecenter" height="135" src="../graphics/csv_example.jpg" width="396" /></div><br /></div>
+<p class="p">Each collection of objects has a header line
+followed by object lines. A collection begins with a line containing
+an allowed object type in the first field (header line). The minimum
+file would contain only the “Marker” collection (a Marker header
+and a Marker object). Other collections are not required. Markers
+are not required when Search is used. A Search requires a FeatureSpec
+and a Region. The order of the collections of the objects is not
+required. A header line begins with the object type name (for example,
+“Marker”). The values following on the line are the allowed property
+names for the object type. The names must all be spelled correctly
+with the correct capitalization. The order of the fields is not
+required, except that the order of the object values must match
+with the order in the header.</p>
+<p class="p">The lines immediately following a header line
+are objects of that type. The name of the object is in the first
+field. Object names must be unique within each collection. Objects
+lines beginning with “#” are ignored.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">CSV objects can be
+deactivated by adding a # prefix before each entry.</p>
+</div>
+<p class="p">The fields following the object name have property
+values for the object, corresponding to the property name order
+in the header. It is not required to have values for some of the
+fields (such as description, target_value, and tolerance), but most
+are required. The order of the objects in the collection is not
+used. </p>
+<p class="p">Required fields for Marker are: Marker, position_x,
+position_y, size, and orientation. “Marker” must be first and the
+others can be in any order.</p>
+<p class="p">Other pre-defined fields are optional:</p>
+<ul class="ul"><li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id7b80a4e2-6b12-4b0c-8aa2-5ec626e95170"><p class="p">window_width: The Window Width job-based
+default value is used.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id23cacda8-d4a4-4af1-b9a7-a8ff911970c4"><p class="p">target _value: Specifies a target value.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id1107150a-d6e0-4231-91c5-638ead6acae9"><p class="p">tolerance: Specifies a tolerance value.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida9edc66a-65a7-411d-bddc-78e63498b492"><p class="p">algorithm:
+The default Metrology Algorithm job-based default is used (in <span class="ph uicontrol bold">Output Options</span>). The possible
+algorithms are:</p>
+<ul class="ul"><li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__iddd06d59a-afbb-4b20-98fd-05cfa582f019"><p class="p">ave: Take the average of measurements
+within the marker, across the window width.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id946ac99d-1c5c-40bb-a853-5dc51f8d4f2c"><p class="p">min: Measure the minimum width. This
+is useful for finding pinches in hot spots.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ide81f27bb-c2cd-4ce6-a3a8-97f23ab44ee3"><p class="p">max: Measure the maximum width. This
+is useful for finding bulges in hot spots.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__idc486c213-c603-4ca7-a639-2b045a6362e7"><p class="p">contacts: Measure a two-dimensional
+hole (for contacts). Sites using the contacts algorithm in CMi are
+automatically centered in both the X and Y directions. Once the
+center is found, the correct site orientation is perpendicular to
+the longest edge of the feature.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id8c187de9-14a6-4b50-b0d0-1fe6da1433a2"><p class="p">image: Get the image only.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ide7d81270-8e4b-4e67-a373-deabcf9907ab"><p class="p">ellipse: Measure a two-dimensional elliptical
+area (similar to contacts).</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id641387f4-5376-4336-bd55-d837c5502427"><p class="p">contour: Get the image fit contours
+to the field.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id19d4c31b-4218-414d-9ec8-1d2e98fc5874"><p class="p">group: Specify the field-of-view and
+designate the measurements inside to be extracted from that image.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__idd86e1d33-3b71-4036-844d-1e3ea7c3057d"><p class="p">undefined: Apply the Default Metrology
+Algorithm value.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida9c48103-562d-4bce-9a26-e11f85c26701"><p class="p">SEM_align: Specify the marker extent
+for the AMAT SEM measurement method. The marker extent indicates
+the pattern recognition region. See “<a class="xref fm:HeadingAndPage" href="TaskTop_AddingSemAlignmentLocations_id8a66fad4.html#id8a66fad4-97d3-49ef-aab2-6d1bf0a71377__TaskTop_AddingSemAlignmentLocations_id8a66fad4.xml#id8a66fad4-97d3-49ef-aab2-6d1bf0a71377" title="You can specify the marker extent for the SEM measurement method. The markers are used to align the SEM pattern recognition region.">Adding SEM Alignment Locations</a>”.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida438b21c-d331-44b4-9cfd-0d8ee36422ce"><p class="p">OM_align: Specifies a Global Alignment
+(GA) Optical Microscope (OM) marker. OM_align markers are treated
+as SEM_align markers.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__idc415e9d2-7198-4dfd-b1c4-fe23ccb58087"><p class="p">algorithm is treated as SEM_align markers.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id2fa96e58-e2b5-4cef-b701-b779546fb908"><p class="p">kind: Allows you to designate multiple
+measurements per marker for AMAT SEM (see “<a class="xref fm:HeadingAndPage" href="Concept_DesignateMultipleMeasurementsPerMarker_id7020d695.html#id7020d695-25f7-4e70-a776-dcc3b1664768__Concept_DesignateMultipleMeasurementsPerMarker_id7020d695.xml#id7020d695-25f7-4e70-a776-dcc3b1664768" title="Multiple measurements can be made from a single marker using the Kind property. This feature is only available for the AMAT SEM format.">Designate Multiple Measurements Per Marker</a>”).</p>
+<ul class="ul"><li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__idd205f950-e707-4bc3-ba87-61cec9e08256"><p class="p">rows: Specify the number of rows in
+an array (if specified as kind = array).</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__id59c2cbc5-3471-427d-b3d8-6a7bec42e2ef"><p class="p">cols: Specify the number of columns
+in an array (if specified as kind = array).</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__ida14453f0-a792-4eaf-baab-6d02bfad8d25"><p class="p">cell: Specifies that the context is the
+top-cell of the job.</p>
+</li>
+<li class="li" id="id365db15f-77a7-48a6-b4d7-b27deb935fb0__idc21b4935-06c6-428c-ab1a-3ce573a8e014"><p class="p">description: A text description of the
+entry.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_UsingCalibreMetrologyInterface_idc89ea968.html" title="The Calibre Metrology Interface contains a number of operations to support SEM measurements and design-based off-line marking.">Using the Calibre Metrology Interface</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmi_user"
+                DocTitle = "Calibre® Metrology Interface (CMi) User’s Manual"
+                PageTitle = "CSV Table Construction"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CsvTableConstruction_id365db15f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Metrology Interface (CMi) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

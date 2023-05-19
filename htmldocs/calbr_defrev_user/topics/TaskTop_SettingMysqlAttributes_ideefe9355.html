@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Setting MySQL Attributes" />
+<meta name="abstract" content="There are two MySQL attributes, max_allowed_packet, and max_questions, that you set to use the Defect Database from Calibre DefectReview." />
+<meta name="description" content="There are two MySQL attributes, max_allowed_packet, and max_questions, that you set to use the Defect Database from Calibre DefectReview." />
+<meta name="prodname" content="Calibre DefectReview User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_defrev_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DefectReview™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="none" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ideefe9355-1f13-478a-abb5-6d4d2b048388" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Setting MySQL Attributes</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Setting MySQL Attributes" />
+<meta name="attributes" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ideefe9355-1f13-478a-abb5-6d4d2b048388">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Setting MySQL Attributes</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">There are two MySQL attributes, max_allowed_packet,
+and max_questions, that you set to use the Defect Database from
+Calibre DefectReview.</p>
+<p class="p">The max_allowed_packet attribute controls the maximum size of
+its communication buffer. As we are storing the files as blobs,
+max_allowed_packet size should be large enough to store the files</p>
+<p class="p">The max_questions attribute of the MySQL table illustrates how
+many queries a user can execute within one hour. A value of 0 for
+max_questions means that infinite queries can be executed. The value
+for this attribute should be 0 (zero).</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id5f931652-495e-466c-952f-5fd78aedd6fc"><span class="ph cmd">To set
+max_allowed_packet, use one of the following methods:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id73cd8bf9-1c29-4ccd-84ee-9880b6b79049"><p class="p">Add
+the following to the <span class="ph filepath">my.cnf</span> file, then restart
+the MySQL server:</p>
+<pre class="pre codeblock"><code>max_allowed_packet=1073741824</code></pre><p class="p">With a Linux-based operating system, this file is in <span class="ph filepath">/etc/my.cnf</span>.</p>
+</li>
+<li class="li" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id7b465797-ae22-41d6-be19-eab2779aeafd"><p class="p">In the following
+method to update the max_allowed_packet size, the value of max_allowed_packet
+is reset to default if the MySQL server is restarted:</p>
+<ol class="ol" type="a"><li class="li" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__idaac5d608-f214-4a21-a127-ffc831b8dcca"><p class="p">Log in
+to the MySQL Database server.</p>
+<pre class="pre codeblock"><code>mysql -h &lt;host&gt; -u &lt;root_user&gt; -p &lt;root_password&gt;</code></pre></li>
+<li class="li" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__ida878a5bb-b456-42c9-a85e-d336644886bd"><p class="p">Run the following
+command from the MySQL prompt:</p>
+<pre class="pre codeblock"><code>SET GLOBAL max_allowed_packet=1073741824;</code></pre></li>
+<li class="li" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id420c7c92-5897-45b1-936d-e8fff5e7c07e"><p class="p">To check the
+max_allowed_packet size, run the following from the MySQLprompt:</p>
+<pre class="pre codeblock"><code>show variables like ‘max_allowed_packet’;</code></pre></li>
+</ol>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id1dddc37e-ed72-445e-9dff-57c25f07e6f0"><span class="ph cmd">To set
+max_allowed_packet:</span><ol type="a" class="ol substeps"><li class="li substep" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id612da527-4f8e-4764-9c04-04e4383a6eb8"><span class="ph cmd">Run
+following command from a MySQL prompt:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>SET GLOBAL max_allowed_packet=1073741824;</code></pre></div></li>
+<li class="li substep" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__ida46f2d8a-2e78-46f7-bdb5-cf9f6df2a94e"><span class="ph cmd">To check
+the max_allowed_packet size, run following commands:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>show variables like 'max_allowed_packet';</code></pre></div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__idda872577-c742-466c-be35-62e355588a43"><span class="ph cmd">To set
+max_questions:</span><ol type="a" class="ol substeps"><li class="li substep" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id1ba87e44-a755-4b65-a523-24fd08785413"><span class="ph cmd">Run
+the following commands to update the max_questions attribute value:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>use mysql;
+Update user set max_questions=0 where user='dbuser';
+flush privileges;</code></pre></div></li>
+<li class="li substep" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__id10a9d175-b572-4b1f-8f7c-53db5ddde512"><span class="ph cmd">To check
+the value of max_questions, run following commands:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>use mysql;
+select user, max_questions from user;</code></pre><div class="fig fignone" id="ideefe9355-1f13-478a-abb5-6d4d2b048388__ide8181baf-0780-46ee-b107-58331b7c76e5"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Checking
+max_questions</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/max_questions.jpg" /></div><br /></div>
+</div></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DatabaseServerPostInstallationSetup_id20aafb09.html" title="After you install the MySql database server, you can create databases and users. You will also need to update MySql attributes such as max_allowed_packet and max_questions before you start using the defect database from Calibre DefectReview.">Database Server Post-Installation Setup</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_defrev_user"
+                DocTitle = "Calibre® DefectReview™ User’s Manual"
+                PageTitle = "Setting MySQL Attributes"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_SettingMysqlAttributes_ideefe9355.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DefectReview™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

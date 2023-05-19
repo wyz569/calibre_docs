@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Example: Using Iterator Commands to Traverse Topology" />
+<meta name="abstract" content="In some cases, you may want to use the low-level iterator commands to access netlist information. The following code demonstrates how to use iterators to do this." />
+<meta name="description" content="In some cases, you may want to use the low-level iterator commands to access netlist information. The following code demonstrates how to use iterators to do this." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddf21b3e5-f912-4bd7-b683-127d48e890c2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Using Iterator Commands to Traverse Topology</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Using Iterator Commands to Traverse Topology" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="iddf21b3e5-f912-4bd7-b683-127d48e890c2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Using Iterator Commands to Traverse Topology</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">In some cases,
+you may want to use the low-level iterator commands to access netlist information.
+The following code demonstrates how to use iterators to do this.</span>
+</div>
+<p class="p">For comparison, “<a class="xref fm:HeadingAndPage" href="TaskTop_ExampleCdmClampDeviceProtectionDecouplingCapacitors_idb1bd765b.html#idb1bd765b-fa41-4246-b33c-92caad4fac7a__TaskTop_ExampleCdmClampDeviceProtectionDecouplingCapacitors_idb1bd765b.xml#idb1bd765b-fa41-4246-b33c-92caad4fac7a" title="The perc::check_net command can be used to check for proper CDM clamp and decoupling capacitor configuration. The check in this example checks these conditions:">Example: CDM Clamp Device Protection of Decoupling Capacitors</a>” uses the high-level commands
+to generate results. </p>
+<p class="p">The
+original example uses the perc::sum function to calculate the resistance
+values of resistors on the upper and lower branches. The upper resistor’s
+value is calculated using this series of functions:</p>
+<pre class="pre codeblock leveled"><code># Count the upper branch resistors. 
+set upper_r_count [perc::count -net $net -type {r} \
+                     -pinAtNet {p n} -pinNetType { {p n} {Power} }] 
+... 
+  if { $upper_r_count == 1 &amp;&amp; $lower_r_count == 1 } { 
+# perc::sum is used to set the variable value 
+    set upper_r_value [perc::sum -param r -net $net -type {r} \
+                         -pinAtNet {p n} -pinNetType { {p n} {Power} }] 
+... </code></pre><p class="p">This if block can be re-written
+using iterators as follows: </p>
+<pre class="pre codeblock leveled"><code># if count is one, get the iterator for the upper resistor instance 
+  if { $upper_r_count == 1 } { 
+# get pins connected to the net 
+    set pin_itr [<a class="xref fm:HeadingOnly" href="Command_PercgetPins_idcfb94cf6.html#idcfb94cf6-a4dc-4442-ac03-614d308693ed__Command_PercgetPins_idcfb94cf6.xml#idcfb94cf6-a4dc-4442-ac03-614d308693ed" title="Creates a pin iterator.">perc::get_pins</a> $net] 
+# loop through the pins 
+    while {$pin_itr ne ""} { 
+      set instance_itr [<a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a> $pin_itr] 
+      set inst_type [<a class="xref fm:HeadingOnly" href="Command_Perctype_id19c43fdf.html#id19c43fdf-9288-4113-8906-7d1cf825ce84__Command_Perctype_id19c43fdf.xml#id19c43fdf-9288-4113-8906-7d1cf825ce84" title="Returns the type of the referenced instance, the net, or a pin’s net types or path types. For a cell instance, it returns the cell name.">perc::type</a> $instance_itr]  
+# find the resistor instance connected to the net 
+        if { [string compare $inst_type "R"] == 0 } { 
+# now test if pin is connected to Power 
+          if {[<a class="xref fm:HeadingOnly" href="Command_PercisPinOfNetType_id6039ace9.html#id6039ace9-f4c6-409f-b83a-1104554eb691__Command_PercisPinOfNetType_id6039ace9.xml#id6039ace9-f4c6-409f-b83a-1104554eb691" title="Returns TRUE if at least one net meets the net type criteria for the given pins.">perc::is_pin_of_net_type</a> $instance_itr {p n} {Power}] } { 
+            set upper_r_value [<a class="xref fm:HeadingOnly" href="Command_Percproperty_id46c86c59.html#id46c86c59-2c26-44ba-92cd-856971b27011__Command_Percproperty_id46c86c59.xml#id46c86c59-2c26-44ba-92cd-856971b27011" title="Returns a device instance property value.">perc::property</a> $instance_itr R] 
+            break ; # found the value. exit the loop. 
+          } 
+        } 
+         perc::inc pin_itr 
+    } ; # end while 
+  } ; # end of upper_r_count == 1 </code></pre><p class="p">A similar construct can be used to find the
+resistance property of the lower branch resistor.</p>
+<p class="p">Using the iterator commands requires more lines
+of code than the high-level commands, but in some cases the iterators
+may be the only way to traverse the netlist in the way that you
+want. The code shown in this example has the following underlying
+structure, which is common when using iterators:</p>
+<ol class="ol"><li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id70a2f54a-1704-4292-9c69-e0257cc0e4fb"><p class="p">Get the pins on a net using <a class="xref fm:HeadingOnly" href="Command_PercgetPins_idcfb94cf6.html#idcfb94cf6-a4dc-4442-ac03-614d308693ed__Command_PercgetPins_idcfb94cf6.xml#idcfb94cf6-a4dc-4442-ac03-614d308693ed" title="Creates a pin iterator.">perc::get_pins</a>.</p>
+</li>
+<li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id8db6d6d6-31d1-4405-9c28-44ccf388aa6c"><p class="p">Loop through the pins using a while block
+and <a class="xref fm:HeadingOnly" href="Command_Percinc_iddc737eea.html#iddc737eea-a394-4075-9bfb-2485eb98c208__Command_Percinc_iddc737eea.xml#iddc737eea-a394-4075-9bfb-2485eb98c208" title="Increments the given iterator to point to the next entry.">perc::inc</a>.</p>
+</li>
+<li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id9fb003b8-dbd8-47ec-b3c2-1208ce173d18"><p class="p">Get the instance connected to each pin using <a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a>.</p>
+</li>
+<li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id2197630f-4859-43aa-a471-45aed9314195"><p class="p">Check the instance type using <a class="xref fm:HeadingOnly" href="Command_Perctype_id19c43fdf.html#id19c43fdf-9288-4113-8906-7d1cf825ce84__Command_Perctype_id19c43fdf.xml#id19c43fdf-9288-4113-8906-7d1cf825ce84" title="Returns the type of the referenced instance, the net, or a pin’s net types or path types. For a cell instance, it returns the cell name.">perc::type</a> and a conditional check.</p>
+</li>
+<li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id6f52a4b1-f1e9-4b21-af23-b4ae26d62b84"><p class="p">Check the net connection of each pin.</p>
+</li>
+<li class="li" id="iddf21b3e5-f912-4bd7-b683-127d48e890c2__id86a6bff6-fc83-4758-9626-a906a23d6855"><p class="p">For the desired pin connection, get the property
+value of the associated instance using <a class="xref fm:HeadingOnly" href="Command_Percproperty_id46c86c59.html#id46c86c59-2c26-44ba-92cd-856971b27011__Command_Percproperty_id46c86c59.xml#id46c86c59-2c26-44ba-92cd-856971b27011" title="Returns a device instance property value.">perc::property</a>.</p>
+</li>
+</ol>
+<p class="p">You can use similar methods when checking various
+objects such as nets, cells, placements, subtypes, paths, and so
+forth. See “<a class="xref" href="Contain_RuleCheckCommands_id9b3d8e0b.html#id9b3d8e0b-3ffc-44d8-99e6-ab9ea8f6aadf__id562bbcd4-4f93-4979-beb2-a01c671a2196">Iterator Creation
+and Control Commands</a>” and “<a class="xref" href="Contain_RuleCheckCommands_id9b3d8e0b.html#id9b3d8e0b-3ffc-44d8-99e6-ab9ea8f6aadf__idb1c8624a-9afe-40d8-93fd-5b313a919823">Data Access Commands</a>”
+for lists of iterator commands.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_LowLevelFunctionExamples_id47db4b65.html" title="This appendix provides examples of how the low-level iterator functions can be used. Ordinarily, you will want to use the high-level functions like perc::check_device or perc::check_net. The high-level functions are easier to use and require less coding. However, in certain cases, the low-level functions can provide useful results.">Low-Level Function Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Using Iterator Commands to Traverse Topology"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ExampleUsingIteratorCommandsTraverseTopology_iddf21b3e5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

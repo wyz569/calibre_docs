@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Optimizing Parameterized Expressions" />
+<meta name="abstract" content="Expression-based optimizations work differently from typical multi-parameter optimizations. A major difference is that the recipe must contain only the expression step." />
+<meta name="description" content="Expression-based optimizations work differently from typical multi-parameter optimizations. A major difference is that the recipe must contain only the expression step." />
+<meta name="DC.subject" content="Expressions, optimizing, Functions, fitting values" />
+<meta name="keywords" content="Expressions, optimizing, Functions, fitting values" />
+<meta name="prodname" content="Calibre CMP Model Builder User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Documentation for CMP Modeling. Condition Subtitle used for internal information." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="NONE" />
+<meta name="SourceHandle" content="calbr_cmp_model_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 9, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® CMP Model Builder User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="Alpha" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5e7e370a-7ce3-4b32-a842-5762b2140310" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Optimizing Parameterized Expressions</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Optimizing Parameterized Expressions" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5e7e370a-7ce3-4b32-a842-5762b2140310">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Optimizing Parameterized Expressions</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Expression-based
+optimizations work differently from typical multi-parameter optimizations.
+A major difference is that the recipe must contain only the expression
+step.</p>
+<p class="p">The following example walks through fitting
+a function for trench depth and dishing, with a dependency on trench
+width. What makes this situation fit well to an expression recipe
+is that a complex function has a dependency on a measured property.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id4ae38092-67de-414f-8a41-796d0449423b"><p class="p">Basic
+Measured Data (MD) file.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idddbc97a5-eaac-47a3-8048-a73a37d97a2b"><li class="li step stepexpand" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id9082ed74-bcba-4c64-b25c-94508894c8f7"><span class="ph cmd">Fill in the MD file with the
+following values:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id059924b1-3ae1-40b8-b4e2-5d9a67dd8af4"><p class="p">The data you want to fit.
+In general, this would be Erosion, ThickT (thickness in the trench
+region), ThickNT (thickness in the non-trench region), Z1, or Z2.</p>
+</li>
+<li class="li" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idc0bf1290-7e34-47d5-8427-281dc588915e"><p class="p">A positive weight in the
+associated weighting column. For Erosion, the associated weighting
+column is WE; for ThickT, it is WTT; and so on.</p>
+</li>
+<li class="li" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__ida4a90a76-6a2a-4f95-9643-c1c3e8fa6e89"><p class="p">The initial values for
+the parameters you intend to use. These should go in the TMP1, TMP2,
+TMP3, … TMP10 columns.</p>
+</li>
+</ul>
+<p class="p">For this example, because the
+goal is to fit trench depth and dishing, the data to fit goes in
+the Dishing column. </p>
+<p class="p">Because the data is in the
+Dishing column, the WD column values are set to 1. In the CMP Model
+Builder window, you can set all values with two clicks in the <span class="ph uicontrol">Measured</span> tab:
+select the column, and then click the <span class="ph uicontrol">Enable</span> button.</p>
+<p class="p">Because the results depend
+on trench width, the trench width values go in TMP1. If you are
+using the GUI, you may need to click <span class="ph uicontrol">+</span> to
+display the TMP columns.</p>
+<div class="fig fignone" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id0211b3e5-4faa-4a72-8aa7-4681a3be0037"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/RevealColumns.png" /></div><br /></div>
+<p class="p">If X and Y coordinates are
+not used in the expression and they are not already in the initial
+MD, their values can be the same for all rows as they will be ignored.</p>
+</div></li>
+<li class="li step stepexpand" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id5294e20c-21ed-4dd1-97e3-70feabfb843e"><span class="ph cmd">Create a process recipe whose
+only step is expression. This can be done by editing a text file
+or using the GUI.</span><div class="itemgroup info StepInfo"><p class="p">When expression is used, it
+should be the only command in the recipe.</p>
+<p class="p">For this example, the expression
+to optimize is </p>
+<pre class="pre codeblock leveled"><code>($A+$B*exp($D*$TMP1)</code></pre><p class="p">Parameters A, B, and D are
+values that will be fitted during optimization. $TMP1 refers to
+the data in the MDT in the TMP1 column. In Step <a class="xref fm:NumberOnly" href="#id5e7e370a-7ce3-4b32-a842-5762b2140310__id9082ed74-bcba-4c64-b25c-94508894c8f7">1</a>, this was filled
+with measured trench width values. Any standard Tcl math operators
+can be used, such as those listed in “<a class="xref fm:HeadingAndPage" href="Concept_NumericExpressionsInParameters_id332fd6e1.html#id332fd6e1-d3cd-4c37-89dd-7c9def6baef9__Concept_NumericExpressionsInParameters_id332fd6e1.xml#id332fd6e1-d3cd-4c37-89dd-7c9def6baef9" title="Parameter values may contain expressions that use symbolic names, for example, ($HEX+$SF)*2, or references to the MD such as $X or $M_THICK (measured thickness). In each simulation, the current value of the symbolic name is used to evaluate the expression.">Numeric Expressions in Parameters</a>”.</p>
+<p class="p">The snapshot in this example
+is set to 1. You should set yours to a value used by data in the
+MDT. If the snapshot values do not match, optimization does not
+run.</p>
+<p class="p">The MDTColumn is set to Dishing,
+which means simulated values will be compared to measured Dishing
+data, and the expression’s values will appear in SDishing in the
+table.</p>
+<div class="fig fignone" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__id816a1147-db00-4343-89a3-e88332906be7"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Expression-Only Recipe</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/ExpressionExample2.png" /></div><br /></div>
+<p class="p">The expression can reference
+data from more than one column of the MDT using the form “$<span class="keyword ParameterName OptionalReplaceable">colname</span>”.</p>
+</div></li>
+<li class="li step stepexpand" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idd8d032e6-00d9-4155-8163-e3b595e84df0"><span class="ph cmd">Set the optimization ranges
+for the parameters. This can be done at the command line (see the <a class="xref fm:HeadingOnly" href="Command_Cmpoptimize_id6f7746d9.html#id6f7746d9-04ca-434f-8ccf-5ccc77657787__Command_Cmpoptimize_id6f7746d9.xml#id6f7746d9-04ca-434f-8ccf-5ccc77657787" title="Runs simulations and returns the RMS error of the simulated versus measured data.">cmpoptimize</a> shell command, especially the
+model tuning examples), but the GUI is recommended.</span><ol type="a" class="ol substeps"><li class="li substep" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idcb244d01-bfbf-4724-97f8-6cea4da8e2ce"><span class="ph cmd">In the CMP Model Builder window,
+load the MD file in the <span class="ph uicontrol">Measured</span> tab and
+the recipe, if you have not already.</span></li>
+<li class="li substep" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__ida8bc1164-ec69-444e-b502-b4316762dab9"><span class="ph cmd">Click the <span class="ph uicontrol">Optimize</span> tab.
+The expression parameters are listed in the table.</span></li>
+<li class="li substep" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idbab08706-d66b-4214-b58b-6e8cf83cda5b"><span class="ph cmd">Adjust the parameter order
+of optimization with the Up/Down buttons and specify each parameter’s
+range (Begin, End, and Level columns).</span></li>
+</ol>
+<div class="itemgroup info StepInfo"><p class="p">In the expression shown in <a class="xref fm:Figure" href="#id5e7e370a-7ce3-4b32-a842-5762b2140310__id816a1147-db00-4343-89a3-e88332906be7">Figure 1</a>, the parameters that need to be set
+are A, B, and D. The data referred to by $TMP1 will not be optimized.</p>
+</div></li>
+<li class="li step stepexpand" id="id5e7e370a-7ce3-4b32-a842-5762b2140310__idbad0153c-9c7f-4184-a430-005924cd1720"><span class="ph cmd">Run the optimization.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The parameter values that produce
+the lowest error, measured as RMS between the MDTColumn values and
+the overall value of the expression, appear in the “Best” column
+in the <span class="ph uicontrol">Optimize</span> tab.</p>
+<p class="p">After the run completes, the MD Table
+shows the simulated values in the indicated column. In this example,
+the values appear in SDishing because MDTColumn was set to Dishing.</p>
+<p class="p">To test the fit of the values, accept
+the Best values. Replace the fitted parameters (A, B, and D) with
+the Best values and then use the expression in a model in a typical
+recipe.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ProcessRecipeFileExamples_id4b9f8f76.html" title="The file examples in this appendix demonstrate preferred style. As every semiconductor manufacturing process is proprietary, all values used are fictitious. The files can serve as templates for your calibration but do not attempt to preserve the values.">Process Recipe File Examples</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/GUIRefT_ExpressionDialogBox_idf2aa11b0.html#idf2aa11b0-a820-412d-9148-18e785c9b3c9__" title="Use this dialog box to add expressions that populate the measured data table with calculated values. The expression can be used as an optimization parameter. The value computed by the expression is considered to be a simulated value.">Expression Dialog Box</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmp_model_useref"
+                DocTitle = "Calibre® CMP Model Builder User’s and Reference Manual"
+                PageTitle = "Optimizing Parameterized Expressions"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_OptimizingParameterizedExpressions_id5e7e370a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® CMP Model Builder User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

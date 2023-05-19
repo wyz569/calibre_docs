@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Measurement Function Evaluation in DFM Expressions" />
+<meta name="abstract" content="There are several behaviors to be aware of when using measurement functions in DFM Expressions. Implicit summing over the set of layer objects takes place unless the referenced layer is the primary layer in a DFM Property operation. Implicit summing can be avoided with the use of per-shape functions. Evaluation failure can occur in some cases, causing no result output for the object or capture window. Evaluation failure can be prevented in several ways, such as default values and expression chains." />
+<meta name="description" content="There are several behaviors to be aware of when using measurement functions in DFM Expressions. Implicit summing over the set of layer objects takes place unless the referenced layer is the primary layer in a DFM Property operation. Implicit summing can be avoided with the use of per-shape functions. Evaluation failure can occur in some cases, causing no result output for the object or capture window. Evaluation failure can be prevented in several ways, such as default values and expression chains." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id984ad50c-867c-468a-946e-adc4c838ca63" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Measurement Function Evaluation in DFM Expressions</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Measurement Function Evaluation in DFM Expressions" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id984ad50c-867c-468a-946e-adc4c838ca63">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Measurement
+Function Evaluation in DFM Expressions</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">There are several behaviors to be aware
+of when using measurement functions in DFM Expressions. Implicit
+summing over the set of layer objects takes place unless the referenced layer
+is the primary layer in a DFM Property operation. Implicit summing
+can be avoided with the use of per-shape functions. Evaluation failure
+can occur in some cases, causing no result output for the object
+or capture window. Evaluation failure can be prevented in several
+ways, such as default values and expression chains. </span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id984ad50c-867c-468a-946e-adc4c838ca63__id4f007e03-aaf4-4f85-b466-2e4cb2539178"><p class="p">These
+sections are included:</p>
+<ul class="ul"><li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__idc5490367-5420-4a71-ba1e-8ea33d921e3c"><p class="p"><a class="xref fm:HeadingOnly" href="#id984ad50c-867c-468a-946e-adc4c838ca63__id23958c49-b05b-4a7b-b20e-5470c5064659">Implicit Summing of Measurement Functions</a></p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id9adbbe1b-bc9e-439b-974d-a2ef7f246c04"><p class="p"><a class="xref fm:HeadingOnly" href="#id984ad50c-867c-468a-946e-adc4c838ca63__idc62a05d1-1ded-40b1-b240-d4282d8ccbb9">Per-Shape Expression Evaluation</a></p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id45aedb4e-8d17-4a34-b77a-c369f926d55d"><p class="p"><a class="xref fm:HeadingOnly" href="#id984ad50c-867c-468a-946e-adc4c838ca63__idfec8c242-4fea-4795-8d69-a318393fa5dc">Evaluation Failure</a></p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id69b5bc14-385f-4659-acaa-0e85651f5ad2"><p class="p"><a class="xref fm:HeadingOnly" href="#id984ad50c-867c-468a-946e-adc4c838ca63__id33af6e01-102d-4a48-a48b-048199712a07">Behavior at Boundaries</a></p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id984ad50c-867c-468a-946e-adc4c838ca63__id23958c49-b05b-4a7b-b20e-5470c5064659"><h2 class="title Subheading sectiontitle">Implicit
+Summing of Measurement Functions</h2><p class="p">The measurement functions are summed over the set of layer objects
+unless the layer is the primary layer in a DFM Property or DFM Property
+Merge operation or the measurement function is within a per-shape
+function. </p>
+<p class="p">For example, consider the following operation: </p>
+<pre class="pre codeblock"><code>// m1 is a secondary layer
+// avg_a is the average area of m1 intersections with a poly shape
+y = DFM PROPERTY poly m1 [avg_a = AREA(m1)/COUNT(m1)]</code></pre><p class="p">The function AREA(m1) returns the total area of all m1 layer
+objects clustered with the primary layer object. Also see “<a class="xref fm:HeadingAndPage" href="Command_DfmProperty_idf1f176c5.html#idf1f176c5-0d5a-4406-95d0-b54438157ae8__id4ba42bba-985b-471c-b73d-80dfae92f5b7">Primary and Secondary Layers and Measurement Function Evaluation</a>” in the
+DFM Property command reference. </p>
+<p class="p">With DFM Analyze and DFM Spec Fill Optimizer operations, the
+implicit sum occurs over the objects in the capture window. </p>
+<p class="p">The measurement functions return zero if the set of layer objects
+is empty. However, this is not true if the measurement function
+is within a per-shape function, as explained in the next section. </p>
+</div>
+<div class="section Subsection" id="id984ad50c-867c-468a-946e-adc4c838ca63__idc62a05d1-1ded-40b1-b240-d4282d8ccbb9"><h2 class="title Subheading sectiontitle">Per-Shape
+Expression Evaluation</h2><p class="p">The functions SUM, MIN, MAX, PRODUCT, and VECTOR provide per-shape
+evaluation of an expression involving measurement functions. In
+other words, measurement functions within a these functions are
+not implicitly summed. See “<a class="xref fm:HeadingAndPage" href="General_PerShapeFunctionsMeasurements_idd84ea573.html#idd84ea573-94e6-457c-a624-db2594b5b4c6__General_PerShapeFunctionsMeasurements_idd84ea573.xml#idd84ea573-94e6-457c-a624-db2594b5b4c6" title="The arithmetic functions SUM, MIN, MAX, and PRODUCT provide per-shape evaluation of the measurement functions in a DFM expression. Per-shape functions are available in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer, with some restrictions depending on the command. Per-shape evaluation applies to the secondary layers in DFM Property and to any layer in DFM Analyze and DFM Spec Fill Optimizer; without a per-shape function the default behavior for those layers is to sum each measurement over all shapes before evaluating the overall expression.">Per-Shape Evaluation for DFM Measurement Functions</a>” and “<a class="xref fm:HeadingAndPage" href="Command_DfmFuncVector_id1984fb95.html#id1984fb95-a789-4ddf-8df7-f4eec2b76c36__Command_DfmFuncVector_id1984fb95.xml#id1984fb95-a789-4ddf-8df7-f4eec2b76c36" title="Creates a vector of numeric type properties. Supported only in DFM Property and DFM Property Merge operations.">VECTOR</a>”.</p>
+<p class="p">If the layer referenced in a SUM, MIN, MAX, or PRODUCT per-shape
+function has no valid geometries, the function fails to evaluate. </p>
+</div>
+<div class="section Subsection" id="id984ad50c-867c-468a-946e-adc4c838ca63__idfec8c242-4fea-4795-8d69-a318393fa5dc"><h2 class="title Subheading sectiontitle">Evaluation
+Failure</h2><p class="p">An expression can fail to evaluate for a number of reasons, including
+the following:</p>
+<ul class="ul"><li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id4d85c9ce-cc40-4f0c-ba8c-36d8da21760c"><p class="p">Division
+by zero. </p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id8e1839f0-674c-4b1c-b854-fc368a1d2347"><p class="p">The layer referenced
+in a SUM, MIN, MAX, or PRODUCT per-shape function has no valid geometries. </p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id56180de0-cbaf-4b0d-b693-ac9cc4c953a8"><p class="p">Any argument
+expression in a VECTOR function fails to evaluate. </p>
+</li>
+</ul>
+<p class="p">When any portion of an expression cannot be evaluated, the overall
+expression cannot be evaluated. An expression that does not evaluate
+successfully does not satisfy any constraint. A warning is printed
+to the transcript when an expression fails to evaluate. </p>
+<p class="p">When either DFM Property or DFM Analyze attempts to calculate
+a property value for a geometry on the primary layer but cannot
+evaluate the property expression successfully, that geometry is
+not written to the operation's results layer. When the property
+is a multilayer property in a DFM Property expression, and DFM Property
+cannot evaluate the expression for a single geometry on a secondary
+layer, the layout object on the primary layer that this geometry is
+clustered with is not written to the operation's results layer.</p>
+<p class="p">You can avoid evaluation failure with the following mechanisms: </p>
+<ul class="ul"><li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id500e7810-bb31-43e3-99a7-a367cb0bbf71"><p class="p"><a class="xref fm:HeadingOnly" href="Concept_ExpressionChains_id36d0f74a.html#id36d0f74a-ee22-45ad-bbe8-5b9c9ce99fb0__Concept_ExpressionChains_id36d0f74a.xml#id36d0f74a-ee22-45ad-bbe8-5b9c9ce99fb0" title="An expression chain is a series of expressions used to define a single DFM property. Expression chains are only used in the DFM Property family of operations. The value of the property is defined as the result of the first expression (evaluated left to right) that was successfully evaluated. An expression chain can be used to assign a default value for a property and protect against evaluation failure. If none of the expressions in the chain are successfully evaluated for a given property name, the expression evaluation fails and the layout object on the primary layer is not copied to the output layer.">Expression Chains</a> — An expression
+chain can only be used in DFM Property. An expression chain provides
+one or more alternate property definitions in case the first expression
+fails to evaluate. </p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__idad0a445a-5f09-49c0-a7b4-dbbd1b81aea9"><p class="p">Default values
+in a per-shape function — The SUM, MIN, MAX, and PRODUCT per-shape
+function syntax includes an optional default value. The default
+value is used if the set of shapes the per-shape function operates
+on is empty or if the expression evaluation fails for all shapes. </p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id8da62155-9c3a-4034-ae19-7d2654d61a01"><p class="p">Use of ::NOFAILARG
+with VECTOR — By default the VECTOR evaluation fails if the evaluation
+of any argument expression fails. If ::NOFAILARG is appended to VECTOR
+the evaluation does not fail; see “<a class="xref fm:HeadingAndPage" href="Command_DfmFuncVector_id1984fb95.html#id1984fb95-a789-4ddf-8df7-f4eec2b76c36__idecc31a9b-bb2c-4b7b-919a-b2a2a1300893">Vector Evaluation Failure and Use of ::NOFAILARG</a>” for details.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id984ad50c-867c-468a-946e-adc4c838ca63__id33af6e01-102d-4a48-a48b-048199712a07"><h2 class="title Subheading sectiontitle">Behavior
+at Boundaries</h2><p class="p">The measurement function behavior at boundaries is influenced
+by the operation and the keywords used. See the following sections
+in the relevant command reference:</p>
+<ul class="ul"><li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id5990f1ae-7044-47fc-af7e-20a0c1a09959"><p class="p">“<a class="xref fm:HeadingAndPage" href="Command_DfmProperty_idf1f176c5.html#idf1f176c5-0d5a-4406-95d0-b54438157ae8__id16da92f9-09f9-4b07-9f84-06f1fa94b96b">Measurement Function Behavior at Boundaries in DFM Property</a>”. </p>
+</li>
+<li class="li" id="id984ad50c-867c-468a-946e-adc4c838ca63__id0f45fd0d-897d-41e9-8329-edcfed04fd40"><p class="p">“<a class="xref fm:HeadingAndPage" href="Command_DfmAnalyze_id1ca0eb21.html#id1ca0eb21-bd76-4f8e-89f7-9b74a6058289__id9c538f5f-695c-4374-8c4a-fdc6207373a1">Measurement Function Behavior at Boundaries in DFM Analyze</a>”. DFM Spec
+Fill Optimizer behaves similarly to DFM Analyze. </p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MeasurementFunctions_id13468c08.html" title="Measurement functions calculate the value of a geometric attribute of layer data. Measurement functions return values expressed in user units. Although the COUNT function does not measure a geometric attribute, it is included with the measurement functions because it behaves similarly to the other functions in this class.">Measurement Functions</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Measurement Function Evaluation in DFM Expressions"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_MeasurementFunctionEvaluationInDfmExpressions_id984ad50c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

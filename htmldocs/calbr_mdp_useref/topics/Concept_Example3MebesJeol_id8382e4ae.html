@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Example 3 — MEBES to JEOL" />
+<meta name="abstract" content="This example creates a JEOL pattern file from a GDS layer, then compares it to the MEBES file generated in Example 1 from the same GDS layer." />
+<meta name="description" content="This example creates a JEOL pattern file from a GDS layer, then compares it to the MEBES file generated in Example 1 from the same GDS layer." />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id8382e4ae-b733-46e4-b385-1e5e31abef5e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example 3 — MEBES to JEOL</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example 3 — MEBES to JEOL" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id8382e4ae-b733-46e4-b385-1e5e31abef5e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example 3 — MEBES to JEOL</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This example
+creates a JEOL pattern file from a GDS layer, then compares it to
+the MEBES file generated in Example 1 from the same GDS layer.</span>
+</div>
+<pre class="pre codeblock leveled"><code>LAYOUT SYSTEM GDSII 
+LAYOUT PATH "sample.gds" 
+LAYOUT PRIMARY "Layout1" 
+ 
+PRECISION 1000 
+DRC MAXIMUM RESULTS ALL 
+DRC RESULTS DATABASE "Example3.gds" GDSII PSEUDO 
+ 
+LAYER orig6 6 
+ 
+// When fracturing, Rotate and mirror for mask making purposes 
+// scale by 4x 
+ 
+fracture3 {FRACTURE JEOL orig6 INSIDE OF (-880) (-670) (-400) (-270)
+	FILE [ 
+	rotate 180 
+	mirror y 
+	magnify 4 
+	fracture_units 100 
+	file_name TEST3.JF
+	]
+}
+ 
+//Verify against the MEBES file created in Example 1 from same Design 
+ 
+check_jeol_mebes = MDPverify orig6 INSIDE OF (-880) (-670) (-400) (-270)
+	FILE [ 
+	input_file TEST1XXXX.PF TEST3.JF  
+	verify_type MEBES2JEOL 
+	magnify 4 4 
+	rotate 0 180 
+	mirror2 y 
+	] 
+ 
+orig6 {COPY orig6 } DRC CHECK MAP orig6 6 
+check_jeol_mebes {COPY check_jeol_mebes} DRC CHECK MAP check_jeol_mebes 32 </code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_Examples_id1c1547e7.html" title="The following contains sample rule files used to perform several comparisons. Each example begins with the same layout database. However, the transformations applied when fracturing the data may vary.">Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "Example 3 — MEBES to JEOL"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_Example3MebesJeol_id8382e4ae.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

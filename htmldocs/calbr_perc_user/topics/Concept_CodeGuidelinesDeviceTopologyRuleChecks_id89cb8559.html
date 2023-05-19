@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Code Guidelines for Device Topology Rule Checks" />
+<meta name="abstract" content="Coding device topology checks is a complex process. There are certain things to be aware of and guidelines to follow to write effective device checks." />
+<meta name="description" content="Coding device topology checks is a complex process. There are certain things to be aware of and guidelines to follow to write effective device checks." />
+<meta name="DC.subject" content="Guidelines, device topology coding" />
+<meta name="keywords" content="Guidelines, device topology coding" />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id89cb8559-c44a-4b45-b581-102c001e9967" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Code Guidelines for Device Topology Rule Checks</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Code Guidelines for Device Topology Rule Checks" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id89cb8559-c44a-4b45-b581-102c001e9967">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Code Guidelines for Device Topology Rule Checks</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Coding device
+topology checks is a complex process. There are certain things to
+be aware of and guidelines to follow to write effective device checks.</span>
+</div>
+<p class="p">The command <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> examines all devices one at a
+time. To check topology or device grouping conditions, the rule
+check has to use iterators to traverse the netlist. How devices
+get grouped is dependent on how the hierarchy is handled.</p>
+<p class="p">When checking device groupings, a recommended
+approach is to choose a net essential to the target device grouping
+configuration, use <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a> to get to that net as the starting
+point, and then traverse the neighboring elements of the net in
+the -condition proc of perc::check_net. </p>
+<p class="p">For instance, to find inverters whose output
+is connected to a resistor, we have to check the two transistors
+as a group. The following code is a simplified solution. </p>
+<div class="fig fignone ExampleTitle" id="id89cb8559-c44a-4b45-b581-102c001e9967__idc228cd7e-f61d-4918-b1a2-86704675e2e2"><span class="figcap"><span class="fig--title-label">Example 1. </span>Device
+Topology Rule Check</span><pre class="pre codeblock leveled"><code>TVF FUNCTION test [/* 
+  package require CalibreLVS_PERC 
+    # The passed-in net is a potential inverter output  
+    # (meets condition !Supply) 
+    proc cond_1 {net} { 
+ 
+      # Get the MP device 
+      set pair [<a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> -net $net -type MP -pinAtNet {s d} \
+                            -pinNetType {{s d} {Supply}} -list]  
+      set mp_count   [lindex $pair 0] 
+      set mp_devices [lindex $pair 1] 
+ 
+      # Get the MN device 
+      set pair [perc::count -net $net -type MN -pinAtNet {s d} \
+                            -pinNetType {{s d} {Supply}} -list]  
+      set mn_count   [lindex $pair 0] 
+      set mn_devices [lindex $pair 1] 
+                                           
+      if {$mp_count != 1 || $mn_count != 1} { 
+      # this net is not connected to one MP and one MN device, bail out  
+        return 0 
+      } 
+ 
+      # Find if resistors are present 
+      if {![<a class="xref fm:HeadingOnly" href="Command_Percexists_id24411517.html#id24411517-3545-4fa0-971f-ef3671ac5edc__Command_Percexists_id24411517.xml#id24411517-3545-4fa0-971f-ef3671ac5edc" title="Indicates whether the number of devices in a list meets a constraint interval.">perc::exists</a> -net $net -type {R} -pinAtNet {p n}]} { 
+      # this net is not connected to a resistor, bail out  
+        return 0 
+      } 
+
+      # This net is a potential target. Now check the remaining conditions 
+      # of the inverter configurations:  
+      # the gate pins of MP and MN must be connected to the same net. 
+      
+      set mp_dev [lindex $mp_devices 0] 
+      set mn_dev [lindex $mn_devices 0] 
+ 
+      set mp_gate_net [<a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> $mp_dev -name G] 
+      set mn_gate_net [perc::get_nets $mn_dev -name G] 
+ </code></pre><pre class="pre codeblock leveled"><code>
+      if { [perc::equal $mp_gate_net $mn_gate_net] } { 
+      # The gate pins are connected to the same net.  
+      # So all conditions are met.Report it. 
+           return 1 
+      } 
+      return 0 
+    } 
+ 
+    proc check_1 {} { 
+      perc::check_net -condition cond_1 -netType { !Supply }  \
+        -comment "Inverter's output net connected to a resistor" 
+    } 
+*/]</code></pre></div>
+<p class="p">Tcl proc cond_1 uses instance and net iterators
+for traversing and comparison. Iterators only exist in the context
+of a cell placement. Therefore, device grouping rule checks may
+promote netlist elements to a higher level of the hierarchy, if
+related devices are not contained in the same cell. In other words,
+if a netlist has device groups that cross cell boundaries, then Calibre PERC
+promotes the related devices to a common parent cell in order to
+check the device groupings.</p>
+<p class="p">To further demonstrate the idea of crossing
+cell boundaries, consider the following rule check.</p>
+<div class="fig fignone ExampleTitle" id="id89cb8559-c44a-4b45-b581-102c001e9967__idc2a5b54c-c0e8-4a01-9137-776c2091390f"><span class="figcap"><span class="fig--title-label">Example 2. </span>Rule
+Check Crossing Cell Boundaries</span><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> -type MP -condition cond \
+      -comment "Gate with many resistors" 
+
+proc cond {dev} { 
+# The passed-in dev is a MP device 
+  set gate_net [perc::get_nets $dev -name G] 
+  if {[perc::exists -constraint "&gt; 1" -net $gate_net -type R]} { 
+# Too many resistors on the gate, error 
+    return 1 
+  } 
+    return 0 
+} </code></pre></div>
+<p class="p">If the gate_net is an internal net that is
+only connected to local resistors, then Calibre PERC can count resistors
+in the current cell that contains the MP device. There is no need
+for promotion or crossing cell boundaries. However, if the gate
+is connected to resistors in a parent cell or a sub-cell, Calibre
+PERC automatically detects the need to check resistors in other
+cells. In the case of a parent cell, Calibre PERC promotes the MP
+device to the parent cell, checks the rule, and reports the result
+in the parent cell. In the case of a sub-cell, Calibre PERC temporarily
+descends into the sub-cell and counts the resistors along the net,
+then returns to the original location; Calibre PERC finishes rule
+checking and result reporting in the current cell.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.html" title="The core of the Calibre PERC functionality is topological rule checking. Topological rule checks are written in the Calibre PERC extension of TVF. This chapter contains naming conventions used when writing topology rule checks and working examples of initialization and rule check procedures.">Calibre PERC Topology Rule Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_HierarchyTraversalByRuleCheckCommands_id73bf23be.html" title="Certain Calibre PERC rule check commands traverse hierarchy. They process nets on a per-cell basis, and they proceed through the hierarchy as needed to return their outputs. How this is done is important to understand when coding and evaluating rule checks.">Hierarchy Traversal by Rule Check Commands</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Code Guidelines for Device Topology Rule Checks"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CodeGuidelinesDeviceTopologyRuleChecks_id89cb8559.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

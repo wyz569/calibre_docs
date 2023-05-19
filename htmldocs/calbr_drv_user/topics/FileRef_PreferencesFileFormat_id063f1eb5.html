@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="preferences File Format" />
+<meta name="abstract" content="The $HOME/.calibrewb_workspace/preferences file stores default appearance and behavior settings for the layout viewer. The layout viewer reads the preferences file located in the layout viewer configuration directory (it cannot be overridden with a local copy of the file)." />
+<meta name="description" content="The $HOME/.calibrewb_workspace/preferences file stores default appearance and behavior settings for the layout viewer. The layout viewer reads the preferences file located in the layout viewer configuration directory (it cannot be overridden with a local copy of the file)." />
+<meta name="prodname" content="Calibre DESIGNrev Layout Viewer User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_drv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Layout Viewer User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id063f1eb5-4f31-4435-9347-b68ed323dd9c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>preferences File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="preferences File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id063f1eb5-4f31-4435-9347-b68ed323dd9c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">preferences File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">The preferences documented in this section can be
+used by all layout viewers (Calibre DESIGNrev, Calibre LITHOview,
+Calibre MDPview, Calibre WORKbench) unless otherwise noted.</p>
+<p class="p ContextMGC">Generated by:</p>
+<ul class="ul"><li class="li" id="id993d93cc-fd6d-444a-a9d8-e98d5e202674"><p class="p">Automatically
+by the layout viewer tools</p>
+</li>
+<li class="li" id="id89a90807-a027-4eff-ad18-2faf55e7af1b"><p class="p">Manually
+created by the user</p>
+</li>
+</ul>
+<p class="shortdesc">The <span class="ph filepath">$HOME/.calibrewb_workspace/preferences</span> file stores
+default appearance and behavior settings for the layout viewer.
+The layout viewer reads the <span class="ph filepath">preferences</span> file
+located in the layout viewer configuration directory (it cannot
+be overridden with a local copy of the file).</p>
+<p class="p">Some characteristics of the preferences file
+include:</p>
+<ul class="ul"><li class="li" id="idedd725d0-38bc-494e-b41f-16fb4d8f6840"><p class="p">If the <span class="ph filepath">preferences</span> file
+is deleted, the layout viewer automatically creates a new <span class="ph filepath">preferences</span> file
+upon invocation of the next layout viewer session.</p>
+</li>
+<li class="li" id="id20df0483-cf71-4a73-a97a-05ad90d217a6"><p class="p">The layout
+viewer removes any incorrect text and replaces it with the correct
+keyword and its original default.</p>
+</li>
+<li class="li" id="id517c7e42-c5f3-4d9a-9716-9378865ff9ab"><p class="p">Some of
+the preferences keywords can be modified using controls in the <a class="xref fm:HeadingOnly" href="Contain_PreferencesDialogBox_id71c34665.html#id71c34665-7a2d-4f9a-acdf-e305138dea50__Contain_PreferencesDialogBox_id71c34665.xml#id71c34665-7a2d-4f9a-acdf-e305138dea50" title="To access: Options &gt; Layout View Use the Preferences dialog box to customize different aspects of the layout viewer.">Preferences Dialog Box</a>, while
+others can only be modified by editing the preferences file in an
+ASCII text editor. These changes affect your next layout viewer
+session, and remain in effect until you change the preferences either through
+the user interface or by editing the file.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If a preference
+entry appears in the <span class="ph filepath">preferences</span> file but is
+not documented, it is considered internal and should not be modified.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A <span class="ph filepath">preferences</span> file
+must conform to the following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idf75f8d61-20f7-4502-aeb8-c0d792f29862"><p class="p">Default filename must be “preferences”</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id63423266-d299-4725-b6fd-2b4cc4192f4a"><p class="p">Must be ASCII</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id45e55ae4-d89e-475c-bfb4-b162cf48937d"><p class="p">One keyword per line</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idafa9fa94-8eae-4a8c-b5d9-2330cfe1cbf2"><p class="p">Uses the syntax:</p>
+<pre class="pre codeblock"><code><var class="keyword varname">preference_name</var> <var class="keyword varname">value</var></code></pre></li>
+</ul>
+<ul class="ul"><li class="li" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id250e6fd2-e791-4757-9d8a-bffe2c40dd55"><p class="p">Create comments for a full line
+by beginning the line with a pound sign (#)</p>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">The
+preferences used in the <span class="ph filepath italic">preferences</span> file
+are organized alphabetically into reference pages. Most preferences
+can be set in the GUI or by specifying a preference name and value
+in the <span class="ph filepath">preferences</span> file. </p>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">View</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idd5295fd4-e90a-4f68-86a5-4626300ab0d0" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>View Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e257"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e260"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewBg_idcb332b87.html#idcb332b87-8b37-48e5-b26c-4209c1039303__Command_PrefsViewBg_idcb332b87.xml#idcb332b87-8b37-48e5-b26c-4209c1039303" title="Specifies the background color for the layout viewing area.">prefs_view_bg</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the background
+color for the layout viewing area.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewCellnamescaled_ida6b690d7.html#ida6b690d7-9a75-47c1-a479-844fa26e45de__Command_PrefsViewCellnamescaled_ida6b690d7.xml#ida6b690d7-9a75-47c1-a479-844fa26e45de" title="Enables or disables the display of reference names with scaled text.">prefs_view_cellnamescaled</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of reference names with scaled text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewCellorientmarker_ida9d5d0e9.html#ida9d5d0e9-2501-44de-a5c3-7c8e6c9e4c98__Command_PrefsViewCellorientmarker_ida9d5d0e9.xml#ida9d5d0e9-2501-44de-a5c3-7c8e6c9e4c98" title="Enables or disables the display of a reference orientation marker in the lower left corner of a reference to visually indicate mirroring and rotation.">prefs_view_cellorientmarker</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of a reference orientation marker in the lower left corner
+of a reference to visually indicate mirroring and rotation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewCelloutline_id169b3f9c.html#id169b3f9c-9609-437e-9ff1-3a4b71e7b6e9__Command_PrefsViewCelloutline_id169b3f9c.xml#id169b3f9c-9609-437e-9ff1-3a4b71e7b6e9" title="Enables or disables the display of cell outlines.">prefs_view_celloutline</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of cell outlines.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewClipcolor_id6bb18832.html#id6bb18832-ef5d-49d4-87f0-ca539dfe36a9__Command_PrefsViewClipcolor_id6bb18832.xml#id6bb18832-ef5d-49d4-87f0-ca539dfe36a9" title="Specifies the color of the incremental loading background.">prefs_view_clipColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the color of
+the incremental loading background.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewDrawtopcellbbox_idc16bb271.html#idc16bb271-42f5-48a0-8060-790a0c809981__Command_PrefsViewDrawtopcellbbox_idc16bb271.xml#idc16bb271-42f5-48a0-8060-790a0c809981" title="Enables or disables the display of the top cell bounding box.">prefs_view_drawTopCellBbox</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of the top cell bounding box.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewFillpolygons_id2078b06b.html#id2078b06b-e260-438a-9fed-2269daad4a3a__Command_PrefsViewFillpolygons_id2078b06b.xml#id2078b06b-e260-438a-9fed-2269daad4a3a" title="Enables or disables using layer patterns for the polygon fill.">prefs_view_fillpolygons</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables using
+layer patterns for the polygon fill.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewFindobjclipcolor_id537da163.html#id537da163-c541-4db7-9fcb-6725a59530a4__Command_PrefsViewFindobjclipcolor_id537da163.xml#id537da163-c541-4db7-9fcb-6725a59530a4" title="Specifies the highlight color used for clips and finding objects.">prefs_view_findObjClipColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the highlight
+color used for clips and finding objects.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMarkerorgmode_id9fc6bcf5.html#id9fc6bcf5-8168-4043-bf55-fa6f95eefa49__Command_PrefsViewMarkerorgmode_id9fc6bcf5.xml#id9fc6bcf5-8168-4043-bf55-fa6f95eefa49" title="Specifies the type of marker drawn at the at the top cell’s origin.">prefs_view_markerOrgMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the type of
+marker drawn at the at the top cell’s origin.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMissingcellmarker_id80e6b995.html#id80e6b995-9116-4de3-859c-17baacc32298__Command_PrefsViewMissingcellmarker_id80e6b995.xml#id80e6b995-9116-4de3-859c-17baacc32298" title="Enables or disables the display of missing cell cross markers.">prefs_view_missingCellMarker</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of missing cell cross markers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewOutlinerefcolor_idd808e9fb.html#idd808e9fb-f98e-4e3c-a36c-9c64e4c76320__Command_PrefsViewOutlinerefcolor_idd808e9fb.xml#idd808e9fb-f98e-4e3c-a36c-9c64e4c76320" title="Specifies the color used for reference outlines.">prefs_view_outlineRefColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the color used
+for reference outlines.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewPanpercent_id7690fbe9.html#id7690fbe9-69a5-4a6c-8cf5-deac83cbcc58__Command_PrefsViewPanpercent_id7690fbe9.xml#id7690fbe9-69a5-4a6c-8cf5-deac83cbcc58" title="Specifies the percentage of view to move when panning.">prefs_view_panpercent</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the percentage
+of view to move when panning.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewReforiginmarker_id6af13372.html#id6af13372-a176-49d0-b6cb-1a6442f8d430__Command_PrefsViewReforiginmarker_id6af13372.xml#id6af13372-a176-49d0-b6cb-1a6442f8d430" title="Specifies the type of marker to draw at the selected reference’s origin.">prefs_view_refOriginMarker</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the type of
+marker to draw at the selected reference’s origin.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewReppixels_id12c20163.html#id12c20163-aa8c-4d80-bdab-b493c3b52443__Command_PrefsViewReppixels_id12c20163.xml#id12c20163-aa8c-4d80-bdab-b493c3b52443" title="Enables or disables the display of 3x3 pixel boxes in place of single pixel objects for improved visibility.">prefs_view_repPixels</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Enables or disables the
+display of 3x3 pixel boxes in place of single pixel objects for improved
+visibility.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewSelectothercolor_id2255dad9.html#id2255dad9-5d78-41ae-8fcd-ab8e76cf7f42__Command_PrefsViewSelectothercolor_id2255dad9.xml#id2255dad9-5d78-41ae-8fcd-ab8e76cf7f42" title="Specifies the highlight color used for edge, vertex, and text selections.">prefs_view_selectOtherColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the highlight
+color used for edge, vertex, and text selections.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewSelectrefpolycolor_idde0e074d.html#idde0e074d-2faa-40df-aa86-c9695eacf02c__Command_PrefsViewSelectrefpolycolor_idde0e074d.xml#idde0e074d-2faa-40df-aa86-c9695eacf02c" title="Specifies the highlight color used for reference and polygon selections.">prefs_view_selectRefPolyColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the highlight
+color used for reference and polygon selections.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewSmallpanpercent_id45d494d4.html#id45d494d4-2367-4413-b0ec-533673867c79__Command_PrefsViewSmallpanpercent_id45d494d4.xml#id45d494d4-2367-4413-b0ec-533673867c79" title="Specifies the percentage of view to move when incrementally panning.">prefs_view_smallPanPercent</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the percentage
+of view to move when incrementally panning.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e257 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewSmallrefcolor_id24387cd0.html#id24387cd0-5554-4b50-b63b-11d5ef1e116f__Command_PrefsViewSmallrefcolor_id24387cd0.xml#id24387cd0-5554-4b50-b63b-11d5ef1e116f" title="Specifies the color used for small reference outlines.">prefs_view_smallRefColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e260 "><p class="p">Specifies the color used
+for small reference outlines.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Grid</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idcdccd563-0e64-4549-a272-de18b831b7ee" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Grid Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e497"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e500"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGridAutocolorenabled_idcd289042.html#idcd289042-efff-4cb8-b01a-1d504071e6e3__Command_PrefsGridAutocolorenabled_idcd289042.xml#idcd289042-efff-4cb8-b01a-1d504071e6e3" title="Specifies whether the grid color is auto-generated or a user-specified custom color.">prefs_grid_autoColorEnabled</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Specifies whether the
+grid color is auto-generated or a user-specified custom color.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGridMajor_id3a697dce.html#id3a697dce-f703-4ea8-9d68-672a73af7fdf__Command_PrefsGridMajor_id3a697dce.xml#id3a697dce-f703-4ea8-9d68-672a73af7fdf" title="Specifies the grid spacing in microns.">prefs_grid_major</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Specifies the grid spacing
+in microns.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGridSnap_id718cdbf7.html#id718cdbf7-6871-4532-bd8e-912980aa30dc__Command_PrefsGridSnap_id718cdbf7.xml#id718cdbf7-6871-4532-bd8e-912980aa30dc" title="Controls the snapping direction of the cursor when creating polygons or paths.">prefs_grid_snap</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Controls the snapping
+direction of the cursor when creating polygons or paths.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGridStyle_id3df95911.html#id3df95911-6985-4639-8541-5972015802ac__Command_PrefsGridStyle_id3df95911.xml#id3df95911-6985-4639-8541-5972015802ac" title="Sets the grid style.">prefs_grid_style</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Sets the grid style.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGridUsercolor_iddc9c1c02.html#iddc9c1c02-8466-495e-8614-33bad1d652b5__Command_PrefsGridUsercolor_iddc9c1c02.xml#iddc9c1c02-8466-495e-8614-33bad1d652b5" title="Specifies the color of the grid.">prefs_grid_usercolor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Specifies the color of
+the grid.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e497 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGuiShowrulerlegend_id6420798c.html#id6420798c-8dfa-46d0-b290-3f7bbc485114__Command_PrefsGuiShowrulerlegend_id6420798c.xml#id6420798c-8dfa-46d0-b290-3f7bbc485114" title="Enables or disables the display of the ruler legend in the layout viewing area.">prefs_gui_showRulerLegend</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e500 "><p class="p">Enables or disables the
+display of the ruler legend in the layout viewing area.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Rulers</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id5cac2dab-a8a1-4f56-bba0-648f5e9468ab" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Rulers Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e592"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e595"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerColor_id778ec0e8.html#id778ec0e8-a2ff-4102-8c2f-f8111ca8d655__Command_PrefsRulerColor_id778ec0e8.xml#id778ec0e8-a2ff-4102-8c2f-f8111ca8d655" title="Sets the ruler color.">prefs_ruler_color</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Sets the ruler color.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerDirection_id9d0fa0de.html#id9d0fa0de-b727-49b9-9967-9fcb23f8926c__Command_PrefsRulerDirection_id9d0fa0de.xml#id9d0fa0de-b727-49b9-9967-9fcb23f8926c" title="Sets the allowed snapping direction used for drawing rulers.">prefs_ruler_direction</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Sets the allowed snapping
+direction used for drawing rulers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerFormat_idc81e1d40.html#idc81e1d40-09fe-4231-b1e0-96a41bd1c4dc__Command_PrefsRulerFormat_idc81e1d40.xml#idc81e1d40-09fe-4231-b1e0-96a41bd1c4dc" title="Specifies the format to use for displaying the ruler length.">prefs_ruler_format</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Specifies the format
+to use for displaying the ruler length.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerHeight_id75153b3c.html#id75153b3c-3e9f-4980-aa47-8d514ba4c58c__Command_PrefsRulerHeight_id75153b3c.xml#id75153b3c-3e9f-4980-aa47-8d514ba4c58c" title="Enables or disables the use of larger text for ruler captions.">prefs_ruler_height</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables the
+use of larger text for ruler captions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerMultiple_id3b3c2f6a.html#id3b3c2f6a-a2c6-4c11-bd89-aa9ec25b0c44__Command_PrefsRulerMultiple_id3b3c2f6a.xml#id3b3c2f6a-a2c6-4c11-bd89-aa9ec25b0c44" title="Enables or disables multiple rulers.">prefs_ruler_multiple</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables multiple rulers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerShowdxdy_idb2f9d8b8.html#idb2f9d8b8-4124-492e-b80a-bd845b85ec22__Command_PrefsRulerShowdxdy_idb2f9d8b8.xml#idb2f9d8b8-4124-492e-b80a-bd845b85ec22" title="Enables or disables the display of the dx/dy ruler values.">prefs_ruler_showDxDy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables the display of the dx/dy
+ruler values.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerShowsnappededge_id59c1809f.html#id59c1809f-da51-4e85-84c1-443ca7157b39__Command_PrefsRulerShowsnappededge_id59c1809f.xml#id59c1809f-da51-4e85-84c1-443ca7157b39" title="Enables or disables the highlighting of the vertex or edge to which the ruler snaps.">prefs_ruler_showSnappedEdge</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables the
+highlighting of the vertex or edge to which the ruler snaps.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerSnap_id64afe0be.html#id64afe0be-4c5c-4c82-a1a6-a29bef7a72fe__Command_PrefsRulerSnap_id64afe0be.xml#id64afe0be-4c5c-4c82-a1a6-a29bef7a72fe" title="Sets the snapping of rulers.">prefs_ruler_snap</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Sets the snapping of
+rulers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerSnapevprojections_iddcab9cee.html#iddcab9cee-af12-4189-aa65-b5842c1a90ef__Command_PrefsRulerSnapevprojections_iddcab9cee.xml#iddcab9cee-af12-4189-aa65-b5842c1a90ef" title="Enables or disables the projection of edges and vertices beyond their endpoints for ruler snapping.">prefs_ruler_snapEVProjections</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables the
+projection of edges and vertices beyond their endpoints for ruler
+snapping.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerSnaptonearest_id8ba2db9d.html#id8ba2db9d-b9ee-4997-a13f-32bc7902530d__Command_PrefsRulerSnaptonearest_id8ba2db9d.xml#id8ba2db9d-b9ee-4997-a13f-32bc7902530d" title="Specifies whether the ruler snaps to the vertex or edge that is nearest the cursor or the ruler.">prefs_ruler_snapToNearest</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Specifies whether the
+ruler snaps to the vertex or edge that is nearest the cursor or
+the ruler.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerSnaptoreferences_id5552891f.html#id5552891f-2f32-4b19-b5e9-622778875fc0__Command_PrefsRulerSnaptoreferences_id5552891f.xml#id5552891f-2f32-4b19-b5e9-622778875fc0" title="Enables or disables snapping to reference edges and vertices.">prefs_ruler_snapToReferences</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables snapping
+to reference edges and vertices.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerSplitmode_id3a63f051.html#id3a63f051-fec3-42a2-a230-7bea8dcc3678__Command_PrefsRulerSplitmode_id3a63f051.xml#id3a63f051-fec3-42a2-a230-7bea8dcc3678" title="Enables or disables the splitting of rulers on shape boundaries.">prefs_ruler_splitMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Enables or disables the
+splitting of rulers on shape boundaries.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerTickmarkmode_idd263d84d.html#idd263d84d-aa72-47c8-aa04-dadadf1ad0ed__Command_PrefsRulerTickmarkmode_idd263d84d.xml#idd263d84d-aa72-47c8-aa04-dadadf1ad0ed" title="Specifies whether tick marks are used for rulers.">prefs_ruler_tickMarkMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Specifies whether tick
+marks are used for rulers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e592 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRulerUnitmeasure_ida5d675db.html#ida5d675db-904e-40c3-aaaa-2d0bbc4572b8__Command_PrefsRulerUnitmeasure_ida5d675db.xml#ida5d675db-904e-40c3-aaaa-2d0bbc4572b8" title="Specifies the units in which to display the ruler length.">prefs_ruler_unitMeasure</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e595 "><p class="p">Specifies the units in
+which to display the ruler length.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Objects</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id4ec4cc0c-a8f5-4f03-b675-cbf789065d74" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 4. </span>Objects Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e784"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e787"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditAllowzeroarea_idbd012140.html#idbd012140-ed43-42e6-8b88-3132e486edb4__Command_PrefsEditAllowzeroarea_idbd012140.xml#idbd012140-ed43-42e6-8b88-3132e486edb4" title="Allows or disallows zero area polygons and zero-width paths.">prefs_edit_allowZeroArea</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Allows or disallows zero
+area polygons and zero-width paths.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditMovedirection_idb89615f1.html#idb89615f1-8792-464c-8647-81e341448702__Command_PrefsEditMovedirection_idb89615f1.xml#idb89615f1-8792-464c-8647-81e341448702" title="Sets the directional restriction for moving selected objects.">prefs_edit_moveDirection</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the directional
+restriction for moving selected objects.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditPastefollowsmouse_idb4e2a3aa.html#idb4e2a3aa-cb1f-41ba-a691-5ac2fb453c94__Command_PrefsEditPastefollowsmouse_idb4e2a3aa.xml#idb4e2a3aa-cb1f-41ba-a691-5ac2fb453c94" title="Enables or disables pasting copied or cut objects over an existing object.">prefs_edit_pasteFollowsMouse</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Enables or disables pasting
+copied or cut objects over an existing object.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditSelectlimit_id305a2381.html#id305a2381-4474-46ef-8bdc-d03aece4266c__Command_PrefsEditSelectlimit_id305a2381.xml#id305a2381-4474-46ef-8bdc-d03aece4266c" title="Specifies the number of objects that can be selected at the same time.">prefs_edit_selectLimit</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Specifies the number
+of objects that can be selected at the same time.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditSelectlimitenabled_ida33aff45.html#ida33aff45-149a-48b7-8f7b-4e1239b9355c__Command_PrefsEditSelectlimitenabled_ida33aff45.xml#ida33aff45-149a-48b7-8f7b-4e1239b9355c" title="Enables or disables setting a limit on the number of objects that can be selected at the same time.">prefs_edit_selectLimitEnabled</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Enables or disables setting
+a limit on the number of objects that can be selected at the same
+time.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditShowpopupselect_id49f2403d.html#id49f2403d-708c-4ad8-8906-52ac94c5fbe4__Command_PrefsEditShowpopupselect_id49f2403d.xml#id49f2403d-708c-4ad8-8906-52ac94c5fbe4" title="Enables or disables the display of information about a selected object.">prefs_edit_showPopupSelect</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Enables or disables the
+display of information about a selected object.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscContextclonemode_id479bf2c5.html#id479bf2c5-211a-47a6-933a-d152c21218ab__Command_PrefsMiscContextclonemode_id479bf2c5.xml#id479bf2c5-211a-47a6-933a-d152c21218ab" title="Sets the behavior of context cloning.">prefs_misc_contextCloneMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the behavior of
+context cloning.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscLayersscanmode_id4f95f070.html#id4f95f070-a462-4a3b-ba05-ed4a1493d51e__Command_PrefsMiscLayersscanmode_id4f95f070.xml#id4f95f070-a462-4a3b-ba05-ed4a1493d51e" title="Specifies which scanner (Calibre RVE or internal scanner) to use to scan layer objects.">prefs_misc_layersScanMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Specifies which scanner
+(Calibre RVE or internal scanner) to use to scan layer objects.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsPathBgnextn_idbbc44f3c.html#idbbc44f3c-3f04-4e03-b8f4-bd6265502f26__Command_PrefsPathBgnextn_idbbc44f3c.xml#idbbc44f3c-3f04-4e03-b8f4-bd6265502f26" title="Sets the beginning line-end extent for a path with a type of 4 (custom).">prefs_path_bgnExtn</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the beginning line-end
+extent for a path with a type of 4 (custom).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsPathEndextn_id398b12df.html#id398b12df-d107-4b52-9511-3eaa87d8b6ce__Command_PrefsPathEndextn_id398b12df.xml#id398b12df-d107-4b52-9511-3eaa87d8b6ce" title="Sets the ending line-end extent for a path with a type of 4 (custom).">prefs_path_endExtn</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the ending line-end
+extent for a path with a type of 4 (custom).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsPathType_id35d559a1.html#id35d559a1-1ce8-42d4-b57d-0cd54903cc8d__Command_PrefsPathType_id35d559a1.xml#id35d559a1-1ce8-42d4-b57d-0cd54903cc8d" title="Sets the path type.">prefs_path_type</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the path type.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsPathWidth_idef82e005.html#idef82e005-0623-4807-8d13-4d235c386018__Command_PrefsPathWidth_idef82e005.xml#idef82e005-0623-4807-8d13-4d235c386018" title="Sets the path width.">prefs_path_width</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the path width.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextDefaultcolor_id1a77c7aa.html#id1a77c7aa-97d3-415f-81c4-d4ef25052bba__Command_PrefsTextDefaultcolor_id1a77c7aa.xml#id1a77c7aa-97d3-415f-81c4-d4ef25052bba" title="Sets the default color used for text.">prefs_text_defaultColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the default color
+used for text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextDefaultheight_id57f13bc8.html#id57f13bc8-5176-4d5a-8e1f-220882083547__Command_PrefsTextDefaultheight_id57f13bc8.xml#id57f13bc8-5176-4d5a-8e1f-220882083547" title="Sets the default height for scaled text.">prefs_text_defaultHeight</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the default height
+for scaled text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextDefaultheightunits_ide55a6c3a.html#ide55a6c3a-a3a9-467f-b490-05ea403e1fd3__Command_PrefsTextDefaultheightunits_ide55a6c3a.xml#ide55a6c3a-a3a9-467f-b490-05ea403e1fd3" title="Sets the units used for scaled text.">prefs_text_defaultHeightUnits</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Sets the units used for
+scaled text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextDrawdefaultcolor_id36e742f3.html#id36e742f3-9592-47e9-9e1b-1f2dce8dbaca__Command_PrefsTextDrawdefaultcolor_id36e742f3.xml#id36e742f3-9592-47e9-9e1b-1f2dce8dbaca" title="Toggles between using the current layer outline color or a custom color for scaled text.">prefs_text_drawDefaultColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Toggles between using
+the current layer outline color or a custom color for scaled text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextDrawscaled_id46ae287e.html#id46ae287e-8354-4192-af26-4d99adac7236__Command_PrefsTextDrawscaled_id46ae287e.xml#id46ae287e-8354-4192-af26-4d99adac7236" title="Toggles between drawing scaled text or fitted height text.">prefs_text_drawScaled</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Toggles between drawing
+scaled text or fitted height text.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextIsotext_idf95257ba.html#idf95257ba-f41e-4c62-9547-f732a075fe4a__Command_PrefsTextIsotext_idf95257ba.xml#idf95257ba-f41e-4c62-9547-f732a075fe4a" title="Toggles between overriding the text orientation and honoring the specified text orientation.">prefs_text_isoText</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Toggles between overriding
+the text orientation and honoring the specified text orientation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e784 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewCellnamescaled_ida6b690d7.html#ida6b690d7-9a75-47c1-a479-844fa26e45de__Command_PrefsViewCellnamescaled_ida6b690d7.xml#ida6b690d7-9a75-47c1-a479-844fa26e45de" title="Enables or disables the display of reference names with scaled text.">prefs_view_cellnamescaled</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e787 "><p class="p">Enables or disables the
+display of reference names with scaled text.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Nets</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idf141eb1d-e8ac-4c83-acef-612f1911bcf0" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 5. </span>Nets Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1036"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1039"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetExtractionlimit_id69c18c34.html#id69c18c34-f2d3-4d13-ac9a-fe611647d6f0__Command_PrefsNetExtractionlimit_id69c18c34.xml#id69c18c34-f2d3-4d13-ac9a-fe611647d6f0" title="Sets a limit on the area in which net extraction runs.">prefs_net_extractionLimit</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Sets a limit on the area
+in which net extraction runs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetExtractionmode_id36d99037.html#id36d99037-d21a-45f9-9839-ab0815123cc0__Command_PrefsNetExtractionmode_id36d99037.xml#id36d99037-d21a-45f9-9839-ab0815123cc0" title="Sets the net extraction mode to use geometries or specific properties.">prefs_net_extractionMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Sets the net extraction
+mode to use geometries or specific properties.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetHighlightbase_ida4709dac.html#ida4709dac-85a0-40f5-997f-ade172def0ef__Command_PrefsNetHighlightbase_ida4709dac.xml#ida4709dac-85a0-40f5-997f-ade172def0ef" title="Defines the base highlight layer number for the net layer.">prefs_net_highlightBase</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Defines the base highlight
+layer number for the net layer.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetHighlightcount_idb2eaaeb3.html#idb2eaaeb3-4bda-4633-943a-7dc96b0954bd__Command_PrefsNetHighlightcount_idb2eaaeb3.xml#idb2eaaeb3-4bda-4633-943a-7dc96b0954bd" title="Defines the number of layers used for highlighting extracted nets.">prefs_net_highlightCount</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Defines the number of
+layers used for highlighting extracted nets.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetPropertyname_id1c09f32e.html#id1c09f32e-e154-44ab-a03b-bce4d67903ce__Command_PrefsNetPropertyname_id1c09f32e.xml#id1c09f32e-e154-44ab-a03b-bce4d67903ce" title="Specifies a property for extracting nets.">prefs_net_propertyName</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Specifies a property
+for extracting nets.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1036 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsNetSearchdepth_id1a6cbc92.html#id1a6cbc92-bf2e-40a5-aa01-de3a61426331__Command_PrefsNetSearchdepth_id1a6cbc92.xml#id1a6cbc92-bf2e-40a5-aa01-de3a61426331" title="Sets a depth for searching for nets.">prefs_net_searchDepth</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1039 "><p class="p">Sets a depth for searching
+for nets.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Session</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id91b19fd5-3e04-4777-9b31-4845f8a49599" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 6. </span>Session Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1132"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1135"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1132 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscWidgetcolor_idaa21e6d1.html#idaa21e6d1-6b64-4298-a86f-827bb72bc38c__Command_PrefsMiscWidgetcolor_idaa21e6d1.xml#idaa21e6d1-6b64-4298-a86f-827bb72bc38c" title="Sets a color scheme for the GUI appearance.">prefs_misc_widgetColor</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1135 "><p class="p">Sets a color scheme for
+the GUI appearance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1132 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscWidgetthickness_idacccc27c.html#idacccc27c-5308-4d34-b162-0803f6153ba0__Command_PrefsMiscWidgetthickness_idacccc27c.xml#idacccc27c-5308-4d34-b162-0803f6153ba0" title="Sets a style for the GUI appearance.">prefs_misc_widgetThickness</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1135 "><p class="p">Sets a style for the
+GUI appearance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1132 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextBboxhandling_id45005421.html#id45005421-cd9f-4434-812b-45e049e80540__Command_PrefsTextBboxhandling_id45005421.xml#id45005421-cd9f-4434-812b-45e049e80540" title="Specifies the bounding box of text relative to the cell extent.">prefs_text_bboxHandling</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1135 "><p class="p">Specifies the bounding
+box of text relative to the cell extent.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1132 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewEnddepth_ida2a67f6f.html#ida2a67f6f-5d24-4e60-bdc8-99892d34f101__Command_PrefsViewEnddepth_ida2a67f6f.xml#ida2a67f6f-5d24-4e60-bdc8-99892d34f101" title="Specifies the initial hierarchy depth shown when first opening a layout.">prefs_view_endDepth</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1135 "><p class="p">Specifies the initial
+hierarchy depth shown when first opening a layout.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1132 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewHidelayersonload_id2f5c5a6f.html#id2f5c5a6f-2577-4c8a-8d6a-0aed416ab859__Command_PrefsViewHidelayersonload_id2f5c5a6f.xml#id2f5c5a6f-2577-4c8a-8d6a-0aed416ab859" title="Enables or disables the display of all layer when first opening a layout.">prefs_view_hideLayersOnLoad</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1135 "><p class="p">Enables or disables the
+display of all layer when first opening a layout.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Misc</span> tab
+of the Preferences dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__ida42c6389-4c80-4b8b-9680-9eefab2b9990" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 7. </span>Misc Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1215"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1218"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesGds_id0a23d5d8.html#id0a23d5d8-cb79-434b-8228-30fcef8ecfe9__Command_PrefsFiletypesGds_id0a23d5d8.xml#id0a23d5d8-cb79-434b-8228-30fcef8ecfe9" title="Specifies the GDS file extensions that are displayed in the file browser.">prefs_filetypes_gds</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the GDS file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesOasis_idc3ca8b1c.html#idc3ca8b1c-4577-4779-a297-e00bde97621c__Command_PrefsFiletypesOasis_idc3ca8b1c.xml#idc3ca8b1c-4577-4779-a297-e00bde97621c" title="Specifies the OASIS file extensions that are displayed in the file browser.">prefs_filetypes_oasis</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the OASIS file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesOvly_id81aecbba.html#id81aecbba-74db-48e6-befe-3caf65e5241c__Command_PrefsFiletypesOvly_id81aecbba.xml#id81aecbba-74db-48e6-befe-3caf65e5241c" title="Specifies the overlay file extensions that are displayed in the file browser.">prefs_filetypes_ovly</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the overlay
+file extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesRdb_id49f29bb6.html#id49f29bb6-c9d8-4499-84fa-5311b2e546ae__Command_PrefsFiletypesRdb_id49f29bb6.xml#id49f29bb6-c9d8-4499-84fa-5311b2e546ae" title="Specifies the RDB file extensions that are displayed in the file browser.">prefs_filetypes_rdb</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the RDB file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesRules_id27af59f6.html#id27af59f6-5f98-44ce-8076-b9b20955d16d__Command_PrefsFiletypesRules_id27af59f6.xml#id27af59f6-5f98-44ce-8076-b9b20955d16d" title="Specifies the file types to display in the Load Input SVRF Layer Names and Load Output SVRF Layer Names dialog boxes.">prefs_filetypes_rules</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the file types to display in the Load
+Input SVRF Layer Names and Load Output SVRF Layer Names dialog boxes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesZip_id3ad47d29.html#id3ad47d29-3dd3-49ce-a974-2e7ca6063620__Command_PrefsFiletypesZip_id3ad47d29.xml#id3ad47d29-3dd3-49ce-a974-2e7ca6063620" title="Specifies the zipped or compressed file extensions that are displayed in the file browser.">prefs_filetypes_zip</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Specifies the zipped
+or compressed file extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsguireadOnlyEditMode_id42292563.html#id42292563-7467-414b-bf12-2980b4c105bc__Command_PrefsguireadOnlyEditMode_id42292563.xml#id42292563-7467-414b-bf12-2980b4c105bc" title="Enables or disables opening a layout in read-only mode.">prefs_gui_readOnlyEditMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables opening
+a layout in read-only mode.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGuiShowmemorystatus_id49d5e124.html#id49d5e124-fe25-4c8f-a410-94fe30718d30__Command_PrefsGuiShowmemorystatus_id49d5e124.xml#id49d5e124-fe25-4c8f-a410-94fe30718d30" title="Controls the display of the memory usage meter in the status toolbar.">prefs_gui_showMemoryStatus</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Controls the display
+of the memory usage meter in the status toolbar.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLayerpaletteFilterby_id29d6133a.html#id29d6133a-6906-4697-af2e-5592f43845ef__Command_PrefsLayerpaletteFilterby_id29d6133a.xml#id29d6133a-6906-4697-af2e-5592f43845ef" title="Controls the display of the Filters panel.">prefs_layerpalette_filterBy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Controls the display
+of the Filters panel.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLayerpaletteFiltershared_idea95273c.html#idea95273c-cd08-4aa2-ba33-6f8d77ecdb82__Command_PrefsLayerpaletteFiltershared_idea95273c.xml#idea95273c-cd08-4aa2-ba33-6f8d77ecdb82" title="Enables or disables the sharing of layer visibility across filters.">prefs_layerpalette_filterShared</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+sharing of layer visibility across filters.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLicenseTimeout_idbe4617a9.html#idbe4617a9-614a-46f3-a8bf-738ff91f24ab__Command_PrefsLicenseTimeout_idbe4617a9.xml#idbe4617a9-614a-46f3-a8bf-738ff91f24ab" title="Enables or disables the license timeout functionality.">prefs_license_timeout</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+license timeout functionality.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLicenseTimeoutinterval_id9303d34a.html#id9303d34a-b3f4-48e7-8621-d51385b4041b__Command_PrefsLicenseTimeoutinterval_id9303d34a.xml#id9303d34a-b3f4-48e7-8621-d51385b4041b" title="Defines a timeout interval for releasing licenses after inactivity.">prefs_license_timeoutInterval</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Defines a timeout interval
+for releasing licenses after inactivity.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadAddcliponrvelayer_id1c4ef495.html#id1c4ef495-cd54-4a45-8dea-33fd8adc2282__Command_PrefsLoadAddcliponrvelayer_id1c4ef495.xml#id1c4ef495-cd54-4a45-8dea-33fd8adc2282" title="Controls the behavior for automatically creating clips when highlighting from Calibre RVE.">prefs_load_addClipOnRVELayer</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Controls the behavior for automatically creating
+clips when highlighting from Calibre RVE.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadDefincloadhalo_id9bb6bf42.html#id9bb6bf42-a2c5-4156-ac96-2505560929c2__Command_PrefsLoadDefincloadhalo_id9bb6bf42.xml#id9bb6bf42-a2c5-4156-ac96-2505560929c2" title="Controls the halo size when shapes on RVE layers automatically create clips with halos.">prefs_load_defIncLoadHalo</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Controls the halo size
+when shapes on RVE layers automatically create clips with halos.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadIncrloadupgradecache_idade718c8.html#idade718c8-bccc-4e7d-9ae1-33c739f930b8__Command_PrefsLoadIncrloadupgradecache_idade718c8.xml#idade718c8-bccc-4e7d-9ae1-33c739f930b8" title="Controls whether older incremental load cache files are automatically upgraded.">prefs_load_incrLoadUpgradeCache</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Controls whether older
+incremental load cache files are automatically upgraded.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadShowcelllayersummary_idbd6f318e.html#idbd6f318e-68e2-4f43-aaa8-5151acca2680__Command_PrefsLoadShowcelllayersummary_idbd6f318e.xml#idbd6f318e-68e2-4f43-aaa8-5151acca2680" title="Enables or disables the transcripting of Cell Summary and Layer Summary information.">prefs_load_showCellLayerSummary</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+transcripting of Cell Summary and Layer Summary information.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadUseoasislayernames_id97b4e5d3.html#id97b4e5d3-599e-438f-8721-9fa1212f92de__Command_PrefsLoadUseoasislayernames_id97b4e5d3.xml#id97b4e5d3-599e-438f-8721-9fa1212f92de" title="Enables or disables the reading of layer names in a layer property file when loading OASIS files.">prefs_load_useOasisLayerNames</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+reading of layer property file layer names when loading OASIS files.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscDisablequalityagent_id2e4cb232.html#id2e4cb232-e7dc-4206-8696-601b69929110__Command_PrefsMiscDisablequalityagent_id2e4cb232.xml#id2e4cb232-e7dc-4206-8696-601b69929110" title="Enables or disables the Quality Agent.">prefs_misc_disableQualityAgent</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+Quality Agent.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscHiddenlayerdashline_ide4f88ee6.html#ide4f88ee6-5d85-4c5d-849f-f4e9730f6bdf__Command_PrefsMiscHiddenlayerdashline_ide4f88ee6.xml#ide4f88ee6-5d85-4c5d-849f-f4e9730f6bdf" title="Enables or disables the use of a dashed line to indicate hidden layers.">prefs_misc_hiddenLayerDashLine</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+use of a dashed line to indicate hidden layers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscLayersbycolorlayout_idc56ed4e7.html#idc56ed4e7-ceea-4a44-8124-8abfaf4bdf20__Command_PrefsMiscLayersbycolorlayout_idc56ed4e7.xml#idc56ed4e7-ceea-4a44-8124-8abfaf4bdf20" title="Enables or disables the background color of the Layers palette following the Layout Viewing area.">prefs_misc_layersByColorLayout</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+background color of the Layers palette following the Layout Viewing
+area.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscLayersinviewindicator_id5b88a4c6.html#id5b88a4c6-50fd-4318-9f1c-daf653ba8509__Command_PrefsMiscLayersinviewindicator_id5b88a4c6.xml#id5b88a4c6-50fd-4318-9f1c-daf653ba8509" title="Enables or disables the highlighting of layers currently displayed in the Layout Viewing area.">prefs_misc_layersInViewIndicator</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+highlighting of layers currently displayed in the Layout Viewing
+area.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscQueryonexit_ided55b389.html#ided55b389-da21-4029-9768-28996727954a__Command_PrefsMiscQueryonexit_ided55b389.xml#ided55b389-da21-4029-9768-28996727954a" title="Enables or disables a confirmation dialog box before exiting the application.">prefs_misc_queryOnExit</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables a
+confirmation dialog box before exiting the application.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscQueryunsavedchanges_idd03ba49c.html#idd03ba49c-cf0b-4ad5-8a5f-3e5d0d6a330e__Command_PrefsMiscQueryunsavedchanges_idd03ba49c.xml#idd03ba49c-cf0b-4ad5-8a5f-3e5d0d6a330e" title="Enables or disables a confirmation dialog box before closing or reloading a layout with unsaved changes.">prefs_misc_queryUnsavedChanges</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables a
+confirmation dialog box before closing or reloading a layout with
+unsaved changes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1215 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscShowcellrefcount_id68a90613.html#id68a90613-9c83-4973-8cfc-d830290310c8__Command_PrefsMiscShowcellrefcount_id68a90613.xml#id68a90613-9c83-4973-8cfc-d830290310c8" title="Enables or disables the display of the total reference count.">prefs_misc_showCellRefCount</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1218 "><p class="p">Enables or disables the
+display of the total reference count.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the <span class="ph uicontrol">Options</span> tab
+of the Choose Layout Files dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id7a677d2a-fa55-4b79-80c8-aa2308518662" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 8. </span>Choose
+Layout Files Options Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1528"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1531"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1528 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadExpanddatatypes_id47f5e1cf.html#id47f5e1cf-0bc5-4293-a552-ece3948d25c5__Command_PrefsLoadExpanddatatypes_id47f5e1cf.xml#id47f5e1cf-0bc5-4293-a552-ece3948d25c5" title="Controls the expanding of datatypes when loading a layout.">prefs_load_expandDatatypes</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1531 "><p class="p">Controls the expanding
+of datatypes when loading a layout.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1528 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadIgnoregdsboxes_idf1daca26.html#idf1daca26-44c6-4a7c-b0de-684ea4b8143c__Command_PrefsLoadIgnoregdsboxes_idf1daca26.xml#idf1daca26-44c6-4a7c-b0de-684ea4b8143c" title="Controls whether box records are ignored when reading GDS files.">prefs_load_ignoreGdsBoxes</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1531 "><p class="p">Controls whether box
+records are ignored when reading GDS files.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1528 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadPathstopolygons_id6cfc793d.html#id6cfc793d-189f-42a9-8588-c57742eaf661__Command_PrefsLoadPathstopolygons_id6cfc793d.xml#id6cfc793d-189f-42a9-8588-c57742eaf661" title="Controls whether paths are preserved or converted to polygons on input.">prefs_load_pathsToPolygons</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1531 "><p class="p">Controls whether paths
+are preserved or converted to polygons on input.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1528 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadPreserveproperties_id315be880.html#id315be880-7e85-48cb-a3de-22feff2ed950__Command_PrefsLoadPreserveproperties_id315be880.xml#id315be880-7e85-48cb-a3de-22feff2ed950" title="Enables or disables the preserving of GDS properties for SREF, AREF, and geometry objects.">prefs_load_preserveProperties</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1531 "><p class="p">Enables or disables the
+preserving of GDS properties for SREF, AREF, and geometry objects.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1528 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadPreservetextattributes_idd7241d15.html#idd7241d15-ca58-4b36-9f24-370aa790c3a2__Command_PrefsLoadPreservetextattributes_idd7241d15.xml#idd7241d15-ca58-4b36-9f24-370aa790c3a2" title="Enables or disables the preserving of text attributes.">prefs_load_preserveTextAttributes</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1531 "><p class="p">Enables or disables the
+preserving of text attributes.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the Export Layout
+dialog box.</p>
+<p class="p"><a class="xref fm:Table" href="#id063f1eb5-4f31-4435-9347-b68ed323dd9c__idd3ee5ab5-b634-4207-bfcc-6c6ae21cbac8">Table 9</a> identifies the preferences that can
+be set in the Export Layout dialog box or by defining it in the <span class="ph filepath">preferences</span> file.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__idd3ee5ab5-b634-4207-bfcc-6c6ae21cbac8" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 9. </span>Export
+Layout Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1616"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1619"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1616 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsSaveFixpolygons_id24c05790.html#id24c05790-9f46-49a9-bfdb-485544a238b5__Command_PrefsSaveFixpolygons_id24c05790.xml#id24c05790-9f46-49a9-bfdb-485544a238b5" title="Enables or disables fixing self-intersecting polygons when exporting a layout.">prefs_save_fixPolygons</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1619 "><p class="p">Enables or disables fixing
+self-intersecting polygons when exporting a layout.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1616 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsSaveKeepemptycells_ide49de16e.html#ide49de16e-a384-482d-8e97-f57cc3d6352a__Command_PrefsSaveKeepemptycells_ide49de16e.xml#ide49de16e-a384-482d-8e97-f57cc3d6352a" title="Specifies how to handle empty cells and references when exporting a layout.">prefs_save_keepEmptyCells</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1619 "><p class="p">Specifies how to handle
+empty cells and references when exporting a layout.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1616 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsSaveMaxpathvertices_id289316ab.html#id289316ab-72b5-4809-ba86-ea163553d2b7__Command_PrefsSaveMaxpathvertices_id289316ab.xml#id289316ab-72b5-4809-ba86-ea163553d2b7" title="Specifies a limit for the maximum number of vertices for a path when exporting a layout.">prefs_save_maxPathVertices</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1619 "><p class="p">Specifies a limit for
+the maximum number of vertices for a path when exporting a layout.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1616 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsSaveMaxpolygonvertices_id8c1ba92d.html#id8c1ba92d-c42b-4d81-8935-b5cc1f335714__Command_PrefsSaveMaxpolygonvertices_id8c1ba92d.xml#id8c1ba92d-c42b-4d81-8935-b5cc1f335714" title="Specifies a limit for the maximum number of vertices for a polygon when exporting a layout.">prefs_save_maxPolygonVertices</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1619 "><p class="p">Specifies a limit for
+the maximum number of vertices for a polygon when exporting a layout.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+in the <span class="ph filepath">preferences</span> file or in the RVE/CI Setup
+dialog box.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id05049b4c-b6a6-4ec3-b37f-fb1c421d8f5f" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 10. </span>Calibre
+RVE Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1684"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1687"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1684 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRveAllowundoredo_id31844fdc.html#id31844fdc-bf9a-4222-998b-edce5e7d7f9a__Command_PrefsRveAllowundoredo_id31844fdc.xml#id31844fdc-bf9a-4222-998b-edce5e7d7f9a" title="Enables or disables the Undo and Redo functionality in Calibre RVE.">prefs_rve_allowUndoRedo</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1687 "><p class="p">Enables or disables the
+Undo and Redo functionality in Calibre RVE.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1684 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRveHighlightbase_id6f82c5cb.html#id6f82c5cb-c747-458b-bb3a-520a4eb9b224__Command_PrefsRveHighlightbase_id6f82c5cb.xml#id6f82c5cb-c747-458b-bb3a-520a4eb9b224" title="Sets the base highlight layer number for Calibre RVE.">prefs_rve_highlightBase</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1687 "><p class="p">Sets the base highlight
+layer number for Calibre RVE.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1684 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRveHighlightcount_id13701c3f.html#id13701c3f-25c2-4a86-9dac-152cb2cd6588__Command_PrefsRveHighlightcount_id13701c3f.xml#id13701c3f-25c2-4a86-9dac-152cb2cd6588" title="Specifies the maximum number of layers that can be used for multilayer highlighting.">prefs_rve_highlightCount</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1687 "><p class="p">Specifies the maximum
+number of layers that can be used for multilayer highlighting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1684 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsRvePathenv_id0c77374a.html#id0c77374a-4979-4d5e-8619-cc16095dfaf9__Command_PrefsRvePathenv_id0c77374a.xml#id0c77374a-4979-4d5e-8619-cc16095dfaf9" title="Specifies the path to the Calibre Interactive and Calibre RVE software.">prefs_rve_pathEnv</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1687 "><p class="p">Specifies the path to
+the Calibre Interactive and Calibre RVE software.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the preferences that you can define
+using menu options, GUI widgets, or in the <span class="ph filepath">preferences</span> file.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id3c9e2ca2-e395-43fe-ac5d-0adb8d0d75c2" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 11. </span>General Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1753"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1756"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsBalloonHelp_id3887c754.html#id3887c754-6d1c-4032-8e02-345e8e2ae20b__Command_PrefsBalloonHelp_id3887c754.xml#id3887c754-6d1c-4032-8e02-345e8e2ae20b" title="Enables or disables balloon help.">prefs_balloon_help</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Enables or disables balloon
+help.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditDuplicateshift_id04fc69d5.html#id04fc69d5-37ef-4272-97d7-c3a6a8bc1228__Command_PrefsEditDuplicateshift_id04fc69d5.xml#id04fc69d5-37ef-4272-97d7-c3a6a8bc1228" title="Specifies the amount by which to shift a referenced cell or geometry when it is copied.">prefs_edit_duplicateShift</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the amount
+by which to shift a referenced cell or geometry when it is copied.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditDuplicateunit_idd8a0128e.html#idd8a0128e-0f00-4a65-bfe4-30553d3ec50d__Command_PrefsEditDuplicateunit_idd8a0128e.xml#idd8a0128e-0f00-4a65-bfe4-30553d3ec50d" title="Specifies the units to use for prefs_edit_duplicateShift.">prefs_edit_duplicateUnit</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the units to
+use for prefs_edit_duplicateShift.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsEditSelmode_id9fa9ec17.html#id9fa9ec17-c3b8-4df5-9fc5-e223f0e883f4__Command_PrefsEditSelmode_id9fa9ec17.xml#id9fa9ec17-c3b8-4df5-9fc5-e223f0e883f4" title="Sets the object selection mode for the Object Selection toolbar.">prefs_edit_selmode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Sets the object selection
+mode for the Object Selection toolbar.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGuiExpandcellpalette_id00502489.html#id00502489-42dd-4e04-81e3-ff47ef3303eb__Command_PrefsGuiExpandcellpalette_id00502489.xml#id00502489-42dd-4e04-81e3-ff47ef3303eb" title="Controls the size of the Cells Browser.">prefs_gui_expandCellPalette</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the size of
+the Cells Browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGuiExpandlayerpalette_id3e28855e.html#id3e28855e-7e0a-4649-94c1-9cddb86a642f__Command_PrefsGuiExpandlayerpalette_id3e28855e.xml#id3e28855e-7e0a-4649-94c1-9cddb86a642f" title="Controls the size of the Layers palette.">prefs_gui_expandLayerPalette</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the size of
+the Layers palette.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsGuiShowclipspalette_id878d2d62.html#id878d2d62-8c86-44bb-a3ce-b67d7293e106__Command_PrefsGuiShowclipspalette_id878d2d62.xml#id878d2d62-8c86-44bb-a3ce-b67d7293e106" title="Controls the display of the Clips palette in the Cells Browser.">prefs_gui_showClipsPalette</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the display
+of the Clips palette in the Cells Browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLayerpaletteGroupby_idadfdb0dc.html#idadfdb0dc-47b1-43f5-92b3-105101122618__Command_PrefsLayerpaletteGroupby_idadfdb0dc.xml#idadfdb0dc-47b1-43f5-92b3-105101122618" title="Controls the grouping of layers in the Layers palette.">prefs_layerpalette_groupBy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the grouping
+of layers in the Layers palette.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLayerpaletteSortaltfocus_id5faffb5e.html#id5faffb5e-85e9-40df-a4bb-e7de9211854b__Command_PrefsLayerpaletteSortaltfocus_id5faffb5e.xml#id5faffb5e-85e9-40df-a4bb-e7de9211854b" title="Controls the sorting of layers based on the layers displayed by the current view depth setting.">prefs_layerpalette_sortAltFocus</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the sorting
+of layers based on the layers displayed by the current view depth setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLayerpaletteSortby_id75bfe4d9.html#id75bfe4d9-e2f1-40fb-b8bd-25726e74f96f__Command_PrefsLayerpaletteSortby_id75bfe4d9.xml#id75bfe4d9-e2f1-40fb-b8bd-25726e74f96f" title="Sets the layer sort based on the layer values.">prefs_layerpalette_sortBy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Sets the layer sort based
+on the layer values.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadOpennewwindow_id37b81e1e.html#id37b81e1e-a5eb-4f40-a809-ff487d16a33d__Command_PrefsLoadOpennewwindow_id37b81e1e.xml#id37b81e1e-a5eb-4f40-a809-ff487d16a33d" title="Controls whether to open a layout in the existing window or create a new window.">prefs_load_openNewWindow</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls whether to open
+a layout in the existing window or create a new window.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscPromptdeletebookmark_ida6cfd7dc.html#ida6cfd7dc-4c57-426e-948f-78c11c257409__Command_PrefsMiscPromptdeletebookmark_ida6cfd7dc.xml#ida6cfd7dc-4c57-426e-948f-78c11c257409" title="Enables or disables a confirmation dialog box before deleting a bookmark.">prefs_misc_promptDeleteBookmark</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Enables or disables a
+confirmation dialog box before deleting a bookmark.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsTextShow_id55766227.html#id55766227-c70b-4058-a21d-38fea20cabec__Command_PrefsTextShow_id55766227.xml#id55766227-c70b-4058-a21d-38fea20cabec" title="Controls the display of text labels.">prefs_text_show</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Controls the display
+of text labels.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewDrawtopdown_id1ce84d17.html#id1ce84d17-9ec4-466d-8072-4e0d1238463c__Command_PrefsViewDrawtopdown_id1ce84d17.xml#id1ce84d17-9ec4-466d-8072-4e0d1238463c" title="Specifies the draw order of layers.">prefs_view_drawTopDown</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the draw order
+of layers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewLayercolordrawmode_id37c2ab84.html#id37c2ab84-289f-40d6-a74b-010a2571a470__Command_PrefsViewLayercolordrawmode_id37c2ab84.xml#id37c2ab84-289f-40d6-a74b-010a2571a470" title="Specifies the display of layer colors.">prefs_view_layerColorDrawMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the display
+of layer colors.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMinpixels_id31ee84cf.html#id31ee84cf-423c-4757-97ad-7fdbbd6114dc__Command_PrefsViewMinpixels_id31ee84cf.xml#id31ee84cf-423c-4757-97ad-7fdbbd6114dc" title="Specifies the minimum number of height and width pixels.">prefs_view_minPixels</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the minimum
+number of height and width pixels.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1753 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewRefdetailsize_id16a6154e.html#id16a6154e-4f6d-4f6e-a834-437f6f7bd068__Command_PrefsViewRefdetailsize_id16a6154e.xml#id16a6154e-4f6d-4f6e-a834-437f6f7bd068" title="Specifies the height and width of cell reference pixels.">prefs_view_refDetailSize</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1756 "><p class="p">Specifies the height
+and width of cell reference pixels.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table identifies the Calibre MDPview and Calibre
+WORKbench preferences that you can define in the GUI or in the <span class="ph filepath">preferences</span> file.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id063f1eb5-4f31-4435-9347-b68ed323dd9c__id24adde5f-2572-4e04-b47e-b25cef8d2700" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 12. </span>Calibre
+MDPview and Calibre WORKbench Preferences</span></caption><colgroup><col style="width:3.300in" /><col style="width:3.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1978"><p class="p">Preference
+Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d40969e1981"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesHitachi_ida33b83e8.html#ida33b83e8-1c52-4991-987c-fadeea3c50e8__Command_PrefsFiletypesHitachi_ida33b83e8.xml#ida33b83e8-1c52-4991-987c-fadeea3c50e8" title="Specifies the Hitachi file extensions that are displayed in the file browser.">prefs_filetypes_hitachi</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the Hitachi
+file extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesHitachijobdeck_idb267c195.html#idb267c195-8440-44c5-b4f3-8e7bb37c30df__Command_PrefsFiletypesHitachijobdeck_idb267c195.xml#idb267c195-8440-44c5-b4f3-8e7bb37c30df" title="Specifies the Hitachi job deck extensions that are displayed in the file browser.">prefs_filetypes_hitachiJobDeck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the Hitachi
+job deck extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesJeol_idae456a2f.html#idae456a2f-5c78-46a8-bbb5-773921792e15__Command_PrefsFiletypesJeol_idae456a2f.xml#idae456a2f-5c78-46a8-bbb5-773921792e15" title="Specifies the JEOL file extensions that are displayed in the file browser.">prefs_filetypes_jeol</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the JEOL file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesJeoljobdeck_idb6ac2691.html#idb6ac2691-c73c-41c9-ad4b-30f1f8120774__Command_PrefsFiletypesJeoljobdeck_idb6ac2691.xml#idb6ac2691-c73c-41c9-ad4b-30f1f8120774" title="Specifies the JEOL job deck extensions that are displayed in the file browser.">prefs_filetypes_jeolJobDeck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the JEOL job
+deck extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesMebes_id2e184498.html#id2e184498-daa5-4260-85e8-58c827d67d2e__Command_PrefsFiletypesMebes_id2e184498.xml#id2e184498-daa5-4260-85e8-58c827d67d2e" title="Specifies the MEBES file extensions that are displayed in the file browser.">prefs_filetypes_mebes</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the MEBES file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesMebesjobdeck_id4f8182fa.html#id4f8182fa-6831-4500-b50e-7c35ca2f6627__Command_PrefsFiletypesMebesjobdeck_id4f8182fa.xml#id4f8182fa-6831-4500-b50e-7c35ca2f6627" title="Specifies the MEBES job deck extensions that are displayed in the file browser.">prefs_filetypes_mebesJobDeck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the MEBES job
+deck extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesMicronic_id3817908d.html#id3817908d-a99f-4d05-8e70-84255a968ea9__Command_PrefsFiletypesMicronic_id3817908d.xml#id3817908d-a99f-4d05-8e70-84255a968ea9" title="Specifies the Micronic file extensions that are displayed in the file browser.">prefs_filetypes_micronic</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the Micronic
+file extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesMicronicjobdeck_id42334a1c.html#id42334a1c-f665-4f9d-9662-a7a9724e4a4e__Command_PrefsFiletypesMicronicjobdeck_id42334a1c.xml#id42334a1c-f665-4f9d-9662-a7a9724e4a4e" title="Specifies the Micronic job deck extensions that are displayed in the file browser.">prefs_filetypes_micronicJobDeck</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the Micronic
+job deck extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesSem_id4fbf06cf.html#id4fbf06cf-e17a-4772-a3b5-8f343c9cb0b6__Command_PrefsFiletypesSem_id4fbf06cf.xml#id4fbf06cf-e17a-4772-a3b5-8f343c9cb0b6" title="Specifies the SEM file extensions that are displayed in the file browser.">prefs_filetypes_sem</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the SEM file
+extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsFiletypesVboasis_id945daa10.html#id945daa10-dca2-41e0-9d97-422744752a46__Command_PrefsFiletypesVboasis_id945daa10.xml#id945daa10-dca2-41e0-9d97-422744752a46" title="Specifies the MDP fracture file extensions that are displayed in the file browser.">prefs_filetypes_vboasis</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the MDP fracture
+file extensions that are displayed in the file browser.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadMdpchipviewmodefull_idbe3755f9.html#idbe3755f9-6c32-45ee-bde2-d625efb78c40__Command_PrefsLoadMdpchipviewmodefull_idbe3755f9.xml#idbe3755f9-6c32-45ee-bde2-d625efb78c40" title="Controls the display of chip file names in the Layers palette.">prefs_load_mdpChipViewModeFull</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Controls the display
+of chip file names in the Layers palette.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsLoadUsemdpchiplayernames_ida69b95ba.html#ida69b95ba-d346-48ff-980c-8de31561d851__Command_PrefsLoadUsemdpchiplayernames_ida69b95ba.xml#ida69b95ba-d346-48ff-980c-8de31561d851" title="Enables or disables the use of MDP file chip layer names from a layerprops file.">prefs_load_useMDPChipLayerNames</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Enables or disables the
+use of MDP file chip layer names from a layerprops file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsMiscPromptonmdpindexfileupdate_id6716382e.html#id6716382e-2d1f-4d89-8250-2b16a79cfd1f__Command_PrefsMiscPromptonmdpindexfileupdate_id6716382e.xml#id6716382e-2d1f-4d89-8250-2b16a79cfd1f" title="Enables or disables prompting before an MDP index file updates.">prefs_misc_promptOnMdpIndexFileUpdate</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Enables or disables prompting
+before an MDP index file updates.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsOpcMaplayerbyname_id9a6ff7c2.html#id9a6ff7c2-700c-4f75-bd94-807ac293a4af__Command_PrefsOpcMaplayerbyname_id9a6ff7c2.xml#id9a6ff7c2-700c-4f75-bd94-807ac293a4af" title="Enables or disables the Map Layer By Name setting.">prefs_opc_mapLayerByName</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Enables or disables the
+Map Layer By Name setting.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMdpcolorextentby_id5cd66836.html#id5cd66836-2b39-4f0b-ac0c-7208d336622f__Command_PrefsViewMdpcolorextentby_id5cd66836.xml#id5cd66836-2b39-4f0b-ac0c-7208d336622f" title="Specifies whether to draw MDP extents in layer colors or chip colors.">prefs_view_mdpColorExtentBy</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies whether to
+draw MDP extents in layer colors or chip colors.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMdpcrossmode_ida9ee243e.html#ida9ee243e-23c6-4be5-9f1b-45cd05251d28__Command_PrefsViewMdpcrossmode_ida9ee243e.xml#ida9ee243e-23c6-4be5-9f1b-45cd05251d28" title="Enables or disables the display of a cross at the center of polygons that are otherwise too small to see at high levels.">prefs_view_mdpCrossMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Enables or disables the
+display of a cross at the center of polygons that are otherwise
+too small to see at high levels.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMdpmode_id5383918c.html#id5383918c-e93f-40c8-89de-95606009ae3f__Command_PrefsViewMdpmode_id5383918c.xml#id5383918c-e93f-40c8-89de-95606009ae3f" title="Specifies the groups of pattern data you see in Calibre MDPview.">prefs_view_mdpMode</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Specifies the groups
+of pattern data you see in Calibre MDPview.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1978 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrefsViewMissingchipmarkers_id5388d5c8.html#id5388d5c8-74c3-4c84-bbf2-d94830b154c8__Command_PrefsViewMissingchipmarkers_id5388d5c8.xml#id5388d5c8-74c3-4c84-bbf2-d94830b154c8" title="Enables or disables the display of markers for any missing chip definition files.">prefs_view_missingChipMarkers</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d40969e1981 "><p class="p">Enables or disables the
+display of markers for any missing chip definition files.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following
+is an example of the <span class="ph filepath italic">preferences</span> file
+and some of the preferences and associated values that can be defined
+in the file.</p>
+<pre class="pre codeblock leveled"><code># Generated by Calibre DESIGNrev. 
+prefs_load_expandDatatypes 1 
+prefs_load_ignoreGdsBoxes 0 
+prefs_load_multipleFile 0 
+prefs_load_openNewWindow</code></pre></div>
+</div>
+<div class="related-links"><div class="childlink"><strong>Child Topics</strong></div>
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsBalloonHelp_id3887c754.html" title="Enables or disables balloon help.">prefs_balloon_help</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditAllowzeroarea_idbd012140.html" title="Allows or disallows zero area polygons and zero-width paths.">prefs_edit_allowZeroArea</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditDuplicateshift_id04fc69d5.html" title="Specifies the amount by which to shift a referenced cell or geometry when it is copied.">prefs_edit_duplicateShift</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditDuplicateunit_idd8a0128e.html" title="Specifies the units to use for prefs_edit_duplicateShift.">prefs_edit_duplicateUnit</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditMovedirection_idb89615f1.html" title="Sets the directional restriction for moving selected objects.">prefs_edit_moveDirection</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditPastefollowsmouse_idb4e2a3aa.html" title="Enables or disables pasting copied or cut objects over an existing object.">prefs_edit_pasteFollowsMouse</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditSelectlimit_id305a2381.html" title="Specifies the number of objects that can be selected at the same time.">prefs_edit_selectLimit</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditSelectlimitenabled_ida33aff45.html" title="Enables or disables setting a limit on the number of objects that can be selected at the same time.">prefs_edit_selectLimitEnabled</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditSelmode_id9fa9ec17.html" title="Sets the object selection mode for the Object Selection toolbar. ">prefs_edit_selmode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsEditShowpopupselect_id49f2403d.html" title="Enables or disables the display of information about a selected object.">prefs_edit_showPopupSelect</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesGds_id0a23d5d8.html" title="Specifies the GDS file extensions that are displayed in the file browser.">prefs_filetypes_gds</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesHitachi_ida33b83e8.html" title="Specifies the Hitachi file extensions that are displayed in the file browser.">prefs_filetypes_hitachi</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesHitachijobdeck_idb267c195.html" title="Specifies the Hitachi job deck extensions that are displayed in the file browser.">prefs_filetypes_hitachiJobDeck</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesJeol_idae456a2f.html" title="Specifies the JEOL file extensions that are displayed in the file browser.">prefs_filetypes_jeol</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesJeoljobdeck_idb6ac2691.html" title="Specifies the JEOL job deck extensions that are displayed in the file browser.">prefs_filetypes_jeolJobDeck</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesMebes_id2e184498.html" title="Specifies the MEBES file extensions that are displayed in the file browser.">prefs_filetypes_mebes</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesMebesjobdeck_id4f8182fa.html" title="Specifies the MEBES job deck extensions that are displayed in the file browser.">prefs_filetypes_mebesJobDeck</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesMicronic_id3817908d.html" title="Specifies the Micronic file extensions that are displayed in the file browser.">prefs_filetypes_micronic</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesMicronicjobdeck_id42334a1c.html" title="Specifies the Micronic job deck extensions that are displayed in the file browser.">prefs_filetypes_micronicJobDeck</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesOasis_idc3ca8b1c.html" title="Specifies the OASIS file extensions that are displayed in the file browser.">prefs_filetypes_oasis</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesOvly_id81aecbba.html" title="Specifies the overlay file extensions that are displayed in the file browser.">prefs_filetypes_ovly</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesRdb_id49f29bb6.html" title="Specifies the RDB file extensions that are displayed in the file browser.">prefs_filetypes_rdb</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesRules_id27af59f6.html" title="Specifies the file types to display in the Load Input SVRF Layer Names and Load Output SVRF Layer Names dialog boxes.">prefs_filetypes_rules</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesSem_id4fbf06cf.html" title="Specifies the SEM file extensions that are displayed in the file browser.">prefs_filetypes_sem</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesVboasis_id945daa10.html" title="Specifies the MDP fracture file extensions that are displayed in the file browser.">prefs_filetypes_vboasis</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsFiletypesZip_id3ad47d29.html" title="Specifies the zipped or compressed file extensions that are displayed in the file browser.">prefs_filetypes_zip</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGridAutocolorenabled_idcd289042.html" title="Specifies whether the grid color is auto-generated or a user-specified custom color.">prefs_grid_autoColorEnabled</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGridMajor_id3a697dce.html" title="Specifies the grid spacing in microns.">prefs_grid_major</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGridSnap_id718cdbf7.html" title="Controls the snapping direction of the cursor when creating polygons or paths.">prefs_grid_snap</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGridStyle_id3df95911.html" title="Sets the grid style.">prefs_grid_style</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGridUsercolor_iddc9c1c02.html" title="Specifies the color of the grid. ">prefs_grid_usercolor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGuiExpandcellpalette_id00502489.html" title="Controls the size of the Cells Browser.">prefs_gui_expandCellPalette</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGuiExpandlayerpalette_id3e28855e.html" title="Controls the size of the Layers palette.">prefs_gui_expandLayerPalette</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsguireadOnlyEditMode_id42292563.html" title="Enables or disables opening a layout in read-only mode.">prefs_gui_readOnlyEditMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGuiShowclipspalette_id878d2d62.html" title="Controls the display of the Clips palette in the Cells Browser.">prefs_gui_showClipsPalette</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGuiShowmemorystatus_id49d5e124.html" title="Controls the display of the memory usage meter in the status toolbar.">prefs_gui_showMemoryStatus</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsGuiShowrulerlegend_id6420798c.html" title="Enables or disables the display of the ruler legend in the layout viewing area.">prefs_gui_showRulerLegend</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLayerpaletteFilterby_id29d6133a.html" title="Controls the display of the Filters panel.">prefs_layerpalette_filterBy</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLayerpaletteFiltershared_idea95273c.html" title="Enables or disables the sharing of layer visibility across filters. ">prefs_layerpalette_filterShared</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLayerpaletteGroupby_idadfdb0dc.html" title="Controls the grouping of layers in the Layers palette.">prefs_layerpalette_groupBy</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLayerpaletteSortaltfocus_id5faffb5e.html" title="Controls the sorting of layers based on the layers displayed by the current view depth setting.">prefs_layerpalette_sortAltFocus</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLayerpaletteSortby_id75bfe4d9.html" title="Sets the layer sort based on the layer values.">prefs_layerpalette_sortBy</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLicenseTimeout_idbe4617a9.html" title="Enables or disables the license timeout functionality.">prefs_license_timeout</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLicenseTimeoutinterval_id9303d34a.html" title="Defines a timeout interval for releasing licenses after inactivity.">prefs_license_timeoutInterval</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadAddcliponrvelayer_id1c4ef495.html" title="Controls the behavior for automatically creating clips when highlighting from Calibre RVE.">prefs_load_addClipOnRVELayer</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadDefincloadhalo_id9bb6bf42.html" title="Controls the halo size when shapes on RVE layers automatically create clips with halos.">prefs_load_defIncLoadHalo</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadExpanddatatypes_id47f5e1cf.html" title="Controls the expanding of datatypes when loading a layout.">prefs_load_expandDatatypes</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadIgnoregdsboxes_idf1daca26.html" title="Controls whether box records are ignored when reading GDS files.">prefs_load_ignoreGdsBoxes</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadIncrloadupgradecache_idade718c8.html" title="Controls whether older incremental load cache files are automatically upgraded.">prefs_load_incrLoadUpgradeCache</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadMdpchipviewmodefull_idbe3755f9.html" title="Controls the display of chip file names in the Layers palette.">prefs_load_mdpChipViewModeFull</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadOpennewwindow_id37b81e1e.html" title="Controls whether to open a layout in the existing window or create a new window.">prefs_load_openNewWindow</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadPathstopolygons_id6cfc793d.html" title="Controls whether paths are preserved or converted to polygons on input.">prefs_load_pathsToPolygons</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadPreserveproperties_id315be880.html" title="Enables or disables the preserving of GDS properties for SREF, AREF, and geometry objects.">prefs_load_preserveProperties</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadPreservetextattributes_idd7241d15.html" title="Enables or disables the preserving of text attributes.">prefs_load_preserveTextAttributes</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadShowcelllayersummary_idbd6f318e.html" title="Enables or disables the transcripting of Cell Summary and Layer Summary information.">prefs_load_showCellLayerSummary</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadUsemdpchiplayernames_ida69b95ba.html" title="Enables or disables the use of MDP file chip layer names from a layerprops file.">prefs_load_useMDPChipLayerNames</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsLoadUseoasislayernames_id97b4e5d3.html" title="Enables or disables the reading of layer names in a layer property file when loading OASIS files.">prefs_load_useOasisLayerNames</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscContextclonemode_id479bf2c5.html" title="Sets the behavior of context cloning.">prefs_misc_contextCloneMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscDisablequalityagent_id2e4cb232.html" title="Enables or disables the Quality Agent.">prefs_misc_disableQualityAgent</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscHiddenlayerdashline_ide4f88ee6.html" title="Enables or disables the use of a dashed line to indicate hidden layers.">prefs_misc_hiddenLayerDashLine</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscLayersbycolorlayout_idc56ed4e7.html" title="Enables or disables the background color of the Layers palette following the Layout Viewing area.">prefs_misc_layersByColorLayout</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscLayersinviewindicator_id5b88a4c6.html" title="Enables or disables the highlighting of layers currently displayed in the Layout Viewing area.">prefs_misc_layersInViewIndicator</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscLayersscanmode_id4f95f070.html" title="Specifies which scanner (Calibre RVE or internal scanner) to use to scan layer objects.">prefs_misc_layersScanMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscPromptdeletebookmark_ida6cfd7dc.html" title="Enables or disables a confirmation dialog box before deleting a bookmark.">prefs_misc_promptDeleteBookmark</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscPromptonmdpindexfileupdate_id6716382e.html" title="Enables or disables prompting before an MDP index file updates.">prefs_misc_promptOnMdpIndexFileUpdate</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscQueryonexit_ided55b389.html" title="Enables or disables a confirmation dialog box before exiting the application.">prefs_misc_queryOnExit</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscQueryunsavedchanges_idd03ba49c.html" title="Enables or disables a confirmation dialog box before closing or reloading a layout with unsaved changes.">prefs_misc_queryUnsavedChanges</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscShowcellrefcount_id68a90613.html" title="Enables or disables the display of the total reference count.">prefs_misc_showCellRefCount</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscWidgetcolor_idaa21e6d1.html" title="Sets a color scheme for the GUI appearance.">prefs_misc_widgetColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsMiscWidgetthickness_idacccc27c.html" title="Sets a style for the GUI appearance.">prefs_misc_widgetThickness</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetExtractionlimit_id69c18c34.html" title="Sets a limit on the area in which net extraction runs.">prefs_net_extractionLimit</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetExtractionmode_id36d99037.html" title="Sets the net extraction mode to use geometries or specific properties.">prefs_net_extractionMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetHighlightbase_ida4709dac.html" title="Defines the base highlight layer number for the net layer.">prefs_net_highlightBase</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetHighlightcount_idb2eaaeb3.html" title="Defines the number of layers used for highlighting extracted nets.">prefs_net_highlightCount</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetPropertyname_id1c09f32e.html" title="Specifies a property for extracting nets.">prefs_net_propertyName</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsNetSearchdepth_id1a6cbc92.html" title="Sets a depth for searching for nets.">prefs_net_searchDepth</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsOpcMaplayerbyname_id9a6ff7c2.html" title="Enables or disables the Map Layer By Name setting.">prefs_opc_mapLayerByName</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsPathBgnextn_idbbc44f3c.html" title="Sets the beginning line-end extent for a path with a type of 4 (custom).">prefs_path_bgnExtn</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsPathEndextn_id398b12df.html" title="Sets the ending line-end extent for a path with a type of 4 (custom).">prefs_path_endExtn</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsPathType_id35d559a1.html" title="Sets the path type.">prefs_path_type</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsPathWidth_idef82e005.html" title="Sets the path width.">prefs_path_width</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsPropertyUnitmeasure_id7ceecf24.html" title="Sets the units used to measure object properties.">prefs_property_unitMeasure</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerColor_id778ec0e8.html" title="Sets the ruler color.">prefs_ruler_color</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerDirection_id9d0fa0de.html" title="Sets the allowed snapping direction used for drawing rulers.">prefs_ruler_direction</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerFormat_idc81e1d40.html" title="Specifies the format to use for displaying the ruler length.">prefs_ruler_format</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerHeight_id75153b3c.html" title="Enables or disables the use of larger text for ruler captions.">prefs_ruler_height</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerMultiple_id3b3c2f6a.html" title="Enables or disables multiple rulers.">prefs_ruler_multiple</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerShowdxdy_idb2f9d8b8.html" title="Enables or disables the display of the dx/dy ruler values.">prefs_ruler_showDxDy</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerShowsnappededge_id59c1809f.html" title="Enables or disables the highlighting of the vertex or edge to which the ruler snaps.">prefs_ruler_showSnappedEdge</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerSnap_id64afe0be.html" title="Sets the snapping of rulers.">prefs_ruler_snap</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerSnapevprojections_iddcab9cee.html" title="Enables or disables the projection of edges and vertices beyond their endpoints for ruler snapping.">prefs_ruler_snapEVProjections</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerSnaptonearest_id8ba2db9d.html" title="Specifies whether the ruler snaps to the vertex or edge that is nearest the cursor or the ruler.">prefs_ruler_snapToNearest</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerSnaptoreferences_id5552891f.html" title="Enables or disables snapping to reference edges and vertices.">prefs_ruler_snapToReferences</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerSplitmode_id3a63f051.html" title="Enables or disables the splitting of rulers on shape boundaries.">prefs_ruler_splitMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerTickmarkmode_idd263d84d.html" title="Specifies whether tick marks are used for rulers.">prefs_ruler_tickMarkMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRulerUnitmeasure_ida5d675db.html" title="Specifies the units in which to display the ruler length.">prefs_ruler_unitMeasure</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRveAllowundoredo_id31844fdc.html" title="Enables or disables the Undo and Redo functionality in Calibre RVE.">prefs_rve_allowUndoRedo</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRveHighlightbase_id6f82c5cb.html" title="Sets the base highlight layer number for Calibre RVE.">prefs_rve_highlightBase</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRveHighlightcount_id13701c3f.html" title="Specifies the maximum number of layers that can be used for multilayer highlighting.">prefs_rve_highlightCount</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsRvePathenv_id0c77374a.html" title="Specifies the path to the Calibre Interactive and Calibre RVE software.">prefs_rve_pathEnv</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsSaveFixpolygons_id24c05790.html" title="Enables or disables fixing self-intersecting polygons when exporting a layout.">prefs_save_fixPolygons</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsSaveKeepemptycells_ide49de16e.html" title="Specifies how to handle empty cells and references when exporting a layout.">prefs_save_keepEmptyCells</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsSaveMaxpathvertices_id289316ab.html" title="Specifies a limit for the maximum number of vertices for a path when exporting a layout.">prefs_save_maxPathVertices</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsSaveMaxpolygonvertices_id8c1ba92d.html" title="Specifies a limit for the maximum number of vertices for a polygon when exporting a layout.">prefs_save_maxPolygonVertices</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextBboxhandling_id45005421.html" title="Specifies the bounding box of text relative to the cell extent.">prefs_text_bboxHandling</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextDefaultcolor_id1a77c7aa.html" title="Sets the default color used for text.">prefs_text_defaultColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextDefaultheight_id57f13bc8.html" title="Sets the default height for scaled text.">prefs_text_defaultHeight</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextDefaultheightunits_ide55a6c3a.html" title="Sets the units used for scaled text.">prefs_text_defaultHeightUnits</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextDrawdefaultcolor_id36e742f3.html" title="Toggles between using the current layer outline color or a custom color for scaled text.">prefs_text_drawDefaultColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextDrawscaled_id46ae287e.html" title="Toggles between drawing scaled text or fitted height text.">prefs_text_drawScaled</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextIsotext_idf95257ba.html" title="Toggles between overriding the text orientation and honoring the specified text orientation.">prefs_text_isoText</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsTextShow_id55766227.html" title="Controls the display of text labels.">prefs_text_show</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewBg_idcb332b87.html" title="Specifies the background color for the layout viewing area.">prefs_view_bg</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewCellnamescaled_ida6b690d7.html" title="Enables or disables the display of reference names with scaled text.">prefs_view_cellnamescaled</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewCellorientmarker_ida9d5d0e9.html" title="Enables or disables the display of a reference orientation marker in the lower left corner of a reference to visually indicate mirroring and rotation.">prefs_view_cellorientmarker</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewCelloutline_id169b3f9c.html" title="Enables or disables the display of cell outlines.">prefs_view_celloutline</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewClipcolor_id6bb18832.html" title="Specifies the color of the incremental loading background.">prefs_view_clipColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewDrawtopcellbbox_idc16bb271.html" title="Enables or disables the display of the top cell bounding box.">prefs_view_drawTopCellBbox</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewDrawtopdown_id1ce84d17.html" title="Specifies the draw order of layers.">prefs_view_drawTopDown</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewEnddepth_ida2a67f6f.html" title="Specifies the initial hierarchy depth shown when first opening a layout.">prefs_view_endDepth</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewFillpolygons_id2078b06b.html" title="Enables or disables using layer patterns for the polygon fill.">prefs_view_fillpolygons</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewFindobjclipcolor_id537da163.html" title="Specifies the highlight color used for clips and finding objects.">prefs_view_findObjClipColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewHidelayersonload_id2f5c5a6f.html" title="Enables or disables the display of all layer when first opening a layout.">prefs_view_hideLayersOnLoad</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewLayercolordrawmode_id37c2ab84.html" title="Specifies the display of layer colors.">prefs_view_layerColorDrawMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMarkerorgmode_id9fc6bcf5.html" title="Specifies the type of marker drawn at the at the top cell’s origin.">prefs_view_markerOrgMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMdpcolorextentby_id5cd66836.html" title="Specifies whether to draw MDP extents in layer colors or chip colors.">prefs_view_mdpColorExtentBy</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMdpcrossmode_ida9ee243e.html" title="Enables or disables the display of a cross at the center of polygons that are otherwise too small to see at high levels.">prefs_view_mdpCrossMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMdpmode_id5383918c.html" title="Specifies the groups of pattern data you see in Calibre MDPview.">prefs_view_mdpMode</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMinpixels_id31ee84cf.html" title="Specifies the minimum number of height and width pixels.">prefs_view_minPixels</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMissingcellmarker_id80e6b995.html" title="Enables or disables the display of missing cell cross markers.">prefs_view_missingCellMarker</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewMissingchipmarkers_id5388d5c8.html" title="Enables or disables the display of markers for any missing chip definition files.">prefs_view_missingChipMarkers</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewOutlinerefcolor_idd808e9fb.html" title="Specifies the color used for reference outlines.">prefs_view_outlineRefColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewPanpercent_id7690fbe9.html" title="Specifies the percentage of view to move when panning.">prefs_view_panpercent</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewRefdetailsize_id16a6154e.html" title="Specifies the height and width of cell reference pixels.">prefs_view_refDetailSize</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewReforiginmarker_id6af13372.html" title="Specifies the type of marker to draw at the selected reference’s origin.">prefs_view_refOriginMarker</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewReppixels_id12c20163.html" title="Enables or disables the display of 3x3 pixel boxes in place of single pixel objects for improved visibility.">prefs_view_repPixels</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewSelectothercolor_id2255dad9.html" title="Specifies the highlight color used for edge, vertex, and text selections.">prefs_view_selectOtherColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewSelectrefpolycolor_idde0e074d.html" title="Specifies the highlight color used for reference and polygon selections.">prefs_view_selectRefPolyColor</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewSmallpanpercent_id45d494d4.html" title="Specifies the percentage of view to move when incrementally panning.">prefs_view_smallPanPercent</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PrefsViewSmallrefcolor_id24387cd0.html" title="Specifies the color used for small reference outlines.">prefs_view_smallRefColor</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ConfigurationFileReference_id4dccc720.html" title="Any time you configure the layout viewer, the tool saves your setting in one of several configuration files. While you can use the GUI to configure some aspects of the tool, you also have the option of editing the configuration files. Some aspects of the layout viewer behavior can only be modified by editing one of the configuration files.">Configuration File Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_user"
+                DocTitle = "Calibre® DESIGNrev™ Layout Viewer User’s Manual"
+                PageTitle = "preferences File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_PreferencesFileFormat_id063f1eb5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Layout Viewer User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

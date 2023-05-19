@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Using the LAUNCH CLUSTER and REMOTE COMMAND Statements" />
+<meta name="abstract" content="You can create a configuration file in which you define the LAUNCH CLUSTER and REMOTE COMMAND statements. The LAUNCH CLUSTER statement sets parameters for the connection of the primary host to the remote hosts, while the REMOTE COMMAND statement starts a Calibre MTflex server on a remote host. You then execute Calibre using the ‑remotefile argument to specify the path to a configuration file." />
+<meta name="description" content="You can create a configuration file in which you define the LAUNCH CLUSTER and REMOTE COMMAND statements. The LAUNCH CLUSTER statement sets parameters for the connection of the primary host to the remote hosts, while the REMOTE COMMAND statement starts a Calibre MTflex server on a remote host. You then execute Calibre using the ‑remotefile argument to specify the path to a configuration file." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using the LAUNCH CLUSTER and REMOTE COMMAND Statements</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using the LAUNCH CLUSTER and REMOTE COMMAND Statements" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using the LAUNCH CLUSTER
+and REMOTE COMMAND Statements</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">You can create
+a configuration file in which you define the LAUNCH CLUSTER and
+REMOTE COMMAND statements. The LAUNCH CLUSTER statement sets parameters
+for the connection of the primary host to the remote hosts, while
+the REMOTE COMMAND statement starts a Calibre MTflex server on a
+remote host. You then execute Calibre using the ‑remotefile argument
+to specify the path to a configuration file. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id01912dba-d916-4414-af8c-586cff9a5fcd"><p class="p">The
+CALIBRE_HOME environment variable must be set to the location of
+a Calibre software tree. This software tree must be accessible by
+the remote hosts and the same version of Calibre must be used throughout
+the network.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__ida2af92f8-32d9-4434-ad24-9a91178f5a3c"><p class="p">The
+LM_LICENSE_FILE or MGLS_LICENSE_FILE must be set to the location
+of a license file.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id680efad6-3a82-472e-8048-3b464c267205"><p class="p">Ability
+to run rsh or ssh (required for RHEL/CentOS 8 operating system) on
+all remote hosts. The <span class="ph filepath">launch_remote.sh</span> script
+as described in the procedure uses the standard rsh OS utility for
+executing processes on the remote shell. Any other remote shell
+utility, such as ssh, may be substituted for rsh.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id071c0127-ff95-4e2b-a314-b50014530628"><p class="p">A
+heterogeneous environment where the Calibre MTflex configuration
+file is used to communicate with the primary host to identify the
+path to the appropriate CALIBRE_HOME tree. </p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id72a119d3-94e0-47ee-a76d-aaa9030672b3"><span class="ph cmd">Create a file named <span class="ph filepath italic">args</span> and
+add the names of your remote hosts. For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>node91
+node92
+node93
+node94
+node95
+node90
+...</code></pre></div></li>
+<li class="li step stepexpand" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id56b37588-9b37-4033-b80e-b979146468a1"><span class="ph cmd">Create a file named <span class="ph filepath">launch_remote.sh</span> that includes
+the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>#!/bin/sh
+n=0
+for node in 'cat $1'
+do
+	rsh $node $CALIBRE_HOME/bin/rcalibre "/scratch1" 1 \
+		CALIBRE_HOME $VCO_HOME -mtflex $CALIBRE_REMOTE_CONNECTION &amp;
+	rsh $node $CALIBRE_HOME/bin/rcalibre "/scratch1" 1 \
+		CALIBRE_HOME $VCO_HOME -mtflex $CALIBRE_REMOTE_CONNECTION &amp;
+	n='expr $n + 2';
+	if [ $n -eq $CALIBRE_REMOTE_COUNT ]
+	then break;
+	fi
+done</code></pre><p class="p">This script does the following:</p>
+<ul class="ul"><li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__idc968c1a7-9451-48ed-95e3-920d1b13897f"><p class="p">Outputs the contents of
+the <span class="ph filepath italic">args</span> file from Step
+1 as the argument list for the loop.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__idd5972c06-f05c-4e02-a226-a08d4d89b5fc"><p class="p">Sets the CALIBRE_HOME
+environment variable to $VCO_HOME for each CPU. The variable $VCO_HOME
+needs to be defined in the environment.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__ida877818e-6f23-429c-bfdb-8af7ade1210b"><p class="p">Specifies the log file
+directory as <span class="ph filepath italic">/scratch1</span>. This
+assumes each remote host has a mounted partition named “<span class="ph filepath italic">/scratch1</span>”.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id7a0b603f-f204-4139-890f-6d41a5a3145d"><p class="p">At the end of the loop,
+the number of connections made by the script are counted and compared
+against the values specified by the LAUNCH CLUSTER statement (Step
+3) for maximum and minimum connections. Execution of the <a class="xref fm:HeadingOnly" href="Command_RemoteCommand_ide34650f6.html#ide34650f6-c740-45d0-afb2-dcba24c8fe3b__Command_RemoteCommand_ide34650f6.xml#ide34650f6-c740-45d0-afb2-dcba24c8fe3b" title="Specifies a command and arguments that provide information about how to launch a Calibre MTflex server or an LVS compare process on a remote host.">REMOTE COMMAND</a> assigns values to the CALIBRE_REMOTE_COUNT
+for the child process.</p>
+</li>
+<li class="li" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id0c3319a0-b1b2-42fb-bf0e-fa7af037f109"><p class="p">Uses the values assigned
+to the CALIBRE_REMOTE_CONNECTION variable to set and communicate
+the port and process ID for each individual connection between the
+primary and remote hosts. Execution of the <a class="xref fm:HeadingOnly" href="Command_RemoteCommand_ide34650f6.html#ide34650f6-c740-45d0-afb2-dcba24c8fe3b__Command_RemoteCommand_ide34650f6.xml#ide34650f6-c740-45d0-afb2-dcba24c8fe3b" title="Specifies a command and arguments that provide information about how to launch a Calibre MTflex server or an LVS compare process on a remote host.">REMOTE COMMAND</a> assigns a value to the CALIBRE_REMOTE_CONNECTION
+variable for the child process.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__id248c8266-577c-4cc7-9ef4-030f1f62792f"><span class="ph cmd">Create a Calibre MTflex configuration
+file named <span class="ph filepath italic">my_config_file</span> and
+include the LAUNCH CLUSTER and REMOTE COMMAND statements. The COUNT
+argument for the LAUNCH CLUSTER statement specifies the primary
+host should expect to connect to a total of six CPUs on the remote
+hosts, and the MINCOUNT argument specifies the minimum number of
+remote CPU connections to expect before the run fails. The <span class="ph filepath">launch_remote.sh</span> file
+is discussed in Step 2; the <span class="ph filepath italic">args</span> file
+is discussed in Step 1.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>LAUNCH CLUSTER COUNT 6 MINCOUNT 2
+// script must have execution privileges
+// script and argument list must be accessible from primary host
+REMOTE COMMAND /user/jsmith/bin/launch_remote.sh \
+	ARGUMENTS["/user/jsmith/remote/args"]</code></pre></div></li>
+<li class="li step stepexpand" id="idaef4757e-9f09-41d8-bb4f-c43ab5ed05fb__idbbd3be98-a4df-436a-a876-e80caaa4c977"><span class="ph cmd">Invoke Calibre nmDRC-H, using
+the -remotefile argument to specify the path to the Calibre MTflex
+configuration file.</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibre -drc -hier -turbo -remotefile my_config_file rules</pre>
+<p class="p">The Calibre command line -remotefile
+argument is used to specify a path to a configuration file that
+includes information about the primary and remote hosts, how to
+partition the run, and the launch method. This argument is required
+when running Calibre MTflex in a heterogeneous environment.</p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RunningCalibreMtflexInHeterogeneousEnvironment_idddb02366.html" title="A heterogeneous environment is a network of local and remote hosts that include different processors.">Running Calibre MTflex in a Heterogeneous Environment</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Using the LAUNCH CLUSTER and REMOTE COMMAND Statements"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_UsingLaunchClusterRemoteCommandStatements_idaef4757e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Extracting TSV Coupling for an Analog Design" />
+<meta name="abstract" content="Create a netlist that inserts a TSV and includes substrate coupling between TSVs in an analog design using the GDS extraction flow." />
+<meta name="description" content="Create a netlist that inserts a TSV and includes substrate coupling between TSVs in an analog design using the GDS extraction flow." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc4dd9305-0418-4095-8ebc-ea21068dd236" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Extracting TSV Coupling for an Analog Design</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Extracting TSV Coupling for an Analog Design" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc4dd9305-0418-4095-8ebc-ea21068dd236">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Extracting TSV Coupling
+for an Analog Design</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Create a
+netlist that inserts a TSV and includes substrate coupling between
+TSVs in an analog design using the GDS extraction flow.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__idc908bc7f-99b2-4ef0-a4f4-eafeafee4e1f"><p class="p">Calibrated
+rule files that contain TSV resistance (R<span class="ph FontProperty LiteralSubScript">sub</span>)
+and TSV capacitance (C<span class="ph FontProperty LiteralSubScript">sub</span>) parasitic
+values as a function of spacing between the TSVs.</p>
+<p class="p">To demonstrate the behavior this example assumes
+the following tables were defined in the MIPT file used to generate
+the calibrated rule files as a part of the TSV via layer definition.</p>
+<pre class="pre codeblock"><code>...
+table = tsv_capacitance {   
+        property = tsv_capacitance
+        table_type = C
+        dim_type = drawn
+        value_type = absolute
+        spacing = { 60 70 80 90 100 110 120 130 140 150 <span class="ph CodeHighlight orange">160</span> 170 180 190 200 210 220 230 }
+        value = { 40 35 31 28 25 23 21 19 18 17 <span class="ph CodeHighlight orange">16</span> 15 14 13 12 11 10 9}
+
+table = tsv_resistance {
+        property = tsv_resistance
+        table_type = R
+        dim_type = drawn
+        value_type = absolute
+        spacing = { 60 70 80 90 100 110 120 130 140 150 <span class="ph CodeHighlight orange">160</span> 170 180 190 200 210 220 230 }
+        value = { 1200 1300 1350 1450 1550 1600 1700 1750 1800 1850 <span class="ph CodeHighlight orange">1900</span> 1950 2000 2050 2090 2100 2130 2150}
+...</code></pre><p class="p">The values in bold are used to demonstrate the
+results.</p>
+</li>
+<li class="li" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__ida0310e42-df5c-4c93-8668-ce45debb1c2f"><p class="p">A TSV subcircuit definition in SPICE format. This
+example uses an RC subcircuit definition.</p>
+</li>
+<li class="li" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__id57125c26-a581-409f-a2c8-fb6cb5922c96"><p class="p">A
+GDS design whose layout database is LVS-clean</p>
+</li>
+<li class="li" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__id3c3c0f50-b5d4-4002-bba9-62e33ad3a97e"><p class="p">A valid
+top level GDS rule file. For more information refer to “<a class="xref fm:HeadingOnly" href="TaskTop_CreatingTopLevelControlFile_id1224def3.html#id1224def3-3ef4-478d-9ec6-c8ef6e498dde__TaskTop_CreatingTopLevelControlFile_id1224def3.xml#id1224def3-3ef4-478d-9ec6-c8ef6e498dde" title="The top-level control file is an SVRF rule file that contains all the settings necessary to run Calibre xACT. This example describes a set of statements used in a GDS flow.">Creating a Top-level Control File</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__id0d9b578d-fc40-4e56-920c-ca97ade98913"><span class="ph cmd">The file <span class="ph filepath">tsv_rc.subckt</span> contains
+an RC subcircuit definition for a TSV. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>.subckt     tsv_rc    top    bottom
+            R1        top    n2       5555
+            R2        n2     bottom   5555
+            C         n2     sub      7777f
+.ends</code></pre></div></li>
+<li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__idb164c30c-5833-4adc-8e8e-f1003cd40f82"><span class="ph cmd">Verify the top-level rule file, <span class="ph filepath">top_gds.rules</span>,
+contains the following specification information.</span><div class="itemgroup info StepInfo"><p class="p">The layout database statements
+are used to specify the LVS and annotated GDS files generated by
+Calibre 3DStack for interposer extraction. For example:</p>
+<pre class="pre codeblock"><code>LAYOUT PRIMARY “TOPCELL_3DIC”
+LAYOUT PATH “./RC_interposer_gds/RC_interposer.gds”
+INCLUDE ./RC_interposer_gds/RC_interposer.gds.map.svrf</code></pre><p class="p">Specify the extracted netlist output in DSPF format
+using layout names with:</p>
+<pre class="pre codeblock"><code>PEX NETLIST “tsv_netlist.dspf” DSPF LAYOUTNAMES LOCATION CLAYER CLOCATION RLAYER RLOCATION RAREA RWIDTH</code></pre></div></li>
+<li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__ida5954869-a286-4a52-80a0-d21765ecae9f"><span class="ph cmd">To
+include the TSV subcircuit in the extracted netlist add the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist 3DIC', 'svrf_ur'); return false;">PEX Netlist 3DIC</a> statement
+to the <span class="ph filepath">top_gds.rules</span> file. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PEX NETLIST 3DIC tsv_rc FILE “./inputs/tsv_rc.subckt” SUBNODE sub</code></pre><p class="p">where <span class="ph filepath">tsv_rc</span> is
+an LVS layer or a calibrated layer name, and <span class="ph filepath">sub</span> is
+TSV circuit middle node.</p>
+</div></li>
+<li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__id043b626b-da9e-4c02-9cc5-1a9070ca8b1f"><span class="ph cmd">To also include the couplings between the TSVs
+that are within a distance of 275 microns of each other, add the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX 3DIC Coupling', 'svrf_ur'); return false;">PEX 3DIC Coupling</a> statement
+to the <span class="ph filepath">top_gds.rules</span> file.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PEX 3DIC COUPLING tsv_rc ANALOG MAXDISTANCE 275</code></pre><p class="p">When the <span class="keyword ParameterName Required">ANALOG</span> keyword
+is specified, the coupling capacitance between the TSVs is extracted
+based on a parallel combination of resistance and capacitance. The
+parasitic values are provided as a function of spacing between the
+TSVs. </p>
+</div></li>
+<li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__id8dc25ee1-f58c-4f4c-927f-53defc194c25"><span class="ph cmd">Save and close the <span class="ph filepath">top_gds.rules</span> file.</span></li>
+<li class="li step stepexpand" id="idc4dd9305-0418-4095-8ebc-ea21068dd236__idea478ace-a4bf-4631-b2fe-3be4a2920d9b"><span class="ph cmd">Run Calibre xACT to extract RC parasitic effects
+and generate the netlist.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -xact -rc top_gds.rules</code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">If there are no errors, the directory should contain
+the DSPF netlist, <span class="ph filepath">tsv_netlist.dspf.</span> </p>
+<p class="p">Examine the contents of the netlist. The netlist
+should contain the inserted TSV information. The resistance and
+capacitance values should match those from the subcircuit specified
+in <span class="ph filepath">tsv_rc.subckt</span>.</p>
+<pre class="pre codeblock"><code>...
+R1180 TEST_SI_DIE1[14]:52 TEST_SI_DIE1[14]:58 <span class="ph CodeHighlight orange">5555</span> $X=542.5 $Y=582.5
++ $X2=542.5 $Y2=589.0
+R1153 TEST_SI_DIE1[14]:52 TEST_SI_DIE1[14]:67 <span class="ph CodeHighlight orange">5555</span> $w=1.4e-05
++ $layer=metal1 $X=542.5 $Y=582.5 $X2=542.5 $Y2=589.0
+Cc_1481 TEST_SI_DIE1[14]:52 TEST_SI_DIE1[14]:96 <span class="ph CodeHighlight orange">7777f</span> $X=542.5 $Y=582.5
+...</code></pre><p class="p">The netlist should also include the TSV coupling
+information:</p>
+<pre class="pre codeblock"><code>...
+Cc_2104 TEST_SI_DIE1[8]:107 TEST_SI_DIE1[4]:117 <span class="ph CodeHighlight orange">16f</span> $X=182.5 $Y=764.875
+Rc_1483 TEST_SI_DIE1[14]:96 TEST_SI_DIE1[18]:111 <span class="ph CodeHighlight orange">1900</span>
+...</code></pre><p class="p">The capacitance and resistance coupling values
+were obtained from the tsv_capacitance and tsv_resistance tables
+for the spacing value of 160 microns.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RunningInterposerExtraction_id730fe9ef.html" title="Calibre xACT supports die and interposer TSV extraction for both GDS and LEF/DEF designs. TSV extraction includes the extraction of the interposer parasitics on both sides of the TSVs, TSV subcircuit insertion, and TSV to TSV coupling extraction.">Running TSV Extraction</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Extracting TSV Coupling for an Analog Design"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExtractingTsvCouplingForAnAnalogDesign_idc4dd9305.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

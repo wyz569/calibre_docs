@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calibre xRC and the Physical Verification Flow" />
+<meta name="abstract" content="Run parasitic extraction after your layout passes LVS. Calibre xRC makes use of connectivity data. If the layout is not electrically correct, the parasitic results will not apply to the final design either." />
+<meta name="description" content="Run parasitic extraction after your layout passes LVS. Calibre xRC makes use of connectivity data. If the layout is not electrically correct, the parasitic results will not apply to the final design either." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id55405cde-5f7f-4433-b414-7221c92d2b84" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre xRC and the Physical Verification Flow</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre xRC and the Physical Verification Flow" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id55405cde-5f7f-4433-b414-7221c92d2b84">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre xRC and the Physical Verification Flow</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Run parasitic
+extraction after your layout passes LVS. Calibre xRC makes use of
+connectivity data. If the layout is not electrically correct, the
+parasitic results will not apply to the final design either. </span>
+</div>
+<p class="p">After running parasitic extraction,
+you may choose to simulate your design. You can also use the reports
+to identify the most affected nets. Usually the cycle of physical
+verification, parasitic extraction, and post-layout verification
+is repeated several times before tapeout.</p>
+<div class="fig fignone" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id4470a8fa-69e2-497f-9580-4bc687b82221"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Calibre xRC in the Physical Verification
+Flow</span><br /><div class="imagecenter"><img class="image imagecenter" height="340" src="../graphics/OverallPVFlow.gif" width="127" /></div><br /></div>
+<div class="section Subsections"><div class="section Subsection" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id0ba98164-59e3-4779-9180-d3ff3a1f1c0a"><h2 class="title Subheading sectiontitle">Prerequisites
+for Calibre xRC</h2><p class="p">You must have the following to run the Calibre
+xRC tool:</p>
+<ul class="ul"><li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__idda9a710b-a945-4baa-a6e5-bf00b8583fdf"><p class="p">A layout database for which connectivity
+is defined. </p>
+</li>
+<li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id56becaaa-428b-4bed-a7fe-0c91288c1064"><p class="p">An optional source netlist if you require
+schematic names for the nets in the parasitic netlist. </p>
+</li>
+<li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__ida77eb39f-ada7-46e4-8228-a361d1ea030b"><p class="p">An SVRF rule file containing Calibre-specific
+SVRF statements and operations. </p>
+</li>
+<li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id1e4b0fb9-52ef-408d-8ace-6b21286ee08f"><p class="p">The Calibre software.</p>
+</li>
+<li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id9db065bd-1080-4b78-9e5b-4aad18953de9"><p class="p">All necessary licenses. At a minimum,
+you must have a Calibre xRC, Calibre xRC to ADVance MS, or Calibre
+xRC CB license. Additional licenses may be required depending on
+the operations performed. For licensing information, see the “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Licensing Parasitic Extraction Products', 'calbr_admin_gd'); return false;">Licensing: Parasitic Extraction Products</a>” section of the <span class="ph FontProperty ManualTitle">Calibre Administrator’s Guide</span>.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id1e0a7cfd-49bf-4c05-a275-ce1f426fa5e2"><h2 class="title Subheading sectiontitle">How to
+Run Calibre xRC</h2><p class="p">You
+can run the Calibre
+xRC tool using either of following methods:</p>
+<ul class="ul"><li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__idf3de660b-b72e-4bc2-9d7f-9221604c095f"><p class="p">Interactively from the Calibre<sup>®</sup> Interactive™ graphical user interface. See “<a class="xref fm:HeadingAndPage" href="MGCChap_GettingStartedParasiticExtractionUsingCalibreInteractive_id23ac5840.html#id23ac5840-c5d8-42ba-98cc-3057288e19c9__MGCChap_GettingStartedParasiticExtractionUsingCalibreInteractive_id23ac5840.xml#id23ac5840-c5d8-42ba-98cc-3057288e19c9" title="The Calibre xRC tool can be run from Calibre’s Graphical User Interface (GUI) tool known as Calibre Interactive.">Getting Started: Parasitic Extraction Using Calibre Interactive</a>”.</p>
+</li>
+<li class="li" id="id55405cde-5f7f-4433-b414-7221c92d2b84__id339dfa32-e47d-4c5c-b512-8facf2536534"><p class="p">In batch mode from the command line.
+See “<a class="xref fm:HeadingAndPage" href="MGCChap_GettingStartedParasiticExtractionUsingCalibreBatchMode_id6656966c.html#id6656966c-23b2-4ec9-b7ae-1ec798806c75__MGCChap_GettingStartedParasiticExtractionUsingCalibreBatchMode_id6656966c.xml#id6656966c-23b2-4ec9-b7ae-1ec798806c75" title="There are three steps in the overall Calibre xRC extraction flow. Each step has many possible customizations based on your particular needs.">Getting Started: Parasitic Extraction Using Calibre Batch Mode</a>”.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreXrcOverview_ide07c7639.html" title="Calibre xRC is a parasitic extraction tool that calculates parasitic resistance and capacitance in an IC layout, and generates parasitic netlists and reports.">Calibre xRC Overview</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Calibre xRC and the Physical Verification Flow"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalibreXrcPhysicalVerificationFlow_id55405cde.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

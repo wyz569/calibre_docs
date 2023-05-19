@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="setlayer curve" />
+<meta name="abstract" content="Generates a new layer with excess jogs and other small 2D effects removed from the output (a “smoothing effect”)." />
+<meta name="description" content="Generates a new layer with excess jogs and other small 2D effects removed from the output (a “smoothing effect”)." />
+<meta name="prodname" content="Calibre nmMPC and Calibre nmCLMPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmpc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4340ef68-2da0-441a-99bc-4f121af39f87" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>setlayer curve</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="setlayer curve" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id4340ef68-2da0-441a-99bc-4f121af39f87">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">setlayer curve</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">LITHO MPC
+setup file command (see <a class="xref fm:TableAndPage" href="Contain_MpcCorrectionCommands_idd4dfbecb.html#idd4dfbecb-e6f9-465b-a7f0-abe6d1f4c105__idfbd8778a-ec7c-4edb-bd40-60b5b9f9f40d">Table 1</a>)</p>
+<p class="shortdesc">Generates a new layer with excess
+jogs and other small 2D effects removed from the output (a “smoothing
+effect”).</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">setlayer</span> <span class="keyword ParameterName RequiredReplaceable">output_layer_name</span> <span class="keyword ParameterName Required">=</span> <span class="keyword ParameterName Required">curve</span> <span class="keyword ParameterName RequiredReplaceable">input_layer_name</span> <br />
+[order {linear | <span class="keyword ParameterName OptionalDefault">quadratic</span> | cubic | <span class="keyword ParameterName OptionalReplaceable">num</span>}] [cpdist <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span>] [pts_per_cp <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[maxdist <span class="keyword ParameterName OptionalReplaceable">maxdist_value</span>] [midpt <span class="keyword ParameterName OptionalReplaceable">midpt_value</span>] [scale1 <span class="keyword ParameterName OptionalReplaceable">value</span>] [scale2 <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[midpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span>] [endpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span>] [active_layer <span class="keyword ParameterName OptionalReplaceable">active_layer</span>] <br />
+[jog_tol <span class="keyword ParameterName OptionalReplaceable">tol_val</span> jog_adj <span class="keyword ParameterName OptionalReplaceable">adj_val</span>] [jog_cleanup_dist <span class="keyword ParameterName OptionalReplaceable">value</span>] [jog_extra <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[output_cpts <span class="keyword ParameterName OptionalReplaceable">val</span>] [output_clean_target] <br />
+[concave [<span class="keyword ParameterName OptionalReplaceable">set_of_options</span>]]  [convex [<span class="keyword ParameterName OptionalReplaceable">set_of_options</span>]] <br />
+[line_end [<span class="keyword ParameterName OptionalReplaceable">set_of_options</span>] length <span class="keyword ParameterName OptionalReplaceable">value</span> ] <br />
+[space_end [<span class="keyword ParameterName OptionalReplaceable">set_of_options</span>] length <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[jog [<span class="keyword ParameterName OptionalReplaceable">set_of_options</span>] length <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[new_cp <span class="keyword ParameterName OptionalReplaceable">corner1</span> <span class="keyword ParameterName OptionalReplaceable">corner2</span> length <span class="keyword ParameterName OptionalReplaceable">constraint</span> [length1 <span class="keyword ParameterName OptionalReplaceable">constraint</span>] [length2 <span class="keyword ParameterName OptionalReplaceable">constraint</span>]<br />
+   offset <span class="keyword ParameterName OptionalReplaceable">value</span> [perp <span class="keyword ParameterName OptionalReplaceable">value</span>] [delete_corner] [delete_midpt]]</p>
+<p class="lines UsageLine">where <span class="keyword ParameterName OptionalReplaceable">set_of_options</span> is the following set of optional arguments:<br />
+[cpdist <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span>] [maxdist <span class="keyword ParameterName OptionalReplaceable">maxdist_value</span>] [midpt <span class="keyword ParameterName OptionalReplaceable">midpt_value</span>][midpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span>] [endpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span>]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id9f520d9d-a61a-4f6d-90f1-578a23efca67"><span class="keyword ParameterName RequiredReplaceable">output_layer_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword specifying
+the name of the new output target layer. The new layer is created
+and the results of the operation are written to the layer. This
+layer must be a valid Calibre layer containing polygon data.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idcfa2bbd6-b756-441f-b88f-139cd15d41f6"><span class="keyword ParameterName RequiredReplaceable">input_layer_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword specifying
+the name of the input layer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idd667928d-6aad-44e5-a2ab-3e5db526b878">order {linear | <span class="keyword ParameterName OptionalDefault">quadratic</span> | cubic | <span class="keyword ParameterName OptionalReplaceable">num</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies
+the B-spline order number. You can either specify a value <span class="keyword ParameterName OptionalReplaceable">num</span> between
+2 and 6, or specify linear (equivalent to a <span class="keyword ParameterName OptionalReplaceable">num</span> of
+2), quadratic (3), or cubic (4). The default value is quadratic.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id01b8a4e2-12e5-4bd1-b7cb-17095eeed3f6">cpdist <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the distance between
+additional control points inserted to the left and right of an original
+polygon point. Longer distances increase rounding. The default value
+is 50 nm.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id6fc49321-ddcd-4cd7-bf29-b5a7f58de2da">pts_per_cp <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the number of vertices
+for each control point in the output. The default is 10 vertices.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idc8769827-ca9e-4383-92d0-9cc9918da2bf">maxdist <span class="keyword ParameterName OptionalReplaceable">maxdist_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies that the last control
+point should be at exactly <span class="keyword ParameterName OptionalReplaceable">maxdist_value</span> away
+from the original polygon vertex. Though the spline curve will not
+trace out the same shape as the polygon, at <span class="keyword ParameterName OptionalReplaceable">maxdist_value</span>,
+the curve will touch the polygon.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id0008b521-416a-4105-8d0f-47a6e7b610c7">active_layer <span class="keyword ParameterName OptionalReplaceable">active_layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">If the active_layer argument
+is specified, the output produces control points that overlap between
+the specified input layer and <span class="keyword ParameterName OptionalReplaceable">active_layer</span>.
+This is implemented by making sure that no additional control points
+are placed within the <span class="keyword ParameterName OptionalReplaceable">active_layer</span>. </p>
+<p class="p">The effect of this option is
+to force the output edge to conform to the drawn gate edge while still
+over the active layer before flaring out at the 90 degree polygon
+bend. This squares out any 90 degree turns in poly or metal layers
+that lie near an active region, minimizing any gate flare effect.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id753f9a62-5581-47a6-b33e-22a16c74be5d">midpt <span class="keyword ParameterName OptionalReplaceable">midpt_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies how many additional
+control points to add in the middle of a notch or nub that would
+have had no additional control points otherwise.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id0a683a98-945a-41c3-aab5-6dc9d3d80bdc">scale1 <span class="keyword ParameterName OptionalReplaceable">value</span>  scale2 <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">If an adjacent edge is a notch
+or nub and is smaller than <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span> *
+scale1, control points on adjacent edges are put at a <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span> *
+scale2 distance instead of the <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span>. This
+is done for better curvature control for various line widths. Both
+scale1 and scale2 default to 1 if undeclared.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id8c4004ff-b49d-451d-b4ef-0981e1fe63a7">midpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">All control points created by
+the midpt parameter (in the middle of line ends and space ends) are
+moved to increase the curvature. Line-end control points move towards
+the outside of the polygon. Space-end control points move towards
+the inside of the polygon. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idfda8a71f-a184-4b9e-ac7d-ead39fc59d44">endpt_offset <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">All control points situated
+at the polygon’s corners are moved to increase the curvature (towards
+the outside of the polygon for convex corners and towards the inside
+of the polygon for concave corners).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id07298997-2d13-4c7a-b0c9-3972ac37d53a">jog_tol <span class="keyword ParameterName OptionalReplaceable">tol_val</span> jog_adj <span class="keyword ParameterName OptionalReplaceable">adj_val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">When specified, this option
+will ignore all jogs less than or equal to <span class="keyword ParameterName OptionalReplaceable">tol_val</span> that
+have neighbor edges smaller or equal to <span class="keyword ParameterName OptionalReplaceable">adj_val</span>.
+This is to prevent small jogs from affecting the results of target
+smoothing prior to MPC.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id10abb5cf-8416-4a42-af26-6ec1596a75ac">jog_cleanup_dist <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">In the first stage of generating
+a spline, target jogs are removed according to the jog removal parameters
+jog_tol and jog_adj. </p>
+<p class="p">If a value for jog_cleanup_dist
+is set:</p>
+<ul class="ul"><li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id7c639905-9abd-46fb-bda1-3f5ad7ee8844"><p class="p">Edges with their length &lt;=
+jog_tol and with at least one neighbor with length &lt;= jog_adj
+(if jog_adj is present), and with both neighbors’ lengths &gt; jog_tol,
+and parallel to each other, are classified as jogs.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id85880c3e-bfab-4c20-a433-6ce025dcd395"><p class="p">Edges classified as jogs are
+removed.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id77ecbd40-f5b1-4dc4-b9f6-a3663cd033b3"><p class="p">Unconnected edges (which are
+parallel by definition) are shortened by up to jog_cleanup_dist
+then connected by a line.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">This algorithm
+has a finite interaction distance, thus will cause no hierarchical differences.</p>
+</div>
+</li>
+</ul>
+<p class="p">If jog_cleanup_dist is not specified,
+setlayer curve defaults to 0.5 microns (the maximum value possible).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id817124ca-80d4-430c-be3f-15dddbca562e">jog_extra <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies to generate
+additional control points when edges are longer than jog_adj <span class="keyword ParameterName OptionalReplaceable">adj_val</span>.
+The control point is inserted <span class="keyword ParameterName OptionalReplaceable">value</span> from
+the jog along the edge.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id0a996dfb-6c72-4a81-97d0-0a0128c39964">output_cpts <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+squares with a half-width equal to the <span class="keyword ParameterName OptionalReplaceable">val</span> are
+output instead of the actual curve. The squares represent the curve's
+control points. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id3f1fbc18-cb40-4319-a0f3-9a74f30b8805">output_clean_target</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the “clean” (after jog removal) target is output instead of the spline.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id264130f9-0c40-4fb3-8dbd-f99afb3aae7a">concave</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the global values set by the previous arguments are overridden in
+the case of concave corners.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id59d89083-8bd3-4871-adbc-910372680f9b">convex</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the control points are set for convex corners.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idf023664a-e576-4e5b-8f8e-48b40bac3cc8">line_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the control points are set to line ends.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idfaeec8d7-816f-4789-b98a-9b917d6bfe81">space_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the control points are arranged for space ends.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id391a797e-2c87-4d68-af54-641f66aa2d23">jog</dt>
+<dd class="dd ArgumentDescription"><p class="p">If this parameter is present,
+the control points are set for jogs.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__ida282316c-c185-45d9-b744-916f20b094af">length <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument (required
+if line_end, space_end, or jog are used) that specifies the fragment
+length of the feature.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If concave,
+convex, line_end, space_end, and jog are not used, or if they are
+not fully defined, then the values used will be the values set by
+the original keywords. If those values are not set, then the default
+values are used. </p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idc8228950-5c11-4bb7-920c-cf52ea828dc5">new_cp <span class="keyword ParameterName OptionalReplaceable">corner1</span> <span class="keyword ParameterName OptionalReplaceable">corner2</span> length <span class="keyword ParameterName OptionalReplaceable">constraint</span> [length1 <span class="keyword ParameterName OptionalReplaceable">constraint</span>] [length2 <span class="keyword ParameterName OptionalReplaceable">constraint</span>] offset <span class="keyword ParameterName OptionalReplaceable">value</span> [perp <span class="keyword ParameterName OptionalReplaceable">value</span>] [delete_corner] [delete_midpt]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that specifies
+when to manually add new control points. When a point could be added
+by either new_cp or jog_extra, the one from new_cp is inserted.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id0b02eef7-dd9f-489e-8e66-437846560d4a"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">corner1</span> <span class="keyword ParameterName OptionalReplaceable">corner2</span> length <span class="keyword ParameterName OptionalReplaceable">constraint</span> —
+Specifies the edge to receive the control point. The corners may
+be “convex,” “concave,” “noncorner,” or “any.” Noncorner refers
+to the shallow corners inserted near jogs when jog_tol is specified.
+If jog_tol is not set, no corners match noncorner.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id99f7ff66-e2f3-4827-9707-91b2466797dd"><p class="p Opt">length1 <span class="keyword ParameterName OptionalReplaceable">constraint</span> —
+An optional constraint that applies to the preceding edge.</p>
+</li>
+<li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idde5e2d45-aa56-4701-bb7f-1ae73f66070d"><p class="p Opt">length2 <span class="keyword ParameterName OptionalReplaceable">constraint</span> —
+an optional constraint that applies to the edge after <span class="keyword ParameterName OptionalReplaceable">corner2</span>.</p>
+</li>
+</ul>
+<p class="p">The length constraints are in microns.</p>
+<p class="p">If the edge specification is symmetric (for example, new_cp convex
+convex length…) two control points are inserted, because it matches
+both corners.</p>
+</li>
+<li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idd04e45a3-5866-4a66-9ca7-6db2fac82c38"><p class="p Opt">offset <span class="keyword ParameterName OptionalReplaceable">value</span> [perp <span class="keyword ParameterName OptionalReplaceable">value</span>]
+— Specifies where to place the new control point. The offset value
+must be between ‑1.0 and 1.0, inclusive, measured inward along the
+edge from <span class="keyword ParameterName OptionalReplaceable">corner1</span>.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id554a58d0-aa9a-482f-82ad-d9a1b1f30640"><p class="p Opt">perp <span class="keyword ParameterName OptionalReplaceable">value</span> —
+An optional perpendicular offset. Positive values move the control point
+outward from the polygon. Specifying “offset 0.05 perp -0.05” will
+offset the control point 50 nm away from the first corner and 50
+nm into the polygon’s region.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id3237dead-1a9f-442d-9fa1-49db53aa0d48"><p class="p Opt">delete_corner
+— An optional argument to new_cp that removes an old corner control point
+to prevent interference with the new control point.</p>
+</li>
+<li class="li ArgOption" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id01d52164-27d3-4545-af94-6802e174755c"><p class="p Opt">delete_midpt
+— An optional argument to new_cp that removes an old midpoint control point
+to prevent interference with the new control point.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The setlayer curve command allows
+you to create a “smoothed” target based on the original target.
+The smoothed target allows you to prevent overcorrection on 2D effects
+and jogs.</p>
+<p class="p">The setlayer curve command implements
+the curve using a series of B-splines. B-splines are also known
+as basis splines, a spline function with minimal support with respect
+to a given degree, smoothness, and domain partition. Spline functions
+of a given degree, smoothness, and domain partition can be represented
+as a linear combination of B-splines of that same degree and smoothness
+over that same partition.</p>
+<p class="p">This command generates a spline
+or spline-derived output in the following sequence:</p>
+<ol class="ol"><li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id010dea85-eaf6-418c-aea4-aeade113de70"><p class="p">Target jogs are removed according
+to the jog removal parameters jog_tol and jog_adj. The results are
+affected by whether or not you set a value for jog_cleanup_dist.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__ide5e67fee-cfbc-4888-b608-94a0036f6d4d"><p class="p">Spline control points are generated
+according to the following parameters: order, cpdist, pts_per_cp,
+maxdist, midpt, scale1, scale2, midpt_offset, endpt_offset, active_layer. Control
+points are derived from existing polygon vertices; additional points
+are added before and after corners. At least one point is added
+in the center of short segments.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id19378251-5ea1-43fa-9753-e4af1faa7988"><p class="p">The output is generated according
+to the control points and the following parameters: pts_per_cp,
+output_clean_target, output_cpts.</p>
+</li>
+</ol>
+<p class="p">The general process of target smoothing
+involves the following steps:</p>
+<ol class="ol"><li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id2a73579a-ba07-4c2a-bdb5-6bb9f2df8ab9"><p class="p">Create a smoothed target using
+the setlayer curve command.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idd8a2a1e4-529c-42f4-92f1-52ccb8186b2f"><p class="p">Run MPC, passing the smoothed
+target as a re-target layer.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id13c1d52d-6c9a-4089-95ee-7aa2e057bb8d"><p class="p">Use the retarget_layer emulate
+option.</p>
+</li>
+</ol>
+<p class="p">More specifically, you can do the
+following:</p>
+<ol class="ol"><li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id91a2870f-c722-423d-a265-c51a66c446b2"><p class="p">Try to obtain the MPC results
+without using the smoothed target.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idfd515adf-070f-4de3-887d-4e9b73229a14"><p class="p">Use post-MPC simulation contour
+to estimate the amount of residual corner rounding.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idce1f486f-0796-4784-8f53-f20ce19784ee"><p class="p">Adjust curve parameters to match
+the existing contour.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idf9d34ed8-f56d-496e-87ff-3a7f954c0927"><p class="p">When done, compare MPC results
+with and without smoothed input. The results should show improved
+MPC, though some fragment length adjustment may help.</p>
+</li>
+</ol>
+<div class="section Subsection" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id42189b01-ae14-42d0-bed9-6d6b85c2a830"><h2 class="title Subheading sectiontitle">Warnings</h2><p class="p">If jog_tol is used without jog_cleanup_dist,
+the following warning appears in the transcript:</p>
+<pre class="pre codeblock leveled"><code>"setlayer curve": Using jog_tol without jog_cleanup_dist can cause hierarchical inconsistencies </code></pre><p class="p">Using jog_tol without jog_cleanup_dist
+is not recommended and will be deprecated in the future.</p>
+<p class="p">If pts_per_cp is set to a value
+higher than 5, the following warning appears in the transcript:</p>
+<pre class="pre codeblock leveled"><code>"setlayer curve": Using a pts_per_cp value larger than 5 can cause unnecessary slowdown in curve and subsequent ops</code></pre></div>
+<div class="section Subsection" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idb68c173a-8df5-4bb1-9008-eebf8c9c7a9d"><h2 class="title Subheading sectiontitle">Optimize Results
+From setlayer curve</h2><p class="p">The following use cases apply to
+setlayer curve:</p>
+<ul class="ul"><li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id9fe6a8be-7baa-4452-bd9d-4b42f9589c67"><p class="p">Use setlayer curve when the
+target design is relatively simple and free of jogs of various sizes.
+This is often the case for active and poly layer.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idb36fb66a-dbf0-41f6-84cf-cc657cb1696b"><p class="p">Do not use curve if the design
+is complicated and contains jog of various sizes. This is often
+the case for metal layers.</p>
+</li>
+<li class="li" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idaca60bf8-caee-4216-9e9a-4c5c7e16ecd8"><p class="p">There is no need to use curve
+if the design is extremely simple, such as contact or via layers.</p>
+</li>
+</ul>
+<p class="p">There are a number of different
+parameters in setlayer curve that can be utilized to get the best results,
+depending on the kind of curvature you wish to produce.</p>
+<p class="p"><a class="xref fm:Table" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__idf94b5f8a-946a-43ca-bb11-77c556e8b6a2">Table 1</a> lists the recommended general setlayer
+curve parameter settings to get the best overall curvature fit.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idf94b5f8a-946a-43ca-bb11-77c556e8b6a2" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>General Recommended Settings for setlayer
+curve</span></caption><colgroup><col style="width:1.991in" /><col style="width:1.228in" /><col style="width:2.957in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e721"><p class="p"><span class="keyword ParameterName Required">Parameter</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e726"><p class="p"><span class="keyword ParameterName Required">Recommended Setting</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e731"><p class="p"><span class="keyword ParameterName Required">Notes</span> </p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">order</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">6</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">An optional parameter
+that specifies the B-spline order. You can select linear, quadratic,
+or cubic. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">Set to 60% of your design’s min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">Specifies the distance
+between additional control points inserted to the left and right of
+an original polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">maxcp</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">6</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">Specifies the maximum
+number of additional points inserted to the left and right of an
+original polygon point.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">Set to your design’s minimum
+cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">Controls where the last
+control point should be at exactly the specified distance away from
+the original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch/nub that would have
+had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">pts_per_cp</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">10</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">This parameter only controls
+the size of the output control points, it does not influence the
+curve parameter.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">scale1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">2.0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">If a line end or space
+end is smaller than <span class="keyword ParameterName OptionalReplaceable">cpdist_value </span>*
+scale1, control points on adjacent edges are put at a <span class="keyword ParameterName OptionalReplaceable">dist_value</span> * scale2
+distance, instead of the <span class="keyword ParameterName OptionalReplaceable">cpdist_value</span>.
+See <a class="xref fm:Figure" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__iddc46610f-d3a2-42be-b922-eeebcc29e2c6">Figure 1</a> for an example of line_end and space_end scaling.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">scale2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">0.5</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">Any line/space end that
+has width &lt; scale1 * cpdist will have a control point inserted on
+an adjacent edge with distance of scale2 * width. </p>
+<p class="p">See <a class="xref fm:Figure" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__iddc46610f-d3a2-42be-b922-eeebcc29e2c6">Figure 1</a> for an example of line_end and space_end
+scaling.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">&gt; 0.25*min_cd &lt; 0.4*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e721 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e726 "><p class="p">0.000 </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e731 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fig fignone" id="id4340ef68-2da0-441a-99bc-4f121af39f87__iddc46610f-d3a2-42be-b922-eeebcc29e2c6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Example of Line/Space
+End Scaling</span><br /><div class="imagecenter"><img class="image imagecenter" height="221" src="../graphics/reference18.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__id769edd15-e3ed-42c9-b9ca-44e990dc3bd1">Table 2</a> lists the recommended setlayer curve
+parameter settings for better handling of line ends and space ends.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id769edd15-e3ed-42c9-b9ca-44e990dc3bd1" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Line/Space End-Specific Recommended Settings
+for setlayer curve</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e874"><p class="p"><span class="keyword ParameterName Required">Parameter</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e879"><p class="p"><span class="keyword ParameterName Required">Recommended Setting</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e884"><p class="p"><span class="keyword ParameterName Required">Notes</span> </p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">[line_end | space_end] </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">Select either line_end
+or space_end, depending on the feature</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Specifies feature as
+a line end or space end.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">0.6*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Specifies the distance between
+additional control points inserted to the left and right of an original
+polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">[0.8 – 1.0]*min_cd </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Controls where the last control
+point should be at exactly the specified distance away from the
+original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch/nub that would have
+had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">0.1*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">0.1*min_cd </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">width </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">[1.0-1.5]*min_cd </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Specifies the maximum width
+of the line end or space-end edge. See <a class="xref fm:Figure" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__id6f312441-46f1-4830-8772-3649bc189cd0">Figure 2</a>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e874 "><p class="p">length </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e879 "><p class="p">[1.0-1.5]*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e884 "><p class="p">Specifies the fragment
+length of the line end or space-end edge. See <a class="xref fm:Figure" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__id6f312441-46f1-4830-8772-3649bc189cd0">Figure 2</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fig fignone" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id6f312441-46f1-4830-8772-3649bc189cd0"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Length and Width
+Representation for setlayer curve</span><br /><div class="imagecenter"><img class="image imagecenter" height="92" src="../graphics/reference19.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#id4340ef68-2da0-441a-99bc-4f121af39f87__ida4afe98d-1651-4be9-8db2-5776c1bf60ae">Table 3</a> lists the recommended parameter settings
+to reduce jogs in the rendered curve.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4340ef68-2da0-441a-99bc-4f121af39f87__ida4afe98d-1651-4be9-8db2-5776c1bf60ae" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Recommended Jog-Specific Settings for
+setlayer curve</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e997"><p class="p"><span class="keyword ParameterName Required">Parameter</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e1002"><p class="p"><span class="keyword ParameterName Required">Recommended Setting</span> </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46268e1007"><p class="p"><span class="keyword ParameterName Required">Notes</span> </p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">jog</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">Specify “jog” as the
+feature</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">Specifies feature as
+a jog.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">cpdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">0.6*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">Specifies the distance between
+additional control points inserted to the left and right of an original
+polygon point. Longer distances increase rounding.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">maxdist</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">[0.8 – 1.0]*min_cd </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">Controls where the last control
+point should be at exactly the specified distance away from the
+original polygon vertex.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">midpt</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">Specifies how many additional
+control points to add in the middle of a notch/nub that would have
+had no additional control points otherwise.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">midpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">0.000</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">All control points created
+by the midpt parameter are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">endpt_offset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">0.1*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">All control points situated
+at the polygon's corners are moved to increase the curvature.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e997 "><p class="p">length</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1002 "><p class="p">roughly 0.6*min_cd</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46268e1007 "><p class="p">Specifies the fragment
+length of the feature.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">A concave/convex-specific
+setting is generally not needed unless a different curvature is desired.</p>
+</div>
+</div>
+<div class="section Subsection" id="id4340ef68-2da0-441a-99bc-4f121af39f87__idba2ba9f1-d56b-45ad-a0b2-f46cbb6dcc9f"><h2 class="title Subheading sectiontitle">Retarget Layers
+and setlayer curve</h2><p class="p">Use the <a class="xref fm:HeadingOnly" href="Command_RetargetLayer_id6ff75a00.html#id6ff75a00-52d3-4862-a41e-88fae43f395f__Command_RetargetLayer_id6ff75a00.xml#id6ff75a00-52d3-4862-a41e-88fae43f395f" title="Defines a new target layer, leaving the fragmentation on the opc layers.">retarget_layer</a> “emulate” option with the generated
+curve layer. This helps reduce ripples near corners especially at
+concave corners. The setlayer curve produces a more realistic target,
+which often results in less aggressive corner correction. However,
+you must still carefully tune your fragmentation and MPC recipes. </p>
+<p class="p"><a class="xref fm:Figure" href="Command_RetargetLayer_id6ff75a00.html#id6ff75a00-52d3-4862-a41e-88fae43f395f__id1fa7efe8-acd0-405d-bfac-f1e4654e7c05">Figure 1</a> shows the effects of using retarget_layer
+emulate.</p>
+<div class="fig fignone" id="id4340ef68-2da0-441a-99bc-4f121af39f87__id573636e9-7657-4c4a-b124-41f235427b01"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Effects of retarget_layer
+emulate and setlayer curve</span><br /><div class="imagecenter"><img class="image imagecenter" height="147" src="../graphics/effects_retarg_fig.jpg" width="443" /></div><br /></div>
+<p class="p">You can also turn off retargeting
+through a tagging script. For example:</p>
+<pre class="pre codeblock leveled"><code>NEWTAG topological inside_edge M1 no_retarget_region \ 
+	-out frag_ignore_retarget 
+TARGET_FUNCTION 1 constant 0.0 
+TARGET_CONTROL frag_ignore_retarget 1 </code></pre></div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following example creates a smoothed
+target layer:</p>
+<pre class="pre codeblock leveled"><code>setlayer CURVE1 = curve pctarget order 5 cpdist 0.07 maxdist 0.12  
+ </code></pre><p class="p">The following example filters out
+any jogs &lt; 2nm with neighboring fragments &lt; 50nm:</p>
+<pre class="pre codeblock leveled"><code>setlayer smooth = curve target order 6 cpdist 0.070 maxcp 6 pts_per_cp 4\ maxdist 0.050 midpt 3 scale1 1.25 scale2 0.7 endpt_offset -0.00\ 
+jog_tol 0.002 jog_adj 0.050</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MpcCorrectionCommands_idd4dfbecb.html" title="The following table lists all the commands used for MPC Correction.">MPC Correction Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmpc_useref"
+                DocTitle = "Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual"
+                PageTitle = "setlayer curve"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_SetlayerCurve_id4340ef68.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

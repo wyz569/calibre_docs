@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Error Reporting and Debug in Compile-Time TVF" />
+<meta name="abstract" content="Calibre runs compile-time TVF with extra error reporting with the -tvf_instrument command line option. When it is used, TVF errors are reported with the file name and line number. If an error occurs in SVRF code generated out of compile-time TVF, the original TVF location that produced the offending SVRF statement is reported. You can also have a comment inserted into the generated SVRF file using the tvf::insert_tvf_line_info command." />
+<meta name="description" content="Calibre runs compile-time TVF with extra error reporting with the -tvf_instrument command line option. When it is used, TVF errors are reported with the file name and line number. If an error occurs in SVRF code generated out of compile-time TVF, the original TVF location that produced the offending SVRF statement is reported. You can also have a comment inserted into the generated SVRF file using the tvf::insert_tvf_line_info command." />
+<meta name="DC.subject" content="TVF, compile-time, error reporting" />
+<meta name="keywords" content="TVF, compile-time, error reporting" />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id81635f05-0cb0-4d35-9076-b38c419b2fcb" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Error Reporting and Debug in Compile-Time TVF</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Error Reporting and Debug in Compile-Time TVF" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id81635f05-0cb0-4d35-9076-b38c419b2fcb">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Error Reporting and Debug in Compile-Time TVF</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre runs
+compile-time TVF with extra error reporting with the -tvf_instrument
+command line option. When it is used, TVF errors are reported with
+the file name and line number. If an error occurs in SVRF code generated
+out of compile-time TVF, the original TVF location that produced
+the offending SVRF statement is reported. You can also have a comment
+inserted into the generated SVRF file using the tvf::insert_tvf_line_info
+command. </span>
+</div>
+<p class="p">An example
+of a TVF source file error produced with extra error reporting enabled
+is shown in the transcript below. The “ERROR” notation on the initial
+line of the transcript indicates where the error occurred and cites
+the command with the syntax violation.</p>
+<pre class="pre codeblock leveled"><code>ERROR: Error TVF1 on line 28 of rules.tvf - TVF preprocessor error: ERROR
+ --  invalid command name "<span class="ph fmvar:double_colon">::</span>NONEXISTENT_OUTPUT"
+    while executing
+"NONEXISTENT_OUTPUT { VIA AND CONT} "
+    invoked from within
+"<span class="ph fmvar:double_colon">::</span>tvf::RULECHECK VIACNT27 {NONEXISTENT_OUTPUT { VIA AND CONT}  }"
+    invoked from within
+"RULECHECK VIACNT27  {NONEXISTENT_OUTPUT { VIA AND CONT}  }"
+    invoked from within
+"if { 1 } {
+    RULECHECK VIAWDT27  {OUTPUT { INT VIA &lt; 2 REGION}  }
+    RULECHECK VIATVI27  {OUTPUT { EXT VIA &lt; 2 REGI..."
+    (file "rules.tvf", line 28)</code></pre><p class="p">The drawback to using the -tvf_instrument
+command line option is that the initial scan detects all errors,
+even in portions of the file that would normally not be executed.
+If the instrumenter were to be permanently engaged, this would make
+Calibre incompatible with previous versions.</p>
+<p class="p">Errors found by the syntax checker are legitimate
+Tcl syntax errors. However, the end user may not be capable of correcting
+the erroneous code, especially if the error exists in TVF libraries provided
+by a third party.</p>
+<p class="p">If compile-time TVF code is run without the
+-tvf_instrument command line option, the tvf::set_traceback_line
+command can still be used to identify the SVRF line with syntax
+errors, but the preferred method of finding syntax errors is with
+the -tvf_instrument command line option.</p>
+<p class="p">You can use the <a class="xref fm:HeadingOnly" href="Command_TvfinsertTvfLineInfo_id1d96fc23.html#id1d96fc23-13d9-4a60-9748-71b72a44c2e5__Command_TvfinsertTvfLineInfo_id1d96fc23.xml#id1d96fc23-13d9-4a60-9748-71b72a44c2e5" title="Inserts a comment into the generated SVRF file with the line number of the corresponding command in the compile-time TVF file.">tvf::insert_tvf_line_info</a> command to insert a comment into
+the generated SVRF file with the line number of the corresponding
+command in the compile-time TVF file. This command must be used
+with the ‑tvf_instrument and ‑E command line options. </p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ErrorHandlingInCompileTimeTvf_idb60c972c.html" title="The command line option ‑tvf_instrument enables extra error reporting in compile-time TVF runs. If you want to only see error reporting for an error at a specific line, you can use the tvf::set_traceback_line command. The tvf::insert_tvf_line_info command can also be used.">Error Handling in Compile-Time TVF</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_CalibreCommandLineOptionsCompileTimeTvf_id32d7654d.html#id32d7654d-f56c-45a6-9c89-7afc67420a58__" title="The Calibre command line has several options for use with compile-time TVF rule files.">Calibre Command Line Options for Compile-Time TVF</a></div>
+<div><a class="link" href="../topics/Concept_ErrorReportingTracebackCallInCompileTimeTvf_id5a479f67.html#id5a479f67-21e5-476d-b982-d6221a50bc12__" title="SVRF syntax errors can be traced without the -tvf_instrument command line option. This can be done by tracing the line number reported by the SVRF compiler and using the tvf::set_traceback_line command.">Error Reporting With Traceback Call in Compile-Time TVF</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Error Reporting and Debug in Compile-Time TVF"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ErrorReportingDebugInCompileTimeTvf_id81635f05.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

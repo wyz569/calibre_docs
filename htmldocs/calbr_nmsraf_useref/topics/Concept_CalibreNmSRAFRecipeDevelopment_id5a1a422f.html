@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Calibre nmSRAF Recipe Development" />
+<meta name="abstract" content="When developing recipes, Siemens EDA recommends you start from isolated layout features and transition to layouts with greater feature density." />
+<meta name="description" content="When developing recipes, Siemens EDA recommends you start from isolated layout features and transition to layouts with greater feature density." />
+<meta name="prodname" content="Calibre® nmSRAF™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmsraf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 23, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmSRAF™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5a1a422f-dee6-427c-a337-a247209819ad" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre nmSRAF Recipe Development</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre nmSRAF Recipe Development" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5a1a422f-dee6-427c-a337-a247209819ad">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre nmSRAF
+Recipe Development</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">When developing
+recipes, Siemens EDA recommends you start from isolated layout features
+and transition to layouts with greater feature density.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__idf2831cbd-6e05-4e21-959d-89ba25010493"><h2 class="title Subheading sectiontitle">Priority Usage</h2><p class="p">Rules should be prioritized to apply closer
+SRAFs first and secondary SRAFs later. The secondary SRAFs should
+be placed at a minimum distance from SRAFs with the highest priority.</p>
+<h2 class="title Subheading sectiontitle">Global and Priority Precedence</h2><p class="p">When using priority, global keywords and their respective options
+must be specified first, otherwise nmSRAF issues warning messages.
+The specification of any keyword after the priority keyword forces
+the specification to be priority-based and not global. For any parameter to
+be considered global, it must be specified before the priority keyword.</p>
+<h2 class="title Subheading sectiontitle">Use Priority for Improved Processing and Treatment</h2><p class="p">Although formulating recipes is often easier when specifying
+keywords globally, a number of important considerations may impact
+processing and treatment efficacy:</p>
+<dl class="dl"><dt class="dt dlterm" id="id5a1a422f-dee6-427c-a337-a247209819ad__id21e390c9-e454-4bf3-ae26-53b2926b9499">Runtime</dt>
+<dd class="dd"><p class="p">In general, Siemens EDA recommends using lineendmerge 0 or no,
+and intrapriorityalign and interpriorityalign, and conditional MRCs
+such as lineend2long, long2lineend, and square2long per priority (restricted
+to required applications only), not globally, to avoid runtime impact.</p>
+</dd>
+<dt class="dt dlterm" id="id5a1a422f-dee6-427c-a337-a247209819ad__id2d13c14a-8d52-4a8b-a96c-167fffcc9aad">Consistency</dt>
+<dd class="dd"><p class="p">The consistency of generated SRAFs may be negatively impacted
+using priority-related keywords such as interpriorityalign, intrapriorityalign,
+maxlength, and others.</p>
+</dd>
+<dt class="dt dlterm" id="id5a1a422f-dee6-427c-a337-a247209819ad__id9e3cf028-f4cc-4b9d-830b-43710756737f">Predictability</dt>
+<dd class="dd"><p class="p">Results of intrapriorityalign, and particularly, interpriorityalign
+may be unpredictable at tile boundaries.</p>
+</dd>
+</dl>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id6f30d451-c840-4846-b292-0a444206ce36"><h2 class="title Subheading sectiontitle">Hybrid
+Recipes</h2><p class="p">Hybrid recipes are defined as combinations of Calibre cnSRAF-
+and Calibre mbSRAF-generated SRAFs applied to the same design (whether
+executed together or separately). Calibre mbSRAF provides an SRAF
+generation safety net for ensuring SRAF coverage that may be potentially
+missed. If the initial SRAF generation is rule-based, the secondary
+model-based SRAF generation provides complete SRAF coverage. </p>
+<p class="p">This requires that Calibre mbSRAF process the entire design,
+achieving complete coverage, with an expected increase in associated
+simulation runtime. Alternatively, if the rule-based SRAF generation
+can be defined exclusively for a large portion of the design (for example,
+SRAM) or a complete rules-based recipe can be generated, SVRF data-processing rules
+can be used to isolate regions which do not require SRAF coverage
+within a specific distance of the region. These isolated shapes
+and edges can be passed as targets to Calibre mbSRAF, with the rules-based
+SRAFs as an sblayer. Because of the limited target areas requiring
+simulation, this method provides complete SRAF coverage with potentially
+no additional mbsraf runtime. </p>
+<p class="p">In <a class="xref fm:Figure" href="#id5a1a422f-dee6-427c-a337-a247209819ad__id87f10e96-b1e3-47b4-9808-b1e229b9ee19">Figure 1</a>, after cnsraf-generated
+SRAF is output, the pink target still needs additional coverage
+for good fidelity. The purple cnsraf-generated SRAF is then passed
+to sblayer, imported to mbsraf and the green mbsraf-generated SRAF
+is finally added.</p>
+<div class="fig fignone" id="id5a1a422f-dee6-427c-a337-a247209819ad__id87f10e96-b1e3-47b4-9808-b1e229b9ee19"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Hybrid
+SRAF Generation</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/hybrid.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id10fd0c80-f942-414b-89e2-4811d549c4f0"><h2 class="title Subheading sectiontitle">minarea, minlength, and minwidth
+Keyword Interaction</h2><p class="p">The minwidth, minlength, and minarea keywords
+define the minimum size of SRAFs. Width and length always refer
+to the length of the shorter and longer edges of rectangular SRAFs,
+respectively, regardless of SRAF orientation; width is the distance
+between the two long edges and length is the distance between the
+two short edges in a rectangular shape.</p>
+<p class="p">If any two of the keyword values are specified but not the third,
+the value of the third is not derived, and must be explicitly defined.
+Siemens EDA recommends that all these keyword values be specified. In
+addition, all values and priorities of these keywords are printed
+to the session transcript, providing useful information for debugging
+purposes.</p>
+<p class="p">If the specified values of any keyword are incompatible with
+each other, Calibre nmSRAF issues a warning message and no values
+are adjusted. Additionally, a minarea value is not assumed from
+the product of minwidth and minlength if no minarea specification
+is made. Incompatible keyword values may include:</p>
+<p class="p BlockIndent"><span class="ph FontProperty equationvariable">minlength &lt; minwidth</span> or <span class="ph FontProperty equationvariable">minlength * minwidth &gt; minarea</span></p>
+<p class="p">A warning is issued if width or length are specified for a template
+and are incompatible with the specified keywords. For example, where:</p>
+<p class="p BlockIndent"><span class="ph FontProperty equationvariable">width &lt; minwidth</span> or <span class="ph FontProperty equationvariable">length &lt; minlength</span> or <span class="ph FontProperty equationvariable">width * length &lt; minarea</span></p>
+<p class="p">No corrective measures are taken in these cases, but the template
+does not generate any valid shapes. </p>
+<p class="p">Additionally, the dynamicsizing, sbwidth, and sraf keywords define
+minimum constraints for dynamic sizing and conflict resolution operations.
+They do not define constraints implemented by minarea, minlength
+and minwidth and they do not override those keyword values. However,
+during parsing they are checked against the specified min... keywords.
+If they are found incompatible, a warning is given and the values
+of dynamicsizing, sbwidth, and sraf are increased to comply with
+min... keyword constraints. </p>
+<p class="p">If min* keyword constraints for square SRAFs are specified, the
+sraf keyword that defines the size of square SRAFs inserted into
+certain conflict regions is checked against the square SRAF-related
+keyword values only. The sraf keyword is not checked against minarea, minlength
+and minwidth keyword values.</p>
+<p class="p">If minarea, minlength, and minwidth are not specified, the dynamicsizing,
+sbwidth, and sraf keywords and the specified width and length values
+of the templates are checked to define the appropriate limits for
+the SRAF sizes. For each priority, the minimum of any of the specified keywords
+dynamicsizing, sbwidth, and sraf and the nominal SRAF width and
+length is used as the minwidth constraint. Calibre nmSRAF then issues
+an informational message stating the actual constraints it uses.</p>
+<p class="p">SRAFs do not change orthogonal orientation if the square SRAF-related
+keywords are specified. If separate square keywords are not specified,
+minwidth and minarea are used as constraints, and square SRAFs may
+become rectangular in shape and are placed at either orientation
+during cleanup operations.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id7e0e20a5-c756-46cb-968e-2e601d2b8f5b"><h2 class="title Subheading sectiontitle">Use the sraf_options
+Statement</h2><p class="p">Rules should be formatted within an sraf_options
+statement. This insures developers free-format whitespace for comments
+and easier template and keyword manipulation than using the setlayer
+command alone.</p>
+<h2 class="title Subheading sectiontitle">Layer Handling</h2><p class="p">Most Calibre nmSRAF templates should require
+only one setlayer statement. Additional setlayer statements do not
+cause additional runtime, unlike additional templates within a previous
+setlayer. However, additional setlayers only process the output
+of previously-generated SRAFs. </p>
+<p class="p">In general, no input layers may be used with
+the same name more than once. If the same layer is required, it
+must be derived and output under a different name prior to its subsequent use.</p>
+<p class="p">You must specify the targetlayer first in the argument list to
+RET MBSRAF. You must specify only one targetlayer. If the targetlayer
+is required in other areas of the recipe, before you process it
+you must derive it again under a different name.</p>
+<p class="p">Using the offsetlayer can help manage SRAF
+placement. Never use the target layer as the offsetlayer. Additionally,
+if sblayer or offsetlayer is specified, they must appear in either
+the sraf_options statement or the setlayer command, but never both.</p>
+<p class="p">Siemens EDA recommends using the correctionlayer for best SRAF-generating
+performance. The correctionlayer is a polygon-based layer acting
+as a corrected target layer and is used to calculate the gradient.
+Only one correctionlayer may be specified.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id0a55828e-5412-4d84-9767-92e2c896266d"><h2 class="title Subheading sectiontitle">Debug Layers</h2><p class="p">Siemens EDA recommends you enable debug layers so
+you can see what happens in each step of the SRAF generation process.
+If SRAFs are not placed where you expect them, it may be because
+the minoffset or minfeaturespace distance checks are being violated.
+You can examine the field debug layer for any affected templates.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Siemens EDA recommends never using the output of debug layers
+for SVRF-related post-processing. The only purpose for using the
+cnsraf debug capability is for debugging SRAF-generated intermediate
+layers within small regions. A high possibility exists that generated debug
+layers may be missing or not MRC clean near tile boundaries. Therefore,
+Siemens EDA does not guarantee clean generation of debug-specific SRAF
+layers for large designs or hierarchical runs.</p>
+</div>
+<h2 class="title Subheading sectiontitle">Multiple Mapping of Debug Layers</h2><p class="p">Multiple mapping and output of debug layers within Calibre nmSRAF
+is not permitted as of Calibre release 2019.2. A compile-time error
+message is generated if multiple mapping is attempted. The following
+code fails and generates the error message shown:</p>
+<pre class="pre codeblock"><code>setlayer sraf = cnsraf target OPTIONS all
+setlayer p10_iso = cnsraf debug sraf isolate 10
+setlayer <span class="ph CodeHighlight red">p10_iso_2</span> = cnsraf debug sraf <span class="ph CodeHighlight red">isolate</span> 10
+p10_iso = RET SBAR target FILE sraf_gen MAP p10_iso
+<span class="ph CodeHighlight red">p10_iso_2</span> = RET SBAR target FILE sraf_gen MAP <span class="ph CodeHighlight red">p10_iso_2</span></code></pre><pre class="pre codeblock"><code>Trying to use the debug layer "isolate" for priority 10 in more than one setlayer command</code></pre></div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__idcde7cd20-888c-4d6e-9906-bea2c8a1ddb6"><h2 class="title Subheading sectiontitle">Tags, Templates and
+Conflict Resolution</h2><p class="p">Upper bounds for the newtag internal keyword are critical:</p>
+<ul class="ul"><li class="li" id="id5a1a422f-dee6-427c-a337-a247209819ad__idde97d14a-1d31-4150-aa6a-355f4f167d74"><p class="p">When using
+the internal keyword to generate tags used in the context of rectedge
+center strictcenter template, you must provide an upper bound to
+the internal constraint to enable limits during edge collection.</p>
+</li>
+<li class="li" id="id5a1a422f-dee6-427c-a337-a247209819ad__idec12c280-2dd1-438c-bb17-021c54249fc9"><p class="p">When applying
+the internal keyword to any pitch-based template, you must provide
+an upper bound to the constraint to enable limits during edge collection.</p>
+</li>
+<li class="li" id="id5a1a422f-dee6-427c-a337-a247209819ad__id20a30b0f-7962-4a10-8255-e0f4bef638db"><p class="p">As a default,
+the promotion distance is used for the upper bound.</p>
+</li>
+</ul>
+<p class="p">Templates using the conflictonly keyword are
+generally placed at a higher priority than other templates.</p>
+<p class="p">When defining multiple tags in the setup file,
+Siemens EDA recommends that no gaps are left between the individual tagging
+bins. This ensures that all the target edges in the design are accounted
+for. </p>
+<p class="p">SRAF interaction with optics are localized
+effects and effective control requires localized movement. If SRAF
+fragmentation is not allowed during co-optimization of OPC, conflict resolution
+shapes should be restricted in size.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__idaffc0a32-c5a6-4571-bc28-a6b18155cd4a"><h2 class="title Subheading sectiontitle">Match MRC and OPC-MRC Specifications</h2><p class="p">The values assigned to options minoffset, minfeaturespace,
+minwidth, sbwidth, and sraf within the Calibre nmSRAF LITHO FILE
+should be set in accordance with the final MRC values defined for
+SRAFs in the Calibre nmOPC setup file. If the SRAFs input to nmOPC
+are not MRC clean, nmOPC cannot guarantee MRC clean SRAF output
+after the sraf_print_avoidance operation.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id19377285-737a-4484-929b-3ac73ade11b2"><h2 class="title Subheading sectiontitle">Disable SMT</h2><p class="p">Simultaneous multi-threading (SMT) treats each
+physical core as two logical CPU cores (one physical and one virtual).
+The processor causes the operating system to behave as if there are
+twice as many CPU cores. This halves the available memory per core.</p>
+<p class="p">To turn off SMT, set the environment variable
+CALIBRE_MT_SMT_FACTOR to 0.</p>
+<p class="p">For detailed information regarding disabling
+SMT, see the <a class="xref Link" href="../../calbr_lpe_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_lpe_useref'); return false;">Calibre Local Printability Enhancement User’s and Reference Manual</a>.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__ida1b9bc18-0d41-43a6-8465-67f64ac58974"><h2 class="title Subheading sectiontitle">AVX and SOCS Recommendations</h2><p class="p">Use SOCS shared memory for better memory management
+during SRAF generation. As of Calibre release 2016.4, processes
+running on the same physical host can share the directory that contains
+SOCS calculations. To enable SOCS memory management, you set LITHO_SOCS_KERNELS_SHARED
+to 1 in your environment. </p>
+<p class="p">Use AVX for performance benefits, enabled at
+the command line. </p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Both recipe development
+and production execution must be performed using identical AVX and
+non-AVX environments to eliminate potential SRAF XOR differences resulting
+from varied gradient values between these respective environments. </p>
+</div>
+<p class="p">For usage information regarding both AVX and
+SOCS, see the <a class="xref Link" href="../../calbr_pto_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_pto_user'); return false;">Calibre Post-Tapeout Flow User’s Manual</a>.</p>
+</div>
+<div class="section Subsection" id="id5a1a422f-dee6-427c-a337-a247209819ad__id5ccf50ba-cae7-415c-b576-de0c7d8ac9ab"><h2 class="title Subheading sectiontitle">Best
+Practices for cnSRAF and mbSRAF</h2>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5a1a422f-dee6-427c-a337-a247209819ad__idcf461867-ccb6-414c-a2f4-127af59eaa48" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre nmSRAF Best Practices</span></caption><colgroup><col style="width:5.200in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d42010e352"><p class="p">Best Practice</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2019.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">When passing tags in to the newtag command,
+Siemens EDA recommends always applying an upper bound to the internal
+constraint.</p>
+<p class="p"><span class="ph FontProperty shellcommand">Reason:</span> For
+predictable output of SRAFs using tags.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2019.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends always using <a class="xref fm:HeadingOnly" href="Command_Minareaextension_id21751d5a.html#id21751d5a-a4b7-49d0-855f-beb1513a2c9c__Command_Minareaextension_id21751d5a.xml#id21751d5a-a4b7-49d0-855f-beb1513a2c9c" title="Specifies the minimum area for 45-degree SRAF extensions. Used by RET SBAR and RET MBSRAF.">minareaextension</a> and <a class="xref fm:HeadingOnly" href="Command_Minlengthextension_id8a480e91.html#id8a480e91-ad5e-4689-a02c-6dd243d3d344__Command_Minlengthextension_id8a480e91.xml#id8a480e91-ad5e-4689-a02c-6dd243d3d344" title="Specifies the minimum length for 45-degree SRAF extensions. Used by RET SBAR and RET MBSRAF.">minlengthextension</a> with
+45-degree SRAFs.</p>
+<p class="p"><span class="ph FontProperty shellcommand">Reason:</span> For
+comprehensive control of 45-degree SRAF extensions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2019.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends always
+specifying cleanupversion 1. The rectedge center and extension45,
+centermerge, intrapriorityalign, interpriorityalign, lineendmerge no,
+lineendmerge 0, and intersection LTP keywords are all incompatible
+with cleanupversion 0, and no new features will be compatible with
+cleanupversion 0 going forward.</p>
+<p class="p"><span class="ph FontProperty shellcommand">Reason:</span> For
+predictable, high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2019.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends never
+using the output of debug layers for SVRF-related post-processing.
+The only purpose for using the cnsraf debug capability is for debugging
+SRAF-generated intermediate layers within small regions. A high
+possibility exists that generated debug layers may be missing or
+not MRC clean near tile boundaries. Therefore, Siemens EDA does not guarantee
+clean generation of debug-specific SRAF layers for large designs or
+hierarchical runs.</p>
+<p class="p"><span class="ph FontProperty shellcommand">Reason:</span> Prevents
+perpetuation of unnecessary errors from improperly generated debugging
+layers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends using
+minoffset, minfeaturespace, projecting and lineend keywords for
+global MRCs.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides for
+predictable SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends limiting
+conditional MRC keywords such as lineend2long, sqedge2long, and
+sqcorner2corner to be used by priority only or where required.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> To avoid increased
+runtime due to additional measurement and cleanup with use of these
+extra MRC keywords.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends setting
+lineendmerge no and lineendmerge 0 by priority. </p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Enables use
+of interpriorityalign and intrapriorityalign globally.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends using
+strictcenter for rectedge-center SRAF generation.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Two tagged
+target edges provide predictable SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends always
+using cleanupversion 1 for all new cnSRAF recipes.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For predictable,
+high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2018.1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends always
+using algorithm 1 for all new mbSRAF recipes.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For predictable,
+high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends using
+dynamicsizingrunlength 0 for line layers when invoking cleanupversion 1.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For predictable,
+high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends using
+reducedbarsplit 0 for line layers when invoking cleanupversion 1.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For predictable,
+high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends always
+explicitly specifying minlength, minwidth and minarea in Calibre
+nmSRAF recipes.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For predictable,
+high quality SRAF generation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify dynamicsizing
+values to be greater than or equal to minlength. If they are not
+specified as such, a warning message is issued.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> To maintain
+syntactically dependable recipes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify sbwidth values
+to be greater than or equal to minwidth. If they are not specified
+as such, a warning message is issued.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> To maintain
+syntactically dependable recipes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify sraf values to
+be greater than or equal to minsquarelength or the square root of
+minsquarearea. If they are not specified as such, a warning message
+is issued.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> To maintain
+syntactically dependable recipes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2017.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">For EUV-specific nodes,
+Siemens EDA recommends using maxoffset instead of multiple localmaxgradient
+templates to control the number of SRAF rings.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For high quality
+SRAF generation at EUV nodes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2016.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">It is imperative that
+the Advanced Vector Extensions (AVX) environment is identical for
+recipe development and production runs; AVX environmental differences
+may cause slight variations in gradient maps which could result
+in final SRAF differences.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For consistent
+SRAF generation between recipe development and production treatment.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2016.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">The interpriorityalign
+and intrapriorityalign keywords require you to set cleanupversion 1.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For improved
+SRAF cleanup.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2016.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends using
+the algorithm 1 keyword as a part of all Calibre mbSRAF recipes.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> For improved
+SRAF consistency of generated SRAFs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2016.1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">All layers input to Calibre
+nmSRAF recipes must be unique. When attempting to reuse any input
+layer as originally named in subsequent operations within a Calibre
+nmSRAF recipe, the layer name must be changed through a second derivation.
+This best practice affects input layers for both cnsraf and mbsraf:
+target layer, offsetlayer, sblayer and correctionlayer.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Failure to
+re-derive the input layer may potentially result in erratic results.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2015.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">A comprehensive table
+has been added to the Best Practices chapter of the Calibre nmSRAF
+User’s and Reference Manual outlining defaults, recommendation and
+user notes for important keywords.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides users
+with better control over Calibre nmSRAF for generating optimal SRAFs.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2014.4</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify cleanupversion
+keyword with a value of 1.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides for
+more precise MRC enforcement and better support for line layers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2014.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify lineendmerge
+keyword with a value greater than minoffset when using in conjunction
+with intersection J and intersectionnegative J.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides for
+more continuous SRAF.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Specify minwidth.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Insures no
+SRAFs below MRC values are inadvertently placed.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2014.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Use cleanmode postsizing.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides consistent
+SRAF cleanup.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Use the Lithofile model
+format instead of individual calls to background, optical_model_load
+and resist_model_load.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides better
+model organization, and reduced specification set in the LITHO FILE
+statement and sraf_options block.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2014.1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Use mbSRAF to fill SRAF
+areas instead of the family of fillmaxoffset keywords.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> fillmaxoffset
+keywords have been deprecated.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2013.1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Use correctionLayer for
+mbSRAF</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides better
+performing scattering bars.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">rectedge space-based
+option</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides proficient
+spaced-based scattering bars.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2012.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Template indexing capability
+added.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Facilitates
+new template additions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Match cnsraf specifications
+with OPC MRC specification.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Ensures MRC-clean
+SRAF output after SRAF print avoidance (SPA).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends use
+of srafringhv template.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Template simplifies
+the recipe.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">Siemens EDA recommends use
+of GUI-based Litho File Tool to generate debug layer information.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Simplifies
+and speeds SRAF debugging.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">General tips for mbSRAF
+recipe development and control.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Simplifies
+and speeds recipe development and improves results of SRAF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">2012.2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">As of release 2012.2,
+Siemens EDA recommends the use of cnsraf_fill instead of RET SRAF_FILL. </p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Provides optimal
+SRAF.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d42010e352 "><p class="p">A table of technology
+node, hardware requirements, and the respective tilemicrons settings
+was added.</p>
+<p class="p"><span class="ph uicontrol">Reason:</span> Optimizes implementation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreNmsrafBestPractices_id8b65111f.html" title="Siemens EDA provides several tools for SRAF insertion, each taking different approaches and working together to provide optimized results.">Calibre nmSRAF Best Practices</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_SrafOptions_id88d00999.html" title="Allows Calibre nmSRAF keywords to be written in free format. The sraf_options statement is called by the setlayer command for SRAF generation. Used by RET SBAR and RET MBSRAF.">sraf_options</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmsraf_useref"
+                DocTitle = "Calibre® nmSRAF™ User’s and Reference Manual"
+                PageTitle = "Calibre nmSRAF Recipe Development"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalibreNmSRAFRecipeDevelopment_id5a1a422f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmSRAF™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

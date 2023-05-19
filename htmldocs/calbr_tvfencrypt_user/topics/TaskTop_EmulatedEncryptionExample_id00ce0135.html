@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Emulated Encryption Example" />
+<meta name="abstract" content="In this example, you create a TVF file that contains #PRAGMA ENCRYPTED and #PRAGMA ENDCRYPTED statements. You then compare the output from running Calibre with and without these statements." />
+<meta name="description" content="In this example, you create a TVF file that contains #PRAGMA ENCRYPTED and #PRAGMA ENDCRYPTED statements. You then compare the output from running Calibre with and without these statements." />
+<meta name="prodname" content="Calibre TVFencrypt User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_tvfencrypt_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® TVFencrypt User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="NONE" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id00ce0135-dc83-496b-9583-f90936e40f61" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Emulated Encryption Example</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Emulated Encryption Example" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id00ce0135-dc83-496b-9583-f90936e40f61">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Emulated Encryption Example</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">In this
+example, you create a TVF file that contains #PRAGMA ENCRYPTED and
+#PRAGMA ENDCRYPTED statements. You then compare the output from
+running Calibre with and without these statements.</span>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__id3b35fa44-5436-455b-a0c7-509f2dfc79b1"><span class="ph cmd">Create an ASCII file named <span class="ph filepath">A.tvf</span> and
+add the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>#!tvf
+namespace import tvf::*
+
+source B.tvf
+
+OR3 L1 L2 L4
+
+LAYOUT PATH "lab1a.gds"
+LAYOUT PRIMARY "TOP"
+LAYOUT SYSTEM GDSII
+DRC RESULTS DATABASE "lab1a.db" ASCII 
+
+LAYER L1 0
+LAYER L2 1
+LAYER L4 2</code></pre></div></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__iddbee4938-6117-4002-a954-3326285bdcb8"><span class="ph cmd">Save and close the file.</span></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__idf129473a-c7cc-4497-a0f6-457a9d40cbfd"><span class="ph cmd">Create an ASCII file named <span class="ph filepath">B.tvf</span> and
+add the following:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>#!tvf
+namespace import tvf::*
+
+proc OR3 {L1 L2 L4} {
+SETLAYER AA = L1 or L2
+SETLAYER BB = AA or L4
+RULECHECK AA {COPY AA}
+RULECHECK BB {COPY BB}
+}</code></pre></div></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__idde2ea54d-1026-4647-9de5-32bc67e52b52"><span class="ph cmd">Save and close the file.</span></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__ide105c081-ef67-4217-a70e-5174caf376f5"><span class="ph cmd">Execute Calibre as follows and output the transcript
+to a file named <span class="ph filepath">unencrypt.log</span>:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -drc -hier A.tvf |tee unencrypt.log</code></pre></div><div class="itemgroup info StepInfo"><p class="p">When you execute Calibre,
+the <span class="ph FontProperty shellcommand">source</span> command
+in <span class="ph filepath">A.tvf</span> sources the file <span class="ph filepath">B.tvf</span>.</p>
+</div></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__idf59638de-7cd9-4e3e-9e6b-7246c554d1a7"><span class="ph cmd">Edit the file <span class="ph filepath">B.tvf</span> and
+add the #PRAGMA ENCRYPTED and #PRAGMA ENDCRYPTED statements:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>#!tvf
+namespace import tvf::*
+
+proc OR3 {L1 L2 L4} {
+<span class="ph CodeHighlight orange">VERBATIM "#PRAGMA ENCRYPTED"</span>
+SETLAYER AA = L1 or L2
+SETLAYER BB = AA or L4
+RULECHECK AA {COPY AA}
+RULECHECK BB {COPY BB}
+<span class="ph CodeHighlight orange">VERBATIM "#PRAGMA ENDCRYPTED"</span>
+}</code></pre></div></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__id34cab380-62ce-4dad-935d-d3a0ceafdd83"><span class="ph cmd">Save and close the file.</span></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__id85e871aa-3b4f-4dd5-8534-557d1e31bfbd"><span class="ph cmd">Execute Calibre as follows and output the transcript
+to a file named <span class="ph filepath">encrypt.log</span>:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -drc -hier A.tvf |tee encrypt.log</code></pre></div></li>
+<li class="li step stepexpand" id="id00ce0135-dc83-496b-9583-f90936e40f61__idf587f07e-2277-4710-96c9-67f793bbdf36"><span class="ph cmd">Compare the <span class="ph filepath">unencrypt.log</span> and <span class="ph filepath">encrypt.log</span> log
+files you output in step <a class="xref fm:NumberOnly" href="#id00ce0135-dc83-496b-9583-f90936e40f61__ide105c081-ef67-4217-a70e-5174caf376f5">5</a> and <a class="xref fm:NumberOnly" href="#id00ce0135-dc83-496b-9583-f90936e40f61__id85e871aa-3b4f-4dd5-8534-557d1e31bfbd">8</a>.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">When the #PRAGMA statements
+are not present in <span class="ph filepath">B.tvf</span>, the operations inside
+the OR3 procedure appear in the <span class="ph filepath">unencrypt.log</span> transcript:</p>
+<pre class="pre codeblock"><code>...
+<span class="ph CodeHighlight orange">AA = L1 OR L2</span>
+-------------
+<span class="ph CodeHighlight orange">AA</span> (HIER TYP=1 CFG=1 HGC=9 FGC=50 HEC=72 FEC=400 IGC=16 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 3 OF 5  ELAPSED TIME = 0
+
+Layer L1 DELETED -- LVHEAP = 1/3/4
+
+Layer L2 DELETED -- LVHEAP = 1/3/4
+
+DRC RuleCheck AA COMPLETED. Number of Results = 9 (50)
+L3 = OR L3
+----------
+L3 (HIER TYP=1 CFG=1 HGC=70 FGC=472 HEC=280 FEC=1888 IGC=32 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 4 OF 5  ELAPSED TIME = 0
+
+Original Layer L3 DELETED -- LVHEAP = 1/3/4
+
+<span class="ph CodeHighlight orange">BB = AA OR L3</span>
+-------------
+<span class="ph CodeHighlight orange">BB</span> (HIER TYP=1 CFG=1 HGC=44 FGC=286 HEC=212 FEC=1344 IGC=0 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 5 OF 5  ELAPSED TIME = 0
+
+Layer <span class="ph CodeHighlight orange">AA</span> DELETED -- LVHEAP = 1/3/4
+
+Layer L3 DELETED -- LVHEAP = 1/3/4
+
+Layer <span class="ph CodeHighlight orange">BB</span> DELETED -- LVHEAP = 1/3/4
+...</code></pre><p class="p">When the #PRAGMA statements
+are present, the operations inside the OR3 procedure are replaced
+with the string “&lt;ENCRYPTED …&gt; in the <span class="ph filepath">encrypt.log</span> transcript:</p>
+<pre class="pre codeblock"><code>...
+<span class="ph CodeHighlight orange">&lt;ENCRYPTED OPERATION(S)&gt;</span>
+------------------------
+<span class="ph CodeHighlight orange">&lt;ENCRYPTED_LAYER_4&gt;</span> (HIER TYP=1 CFG=1 HGC=9 FGC=50 HEC=72 FEC=400 IGC=16 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 3 OF 5  ELAPSED TIME = 0
+
+Layer L1 DELETED -- LVHEAP = 1/3/4
+
+Layer L2 DELETED -- LVHEAP = 1/3/4
+
+DRC RuleCheck AA COMPLETED. Number of Results = 9 (50)
+
+L3 = OR L3
+----------
+L3 (HIER TYP=1 CFG=1 HGC=70 FGC=472 HEC=280 FEC=1888 IGC=32 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 4 OF 5  ELAPSED TIME = 0
+
+Original Layer L3 DELETED -- LVHEAP = 1/3/4
+
+<span class="ph CodeHighlight orange">&lt;ENCRYPTED OPERATION(S)&gt;</span>
+------------------------
+<span class="ph CodeHighlight orange">&lt;ENCRYPTED_LAYER_7&gt;</span> (HIER TYP=1 CFG=1 HGC=44 FGC=286 HEC=212 FEC=1344 IGC=0 VHC=F VPC=F)
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/4  OPS COMPLETE = 5 OF 5  ELAPSED TIME = 0
+
+Layer <span class="ph CodeHighlight orange">&lt;ENCRYPTED_LAYER_4&gt;</span> DELETED -- LVHEAP = 1/3/4
+
+Layer L3 DELETED -- LVHEAP = 1/3/4
+
+Layer <span class="ph CodeHighlight orange">&lt;ENCRYPTED_LAYER_7&gt;</span> DELETED -- LVHEAP = 1/3/4
+...</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_EmulatedEncryption_iddb0473f5.html" title="You can use emulated encryption in cases where you do not want to encrypt a rule file, but you want to encrypt the output from a Calibre job. There are two directives, #PRAGMA ENCRYPTED and #PRAGMA ENDCRYPTED, that identify the start and end sections containing the SVRF operations you want to encrypt in the output.">Emulated Encryption</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_tvfencrypt_user"
+                DocTitle = "Calibre® TVFencrypt User’s Manual"
+                PageTitle = "Emulated Encryption Example"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_EmulatedEncryptionExample_id00ce0135.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® TVFencrypt User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

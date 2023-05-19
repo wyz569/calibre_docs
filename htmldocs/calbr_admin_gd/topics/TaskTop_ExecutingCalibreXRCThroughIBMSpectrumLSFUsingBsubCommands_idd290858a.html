@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Executing Calibre xRC Through IBM Spectrum LSF Using bsub Commands" />
+<meta name="abstract" content="In this procedure, you use bsub commands in IBM Spectrum LSF to execute Calibre xRC, PDB, and FMT." />
+<meta name="description" content="In this procedure, you use bsub commands in IBM Spectrum LSF to execute Calibre xRC, PDB, and FMT." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd290858a-9c6b-4470-83af-f8a355df025d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Executing Calibre xRC Through IBM Spectrum LSF Using bsub Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Executing Calibre xRC Through IBM Spectrum LSF Using bsub Commands" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idd290858a-9c6b-4470-83af-f8a355df025d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Executing Calibre
+xRC Through IBM Spectrum LSF Using bsub Commands</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">In
+this procedure, you use bsub commands in IBM Spectrum LSF to execute
+Calibre xRC, PDB, and FMT.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idd290858a-9c6b-4470-83af-f8a355df025d__idd59b79e0-d30d-45c8-8a51-f5991b1d721b"><p class="p">IBM
+Spectrum LSF must be installed and configured for your network.</p>
+</li>
+<li class="li" id="idd290858a-9c6b-4470-83af-f8a355df025d__id81b07e7c-e28a-440e-9448-5786cc8f8e46"><p class="p">The
+CALIBRE_HOME environment variable must be set to the location of a
+Calibre software tree that is accessible by the remote hosts.</p>
+</li>
+<li class="li" id="idd290858a-9c6b-4470-83af-f8a355df025d__id148bf4c6-6d69-4e53-92c8-026c997d709a"><p class="p">LM_LICENSE_FILE
+or MGLS_LICENSE_FILE must be set to the location of a license file.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idd290858a-9c6b-4470-83af-f8a355df025d__id24d4eb6b-1d9d-438b-b44c-e53e2014575b"><span class="ph cmd">Create a file named <span class="ph filepath italic">script</span> that
+includes the following commands:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>#!/bin/sh
+bsub $1 &gt;&amp;! k1.log
+bsub $2 &gt;&amp;! k2.log
+bsub $3 &gt;&amp;! k3.log</code></pre></div></li>
+<li class="li step stepexpand" id="idd290858a-9c6b-4470-83af-f8a355df025d__idda6a6a14-80bd-4650-8a57-7b5be201ad31"><span class="ph cmd">Enter the following in Queue
+command:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>./script %k1 %k2 %k3</code></pre></div></li>
+<li class="li step stepexpand" id="idd290858a-9c6b-4470-83af-f8a355df025d__ida7e0e81b-0a11-42c4-b715-3c12299539c2"><span class="ph cmd">Run PEX to execute xRC, PDB,
+and FMT.</span></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExecutingCalibreUsingIBMSpectrumLSF_id05fc183e.html" title="IBM Spectrum LSF is software for managing workload processing for compute and data-intensive applications. With IBM Spectrum LSF, you can schedule and track the completion of batch workloads across a distributed environment.">Executing Calibre Using IBM Spectrum LSF</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Executing Calibre xRC Through IBM Spectrum LSF Using bsub Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExecutingCalibreXRCThroughIBMSpectrumLSFUsingBsubCommands_idd290858a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

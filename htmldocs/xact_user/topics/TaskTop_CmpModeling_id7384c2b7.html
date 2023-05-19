@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="CMP Modeling" />
+<meta name="abstract" content="The CMP modeling workflow for modeling chemical-mechanical polishing adds some specialized steps to the extraction process." />
+<meta name="description" content="The CMP modeling workflow for modeling chemical-mechanical polishing adds some specialized steps to the extraction process." />
+<meta name="DC.subject" content="On-chip variation, CMP modeling, CMP modeling" />
+<meta name="keywords" content="On-chip variation, CMP modeling, CMP modeling" />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id7384c2b7-3d20-4d4b-b792-c191846b4205" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CMP Modeling</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CMP Modeling" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id7384c2b7-3d20-4d4b-b792-c191846b4205">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CMP Modeling</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The CMP modeling
+workflow for modeling chemical-mechanical polishing adds some specialized
+steps to the extraction process.</p>
+<p class="p">CMP models predict how much erosion of the
+dielectric and dishing of metal occur on the wafer surface because
+of the CMP step in manufacturing. The models create a grid of the
+wafer and, for each square, determine the amount of polishing force
+or erosion. (The exact effect calculated by the CMP model depends
+on which modeling program you are using.)</p>
+<p class="p"><a class="xref fm:Figure" href="#id7384c2b7-3d20-4d4b-b792-c191846b4205__idcebe0c07-b6e2-467e-8f39-02ad906468c6">Figure 1</a> shows the potential effects of CMP.
+The metal is softer than the dielectric, and so is abraded more
+rapidly, resulting in dishing. Where dense stretches of metal switch
+to dielectric, the polishing agent can “pile up” on one side, resulting
+in uneven erosion. Design geometry interacts with the CMP forces
+to dictate exactly how thickness will vary.</p>
+<div class="fig fignone" id="idcebe0c07-b6e2-467e-8f39-02ad906468c6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Typical Effects of CMP</span><br /><div class="imagecenter"><img class="image imagecenter" height="110" src="../graphics/on_chip_variation4a.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Figure" href="#id7384c2b7-3d20-4d4b-b792-c191846b4205__id4949e7e2-875a-437a-bf1f-b404051452b2">Figure 2</a> illustrates a side effect of the interaction:
+metal fill placement completely changes the profile of the CMP erosion.
+Notice, however, that even very regular metal fill still does not eliminate
+the uneven wear. </p>
+<div class="fig fignone" id="id4949e7e2-875a-437a-bf1f-b404051452b2"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Metal Fill and CMP</span><br /><div class="imagecenter"><img class="image imagecenter" height="164" src="../graphics/on_chip_variation5a.png" width="468" /></div><br /></div>
+<p class="p">CMP models only predict how thickness will
+be affected. They can be used in conjunction with in-die variation,
+which also calculates density effects on edge placement. Because
+having a full view of neighboring shapes is important to both techniques,
+transistor-level (flat) extraction is best. However, this requires
+large amounts of disk space to complete the extraction.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><p class="p">Most manufacturing processes
+use chemical-mechanical polishing (CMP) to planarize the wafer surface
+after deposition. The effect of the CMP step is calculated using
+complex software which creates data files. The foundry may supply
+those files as part of a design kit.</p>
+<p class="p">If you have CMP modeling files
+in the Praesagus or VCMP format, you can have Calibre xACT use them
+to modify thickness for the conductors. When CMP data is used in
+conjunction with in-die variation, the CMP data is used instead
+of the in-die data.</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id7384c2b7-3d20-4d4b-b792-c191846b4205__id2dc0306d-ec19-43f3-91c1-5e98161d9650"><span class="ph cmd">The foundry runs CMP modeling
+software and adds the data to the design kit.</span></li>
+<li class="li step stepexpand" id="id7384c2b7-3d20-4d4b-b792-c191846b4205__idd82e09df-5ecc-4a03-983d-6747a5dcf826"><span class="ph cmd">The CAD group places the CMP
+files in a location accessible to the engineers running Calibre
+xACT.</span></li>
+<li class="li step stepexpand" id="id7384c2b7-3d20-4d4b-b792-c191846b4205__idda4d03da-32eb-420c-bdcb-4b31e2048d3c"><span class="ph cmd">The CAD group sets up the
+environment variables and files for running CMP modeling. See “<a class="xref fm:HeadingOnly" href="TaskTop_VaryingThicknessCmpFiles_id764aef11.html#id764aef11-eca2-4ca7-a854-a24238b87274__TaskTop_VaryingThicknessCmpFiles_id764aef11.xml#id764aef11-eca2-4ca7-a854-a24238b87274" title="If you have chemical mechanical polishing (CMP) models, such as CMPA, VCMP, or the database produced by Praesagus’ Copper Prediction and Verification software, you can use its calculations for conductor thickness. The CMP data overrides all other methods of calculating thickness, such as PEX Thickness EQN or PEX Table. The Calibre xACT interpreter converts thickness values into the same units used by the extraction.">Varying Thickness with CMP Files</a>” for more information.</span></li>
+<li class="li step stepexpand" id="id7384c2b7-3d20-4d4b-b792-c191846b4205__id9cd82842-9ba5-420f-b831-b88d6a153993"><span class="ph cmd">When appropriate, the engineer
+running Calibre xACT enables CMP input during extraction.</span><div class="itemgroup info StepInfo"><p class="p">CMP effects are sensitive to
+neighborhood density. Most of the time you would not benefit from
+including CMP data before placing metal fill. </p>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ParasiticExtractionTechniquesOnChipVariation_idc86fd741.html" title="In-die variation and CMP modeling are independent of each other and may be singly or jointly used in extraction.">Parasitic Extraction Techniques for On-Chip Variation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "CMP Modeling"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CmpModeling_id7384c2b7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

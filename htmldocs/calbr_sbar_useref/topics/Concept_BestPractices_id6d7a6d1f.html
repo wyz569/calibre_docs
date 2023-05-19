@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Best Practices" />
+<meta name="abstract" content="These general recommendations facilitate the development of effective Calibre OPCsbar rule files." />
+<meta name="description" content="These general recommendations facilitate the development of effective Calibre OPCsbar rule files." />
+<meta name="prodname" content="Calibre® Opcsbar™ User's And Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="Mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-08-28" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_sbar_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 01, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® OPCsbar™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Best Practices</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Best Practices" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Best Practices</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">These general
+recommendations facilitate the development of effective Calibre
+OPCsbar rule files.</span>
+</div>
+<ul class="ul"><li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id2818e1d2-bcc7-4be0-9c6b-6b92bd31faa3"><p class="p">Calibre OPCsbar returns layer data containing
+the scattering bars it creates. These scattering bars are on a separate
+layer. To combine the scattering bars with the design data, you
+must merge the scattering bar layer with the original layer using
+Boolean operations. For positive scattering bars use the OR operation.
+For negative scattering bars use the NOT operation.</p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id85875514-6e1f-43aa-8b6f-20ab7cf25e10"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_RefLayer_id5de5e8b0.html#id5de5e8b0-c455-40ed-b245-17286380e7c8__Command_RefLayer_id5de5e8b0.xml#id5de5e8b0-c455-40ed-b245-17286380e7c8" title="Reference layer name for measuring violations.">ref_layer</a> must be a superset of the <a class="xref fm:HeadingOnly" href="Command_InLayer_id83a4fb6e.html#id83a4fb6e-b8fd-4c3c-9332-46717a1417cc__Command_InLayer_id83a4fb6e.xml#id83a4fb6e-b8fd-4c3c-9332-46717a1417cc" title="Specifies an input layer name for which to generate scattering bars.">in_layer</a>; that is, it must contain all
+shapes on the <span class="keyword ParameterName RequiredReplaceable">in_layer</span>.
+You cannot specify <span class="keyword ParameterName OptionalReplaceable">ref_layer</span> when
+using <a class="xref fm:HeadingOnly" href="Command_Spacelayer_id01f3e3b7.html#id01f3e3b7-c5c3-4211-a3d4-3582578d9961__Command_Spacelayer_id01f3e3b7.xml#id01f3e3b7-c5c3-4211-a3d4-3582578d9961" title="Declares a layer name for generation of scattering bars.">SPACELAYER</a>. </p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__iddcb2dc8c-a5dd-4b5c-bede-7dbe5ce25b5c"><p class="p">Use <a class="xref fm:HeadingOnly" href="Command_OptionVerificationMode_id85f2248c.html#id85f2248c-5256-4ad3-9676-5b5021a4f073__Command_OptionVerificationMode_id85f2248c.xml#id85f2248c-5256-4ad3-9676-5b5021a4f073" title="Finds deleted scattering bars.">OPTION VERIFICATION_MODE</a> to find deleted scattering bars
+from the <a class="xref fm:HeadingOnly" href="Command_Sblayer_id8f696411.html#id8f696411-dd39-40f7-87db-1c20b8955645__Command_Sblayer_id8f696411.xml#id8f696411-dd39-40f7-87db-1c20b8955645" title="Preexisting scattering bar layer name.">SBLAYER</a> of an executed Calibre OPCsbar
+operation. </p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id4c8bacb7-9a68-4f01-95f8-fb4f8a07ce81"><p class="p">Use <a class="xref fm:HeadingOnly" href="Command_OptionTilemicrons_id4246f9fb.html#id4246f9fb-afaa-4800-ac3e-80ff73e162f8__Command_OptionTilemicrons_id4246f9fb.xml#id4246f9fb-afaa-4800-ac3e-80ff73e162f8" title="Specifies a tile size.">OPTION TILEMICRONS</a> to improve processing scalability
+on designs with very large amounts of flat input data.</p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id1374f474-0747-40ed-a06e-eccbb12f8da6"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Strictcenter_id0c76c2fb.html#id0c76c2fb-780e-4c3a-884e-e53e4de429d8__Command_Strictcenter_id0c76c2fb.xml#id0c76c2fb-780e-4c3a-884e-e53e4de429d8" title="Generates scattering bars between two edges.">STRICTCENTER</a> and <a class="xref fm:HeadingOnly" href="Command_Oppositeextended_idfd2b7a72.html#idfd2b7a72-3f99-403d-9c3b-7136d543854c__Command_Oppositeextended_idfd2b7a72.xml#idfd2b7a72-3f99-403d-9c3b-7136d543854c" title="Generates scattering bars based on space.">OPPOSITEEXTENDED</a> are mutually exclusive. It is
+possible OPPOSITEEXTENDED may change the width of target shapes,
+disabling STRICTCENTER from generating scattering bars.</p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id993de3e2-c0c0-497b-b1b8-5150127acb7f"><p class="p">Specify <a class="xref fm:HeadingOnly" href="Command_Maxsbwidth_id26ab8f9f.html#id26ab8f9f-4325-422a-9ef7-20b8e3da4948__Command_Maxsbwidth_id26ab8f9f.xml#id26ab8f9f-4325-422a-9ef7-20b8e3da4948" title="Defines maximum width of scattering bars.">MAXSBWIDTH</a> and <a class="xref fm:HeadingOnly" href="Command_Minsbwidth_id8f0e5aa1.html#id8f0e5aa1-33c7-480c-8508-e3047b93b633__Command_Minsbwidth_id8f0e5aa1.xml#id8f0e5aa1-33c7-480c-8508-e3047b93b633" title="Defines minimum scattering bar width.">MINSBWIDTH</a> values. This is important in cases
+where a single SBWIDTH is available in the OPCSBAR command. If not
+specified, MAXSBWIDTH defaults to the largest SBWIDTH plus two database
+units and MINSBWIDTH defaults to the smallest SBWIDTH minus one
+database unit in any SPACE keyword.</p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id3d05bbe0-6023-47e1-b632-23eb7d0d17d2"><p class="p">Always enable <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Clone Transformed Placements', 'svrf_ur'); return false;">LAYOUT CLONE TRANSFORMED PLACEMENTS</a> (detailed in the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual</a>) when running OPCSBAR.
+This permits the Calibre database constructor to clone cells that
+have rotated or mirrored placements, so that subsequent hierarchical
+simulation of rotated structures is correct.</p>
+</li>
+<li class="li" id="id6d7a6d1f-7c75-4da6-a298-44e57a44c07c__id18005fec-f1fc-45b2-9555-f6d95bcb1987"><p class="p">Siemens EDA recommends
+setting <a class="xref fm:HeadingOnly" href="Command_OptionCarefulCleanup_idcbc97217.html#idcbc97217-6bf8-41d6-afd9-b14b67947130__Command_OptionCarefulCleanup_idcbc97217.xml#idcbc97217-6bf8-41d6-afd9-b14b67947130" title="Cleans scattering bars with increased stringency.">OPTION CAREFUL_CLEANUP</a> to to 0. This forces <a class="xref fm:HeadingOnly" href="Command_OptionFastMrc_id88122e5a.html#id88122e5a-4859-4615-a34e-4e8bdfcda5f2__Command_OptionFastMrc_id88122e5a.xml#id88122e5a-4859-4615-a34e-4e8bdfcda5f2" title="Reduces cleaning stringency of scattering bars.">OPTION FAST_MRC</a> to be set to off by default. This setting provides for
+optimal scattering bar cleanup.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreOpcsbarBestPracticesProblemResolution_id3c1312a2.html" title="There are several best practices and troubleshooting tips you can follow to create the most effective Calibre OPCsbar rule file.">Calibre OPCsbar Best Practices and Problem Resolution</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_sbar_useref"
+                DocTitle = "Calibre® OPCsbar™ User’s and Reference Manual"
+                PageTitle = "Best Practices"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_BestPractices_id6d7a6d1f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCsbar™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

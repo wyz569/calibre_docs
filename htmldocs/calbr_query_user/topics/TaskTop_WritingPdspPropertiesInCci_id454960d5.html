@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Writing PDSP Properties in CCI" />
+<meta name="abstract" content="This procedure describes a basic configuration of a rule file and CCI script to get PDSP properties for downstream simulation tools." />
+<meta name="description" content="This procedure describes a basic configuration of a rule file and CCI script to get PDSP properties for downstream simulation tools." />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id454960d5-034e-4d92-be54-9d89d5afb1e5" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Writing PDSP Properties in CCI</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Writing PDSP Properties in CCI" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id454960d5-034e-4d92-be54-9d89d5afb1e5">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Writing PDSP Properties in CCI</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="p ContextMGC">Pushdown Separated Properties
+Flow</p>
+<p class="shortdesc">This procedure describes a
+basic configuration of a rule file and CCI script to get PDSP properties
+for downstream simulation tools.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__ide53296d6-21a9-406c-980a-82f8a8c48d1d"><p class="p">Knowledge
+of when to use <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Push Devices', 'svrf_ur'); return false;">LVS Push Devices </a>SEPARATE PROPERTIES YES.</p>
+</li>
+<li class="li" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__ida73c9b2d-8b1e-4f16-a13d-3d439868ef0a"><p class="p">Knowledge
+of which device properties in your rules are used for simulation
+purposes but not LVS comparison. Typically, these are properties
+that do not appear in <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Trace Property', 'svrf_ur'); return false;">Trace Property</a> statements.</p>
+</li>
+<li class="li" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__id9cb9592b-6def-4d59-881f-acca0321e044"><p class="p">Calibre
+nmLVS-H, Calibre Query Server, and Calibre Connectivity Interface
+licenses.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__ida86ae165-b60d-4ebc-a23f-27ca32fec985"><span class="ph cmd">Ensure these statements are
+in your rules:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>LVS PUSH DEVICES SEPARATE PROPERTIES YES 
+MASK SVDB DIRECTORY svdb CCI QUERY </code></pre></div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__ide7f8b476-8c3c-4457-912a-ee351e259fb5"><span class="ph cmd">(Required if
+the device extraction rules do not contain these derivations already.) As needed,
+derive DFM Property layers that contain all simulation properties
+you are interested in, similar to this:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>nsd_prop = DFM PROPERTY nsd  [ A = AREA( nsd ) ] [ P = PERIM( nsd ) ]
+ 
+psd_prop = DFM PROPERTY psd  [ A = AREA( psd ) ] [ P = PERIM( psd ) ] </code></pre><p class="p">These layers
+must interact with pin layers for the devices. Alternatively, the
+properties can be assigned to copies of device seed shapes, like
+this:</p>
+<pre class="pre codeblock"><code>ngate_p = DFM PROPERTY ngate &lt;pin_or_aux_layer&gt; ... 
+          [ simprop = ... ] ...
+pgate_p = DFM PROPERTY pgate &lt;pin_or_aux_layer&gt; ... 
+          [ simprop = ... ] ...</code></pre></div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__id8a0df69f-6340-4f14-9ccd-b73a5e570a89"><span class="ph cmd">Write Device statements in
+your rules that use the layers from Step 2 as annotation auxiliary
+layers. Include the standard property computation block and the
+device annotation program block as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>device mn(n) ngate ngate(g) nsd(s) nsd(d) pwell(b)  
+[ PROPERTY L, W 
+  L = perimeter_outside(ngate,nsd) * 0.5 
+  W = perimeter_co(ngate,nsd) * 0.5 
+] 
+<span class="ph CodeHighlight Bold">&lt;nsd_prop&gt;</span> 
+[ 
+  PROPERTY AS, AD, PS, PD 
+  AS = DFM_NUM_VAL(nsd_prop, A, s) * UNIT_LENGTH() * UNIT_LENGTH()
+  AD = DFM_NUM_VAL(nsd_prop, A, d) * UNIT_LENGTH() * UNIT_LENGTH()
+  PS = DFM_NUM_VAL(nsd_prop, P, s) * UNIT_LENGTH() 
+  PD = DFM_NUM_VAL(nsd_prop, P, d) * UNIT_LENGTH() 
+] 
+ 
+device mp(p) pgate pgate(g) psd(s) psd(d) nwell(b)  
+[ PROPERTY L, W 
+  L = perimeter_outside(pgate,psd) * 0.5 
+  W = perimeter_co(pgate,psd) * 0.5 
+] 
+<span class="ph CodeHighlight Bold">&lt;psd_prop&gt;</span> 
+[ 
+  PROPERTY AS, AD, PS, PD 
+  AS = DFM_NUM_VAL(psd_prop, A, s) * UNIT_LENGTH() * UNIT_LENGTH() 
+  AD = DFM_NUM_VAL(psd_prop, A, d) * UNIT_LENGTH() * UNIT_LENGTH() 
+  PS = DFM_NUM_VAL(psd_prop, P, s) * UNIT_LENGTH() 
+  PD = DFM_NUM_VAL(psd_prop, P, d) * UNIT_LENGTH() 
+] </code></pre><p class="p">When writing these, ensure
+the device type/subtype combinations are unique to these Device
+statements. Also, ensure that no other Device statements have annotation program
+blocks that share the same seed layers as these statements.</p>
+<p class="p">An alternative to using UNIT_LENGTH()
+for scaling is to set <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Unit Length', 'svrf_ur'); return false;">Unit Length</a> 1
+in the LVS rules.</p>
+</div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__idfd257c55-17ff-4952-aeca-512c9aeda2aa"><span class="ph cmd">Run circuit extraction:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -spice -turbo layout.sp rules </code></pre><p class="p">If there are any problems indicated
+in the transcript or circuit extraction report, fix them and re-run
+this step.</p>
+</div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__id6038d2c3-4d08-4ed5-8e6f-6d2799bacdc5"><span class="ph cmd">(Tcl shell
+interface.) Write a PDSP CCI script, as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>dfm::set_layout_netlist_options -device_location CENTER \
+  -trivial_pins YES -empty_cells YES -names NONE \
+  -primitive_device_subckts NO -separated_properties NO \
+  -device_templates YES -hierarchy AGF
+qs::write_separated_properties cci_props.data
+dfm::write_spice_netlist cci.netlist
+qs::quit</code></pre><p class="p">Save it as <span class="ph filepath">pdsp_script.tcl</span>.</p>
+</div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__idcb6a6530-85bd-44e1-ab73-0fe62311bdf8"><span class="ph cmd">Run the
+Query Server Tcl shell:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -qs -svdb svdb -turbo -exec pdsp_script.tcl</code></pre><p class="p">If there are any runtime errors,
+fix the problems and re-run this step.</p>
+</div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__id3cbfcd53-a139-4b64-8016-85c9ccffd7af"><span class="ph cmd">(Standard interface.) Write
+a PDSP CCI script, as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>LAYOUT NETLIST DEVICE LOCATION CENTER  
+LAYOUT NETLIST TRIVIAL PINS YES  
+LAYOUT NETLIST EMPTY CELLS YES  
+LAYOUT NETLIST NAMES NONE  
+LAYOUT NETLIST PRIMITIVE DEVICE SUBCKTS NO  
+LAYOUT NETLIST SEPARATED PROPERTIES NO  
+LAYOUT NETLIST DEVICE TEMPLATES YES  
+LAYOUT NETLIST HIERARCHY AGF  
+LAYOUT SEPARATED PROPERTIES WRITE cci_props.data 
+LAYOUT NETLIST WRITE cci.netlist 
+TERMINATE</code></pre><p class="p">Save it as <span class="ph filepath">pdsp_script</span>.</p>
+</div></li>
+<li class="li step stepexpand" id="id454960d5-034e-4d92-be54-9d89d5afb1e5__idfd816b2b-d30e-40d0-87e8-c4cbad0d089d"><span class="ph cmd">Run the standard Query Server
+interface:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -query svdb &lt; pdsp_script </code></pre><p class="p">If there are any ERROR or NOK
+responses, fix the problems and re-run this step.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The <span class="ph filepath">cci.netlist</span> file
+contains the customized SPICE netlist for downstream tool use. It
+lacks the PDSP properties. The <span class="ph filepath">cci_props.data</span> file
+contains a netlist with the PDSP properties.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CustomizedFilesForPushdownSeparatePropertiesPDSPFlow_idf8fc74dc.html" title="Pushdown separated properties is an LVS flow that allows for efficient handling of device properties used by third-party parasitic extraction tools. These properties are not typically used in LVS comparison, and they do not appear in the extracted layout netlist. CCI employs a number of commands specific to this flow.">Customized Files for Pushdown Separated Properties (PDSP) Flow</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/FileRef_SeparatedPropertiesFileFormat_idea49fa14.html" title="The separated properties file is generated for the PDSP flow and shows separated properties for affected devices.">Separated Properties File Format</a></div>
+<div><a class="link" href="../topics/Contain_CustomizedFilesForPushdownSeparatePropertiesPDSPFlow_idf8fc74dc.html" title="Pushdown separated properties is an LVS flow that allows for efficient handling of device properties used by third-party parasitic extraction tools. These properties are not typically used in LVS comparison, and they do not appear in the extracted layout netlist. CCI employs a number of commands specific to this flow.">Customized Files for Pushdown Separated Properties (PDSP) Flow</a></div>
+<div><a class="link" href="../topics/Contain_ErcTvfCommands_id70f2fa06.html" title="ERC TVF commands support device parameter calculations for the pushdown separate properties (PDSP) flow. These device parameters are only available from the PDSP files generated by CCI. The commands are Tcl based and appear in TVF Function procedures referenced by the ERC TVF specification statement in the rule file. ERC TVF commands are not executed in the Query Server Tcl shell. However, they are only used in a PDSP flow, so they are documented together with the Query Server CCI APIs that support the PDSP flow.">ERC TVF Commands</a></div>
+<div><a class="link" href="../topics/Concept_PropertyDefinitionsAndNetlistBehaviorForCCIFlows_idfedac241.html" title="Device properties appear in the extracted layout netlist used in LVS-H and in netlists produced by CCI. There are differences in how these properties are specified and the circumstances under which they appear in these netlists. This topic is of particular concern when LVS Push Devices SEPARATE PROPERTIES YES is specified in the rules (the PDSP flow).">Property Definitions and Netlist Behavior for CCI Flows</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "Writing PDSP Properties in CCI"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_WritingPdspPropertiesInCci_id454960d5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

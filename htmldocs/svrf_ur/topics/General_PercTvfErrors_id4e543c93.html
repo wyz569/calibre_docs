@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="PERC TVF Errors" />
+<meta name="abstract" content="During PERC Load initialization or rule checking, PERC executes Tcl procs. Calibre PERC captures runtime problems as Tcl errors and subsequently reports them in the TVF FUNCTION ERROR section of the report." />
+<meta name="description" content="During PERC Load initialization or rule checking, PERC executes Tcl procs. Calibre PERC captures runtime problems as Tcl errors and subsequently reports them in the TVF FUNCTION ERROR section of the report." />
+<meta name="DC.subject" content="Calibre PERC TVF Errors (Table)" />
+<meta name="keywords" content="Calibre PERC TVF Errors (Table)" />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4e543c93-9808-4d0b-9d0a-8c1db86129ea" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>PERC TVF Errors</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="PERC TVF Errors" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id4e543c93-9808-4d0b-9d0a-8c1db86129ea">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">PERC
+TVF Errors</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">During PERC
+Load initialization or rule checking, PERC executes Tcl procs. Calibre
+PERC captures runtime problems as Tcl errors and subsequently reports
+them in the TVF FUNCTION ERROR section of the report.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id4e543c93-9808-4d0b-9d0a-8c1db86129ea__ide64e659d-b9de-4a41-988c-23e3a34f09c8">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4e543c93-9808-4d0b-9d0a-8c1db86129ea__id415ee49a-509d-437b-8224-be4250264835" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>PERC TVF
+Errors</span></caption><colgroup><col style="width:6.050in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d552927e157"><p class="p">Error Message and
+Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot call rule
+check commands during initialization.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if any rule check command
+is called in initialization procedures of PERC LOAD statements.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot call initialization
+commands outside an init proc.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if any initialization
+command is called in rule checks.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot call perc::report_base_result
+outside of rule checking commands.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if perc::report_base_result
+is called at the time when none of the rule checking commands is
+in progress.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot descend
+from the non-hcell instance: &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the argument to perc::descend
+is not an instance iterator pointing to a cell instance, or a pin
+iterator pointing to a pin of a cell instance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot find property
+&lt;name&gt; for device &lt;device_name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the named device property
+is referenced but cannot be found, either because it is missing
+in the input netlist, or because it is not loaded by PERC Property statements.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot find the
+pattern instance name &lt;name&gt; in pattern: &lt;pattern_name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+does not contain the named device.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot find the
+pattern net name &lt;name&gt; in pattern: &lt;pattern_name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+does not contain the named net.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot find the
+pattern template: &lt;pattern_name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if &lt;pattern_name&gt;
+is not a subckt instantiated in the pattern file specified via the
+PERC Pattern Path statement.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: cannot increment
+a single element iterator.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the argument to perc<span class="ph fmvar:double_colon">::</span>inc is an iterator pointing
+to a single element.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: device type is
+an empty string.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the empty string is
+specified as a device type.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: duplicate names
+in &lt;some&gt; list: &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the same name is specified
+twice in any list used as an argument to any PERC command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: duplicate net
+type name with different dependencies: &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a net type is defined
+with different dependencies such that it has to be assigned in multiple
+phases.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: Empty return value
+is invalid for perc::create_voltage_path -pinVoltage proc: &lt;value&gt;.</p>
+<p class="p"> </p>
+<p class="p">The -pinVoltage proc must have a non-null
+return value.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -exclude
+switch, it is allowed only when -break is present.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the command perc<span class="ph fmvar:double_colon">::</span>create_net_path is called
+with the -exclude switch, but without the -break switch.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid input
+net: &lt;name&gt;. It is not connected to instance &lt;name&gt; any of
+the two pins.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the input net to perc::get_instances_in_series
+or perc::get_other_net_on_instance is not connected to any of the
+given two pins of the specified instance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid &lt;kind&gt;
+iterator.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the argument to a
+PERC command is not the correct iterator. This happens if the argument
+value is not an iterator at all, or it is the different kind of
+iterator (for instance, a pin iterator when a net iterator is expected),
+or it is the right kind of iterator, but it has reached the end,
+that is, its string representation is the empty string.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid list maximum
+length &lt;length&gt;. It must be ALL or a positive integer.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the argument to -listMaxLength
+in calling perc::set_parameters is incorrectly specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -list
+and -listPin switches. Cannot specify both.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if both -list and -listPin
+are specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -listPin
+switch, it is allowed only when -net is present.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a math command is
+called with the -listPin switch, but without the ‑net switch.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pattern
+&lt;pattern_name&gt;: duplicate instance names &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+contains more than one device of the same name.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pattern
+&lt;pattern_name&gt;: no path from instance &lt;name&gt; to instance &lt;name2&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+contains a disconnected device.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pattern
+&lt;pattern_name&gt;: no path from net &lt;name&gt; to instance &lt;name2&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+contains a disconnected net.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pattern
+&lt;pattern_name&gt;: no power or ground port found.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if LVS Power/Ground Name
+statements are not specified, or none </p>
+<p class="p">of the port names of the subckt &lt;pattern_name&gt;
+can be labeled as power or ground.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pattern
+&lt;pattern_name&gt;: non-primitive instance &lt;name&gt; is not allowed.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the subckt &lt;pattern_name&gt;
+contains a cell instance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid result
+maximum count &lt;count&gt;. It must be ALL or a positive integer.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the argument to -resultMaxCount
+in calling perc::set_parameters is incorrectly specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid net type
+condition list: &lt;list&gt;, &lt;reason&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a net type expression
+has the wrong syntax.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid net type
+or type set name: &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the named net type
+or type set is referenced but not defined.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid net type/set
+name: &lt;name&gt;. The first char cannot be ‘!’,</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the named net type
+or type set starts with a ! character.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid net type/set
+name: &lt;name&gt;. The first char cannot be ‘&amp;&amp;’ or ‘||’.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the named net type
+or type set is named with &amp;&amp; or || characters.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -pin argument
+in calling perc::create_net_path, need at least two pins.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if there are not enough
+pins to establish a path across a device.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid pin &lt;name&gt;
+for device type &lt;type&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if devices of the specified
+type do not have the named pin.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -pinAtNet
+switch, it is allowed only when -net is present.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a math command is
+called with the -pinAtNet switch, but without the -net switch.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -pinNetType
+argument. It must be a list of pairs: {&lt;pin_name_list&gt; &lt;net_type_condition_list&gt;
+…}.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the -pinNetType argument
+is not a list consisting of even number of items.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -pinPathType
+argument. It must be a list of pairs: {&lt;pin_name_list&gt; &lt;net_type_condition_list&gt;
+…}.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the -pinPathType argument
+is not a list consisting of even number of items.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid return
+value &lt;value&gt; for condition proc: &lt;proc&gt;. It must be 0 or
+1.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the return value of
+a Tcl proc used as the argument to the ‑condition switch is neither
+0 nor 1.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: Invalid return
+value '&lt;value&gt;' for &lt;command&gt; &lt;option&gt; proc: &lt;name&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the return value of
+a Tcl &lt;option&gt; proc is neither 0 nor 1. The disallowed &lt;value&gt;
+and &lt;name&gt; of the proc in which error occurs are shown, along
+with the &lt;command&gt; name.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -instanceAlso
+and -instanceOnly switches. Cannot specify both.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if both -instanceAlso
+and -instanceOnly are specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid series
+pins &lt;pin_1&gt; and &lt;pin_2&gt; for device type &lt;type&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the input pin names
+to perc::get_instances_in_series or perc::get_other_net_on_instance
+do not belong to the specified instance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: &lt;some&gt; list
+is empty.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if any list used as an
+argument to any PERC command is empty.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: missing argument
+in calling &lt;command&gt;: &lt;arg&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a required command
+argument is not provided.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: more than one
+-break condition is specified in creating net paths. Only one is allowed.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the command perc<span class="ph fmvar:double_colon">::</span>create_net_path is called
+two or more times with the -break switch in a single initialization
+procedure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: more than one
+-cell and/or -cellName argument is specified for net type: &lt;type&gt;.
+Only one is allowed.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the command perc<span class="ph fmvar:double_colon">::</span>define_net_type or perc<span class="ph fmvar:double_colon">::</span>define_net_type_by_device
+is called two or more times for the same net type, with the -cell
+or -cellName switch in a single initialization procedure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: more than one
+rule command is called in the rule check. Only one is allowed. </p>
+<p class="p"> </p>
+<p class="p">This error is issued if two or more rule check
+commands are called in a single rule check.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: property constraint
+contains invalid &lt;token&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the -property argument
+is not a string conforming to the constraint syntax.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: the same name
+is used to define a net type and a net type set: &lt;name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a net type shares
+a name with a type set in a single initialization procedure.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: unknown argument
+in calling &lt;command&gt;: &lt;arg&gt;</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a command argument
+is not recognized.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid -adjacentPinNetType
+or -adjacentPinPathType argument in calling perc::adjacent_count,
+one and only one must be specified.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if neither -adjacentPinPathType
+nor -adjacentPinPathType is specified, or both are specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: wrong -adjacentPinNetType
+argument. It has to be a pair: {&lt;pin_name_list&gt; &lt;net_type_condition_list&gt;}.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the -adjacentPinNetType
+argument is not a list consisting of two items.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: wrong -adjacentPinPathType
+argument. It has to be a pair: {&lt;pin_name_list&gt; &lt;net_type_condition_list&gt;}.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if the -adjacentPinPathType
+argument is not a list consisting of two items.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: wrong arguments
+in calling &lt;command&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if a command is called
+with incorrect syntax or some argument values are invalid.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: subckt &lt;subckt_name&gt;
+has already been written to file &lt;file_name&gt;.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if perc<span class="ph fmvar:double_colon">::</span>subckt is called again with &lt;subckt_name&gt;
+after </p>
+<p class="p">the same named subckt is built and written
+to a file using the -write switch.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d552927e157 "><p class="p">ERROR: invalid net specified
+for subckt &lt;subckt_name&gt;: net &lt;net_name&gt; in cell &lt;cell_name&gt;
+is not connected to any instance in the subckt.</p>
+<p class="p"> </p>
+<p class="p">This error is issued if perc<span class="ph fmvar:double_colon">::</span>subckt is called with the -net switch,
+but the argument net is not connected to any instance in the subckt.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RuntimeMessages_idca9325fd.html" title="This section covers runtime error and warning messages produced by Calibre nmDRC, Calibre DFM, Calibre FRACTURE, Calibre MDP, Calibre OPC, Calibre nmLVS, Calibre xACT, Calibre xRC, and ICverify applications. All rule file compilation errors are discussed earlier in this chapter.">Runtime Messages</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "PERC TVF Errors"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_PercTvfErrors_id4e543c93.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

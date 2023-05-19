@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Macros" />
+<meta name="abstract" content="Macros are functional templates, like subroutines, that can be called multiple times in a rule file. They are similar to the macros of the C and C++ languages. There is a macro definition called DMACRO, which contains rule file code, and a call to the macro, called CMACRO, which can pass arguments to the DMACRO. These structures support a modular organization of the rule file. This can be convenient when layer operations or Device statements are executed multiple times with varying parameters." />
+<meta name="description" content="Macros are functional templates, like subroutines, that can be called multiple times in a rule file. They are similar to the macros of the C and C++ languages. There is a macro definition called DMACRO, which contains rule file code, and a call to the macro, called CMACRO, which can pass arguments to the DMACRO. These structures support a modular organization of the rule file. This can be convenient when layer operations or Device statements are executed multiple times with varying parameters." />
+<meta name="DC.subject" content="Rule files, macros, Macros" />
+<meta name="keywords" content="Rule files, macros, Macros" />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id10ff3492-b113-46e5-9939-93c4b00a26a0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Macros</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Macros" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id10ff3492-b113-46e5-9939-93c4b00a26a0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Macros</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Macros are
+functional templates, like subroutines, that can be called multiple
+times in a rule file. They are similar to the macros of the C and
+C++ languages. There is a macro definition called DMACRO, which
+contains rule file code, and a call to the macro, called CMACRO,
+which can pass arguments to the DMACRO. These structures support
+a modular organization of the rule file. This can be convenient
+when layer operations or Device statements are executed multiple times
+with varying parameters.</span>
+</div>
+<p class="p">These sections are included:</p>
+<ul class="ul"><li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__ida3776996-76ca-4f85-b72d-d4d7c24d2469"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__idbf0d9767-a21a-40db-923b-1b5477ea32d3">DMACRO</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id1eadf55e-0ef1-490a-93cb-65cffefd5b6f"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__id56f97430-5128-4859-a5e7-56eac3a14e6a">CMACRO</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__idb47a7d54-265b-45c1-b7ac-561caa42af9e"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__ideb8dfbd5-15ea-43fe-bc2e-09f3449b2ecf">Layer Names, Derivations, and Variables in Macros</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__idbf217059-d34e-4c15-8224-99be9693749c"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__ide2d05063-14b5-4380-a432-0c893e90e0ed">Nesting in Macros</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id5fc624fd-3c2d-4551-a001-fd9691820cb7"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__id01f1dcaa-5fdc-4223-ab84-230145de0a42">Macros for Keywords and Arguments</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__ida283a49b-a3ae-49a6-a7f6-a1fec43f57a1"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__id7f134400-bcc9-404e-a251-ab0510a750bb">Macros in User-Defined Device Property Calculations</a></p>
+</li>
+<li class="li" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id43a921e0-4115-454b-86d4-4237ab49273f"><p class="p"><a class="xref fm:HeadingOnly" href="#id10ff3492-b113-46e5-9939-93c4b00a26a0__idd616e016-dea4-4d70-93a8-322781a94164">LOCAL() Modifier</a></p>
+</li>
+</ul>
+<div class="section Subsections"><div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__idbf0d9767-a21a-40db-923b-1b5477ea32d3"><h2 class="title Subheading sectiontitle">DMACRO</h2><p class="p">A macro definition (DMACRO) defines a macro
+and has this syntax:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">DMACRO </span><span class="keyword ParameterName RequiredReplaceable">macro_name</span> [<span class="keyword ParameterName OptionalReplaceable">arguments</span>] {
+   <span class="keyword ParameterName RequiredReplaceable">SVRF_code</span>
+}</code></pre><p class="p">where <span class="keyword ParameterName RequiredReplaceable">macro_name</span> is
+the name of the procedure, <span class="keyword ParameterName OptionalReplaceable">arguments</span> are
+input argument names, and <span class="keyword ParameterName RequiredReplaceable">SVRF_code</span> is
+valid SVRF syntax. </p>
+<p class="p">A <span class="keyword ParameterName RequiredReplaceable">macro_name</span> must
+be unique, may only contain letters, numbers, underscores (_), and periods
+(.), and may not conflict with SVRF keywords. Handling DMACRO names
+as string constants can override these limitations in some cases.</p>
+<p class="p">Each argument must be a name (generally a layer
+or variable name) that conforms to the same syntax requirements
+as a <span class="keyword ParameterName RequiredReplaceable">macro_name</span> and
+may not be duplicated in the same DMACRO <span class="keyword ParameterName OptionalReplaceable">arguments</span> list.
+Any name from the <span class="keyword ParameterName OptionalReplaceable">arguments</span> list
+used in the body of the DMACRO definition is substituted by the
+corresponding value from the CMACRO call to the DMACRO.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">SVRF_code</span> may
+not contain syntax that contains braces “{ }”, such as the complete
+body of a rule check. If using DFM property computations, derived
+layer names within the <span class="keyword ParameterName RequiredReplaceable">SVRF_code</span> should
+not be the same as string arguments to DFM functions.</p>
+<p class="p">The following example defines a rule check
+that can be called multiple times, with lay and val being values
+passed in from the calling environment (a CMACRO): </p>
+<pre class="pre codeblock leveled"><code>DMACRO WIDTH_CHECK lay val {
+S1 = INT lay &lt; val ABUT &lt; 90 SINGULAR REGION  
+S2 = INT lay &lt; val ANGLED == 2 PARALLEL OPPOSITE REGION
+S3 = INT lay &lt; val  CORNER TO EDGE REGION
+( S1 OR S2 ) OR S3
+}</code></pre><p class="p">DMACRO definitions may not be nested or called recursively.</p>
+<p class="p">Any of the rule file comment characters may
+be used in a DMACRO definition; however, user comments (specified
+by the “at” symbol @) do not appear in the Calibre nmDRC results database
+or in Calibre RVE. Instead, user comments should be placed in the
+rule check that calls the DMACRO.</p>
+</div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id56f97430-5128-4859-a5e7-56eac3a14e6a"><h2 class="title Subheading sectiontitle">CMACRO</h2><p class="p">A macro is invoked by the keyword CMACRO (call
+macro) followed by a DMACRO name and a list of zero or more arguments,
+as follows: </p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">CMACRO</span> <span class="keyword ParameterName RequiredReplaceable">macro_name</span> [<span class="keyword ParameterName OptionalReplaceable">arguments</span>] </code></pre><p class="p">The <span class="keyword ParameterName RequiredReplaceable">macro_name</span> must
+match that of some DMACRO definition. Each argument may be either a
+name (generally a layer or variable name) or a numeric constant.
+A sufficient number of <span class="keyword ParameterName OptionalReplaceable">arguments</span> must
+be present after the CMACRO <span class="keyword ParameterName RequiredReplaceable">macro_name</span> to
+match what the DMACRO specifies as arguments. A CMACRO may not appear
+within the scope of brackets ([ ]).</p>
+<p class="p">The DMACRO definition is internally placed
+in the CMACRO call, with argument substitution. For example, these
+CMACRO calls refer to the previously-shown DMACRO named WIDTH_CHECK:</p>
+<pre class="pre codeblock leveled"><code>poly_width { CMACRO WIDTH_CHECK poly 0.5 }
+metal_width { CMACRO WIDTH_CHECK metal 0.6 }</code></pre><p class="p">The arguments poly and 0.5 are substituted
+into the DMACRO named WIDTH_CHECK in order to construct the rule
+check poly_width. A similar substitution occurs for the rule check metal_width. </p>
+<p class="p">You can also do this:</p>
+<pre class="pre codeblock leveled"><code>width_checks {
+   CMACRO WIDTH_CHECK poly 0.5
+   CMACRO WIDTH_CHECK metal 0.6
+}</code></pre></div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__ideb8dfbd5-15ea-43fe-bc2e-09f3449b2ecf"><h2 class="title Subheading sectiontitle">Layer
+Names, Derivations, and Variables in Macros</h2><p class="p">Layer definition names in DMACRO statements
+are locally-scoped by default when the DMACRO is instantiated in
+a CMACRO. This is done by generating a unique (rule-file-wide) name
+for each layer definition in the DMACRO construct when the DMACRO
+is instantiated. References to each layer definition name in the
+DMACRO are also substituted appropriately. This is illustrated by
+the previously shown width_checks example. The compiler is not confused by
+multiple intermediate derived layers having the same names (S1,
+S2, and S3 in the DMACRO named WIDTH_CHECK) in the width_checks
+rule. </p>
+<p class="p">If an argument to a DMACRO statement matches
+the name of a derived layer within the DMACRO block definition,
+then the corresponding CMACRO argument becomes the name of a global
+layer. For example:</p>
+<pre class="pre codeblock leveled"><code>DMACRO MAC IN1 IN2 OUTPUT { // OUTPUT occurs as an argument to DMACRO
+  X = IN1 AND IN2
+  OUTPUT = SIZE X BY 0.01   // OUTPUT is a derived layer name
+}
+CMACRO MAC L1 L2 RES     // OUTPUT is assigned the global layer name RES</code></pre><p class="p">In this example, OUTPUT is used as a DMACRO
+argument name and is the name of a derived layer in the DMACRO;
+therefore, OUTPUT is treated as a global name for the derived layer. The
+global name OUTPUT becomes the global layer name RES because the
+CMACRO argument called RES corresponds to OUTPUT.</p>
+<p class="p">For the DFM Property and DFM Property Select Secondary operations,
+the :EDGE, :EXTENT, and :EXTENT_EDGE layer derivation notations
+cannot be used within the DMACRO, but must be passed in as an argument.
+For an example with DFM Property, see “<a class="xref fm:HeadingAndPage" href="Command_DfmProperty_idf1f176c5.html#idf1f176c5-0d5a-4406-95d0-b54438157ae8__idbf032a2c-3757-437d-b6cf-87d8e35b03b9">Example 11</a>”. For an
+example with DFM Property Select Secondary, see “<a class="xref fm:HeadingAndPage" href="Command_DfmPropertySelectSecondary_ided4627d4.html#ided4627d4-cfb5-4f20-83c6-2e31d793a882__id6cdfd761-1574-4608-9fa8-490a34f8ef97">Example 8</a>”.</p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Variable_idef5949b0.html#idef5949b0-b789-4a00-9cce-cf32826c65c9__Command_Variable_idef5949b0.xml#idef5949b0-b789-4a00-9cce-cf32826c65c9" title="Defines the value of a variable in the rule file.">Variable</a> statements inside of a DMACRO
+are locally-scoped and are not accessible outside of the DMACRO.
+This enables you to use the same variable name with different values
+inside multiple DMACRO definitions. Variable statements that are
+specified outside of a DMACRO are globally-scoped and available
+for any DMACRO in the rule file. If present, a locally-scoped variable
+will override a globally-scoped variable of the same name.</p>
+</div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__ide2d05063-14b5-4380-a432-0c893e90e0ed"><h2 class="title Subheading sectiontitle">Nesting
+in Macros</h2><p class="p">DMACRO definitions may themselves contain nested
+CMACROs. For example, the following constructs are allowed:</p>
+<pre class="pre codeblock"><code>DMACRO skew_edge inlayer {
+   ANGLE inlayer &gt; 0 &lt; 45
+   ANGLE inlayer &gt; 45 &lt; 90
+}
+DMACRO acute_angle inlayer grid_size {
+   INT inlayer &lt; 4*grid_size ABUT &gt; 0 &lt; 90 INTERSECTING ONLY
+   EXT inlayer &lt; 4*grid_size ABUT &gt; 0 &lt; 90 INTERSECTING ONLY
+}
+DMACRO illegal_shape met grid_size { // nested CMACROs
+   CMACRO skew_edge met
+   CMACRO acute_angle met grid_size
+}
+test {CMACRO illegal_shape metal1 .001}</code></pre><p class="p">However, no CMACRO can call a DMACRO that contains
+a call to that CMACRO (recursion is not allowed).</p>
+</div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id01f1dcaa-5fdc-4223-ab84-230145de0a42"><h2 class="title Subheading sectiontitle">Macros
+for Keywords and Arguments</h2><p class="p">Although the preceding DMACRO examples define complete SVRF operations
+or statements, this is not required. The DMACRO can define a set
+of arguments—this is useful in cases where the arguments are lengthy
+and repeated often. </p>
+<p class="p">A set of Density arguments is defined in this example. </p>
+<pre class="pre codeblock"><code>DMACRO DENS_ARGS { 
+WINDOW 10 
+INSIDE OF LAYER marker
+GRADIENT &gt; 0.25 
+BACKUP
+}
+dens2 { DENSITY metal2 &lt; 0.50 CMACRO DENS_ARGS }
+dens4 { DENSITY metal4 &lt; 0.35 CMACRO DENS_ARGS }</code></pre><p class="p">If the macro is defining a DFM property expression, the brackets
+([]) enclosing the property expression must be within the macro. </p>
+</div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__id7f134400-bcc9-404e-a251-ab0510a750bb"><h2 class="title Subheading sectiontitle">Macros
+in User-Defined Device Property Calculations</h2><p class="p">You can use macros for user-defined property
+calculation in <a class="xref fm:HeadingOnly" href="Command_Device_id89f67149.html#id89f67149-593d-4a42-bf07-d2052c906774__Command_Device_id89f67149.xml#id89f67149-593d-4a42-bf07-d2052c906774" title="Defines devices and calculates properties for circuit extraction.">Device</a> operations. This also applies
+to other built-in language programs that support device-related
+computations.</p>
+<p class="p">Argument substitution is performed for arguments
+that appear within brackets ([ ]) in the DMACRO definition. Note
+the brackets must appear in the DMACRO definition.</p>
+<pre class="pre codeblock"><code>DMACRO mosprop seed {
+  [
+    property W, L
+      weffect = 0   // Specify width effect constant here
+                    // (built-in default is 0).
+      W = 0.5 * ( perim_co( S, seed ) + perim_in( S, seed )
+        + perim_co( D, seed ) + perim_in( D, seed ) )
+      L = area( seed ) / W
+      if ( ( bends( seed ) != 0 ) &amp;&amp; ( weffect != 0 ) ) {
+        if( W &gt; L ) W = W - weffect * bends( seed ) * L
+        else L = L - weffect * bends( seed ) * W
+      }
+  ]
+}
+DEVICE MP gate gate psd psd CMACRO mosprop gate
+DEVICE MN gate gate nsd nsd CMACRO mosprop gate</code></pre><p class="p">The gate layer in the CMACRO call in each Device
+statement gets passed in as the seed argument in the mosprop macro.</p>
+<p class="p">CMACRO calls within brackets are not expanded.
+For example, the following code is not valid:</p>
+<pre class="pre codeblock leveled"><code>DEVICE MP gate gate psd psd [ CMACRO MOSPROP2 gate ] // Bad.
+DEVICE MN gate gate nsd nsd [ CMACRO MOSPROP2 gate ] // Bad.</code></pre></div>
+<div class="section Subsection" id="id10ff3492-b113-46e5-9939-93c4b00a26a0__idd616e016-dea4-4d70-93a8-322781a94164"><h2 class="title Subheading sectiontitle">LOCAL()
+Modifier </h2><p class="p">The LOCAL() modifier can be used to create
+local names that are valid only in the scope of each CMACRO call.
+This modifier is useful for defining specification statements within DMACROs.
+Consider the following example:</p>
+<pre class="pre codeblock leveled"><code>DMACRO COPY_C L1 L2 C {
+   LAYOUT CELL LIST LIST1 C
+   L2 = DFM COPY L1 CELL LIST LIST1
+}</code></pre><p class="p">Assume that you want to use this DMACRO as
+follows:</p>
+<pre class="pre codeblock leveled"><code>LAYER A 1
+LAYER B 2
+CMACRO COPY_C A A1 "A*"
+CMACRO COPY_C B B1 "B*"</code></pre><p class="p">This use is invalid because the <a class="xref fm:HeadingOnly" href="Command_LayoutCellList_ida47e7766.html#ida47e7766-5dbb-4882-8796-12cebcdef31e__Command_LayoutCellList_ida47e7766.xml#ida47e7766-5dbb-4882-8796-12cebcdef31e" title="Specifies a cell list for statements that use cell-specific processing. Used only in hierarchical Calibre applications.">Layout Cell List</a> specification statement is duplicated
+with the name LIST1. To resolve this problem, add a LOCAL() modifier
+to the DMACRO:</p>
+<pre class="pre codeblock leveled"><code>DMACRO COPY_C L1 L2 C {
+   LAYOUT CELL LIST "LOCAL(LIST1)" C
+   L2 = DFM COPY L1 CELL LIST "LOCAL(LIST1)"
+}
+CMACRO COPY_C A A1 "A*"
+CMACRO COPY_C B B1 "B*"</code></pre><p class="p">The name “LOCAL(LIST1)” is replaced by a name
+that is unique to each CMACRO call. Within one CMACRO call, multiple
+instances of LOCAL(name) are always replaced by the same local name
+(such as “LOCAL(LIST1)” in the preceding example). Different names
+used with LOCAL() in the same macro remain different after the replacement.
+Note that the quotes around the string “LOCAL(LIST1)” are required.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_BasicRuleFileStructure_ide9fd05d8.html" title="The statements and operations that drive the Calibre tool are stored in a text file. You prepare this file, called the rule file, using any text editor. When the rule file is loaded, it is checked for syntax and other errors, and compiled. Because the compiler processes a rule file as a single entity, the order in which the elements are presented is generally not important. However, there are certain situations where elements are order-dependent.">Basic Rule File Structure</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Macros"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_Macros_id10ff3492.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

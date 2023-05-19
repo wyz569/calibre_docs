@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Using the Source Based Flow" />
+<meta name="abstract" content="Normally, the Calibre xRC formatter produces a layout netlist containing source names. The formatter uses the circuit pin order and cell hierarchy in the source netlist instead of the layout netlist when generating the extracted netlist." />
+<meta name="description" content="Normally, the Calibre xRC formatter produces a layout netlist containing source names. The formatter uses the circuit pin order and cell hierarchy in the source netlist instead of the layout netlist when generating the extracted netlist." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id23f75fbf-aaba-4064-b37b-79dad8ebb041" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using the Source Based Flow</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using the Source Based Flow" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id23f75fbf-aaba-4064-b37b-79dad8ebb041">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using the Source Based
+Flow</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Normally, the
+Calibre xRC formatter produces a layout netlist containing source
+names. The formatter uses the circuit pin order and cell hierarchy
+in the source netlist instead of the layout netlist when generating
+the extracted netlist. </p>
+<p class="p">When you use this flow, the
+Calibre xRC formatter produces a source netlist containing the extracted
+parasitics. The source-based flow is not supported for <a class="xref fm:GlossaryTerm" href="MGCGlos_Glossary_ida1bbff59.html#ida1bbff59-ac1d-4360-b2b7-fa5535dc2c0d__id3f6679b2-6939-44ae-9182-88d26c4e89d3">full hierarchical extraction</a>.</p>
+<p class="p">Use the Calibre xRC formatter’s source-based
+flow to:</p>
+<ul class="ul"><li class="li" id="id588f046c-df83-4fac-a3d4-d7711cd66bb3"><p class="p">correct logical pin swapping in the
+parasitic netlist.</p>
+</li>
+<li class="li" id="idd1697c8f-8da7-41e5-a09b-56c581fabca1"><p class="p">collapse multi-fingered devices back
+into one device.</p>
+</li>
+</ul>
+<p class="p">If you are creating the source netlist with
+the Calibre nmLVS software, you must use Calibre nmLVS-H and the
+design must pass LVS. Because source-based extraction uses the schematic for
+formatting, it is very important that the layout pass LVS checks
+with no errors. If it is not, your formatting stage quits with the
+following error:</p>
+<pre class="pre codeblock leveled"><code>ERROR: Export name mismatch caused fatal error. 
+Please verify that this design is LVS CLEAN. </code></pre><p class="p"><a class="xref fm:Figure" href="#id23f75fbf-aaba-4064-b37b-79dad8ebb041__id804ea261-0561-41fd-8934-3cb01625a970">Figure 1</a> provides a comparison of the normal
+and the source based Calibre xRC formatter flows. When creating
+a parasitic netlist with the source based flow, the formatter also
+uses the schematic (source) netlist.</p>
+<div class="fig fignone" id="id804ea261-0561-41fd-8934-3cb01625a970"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Comparison of Normal and Source Based Flows</span><br /><div class="imagecenter"><img class="image imagecenter" height="267" src="../graphics/tweaks_for_netlisting2.png" width="455" /></div><br /></div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><p class="p">Before using this source based
+flow, you must modify your Standard Verification Rule Format (SVRF)
+rule file by adding or modifying the following SVRF statements:</p>
+<ul class="ul"><li class="li" id="id23f75fbf-aaba-4064-b37b-79dad8ebb041__id05379752-cf10-45fc-851a-f67118e0bd05"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> BY GATE</p>
+</li>
+<li class="li" id="id23f75fbf-aaba-4064-b37b-79dad8ebb041__idc546081b-c47b-45b4-b566-6ee338e29a53"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Case', 'svrf_ur'); return false;">Source Case</a> YES </p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When
+using the source-based flow, the Calibre xRC formatter automatically
+sets the Source Case SVRF statement to YES regardless of its setting
+in your SVRF rule file.</p>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="id23f75fbf-aaba-4064-b37b-79dad8ebb041__ida409aa52-775a-40d1-ad5e-eafa0d7f7696"><span class="ph cmd">To output
+each multi-fingered transistor as a separate device using the source-based flow,
+specify the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist', 'svrf_ur'); return false;">PEX Netlist</a> statement
+with the SOURCENAMES keyword in your rule file.</span></li>
+<li class="li step" id="id23f75fbf-aaba-4064-b37b-79dad8ebb041__id1646f7d2-20b3-47dc-8154-67ba5f1b1d4d"><span class="ph cmd">To collapse
+multi-fingered devices back into one device using the source-based
+flow, specify the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist', 'svrf_ur'); return false;">PEX Netlist</a> statement
+with the SOURCEBASED keyword in your rule file.</span></li>
+<li class="li step" id="id23f75fbf-aaba-4064-b37b-79dad8ebb041__id124f4e07-bd63-41b4-af05-8162fc620f04"><span class="ph cmd">Generate the netlist. </span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">You can verify whether the Calibre
+xRC formatter used the source-base flowed by comparing the output
+netlist to the original LVS source netlist and seeing that the transistors
+are the same.</p>
+<p class="p">For example, given the original LVS
+source netlist sample:</p>
+<pre class="pre codeblock leveled"><code>MM7 net054 net37 vss! vss! N W=15u L=4u M=4 </code></pre><p class="p">The Calibre xRC netlist output with
+PEX NETLIST SOURCENAMES specified is:</p>
+<pre class="pre codeblock leveled"><code>MM7 MM7:d MM7:g MM7:s MM7:b N L=4e-06 W=1.5e-05 
+MM7@4 MM7@4:d MM7@4:g MM7@4:s MM7@4:b N L=4e-06 W=1.5e-05 
+MM7@3 MM7@3:d MM7@3:g MM7@3:s MM7@3:b N L=4e-06 W=1.5e-05 
+MM7@2 MM7@2:d MM7@2:g MM7@2:s MM7@2:b N L=4e-06 W=1.5e-05 </code></pre><p class="p">Here the output netlist shows each
+multi-fingered transistor as a separate device.</p>
+<p class="p">The Calibre xRC netlist output with
+PEX NETLIST SOURCEBASED specified is:</p>
+<pre class="pre codeblock leveled"><code>MM7 MM7:d MM7:g MM7:s MM7:b N L=4e-06 W=1.5e-05 M=4 </code></pre><p class="p">Here the output netlist shows the
+multi-fingered device as one device with a multiplicity of 4 (M=4),
+like in the original LVS source netlist.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Concept_MethodsCorrectingPinSwapping_id12e29de6.html" title="When performing parasitic extraction with the Calibre xRC tool, you can encounter issues with logical pin swapping in a distributed RC parasitic netlist.">Methods for Correcting Pin Swapping</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Using the Source Based Flow"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_UsingSourceBasedFlow_id23f75fbf.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

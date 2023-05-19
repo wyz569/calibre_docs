@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating DDM Groups for Optical Model Calibration" />
+<meta name="abstract" content="Optical model calibration using modelflow_v2 also supports DDM groups, which allows fine calibration of a DDM model stackslope parameter. Because a single DDM model might not be effective for all layers (main features versus SRAF and fill layers might have different DDM characteristics) you can create DDM groups from multiple DDM models. Calibre WORKbench can then be used to optimize the DDM groups in stage1 of modelflow_v2." />
+<meta name="description" content="Optical model calibration using modelflow_v2 also supports DDM groups, which allows fine calibration of a DDM model stackslope parameter. Because a single DDM model might not be effective for all layers (main features versus SRAF and fill layers might have different DDM characteristics) you can create DDM groups from multiple DDM models. Calibre WORKbench can then be used to optimize the DDM groups in stage1 of modelflow_v2." />
+<meta name="DC.subject" content="DDM, groups, DDM library creation" />
+<meta name="keywords" content="DDM, groups, DDM library creation" />
+<meta name="prodname" content="Calibre WORKbench User's and Reference Manual" />
+<meta name="version" content="2017.3" />
+<meta name="release" content="v2017.3" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre WORKbench User's and Reference Manual" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_wbench_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 20, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® WORKbench™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc89a1d24-3163-47f7-9843-914dbc8e3ff2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating DDM Groups for Optical Model Calibration</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating DDM Groups for Optical Model Calibration" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating DDM Groups for Optical Model Calibration</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Optical model
+calibration using modelflow_v2 also supports DDM groups, which allows
+fine calibration of a DDM model stackslope parameter. Because a single
+DDM model might not be effective for all layers (main features versus
+SRAF and fill layers might have different DDM characteristics) you
+can create DDM groups from multiple DDM models. Calibre WORKbench
+can then be used to optimize the DDM groups in stage1 of modelflow_v2. </span>
+</div>
+<div class="section Restrictions"><h2 class="title Subheading sectiontitle">Restrictions and Limitations</h2><ul class="ul"><li class="li" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id9c1e1295-d899-4776-aa50-e7eee52b5865"><p class="p">DDM groups are designed
+to be used as part of a mask model, and are intended for calibration
+purposes only. They should not be used inside litho models for simulations.</p>
+</li>
+<li class="li" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id5d0b1ec6-0289-450f-a0de-fe8775cb4e8f"><p class="p">DDM groups are intended
+to help calibrate 1D features. </p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id7cc59a33-82a2-4431-987a-3582692b32ee"><p class="p">At
+least one optical model</p>
+</li>
+<li class="li" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__idf0c21994-dd22-4ab3-9d2b-33db52e03d44"><p class="p">At
+least two DDM models with different values for stackslope </p>
+</li>
+<li class="li" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id7bd21354-ea1c-4625-b33b-a7641ad377e3"><p class="p">The
+corresponding super gauge data file containing measurements for
+the optical model combined with the DDM models</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id12e8bfc8-748c-4d5f-b472-c8b15c00d49b"><span class="ph cmd">Create a DDM group file using
+the <a class="xref fm:HeadingOnly" href="FileRef_DdmGroupFormat_id38f9881b.html#id38f9881b-5bd0-4604-bbbe-acac70cdfe89__FileRef_DdmGroupFormat_id38f9881b.xml#id38f9881b-5bd0-4604-bbbe-acac70cdfe89" title="Collects multiple dense DDM models into a single group. This group can be calibrated inside modelflow_v2. Each group should include two or more DDM models, since the DDM group function extrapolates between the DDM models in a group.">DDM Group Format</a>. One group with two DDM models
+is the minimum requirement.</span></li>
+<li class="li step" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id794e5911-4b9a-48bc-9b11-8130d1bbdfea"><span class="ph cmd">Add the DDM group to a mask
+model file.</span></li>
+<li class="li step" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__idba270952-9f5e-4e7b-a0c3-914cbae1b13e"><span class="ph cmd">Create a model-layer file
+that includes the DDM group and mask model file, associating the
+DDM group with the appropriate layers in the model-layer file.</span></li>
+<li class="li step" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__idfe56a337-3667-4e2c-b99e-5eb18c71ed22"><span class="ph cmd">Modify a modelflow_v2 script
+as follows:</span><ol type="a" class="ol substeps"><li class="li substep" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__idea3759cf-620f-4ef8-acbf-e477e5066fd8"><span class="ph cmd">Include the model-layer file
+using the -mlfile or -mlstring argument.</span></li>
+<li class="li substep" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id9c7ef174-902d-4818-b447-1dbcbdf62739"><span class="ph cmd">Add the interpolated_ddm <span class="keyword ParameterName OptionalReplaceable">filename</span> argument
+to output the optimized DDM library.</span></li>
+<li class="li substep" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id5042d979-89a5-445f-8862-94b821434505"><span class="ph cmd">In stage1, optimize the ddmgroupparam<span class="keyword ParameterName OptionalReplaceable">M</span> parameter(s)
+with a recommended value of “auto auto 20”, which uses the top and
+bottom values in the DDM group as the start and end ranges. You
+optimize one ddmgroupparam per DDM group file; if you only have
+one DDM group file, optimize only ddmgroupparam0.</span></li>
+</ol>
+</li>
+<li class="li step" id="idc89a1d24-3163-47f7-9843-914dbc8e3ff2__id2c926280-f8b1-412f-b1cf-24c9e9515a0b"><span class="ph cmd">Run modelflow_v2 with only
+stage1 active. </span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">After modelflow_v2 finishes, you will
+have an optimized DDM file. Use this DDM library file as input to
+other tools, such as Calibre nmOPC or Calibre OPCverify.</p>
+<p class="p">You can also examine the log file
+for the section “BEGIN FINAL DDM_GROUP<span class="keyword ParameterName OptionalReplaceable">M</span>”
+where <span class="keyword ParameterName OptionalReplaceable">M</span> is
+one of the DDM group numbers. Inside the DDM group definition, the
+ddmgroupparam parameter is replaced with the optimized value.</p>
+<pre class="pre codeblock leveled"><code>ddm_group0 ddm_grp {
+ddmgroupparam 84.1144
+paramtype slope
+ddm 83 83.ddm
+ddm 90 90.ddm
+}</code></pre></div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following example shows a single
+DDM group used with three mask layers in a model-layer file.</p>
+<pre class="pre codeblock leveled"><code>modelpath /models
+ddm_group0 ddm_grp {
+ddmgroupparam 87
+paramtype slope
+ddm 83 83.ddm
+ddm 90 90.ddm
+}
+mask_model {
+version 2
+background 1 0
+mask_layer 0 TRANS -1.2503 -0.0200 DDM ddm_grp
+mask_layer 1 TRANS -1.2503 -0.0200 DDM ddm_grp
+mask_layer 2 TRANS -1.2503 -0.0200 DDM ddm_grp
+}</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_HhaDdmModelingWorkflow_id4be63eb5.html" title="The use of a domain decomposition method (DDM) library is optional for optical model calibration. DDM models are primarily used with HHA.">HHA and DDM Modeling Workflow</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/FileRef_MaskModelFormat_id25b96fbd.html" title="Defines a mask model.">Mask Model Format</a></div>
+<div><a class="link" href="../topics/FileRef_ModelLayerFileFormat_id90340f7e.html" title="Defines a simpler setup file (containing just a model path and layer definition).">Model-Layer File Format</a></div>
+<div><a class="link" href="../topics/Command_ModelflowV2_idf734b16e.html" title="Optimizes optical, resist, and etch parameters.">modelflow_v2</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_wbench_useref"
+                DocTitle = "Calibre® WORKbench™ User’s and Reference Manual"
+                PageTitle = "Creating DDM Groups for Optical Model Calibration"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingDdmGroupsOpticalModelCalibration_idc89a1d24.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® WORKbench™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

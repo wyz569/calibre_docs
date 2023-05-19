@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Setup File Format" />
+<meta name="abstract" content="The setup file is a Tcl-based file that you create manually and use to specify the rules, files, commands, and options for configuring a Calibre AutoFix run." />
+<meta name="description" content="The setup file is a Tcl-based file that you create manually and use to specify the rules, files, commands, and options for configuring a Calibre AutoFix run." />
+<meta name="DC.subject" content="Setup file, format" />
+<meta name="keywords" content="Setup file, format" />
+<meta name="prodname" content="Calibre AutoFix User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_autofix_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="January 29, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® AutoFix User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11730" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id01cbb569-a54f-4b68-8f10-06aa46529bd4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Setup File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Setup File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11730" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id01cbb569-a54f-4b68-8f10-06aa46529bd4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Setup
+File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input file
+for: Calibre AutoFix invocation</p>
+<p class="p ContextMGC">Required: Yes</p>
+<p class="shortdesc">The setup file is a Tcl-based
+file that you create manually and use to specify the rules, files,
+commands, and options for configuring a Calibre AutoFix run.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A Calibre AutoFix setup file must
+conform to the following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="id01cbb569-a54f-4b68-8f10-06aa46529bd4__ide3946a10-c13f-41c2-bc35-6a4be90c3d85"><p class="p">ASCII text</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id01cbb569-a54f-4b68-8f10-06aa46529bd4__id0992191f-9b0a-4466-ad29-33e89353ec32"><p class="p">One command plus option(s) per
+line</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id01cbb569-a54f-4b68-8f10-06aa46529bd4__idbf658a96-6c1a-4534-b918-857954fb15e0"><p class="p">Create comments for a full line
+by beginning the line with a pound sign (#)</p>
+</li>
+</ul>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Concept_SetupFileExample_id22a79af4.html#id22a79af4-d081-45b7-a812-23c642efd783__Concept_SetupFileExample_id22a79af4.xml#id22a79af4-d081-45b7-a812-23c642efd783" title="A setup file is used to configure the settings and define the files for a Calibre AutoFix run.">Setup File Example</a>” for a sample setup file that you
+can modify for your environment, design data, and settings. The
+setup file is required when invoking Calibre AutoFix. Refer to “<a class="xref fm:HeadingAndPage" href="Contain_CalibreAutofixInvocationConfiguration_id45cb4c3f.html#id45cb4c3f-af47-41f2-9c1b-066f13df9fef__Contain_CalibreAutofixInvocationConfiguration_id45cb4c3f.xml#id45cb4c3f-af47-41f2-9c1b-066f13df9fef" title="Specific commands, switches, and arguments are used to invoke Calibre AutoFix from within a third-party tool or from the command line.">Calibre AutoFix Invocation and Configuration</a>” for the ways to invoke Calibre
+AutoFix within a third-party tool or a command line.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">The setup file commands
+use specific syntax described in “<a class="xref fm:HeadingAndPage" href="General_SyntaxConventions_iddd8d652b.html#iddd8d652b-6b74-48aa-9201-2aecb0a78ad5__General_SyntaxConventions_iddd8d652b.xml#iddd8d652b-6b74-48aa-9201-2aecb0a78ad5" title="The command descriptions use font properties and several metacharacters to document the command syntax.">Syntax Conventions</a>”. The
+Required column of the following setup file command table indicates
+whether the command is required in the setup file.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id01cbb569-a54f-4b68-8f10-06aa46529bd4__idb7efe8f1-479c-4783-9d99-e89286637990" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Command
+List for Calibre AutoFix Setup File</span></caption><colgroup><col style="width:1.986in" /><col style="width:3.427in" /><col style="width:1.088in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d3068e201"><p class="p">Name</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d3068e204"><p class="p">Description</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d3068e207"><p class="p">Required?</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d3068e201 d3068e204 d3068e207 "><p class="p"><span class="ph FontProperty HeadingLabel">Process and Library Setup Commands</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetAutofixTechFile_id6b55708e.html#id6b55708e-54ac-4774-8ac1-1d308cbd3039__Command_SetAutofixTechFile_id6b55708e.xml#id6b55708e-54ac-4774-8ac1-1d308cbd3039" title="Defines the path to an Olympus-SoC Tcl rules file.">set_autofix_tech_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path to an
+Olympus-SoC Tcl rules file.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes, for 32 nm and below</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetCalibreMode_id89690920.html#id89690920-2f27-46ae-a2f0-7e2231b0ec11__Command_SetCalibreMode_id89690920.xml#id89690920-2f27-46ae-a2f0-7e2231b0ec11" title="Sets the desired run mode for Calibre AutoFix.">set_calibre_mode</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Sets the desired run
+mode for Calibre AutoFix.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetCalibreRuleFile_id2989edea.html#id2989edea-ce98-488f-b7bb-503b3d691420__Command_SetCalibreRuleFile_id2989edea.xml#id2989edea-ce98-488f-b7bb-503b3d691420" title="Defines the path to the sign-off Calibre rule file. The rule file must match the rule file used to generate the results database.">set_calibre_rule_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path to the
+sign-off Calibre rule file. The rule file must match the rule file used
+to generate the results database.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetGdsLayerMapFile_idd40eb982.html#idd40eb982-10f9-4e5c-968b-9e1bc38d24e5__Command_SetGdsLayerMapFile_idd40eb982.xml#idd40eb982-10f9-4e5c-968b-9e1bc38d24e5" title="Defines the path to a GDS layer map file.">set_gds_layer_map_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path to a
+GDS layer map file.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetLefFile_ide382af67.html#ide382af67-9f5d-4bf8-a734-a497ee61c2d4__Command_SetLefFile_ide382af67.xml#ide382af67-9f5d-4bf8-a734-a497ee61c2d4" title="Defines the path to the LEF files used in your design.">set_lef_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path to the
+LEF files used in your design.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetTechOptions_idce803184.html#idce803184-a77b-437c-988b-a5e09ef8ecf8__Command_SetTechOptions_idce803184.xml#idce803184-a77b-437c-988b-a5e09ef8ecf8" title="Defines the routing technology for your design.">set_tech_options</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the routing technology
+for your design.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d3068e201 d3068e204 d3068e207 "><p class="p"><span class="ph FontProperty HeadingLabel">Design Input Commands</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetInputDefFile_idad4fe24d.html#idad4fe24d-df79-4b5b-ac3b-13dbb4e432af__Command_SetInputDefFile_idad4fe24d.xml#idad4fe24d-df79-4b5b-ac3b-13dbb4e432af" title="Defines the paths to the DEF files used in your design.">set_input_def_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the paths to
+the DEF files used in your design.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetInputRdbFile_id49a3c5be.html#id49a3c5be-1a31-4c87-baab-ee9815e54904__Command_SetInputRdbFile_id49a3c5be.xml#id49a3c5be-1a31-4c87-baab-ee9815e54904" title="Defines the path to an existing Calibre results database (RDB) file.">set_input_rdb_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path to an
+existing Calibre results database (RDB) file.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d3068e201 d3068e204 d3068e207 "><p class="p"><span class="ph FontProperty HeadingLabel">Output Commands</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputDefFile_id59fa8dcb.html#id59fa8dcb-4f8d-4dc6-bc0a-9c4203871abd__Command_SetOutputDefFile_id59fa8dcb.xml#id59fa8dcb-4f8d-4dc6-bc0a-9c4203871abd" title="Defines the name of the DEF generated by Calibre AutoFix that replaces the default DEF file name.">set_output_def_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the name of the
+DEF generated by Calibre AutoFix that replaces the default DEF file name.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputDefUnits_id1ef6414b.html#id1ef6414b-e9df-4199-862c-a51f475a52ad__Command_SetOutputDefUnits_id1ef6414b.xml#id1ef6414b-e9df-4199-862c-a51f475a52ad" title="Specifies the database units of the generated DEF file.">set_output_def_units</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Specifies the database
+units of the generated DEF file.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputDir_id06d6d60f.html#id06d6d60f-cd91-4f6f-8f40-2444c9b7c914__Command_SetOutputDir_id06d6d60f.xml#id06d6d60f-cd91-4f6f-8f40-2444c9b7c914" title="Defines the path of the output directory where all files are written that replaces the default output directory path.">set_output_dir</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the path of the
+output directory where all files are written that replaces the default output
+directory path.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputEcoFile_id28ed65d7.html#id28ed65d7-b116-4f4e-8464-a9fe41d71d4b__Command_SetOutputEcoFile_id28ed65d7.xml#id28ed65d7-b116-4f4e-8464-a9fe41d71d4b" title="Instructs Calibre AutoFix to generate an Engineering Change Order (ECO) Tcl file for Synopsys IC Compiler or ATopTech tools.">set_output_eco_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Instructs Calibre AutoFix
+to generate an Engineering Change Order (ECO) Tcl file for Synopsys IC Compiler
+or ATopTech tools.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">Yes, if using</p>
+<p class="p">Synopsys IC Compiler or ATopTech tools</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputGdsFile_idafb4410e.html#idafb4410e-0aec-4c4a-b5b3-e80aae8878e6__Command_SetOutputGdsFile_idafb4410e.xml#idafb4410e-0aec-4c4a-b5b3-e80aae8878e6" title="Defines the name of the generated GDS file.">set_output_gds_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the name of the
+generated GDS file.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetLogFile_id2cc9bffd.html#id2cc9bffd-5a58-432c-9b68-4329e2a971ef__Command_SetLogFile_id2cc9bffd.xml#id2cc9bffd-5a58-432c-9b68-4329e2a971ef" title="Defines the name of the generated log file that replaces the default log file name.">set_log_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the name of the
+generated log file that replaces the default log file name.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetOutputRdbFile_id8d9bbd93.html#id8d9bbd93-a416-47b4-8b7b-3eb40732b9a1__Command_SetOutputRdbFile_id8d9bbd93.xml#id8d9bbd93-a416-47b4-8b7b-3eb40732b9a1" title="Defines the name of the generated Calibre results database that replaces the default file name.">set_output_rdb_file</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the name of the
+generated Calibre results database that replaces the default file name.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetReportShortsOnPgNets_id01533531.html#id01533531-3ea1-4d01-8ec1-a5214cedb983__Command_SetReportShortsOnPgNets_id01533531.xml#id01533531-3ea1-4d01-8ec1-a5214cedb983" title="Specifies whether short violations for power and ground nets are reported.">set_report_shorts_on_pg_nets</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Specifies whether short violations for power
+and ground nets are reported.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetWireLengthRpt_id0b5e484a.html#id0b5e484a-19e0-408c-b4be-b4aa57dd59e4__Command_SetWireLengthRpt_id0b5e484a.xml#id0b5e484a-19e0-408c-b4be-b4aa57dd59e4" title="Defines the name of the generated wire length report file that replaces the default report name.">set_wire_length_rpt</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the name of the
+generated wire length report file that replaces the default report name.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d3068e201 d3068e204 d3068e207 "><p class="p"><span class="ph FontProperty HeadingLabel">Fixing Commands</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetBlockageSpacingType_id6e474eb4.html#id6e474eb4-7c2c-40c5-bb0c-3af2f0630980__Command_SetBlockageSpacingType_id6e474eb4.xml#id6e474eb4-7c2c-40c5-bb0c-3af2f0630980" title="Sets the spacing type for blockages.">set_blockage_spacing_type</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Sets the spacing type
+for blockages.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetCpus_idc5c4b101.html#idc5c4b101-1e26-4df8-b997-aed35c7e8818__Command_SetCpus_idc5c4b101.xml#idc5c4b101-1e26-4df8-b997-aed35c7e8818" title="Defines the number of CPUs to use during a Calibre AutoFix run.">set_cpus</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines the number of
+CPUs to use during a Calibre AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetDontCareRoutingLayers_id25aed074.html#id25aed074-749b-42ce-ad43-464c472e54f6__Command_SetDontCareRoutingLayers_id25aed074.xml#id25aed074-749b-42ce-ad43-464c472e54f6" title="Defines routing layer name(s) for Calibre AutoFix to ignore.">set_dont_care_routing_layers</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines routing layer name(s) for Calibre AutoFix
+to ignore.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetDontTouchNets_id37d87a3e.html#id37d87a3e-7e2c-4b94-a1b0-24849a7a4196__Command_SetDontTouchNets_id37d87a3e.xml#id37d87a3e-7e2c-4b94-a1b0-24849a7a4196" title="Defines nets that are not modified during a Calibre AutoFix run.">set_dont_touch_nets</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines nets that are
+not modified during a Calibre AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetFillNotch_id458dbd43.html#id458dbd43-aacf-4141-a21b-4a963c5f2d4b__Command_SetFillNotch_id458dbd43.xml#id458dbd43-aacf-4141-a21b-4a963c5f2d4b" title="Defines whether step and notch violations are fixed by re-routing or inserting fill.">set_fill_notch</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines whether step
+and notch violations are fixed by re-routing or inserting fill.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetFixCustomSignal_idc802ad6c.html#idc802ad6c-5685-452e-88f9-e72ab7f3ff1a__Command_SetFixCustomSignal_idc802ad6c.xml#idc802ad6c-5685-452e-88f9-e72ab7f3ff1a" title="Allows Calibre AutoFix to change pre-route wires to detail wires when fixing errors.">set_fix_custom_signal</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Allows Calibre AutoFix
+to change pre-route wires to detail wires when fixing errors.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetFixMinArea_ida225fa5f.html#ida225fa5f-7f53-4cc8-9633-ea80f438978e__Command_SetFixMinArea_ida225fa5f.xml#ida225fa5f-7f53-4cc8-9633-ea80f438978e" title="Defines whether minimum area violations are fixed during routing.">set_fix_min_area</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines whether minimum area violations are
+fixed during routing.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetFixNdrNets_ide22bd68e.html#ide22bd68e-ce61-4e81-8e9e-7b9e93721d81__Command_SetFixNdrNets_ide22bd68e.xml#ide22bd68e-ce61-4e81-8e9e-7b9e93721d81" title="Specifies whether nets with a non-default rule (NDR) property are modified during a Calibre AutoFix run.">set_fix_ndr_nets</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Specifies whether nets
+with a non-default rule (NDR) property are modified during a Calibre
+AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetIgnoreCellOverlap_id9f1fe74e.html#id9f1fe74e-99cd-499a-8455-0ad7d6788021__Command_SetIgnoreCellOverlap_id9f1fe74e.xml#id9f1fe74e-99cd-499a-8455-0ad7d6788021" title="Defines whether cell placement overlaps are checked and reported.">set_ignore_cell_overlap</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines whether cell placement overlaps are
+checked and reported</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetM1Routing_id680e0124.html#id680e0124-b70e-4618-87a1-2d7a51832b67__Command_SetM1Routing_id680e0124.xml#id680e0124-b70e-4618-87a1-2d7a51832b67" title="Defines whether routing is allowed on the metal 1 layer.">set_m1_routing</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines whether routing
+is allowed on the metal 1 layer.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetRouteOptions_idc7889ccf.html#idc7889ccf-9cd4-42f1-a20a-41c9caabfce0__Command_SetRouteOptions_idc7889ccf.xml#idc7889ccf-9cd4-42f1-a20a-41c9caabfce0" title="Defines custom options for the router during a Calibre AutoFix run.">set_route_options</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Defines custom options
+for the router during a Calibre AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetSelectChecks_id0d3ab57f.html#id0d3ab57f-7b44-451c-8d53-5f48686c0c69__Command_SetSelectChecks_id0d3ab57f.xml#id0d3ab57f-7b44-451c-8d53-5f48686c0c69" title="Selects which checks to fix during a Calibre AutoFix run.">set_select_checks</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Selects which checks
+to fix during a Calibre AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetSilent_id921cdd34.html#id921cdd34-07d6-45b3-8dc0-ab56e01c192b__Command_SetSilent_id921cdd34.xml#id921cdd34-07d6-45b3-8dc0-ab56e01c192b" title="Specifies whether to print detailed messages to the transcript during a run.">set_silent</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Specifies whether to
+print detailed messages to the transcript during a run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetSkipCellOverlap_id3512f75d.html#id3512f75d-b588-44f2-b9da-3424774da758__Command_SetSkipCellOverlap_id3512f75d.xml#id3512f75d-b588-44f2-b9da-3424774da758" title="Specifies whether to skip the checking of overlapping cells in DRC fixing modes.">set_skip_cell_overlap</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Specifies whether to skip the checking of overlapping
+cells in DRC fixing modes.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e201 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetUnselectChecks_id8f54c2cf.html#id8f54c2cf-366c-488a-b00e-d6db65fd9296__Command_SetUnselectChecks_id8f54c2cf.xml#id8f54c2cf-366c-488a-b00e-d6db65fd9296" title="Unselects checks from a Calibre AutoFix run.">set_unselect_checks</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e204 "><p class="p">Unselects checks from
+a Calibre AutoFix run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d3068e207 "><p class="p">No</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SetupFileCommands_id15b7a9c5.html" title="You can use specific commands to configure your Calibre AutoFix setup file.">Setup File Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_autofix_user"
+                DocTitle = "Calibre® AutoFix User’s Manual"
+                PageTitle = "Setup File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_SetupFileFormat_id01cbb569.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® AutoFix User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

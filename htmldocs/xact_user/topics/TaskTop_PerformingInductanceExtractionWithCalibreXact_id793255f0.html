@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Performing Inductance Extraction With Calibre xACT" />
+<meta name="abstract" content="Run Calibre xACT inductance extraction to produce a netlist containing inductance parasitics." />
+<meta name="description" content="Run Calibre xACT inductance extraction to produce a netlist containing inductance parasitics." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id793255f0-abcb-4b36-a99d-288e3c82857a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Performing Inductance Extraction With Calibre xACT</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Performing Inductance Extraction With Calibre xACT" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id793255f0-abcb-4b36-a99d-288e3c82857a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Performing
+Inductance Extraction With Calibre xACT</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Run Calibre xACT inductance extraction
+to produce a netlist containing inductance parasitics. </p>
+<p class="p">You can perform inductance extraction using source names or layout
+names. When performing extraction with source names, Calibre LVS
+must be run for device recognition. Calibre xACT runs the remaining
+stages of extraction including parasitic calculations and netlisting.
+When performing extraction with layout names, Calibre xACT runs
+all stages of extraction including device recognition, parasitic
+calculations, and netlisting. </p>
+<p class="p">This example demonstrates how to perform inductance extraction
+with Calibre xACT using source names.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id97893f83-98c0-47af-8199-03bfb548c301"><p class="p">You have met the requirements
+outlined in <a class="xref fm:HeadingOnly" href="General_InductanceExtractionFlowSetup_id7685100d.html#id7685100d-e437-4f3c-b035-85f54629f54b__General_InductanceExtractionFlowSetup_id7685100d.xml#id7685100d-e437-4f3c-b035-85f54629f54b" title="Certain conditions must be met before running inductance extraction with the Calibre xACT tool.">Inductance Extraction Flow Setup</a>.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id290423b7-8f28-4704-82d6-1469df9d1e74"><p class="p">You have created the top-level
+control described in <a class="xref fm:HeadingOnly" href="TaskTop_CreatingTopLevelControlFile_id1224def3.html#id1224def3-3ef4-478d-9ec6-c8ef6e498dde__TaskTop_CreatingTopLevelControlFile_id1224def3.xml#id1224def3-3ef4-478d-9ec6-c8ef6e498dde" title="The top-level control file is an SVRF rule file that contains all the settings necessary to run Calibre xACT. This example describes a set of statements used in a GDS flow.">Creating a Top-level Control File</a>. </p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id5cc434df-c074-4578-9f0a-ec2be77a1e6f"><span class="ph cmd">Verify the <span class="ph filepath">xact_t.rules </span> rule
+file contains the following statements to specify the “inputs”,
+a layout database, source netlist, and inductance specifications.</span><ol type="a" class="ol substeps"><li class="li substep" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id27691ff5-e904-4357-be19-a25a06f8576b"><span class="ph cmd"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a>, <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a>,
+and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Primary', 'svrf_ur'); return false;">Layout Primary</a> statements specify
+the layout database.</span><div class="itemgroup info SubStepInfo"><p class="p">The layout database, also called
+the design, is a physical representation of your IC. You identify
+this database in your SVRF rule file. The Calibre xACT software
+can read GDS, OASIS, and LEF/DEF formats.</p>
+</div></li>
+<li class="li substep" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id3a20064f-70ce-4350-a975-87788a888286"><span class="ph cmd"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source System', 'svrf_ur'); return false;">Source System</a>, <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a>,
+and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Primary', 'svrf_ur'); return false;">Source Primary</a> statements
+specify the source netlist.</span><div class="itemgroup info SubStepInfo"><p class="p">If you require source (schematic)
+names in the generated netlist, you need the source netlist. This
+netlist must be in SPICE format and is identified in the SVRF rule
+file. You must also specify the SOURCENAMES keyword for the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Netlist', 'svrf_ur'); return false;">PEX Netlist</a> statement,
+as well as for statements <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Exclude', 'svrf_ur'); return false;">PEX Extract Exclude </a> or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Include', 'svrf_ur'); return false;">PEX Extract Include</a> when used.</p>
+</div></li>
+<li class="li substep" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id459163d4-97b3-42ff-a259-90be9ce613e7"><span class="ph cmd"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Frequency', 'svrf_ur'); return false;">PEX Inductance Frequency</a> specifies the frequency at which the inductance
+parasitics are extracted. Parasitic inductance as well as parasitic
+resistance for some nets may vary with the frequency of extraction. For
+example, to use the broadband parasitic RLM model for post-extraction
+transient simulations with the extracted netlists, specify the PEX
+Inductance MAXIMUM Frequency statement. For details on the broadband
+model see <a class="xref Link" href="../../calbr_xl_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '99Broadband Netlist Generation', 'calbr_xl_user'); return false;">Broadband Netlist Generation</a> in
+the <span class="ph FontProperty ManualTitle">Calibre xL User’s Manual</span>. </span></li>
+<li class="li substep" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id4cf31b87-b848-466a-94ea-9acd2a7b6c0a"><span class="ph cmd"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Ground', 'svrf_ur'); return false;">PEX Ground</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Power', 'svrf_ur'); return false;">PEX Power</a> specify the ground and power
+nets. Inductance extraction considers power and ground nets as return
+paths for currents on signal nets based on the specification of <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Returnpath', 'svrf_ur'); return false;">PEX Inductance Returnpath</a> statement.</span></li>
+<li class="li substep" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id4b065773-c7fb-4392-baec-991653ad56d8"><span class="ph cmd"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Inductance Minlength', 'svrf_ur'); return false;">PEX Inductance Minlength</a> specifies
+the minimum length that the signal net paths should exceed in order
+to be considered for inductance extraction.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id793255f0-abcb-4b36-a99d-288e3c82857a__idb4d7a34a-c179-49d1-bcf2-d672748c7efd"><span class="ph cmd">Determine which inductance
+parasitics you need. The choices are: </span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__ida7d9f68f-5bb5-4c3c-ab8c-bedf628d7a1a"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance and Self Inductance (‑rl)</span> —
+Writes parasitic resistance and self inductance data into the netlist.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id18a1c4e6-39a2-4ad5-a1c2-faaae6be96a0"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance, Self Inductance, and Mutual Inductance (‑rlm)</span> —
+Writes parasitic resistance, self inductance, and mutual inductance
+data into the netlist.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id059841dd-0d6b-4647-9731-345f848ce925"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance, Intrinsic Capacitance, and Self Inductance (‑rcl)</span> —
+Writes parasitic resistance, intrinsic capacitance, and self inductance
+data into the netlist.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id41c5bb18-79f1-419f-8ff7-26733a2c5c17"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance, Intrinsic Capacitance, Self Inductance, and Mutual Inductance (‑rclm)</span> —
+Writes parasitic resistance, intrinsic capacitance, self inductance,
+and mutual inductance data into the netlist.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__idd56e9bbe-a626-450b-9de6-bd95a2fc22f2"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance, Coupled Capacitance, and Self Inductance (‑rccl)</span> —
+Writes parasitic resistance, coupled capacitance, and self inductance
+data into the netlist.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__ida8a92a97-667d-4acf-88f5-7bc096d341fc"><p class="p"><span class="ph FontProperty HeadingLabel">Resistance, Coupled Capacitance, Self Inductance, and Mutual Inductance (‑rcclm)</span> —
+Writes parasitic resistance, coupled capacitance, self inductance,
+and mutual inductance data into the netlist.</p>
+</li>
+</ul>
+<p class="p">There is a trade-off between
+the amount of detail and how long the netlist takes to simulate.
+For example, a netlist with parasitics as lumped capacitance (-c)
+takes less time to simulate than one with coupled capacitance (-rcc)
+between nets, which takes less time than one with coupled capacitance
+between nets including floating nets. </p>
+</div></li>
+<li class="li step stepexpand" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id92cc1085-a9e4-4bf6-bd2c-fc2163bfeea1"><span class="ph cmd">Determine the output you need. </span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id83c3ec3a-de53-4296-9cb6-8363ef19292e"><p class="p">Netlists are useful for
+simulation. The format you need depends on your simulator. Calibre
+xACT supports HSPICE, DSPF, SPEF, SPECTRE, ELDO, and CALIBREVIEW
+netlist formats.</p>
+</li>
+<li class="li" id="id793255f0-abcb-4b36-a99d-288e3c82857a__idf135074a-66fb-4db4-bb0f-4ed8a7658673"><p class="p">Reports are useful for
+identifying the nets or cells most affected by parasitics, or for
+post-processing in spreadsheets or with scripts. Reports can be generated
+at the same time as netlists.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id8e4a9a0c-7e1b-4322-8440-1072e40b6526"><span class="ph cmd">Use the top-level control
+file, <span class="ph filepath">xact_t.rules</span>, to run Calibre LVS and
+perform device recognition: </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -lvs -hier xact_t.rules 
+ </code></pre></div></li>
+<li class="li step stepexpand" id="id793255f0-abcb-4b36-a99d-288e3c82857a__id53890ad4-1845-4a7a-8e07-95c1e4bbd29c"><span class="ph cmd">Perform parasitic calculations
+and output the netlist and/or report(s). For example to extract
+parasitic resistance, capacitance and self inductance use the following
+command line: </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -xact -rcl xact_t.rules </code></pre><p class="p">The output is controlled by
+rules specified in the top-level control file and parasitics specified
+on the command line. </p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Calibre xACT ends the transcript with
+a summary of errors and warnings. Be sure to check for any errors;
+these invalidate results.</p>
+<p class="p">The working directory contains the
+requested netlist and reports. The example top-level control file, <span class="ph filepath">xact_t.rules</span>,
+creates a netlist named <span class="ph filepath">netlist.dspf</span>. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_GettingStartedCalibreXactInductanceExtraction_id378b2841.html" title="The Calibre xACT inductance extraction flow extracts parasitic frequency-dependent resistance, self and mutual inductance of interconnects in IC layouts.">Getting Started: Calibre xACT Inductance Extraction Using Batch Mode</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Performing Inductance Extraction With Calibre xACT"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_PerformingInductanceExtractionWithCalibreXact_id793255f0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

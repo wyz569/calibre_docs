@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example: Pass Gates with ESD Protection" />
+<meta name="abstract" content="The perc::check_device and perc::check_net commands can be used to check ESD configuration of pass gates." />
+<meta name="description" content="The perc::check_device and perc::check_net commands can be used to check ESD configuration of pass gates." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Pass Gates with ESD Protection</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Pass Gates with ESD Protection" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Pass Gates with ESD Protection</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The perc::check_device and perc::check_net
+commands can be used to check ESD configuration of pass gates.</p>
+<p class="p">The check in this example verifies the following
+conditions:</p>
+<ul class="ul"><li class="li" id="idc8c49496-1ec9-4845-bc00-63e96b203b97"><p class="p">A pad net
+is neither power nor ground (it is a signal net).</p>
+</li>
+<li class="li" id="id5b4e1834-196b-454a-bf1f-08fd6ba5a873"><p class="p">The net is
+connected to an S/D pin of a pass gate MOS device.</p>
+</li>
+<li class="li" id="idd7f80688-bc80-42c0-b3c6-dd7d916025c2"><p class="p">A resistor
+of at least 100 ohms lies between the pad and the S/D pin.</p>
+</li>
+</ul>
+<p class="p"><a class="xref fm:Figure" href="#id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id8b500291-1363-4297-8aa5-b5502e4199a3">Figure 1</a> shows a schematic representation of
+both good and bad circuits.</p>
+<div class="fig fignone" id="id8b500291-1363-4297-8aa5-b5502e4199a3"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Pass Gate With Resistor Protection</span><br /><div class="imageleft"><img class="image imageleft" height="368" src="../graphics/topo_checks12a.png" width="468" /></div><br /></div>
+<p class="p">The objective is to find the bad configuration.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__idd5f5050e-667b-493e-8d9c-58bd1b90681d"><p class="p">Knowledge
+of SPICE netlist format.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id4ce33314-b494-4375-a4fe-42583751353b"><p class="p">Knowledge of
+Tcl.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__iddab38348-32db-436e-8913-eaf137737433"><p class="p">Calibre PERC
+license.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id1e973d51-4116-453c-aac0-d0555d76dc0d"><span class="ph cmd">Case 1:
+Pass Gates With Special Model Name</span><div class="itemgroup info StepInfo"><p class="p">This case assumes the MOS transistor is of a specific
+model that is used only for pass gates. This example finds pass
+gates that meet the following criteria.</p>
+<ul class="ul"><li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__idece91ecc-01b8-4489-856e-a099eb93e05d"><p class="p">The gate
+is an NMOS transistor with the model name N_PG.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id25cd786b-8e86-4b63-972a-b0b014f3fccb"><p class="p">Either of the
+following two:</p>
+<ul class="ul"><li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__ida1174555-674a-4952-8d74-2d4df3656d64"><p class="p">The gate’s source or drain pin is tied
+directly to an I/O pad.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__idaf2605ed-e79a-4da2-b9d5-ee5b112b2008"><p class="p">The gate’s source or drain pin has a
+path to an I/O pad through a resistor of less than 100 ohms.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">In this case, the set of nets for path type propagation is restricted
+to the nets connected through pins of R devices having a property
+“r” of less than 100.</p>
+<p class="p">Here are some possible SPICE representations of both good and
+bad configurations. Nets on the same path are highlighted.</p>
+<pre class="pre codeblock"><code>.SUBCKT TOPCELL <span class="ph CodeHighlight orange">I_O_Pad</span> ...
+...
+M4 7 4 2 28 n_pg              $$ Good. R9 protects this.
+...
+R9 <span class="ph CodeHighlight orange">I_O_Pad</span> 2 200 ...          $$ Path types not propagated here.
+...
+M5 6 3 <span class="ph CodeHighlight orange">I_O_Pad</span> 28 n_pg ...    $$ Bad. Drain tied to I_O_Pad.
+...
+M6 8 5 <span class="ph CodeHighlight orange">9</span> 28 n_pg ...          $$ Bad. Drain with path to I_O_Pad.
+...
+R10 <span class="ph CodeHighlight orange">I_O_Pad 9</span> 50 ...          $$ Path types propagated here.</code></pre><p class="p">These are the steps to follow to write a check for the bad configurations.</p>
+</div><ol type="a" class="ol substeps"><li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id6e468131-930e-4768-8e0f-9da2b00e675b"><span class="ph cmd">Instruct
+Calibre PERC to initialize the resistor property “r” by including
+this statement in the rule file:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Property', 'svrf_ur'); return false;">PERC PROPERTY</a> R r </code></pre></div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id01a82a35-2c08-4cae-aa42-86afe810fc9b"><span class="ph cmd">Write
+an initialization procedure that labels I_O_Pad nets. This initializes
+the net label for the rule check. The procedure then initializes
+the set of pins for path type propagation, which includes the pins
+of R devices having an “r” property of less than 100. The procedure
+propagates the I_O_Pad label across the pins of these resistors.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code># Initialization proc for rule_6 checks 
+# Label I_O_Pad nets 
+# Propagate I/O pad label across resistors of value less than 100 
+  proc init_6_1 {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> "I_O_Pad" {I_O_Pad} 
+    <a class="xref fm:HeadingOnly" href="Command_PerccreateNetPath_id10b2258b.html#id10b2258b-2c17-4da0-b38b-accfa06ccbb1__Command_PerccreateNetPath_id10b2258b.xml#id10b2258b-2c17-4da0-b38b-accfa06ccbb1" title="Enables path type propagation through selected devices and pins. Assigns path types, which correspond to the net type names of all the nets connected through the devices and pins selected by this command.">perc::create_net_path</a> -type "r" -property "r &lt; 100" 
+  } </code></pre></div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id55fda4b2-ec7b-4464-8514-08a1fb9ccf5b"><span class="ph cmd">Write
+the rule check using one procedure. The main Tcl proc checks devices
+in the design.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code># Case 1  
+  proc rule_6_1 {} { 
+    perc::check_device -type {mn} -subtype {n_pg} \
+                       -pinPathType { {s d} {I_O_Pad} } \
+           -comment "Pass-gate MOS with &lt; 100 Ohm ESD protection" 
+  } </code></pre><p class="p">The options to the <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> command are as follows:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-type {mn}</span> —
+Checks for an MN device.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-subtype {n_pg}</span> —
+Checks for the model name n_pg.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-pinPathType { {s d} {I_O_Pad} }</span> —
+Checks whether the source or drain pin has a path to the I_O_Pad
+path type.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-comment “Pass-gate MOS with less than 100 Ohm esd protection”</span> — Specifies
+a message that gets written to the Calibre PERC report for the rule_6_1 check
+results.</p>
+</div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id30a5f000-fe81-4f9a-9441-523a2a69435a"><span class="ph cmd">Case 2:
+Pass Gates are generic MOS Transistors</span><div class="itemgroup info StepInfo"><p class="p">This case assumes the pass gate is a generic NMOS or
+PMOS device that is tied to the output of a logic gate. See <a class="xref fm:Figure" href="#id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id8b500291-1363-4297-8aa5-b5502e4199a3">Figure 1</a> for a schematic representation. This
+case finds nets that meet these criteria:</p>
+<ul class="ul"><li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__ideedb6e2d-66a7-4b00-910a-7de902821d55"><p class="p">The net is neither power nor ground (it
+is a signal net).</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id76361148-6082-4b2c-92c1-1adea5bd965b"><p class="p">The net is connected to the output of
+a logic gate.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__idbe48a417-046a-4e6d-813a-c2a953edf8ba"><p class="p">Either of the following conditions two
+is true:</p>
+<ul class="ul"><li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id1ce0a286-7b09-4a5b-8e38-94f43e493274"><p class="p">The net is connected to the gate pin
+of a MOS device whose source or drain pin is tied directly to an
+I/O pad.</p>
+</li>
+<li class="li" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id74594374-1b84-4602-b1f0-a8cd4f31d95e"><p class="p">The net is
+connected to the gate pin of a MOS device whose source or drain
+pin has a path to an I/O pad through a resistor of less than 100
+ohms. </p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">Here are some possible SPICE representations of both good and
+bad configurations. Nets on the same path are highlighted. </p>
+<pre class="pre codeblock"><code>.SUBCKT TOPCELL <span class="ph CodeHighlight orange">I_O_Pad</span> 
+...
+X19 VSS VDD 24 4 inv_1     $$ Output to M3 on net 4.
+...
+M3 7 4 2 28 n              $$ Good. R9 protects this.
+...
+R9 <span class="ph CodeHighlight orange">I_O_Pad</span> 2 200 ...       $$ Path types not propagated here.
+...
+X20 VSS VDD 24 3 inv_1     $$ Output to M4 on net 3.
+...
+M4 6 3 <span class="ph CodeHighlight orange">I_O_Pad</span> 27 n        $$ Bad net 3. Drain tied to I_O_Pad.
+...
+X21 VSS VDD 18 5 inv_1     $$ Output to M6 on net 5.
+...
+M6 8 5 <span class="ph CodeHighlight orange">9</span> 28 n              $$ Bad net 5. Drain has path to I_O_Pad.
+...
+R10 <span class="ph CodeHighlight orange">I_O_Pad 9</span> 50           $$ Path types propagated here.</code></pre><p class="p">These are the steps to follow to write a check for the bad configurations.</p>
+</div><ol type="a" class="ol substeps"><li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__ideb0e2145-4cbd-48ee-bed5-5d79e96ade31"><span class="ph cmd">Instruct
+Calibre PERC to initialize the resistor property “r” by including
+this statement in the rule file.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Property', 'svrf_ur'); return false;">PERC PROPERTY</a> R r </code></pre></div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id6ae4d85e-6dcf-417a-aed0-7ea265c003a1"><span class="ph cmd">Instruct
+Calibre PERC to form logic gates from the netlist.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC LOAD</a> perc.rules XFORM ALL INIT init_6 SELECT rule_6_2  </code></pre><p class="p">Using the XFORM ALL keyword causes transformation
+of the input netlist using device reduction, unused device filtering,
+logic injection, and logic gate recognition before Calibre PERC
+runs the rule checks. These transformations are guided by the relevant
+LVS specification statements in the rule file.</p>
+</div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id6920524c-c85b-477d-99d4-3a3d2fbfe350"><span class="ph cmd">Specify
+the following to disable logic injection:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Inject Logic', 'svrf_ur'); return false;">LVS INJECT LOGIC</a> NO </code></pre><p class="p">This is needed to ensure all logic gates
+are recognized by Calibre PERC.</p>
+</div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id8ad02f3e-42f0-40fa-b789-9d9483c02a73"><span class="ph cmd">Write
+an initialization procedure that labels I_O_Pad, Power, and Ground
+nets. This initializes the net type labels for the rule check. The
+procedure propagates the I_O_Pad path type label across resistors
+having an “r” property of less than 100.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code># Initialization proc for rule_6 checks 
+# Label I_O_Pad nets 
+# Propagate I/O pad label across resistors of value less than 100 
+  proc init_6_2 {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> "I_O_Pad" {I_O_Pad} 
+    perc::define_net_type "Power" {VDD?} 
+    perc::define_net_type "Ground" {VSS?} 
+    <a class="xref fm:HeadingOnly" href="Command_PerccreateNetPath_id10b2258b.html#id10b2258b-2c17-4da0-b38b-accfa06ccbb1__Command_PerccreateNetPath_id10b2258b.xml#id10b2258b-2c17-4da0-b38b-accfa06ccbb1" title="Enables path type propagation through selected devices and pins. Assigns path types, which correspond to the net type names of all the nets connected through the devices and pins selected by this command.">perc::create_net_path</a> -type "r" -property "r &lt; 100" 
+  } </code></pre></div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__idb5678d03-f291-4eb1-aff8-68f586c41b3c"><span class="ph cmd">Write
+the rule check using two procedures. The main Tcl proc checks nets
+in the design.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code># Case 2 
+  proc rule_6_2 {} { 
+    perc::check_net -netType {!Power &amp;&amp; !Ground} \
+                    -condition rule_6_2_cond  \
+           -comment "Pass-gate MOS with &lt; 100 Ohm ESD protection" 
+  } </code></pre><p class="p">The options to the <a class="xref fm:HeadingOnly" href="Command_PerccheckNet_id75162cb0.html#id75162cb0-c882-4d1d-9273-9095a7dd5b64__Command_PerccheckNet_id75162cb0.xml#id75162cb0-c882-4d1d-9273-9095a7dd5b64" title="Checks nets in the design for nets that match the specified conditions. By default, all nets are matched.">perc::check_net</a> command are as follows:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-netType {!Power &amp;&amp; !Ground}</span> —
+Checks that it is neither a Power nor Ground net type.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-condition rule_6_2_cond</span> —
+For each net that passes the -netType criteria, send the net to
+the rule_6_2_cond proc, which checks for the presence of a bad pass
+gate.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-comment “Pass-gate MOS with less than 100 Ohm ESD protection”</span> — Specifies
+a message that gets written to the Calibre PERC report for the rule_6_2 check
+results.</p>
+</div></li>
+<li class="li substep" id="id0cc1807c-34a9-4c4f-b54f-fd99c8efc6ce__id609b777a-c096-4363-9dc8-8f406578b766"><span class="ph cmd">Write
+a subroutine that returns 1 if the net is connected to the output
+of a logic gate and is also connected to the gate pin of a MOS device
+whose source or drain pin is tied to the I_O_Pad net type directly,
+or through a resistor with resistance less than 100.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code># Subroutine for rule_6_2. Returns 1 if the net is connected  
+# to the output of a logic gate and is also connected to the gate 
+# pin of a MOS device whose source or drain pin is tied to an  
+# I/O pad directly, or through a resistor with resistance less 
+# than 100.  
+  proc rule_6_2_cond {net} { 
+    set logic_gate_count [perc::count -net $net -type {lvsGate} \
+                                      -pinAtNet {lvsOut}] 
+ 
+    set result [perc::count -net $net -type {mp mn}  \
+                             -pinAtNet {g} \
+                             -pinPathType { {s d} {I_O_Pad} } \
+                             -list] 
+ 
+    set pass_gate_count   [lindex $result 0] 
+ 
+    set pass_gate_devices [lindex $result 1] 
+ 
+    if { $pass_gate_count &gt; 0 &amp;&amp; $logic_gate_count &gt; 0 } { 
+# Show the pass-gate devices in the PERC report file 
+       <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> -title "Pass-gate MOS:" \
+                                -list $pass_gate_devices 
+       return 1 
+    } 
+    return 0 
+  } </code></pre><p class="p">The <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> command is used twice, with these
+options in the first instance:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-net $net</span> —
+Counts objects on $net.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-type {lvsGate}</span> —
+Counts logic gates.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-pinAtNet {lvsOut}</span> —
+Checks if $net is connected to the output pin of a logic gate.</p>
+<p class="p">These options are used in the second instance:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-net $net</span> —
+Counts objects on $net.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-type {mp mn}</span> —
+Counts MN or MP devices.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-pinAtNet {g}</span> —
+Checks if $net is connected to the gate pin of the device.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-pinPathType { {s d} {I_O_Pad} }</span> —
+Checks if either the source or drain pin has a path to the I_O_Pad
+path type.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">-list</span> —
+Stores a list of the counted objects for output to the Calibre PERC
+report file.</p>
+</div></li>
+</ol>
+</li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The complete rule check follows. It must be
+placed inside a TVF Function block containing a “package require
+CalibreLVS_PERC” command and called from a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC Load</a> statement
+in order to run it. See “<a class="xref fm:HeadingAndPage" href="Concept_CalibrePercExampleRuleFile_id170b24bd.html#id170b24bd-6423-403d-a729-e939c52112b9__Concept_CalibrePercExampleRuleFile_id170b24bd.xml#id170b24bd-6423-403d-a729-e939c52112b9" title="This section shows a control file that can be used to run all the examples shown in this chapter. It also contains a complete rule file for running a modified version of the examples using XML constraints and an object called a collection.">Calibre PERC Example Rule Files</a>” for related information.</p>
+<pre class="pre codeblock"><code>LVS POWER NAME VDD?
+LVS GROUND NAME VSS?
+
+######################################################################### 
+### RULE 6 
+########## 
+ 
+# Initialization proc for rule_6_1 check 
+# Label I_O_Pad nets 
+# Propagate I/O pad label across resistors of value less than 100 
+  proc init_6_1 {} { 
+    perc::define_net_type "I_O_Pad" {I_O_pad} 
+    perc::create_net_path -type "r" -property "r &lt; 100" 
+  } 
+ 
+# Case 1  
+  proc rule_6_1 {} { 
+    perc::check_device -type {mn} -subtype {n_pg} \
+                       -pinPathType { {s d} {I_O_Pad} } \
+              -comment "Pass-gate MOS with &lt; 100 Ohm ESD protection" 
+   } </code></pre><pre class="pre codeblock"><code># Initialization proc for rule_6_2 check 
+# Label I_O_Pad, Power, and Ground nets 
+# Propagate I/O pad label across resistors of value less than 100 
+  proc init_6_2 {} { 
+    perc::define_net_type "I_O_Pad" {I_O_pad} 
+    perc::define_net_type "Power" {VDD?} 
+    perc::define_net_type "Ground" {VSS?} 
+    perc::create_net_path -type "r" -property "r &lt; 100" 
+  } 
+
+# Case 2 
+  proc rule_6_2 {} { 
+    perc::check_net -netType {!Power &amp;&amp; !Ground} \
+                    -condition rule_6_2_cond  \
+                    -comment "Pass-gate MOS with &lt; 100 Ohm ESD protection" 
+  } 
+ 
+# Subroutine for rule_6_2. Returns 1 if the net is connected  
+# to the output of a logic gate and is also connected to the gate 
+# pin of a MOS device whose source or drain pin is tied to an  
+# I/O pad directly, or through a resistor with resistance less  
+# than 100.  
+  proc rule_6_2_cond {net} { 
+    set logic_gate_count [perc::count -net $net -type {lvsGate} \
+                                      -pinAtNet {lvsOut}] 
+ 
+    set result [perc::count -net $net -type {mp mn}  \
+                            -pinAtNet {g} \
+                            -pinPathType { {s d} {I_O_Pad} } \
+                            -list] 
+ 
+    set pass_gate_count   [lindex $result 0] 
+ 
+    set pass_gate_devices [lindex $result 1] 
+ 
+    if { $pass_gate_count &gt; 0 &amp;&amp; $logic_gate_count &gt; 0 } { 
+       # Show the pass-gate devices in the PERC report file 
+         perc::report_base_result -title "Pass-gate MOS:" \
+                                  -list $pass_gate_devices 
+         return 1 
+    } 
+    return 0 
+  }</code></pre><p class="p">The results output in the Calibre PERC report file for Case 1
+would appear similar to this for a layout netlist:</p>
+<pre class="pre codeblock"><code>o RuleCheck: rule_6_1 (Pass-gate MOS with &lt; 100 Ohm ESD protection) 
+------------------------------------------------------------------------ 
+ 
+ 20    M5(-131.200,-98.200) [ MN(N_PG) ]  
+         g: 3 
+         s: I_O_PAD [ I_O_Pad ] 
+         d: 6 
+         b: 28 </code></pre><p class="p">The output shows the name of the rule check and a comment from
+the Tcl proc that describes the rule check. The output shows the
+bad device instance from the netlist including the coordinates;
+the type and model names; and the pin names with their associated
+nets. The source pin has a path to the I_O_Pad path type (indicated
+by the brackets) because the pin is tied directly to the net.</p>
+<p class="p">The results output in the Calibre PERC report file for Case 2
+would appear similar to this:</p>
+<pre class="pre codeblock"><code>o RuleCheck: rule_6_2 (Pass-gate MOS with &lt; 100 Ohm ESD protection) 
+------------------------------------------------------------------------ 
+ 
+ 21    Net  3 
+       Pass-gate MOS: 
+         M2(-130.200,-98.200) [ MN(N) ]  
+           g: 3 
+           s: I_O_PAD [ I_O_Pad ] 
+           d: 6 
+           b: 27 </code></pre><p class="p">The output shows the bad net number and the device instance.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.html" title="The core of the Calibre PERC functionality is topological rule checking. Topological rule checks are written in the Calibre PERC extension of TVF. This chapter contains naming conventions used when writing topology rule checks and working examples of initialization and rule check procedures.">Calibre PERC Topology Rule Checks</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Pass Gates with ESD Protection"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExamplePassGatesEsdProtection_id0cc1807c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

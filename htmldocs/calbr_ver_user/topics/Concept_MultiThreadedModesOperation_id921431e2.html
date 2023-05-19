@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Multithreaded Modes of Operation" />
+<meta name="abstract" content="Calibre nmDRC-H has multithreaded modes of operation that greatly reduce runtimes. Multithreaded (MT) mode uses multiple CPUs on the same host and is enabled through the ‑turbo command line option. MTflex mode uses multiple CPUs on a network of hosts and is enabled with the -remote or -remotefile command line options. These modes apply to other Calibre tools as well." />
+<meta name="description" content="Calibre nmDRC-H has multithreaded modes of operation that greatly reduce runtimes. Multithreaded (MT) mode uses multiple CPUs on the same host and is enabled through the ‑turbo command line option. MTflex mode uses multiple CPUs on a network of hosts and is enabled with the -remote or -remotefile command line options. These modes apply to other Calibre tools as well." />
+<meta name="DC.subject" content="MT and MTflex modes of operation, Multithreaded modes of operation" />
+<meta name="keywords" content="MT and MTflex modes of operation, Multithreaded modes of operation" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id921431e2-a57e-4830-b11b-a357a7b5fe7c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Multithreaded Modes of Operation</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Multithreaded Modes of Operation" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id921431e2-a57e-4830-b11b-a357a7b5fe7c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Multithreaded Modes of Operation</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre nmDRC-H
+has multithreaded modes of operation that greatly reduce runtimes.
+Multithreaded (MT) mode uses multiple CPUs on the same host and
+is enabled through the ‑turbo command line option. MTflex
+mode uses multiple CPUs on a network of hosts and is enabled with
+the -remote or -remotefile command line options. These modes apply
+to other Calibre tools as well.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id921431e2-a57e-4830-b11b-a357a7b5fe7c__id95b13326-ff95-40cb-b376-f26fda9b93ee"><h2 class="title Subheading sectiontitle">Hyperscaling</h2><p class="p">Hyperscaling is a mode of operation that allows
+parallel processing of layer operations in an MT or MTflex
+run. It is enabled using the -hyper command line option and requires no
+additional licenses than the usual MT or MTflex requirements.
+Hyperscaling typically results in twice the savings in real time
+over a multithreaded run and improved scaling of processor utilization.
+If you have hardware that supports MT or MTflex run modes, you
+should use hyperscaling unless you have compelling reasons not to
+(a minimum of four CPUs is recommended).</p>
+<p class="p">Example
+command line invocations are these:</p>
+<pre class="pre codeblock leveled"><code>calibre -drc -hier -turbo -hyper rules 
+calibre -drc -hier -turbo -remotefile config.txt -hyper rules </code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">When using hyperscaling
+it is imperative that you use a correctly-specified Layout Base
+Layer statement in the rule file. (Layout Top Layer may be used,
+but Layout Base Layer is preferred.) Failure to do so often results
+in reduced performance, which is true for any Calibre nmDRC-H run.</p>
+</div>
+<p class="p" id="id921431e2-a57e-4830-b11b-a357a7b5fe7c__id251d1387-a1f6-457a-8c37-a61c25697ce9">Hyperscaling
+counts hierarchical objects differently from traditional hierarchical
+runs. Specifically, hyperscaling flattens internally-recognized,
+very small cells (vias and contacts). Hyperscaling also flattens
+internally-recognized top-level cells that are identified based
+upon your Layout Base Layer statement (or Layout Top Layer statement,
+if applicable). This means object counts can differ between hyperscaling
+and traditional hierarchical runs. This is an expected behavior.
+If results counts differ between a hyperscaling run and a non-hyperscaling run,
+this does not mean one run has missed results that the other has
+found. Hyperscaling selectively flattens some data and this can
+affect results counts.</p>
+<p class="p">Hyperscaling can perform rule checks in a different order than
+appears in the rule file. Non-hyperscaling runs follow the rule
+file order.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_HierarchicalCalibreNmdrc_idcc3970a1.html" title="Calibre nmDRC-H exploits the hierarchy in a design to reduce processing time, memory use, and DRC result counts when compared to flat DRC applications.">Hierarchical Calibre nmDRC</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '99Distributed Calibre Overview', 'calbr_admin_gd'); return false;">Distributed Calibre Overview [Calibre Administrator's Guide]</a></div>
+<div><a class="link" href="../topics/Command_CalibreNmdrcCalibreNmdrcH_idb092c696.html" title="Performs flat or hierarchical design rule checking.">Calibre nmDRC and Calibre nmDRC-H Command Line</a></div>
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Licensing for Multithreaded Operations', 'calbr_admin_gd'); return false;">Licensing for Multithreaded Operations [Calibre Administrator's Guide]</a></div>
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Base Layer', 'svrf_ur'); return false;">Layout Base Layer [Standard Verification Rule Format (SVRF) Manual]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Multithreaded Modes of Operation"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_MultiThreadedModesOperation_id921431e2.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

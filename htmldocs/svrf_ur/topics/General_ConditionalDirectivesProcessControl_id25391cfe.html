@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="About Conditional Directives for Compilation Control" />
+<meta name="abstract" content="The portions of the rule file that Calibre or ICverify compiles can be controlled with the #DEFINE, #UNDEFINE, #IFDEF, #IFNDEF directives within your rule file. These directives define and undefine variables and provide conditional execution based on the variable definition. Variables for compilation control can also be defined as environment variables in the shell. Usage information and examples are provided." />
+<meta name="description" content="The portions of the rule file that Calibre or ICverify compiles can be controlled with the #DEFINE, #UNDEFINE, #IFDEF, #IFNDEF directives within your rule file. These directives define and undefine variables and provide conditional execution based on the variable definition. Variables for compilation control can also be defined as environment variables in the shell. Usage information and examples are provided." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id25391cfe-7818-44b8-addc-fc33f55ba97c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>About Conditional Directives for Compilation Control</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="About Conditional Directives for Compilation Control" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id25391cfe-7818-44b8-addc-fc33f55ba97c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">About Conditional Directives for Compilation Control</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The portions
+of the rule file that Calibre or ICverify compiles can be controlled
+with the #DEFINE, #UNDEFINE, #IFDEF, #IFNDEF directives within your
+rule file. These directives define and undefine variables and provide
+conditional execution based on the variable definition. Variables
+for compilation control can also be defined as environment variables
+in the shell. Usage information and examples are provided. </span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__idd16dbb49-9019-49a9-a7cd-35cc14fd78ae"><p class="p">Refer
+to <a class="xref fm:HeadingOnly" href="Command_IFDEFCalibreVersion_id925fa5d6.html#id925fa5d6-d858-4d3b-b547-8e72ca0abcd2__Command_IFDEFCalibreVersion_id925fa5d6.xml#id925fa5d6-d858-4d3b-b547-8e72ca0abcd2" title="The #IFDEF CALIBRE_VERSION pre-processor directive provides conditional compilation based upon the Calibre version, allowing for easier integration of new functionality into existing SVRF files.">#IFDEF CALIBRE_VERSION</a> for a
+pre-processor directive that provides conditional compilation based
+on the Calibre version. </p>
+<p class="p">The following sections are included:</p>
+<ul class="ul"><li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id5e7f0531-59f6-4a11-b080-dec629c28e3d"><p class="p"><a class="xref fm:HeadingOnly" href="#id25391cfe-7818-44b8-addc-fc33f55ba97c__id67634a58-a180-4a06-82ea-1bc75321faa2">Defining Variables for Process Control</a></p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id0828edc4-33b4-4262-894d-6968108ffbef"><p class="p"><a class="xref fm:HeadingOnly" href="#id25391cfe-7818-44b8-addc-fc33f55ba97c__idefb05d4e-c64e-45f1-bae2-c7f8420de66c">Undefining Variables</a></p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id5176569b-c339-4ea0-8a7b-65bbf1dbe1c2"><p class="p"><a class="xref fm:HeadingOnly" href="#id25391cfe-7818-44b8-addc-fc33f55ba97c__idc2fa9d42-2e76-44a9-bedc-498d98936b23">Conditional Directives (#IFDEF and #IFNDEF)</a></p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__idb1a9c8e7-c035-4620-aaf1-71b6cbc16bcf"><p class="p"><a class="xref fm:HeadingOnly" href="#id25391cfe-7818-44b8-addc-fc33f55ba97c__id52a95d96-f2ba-465d-bff8-01ce1c5ab1e3">Examples</a></p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id67634a58-a180-4a06-82ea-1bc75321faa2"><h2 class="title Subheading sectiontitle">Defining
+Variables for Process Control</h2><p class="p">You can define variables for technology process
+control with the #DEFINE directive or in the shell environment. </p>
+<h2 class="title Subheading sectiontitle">#DEFINE Usage</h2><p class="p">     <span class="keyword ParameterName Required">#DEFINE</span> <span class="keyword ParameterName RequiredReplaceable">var_name</span> [<span class="keyword ParameterName OptionalReplaceable">var_value</span>]</p>
+<p class="p">The variable name is given by <span class="keyword ParameterName RequiredReplaceable">var_name</span> and
+an optional value is given by <span class="keyword ParameterName OptionalReplaceable">var_value</span>.
+You should enclose <span class="keyword ParameterName RequiredReplaceable">var_name</span> within
+quotes if <span class="keyword ParameterName OptionalReplaceable">var_name</span> includes
+spaces or characters other than letters and numbers. </p>
+<p class="p">You can also implicitly define a variable in
+the shell environment, in which case the #DEFINE statement is not
+needed. </p>
+<p class="p">A variable <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+considered <span class="keyword ParameterName OptionalReplaceable">defined</span> if
+either of the following are true:</p>
+<dl class="dl"><dt class="dt dlterm">Explicit definition</dt>
+<dd class="dd"><p class="p">The variable name (<span class="keyword ParameterName RequiredReplaceable">var_name</span>)
+appears in a #DEFINE directive before it is referenced in a conditional
+block, and the <span class="keyword ParameterName RequiredReplaceable">var_name</span> does
+not appear in an #UNDEFINE statement prior to its reference in a
+conditional block.</p>
+</dd>
+<dt class="dt dlterm">Implicit definition</dt>
+<dd class="dd"><p class="p">The variable name (<span class="keyword ParameterName RequiredReplaceable">var_name</span>)
+appears with a dollar character ($) before it, and <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined as a non-null shell environment variable.</p>
+</dd>
+</dl>
+<p class="p">The following is an example of an implicit
+definition of a variable in the C shell environment:</p>
+<pre class="pre codeblock leveled"><code>setenv process 7lm</code></pre><p class="p">This is an equivalent example for the Bourne
+shell:</p>
+<pre class="pre codeblock leveled"><code>export process=7lm</code></pre><p class="p">With the preceding implicit variable definitions,
+the string “$process” represents the variable name in an conditional
+statement (#IFDEF or #IFNDEF, which are discussed later in this
+topic). In these examples, the “$process” variable resolves to a
+value of “7lm”.</p>
+<p class="p">In an explicit variable definition, the following
+construct establishes “process” as defined, with no assigned value:</p>
+<pre class="pre codeblock leveled"><code>#DEFINE process</code></pre><p class="p">The following construct defines the variable
+name “process” and assigns it the value “7lm”: </p>
+<pre class="pre codeblock leveled"><code>#DEFINE process 7lm</code></pre><p class="p">This is analogous to the previous environment
+variable assignment examples, although “process” and “$process”
+are not the same variable name.</p>
+<p class="p">The value of the variable (<span class="keyword ParameterName OptionalReplaceable">var_value</span>)
+may not be specified as an environment variable in a #DEFINE directive.
+For instance, $value is not interpreted as a variable in the following
+rule file excerpt:</p>
+<pre class="pre codeblock leveled"><code>//in the shell, $value = 7lm
+#DEFINE process $value // value is not a variable here</code></pre><p class="p">In this example, $value is treated as a literal
+string, not a variable.</p>
+<p class="p">You can override an implicit variable definition
+in the rule file. Suppose you define an environment variable (for
+example, setenv myvar xyz), such that the variable is specified
+with an implicit definition ($myvar resolves to xyz in conditional
+statements). The following statement redefines $myvar:</p>
+<pre class="pre codeblock leveled"><code>#DEFINE $myvar newvalue</code></pre><p class="p">This statement causes $myvar to resolve to
+newvalue (for pre-processor commands only), regardless of the shell
+environment. In other words, #DEFINE directives can override implicit variable
+definitions from the shell environment, but they have no effect
+on the shell itself.</p>
+</div>
+<div class="section Subsection" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__idefb05d4e-c64e-45f1-bae2-c7f8420de66c"><h2 class="title Subheading sectiontitle">Undefining
+Variables</h2><p class="p">The #UNDEFINE directive is used to undefine
+a variable. It can be used to undefine an explicitly defined variable
+(one defined with #DEFINE), or an implicitly defined variable (one defined
+in the shell), or a variable that has not been previously defined.
+In the latter case, the purpose would be to initialize the variable
+in the undefined state.</p>
+<h2 class="title Subheading sectiontitle">#UNDEFINE Usage</h2><p class="p">     <span class="keyword ParameterName Required">#UNDEFINE</span> <span class="keyword ParameterName RequiredReplaceable">var_name</span></p>
+<p class="p">The following example undefines a variable
+defined in the shell:</p>
+<pre class="pre codeblock leveled"><code>#UNDEFINE $process //undefines the implicit name definition</code></pre><p class="p">This example undefines a variable explicitly defined with a #DEFINE
+statement in the rule file:</p>
+<pre class="pre codeblock leveled"><code>#DEFINE process
+...
+#UNDEFINE process  //undefines the explicit name definition
+...</code></pre><p class="p">The two preceding examples do not undefine
+the same names. #UNDEFINE statements do not affect the shell environment,
+only the rule file pre-processor.</p>
+<p class="p">The way to change the state of a conditional
+compilation pre-processor directive is to change the directive to
+its opposite, not to comment it out. For example, suppose you have
+the following conditional directive:</p>
+<pre class="pre codeblock leveled"><code>#DEFINE name</code></pre><p class="p">You should not precede this with a comment
+character because the pound sign (#) must be the first character
+on the line for any pre-processor directive. C-style comments (/*
+… */) do not hide the directive because they are processed after
+pre-processor directives when there is a dependency. The following
+statement is the correct way to negate the definition:</p>
+<pre class="pre codeblock leveled"><code>#UNDEFINE name</code></pre></div>
+<div class="section Subsection" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__idc2fa9d42-2e76-44a9-bedc-498d98936b23"><h2 class="title Subheading sectiontitle">Conditional
+Directives (#IFDEF and #IFNDEF)</h2><p class="p">Conditional directives provide conditional
+compilation for sections of the rule file. #IFDEF (if defined) and
+#IFNDEF (if not defined) test whether a variable is defined or undefined, respectively,
+and optionally compare to a specified value. An #IFDEF or #IFNDEF
+statement can include an optional #ELSE statement, which is executed
+if the preceding #IFDEF or #IFNDEF conditional evaluates to false.</p>
+<h2 class="title Subheading sectiontitle">#IFDEF and #IFNDEF Usage</h2>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id1111824f-2681-4cf0-ae57-d0ae09400181" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:6.175in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">{<span class="keyword ParameterName Required">#IFDEF</span> <span class="keyword ParameterName RequiredReplaceable">var_name</span> [<span class="keyword ParameterName OptionalReplaceable">var_value</span>]
+| <span class="keyword ParameterName Required">#IFNDEF</span> <span class="keyword ParameterName RequiredReplaceable">var_name</span> [<span class="keyword ParameterName OptionalReplaceable">var_value</span>]}</p>
+<p class="p">          <span class="keyword ParameterName RequiredReplaceable">rule_file_text</span> </p>
+<p class="p">[ #ELSE </p>
+<p class="p">          <span class="keyword ParameterName OptionalReplaceable">rule_file_text</span> ]
+...</p>
+<p class="p">#ENDIF</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The variable name is <span class="keyword ParameterName RequiredReplaceable">var_name</span>;
+it is a string that is defined with the #DEFINE directive or implicitly
+defined in the shell environment. If <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined in the shell environment, it should appear with an initial
+dollar character ($) when used in a rule file conditional directive. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+an optional string that appears in a #DEFINE directive or it is
+the value assigned to a variable in the shell environment. If <span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+present, the value of the variable <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+compared by a case-insensitive string comparison to <span class="keyword ParameterName OptionalReplaceable">var_value</span>. </p>
+<p class="p">The string <span class="keyword ParameterName OptionalReplaceable">rule_file_text</span> includes
+rule file statements and operations to be performed, depending on
+the conditional directive. The <span class="keyword ParameterName OptionalReplaceable">rule_file_text</span> string
+can also contain conditionals, which creates nested pre-processor
+directives. (The <a class="xref fm:HeadingOnly" href="Command_SvrfError_ida9212316.html#ida9212316-2292-4279-b536-7965486abf3b__Command_SvrfError_ida9212316.xml#ida9212316-2292-4279-b536-7965486abf3b" title="Issues a compiler error if this statement is encountered during rule file compilation.">SVRF Error</a> statement is useful for inserting compiler
+error messages within conditional constructs.)</p>
+<p class="p">For the following discussion of conditionals,
+“associated value” refers to one of these cases:</p>
+<ul class="ul"><li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__ide0f4260c-ff84-452c-8272-1981faacc08b"><p class="p">The value assigned to the variable <span class="keyword ParameterName RequiredReplaceable">var_name</span> in
+the most recent #DEFINE directive, prior to the #IFDEF or #IFNDEF
+conditional.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id06036300-d57f-4de8-a796-4736cd4f1f04"><p class="p">The non-empty string, if any, assigned
+to the <span class="keyword ParameterName RequiredReplaceable">var_name</span> variable
+in the shell environment.</p>
+</li>
+</ul>
+<p class="p">“#IFDEF <span class="keyword ParameterName RequiredReplaceable">var_name</span> [<span class="keyword ParameterName OptionalReplaceable">var_value</span>]”
+enables or disables conditional compilation as follows:</p>
+<ol class="ol"><li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id16dfb98c-9029-47f9-be25-999a584dda3f"><p class="p">If <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+not defined, then compilation is disabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id64018bf1-5dd8-4f08-80e2-fd64c75573df"><p class="p">Else if <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined with a value, but <span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+not specified in the #IFDEF, then compilation is enabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__idbb4428e8-e7c4-43ff-aac2-b2b503de6b4c"><p class="p">Else if <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined with no associated value and <span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+specified, then compilation is disabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id20ff7903-4998-462c-88c5-e3296361d826"><p class="p">Else if <span class="keyword ParameterName OptionalReplaceable">var_value</span> equals
+the assigned value of <span class="keyword ParameterName RequiredReplaceable">var_name</span> (by
+case-insensitive string comparison), then compilation is enabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id2b66187f-bd5a-49f8-8ec1-86a4b479bfcc"><p class="p">Else compilation is disabled.</p>
+</li>
+</ol>
+<p class="p">“#IFNDEF <span class="keyword ParameterName RequiredReplaceable">var_name</span> [<span class="keyword ParameterName OptionalReplaceable">var_value</span>]”
+enables or disables conditional compilation as follows:</p>
+<ol class="ol"><li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__ide00a9359-8994-4940-9014-4f1eff862282"><p class="p">If <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+not defined, then compilation is enabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__ide08dd52c-e70b-44e2-9acb-901c32fe144e"><p class="p">Else if <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined with a value, but <span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+not specified in the #IFNDEF, then compilation is disabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id78c8ecdc-fd6e-4a6e-ae2a-84eef8c0d253"><p class="p">Else if <span class="keyword ParameterName RequiredReplaceable">var_name</span> is
+defined with no associated value and<span class="keyword ParameterName OptionalReplaceable">var_value</span> is
+specified, then compilation is enabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id9fca0af7-0cae-4908-8186-450d048636ae"><p class="p">Else if <span class="keyword ParameterName OptionalReplaceable">var_value</span> equals
+the assigned value of <span class="keyword ParameterName RequiredReplaceable">var_name</span> (by
+case-insensitive string comparison), then compilation is disabled.</p>
+</li>
+<li class="li" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__ida5f844f6-b6b4-4f47-8d9e-c28c3a923158"><p class="p">Else compilation is enabled.</p>
+</li>
+</ol>
+</div>
+<div class="section Subsection" id="id25391cfe-7818-44b8-addc-fc33f55ba97c__id52a95d96-f2ba-465d-bff8-01ce1c5ab1e3"><h2 class="title Subheading sectiontitle">Examples</h2><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">Process P1 states that metal6 is the top metal
+layer, process P2 states that metal5 is the top metal layer, and
+in all other processes metal4 is the top metal layer. The arguments
+P1 and P2 would appear in #DEFINE or #UNDEFINE statements in a control
+file, which would include the following code:</p>
+<pre class="pre codeblock leveled"><code>LAYER metal4 23
+LAYER metal5 26
+LAYER metal6 29
+
+#ifdef P1 
+  LAYER top_metal metal6
+  #else
+    #ifdef P2
+      LAYER top_metal metal5
+      #else
+        LAYER top_metal metal4
+    #endif
+#endif</code></pre><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">In this example, the name parameter P1 is initially
+defined for the conditionals, then it is undefined (order is important):</p>
+<pre class="pre codeblock"><code>#DEFINE P1
+…			//rule file statements
+#IFDEF P1
+…			//conditional statements are compiled
+#ENDIF
+#IFNDEF P1
+…			//conditional statements are not compiled
+#ENDIF
+#UNDEFINE P1
+#IFDEF P1
+…			//conditional statements are not compiled
+#ENDIF
+#IFNDEF P1
+…			 //conditional statements are compiled
+#ENDIF</code></pre><h2 class="title Subheading sectiontitle">Example 3</h2><p class="p">This shows use of name value pairs in an explicit
+definition. P1 is explicitly defined:</p>
+<pre class="pre codeblock"><code>#DEFINE P1 7lm //the associated value of P1 is “7lm”
+#IFDEF P1
+…        //conditional statements are compiled
+#ENDIF
+#IFDEF P1 7lm
+...      //conditional statements are compiled 
+         //P1 = 71m from the #DEFINE directive
+#ENDIF
+#IFDEF P1 P1
+...      //conditional statements are not compiled 
+         //P1 = 7lm from the #DEFINE directive
+#ENDIF
+#IFNDEF P1
+...      //conditional statements are not compiled
+#ENDIF
+#IFNDEF P1 7lm
+...      //conditional statements are not compiled 
+         //P1 = 7lm from the #DEFINE directive
+#ENDIF
+#IFNDEF P1 P1
+...     //conditional statements are compiled 
+#ENDIF</code></pre><h2 class="title Subheading sectiontitle">Example 4</h2><p class="p">Here the name is implicitly defined as a shell
+variable. Note the #UNDEFINE directive does not affect the environment
+variable declared in this example. “$P1” is a non-null shell environment variable:</p>
+<pre class="pre codeblock"><code>…         //rule file statements
+#IFDEF $P1
+...       //conditional statements are compiled
+          //$P1 is defined in the shell
+#ENDIF
+#IFNDEF $P1
+...       //conditional statements are not compiled
+#ENDIF
+#UNDEFINE P1
+#IFDEF $P1
+...       //conditional statements ARE compiled because 
+          //the previous #UNDEFINE does not affect $P1
+#ENDIF
+#IFNDEF P1
+...       //conditional statements are compiled
+          //P1 is currently undefined
+#ENDIF</code></pre><h2 class="title Subheading sectiontitle">Example 5</h2><p class="p">This example uses an implicit definition to
+assign a value to a variable. “$P1” is a non-null shell environment
+variable assigned the value 71m:</p>
+<pre class="pre codeblock"><code>#IFDEF $P1 7lm
+...       //conditional statements are compiled
+          //$P1 = 7lm in the shell environment
+#ENDIF
+#IFNDEF $P1 7lm
+...       //conditional statements are not compiled
+#ENDIF
+#UNDEFINE P1
+#IFDEF $P1
+          //conditional statements are compiled
+          //previous #UNDEFINE P1 does not affect $P1
+#ENDIF
+#DEFINE $P1 P1 //$P1 reassigned to value P1
+#IFDEF $P1 P1
+...       //conditional statements are compiled
+#ENDIF</code></pre><p class="p">Refer to “<a class="xref Link" href="../../calbr_solns_pv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Insert Rule File Variable and #DEFINE Statements with the Customization GUI', 'calbr_solns_pv_user'); return false;">Insert Rule File Variable and #DEFINE Statements with the Customization GUI</a>”
+in the <cite class="cite">Calibre Solutions for Physical Verification</cite> manual
+for examples of inserting #DEFINE statements using the Customization
+GUI in Calibre Interactive.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_PreProcessorDirectives_id99547072.html" title="Pre-processor directives, also known as conditionals, include rule file compiler directives for technology process control, version control, and environment variables.">Pre-Processor Directives</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "About Conditional Directives for Compilation Control"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_ConditionalDirectivesProcessControl_id25391cfe.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Example Script to Calculate User‑Defined Hotspots" />
+<meta name="abstract" content="You can use CMP YieldServer commands in a Tcl procedures to calculate user‑defined hotspot information." />
+<meta name="description" content="You can use CMP YieldServer commands in a Tcl procedures to calculate user‑defined hotspot information." />
+<meta name="prodname" content="Calibre CMPAnalyzer User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cmpanalyzer_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 9, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® CMPAnalyzer User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2994db71-ac9a-4d8d-ada3-c8748d540518" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example Script to Calculate User‑Defined Hotspots</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example Script to Calculate User‑Defined Hotspots" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id2994db71-ac9a-4d8d-ada3-c8748d540518">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example Script
+to Calculate User‑Defined Hotspots</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">You can use CMP YieldServer commands
+in a Tcl procedures to calculate user‑defined hotspot information.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id2994db71-ac9a-4d8d-ada3-c8748d540518__idb3b37058-d2b2-471c-88b9-450b1b62990d"><p class="p">The
+following example script uses CMP grid operations and certain properties
+to perform a thickness topology hotspot analysis in Calibre CMPAnalyzer.
+Adding the user‑defined hotspot property as a DFM_METRIC annotation
+enables batch reporting for that property.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Calibre CMPAnalyzer analysis
+with <span class="ph uicontrol">Save Vector Properties</span> enabled
+in the <a class="xref fm:HeadingOnly" href="GUIRefT_SimulatorOptionsTabOnInputsPane_id6b3e5212.html#id6b3e5212-0df2-4c3f-a820-d6fe61e69ec1__GUIRefT_SimulatorOptionsTabOnInputsPane_id6b3e5212.xml#id6b3e5212-0df2-4c3f-a820-d6fe61e69ec1" title="The Simulator Options tab in Calibre Interactive has options for the bucketing flow, the number of CPUs for simulation, saving grid files and vector properties, the Calibre CMPAnalyzer rerun flow, distributed processing, and the user‑defined (custom) hotspot flow.">Simulator Options Tab on the Inputs Pane</a> of Calibre Interactive is compatible with Tcl scripts for user‑defined
+hotspots implemented with CMP grid operations. Iterator-based Tcl
+scripts are not compatible with the vector property format. </p>
+</div>
+<p class="p">See also “<a class="xref fm:HeadingAndPage" href="Concept_TclScriptUserDefinedHotspots_idf1c5395c.html#idf1c5395c-d509-4982-b9c7-6ab6e2053383__Concept_TclScriptUserDefinedHotspots_idf1c5395c.xml#idf1c5395c-d509-4982-b9c7-6ab6e2053383" title="You can calculate user-defined hotspots by running a Tcl script that calls the cmp::register_hotspot_proc and cmp::register_hotspot_threshold_proc commands. The Tcl script calculates the hotspot metric and compares the value to a threshold.">Tcl Script for User-Defined Hotspots</a>” to calculate
+a hotspot based on a perimeter metric using basic contents and Tcl
+procedures. </p>
+<pre class="pre codeblock"><code>proc thickness_topo { detail_layer } { 
+
+	## Grid results can be stored in Tcl global variables for reuse
+	global topo_grid
+	set hotspot_rule "Thickness_Topo"
+
+	## Add detail layer annotation
+	if {![regexp "Rule_Thickness_Topo" [dfm::list_annotation_values \
+		-layer $detail_layer -annotation DFM_METRIC]]} {
+	dfm::add_annotation -layer $detail_layer -annotation DFM_METRIC \
+		-value "Rule_Thickness_Topo"
+	}
+
+	## Always delete a property before attempting to add it
+	catch {dfm::delete_property $detail_layer $hotspot_rule} msg
+	dfm::add_property $detail_layer $hotspot_rule 0 -double -default
+
+	## Create a grid for each property of interest from the detail layer
+	set cuHeight_grid [cmp::create_grid -layer $detail_layer \
+		-property "Thickness_Z2"]
+	set ildHeight_grid [cmp::create_grid -layer $detail_layer \
+		-property "Thickness_Z1"]
+	set density_grid [cmp::create_grid -layer $detail_layer \
+		-property "Density"]
+
+	## Math operations on grids
+	## This example computes the same values as the default
+	##"Thickness_Topology" property
+	set invDensity_grid [cmp::subtract_grid 1 $density_grid]
+	set density_cuHeight_grid [cmp::multiply_grid $density_grid \
+		$cuHeight_grid]
+	set invDensity_ildHeight_grid [cmp::multiply_grid $invDensity_grid \
+		$ildHeight_grid]
+
+	## Save the final result
+	set topo_grid($detail_layer) [cmp::add_grid $density_cuHeight_grid \
+		$invDensity_ildHeight_grid]
+	cmp::save_grid $topo_grid($detail_layer) -layer $detail_layer \
+		‑property $hotspot_rule
+}
+
+proc topo_gradient { detail_layer threshold } {
+
+	## Grid results can be stored in Tcl global variables for reuse
+	global topo_grid
+	set hotspot_rule_name "Hotspot_Thickness_Topo"
+
+	## Always delete a property before attempting to add it
+	catch {dfm::delete_property $detail_layer $hotspot_rule_name} msg
+	dfm::add_property $detail_layer $hotspot_rule_name 0 -double -default
+
+	## Grid operations to compute a gradient and compare it to some
+	## threshold
+	set diff_grid [cmp::gradient_grid $topo_grid($detail_layer) \
+		-radius 1 ‑max]
+	set result_grid [cmp::less_grid [cmp::subtract_grid $diff_grid \
+		$threshold] -element -limit 0 -result_value 0]
+
+	## Save the result as a property with a value
+	cmp::save_grid $result_grid -layer $detail_layer \
+		-property $hotspot_rule_name
+
+	## Hotspot grids can only have values 0, 1
+	## 0 means no hotspot, 1 is a hotspot
+	set hotspot_grid [cmp::greater_grid $result_grid -element \
+		-limit 0 -result_value {1 0}]
+
+	## Save the result as a hotspot property
+	cmp::save_grid $hotspot_grid -layer $detail_layer \
+		-property $hotspot_rule_name
+
+	## Calculate and return the number of failing tiles
+	set fail [expr int([cmp::get_grid_data $hotspot_grid -sum_elements])]
+	return $fail
+}
+
+## Register both procs for use in Calibre CMPAnalyzer
+cmp::register_hotspot_proc -rule_name "Thickness_Topo" \
+	-proc thickness_topo -output_properties "Thickness_Topo"
+cmp::register_hotspot_threshold_proc -rule_name "Thickness_Topo" \
+	-proc topo_gradient -values 50 -output_properties \ 	"Hotspot_Thickness_Topo"</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExamplesCmpYieldserverCommands_id775ade0e.html" title="Examples for use with Calibre CMPAnalyzer.">Examples for CMP YieldServer Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmpanalyzer_user"
+                DocTitle = "Calibre® CMPAnalyzer User’s Manual"
+                PageTitle = "Example Script to Calculate User‑Defined Hotspots"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_ExampleScriptToCalculateUserDefinedHotspots_id2994db71.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® CMPAnalyzer User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="ptpCompile Input File Format" />
+<meta name="abstract" content="The ptpCompile input file is used to define the parameters for the ptpCompile run." />
+<meta name="description" content="The ptpCompile input file is used to define the parameters for the ptpCompile run." />
+<meta name="prodname" content="Calibre nmMPC and Calibre nmCLMPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmpc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>ptpCompile Input File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="ptpCompile Input File Format" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">ptpCompile Input File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input file
+for ptpCompile</p>
+<p class="shortdesc">The ptpCompile input file is
+used to define the parameters for the ptpCompile run.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The ptpCompile input file consists of several lines
+of keywords. A keyword defines the scope for any subsequent text
+lines until another keyword is found. A line that begins with a
+# character is a comment.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id6351f357-92d1-44bd-9ab4-4e51f1355716">dbgrid <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Database
+grid, in microns, in which to specify the test layout features.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id1189e422-90ef-407d-8baa-b6efe9fbb139">designgrid <span class="keyword ParameterName OptionalReplaceable">val</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Design
+grid, in microns. By default, it is assumed to be the value of dbgrid.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id3d2fb347-1722-4937-b088-e4d92e254a32">topcellname <span class="keyword ParameterName OptionalReplaceable">top_cell_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The name
+of the top cell to create for the current test layout.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idee85dce7-f8e4-4c0d-9f4b-184d60973b1b">gdsfile <span class="keyword ParameterName OptionalReplaceable">gds_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The output
+GDS file to write.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id1258470c-156c-4118-b400-36088ccfd492">ggfile <span class="keyword ParameterName OptionalReplaceable">gg_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The output
+gauge file to write.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idd3c1ed45-10ea-47a4-975d-7462d702bc20">inset <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Sets
+the gap between two adjacent features, in microns. The default is
+10 microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id74818da0-1d88-4987-9aa7-0d48d44041c6">blocksize <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Sets
+the size of each feature block, in microns. The default is 50.0
+microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id38cec1f2-fa6a-4c6c-b8c5-59348ccdf4b8">FEATURE <span class="keyword ParameterName OptionalReplaceable">feature_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Begins
+the definition of a feature in proximity model. The <span class="keyword ParameterName OptionalReplaceable">feature_name</span> syntax
+is described in the following section, “<a class="xref fm:HeadingOnly" href="#idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idd5fd40b2-b27f-461c-8a2c-7c1c5532a246">Supported Feature Names</a>”.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idd5fd40b2-b27f-461c-8a2c-7c1c5532a246"><h2 class="title Subheading sectiontitle">Supported Feature
+Names</h2><p class="p">The list of structure names along
+with the required parameter list are shown below. The <span class="keyword ParameterName OptionalReplaceable">val</span> is
+in microns, and should never exceed (blocksize-2*inset).</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__iddd42554d-1185-48d1-b63e-a3d8cff5e6a5">line_space</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic line and spaces. Enter a set of line widths and a set of
+space values. Line/Space features are generated for each combination.
+There is one CD measurement location, as marked by the drawn line,
+which is the line width at the center of the structure. Dimension
+values include:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idad9eefa3-9e0b-4dd2-83b5-a460ff83fc30"><p class="p Opt">Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id0f05f769-9191-46df-8bcb-1e21db3c91df"><p class="p Opt">Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id77e7e0cb-d05a-4147-9ce7-dd6593a1d4cf"><span class="figcap"><span class="fig--title-label">Figure 1. </span>line_space Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="154" src="../graphics/line_space.JPG" width="145" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id3b3e28a5-dcfe-4c7c-9d50-33a3bff0209e">post</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic posts. Enter the following information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__ide9d88133-24a3-4c7f-8d63-f88c71d4172c"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idcab7ed76-768a-4e02-af09-8ab753044df7"><p class="p Opt">Post widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Post features are generated
+for each combination. There is one CD measurement location, as marked
+by the drawn line, which is the post width at the center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idf118cc71-03c7-457a-85af-56cd46661fc0"><span class="figcap"><span class="fig--title-label">Figure 2. </span>post Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="174" src="../graphics/post.jpg" width="192" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idce179aa1-2751-465d-9d2a-e2278b713fd9">contact</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic contacts. Enter the following information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id607f551d-26f2-4e46-a4fe-b0b8e808160f"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id03112717-43b3-434b-9be9-fddeab698545"><p class="p Opt">Contact widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Contact features are generated
+for each combination. There is one CD measurement location, as marked
+by the drawn line, which is the contact space at the center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idbfbd3ba5-1b7b-4b6b-b6c5-9c54f0a1dda7"><span class="figcap"><span class="fig--title-label">Figure 3. </span>contact Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="154" src="../graphics/contact.JPG" width="158" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id256d37aa-9f9f-499c-af84-74eaf09484e3">line_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic line/space features with line-end gaps. Enter the following
+information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__ida4f508d3-4bce-48ae-b42f-1ac5575f54e0"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id4ab5a30c-09d2-401e-8c4d-4b998060f00e"><p class="p Opt">Line widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idea12e728-d75f-4918-a020-2e32ec99a8ed"><p class="p Opt">Line-end gaps: Gaps {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Line/Space features are generated
+for each combination. There are two measurement locations, as marked
+by the lines shown. One is the gap along the vertical direction
+at the center of the structure, the other is line width along the
+horizontal direction at the upper center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__ide49b9db4-b6bb-48b1-9b49-d2d2e973acd6"><span class="figcap"><span class="fig--title-label">Figure 4. </span>line_end Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="155" src="../graphics/line_end.JPG" width="158" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idf54a8790-94ea-4a93-bc82-c7b942f3413b">space_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic line/space features with space-end gaps. Enter the following
+information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id43d40c75-d865-4e30-9d35-b242909a4669"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__ida166fec4-cc69-4464-867b-a72db7788964"><p class="p Opt">Line widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id7e0783c9-3e5c-4930-aae1-7649b80e0ffc"><p class="p Opt">Space-end gaps: Gaps {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Line/Space features are generated
+for each combination. There are two measurement locations, as shown
+by the marked lines. One is the gap along the vertical direction
+at the center of the structure, the other is space alone horizontal
+direction at the upper center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id3ebc8a55-bb7c-46f9-92d1-e6e0e35eec48"><span class="figcap"><span class="fig--title-label">Figure 5. </span>space_end Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="162" src="../graphics/space_end.jpg" width="154" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id1e0cb12e-f5fb-43fa-8f97-089e921e41cf">single_line_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+a periodic line/space features with single line-end gap. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id67c35c70-b75a-40d8-ae3f-3990ca7a4582"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idf1a217dc-4fa5-4849-a0b1-2f6f8d4cb451"><p class="p Opt">Line widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id87125dbd-62df-42c8-8f49-66ec65584601"><p class="p Opt">Line-end gaps: Gaps {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Line/Space features are generated
+for each combination. There are two measurement locations, as marked
+by the lines shown. One is the gap along the vertical direction
+at the center of the structure, the other is line width along the
+horizontal direction at the upper center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id068ffea6-8f97-442c-9359-86a2fcc3b5b1"><span class="figcap"><span class="fig--title-label">Figure 6. </span>single_line_end Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="156" src="../graphics/single_line_end.jpg" width="148" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id3c235112-b52e-440c-a9cc-3116906615ac">single_space_end</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic line/space features with single space-end gap.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id9ddf5715-6742-416e-aa14-05a9406e74c0"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id6eef8d60-54b4-4e7b-8e84-ce7b11d2df9b"><p class="p Opt">Line widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id7e6fd6ff-d501-4f92-8357-e02f3069e36f"><p class="p Opt">Space-end gaps: Gaps {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Line/Space features are generated
+for each combination. There are two measurement locations, as shown
+by the marked lines. One is the gap along the vertical direction
+at the center of the structure, the other is space alone horizontal
+direction at the upper center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id1a3d598f-3904-4d1c-92b6-fa69bc780905"><span class="figcap"><span class="fig--title-label">Figure 7. </span>single_space_end Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="156" src="../graphics/single_space_end.jpg" width="141" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idb04774e8-7650-497b-8aca-c6a39be3b509">fidelity</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+fidelity patterns. Enter the following information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id9c3fdba2-b93d-4d6e-b0b5-f981ade2afae"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id485f9450-230e-4618-a3b6-9c3c7dcbb42c"><p class="p Opt">Widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id882d6b8d-06c5-424c-99c6-8d635faf82d3"><p class="p Opt">Gap values: Gaps {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Fidelity patterns are generated
+for each combination. There are two measurement locations, as marked
+by the drawn lines. One is line width at lower center of the structure, the
+other is space at the upper center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id80d562bf-99c6-4da9-b4fc-83f149d48c31"><span class="figcap"><span class="fig--title-label">Figure 8. </span>fidelity Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="152" src="../graphics/fidelity.JPG" width="243" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id238b5b25-5e51-4ad6-a9b1-3b73b4a83407">post_corner</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic posts. It has the same structure and measurement location
+as feature post, except its size is only 1/10th of the size of the
+feature post. Enter the following information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id1414af95-6692-4dc5-8b0b-0c94a539c0b1"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id0b0c34b9-437c-44e5-8cbf-da2753ebfa0f"><p class="p Opt">Post widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Post features are generated
+for each combination. Post width values are usually very small,
+(for example, 40, 60, 80, 100, and 120 nm).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id863c8047-0c68-4e7f-bf20-fa9a782bf5c6">contact_corner</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+periodic contacts. It has the same structure and measurement location
+as feature contact, except its size is only 1/10th of the size of
+the feature contact. Enter the following information:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id23f7018b-ac57-4a07-9b0d-35a98daf9d7b"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id499a9d89-a489-4e73-98dd-d44a3b9af579"><p class="p Opt">Contact widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Contact features are generated
+for each combination. Contact width values are usually very small
+(for example, 40, 60, 80, 100, and 120 nm).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id7b1ee8e2-3cef-4313-92e6-a83873bcc016">chess</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+a chess-board pattern. Enter the following information: </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id9944882a-cfb6-43a7-84c1-280e8e868e88"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idf9727690-77c4-4d63-abca-3f8e462f97f4"><p class="p Opt">Contact widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+<p class="p">Contact features are generated
+for each combination. There is one measurement location, as marked
+by the drawn line, which is the line width at the center of the structure.</p>
+<div class="fig fignone" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id483b3e2d-cc8d-40ad-86ec-f343a50af051"><span class="figcap"><span class="fig--title-label">Figure 9. </span>chess Example</span><br /><div class="imagecenter"><img class="image imagecenter" height="149" src="../graphics/chess.JPG" width="149" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id116fa101-fdfc-41dd-9423-d56b4a980f18">line_space_fill</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+a line_space_fill pattern. Enter a pair of space width values to
+generate line-and-space patterns to fill unused space on the mask:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__idcd9aeb2b-9e1b-4d6d-83fa-514a32c77964"><p class="p Opt">Spacing values: Spaces {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+<li class="li ArgOption" id="idb2fc8cb4-6974-49cb-8c9c-164fe16f9fea__id62514d79-1c0b-4446-be86-9ef4dcba5a38"><p class="p Opt">Widths: Widths {<span class="keyword ParameterName OptionalReplaceable">val</span>}+</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following file, <span class="keyword ParameterName Required">proximity.in</span> is
+used for generating proximity structures:</p>
+<pre class="pre codeblock leveled"><code>PATTERN "proximity" 
+dbgrid 0.001 
+designgrid 0.001 
+dbunit 1 
+topcellname PROXIMITY_TOP 
+blocksize 50 
+gdsfile proximity.gds 
+ssfile proximity.gg 
+markers none 
+border 10 
+FEATURE line_space 
+Spaces 0.120 0.140 0.160 0.180 0.200 0.220 0.250 0.270 0.300 0.360 0.420 0 1.000 1.200 .460 0.520 0.600 0.700 0.800 
+0.5W2i0d t0h.s6 0 00 .F0E8A0T U0R.E0 9p0o s0t.100 0.110 0.120 0.140 0.160 0.180 0.200 0.220 0.250 0.270 0.300 0.360 0.420 0.460 
+Spaces 0.200 0.300 0.500 
+Widths 0.200 0.300 0.500 
+FEATURE contact 
+Spaces 0.200 0.300 0.500 
+Widths 0.200 0.300 0.500 
+FEATURE line_end 
+Spaces 0.200 0.250 0.300 
+Widths 0.200 0.250 0.300 
+Gaps 0.320 0.500 
+FEATURE space_end 
+Spaces 0.200 0.250 0.300 
+Widths 0.200 0.250 0.300 
+Gaps 0.320 0.500 
+FEATURE single_line_end 
+Spaces 0.200 0.250 0.300 
+Widths 0.200 0.250 0.300 
+Gaps 0.320 0.500 
+FEATURE single_space_end 
+Spaces 0.200 0.250 0.300 
+Widths 0.200 0.250 0.300 
+Gaps 0.320 0.500 
+FEATURE fidelity 
+Spaces 1.000 1.000 1.000 
+Widths 0.200 0.250 0.300 
+Gaps 0.320 
+FEATURE post_corner 
+Spaces 0.040 0.060 0.080 
+Widths 0.040 0.060 0.080 
+FEATURE contact_corner 
+Spaces 0.040 0.060 0.080 
+Widths 0.040 0.060 0.080 
+FEATURE chess 
+Widths 0.200 0.250 0.300 
+FEATURE line_space_fill 
+Spaces 0.250 
+Widths 0.250 </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TestLayoutGenerationCommands_id6b32e5db.html" title="The following table summarizes the commands used for test layout generation.">Test Layout Generation Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmpc_useref"
+                DocTitle = "Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual"
+                PageTitle = "ptpCompile Input File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_PtpcompileInputFileFormat_idb2fc8cb4.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

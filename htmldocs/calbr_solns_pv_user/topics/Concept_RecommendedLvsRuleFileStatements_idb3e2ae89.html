@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Recommended LVS Rule File Statements" />
+<meta name="abstract" content="LVS in Calibre is performed in two primary phases: circuit extraction and circuit comparison. Performing circuit extraction depends upon your rule file containing the appropriate layer derivations, connectivity extraction statements, text recognition statements, and device recognition statements. Hence, considerable rule file setup is required to perform circuit extraction, some of which may be performed by your foundry." />
+<meta name="description" content="LVS in Calibre is performed in two primary phases: circuit extraction and circuit comparison. Performing circuit extraction depends upon your rule file containing the appropriate layer derivations, connectivity extraction statements, text recognition statements, and device recognition statements. Hence, considerable rule file setup is required to perform circuit extraction, some of which may be performed by your foundry." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb3e2ae89-0ee2-4543-af54-a5ab1013b24e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Recommended LVS Rule File Statements</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Recommended LVS Rule File Statements" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb3e2ae89-0ee2-4543-af54-a5ab1013b24e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Recommended LVS Rule File Statements</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">LVS in Calibre
+is performed in two primary phases: circuit extraction and circuit
+comparison. Performing circuit extraction depends upon your rule
+file containing the appropriate layer derivations, connectivity
+extraction statements, text recognition statements, and device recognition
+statements. Hence, considerable rule file setup is required to perform
+circuit extraction, some of which may be performed by your foundry.</span>
+</div>
+<p class="p">The overhead for setting up the
+rule file for LVS comparison is small in comparison to circuit extraction.
+It is a good practice to begin running Calibre nmLVS as closely
+as possible to the default configuration. The default settings are
+well chosen for most comparison situations. However, there are numerous
+specification statements that cover less common situations, and you
+can make necessary adjustments to meet your needs.</p>
+<p class="p">The required LVS rule file statements are discussed
+under “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '99Required Statements', 'calbr_ver_user'); return false;">Required Statements</a>” in the <cite class="cite">Calibre Verification User’s Manual</cite>.</p>
+<p class="p">For a complete summary of LVS specification
+statements for use in the rule file, see “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Specification Statements', 'svrf_ur'); return false;">LVS Specification Statements</a>” in the <cite class="cite">SVRF Manual</cite>.</p>
+<p class="p">This table shows recommended rule file statements
+that are not defaults and the circumstances for their use.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idb3e2ae89-0ee2-4543-af54-a5ab1013b24e__id213a6740-450d-41f6-aada-01d1264b78f6" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Recommended LVS Rule File Statements</span></caption><colgroup><col style="width:2.087in" /><col style="width:4.087in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d29518e198"><p class="p">Statement</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d29518e205"><p class="p">Usage</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p">DEVice with <span class="ph FontProperty emphasis"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DEV99device_annotation_program', 'svrf_ur'); return false;">device_annotation_program</a></span> block.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">The device annotation program block is especially
+useful when there are Device properties used for device characterization
+rather than LVS comparison. Annotation properties are calculated
+as DFM properties.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'ERC Cell Name', 'svrf_ur'); return false;">ERC Cell Name</a> YES CELL SPACE XFORM</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies that ERC results
+have cell coordinates rather than global coordinates. A transformation
+between top-level space and cell space is provided so that you can
+shift back and forth in Calibre RVE.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'ERC Summary Report', 'svrf_ur'); return false;">ERC Summary Report</a> HIER</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies that the ERC
+Summary report give results on a per-cell basis in addition to a
+per-rule-check basis.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Base Layer', 'svrf_ur'); return false;">Layout Base Layer</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies the names of
+device-forming layers as well as contact layers. This is a performance
+optimizing statement. It is important that well, substrate, via,
+interconnect metal, and marker or other special-purpose layers not
+be specified.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a> PRESET [FILL]</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies that hcells
+are reported and expanded automatically during Calibre nmLVS-H circuit
+extraction. This is a performance optimizing statement.</p>
+<p class="p">For LVS runs after fill has been inserted, add the FILL keyword
+and specify <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Dummy Layer', 'svrf_ur'); return false;">Layout Dummy Layer</a> with
+the fill layers. Specifying <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Exclude Cell', 'svrf_ur'); return false;">Exclude Cell</a> for
+fill cells or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Execute ERC', 'svrf_ur'); return false;">LVS Execute ERC</a> NO
+can also be helpful. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Hcell Report', 'svrf_ur'); return false;">LVS Hcell Report</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies to produce a detailed hcell report.
+The report can be particularly useful if you are unsure of your
+hcell selection methodology, or if you are trying to optimize an hcell
+list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Cpoint', 'svrf_ur'); return false;">LVS Cpoint</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies a correspondence
+point between layout and source. This command is especially useful
+for corresponding net names that differ in layout and source.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Ground Name', 'svrf_ur'); return false;">LVS Ground Name</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies the names of
+ground nets in the design. This statement is used for ERC, logic
+gate recognition, and other LVS modules.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Power Name', 'svrf_ur'); return false;">LVS Power Name</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies the names of
+power nets in the design. This statement is used for ERC, logic
+gate recognition, and other LVS modules.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Isolate Shorts', 'svrf_ur'); return false;">LVS Isolate Shorts</a> {YES BY LAYER} | NO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">If performing short isolation
+during circuit extraction, BY LAYER specifies to present the results
+for each layer. This allows you to highlight polygons in Calibre
+RVE on a per-layer basis, which is helpful in tracing shorts. There
+is also a BY CELL option that shows results per cell that is frequently
+useful.</p>
+<p class="p">For faster LVS turnaround time, specify NO and do short isolation
+as a separate step. See “<a class="xref fm:HeadingAndPage" href="TaskTop_PerformingOnlyShortIsolation_id617204e2.html#id617204e2-5850-4a48-b8aa-39483501c015__TaskTop_PerformingOnlyShortIsolation_id617204e2.xml#id617204e2-5850-4a48-b8aa-39483501c015" title="In certain cases, it can be desirable to concentrate on performing layout short isolation over other circuit extraction tasks. With the appropriate rule file configuration and knowledge of Query Server commands, it can be faster to perform short isolation as discussed in this section.">Performing Only Short Isolation</a>”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Push Devices', 'svrf_ur'); return false;">LVS Push Devices</a> SEPARATE PROPERTIES YES</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies that properties
+not used for LVS comparison be removed from devices to facilitate
+pushdown after promotion. This setting is generally recommended
+for all flows. It is required for the pushdown separated properties (PDSP)
+flow that uses the Calibre Connectivity Interface in a subsequent
+step to LVS.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report Option', 'svrf_ur'); return false;">LVS Report Option</a> BX EB EC EO ES F FX NOK R S V W</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies the following <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a> contents:</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">BX</span>:
+List LVS Box cells.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">EB</span>:
+Bad devices in circuit extraction cause an INCORRECT LVS result.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">EC</span>:
+Sconnect conflicts in circuit extraction cause an INCORRECT LVS
+result.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">EO</span>:
+Open circuits in circuit extraction cause an INCORRECT LVS result.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">ES</span>:
+Short circuits in circuit extraction cause an INCORRECT LVS result.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">F</span>:
+Do not report smashed MOSFETS.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">FX</span>:
+Provide detailed fix suggestions for common problems.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">NOK</span>:
+Report contains comparison details and statistics only for incorrect
+cells. Particularly useful when larger hcell lists are used.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">R</span>:
+Disables reporting of ambiguity resolution points when the overall
+comparison result is CORRECT.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">S</span>:
+Sconnect conflict details appear in the run transcript and the circuit
+extraction report.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">V</span>:
+Reports virtual connections in the circuit extraction report.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">W</span>:
+Causes LVS-H to report an error when source and layout refer to
+the same file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Summary Report', 'svrf_ur'); return false;">LVS Summary Report</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies that LVS generates
+a summary report file after a circuit comparison run. Used in conjunction
+with Mask SVDB Directory QUERY.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> svdb QUERY [CCI]</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">The QUERY option specifies
+to write an LVS results database that can be loaded into Calibre
+RVE for debugging LVS discrepancies. </p>
+<p class="p">Use the CCI option in a PDSP flow or if you need the Calibre
+Connectivity Interface of the Query Server for post-processing.</p>
+<p class="p">For faster LVS turnaround time, you can omit Mask SVDB Directory
+from the rules. Specifying only the PHDB option can be useful in
+some cases where you need the Query Server for post-processing.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e198 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Virtual Connect Report', 'svrf_ur'); return false;">Virtual Connect Report</a> YES</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d29518e205 "><p class="p">Specifies to report virtual
+connections when they apply.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_LvsBestPractices_id6b55e1bc.html" title="There are a number of best practices to consider when using Calibre nmLVS, including rule file elements you should use, and rule file practices you should avoid.">LVS Best Practices</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_LvsRuleFileElementsAvoid_id72471a22.html" title="The following table shows rule file elements that should be avoided in most circumstances.">LVS Rule File Elements to Avoid</a></div>
+<div><a class="link" href="../topics/Concept_BasicLvsRuleFileTemplate_id70b1f4eb.html" title="A basic LVS rule file template is included. Modify it as necessary for your run.">Basic LVS Rule File Template</a></div>
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Specification Statements', 'svrf_ur'); return false;">LVS Specification Statements [Standard Verification Rule Format (SVRF) Manual]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Recommended LVS Rule File Statements"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_RecommendedLvsRuleFileStatements_idb3e2ae89.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

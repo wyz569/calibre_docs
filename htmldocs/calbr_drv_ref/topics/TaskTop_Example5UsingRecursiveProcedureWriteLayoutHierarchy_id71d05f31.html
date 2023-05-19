@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy" />
+<meta name="abstract" content="In this example, you write a script that writes the layout hierarchy for any layout file, regardless of how many levels there are in the hierarchy. You do this by writing a procedure that traverses the hierarchy until it can go no further. Explanations follow the example code." />
+<meta name="description" content="In this example, you write a script that writes the layout hierarchy for any layout file, regardless of how many levels there are in the hierarchy. You do this by writing a procedure that traverses the hierarchy until it can go no further. Explanations follow the example code." />
+<meta name="DC.subject" content="Recursion" />
+<meta name="keywords" content="Recursion" />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id71d05f31-9f8f-42f2-b57f-03115bac763a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id71d05f31-9f8f-42f2-b57f-03115bac763a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example 5
+- Using a Recursive Procedure to Write a Layout Hierarchy</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">In this example,
+you write a script that writes the layout hierarchy for any layout
+file, regardless of how many levels there are in the hierarchy.
+You do this by writing a procedure that traverses the hierarchy
+until it can go no further. Explanations follow the example code.</p>
+<p class="p">Topics introduced:</p>
+<ul class="ul"><li class="li" id="idf854e6ea-d53b-46fa-b7b0-d0eb1af1f08a"><p class="p">Comments.</p>
+</li>
+<li class="li" id="idbe6c6cf4-2370-48e6-8867-130eed0c1e6c"><p class="p">Procedure arguments with default values.</p>
+</li>
+<li class="li" id="idaf3fdc8d-33fc-4adf-94d8-2f9002cab634"><p class="p">Recursive procedures.</p>
+</li>
+<li class="li" id="idba1fffc9-007f-4f9a-a736-f78bf57fde37"><p class="p">Local versus global variables.</p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id87abfe52-0408-4c40-8df9-6a2bf5917256"><p class="p">A
+sample GDS file named <span class="ph filepath italic">std_.gds</span> exists
+in the directory from which you invoke Calibre DESIGNrev.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__idd502e303-c845-4abf-83d2-4ef1580912c3"><span class="ph cmd">Copy the following script
+into a text file named <span class="ph filepath italic">hier_dump.tcl</span>.
+Refer to the “Results” section in this example for explanations
+regarding the comments, procedures, and variables used in this example.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>############################################################## 
+# PROC: dump_hier 
+# L       = layout object name 
+# F       = file to dump hierarchy to 
+# C       = cell to begin dumping from, "" means use topcell 
+# Indent  = string to format the hierarchy 
+############################################################## 
+
+proc dump_hier { L  F {C ""} {Indent ""} } { 
+   if {$C == ""} { 
+      set C [$L topcell] 
+   } 
+   puts $F "$Indent --&gt; $C" 
+   append Indent "       " 
+   foreach child [$L children $C] { 
+      dump_hier $L $F $child $Indent 
+   } 
+} 
+ 
+set fileID [open dump_hier.txt w] 
+ 
+# 
+# Step 1: open the layout 
+# 
+ 
+set layout [layout create std_.gds] 
+ 
+# 
+# Step 2: write the hierarchy to the file 
+# 
+ 
+dump_hier $layout $fileID 
+ 
+# 
+# Step 3: Close (and save the file)  
+# 
+ 
+close $fileID</code></pre></div></li>
+<li class="li step stepexpand" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__idb881bc3b-258e-49c1-982c-583a61f625dd"><span class="ph cmd">Invoke Calibre DESIGNrev:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">$ <kbd class="ph userinput">calibredrv hier_dump.tcl</kbd></pre>
+</div></li>
+<li class="li step stepexpand" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id6a43dbca-bd04-4f80-a88d-dc6c1f115db5"><span class="ph cmd">View the file you have created:</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">$ <kbd class="ph userinput">more dump_hier.txt</kbd></pre>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><ul class="ul"><li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id71208124-c3ee-46e6-8975-249e2a3c1c74"><p class="p">Comments</p>
+<p class="p">Comments in a Tcl program begin
+with the pound sign “#”. Any time you write a Tcl script, you should
+use comments to explain what you are doing and tell a future user how
+to use the script.</p>
+<p class="p">These first seven lines of the script
+are comment lines that introduce the procedure that follows, defining
+the name of the procedure and the arguments it takes.</p>
+<pre class="pre codeblock leveled"><code>############################################################## 
+# PROC: dump_hier 
+# L      = layout object name 
+# F      = file to dump hierarchy to 
+# C      = cell to start dumping from, "" means use topcell 
+# Indent = string used to format the hierarchy 
+############################################################## </code></pre></li>
+<li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id6a7d37cc-4b2d-4cdb-8ea0-5e210eb939de"><p class="p">Procedures</p>
+<p class="p">The next nine lines contain the
+procedure itself. </p>
+<pre class="pre codeblock leveled"><code>proc dump_hier { L  F {C ""} {Indent ""} } { 
+   if {$C == ""} { 
+      set C [$L topcell] 
+   } 
+   puts $F "$Indent --&gt; $C" 
+   append Indent "       " 
+   foreach child [$L children $C] { 
+      dump_hier $L $F $child $Indent 
+   } 
+} </code></pre><p class="p">Notice this list of arguments is
+different than the list of arguments in the procedure you wrote
+in the previous exercise. It contains four arguments:</p>
+<pre class="pre codeblock"><code>{ L F {C “”} {Indent “”} }</code></pre><p class="p">The first two arguments, L and F,
+are represented by their names alone because they have no default
+values. The second two arguments, C and Indent, are enclosed in braces
+because they have default values, in both cases an empty string. </p>
+<p class="p">The body is also more complex. First,
+it checks to see if you passed it a cell name. If you did not pass
+it a cell name, the value of C is “ ”, which is the default value.
+In this case, the procedure extracts the cell name using the $layout
+topcell instance command.</p>
+<pre class="pre codeblock leveled"><code>if {$C == ""} { 
+	set C [$L topcell] 
+	} </code></pre><p class="p">Next the procedure writes the name
+of the cell it is processing to the output file. $Indent and “‑‑&gt;”
+add formatting to the output to help visualize the layout hierarchy. </p>
+<pre class="pre codeblock leveled"><code>puts $F "$Indent --&gt; $C" </code></pre><p class="p">The Tcl append command adds additional
+characters to an existing variable (in this case, $Indent). Here
+it shows the layout hierarchy graphically, forcing the name of a child
+cell to be indented relative to the name of the parent cell.</p>
+<pre class="pre codeblock leveled"><code>append Indent "       " </code></pre><p class="p">The last thing this procedure does
+is cycle through the children of the cell, invoking itself to print
+their names and children.</p>
+<pre class="pre codeblock leveled"><code>foreach child [$L children $C] { 
+	dump_hier $L $F $child $Indent 
+} </code></pre><p class="p">When a procedure calls itself, it
+is called a <dfn class="term italic">recursive procedure</dfn>.
+It calls itself as many times as needed, until it reaches a cell
+that has no children. It then pops back up one level of the hierarchy
+and looks for children of the next cell. </p>
+</li>
+<li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id394f0ae1-1dc4-4492-9e6f-98e198816166"><p class="p">Variables</p>
+<p class="p">Recursive procedures are possible
+because Tcl supports the concept of variable scope. Scope defines
+where a variable has meaning. Scope can be either local or global:</p>
+<ul class="ul"><li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id48e3eda3-1ae5-4487-9784-74e28791ceb8"><p class="p"><dfn class="term italic">Local
+variables</dfn> are variables that exist (have meaning) only within
+a single procedure. When you execute a procedure, Tcl creates a
+local variable for each of the arguments to that procedure. While
+Tcl is processing the body of the dump_hier procedure, it knows
+what $L is. Once it exits the procedure, $L has no meaning.</p>
+</li>
+<li class="li" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__id38deb12e-3871-4e8d-a697-1d2db87a1c51"><p class="p"><dfn class="term italic">Global
+variables</dfn> are variables that have meaning anywhere with the
+program<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>. </p>
+</li>
+</ul>
+<p class="p">When the recursive procedure calls
+itself, it launches a separate procedure, which happens to be another
+instance of the same procedure. The result is a procedure within
+a procedure, within a procedure. </p>
+<p class="p">All the variables in your recursive
+procedure are local. This means the variable F in the lowest level
+procedure, shown outlined with an orange dashed line in <a class="xref fm:Figure" href="#id71d05f31-9f8f-42f2-b57f-03115bac763a__iddfc453b6-ba5c-4eef-810b-94e4e8b65dc6">Figure 1</a>, is a completely different
+variable from the variable F in the middle procedure, shown outlined
+with a green solid line.</p>
+<div class="fig fignone" id="id71d05f31-9f8f-42f2-b57f-03115bac763a__iddfc453b6-ba5c-4eef-810b-94e4e8b65dc6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Graphical
+Representation of a Recursive Procedure</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/recursive_tcl_procedure.png" /></div><br /></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExplorationsInWritingProcedures_id1e4abc8d.html" title="Two examples are used to explore the basics of writing procedures, using examples that display an entire layout hierarchy.">Explorations In Writing Procedures</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_LChildren_id6c040879.html#id6c040879-cc42-4a69-94af-8c83d71d63b4__" title="Returns unique children (but not subsequent descendants) of the specified cell.">$L children</a></div>
+<div><a class="link" href="../topics/Command_LTopcell_id87543979.html#id87543979-64f2-4ff3-a8d7-23e596859349__" title="Returns the topcell name.">$L topcell</a></div>
+<div><a class="link" href="../topics/Contain_LayoutCreateCommands_id2e29d4c3.html" title="The layout create commands are used to create a new layout, or to create a view of or manipulate an existing layout. Different usages of the layout create command are available to support different layout database formats or methods for creating the layout view.">layout create Commands</a></div></div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  To use a global variable within a procedure,
+you must use special Tcl commands, such as global and upvar.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_Example5UsingRecursiveProcedureWriteLayoutHierarchy_id71d05f31.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

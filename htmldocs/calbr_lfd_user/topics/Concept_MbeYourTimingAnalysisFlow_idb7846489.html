@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="MBE and Your Timing Analysis Flow" />
+<meta name="abstract" content="Feeding Calibre LFD contour data forward into timing and power analysis is made possible by the Calibre LFD functions CSG (Contour Simplification for Gates) and CSI (Contour Simplification for Interconnect). These functions translate process variation data into the data that you can feed directly into your extraction tools." />
+<meta name="description" content="Feeding Calibre LFD contour data forward into timing and power analysis is made possible by the Calibre LFD functions CSG (Contour Simplification for Gates) and CSI (Contour Simplification for Interconnect). These functions translate process variation data into the data that you can feed directly into your extraction tools." />
+<meta name="DC.subject" content="Timing analysis using LFD" />
+<meta name="keywords" content="Timing analysis using LFD" />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb7846489-4f4a-4ec1-a575-b13cbffcdf3d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>MBE and Your Timing Analysis Flow</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="MBE and Your Timing Analysis Flow" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb7846489-4f4a-4ec1-a575-b13cbffcdf3d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">MBE and Your Timing Analysis Flow</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Feeding Calibre
+LFD contour data forward into timing and power analysis is made
+possible by the Calibre LFD functions CSG (Contour Simplification
+for Gates) and CSI (Contour Simplification for Interconnect). These
+functions translate process variation data into the data that you
+can feed directly into your extraction tools. </span>
+</div>
+<div class="fig fignone" id="idb7846489-4f4a-4ec1-a575-b13cbffcdf3d__id00bddd48-20a1-4e2f-8562-73e15ccb5ec3"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Calibre LFD to Calibre nmLVS
+Flow</span><br /><div class="imagecenter"><img class="image imagecenter" height="249" src="../graphics/lfd_mbe03a.png" width="462" /></div><br /></div>
+<p class="p">The CSG function calculates the gate L adjustment
+and gate W adjustment to feed into Calibre nmLVS. The CSI function
+calculates the RC interconnect adjustment (rectangles) to feed into parasitic
+extraction tools.</p>
+<p class="p">Inputs to the Calibre LFD portion of the flow
+include your layout, as well as a Calibre LFD kit specific to your
+foundry and process. Based on these inputs, the Calibre LFD toolset
+generates contours for each of the process conditions. The CSG function
+calculates the W adjusted (W<span class="ph FontProperty LiteralSubScript">adj</span>) values
+and L adjusted (L<span class="ph FontProperty LiteralSubScript">adj</span>)
+values, and writes data as files that can be used as input to your LVS
+tools. The CSI function generates rectangles for the interconnect
+layer, and writes that data as layers that can be used as input
+to your parasitic extraction tools.</p>
+<div class="fig fignone" id="idb7846489-4f4a-4ec1-a575-b13cbffcdf3d__idb0cb8534-6522-4163-b6cf-25b674e5fa92"><span class="figcap"><span class="fig--title-label">Figure 2. </span>CSG / CSI Inputs and Outputs</span><br /><div class="imagecenter"><img class="image imagecenter" height="203" src="../graphics/BG3.png" width="402" /></div><br /></div>
+<p class="p">Output files have been carefully
+designed to feed directly into existing extraction tools. Using the
+Calibre LFD MBE flow <span class="ph FontProperty emphasis">does not</span> require
+re-qualification of your LVS and extraction tools.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Calibre LFD is performed
+at the RET database unit level to ensure accuracy. This translates
+into a grid that is much finer than the design grid.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DesignersIncorporatingCalibreLfdIntoYourTimingSimulations_id966c08c4.html" title="As a designer, you can capture process variations and improve design robustness by combining the lithography and edge simulation data from Calibre LFD tools with timing analysis.">For Designers — Incorporating Calibre LFD Into Your Timing Simulations</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_Csg_id2dc82b9d.html#id2dc82b9d-8bee-4da4-85b3-7c51ea948ab5__" title="Generates a .csg file that can be used as input to Calibre nmLVS.">CSG</a></div>
+<div><a class="link" href="../topics/Command_Csi_idda0471c7.html#idda0471c7-bb56-44eb-afb4-4fd9cc4442ff__" title="Generates a new layer that is a simplified version of the input contour layer.">CSI</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "MBE and Your Timing Analysis Flow"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_MbeYourTimingAnalysisFlow_idb7846489.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

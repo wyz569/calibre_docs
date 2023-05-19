@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Custom Tcl-Based Script Creation" />
+<meta name="abstract" content="The Tcl-based script can be placed anywhere within a denseopc_options block. This allows for the script to be precompiled and checked for errors at parse time, and may enable a better controlled run time (the Tcl script becomes a string of valid Calibre nmOPC script commands, so there is no user Tcl code being executed per tile, at run time)." />
+<meta name="description" content="The Tcl-based script can be placed anywhere within a denseopc_options block. This allows for the script to be precompiled and checked for errors at parse time, and may enable a better controlled run time (the Tcl script becomes a string of valid Calibre nmOPC script commands, so there is no user Tcl code being executed per tile, at run time)." />
+<meta name="prodname" content="Calibre nmOPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="None" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® nmOPC™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Custom Tcl-Based Script Creation</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Custom Tcl-Based Script Creation" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Custom Tcl-Based Script Creation</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The Tcl-based
+script can be placed anywhere within a denseopc_options block. This
+allows for the script to be precompiled and checked for errors at
+parse time, and may enable a better controlled run time (the Tcl
+script becomes a string of valid Calibre nmOPC script commands, so
+there is no user Tcl code being executed per tile, at run time).</span>
+</div>
+<p class="p">An example of this method is as
+follows:</p>
+<pre class="pre codeblock leveled"><code>denseopc_options dense_opts { 
+	version 1 
+	background clear 
+	layer POLY opc dark mask 0 
+	layer SX visible dark mask 0 
+	layer SY hidden dark mask 0 
+	max_iterations 9 
+	image optical opt aerial 0.20 
+	scale 1.5 </code></pre><pre class="pre codeblock leveled"><code>### The following is a tagging script  
+	NEWTAG all POLY -out A 
+	NEWTAG edge A len &lt; 0.3 corner1 convex corner2 convex -out line_end 
+	NEWTAG neighbor both line_end len &lt; 0.4 corner convex -out line_end_adj 
+	NEWTAG neighbor both line_end_adj len &lt; 0.4 corner no_corner -out \ 
+		secondfrag 
+	NEWTAG neighbor prev line_end len &lt; .4 corner convex -out line_end_adj0 
+	NEWTAG neighbor next line_end len &lt; .4 corner convex -out line_end_adj1 
+	FRAGMENT modify pt1 line_end_adj0  0.05 0.1 0.1 
+	FRAGMENT delete pt1 line_end_adj0  
+	NEWTAG all POLY -out A 
+	NEWTAG edge A len &lt; .3 corner1 convex corner2 convex -out line_end 
+	NEWTAG neighbor prev line_end len &lt; 0.4 corner convex -out \ 
+		line_end_adj0 
+	FRAGMENT split line_end_adj0  0.4 0.1 
+	OPC_ITERATION 8
+	 
+	NEWTAG all POLY -out A 
+} </code></pre><p class="p">The following conditions apply to this method
+of tagging:</p>
+<ul class="ul"><li class="li" id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554__id26761652-fcc0-40e7-886b-827f3cf0ae52"><p class="p">Many of
+these commands trigger “tagscript” mode. This mode changes the following tool
+behavior:</p>
+<ul class="ul"><li class="li" id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554__id46e597ec-27e0-4b5b-94f3-c0fa9eddee02"><p class="p">The interaction
+distance typically increases.</p>
+</li>
+<li class="li" id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554__id1f716d9f-856b-4ee4-8463-9ba3817f0343"><p class="p">The max_iterations
+command does not trigger simulation. You must use OPC_ITERATION
+or OPC_XMEEF_ITERATION.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554__id1455ae63-f6f9-47d7-8da8-a9a71fa5f929"><p class="p">If you use “list” type variables like:</p>
+<pre class="pre codeblock leveled"><code>setenv algo “algorithm 1”  </code></pre><p class="p">you must instead use eval “$env(algo)” in
+the setup file.</p>
+</li>
+<li class="li" id="idefa1e1de-9312-43e7-9ea1-a0a18ce0b554__id0ea62361-5ea4-4da8-81b5-4fc29b9447ff"><p class="p">All “puts” statements will work in tag
+script mode, but since the tag script is evaluated at parse time,
+you will see “puts” outputs at that time (not at run time).</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When specifying
+layers for Tcl-based customization commands (such as <a class="xref fm:HeadingOnly" href="Command_Tdbias_idf769ccf6.html#idf769ccf6-1624-4f6c-8411-52088d98f148__Command_Tdbias_idf769ccf6.xml#idf769ccf6-1624-4f6c-8411-52088d98f148" title="Sets a rule-based fragment displacement.">TDBIAS</a> or <a class="xref fm:HeadingOnly" href="Command_NewtagAll_idb2ec741b.html#idb2ec741b-9f78-47d7-b5ae-4dfe3b8d47d2__Command_NewtagAll_idb2ec741b.xml#idb2ec741b-9f78-47d7-b5ae-4dfe3b8d47d2" title="Tags all fragments.">NEWTAG all</a>), use layer names only and not
+layer numbers. Using layer numbers in Tcl customization commands
+will generate an error.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreNmopcCustomTclScriptingReference_idf1a9dde5.html" title="Calibre nmOPC supports a Tcl-based scripting language which provides a highly customizable environment for Calibre nmOPC with a Tcl interface.">Calibre nmOPC Custom Tcl Scripting Reference</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tcl Library in Calibre', 'calbr_admin_gd'); return false;">Tcl Library in Calibre [Calibre Administrator's Guide]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmopc_useref"
+                DocTitle = "Calibre® nmOPC™ User’s and Reference Manual"
+                PageTitle = "Custom Tcl-Based Script Creation"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CustomTclBasedScriptCreation_idefa1e1de.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmOPC™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example 4 - Using a Simple Procedure to Write the Layout Hierarchy" />
+<meta name="abstract" content="In this example, you create a simple procedure to write the layout hierarchy. The Tcl commands used in this example include open, puts, set, proc, foreach, and read." />
+<meta name="description" content="In this example, you create a simple procedure to write the layout hierarchy. The Tcl commands used in this example include open, puts, set, proc, foreach, and read." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida6110053-e7dd-4eb2-9c3b-81c24e786568" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example 4 - Using a Simple Procedure to Write the Layout Hierarchy</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example 4 - Using a Simple Procedure to Write the Layout Hierarchy" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida6110053-e7dd-4eb2-9c3b-81c24e786568">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example 4
+- Using a Simple Procedure to Write the Layout Hierarchy</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">In this example,
+you create a simple procedure to write the layout hierarchy. The
+Tcl commands used in this example include open, puts, set, proc,
+foreach, and read. </p>
+<p class="p">The topics introduced include:</p>
+<ul class="ul"><li class="li" id="idc3479278-5ec4-4d03-a633-253d8ee0380e"><p class="p">Writing results to a file.</p>
+</li>
+<li class="li" id="id4dd5fefe-cede-488f-ba5b-3557b47b1274"><p class="p">Creating a procedure.</p>
+</li>
+<li class="li" id="id777fdeb2-4856-4cbb-a016-8ae965b9bce7"><p class="p">Using the foreach Tcl command to look
+through an array of objects.</p>
+</li>
+<li class="li" id="idc80c7074-66b6-4a14-a6f3-9900da2ea597"><p class="p">Displaying the contents of a file inside
+the Calibre DESIGNrev terminal window.</p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id87abfe52-0408-4c40-8df9-6a2bf5917256"><p class="p">A
+sample GDS file named <span class="ph filepath italic">sample.gds</span> exists in
+the directory from which you invoke Calibre DESIGNrev. The design, <span class="ph filepath italic">sample.gds</span>,
+used in this procedure has three levels of hierarchy. </p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__ide7c78aa2-5109-4512-9c60-3fe69754e8a9"><span class="ph cmd">Invoke Calibre DESIGNrev in
+GUI mode and open the <span class="ph filepath italic">sample.gds</span> layout.</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">$ <kbd class="ph userinput">calibredrv sample.gds</kbd></pre>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id1edf7e4d-2e9b-4619-9d46-0c5f746e689b"><span class="ph cmd">In the terminal window, press
+Enter to access the Tcl “%” prompt.</span></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id9a4d5975-8b28-4135-9dc5-5b8cabd2b53d"><span class="ph cmd">Enter the following lines
+to open a file to which you write the hierarchy data:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">set fileID [open dump_hier.txt w]</kbd> 
+&lt;<span class="keyword ParameterName OptionalReplaceable">fileID</span>&gt;
+% <kbd class="ph userinput">puts $fileID "This file displays the hierarchy for sample.gds"</kbd></code></pre><p class="p">In Interactive mode, Calibre
+DESIGNrev writes the results to the terminal window. However, because
+listing the hierarchy involves several commands, the results are
+interspersed between command lines. Writing to a file allows you
+to view the complete hierarchy without any extraneous information.</p>
+<p class="p">In this step, the Tcl commands
+do the following:</p>
+<ul class="ul"><li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id6521a839-d1eb-44b0-9cd5-7ebdd6b61078"><p class="p"><span class="ph FontProperty HeadingLabel">set</span> —
+Assigns the “fileID” variable the results of the command in the
+brackets.</p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id1197dec7-5bce-4503-9e20-e89e6ef5ac51"><p class="p"><span class="ph FontProperty HeadingLabel">open</span> —
+Opens the <span class="ph filepath">dump_hier.txt</span> file and returns a
+channel identifier, &lt;<span class="keyword ParameterName OptionalReplaceable">fileID</span>&gt;,
+that is used to communicate with that file. The w (write) argument
+tells Tcl to open the file as write-only. Tcl creates the file if
+it does not exist.</p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id50bc75c1-169b-4a15-b7c2-657c61dcaa6a"><p class="p"><span class="ph FontProperty HeadingLabel">puts</span> —
+Writes to the channel assigned to $fileID. This command takes two
+arguments, the output channel (where to print the information) and
+the data (what to print). Using the channel identifier ($fileID)
+as the first argument instructs the command to write the data to
+the file rather than the terminal window (stdout). The second argument
+is a string enclosed in quotes that specifies the data to write
+to the file. Since the string contains spaces, you must enclose
+it in quotes in order for the command to treat the string as a single object.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idb4bfcaff-eeea-4f58-9d3f-a8afb79a4d41"><span class="ph cmd">Get the layout name:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">set cwb [find objects -class cwbWorkBench] 
+</kbd>::cwbWorkBench::cwbWorkBench0
+% <kbd class="ph userinput">set L [$cwb cget -_layout]</kbd>
+layout0</code></pre></div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idaa581227-9c57-434e-9530-7ca755f4a0cb"><span class="ph cmd">Write the topcell of the layout
+to the file. This is the first level of hierarchy.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">puts $fileID "Topcell: [set top [$L topcell]]"</kbd></code></pre><p class="p">As in the previous puts command,
+the string enclosed in quotes is the data written to the file. However,
+this string is different. Even though there are quotes around the string,
+Tcl recognizes that the brackets are for command substitution and
+the $ for variable substitution. The puts command writes the string
+“Topcell:” followed by the value or values returned by processing
+the set command, which is the value it assigns to the variable.</p>
+<p class="p">Since the set command is also
+written using command substitution, the variable top gets set to
+the results of processing the instance command $L topcell. This
+command returns only the name of the topcell, rather than the full
+list of cells you listed in the previous exercises. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If you
+want to print special characters such as “[”, “]” or “$”, you can
+do so by preceding them with a backslash “\”.</p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id45620e4e-8842-4e46-8339-fce4addc4b27"><span class="ph cmd">Next, write a procedure to
+print out the children of a given cell. You invoke the procedure
+later. Here you define the procedure by specifying what it is called, the
+arguments it takes, and what it does.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">proc list_children {L F C} {
+		puts $F "Children of $C: [$L children $C]" 
+}</kbd> </code></pre><p class="p">To enhance readability and
+code clarity, procedures always take the following form:</p>
+<p class="p"><span class="keyword ParameterName Required">proc</span> &lt;<span class="keyword ParameterName OptionalReplaceable">name</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">arguments</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">body</span>&gt;</p>
+<ul class="ul"><li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id73da95b3-e492-49d6-ade7-5313cc7efda1"><p class="p"><span class="keyword ParameterName Required">proc</span> —
+Specifies this is a Tcl procedure.</p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idadcf73fa-f351-4ea0-8968-9312962eb92b"><p class="p"><span class="keyword ParameterName OptionalReplaceable">name</span> —
+Specifies a name for the procedure. In this example, the name of
+the procedure is “list_children”. </p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id650c31a5-3a40-4394-9cce-206617df8f43"><p class="p"><span class="keyword ParameterName OptionalReplaceable">arguments</span> —
+Specifies the formal arguments to the procedure. The arguments are
+always enclosed in braces ({ }). In this example, there are three
+arguments: L, F, and C. Within the body of the procedure, these
+arguments are used as variables.</p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idb0b38586-2c4a-4d55-b446-bad1baa2ca53"><p class="p"><span class="keyword ParameterName OptionalReplaceable">body</span> —
+Contains the body of the procedure (enclosed in braces) that the
+Tcl interpreter executes, even if it spans multiple lines and contains
+multiple commands. In this example, the body of this procedure prints
+the string “Children of” followed by the name of the cell you are processing,
+followed by the list of children.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id24437f87-67af-41b0-b1bf-060a1e2ec42e"><span class="ph cmd">Invoke the procedure to write
+the children of the topcell to the file. The children of the topcell
+form the second level of hierarchy.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">list_children $L $fileID $top</kbd></code></pre></div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id16f73ab9-04ba-4a45-a3dd-0890d7d66a1b"><span class="ph cmd">Invoke the procedure again
+to write any children of the children of topcell to the file. The
+children of the children form the third level of the hierarchy.
+To avoid issuing the procedure for every child cell, use the foreach
+command to cycle through them.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">foreach cell [$L children $top] { 
+		list_children $L $fileID $cell 
+}</kbd></code></pre><p class="p">The foreach command creates
+a <span class="ph FontProperty emphasis">loop variable</span> named
+“cell” and assigns it the values resulting from processing the command
+in brackets. It cycles through the values one at a time, evaluating
+the commands between the braces ({}). Since the third level of the
+hierarchy in <span class="ph filepath italic">sample.gds</span> contains
+two cells, NAND2A and NOR, this is equivalent to the following two
+foreach statements:</p>
+<pre class="pre codeblock leveled"><code>$ foreach cell [$L children NAND2A] { 
+	list_children $L $fileID $cell 
+} 
+foreach cell [$L children NOR] { 
+	list_children $L $fileID $cell 
+}</code></pre></div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idbbb35410-bd88-4bd6-a4be-1d112aa19c7c"><span class="ph cmd">Optionally, save the pathname
+of the invoking tool:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">puts $fileID [info nameofexecutable]</kbd> 
+/clbr_latest/ic/ixl/Mgc_home/pkgs/icwb/pvt/calibrewb</code></pre></div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idda7d8ae1-9591-4ab9-9d5a-b4f0289c3963"><span class="ph cmd">Save and close the file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>$ <kbd class="ph userinput">close $fileID</kbd></code></pre></div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__idc18af981-ca6f-410c-95eb-a3919251bcb7"><span class="ph cmd">Reopen the file to view its
+contents:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>$ <kbd class="ph userinput">set fileID [open dump_hier.txt r]</kbd>
+&lt;<span class="keyword ParameterName OptionalReplaceable">fileID</span>&gt;
+% <kbd class="ph userinput">read $fileID</kbd></code></pre><p class="p">In this step, the Tcl commands do the following:</p>
+<ul class="ul"><li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id2e22e345-9880-474b-8c3b-06582e2dc814"><p class="p"><span class="ph FontProperty HeadingLabel">open</span> —
+Opens the <span class="ph filepath">dump_hier.txt</span> file and returns a
+channel identifier. The file was originally opened using the w (write-only)
+argument in step <a class="xref fm:NumberOnly" href="#ida6110053-e7dd-4eb2-9c3b-81c24e786568__id9a4d5975-8b28-4135-9dc5-5b8cabd2b53d">3</a>. In this step, you
+specify the r (read) argument in order to open and read the data
+in the file.</p>
+</li>
+<li class="li" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id10459f82-bcf4-4975-9d01-d271339cf982"><p class="p"><span class="ph FontProperty HeadingLabel">read</span> —
+Returns the information read by the open command to the application.
+This command requires at least one argument, the input channel (where
+to find the information). In either interactive mode, the application
+prints the return values for all commands to the shell.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id5bd9137b-7c22-40c9-999d-527610d213d4"><span class="ph cmd">Close the file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>% <kbd class="ph userinput">close $fileID</kbd></code></pre><p class="p">You must always close any file
+you open to avoid data corruption and system resource depletion.</p>
+</div></li>
+<li class="li step stepexpand" id="ida6110053-e7dd-4eb2-9c3b-81c24e786568__id149c0933-eeb9-4ae3-a866-9835baec7a39"><span class="ph cmd">Open the
+resulting <span class="ph filepath">dump_hier.txt</span> file to review the
+results.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The results are written to the shell and to the file named <span class="ph filepath">dump_hier.txt</span>.
+If you are working with a layout that has additional levels of hierarchy,
+you can add another foreach statement that calls the procedure to
+list the next level in the hierarchy. For example, if your layout
+contains four levels of hierarchy, you would replace the foreach
+statement shown in step <a class="xref fm:NumberOnly" href="#ida6110053-e7dd-4eb2-9c3b-81c24e786568__id16f73ab9-04ba-4a45-a3dd-0890d7d66a1b">8</a> with the following:</p>
+<pre class="pre codeblock"><code>% foreach cell [$L children $top] { 
+	foreach child [$L children $cell] { 
+		list_children $L $fileID $child 
+	} 
+}</code></pre><p class="p">Working in interactive GUI
+mode, you can continue to add these looping statements as needed
+to cover the walk through the entire hierarchy. This is an inefficient
+way to solve the problem, because it depends on you being able to
+anticipate how many levels of hierarchy are in the layout. For a
+more efficient approach, refer to “<a class="xref fm:HeadingOnly" href="TaskTop_Example5UsingRecursiveProcedureWriteLayoutHierarchy_id71d05f31.html#id71d05f31-9f8f-42f2-b57f-03115bac763a__TaskTop_Example5UsingRecursiveProcedureWriteLayoutHierarchy_id71d05f31.xml#id71d05f31-9f8f-42f2-b57f-03115bac763a" title="In this example, you write a script that writes the layout hierarchy for any layout file, regardless of how many levels there are in the hierarchy. You do this by writing a procedure that traverses the hierarchy until it can go no further. Explanations follow the example code.">Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy</a>”.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">Here’s a transcript of writing the
+layout hierarchy:</p>
+<pre class="pre codeblock leveled"><code>$ <kbd class="ph userinput">calibredrv sample.gds</kbd> 
+ 
+% <kbd class="ph userinput">set fileID [open dump_hier.txt w]</kbd> 
+&lt;<span class="keyword ParameterName OptionalReplaceable">fileID</span>&gt;
+% <kbd class="ph userinput">puts $fileID "This file displays the hierarchy for sample.gds"</kbd> 
+% <kbd class="ph userinput">set cwb [find objects -class cwbWorkBench]</kbd> 
+::cwbWorkBench::cwbWorkBench0 
+% <kbd class="ph userinput">set L [$cwb cget -_layout]</kbd> 
+layout0 
+% <kbd class="ph userinput">puts $fileID "Topcell: [set top [$L topcell]]"</kbd> 
+% <kbd class="ph userinput">proc list_children {L F C} {</kbd> 
+	<kbd class="ph userinput">puts $F "Children of $C: [$L children $C]"</kbd> 
+<kbd class="ph userinput">}</kbd> 
+% <kbd class="ph userinput">list_children $L $fileID $top</kbd> 
+% <kbd class="ph userinput">foreach cell [$L children $top] {</kbd> 
+	<kbd class="ph userinput">list_children $L $fileID $cell</kbd>  
+<kbd class="ph userinput">}</kbd> 
+% <kbd class="ph userinput">close $fileID</kbd> 
+% <kbd class="ph userinput">set fileID [open dump_hier.txt r]</kbd> 
+&lt;<span class="keyword ParameterName OptionalReplaceable">fileID</span>&gt; 
+% <kbd class="ph userinput">read $fileID</kbd> 
+This file displays the hierarchy for sample.gds 
+Topcell: TOP 
+Children of TOP: NAND2A NOR 
+Children of NAND2A: NAND 
+Children of NAND:  
+Children of NOR:  
+
+% <kbd class="ph userinput">close $fileID</kbd> </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExplorationsInWritingProcedures_id1e4abc8d.html" title="Two examples are used to explore the basics of writing procedures, using examples that display an entire layout hierarchy.">Explorations In Writing Procedures</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_CwbCgetLayout_idd5e1fb72.html#idd5e1fb72-fb67-41f3-8729-d001d062a365__" title="Returns the handle of the layout visible in the layout viewer main window.">$cwb cget -_layout</a></div>
+<div><a class="link" href="../topics/Command_LChildren_id6c040879.html#id6c040879-cc42-4a69-94af-8c83d71d63b4__" title="Returns unique children (but not subsequent descendants) of the specified cell.">$L children</a></div>
+<div><a class="link" href="../topics/Command_LTopcell_id87543979.html#id87543979-64f2-4ff3-a8d7-23e596859349__" title="Returns the topcell name.">$L topcell</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Example 4 - Using a Simple Procedure to Write the Layout Hierarchy"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_Example4UsingSimpleProcedureWriteLayoutHierarchy_ida6110053.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Requirements for Writing Calibre LFD Rules" />
+<meta name="abstract" content="You must have a layout database, a basic rule file, an optical model, and a resist model in order to write Calibre LFD rules." />
+<meta name="description" content="You must have a layout database, a basic rule file, an optical model, and a resist model in order to write Calibre LFD rules." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Requirements for Writing Calibre LFD Rules</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Requirements for Writing Calibre LFD Rules" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Requirements for Writing Calibre LFD Rules</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">You must have
+a layout database, a basic rule file, an optical model, and a resist
+model in order to write Calibre LFD rules. </span>
+</div>
+<ul class="ul"><li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__idea34e7f7-dc1d-47b8-98d5-92479089b59f"><p class="p">A layout database containing the types
+of topographies you anticipate finding on a production chip.</p>
+</li>
+<li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__id99e85578-e5c1-499c-a18c-aa11bcfa35d0"><p class="p">For each layer to be evaluated using
+Calibre LFD:</p>
+<ul class="ul"><li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__idde65deaf-2923-4c62-b138-36a719421cda"><p class="p">A TCCcalc vector optical model represents
+the illumination system to use in the target process. This model
+should reflect the optimal dose and focus, as well as optionally
+the mask bias, resist, and etch variation settings.</p>
+</li>
+<li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__id7f4fa2f6-f5c6-48b4-83a1-f6021aee5509"><p class="p">A CM1/VT5 resist model represents the
+resist behavior for the target process. If you are designing Calibre
+LFD rules to be used for a process that is not yet completely known,
+you should use a resist model that captures as much information
+as is known.</p>
+</li>
+<li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__id5d01e7db-e498-4c1d-af17-f8a5c803e9bb"><p class="p">A basic setup file designed for use
+with the target process.</p>
+</li>
+<li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__id04bebbe4-4ecc-4d97-bf26-a66d0d274680"><p class="p">A basic TVF rule file used for implementing
+the RET recipe for the target process.</p>
+<p class="p">The Tcl Verification Format (TVF) is a programmable
+extension to the Standard Verification Rule Format (SVRF) language
+for Calibre. The rule file used to run Calibre LFD must be written
+using TVF.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id2e8c6642-acf1-4bd5-bc71-7682d0e3081f__ida67f7d54-ff5b-4afb-b3fa-23fcd8c9e360"><p class="p">Optionally, an etch model.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_LithographersDevelopingCalibreLfdRules_idcad8e303.html" title="The lithographer’s role in implementing the Calibre Litho-Friendly Design (Calibre LFD) flow is to design process variation experiments and develop the rules identifying potential failure spots. The following topics describe what is needed from the lithography team and in what format.">For Lithographers — Developing Calibre LFD Rules</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tcl Verification Format', 'svrf_ur'); return false;">Tcl Verification Format [Standard Verification Rule Format (SVRF) Manual]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Requirements for Writing Calibre LFD Rules"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_RequirementsWritingCalibreLfdRules_id2e8c6642.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

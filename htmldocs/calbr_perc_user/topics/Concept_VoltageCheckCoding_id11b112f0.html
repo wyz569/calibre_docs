@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Voltage Check Coding" />
+<meta name="abstract" content="As for any topology checking in Calibre PERC, voltage checking uses both initialization procedures and rule checking procedures. Initialization procedures set up the voltage checking environment by specifying initial voltages and the paths along which those voltages may be propagated throughout the design. Rule checking procedures check voltage conditions in the design based upon the initialization conditions." />
+<meta name="description" content="As for any topology checking in Calibre PERC, voltage checking uses both initialization procedures and rule checking procedures. Initialization procedures set up the voltage checking environment by specifying initial voltages and the paths along which those voltages may be propagated throughout the design. Rule checking procedures check voltage conditions in the design based upon the initialization conditions." />
+<meta name="DC.subject" content="Coding flow, voltage propagation, Guidelines, voltage checks" />
+<meta name="keywords" content="Coding flow, voltage propagation, Guidelines, voltage checks" />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id11b112f0-580b-4c0d-a0d9-ccdb5970123d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Voltage Check Coding</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Voltage Check Coding" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Voltage
+Check Coding</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">As for any
+topology checking in Calibre PERC, voltage checking uses both initialization procedures
+and rule checking procedures. Initialization procedures set up the
+voltage checking environment by specifying initial voltages and
+the paths along which those voltages may be propagated throughout
+the design. Rule checking procedures check voltage conditions in
+the design based upon the initialization conditions.</span>
+</div>
+<p class="p">The
+flow for setting up voltage checking is the following:</p>
+<ol class="ol"><li class="li" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id2d00459f-1e59-49f2-a353-3d5d225dd6e7"><p class="p">Identify the port net names of interest and
+the corresponding voltages to assign to them.</p>
+</li>
+<li class="li" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id35d329fc-0f27-4cb4-bcdf-df58c617b30e"><p class="p">Define the voltage propagation criteria. This
+is discussed in greater detail later in this section.</p>
+</li>
+<li class="li" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__idca22dc4e-ade3-46d5-99ce-529b88259dbe"><p class="p">Code the initialization procedures based upon
+steps 1 and 2.</p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> command is used for initiating
+voltage propagation along voltage paths. Use of voltage paths is
+optional. If they are not used, then assigned net voltages are not
+propagated.</p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a> or <a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a> command must be used to define
+voltages for the design. Use <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageGroup_idbdb87620.html#idbdb87620-cb7a-4979-90fe-0df343b16abe__Command_PercdefineVoltageGroup_idbdb87620.xml#idbdb87620-cb7a-4979-90fe-0df343b16abe" title="Specifies a group of related voltages.">perc::define_voltage_group</a> as necessary.</p>
+</li>
+<li class="li" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__idad5106a1-0824-4a86-ac05-81a1aebd36ce"><p class="p">Identify the devices and nets of interest
+for voltage checking.</p>
+</li>
+<li class="li" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id1d37d05f-4107-4cd0-80e5-bec0723bebad"><p class="p">Code Calibre PERC voltage checks based upon
+steps 3 and 4.</p>
+</li>
+</ol>
+<p class="p">This is essentially the same flow that is used
+for coding any Calibre PERC topological check.</p>
+<p class="p">See “<a class="xref fm:HeadingOnly" href="Contain_InitializationCommands_id23266ed9.html#id23266ed9-ce56-43e8-88f4-57fbec95f242__Contain_InitializationCommands_id23266ed9.xml#id23266ed9-ce56-43e8-88f4-57fbec95f242" title="Initialization procedure commands appear in an init proc and set up the netlist for checking.">Initialization Commands</a>” and “<a class="xref" href="Contain_RuleCheckCommands_id9b3d8e0b.html#id9b3d8e0b-3ffc-44d8-99e6-ab9ea8f6aadf__id00b12bed-2aa6-40cb-b4bd-5082b4fdd7e9">Voltage Checking Commands</a>”
+for lists related to voltage checking.</p>
+<div class="section Subsections" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id51658814-3b60-42f0-9e1e-28d940a9b9f9"><div class="section Subsection" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id29950e44-1f55-4507-9bf1-62cd1b832247"><h2 class="title Subheading sectiontitle">Initial Voltage
+Assignment to Nets</h2><p class="p">One of the critical tasks in setting up voltage
+checking is assigning initial voltages to the appropriate nets.
+There are multiple ways of assigning initial voltages to nets: </p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltage_id8609d11e.html#id8609d11e-ac3a-4e2d-9cc8-552555478d23__Command_PercdefineNetVoltage_id8609d11e.xml#id8609d11e-ac3a-4e2d-9cc8-552555478d23" title="Assigns a voltage to a list of named nets.">perc::define_net_voltage</a></span> —
+Assigns initial voltages to a top-level net. </p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">perc::define_net_voltage with -cell option</span> —
+Assigns initial voltages to a net anywhere it appears in the design.
+Connectivity from the top level is not needed to assign the voltage
+to a specified net. Voltages are propagated throughout the design
+(if voltage paths are used) depending on connectivity. This method
+does not require flattening the design.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">perc::define_net_voltage with -cellName option</span> —
+Assigns initial voltages to a net only inside specified cells (top-level
+not assumed). This method does not require flattening the design.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel"><a class="xref fm:HeadingOnly" href="Command_PercdefineNetVoltageByPlacement_idce8b6495.html#idce8b6495-156a-4558-a7a6-c7a0f8bc6563__Command_PercdefineNetVoltageByPlacement_idce8b6495.xml#idce8b6495-156a-4558-a7a6-c7a0f8bc6563" title="Assigns a net voltage to nets that are connected to selected placements.">perc::define_net_voltage_by_placement</a></span> —
+Assigns initial voltages to a net only inside a specific cell instance.
+A partial flattening of the hierarchy is performed by this command.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC UPF Path', 'svrf_ur'); return false;">PERC UPF Path</a></span> —
+Assigns initial voltages according to a Unified Power Format file.</p>
+<p class="p">Initial defined voltages may be numeric, symbolic, or both. Symbolic
+voltages are treated as purely symbolic unless the usage context
+dictates numeric values are also necessary to provide a reasonable
+answer. A numeric context assumes that voltage values have an order
+to them, or that a new voltage is generated after initial voltage
+propagation has occurred. In either case, a symbolic voltage must
+be specified with underlying numeric values by using the <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageGroup_idbdb87620.html#idbdb87620-cb7a-4979-90fe-0df343b16abe__Command_PercdefineVoltageGroup_idbdb87620.xml#idbdb87620-cb7a-4979-90fe-0df343b16abe" title="Specifies a group of related voltages.">perc::define_voltage_group</a> command. </p>
+<p class="p">All initially defined numeric voltages are rounded to the nearest
+0.001 unit, as necessary. Voltages created during the run by user-specified
+procedures can be of arbitrary precision, but that precision may
+be altered internally. Any voltage of magnitude less than or equal
+to 1E-10 units is truncated to zero.</p>
+<p class="p">Assigning two numeric voltages to the same
+net (this can only occur in vector-less propagation) that are within
+0.001 percent of each other triggers an error. However, due to hardware differences
+and other factors, the binary representation of floating-point numbers
+has inherent uncertainty across platforms. So very small voltage
+differences within the internal tolerance range are not always detected.
+In such a case, the voltages are considered to be the same and truncated
+to the appropriate decimal place.</p>
+<p class="p">Signed zero voltages (+/-0) are regarded as equivalent. Generally,
+there is no need to use signed zero values.</p>
+</div>
+<div class="section Subsection" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id7e0607dd-15a0-4ff2-83a3-7cc1668dd806"><h2 class="title Subheading sectiontitle">Voltage
+Propagation Control</h2><p class="p">The second critical task in setting up voltage checking is to
+define how initial voltages are to be propagated throughout the
+design.</p>
+<p class="p">The <a class="xref Link" href="../../calbr_perc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'perccreate_voltage_path', 'calbr_perc_user'); return false;">perc::create_voltage_path</a> command
+defines the topological paths along which voltages are propagated.
+Unlike SPICE circuit simulators, Calibre PERC does not determine
+the simultaneous voltage states of all nodes in a circuit (that
+is, it does not solve Kirchhoff’s equations). Rather, voltages are
+iteratively propagated along topological paths across device terminals.
+As the iterative evaluation progresses, voltage assignment populates
+more and more nodes until finally all nodes (that are reachable)
+have an established, settled voltage.</p>
+<p class="p">When perc::create_voltage_path is employed without -pinVoltage
+and -condition procedures, the tool always produces stable, consistent
+results. The following recommendations for writing ‑pinVoltage and
+-condition procs are designed to ensure this behavior is maintained.</p>
+<p class="p">Tcl procedures referenced by -pinVoltage and -condition options
+can be used to compare voltages on different nets, but such procedures
+can introduce a runtime data order dependency that should be avoided.</p>
+<p class="p">In this discussion, only -pinVoltage recommendations are presented,
+but they may be applied equally to -condition procs.</p>
+<p class="p">You may modify default voltage propagation through the use of
+-pinVoltage Tcl procedures. While comparison of multiple <span class="ph FontProperty emphasis">initial</span> net
+voltages within a -pinVoltage proc is always guaranteed to generate
+a consistent result, in writing -pinVoltage procs, you should be
+aware of the inherent voltage propagation order dependency.</p>
+<p class="p">For example, you may construct a procedure that sets the propagated
+voltage on the D pin of MOSFET M1 depending on the difference between
+the maximum propagated voltage on the G pin and the minimum propagated
+voltage on the S pin. Likewise, you might bypass this computation
+if the difference between the propagated voltages on M1 S and D
+pins is greater than a preset voltage and instead rely on the default
+propagation rules. </p>
+<p class="p">The difficulty with using such a procedure to set propagated
+pin voltages is that the order of arrival of voltages at the pins
+of device M1 (rather than the actual voltages themselves) may determine
+the returned voltage of such a proc. Further, the arrival order
+of the pin voltages is not guaranteed to be the same across software
+releases, different computing platforms, or run configurations.
+Certain runtime configurations, for example running in MT mode,
+may produce different results than when running single-threaded.
+The same is true for certain rule file configurations. Therefore
+the use of order-dependent procedures, where the computation depends
+on a comparison of multiple, propagated device pin voltages, is
+not recommended.</p>
+<p class="p">Following is an example of a problematic -pinVoltage proc where
+the computed drain voltage may vary depending on the order of arrival
+of voltages at a device's source and gate pins:</p>
+<pre class="pre codeblock"><code>proc compute_drain_voltage {dev pin} {
+  if { $pin == "d" } {
+    set maxS [perc::voltage_max $dev "s"]
+    set minG [perc::voltage_min $dev "g"]
+    if { $minG == "" || $maxS == "" } {
+      return default
+    } else if { $minG &gt; $maxS } {
+# bad. there is no guarantee the inequality always evaluates the same way.
+      return $maxS
+    } else {
+      return 0
+    }
+  }
+  return default
+}</code></pre><p class="p">The perc::voltage_max and perc::voltage_min commands return path
+voltages that are not static. Depending on the order of arrival
+of voltages on the device's source and gate pins, the voltage transmitted
+and set on the drain pin might be $maxS or 0.</p>
+<p class="p">Note this does not mean you cannot compare voltages in a -pinVoltage
+proc. If your check is a vectored check and your voltage vectors
+are of length 1, then there is no problem comparing voltage values.
+See <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__ida674ee4b-0100-4942-b6da-4e730cea7e95">Example 2</a> under perc::create_voltage_path
+for such a situation.</p>
+</div>
+<div class="section Subsection" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id678045a6-27f7-4bdd-833a-ce458744b881"><h2 class="title Subheading sectiontitle">Vectored Versus Vector-Less Voltage
+Analysis</h2><p class="p">Calibre PERC can model the design using <dfn class="term italic">vectored</dfn> mode or <dfn class="term italic">vector-less</dfn> mode. This applies
+to devices that have “on” and “off” conditions. Vectored mode means
+the device is being analyzed at the moment a specified input voltage
+is applied. Vector-less mode means the device is just on.</p>
+<p class="p">In vector-less mode, you only need to provide supply
+voltages. Input signal voltages are ignored except for comparison
+purposes (for example, if you want to compare an input gate pin
+voltage to the voltage on a device drain). Supply nets can have
+multiple voltages assigned to them at initialization time. This
+is advantageous for reporting voltage conflicts or worst-case situations for
+high and low voltages. Vector-less mode is used when the <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> command <span class="ph FontProperty emphasis">does not use</span> the
+-on option.</p>
+<div class="fig fignone" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id3847ec97-8051-486f-927f-90a33a19690b"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Vector-Less Voltage Propagation</span><br /><div class="imageleft"><img class="image imageleft" height="148" src="../graphics/voltage_checks2.png" width="468" /></div><br /></div>
+<p class="p">Be aware that vector-less evaluations can report
+impossible situations like an active path connected through two
+like gates, one driven “on” by a signal and the other driven “on”
+by the signal’s inverse—which are mutually exclusive conditions.
+The reporting of these situations can be suppressed by using unidirectional
+current checks as discussed under “<a class="xref fm:HeadingAndPage" href="Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html#iddd0d1ab0-d5fb-49c0-8083-7893862fc978__Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.xml#iddd0d1ab0-d5fb-49c0-8083-7893862fc978" title="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming.">Code Guidelines for Unidirectional Current Checks</a>”.</p>
+<p class="p">In vectored mode, you must provide all supply
+voltages and all input signal voltages of interest. In vectored
+mode, nets are expected to have <span class="ph FontProperty emphasis">single</span> voltage
+values. If multiple voltages are found on device pin nodes, propagation
+is aborted. Vectored, input-pin-driven evaluations are often used
+to determine whether proper voltages exist in a circuit for a specific
+test vector (for example, reset or power-on). Vectored mode is used
+when the perc::create_voltage_path command uses the -on option. </p>
+<div class="fig fignone" id="id11b112f0-580b-4c0d-a0d9-ccdb5970123d__id5e288b9d-154a-40f8-9e32-8daf2224c0f2"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Vectored Voltage Propagation</span><br /><div class="imageleft"><img class="image imageleft" height="146" src="../graphics/voltage_checks3.png" width="468" /></div><br /></div>
+<p class="p">It is possible to have both vectored and vector-less
+propagation specified, where both types could apply to a given device.
+In such cases, the tool chooses the more conservative approach and
+performs just the vectored propagation.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_UsefulUtilityProcedures_ide324021e.html" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a></div>
+<div><a class="link" href="../topics/Concept_UnifiedPowerFormatSupport_idca5116bc.html" title="Calibre PERC supports Unified Power Format (UPF). A UPF file defines a design’s power domain intent. The file includes elements such as voltages, supply nets, power states, power switches, level shifters, isolation, and retention.">Unified Power Format Support</a></div>
+<div><a class="link" href="../topics/Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html" title="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming.">Code Guidelines for Unidirectional Current Checks</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Voltage Check Coding"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_VoltageCheckCoding_id11b112f0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Hierarchy Traversal by Rule Check Commands" />
+<meta name="abstract" content="Certain Calibre PERC rule check commands traverse hierarchy. They process nets on a per-cell basis, and they proceed through the hierarchy as needed to return their outputs. How this is done is important to understand when coding and evaluating rule checks." />
+<meta name="description" content="Certain Calibre PERC rule check commands traverse hierarchy. They process nets on a per-cell basis, and they proceed through the hierarchy as needed to return their outputs. How this is done is important to understand when coding and evaluating rule checks." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id73bf23be-1f78-46a5-accc-56357a93c933" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Hierarchy Traversal by Rule Check Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Hierarchy Traversal by Rule Check Commands" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id73bf23be-1f78-46a5-accc-56357a93c933">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Hierarchy Traversal by Rule Check Commands</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Certain Calibre
+PERC rule check commands traverse hierarchy. They process nets on
+a per-cell basis, and they proceed through the hierarchy as needed
+to return their outputs. How this is done is important to understand
+when coding and evaluating rule checks.</span>
+</div>
+<p class="p">When a hierarchy-traversing command processes
+a net, it does so in the context of the lowest cell in the hierarchy
+that completely contains the net. Consider a net N which spans cells
+in three levels of hierarchy: cell A contains a placement of cell
+B, which contains a placement of cell C, and net N is electrically
+connected in all three (and no other) cells. During its analysis,
+Calibre PERC visits cells in the hierarchy from the bottom upward.
+Hence the tool visits cells C, B, and A in that order. Now consider
+a rule check that processes the net N, and that rule check contains
+a command T that traverses hierarchy (such as <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a>). The conditions of the rule check
+are applied for net N in all three cells, one at a time.</p>
+<p class="p">When the
+command T is called in the context of cell C, the fact that net N
+is not fully contained within that cell causes Calibre PERC to promote
+the net into its parent cell (B). In this situation, the value returned
+by T <span class="ph FontProperty emphasis">does not take the entire net into account</span>,
+and any other computations made by the check that depend on T’s
+output do not take the entire net into account. In recognition of
+this fact, Calibre PERC inhibits the effect of calls to <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> in a rule check condition procedure
+until N has been completely processed. </p>
+<p class="p">When T proceeds to cell B, exactly the same
+conditions apply as discussed previously for cell C. Only when T
+is called in the context of cell A (in which the net N is fully
+contained) is the value returned by T the desired value.</p>
+<p class="p">It is therefore important to understand that
+returning values of command T to the run transcript before T has
+reached the root of the net need to be properly filtered because
+they are incomplete. Only after a rule check has completed processing
+an entire net can the performance of the rule check be properly
+assessed. Hence, using the output of the PERC report and the results
+database are the only ways to check that a rule has performed as
+desired. Using perc::report_base_result handles hierarchy traversal
+automatically without further need to code for that situation.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.html" title="The core of the Calibre PERC functionality is topological rule checking. Topological rule checks are written in the Calibre PERC extension of TVF. This chapter contains naming conventions used when writing topology rule checks and working examples of initialization and rule check procedures.">Calibre PERC Topology Rule Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_CodeGuidelinesDeviceTopologyRuleChecks_id89cb8559.html" title="Coding device topology checks is a complex process. There are certain things to be aware of and guidelines to follow to write effective device checks.">Code Guidelines for Device Topology Rule Checks</a></div>
+<div><a class="link" href="../topics/Concept_HierarchyTraversalOpaquecell_id81e7e878.html" title="The high-level commands like perc::check_device, perc::check_net, perc::check_device_and_net check, and perc::check_data check objects cell-by-cell by default. When nets are processed in the context of these commands, they automatically perform net traversal across cell boundaries when needed in the context of the lowest cell in the hierarchy that completely contains a net.">Hierarchy Traversal and -opaqueCell</a></div>
+<div><a class="link" href="../topics/Concept_HierarchyManagementCaching_idf3b9d92b.html" title="The Calibre PERC cache is used to control the hierarchical context in which a device or net is checked. Caching causes the design to be partially flattened to the necessary level to achieve the desired context.">Hierarchy Management and Caching</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Hierarchy Traversal by Rule Check Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_HierarchyTraversalByRuleCheckCommands_id73bf23be.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

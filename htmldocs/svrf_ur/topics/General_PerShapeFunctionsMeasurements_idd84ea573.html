@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Per-Shape Evaluation for DFM Measurement Functions" />
+<meta name="abstract" content="The arithmetic functions SUM, MIN, MAX, and PRODUCT provide per-shape evaluation of the measurement functions in a DFM expression. Per-shape functions are available in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer, with some restrictions depending on the command. Per-shape evaluation applies to the secondary layers in DFM Property and to any layer in DFM Analyze and DFM Spec Fill Optimizer; without a per-shape function the default behavior for those layers is to sum each measurement over all shapes before evaluating the overall expression." />
+<meta name="description" content="The arithmetic functions SUM, MIN, MAX, and PRODUCT provide per-shape evaluation of the measurement functions in a DFM expression. Per-shape functions are available in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer, with some restrictions depending on the command. Per-shape evaluation applies to the secondary layers in DFM Property and to any layer in DFM Analyze and DFM Spec Fill Optimizer; without a per-shape function the default behavior for those layers is to sum each measurement over all shapes before evaluating the overall expression." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd84ea573-94e6-457c-a624-db2594b5b4c6" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Per-Shape Evaluation for DFM Measurement Functions</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Per-Shape Evaluation for DFM Measurement Functions" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="idd84ea573-94e6-457c-a624-db2594b5b4c6">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Per-Shape Evaluation for DFM Measurement Functions</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The arithmetic functions SUM, MIN,
+MAX, and PRODUCT provide per-shape evaluation of the measurement
+functions in a DFM expression. Per-shape functions are available
+in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer, with
+some restrictions depending on the command. Per-shape evaluation
+applies to the secondary layers in DFM Property and to any layer
+in DFM Analyze and DFM Spec Fill Optimizer; without a per-shape
+function the default behavior for those layers is to sum each measurement
+over all shapes before evaluating the overall expression. </span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id7baef00a-6968-4e69-9b2a-e19afa61bd86"><div class="note note"><span class="notetitle">Note:</span> <p class="p">VECTOR,
+VNETID, SVPROPERTY, NETVPROPERTY, VPROPERTY, and VSTRING also act
+as per-shape functions when a secondary layer is referenced in the
+DFM Property family of operations. See their reference pages for
+discussion of the per-shape behavior with secondary layers.</p>
+</div>
+<p class="p">As an example, suppose the yield impact for a spacing error is
+calculated as err_impact = K*EC(err_lay)⁄(EW(err_lay))^2, where
+err_lay is the output of an External operation, K is a constant,
+EC measures the mutual edge projection, and EW measures the minimum
+edge spacing. The total yield impact is exp(‑Σ(err_impact)), where
+the sum is over the err_impact expression for each spacing error.
+The total yield impact is calculated using the SUM per-shape function;
+see “<a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Creating a Property to Reflect the Yield Impact of an Individual Error', 'calbr_yaye_ref'); return false;">Creating a Property to Reflect the Yield Impact of an Individual Error</a>” in the <cite class="cite">Calibre
+YieldAnalyzer and YieldEnhancer User’s and Reference Manual</cite> for
+the complete example. </p>
+<p class="p">Comparing expression evaluation with and without a per-shape
+function provides an easy way to understand the per-shape functions.
+The following examples demonstrate how the per-shape functions SUM
+and PRODUCT affect the evaluation of an expression, where layer
+B is a secondary layer if used in DFM Property.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idcc6e52e1-4496-4666-a3ae-7b7fd467a98d" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.925in" /><col style="width:2.925in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e167"><p class="p">Without Per-Shape Function</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e170"><p class="p">With Per-Shape Function</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e167 "><p class="p">AREA(B)/PERIM(B) </p>
+<p class="p"> </p>
+<p class="p">is evaluated as:</p>
+<p class="p">Σ(AREA(B))/Σ(PERIM(B))</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e170 "><p class="p">SUM( AREA(B)/PERIM(B) ) </p>
+<p class="p"> </p>
+<p class="p">is evaluated as </p>
+<p class="p">Σ( AREA(B)/PERIM(B) )</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e167 "><p class="p">2*EC(B)</p>
+<p class="p"> </p>
+<p class="p">is evaluated as</p>
+<p class="p">2*Σ(EC(B))</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e170 "><p class="p">PRODUCT( 2*EC(B) )</p>
+<p class="p"> </p>
+<p class="p">is evaluated as</p>
+<p class="p">(2*EC(B<span class="ph FontProperty LiteralSubScript">1</span>))*(2*EC(B<span class="ph FontProperty LiteralSubScript">2</span>))*(2*EC(B<span class="ph FontProperty LiteralSubScript">3</span>))
+…</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="2" style="vertical-align:top;" headers="d325751e167 d325751e170 "><p class="p">where Σ indicates summation
+over shapes on layer B; the details of the summation depend on whether
+the expression is used in a DFM Property, DFM Analyze, or DFM Spec
+Fill Optimizer command.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">Without a per-shape function an implicit summation is performed
+for each measurement function in the expression before evaluating
+the overall expression. With a per-shape function, the expression
+is evaluated for each shape, then the specified per-shape function
+SUM, MIN, MAX, or PRODUCT is applied. </p>
+<p class="p">The following sections are included:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__ide66b1dde-1320-405c-a991-797d777dc188" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:6.175in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">“<a class="xref fm:HeadingAndPage" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__idfb008611-3daa-4a02-963b-c6e729744b64">General Syntax for Arithmetic Per-Shape Functions</a>”</p>
+<p class="p">“<a class="xref fm:HeadingAndPage" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__idb99aafdf-26cc-4a7d-a7ed-da63126f46c7">Per-Shape Function Usage</a>”</p>
+<p class="p">“<a class="xref fm:HeadingAndPage" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id280968cd-c17e-43ae-b348-2c9b585ccd31">Per-Shape Function Evaluation</a>”</p>
+<p class="p">“<a class="xref fm:HeadingAndPage" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id54aa85e2-d2d7-4276-af36-6f1b52f4e638">Examples</a>”</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idfb008611-3daa-4a02-963b-c6e729744b64"><h2 class="title Subheading sectiontitle">General
+Syntax for Arithmetic Per-Shape Functions</h2><p class="p">The syntax is shown for <a class="xref fm:HeadingOnly" href="Command_DfmFuncSum_idf77954eb.html#idf77954eb-0aa3-41fe-9d69-bb9dcbcdbd26__Command_DfmFuncSum_idf77954eb.xml#idf77954eb-0aa3-41fe-9d69-bb9dcbcdbd26" title="Computes the sum of an expression over a set of layer objects. Valid in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer.">SUM</a>; it is
+the same for <a class="xref fm:HeadingOnly" href="Command_DfmFuncMin_id264b92a6.html#id264b92a6-74c6-4d35-b056-7d2a36b23450__Command_DfmFuncMin_id264b92a6.xml#id264b92a6-74c6-4d35-b056-7d2a36b23450" title="Computes the minimum of an expression over a set of layer objects. Valid in DFM Property and DFM Analyze.">MIN</a>, <a class="xref fm:HeadingOnly" href="Command_DfmFuncMax_idea5cbd01.html#idea5cbd01-b961-4d10-b423-ecdda2b67b72__Command_DfmFuncMax_idea5cbd01.xml#idea5cbd01-b961-4d10-b423-ecdda2b67b72" title="Computes the maximum of an expression over a set of layer objects. Valid in DFM Property and DFM Analyze.">MAX</a>, and <a class="xref fm:HeadingOnly" href="Command_DfmFuncProduct_id03d1c7a7.html#id03d1c7a7-083b-4f6a-8887-d58aa9f41ef3__Command_DfmFuncProduct_id03d1c7a7.xml#id03d1c7a7-083b-4f6a-8887-d58aa9f41ef3" title="Computes the product of an expression over a set of layer objects. Valid in DFM Property, DFM Analyze, and DFM Spec Fill Optimizer.">PRODUCT</a>. </p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">SUM(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span>[, <span class="keyword ParameterName OptionalReplaceable">default</span>]<span class="keyword ParameterName Required">)</span>
+<span class="keyword ParameterName Required">SUM::FAILARG(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span>[, <span class="keyword ParameterName OptionalReplaceable">default</span>]<span class="keyword ParameterName Required">)</span></code></pre><p class="p">where:</p>
+<ul class="ul"><li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idb8fa62ab-2faf-4cd8-a659-9f68e703bcde"><p class="p"><span class="keyword ParameterName RequiredReplaceable">arg_expr</span> —
+A required argument that specifies the expression to evaluate. </p>
+<p class="p">The expression must include at least one layer-dependent measurement
+function. The expression can reference only one layer. More than
+one measurement function may be used in the expression, but the
+same layer must be referenced in each measurement function. The <span class="keyword ParameterName RequiredReplaceable">arg_expr</span> must
+evaluate to a number. </p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">arg_expr</span> cannot
+contain another per-shape function—per-shape functions cannot be
+nested. </p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idc337a134-b121-4587-94ba-493709595306"><p class="p"><span class="keyword ParameterName OptionalReplaceable">default</span> —
+An optional argument that specifies a default numeric value if the
+set of shapes the per-shape function operates on is empty or if
+the <span class="keyword ParameterName RequiredReplaceable">arg_expr</span> evaluation
+fails for all shapes. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">default</span> can
+be an expression that evaluates to a numeric value. It can contain
+any function valid in a DFM expression, including per-shape functions.
+If a default is needed but the default expression fails to evaluate,
+then the call to the per-shape function also fails to evaluate.
+However, if the per-shape function evaluates without using a default value,
+then the default expression is not evaluated.</p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id19cf3821-e46f-48e7-a9b6-303d267cef29"><p class="p"><span class="keyword ParameterName Required">SUM::FAILARG</span> —
+An alternate syntax form that specifies that the per-shape function fails
+to evaluate if <span class="keyword ParameterName RequiredReplaceable">arg_expr</span> fails
+to evaluate for any shape. By default, a shape is dropped from the
+calculation if evaluation fails, and the evaluation continues for
+the remaining shapes. </p>
+</li>
+</ul>
+<p class="p">The per-shape functions return the following values, where the
+geometry set is determined as explained in “<a class="xref fm:HeadingAndPage" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id280968cd-c17e-43ae-b348-2c9b585ccd31">Per-Shape Function Evaluation</a>”:</p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">MAX(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span><span class="keyword ParameterName Required">)</span> —
+Maximum value of <span class="keyword ParameterName OptionalReplaceable">arg_expr</span> evaluated
+on each geometry.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">MIN(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span><span class="keyword ParameterName Required">)</span> —
+Minimum value of <span class="keyword ParameterName OptionalReplaceable">arg_expr</span> evaluated
+on each geometry</p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">PRODuct(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span><span class="keyword ParameterName Required">)</span> —
+Product of <span class="keyword ParameterName OptionalReplaceable">arg_expr</span> evaluated
+on each geometry.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">SUM(</span><span class="keyword ParameterName RequiredReplaceable">arg_expr</span><span class="keyword ParameterName Required">)</span> —
+Sum of <span class="keyword ParameterName OptionalReplaceable">arg_expr</span> evaluated
+on each geometry.</p>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idb99aafdf-26cc-4a7d-a7ed-da63126f46c7"><h2 class="title Subheading sectiontitle">Per-Shape
+Function Usage</h2><p class="p">The per-shape functions are used in <a class="xref fm:HeadingOnly" href="Contain_DfmExpressions_id0aa735bd.html#id0aa735bd-eb6a-446d-9da0-f14de5e1332e__Contain_DfmExpressions_id0aa735bd.xml#id0aa735bd-eb6a-446d-9da0-f14de5e1332e" title="DFM Expressions are used to calculate DFM properties, define an analysis or density function, or specify a user-defined function. They can be used to calculate scores, statistics, and measurement values based on layer data. DFM Expressions are used in DFM Analyze, the DFM Property operation family, DFM Function, and DFM Spec Fill Optimizer.">DFM Expressions</a> in the
+SVRF commands listed in the following table. Per-shape functions
+can be used in arguments to math functions such as LOG and COS.
+A DFM Expression can call per-shape functions more than once, as
+long as such calls are not nested. For example, this is allowed:
+[MAX(EC(layer2)) + MAX(EC(layer1))]. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idf9a70ed4-d966-41b4-896f-f543419ddadc" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Per-Shape
+Function Usage in SVRF Commands</span></caption><colgroup><col style="width:3.914in" /><col style="width:2.585in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e416"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e419"><p class="p">Available Per-Shape Functions</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e416 "><p class="p">DFM Analyze</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e419 "><p class="p">MIN, MAX, PRODUCT, SUM</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e416 "><p class="p">DFM Property</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e419 "><p class="p">MIN, MAX, PRODUCT, SUM</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e416 "><p class="p">DFM Spec Fill Optimizer</p>
+<p class="p">(Per-shape functions are only valid in the constraint expressions
+for the MAGNITUDE and GRADIENT keywords)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e419 "><p class="p">PRODUCT, SUM</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The measurement functions that are available within per-shape
+functions are given in the following table.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idcc0d2e3e-53de-42b6-bc08-c24a698d1867" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>DFM Measurement
+Function Availability Within Per-Shape Functions</span></caption><colgroup><col style="width:3.056in" /><col style="width:1.062in" /><col style="width:1.062in" /><col style="width:1.319in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e458"><p class="p">Function</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e461"><p class="p">In DFM Analyze</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e464"><p class="p">In DFM Property</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d325751e467"><p class="p">In DFM Spec Fill Optimizer</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">AREA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">ANGLE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">-</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">PERIMETER, PERIMETERX, PERIMETERXP, PERIMETERY, PERIMETERYP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">LENGTH, LENGTHX, LENGTHXP, LENGTHY, LENGTHYP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">-</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">EC, ECX, ECXP, ECY, ECYP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">ECBEGIN, ECEND, ECMIN, ECMAX</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">-</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">EW, EWP, EWX, EWXP, EWY, EWYP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">NARAC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">-</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">-</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e458 "><p class="p">PROPERTY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e461 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e464 "><p class="p">Yes</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d325751e467 "><p class="p">Yes</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id280968cd-c17e-43ae-b348-2c9b585ccd31"><h2 class="title Subheading sectiontitle">Per-Shape
+Function Evaluation</h2><p class="p">The per-shape functions operate on a set of layer objects determined
+as follows:</p>
+<ul class="ul"><li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idade1a073-96f5-4f78-b174-04ca693abc52"><p class="p"><span class="ph FontProperty HeadingLabel">In DFM Property</span> —
+The per-shape function operates on the secondary layer objects that
+are clustered with the primary layer object as determined by the
+keywords in DFM Property. </p>
+<p class="p">The per-shape functions are typically used with a secondary layer
+in DFM Property. If the primary layer is referenced in a per-shape
+function, the evaluation only considers one primary layer object.
+This is useful when using ANGLE, however, because ANGLE must be
+used within a per-shape function. </p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idc2448014-70ed-4cca-ad19-a91d24b64553"><p class="p"><span class="ph FontProperty HeadingLabel">In DFM Analyze</span> —
+The per-shape function operates on the layer objects in the analysis region
+as determined by the keywords in DFM Analyze. The analysis region
+is either the window, the cell, or the database extent.</p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id18e1c783-b6c4-4fd0-a2ae-874c7421e2f8"><p class="p"><span class="ph FontProperty HeadingLabel">In DFM Spec Fill Optimizer</span> —
+The per-shape function operates on the portion of the design determined
+by the keywords in the statement. </p>
+</li>
+</ul>
+<p class="p">The following flowchart describes the evaluation process for
+per-shape functions. </p>
+<div class="fig fignone" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id083147eb-de9e-4db1-aae1-30c46d97b77c"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Per-Shape
+Function Evaluation</span><br /><div class="imagecenter"><img class="image imagecenter" src="../graphics/dfm_func_figs/dfmfunc_pershape_logic.png" /></div><br /></div>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id54aa85e2-d2d7-4276-af36-6f1b52f4e638"><h2 class="title Subheading sectiontitle">Examples</h2>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__ide0890218-97f2-4384-bdca-11b7e1a863d9" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:5.200in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id610225d6-09fc-45be-bbc8-e60ca4ac7c46">Example: Per-Shape Function in DFM Property</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id9312e7ca-9736-4f90-af68-d97b804f477a">Example: Per-Shape Function in DFM Analyze</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id50185cfe-7ac2-4e83-a06a-9fff3f41beba">Example: Per-Shape Function with Default</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__id016ed811-838e-448f-a0a7-92cd1fb6fcbd">Example: Per-Shape Function with ::FAILARG</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="#idd84ea573-94e6-457c-a624-db2594b5b4c6__iddf31a510-ec7d-43b9-833b-e6f41d5c5557">Example: Per-Shape Function with Default and ::FAILARG</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id610225d6-09fc-45be-bbc8-e60ca4ac7c46"><h2 class="title Subheading sectiontitle">Example:
+Per-Shape Function in DFM Property</h2><p class="p">The following example uses SUM in a DFM Property operation, where
+A is the primary layer and B is the secondary layer:</p>
+<pre class="pre codeblock"><code>DFM PROPERTY A B [ ratio_prop = SUM( AREA(B)/PERIM(B) ) ]</code></pre><p class="p">The property is evaluated as ratio_prop = Σ( AREA(B)/PERIM(B)
+), where the ratio AREA(B)/PERIM(B) is calculated for each layer
+B shape before summation. The property is calculated for each shape
+on layer A, and the summation is over the shapes on layer B that
+are clustered with the shape on layer A. </p>
+<p class="p">By contrast, the following operation does not use the SUM per-shape
+function:</p>
+<pre class="pre codeblock"><code>DFM PROPERTY A B [ ratio = AREA(B)/PERIM(B) ]</code></pre><p class="p">The property is evaluated as ratio = Σ(AREA(B))/Σ(PERIM(B)),
+where each sum is over all shapes on layer B that are clustered
+with the object on layer A. </p>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id9312e7ca-9736-4f90-af68-d97b804f477a"><h2 class="title Subheading sectiontitle">Example:
+Per-Shape Function in DFM Analyze</h2><pre class="pre codeblock"><code>X = DFM ANALYZE m [ PRODUCT( 2*EC(m) ) ]</code></pre><p class="p">calculates the product (2*EC(m<span class="ph FontProperty LiteralSubScript">1</span>))*(2*EC(m<span class="ph FontProperty LiteralSubScript">2</span>))*(2*EC(m<span class="ph FontProperty LiteralSubScript">3</span>))
+…, where the product is over all shapes on the layer m. </p>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id50185cfe-7ac2-4e83-a06a-9fff3f41beba"><h2 class="title Subheading sectiontitle">Example:
+Per-Shape Function with Default</h2><h2 class="title Subheading sectiontitle">Default Example 1</h2><p class="p">The following DFM Property operation calculates the area of the
+primary layer shape (area_1) and the sum of the ratio area/perimeter
+for the secondary layer shapes (ratio_2). A default value of 0 is
+provided for the ratio_2 calculation if there are no secondary layer
+polygons in the cluster.</p>
+<pre class="pre codeblock"><code>X = DFM Property A B [ area_1 = AREA(A) ] 
+                     [ ratio_2 = SUM( AREA(B)/PERIM(B), 0 )]</code></pre><p class="p">Without the default value, the evaluation fails for a primary
+layer object with no secondary layer objects, and that primary layer
+object is not output to the derived layer X. </p>
+<h2 class="title Subheading sectiontitle">Default Example 2</h2><p class="p">The following property calculation returns the sum of 1/(AREA(B)
+- 1) over all secondary layer polygons for a given primary shape. </p>
+<pre class="pre codeblock"><code>X = DFM Property A B [area_inv = SUM( 1/( AREA(B) - 1 ), -1 )]</code></pre><p class="p">If the area of one or more, but not all, secondary layer polygons
+is 1, those polygon are ignored for the per-shape calculation due
+to division by 0 and the calculation is performed for the remaining
+secondary polygons in the cluster. If there are no secondary layer
+shapes in the cluster or if all secondary layer shapes have an area
+of 1, the result of the SUM function is the default, -1.</p>
+<h2 class="title Subheading sectiontitle">Default Example 3</h2><p class="p">This example also calculates the SUM of 1/(AREA(B) - 1) over
+all secondary layer polygons for a given primary shape, but the
+default is itself an expression involving another SUM function with
+an explicit numeric default. </p>
+<pre class="pre codeblock"><code>X = DFM Property A B [a_inv = SUM( 1/(AREA(B)-1), SUM( 1/AREA(B), -1 ) )]</code></pre><p class="p">These three cases can occur during evaluation:</p>
+<ul class="ul"><li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idfa5a3d42-c133-4694-9ea6-1a06147a3306"><p class="p">If the
+area of one or more, but not all, secondary layer polygons is 1,
+those polygon are ignored for the per-shape calculation due to division
+by 0 and the calculation is performed for the remaining secondary
+polygons in the cluster. The default is not evaluated in this case. </p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__idddac7cf7-ac88-4aaa-aa77-c8b46279a633"><p class="p">If all secondary
+layer polygons in the cluster have an area of 1, causing division
+by 0 for all shapes, the default is evaluated. The default is another
+SUM function, 1/AREA(B), which evaluates successfully because all
+shapes have an area of 1 in this case. </p>
+</li>
+<li class="li" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id09e1dd81-a9ed-4474-aa22-abe8181adc34"><p class="p">If there are
+no secondary layer polygons in the cluster, the default value of
+-1 is returned from the second SUM function. </p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__id016ed811-838e-448f-a0a7-92cd1fb6fcbd"><h2 class="title Subheading sectiontitle">Example:
+Per-Shape Function with ::FAILARG</h2><p class="p">The following property calculation returns the sum of 1/(AREA(B)
+- 1) over all secondary layer polygons for a given primary shape.
+::FAILARG causes evaluation to fail if any secondary layer shape
+has an area of 1 and the primary layer object is therefore not included
+in the derived layer X. </p>
+<pre class="pre codeblock"><code>X = DFM Property A B [area_inv = SUM::FAILARG( 1/( AREA(B) - 1 ))]</code></pre><p class="p">Without ::FAILARG, if the area of a secondary layer shape is
+1, that shape is dropped from the per-shape calculation and the
+calculation continues with the remaining shapes. </p>
+</div>
+<div class="section Subsection" id="idd84ea573-94e6-457c-a624-db2594b5b4c6__iddf31a510-ec7d-43b9-833b-e6f41d5c5557"><h2 class="title Subheading sectiontitle">Example:
+Per-Shape Function with Default and ::FAILARG</h2><p class="p">The following property calculation is similar to the preceding
+example, but uses both ::FAILARG and a default value. </p>
+<pre class="pre codeblock"><code>X = DFM Property A B [area_inv = SUM::FAILARG( 1/(AREA(B)-1), 0)]</code></pre><p class="p">::FAILARG causes evaluation to fail if any secondary layer shape
+has an area of 1 and the primary layer object is therefore not output
+to the derived layer X. If there are no secondary layer objects
+clustered with the primary layer object, the expression returns
+the default value of 0 and the primary layer object is output to
+the derived layer X. </p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MeasurementFunctions_id13468c08.html" title="Measurement functions calculate the value of a geometric attribute of layer data. Measurement functions return values expressed in user units. Although the COUNT function does not measure a geometric attribute, it is included with the measurement functions because it behaves similarly to the other functions in this class.">Measurement Functions</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Per-Shape Evaluation for DFM Measurement Functions"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_PerShapeFunctionsMeasurements_idd84ea573.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

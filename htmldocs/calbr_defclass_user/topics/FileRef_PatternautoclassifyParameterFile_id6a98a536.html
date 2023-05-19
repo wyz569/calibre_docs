@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="patternautoclassify Parameter File" />
+<meta name="abstract" content="The patternautoclassify command uses a single XML format file to specify parameters that are provided as arguments to the Tcl-based command." />
+<meta name="description" content="The patternautoclassify command uses a single XML format file to specify parameters that are provided as arguments to the Tcl-based command." />
+<meta name="prodname" content="Calibre DefectClassify User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre DefectClassify product manual." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_defclass_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DefectClassify™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6a98a536-5d04-4f4a-9466-53848f2babd3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>patternautoclassify Parameter File</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="patternautoclassify Parameter File" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id6a98a536-5d04-4f4a-9466-53848f2babd3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">patternautoclassify Parameter
+File</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Configuration file used by the patternautoclassify
+command</p>
+<p class="shortdesc">The patternautoclassify command uses a single XML format
+file to specify parameters that are provided as arguments to the
+Tcl-based command.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The
+parameter file is in XML format and the functional parameters are
+categorized into sections with further customizable parameters as
+sub-nodes. All distance units in the parameter file are in nanometers
+(nm).</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idfb55a0d3-d200-423b-a3d8-6af3621d4fcd">version</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the version of the XML file that
+is supported by Calibre DefectClassify. The value must be 1.0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id95ff49bc-9427-45af-a0e9-c3ea70495a4a">IsHighResInspection </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies if the inspection
+mode is aerial/reflected or highres. Supported values are true or false.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id4122b532-146c-4bcc-8bb2-7b86554b5836">PlateOrientation <span class="keyword ParameterName OptionalReplaceable">rotation</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies any rotation to be applied to
+the scanner model and layout data to align with mask data. The values
+can be 0, 90, 180, or 270.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idd29e0b7d-51b5-447a-b383-1df8ac5c38e0">FilterFalseDefectsBeforeSimulation</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional node that specifies whether
+or not aerial simulation is to be performed for False defects. Valid
+values are true and false. If set to false, Calibre DefectClassify
+performs simulation for all defects. If value is set to true, simulation
+is skipped for false defects. This parameter is used only if the
+value for the parameter IsHighResInspection is set to true and values
+for node SimulationParams are specified. The default value is false.</p>
+<p class="p">Defect categories that are to be treated as false defects must
+be listed under the FalseClassifications node of respective inspection
+types in the <span class="ph filepath">dat-ini.xml</span> configuration file for
+Calibre DefectReview.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__iddb09c963-cfa0-4683-8711-949e02959144">PrintThresholdParams</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies parameters
+to determine the wafer-level printability threshold. The sub-node useImages
+specifies if a target CD image is to be used to calculate the printability
+threshold. Possible values for this field are true and false. The
+sub-nodes for useImages include:</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id35758cd7-b77f-4143-9985-4397062c7fb3"><p class="p">UserSpecified</p>
+<p class="p">If the value of the parameter useImages is “false”, then this
+value is used; otherwise, CDImages is used.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id0786d4db-e8c2-4e59-8aba-0627e6de2f67"><p class="p">CDImages </p>
+<p class="p">The pixelSize of this sub-node refers to the actual size of each
+image pixel in nm. This parameter is optional and defaults to the
+value taken from the inspection file. The CDImages sub-nodes include:</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idde1fcde7-2481-4830-abc1-8d7a01251052"><p class="p">Image —
+This node consists of a set of data required to calculate printability threshold.
+Multiple such nodes can be defined performing independent calculations
+and their average is reported as the print threshold. The following table
+lists the Image sub-nodes:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id9c965b03-2e5a-4cb5-86d3-fe97d2c63ec0" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Image Sub-Nodes</span></caption><colgroup><col style="width:1.491in" /><col style="width:3.709in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e204"><p class="p">Node</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e207"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">File</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Contains the path of the target CD image
+containing the feature using which printability threshold is calculated.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">ImageIndex</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">This node must be specified only if the
+target CD image file (<span class="ph uicontrol">File</span> is selected) is
+a TIF file. It specifies the index of the TIF image in the target
+CD image file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">DefectId</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Specifies the defect ID associated with
+the reference image to be used as the target CD image on which the printability
+threshold is calculated.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">File or DefectId are mutually exclusve; only one should
+be present in the parameter file.</p>
+</div>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">TargetCD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Specifies the expected feature dimension
+at mask level (for example, 4X).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">Polarity</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Specifies the tone at the location specified
+above. Permitted values are “clear” and “dark”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">Angle</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Specifies the angle at which cross-sectional
+CD measurement is performed. 0 represents vertical, with pixels
+considered starting from bottom along the length of cross-sectional
+bar; 90 represents horizontal, from left to right; and so on in
+a clockwise direction. Possible values are 0, 90, 180 and 270.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">LocationInLayout</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">Specifies the location in the layout data
+(for example, in a MEBES job deck, extended MEBES job deck, or OASIS
+file) where the CD feature is present. The location must be in the
+center of the CD feature. The print threshold is computed from this
+parameter.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e204 "><p class="p">LocationInImage</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e207 "><p class="p">This parameter should be used only if the
+exact position of the CD feature in the layout data (specified by
+the LocationInLayout parameter) is unknown.</p>
+<p class="p">Use this parameter to specify the location in the CD image where
+the CD feature is present.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idd7beeb70-c143-4e0e-ac3a-9871ae420e73"><p class="p">The top
+left corner of the image is (0, 0). The X-coordinate value increases
+from the left to right of the image and the Y-coordinate value increases from
+the top to bottom of the image.</p>
+</li>
+</ul>
+<p class="p">The behavior of the LocationInLayout parameter changes when this
+parameter is specified.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__ida067e32e-ed7d-44d6-9d25-d903fbe2cf12"><p class="p">For high
+resolution inspections, the print threshold is calculated from image
+location specified by this parameter. The LocationInLayout parameter should
+specify an approximate location where the CD feature is present
+in the layout, as the print threshold is performed on the simulated
+image and the layout data must be converted.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id59b3b766-370a-419d-ad12-467e2657ef0f"><p class="p">For aerial
+inspections, the LocationInLayout parameter is ignored.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id58c7e52e-f39f-4e2a-b1ff-2b9898961d8b">LayoutDataParams</dt>
+<dd class="dd ArgumentDescription"><p class="p">Contains parameters related to layout data.
+Sub-nodes include the following:</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idfda2e69b-ac4a-4a73-a989-ec543cc0f852"><p class="p">Type</p>
+<p class="p">Contains the format(s) of layout data that are supported. This
+sub-node supports the following value: MEBESJOB for MEBES job deck
+format, MEBESEXTENDED for extended MEBES job deck format, or OASIS
+for OASIS format.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id0508c4b4-90d2-4df1-8fdf-792809ed0c7f"><p class="p">File</p>
+<p class="p">Contains the path of the job deck file associated with the inspection
+on which Calibre DefectClassify is run.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idfcc967de-3460-4cd3-b647-c8190ea0539a"><p class="p">Layers</p>
+<p class="p">Can contain multiple sub-nodes, each named “Layer”, corresponding
+to each of the layers in layout data (for example, smashed layer,
+Dark SRAF layer, Clear Fill layer, and so on).</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id77213954-5197-4f59-bad0-b2cfb72bcb77"><p class="p">Layer —
+Contains parameters specific to each layer, including the following:</p>
+<p class="p BlockIndent">Name — Specifies the layer name. The name can take
+values from amongst the following: “SMASHED” (composite of all layers),
+“DARK_SRAF” (contains dark SRAF features), “CLEAR_SRAF” (contains
+clear SRAF features), “DARK_FILL” (contains dark fill regions),
+“CLEAR_FILL” (contains clear fill regions), and “CHROME” (contains
+chrome areas). </p>
+<p class="p BlockIndent">LayerDataType — Specifies the layer number and datatype
+assigned to the data layer. The format is <span class="keyword ParameterName OptionalReplaceable">layer</span>:<span class="keyword ParameterName OptionalReplaceable">datatype</span> (for
+example, 1:1). The datatype is an optional input; the layer number
+is required as input.</p>
+<p class="p BlockIndent">CorrelationParams — Corresponds to the <span class="ph uicontrol">Correlation</span>”
+tab in the Calibre DefectClassify dialog box. It contains parameters
+required to correlate layout data with mask data. There are several
+sub-nodes to CorrelationParams that are summarized in the following
+table.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idee0e5d5c-f892-46b5-b7c7-f4d455f8cc76" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>CorrelationParams
+Nodes</span></caption><colgroup><col style="width:1.480in" /><col style="width:3.719in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e337"><p class="p">Node</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e340"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Rotation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Represents any rotation to be applied to
+layout data to align with mask data. The values can be 0, 90, 280
+or 270.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Magnification</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Represents the magnification level of layout
+data. Currently, this is 1 and cannot be changed.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Reflection</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Represents any optional mirroring to be
+applied to layout data. Possible values are “NO_MIRROR”, “X_MIRROR”,
+and “Y_MIRROR”. The default is “NO_MIRROR”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Invert</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Inverts the layout tones to synchronize
+with mask data. Possible values are “true” and “false”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Translate</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Specifies alignment mismatch between layout
+and mask data.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e337 "><p class="p">Origin</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e340 "><p class="p">Specifies that x- and y-coordinates currently
+remain at (0,0). </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id211ea857-29d3-4ce2-bf8f-f7cd1c0da7eb">SimulationParams</dt>
+<dd class="dd ArgumentDescription"><p class="p">Contains parameters related to aerial simulation
+(for example, highres and scanner optical conditions, mask transmittance,
+and so on).</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id30577e8a-a044-4afd-9a92-9ce9931d6915"><p class="p">InspectionMachineParams</p>
+<p class="p">Contains parameters related to mask pattern recovery (inverse
+lithography).</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id5c484fb0-4c35-4f86-94e1-ed4018d561dc"><p class="p">OpticalModelDirectory</p>
+<p class="p">Specifies the path where the highres optical model is present.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idc8b5a83c-cb32-440d-b875-a79744c12e5f"><p class="p">Background</p>
+<p class="p">Contains parameters related to mask background region.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id8dbebfd3-66f0-49f3-9f1e-a415073f41d5"><p class="p">Type —
+Specifies the type of mask background area. Values are “Dark”, “Atten”,
+or “Clear”.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idbe113e7a-e5f5-4ee5-941e-6113d056b4d4"><p class="p">AttenFactor
+— Specifies the attenuation factor of the background region. It ranges
+from 0.00 to 1.00.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id36e4ce2f-01bc-4102-aff8-8b2176156751"><p class="p">Foreground</p>
+<p class="p">Contains parameters related to mask foreground region.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id824198e6-30b1-4352-b143-9f6e2b098fc3"><p class="p">Type —
+Specifies the type of mask background area. It can be “Dark”, “Atten”,
+or “Clear”.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idd9a38f9c-c274-4319-abc7-923a39c0586d"><p class="p">AttenFactor
+— Specifies the attenuation factor of the background region. It ranges
+from 0.00 to 1.00.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__ida6f8de50-c340-47b0-8eb5-5746e5633445"><p class="p">IntensityRange</p>
+<p class="p">Specifies the pixel intensity range captured by the inspection
+machine.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id908b8ec3-4d2f-463e-80a0-995e30aefbc8"><p class="p">Min — Specifies
+the minimum intensity of image in darkest region of the mask captured
+by inspection machine. The default value is 1.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idc9b43ade-8aa9-4904-aa06-b5daebf62e19"><p class="p">Max — Specifies
+the maximum intensity of image in brightest region of the mask captured
+by inspection machine. The default value is 200.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id9dab016e-3f0e-4444-a6fe-51fe184a25b4"><p class="p">ScannerParams</p>
+<p class="p">Contains parameters related to forward aerial simulation.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id12569177-a7e9-4fd8-b0ee-20a34a0c57cd"><p class="p">OpticalModelDirectory</p>
+<p class="p">Specifies the path from where scanner optical model is present.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__idbcf903d2-f14b-47dc-9a73-a57d44a6d26a"><p class="p">Background</p>
+<p class="p">This node contains parameters related to mask background region.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id9d51dc03-0580-44f4-871e-408a34c109a1"><p class="p">Type —
+Specifies the type of mask background area. It can be “Dark”, “Atten”,
+or “Clear”.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id8d07f13a-d2f9-4f14-800d-a8f935d51626"><p class="p">AttenFactor
+— Specifies the attenuation factor of the background region. It ranges
+from 0.00 to 1.00.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id19fb6a0a-ed43-4072-858c-8d7b22266a44"><p class="p">Foreground</p>
+<p class="p">This node contains parameters related to mask foreground region.</p>
+<ul class="ul"><li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id81ed98c8-5f42-4b70-9c4a-f2c882609c3f"><p class="p">Type —
+Specifies the type of mask background area. It can be “Dark”, “Atten”,
+or “Clear”.</p>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id21fa4155-4ab1-4ca3-80e0-6979a4f88e06"><p class="p">AttenFactor
+— Specifies the attenuation factor of the background region. It ranges
+from 0.00 to 1.00.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id6a98a536-5d04-4f4a-9466-53848f2babd3__id313b0c50-68d3-444f-b32f-5eb0373f590d"><p class="p">MaskBias</p>
+<p class="p">Specifies the mask bias (in nm) to be applied to mask polygons
+prior to forward simulation. The default value is 0. If the mask
+is inspected after chrome removal, the recommended value is 0.</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Inspection ID</h2><p class="p">The RIF file can contain information for more than one inspection.
+The corresponding inspection IDs are specified against the node
+InspectionUniqueId of the RIF file. This input from the user specifies
+which of the Inspection IDs should be used as input to the tool.</p>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Reticle Information File</h2><p class="p">The Reticle Information File (RIF) contains all information related
+to a reticle or mask, multiple inspections of the reticle, job deck,
+and CD information related to the reticle. Refer to the <a class="xref LinkItalic" href="../../calbr_defrev_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_defrev_user'); return false;">Calibre DefectReview User’s Manual</a> for details on the RIF.</p>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Mask ID</h2><p class="p">The defect database contains RIF information stored in it using
+the Calibre DefectReview savereticleinfotodb command (refer to the <a class="xref LinkItalic" href="../../calbr_defrev_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_defrev_user'); return false;">Calibre DefectReview User’s Manual</a> for details). RIF information
+corresponding to a reticle is uniquely identified by a mask ID (MaskUniqueId). With
+this input, you can specify which RIF information (entry) from the
+defect database should be used for the current run of the tool.</p>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Mapping of the RIF and Parameter File Inputs</h2><p class="p">The RIF file contains most of the inputs required for a Calibre
+DefectClassify run and several additional inputs for use by other
+tools such as Calibre DefectReview. The following table describes
+the mapping between entries in the RIF and the patternautoclassify
+parameter file. Certain parameters not present in the RIF that are
+collected from other locations are described in the Other column.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Parameter File and RIF Mapping</span></caption><colgroup><col style="width:2.497in" /><col style="width:2.097in" /><col style="width:0.932in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e517"><p class="p">patternautoclassify Parameter File</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e520"><p class="p">Reticle Information File Entry</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d11420e523"><p class="p">Other</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">IsHighResInspection</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">InspectionMode = DIE_TO_DIE_REFLECTED or
+DIE_TO_MODEL or DIE_TO_DIE_HIRES or STARLIGHT or DIE_TO_DIE_WITH_STARLIGHT
+then true</p>
+<p class="p">InspectionMode = DIE_TO_DIE_AERIAL or SINGLE_DIE_CTM or INTENCD
+or DIE_TO_DIE_AERIAL_WITH_CTM then false</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">PlateOrientation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">PlateOrientation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">FilterFalseDefectsBeforeSimulation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">FilterFalseDefectsBeforeSimulation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p"><span class="ph FontProperty HeadingLabel">PrintThresholdParams</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">useImages</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Always set to true</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">UserSpecified</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">DCPrintabilityThreshold</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p">CDImages</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">pixelSize</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Pixel size is set to the pixel size of defect images associated with inspection report (defect
+file)</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">File</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">TargetCdImageFilename</p>
+<p class="p">If the file is a TIF file, then the image is extracted from the
+TIF file, stored as a temporary file, and this file name is used.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">TargetCD</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">CdMaskTarget</p>
+<p class="p">Entry with CdStructure= “CD” is used.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Polarity</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">CdPolarity</p>
+<p class="p">Entry with CdStructure= “CD” is used.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Angle</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">CdAngle (X = 90 and Y = 0)</p>
+<p class="p">Entry with CdStructure= “CD” is used.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">LocationInLayout to X, Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">CdLocX, CdLocY</p>
+<p class="p">Entry with CdStructure= “CD” is used.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">LocationInImage</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not set or used.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p"><span class="ph FontProperty HeadingLabel">LayoutDataParams</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Type</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckType</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">File</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckFilename</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p">Layers</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Name</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" rowspan="2" style="vertical-align:top;" headers="d11420e523 "><p class="p">Picked from <span class="ph filepath">adc-ini.xml</span> <span class="ph uicontrol">AutoDefectClassifyAuxParams</span> &gt; <span class="ph uicontrol">LayerMapping</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">LayerDataType</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p"><span class="ph FontProperty HeadingLabel">CorrelationParams</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Rotation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">(JobdeckRotation + PlateOrientation ) %
+360 degrees</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Magnification</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckMagnification</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Reflection</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckReflection</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Invert</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">ReticleResistTone = “N” then true else false.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Translate to X, Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckXTranslation, JobdeckYTranslation</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Origin to X, Y</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">JobdeckXOrigin, JobdeckYOrigin</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p"><span class="ph FontProperty HeadingLabel">SimulationParams to InspectionMachineParams</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">OpticalModelDirectory</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">InspectionModelFilename</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Background to (Type, AttenFactor)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">MaskType = BIN then (DARK, 0)</p>
+<p class="p">MaskType = OMOG then (ATTEN,</p>
+<p class="p">TargetMosiTransmittance)</p>
+<p class="p">(MaskType = ATTPSM or ALTPSM or HIT or EUV) and (InspectionStep
+= PATTERN_AFTER_FIRST_WRITE) then (DARK, 0)</p>
+<p class="p">(MaskType = ATTPSM or ALTPSM or HIT or EUV) and (InspectionStep
+?  PATTERN_AFTER_FIRST_WRITE) then (ATTEN, TargetMosiTransmittance)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Foreground to Type, AttenFactor</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">CLEAR, 1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">IntensityRange to (Min, Max)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">InspectionMinGl, InspectionMaxGl</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d11420e517 d11420e520 d11420e523 "><p class="p"><span class="ph FontProperty HeadingLabel">SimulationParams to ScannerParams</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">OpticalModelDirectory</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">ScannerModelFilename</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Background to (Type, AttenFactor)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">MaskType = BIN then (DARK, 0)MaskType = OMOG
+or ATTPSM or ALTPSM or HIT then (ATTEN, TargetMosiTransmittance)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">Foreground to (Type, AttenFactor)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">Not applicable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">CLEAR, 1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e517 "><p class="p">MaskBias</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e520 "><p class="p">ScannerMaskBias</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d11420e523 "><p class="p">Not applicable</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following is an example XML parameter file.</p>
+<pre class="pre codeblock"><code>&lt;!-- All units are in nanometers unless otherwise specified --&gt;
+&lt;PatternAutoClassifyParams version="1.0"&gt;
+  &lt;!-- true | false : If true then SimulationParams should be --&gt;
+  &lt;!-- specified else should not be specified. --&gt;
+  &lt;IsHighResInspection&gt;true&lt;/IsHighResInspection&gt;
+  &lt;!-- Value could be 0, 90 , 180, 270  --&gt;
+  &lt;PlateOrientation&gt;0&lt;/PlateOrientation&gt;
+  &lt;!-- true | false : If true then aerial simulation is --&gt;
+  &lt;!-- skipped for False defects. --&gt;
+  &lt;FilterFalseDefectsBeforeSimulation&gt;false
+    &lt;/FilterFalseDefectsBeforeSimulation&gt;
+  &lt;!-- true | false : If false then UserSpecified print threshold --&gt;
+  &lt;!-- will be used. --&gt;
+  &lt;PrintThresholdParams useImages="true"&gt;
+    &lt;!-- Value (GL) between 0 and 255 --&gt;
+    &lt;UserSpecified&gt;40&lt;/UserSpecified&gt;
+    &lt;CDImages pixelSize="83.4"&gt;
+      &lt;Image&gt;
+        &lt;File&gt;/dummy/cdimg.png&lt;/File&gt;
+   &lt;ImageIndex&gt;-1&lt;ImageIndex&gt;
+        &lt;!-- Defect id can also be used for print threshold calculation --&gt;
+        &lt;!-- &lt;DefectId&gt;1&lt;/DefectId&gt; --&gt;
+        &lt;!-- The target is at mask level (like 4X and not wafer level) --&gt;
+        &lt;TargetCD&gt;1560&lt;/TargetCD&gt;
+        &lt;!-- clear | dark --&gt;
+        &lt;Polarity&gt;clear&lt;/Polarity&gt;
+        &lt;!-- Angle could be 0 = ^, 90 = -&gt;, 180 = v, 270 = &lt;- direction --&gt;
+        &lt;Angle&gt;0&lt;/Angle&gt;
+        &lt;LocationInImage&gt;
+          &lt;X&gt;30&lt;/X&gt;
+          &lt;Y&gt;25&lt;/Y&gt;
+        &lt;/LocationInImage&gt;
+        &lt;LocationInLayout&gt;
+          &lt;X&gt;109995520&lt;/X&gt;
+          &lt;Y&gt;39815690&lt;/Y&gt;
+        &lt;/LocationInLayout&gt;
+      &lt;/Image&gt;
+    &lt;/CDImages&gt;
+  &lt;/PrintThresholdParams&gt;
+  &lt;LayoutDataParams&gt;
+    &lt;!-- MEBESJOB, MEBESEXTENDED, OASIS are supported--&gt;
+    &lt;Type&gt;MEBESJOB&lt;/Type&gt; &lt;!-- or OASIS --&gt;
+    &lt;File&gt;/dummy/dummy.jb&lt;/File&gt;
+    &lt;Layers&gt;
+      &lt;Layer&gt;
+        &lt;!-- SMASHED, DARK_SRAF, CLEAR_SRAF, DARK_FILL, --&gt;
+        &lt;!-- CLEAR_FILL,CHROME --&gt; 
+        &lt;Name&gt;SMASHED&lt;/Name&gt;
+        &lt;LayerDataType&gt;1&lt;/LayerDataType&gt; &lt;!-- datatype is optional and --&gt;
+        &lt;!-- can be added in the format layer:datatype. For example 1:1 --&gt;
+     &lt;CorrelationParams&gt;              
+          &lt;!-- 0, 90, 180, 270 --&gt;
+          &lt;Rotation&gt;0&lt;/Rotation&gt;
+          &lt;Magnification&gt;1&lt;/Magnification&gt;
+          &lt;!-- NO_MIRROR, X_MIRROR, Y_MIRROR --&gt;
+          &lt;Reflection&gt;NO_MIRROR&lt;/Reflection&gt;
+          &lt;!-- true, false --&gt;
+          &lt;Invert&gt;true&lt;/Invert&gt;
+          &lt;Translate&gt;
+            &lt;X&gt;0&lt;/X&gt;
+            &lt;Y&gt;0&lt;/Y&gt;
+          &lt;/Translate&gt;
+          &lt;Origin&gt;
+            &lt;X&gt;0&lt;/X&gt;
+            &lt;Y&gt;0&lt;/Y&gt;
+          &lt;/Origin&gt;
+        &lt;/CorrelationParams&gt;
+      &lt;/Layer&gt;
+      &lt;Layer&gt;
+        &lt;Name&gt;DARK_SRAF&lt;/Name&gt;
+        &lt;LayerDataType&gt;3&lt;/LayerDataType&gt;
+        &lt;CorrelationParams&gt;
+          &lt;Rotation&gt;0&lt;/Rotation&gt;
+          &lt;Magnification&gt;1&lt;/Magnification&gt;
+          &lt;Reflection&gt;NO_MIRROR&lt;/Reflection&gt;       
+          &lt;Invert&gt;true&lt;/Invert&gt;
+          &lt;Translate&gt;
+            &lt;X&gt;0&lt;/X&gt;
+            &lt;Y&gt;0&lt;/Y&gt;
+          &lt;/Translate&gt;
+          &lt;Origin&gt;
+            &lt;X&gt;0&lt;/X&gt;
+            &lt;Y&gt;0&lt;/Y&gt;
+          &lt;/Origin&gt;
+        &lt;/CorrelationParams&gt;
+      &lt;/Layer&gt;
+    &lt;/Layers&gt;
+  &lt;/LayoutDataParams&gt;
+  &lt;SimulationParams&gt;
+    &lt;InspectionMachineParams&gt;
+      &lt;OpticalModelDirectory&gt;/highres_model/&lt;/OpticalModelDirectory&gt; 
+        &lt;Background&gt;
+         &lt;!-- dark, clear, atten --&gt;
+         &lt;Type&gt;DARK&lt;/Type&gt;
+         &lt;!-- real number between 0 to 1 --&gt;
+         &lt;AttenFactor&gt;0&lt;/AttenFactor&gt;
+       &lt;/Background&gt;
+       &lt;Foreground&gt;
+         &lt;Type&gt;CLEAR&lt;/Type&gt;
+         &lt;AttenFactor&gt;1&lt;/AttenFactor&gt;
+       &lt;/Foreground&gt;
+       &lt;IntensityRange&gt;
+         &lt;!-- GL value between 0 to 255 --&gt;
+         &lt;Min&gt;1&lt;/Min&gt;
+         &lt;Max&gt;200&lt;/Max&gt;
+       &lt;/IntensityRange&gt;
+    &lt;/InspectionMachineParams&gt;
+    &lt;ScannerParams&gt;
+        &lt;OpticalModelDirectory&gt;/scanner_model/&lt;/OpticalModelDirectory&gt;
+      &lt;Background&gt;
+        &lt;Type&gt;ATTEN&lt;/Type&gt;
+        &lt;AttenFactor&gt;0.06&lt;/AttenFactor&gt;
+      &lt;/Background&gt;
+      &lt;Foreground&gt;
+        &lt;Type&gt;CLEAR&lt;/Type&gt;
+        &lt;AttenFactor&gt;1&lt;/AttenFactor&gt;
+      &lt;/Foreground&gt;
+      &lt;MaskBias&gt;0&lt;/MaskBias&gt;
+    &lt;/ScannerParams&gt;
+  &lt;/SimulationParams&gt;
+&lt;/PatternAutoClassifyParams&gt;</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MaskPatternClassificationFiles_id118e3db0.html" title="Calibre DefectClassify utilizes several different commands and file types to perform operations.">Mask Pattern Classification Command and File Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_defclass_user"
+                DocTitle = "Calibre® DefectClassify™ User’s Manual"
+                PageTitle = "patternautoclassify Parameter File"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_PatternautoclassifyParameterFile_id6a98a536.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DefectClassify™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

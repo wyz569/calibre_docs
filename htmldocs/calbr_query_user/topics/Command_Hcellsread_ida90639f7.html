@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="hcells::read" />
+<meta name="abstract" content="Reads in the layout and source netlists, along with any Hcell statements that may be in the rule file." />
+<meta name="description" content="Reads in the layout and source netlists, along with any Hcell statements that may be in the rule file." />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida90639f7-3ab1-463e-a7a0-ebec97969e4f" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>hcells::read</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="hcells::read" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">hcells::read</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Hcell analysis
+command. Corresponding NETLIST command: <a class="xref fm:HeadingOnly" href="Command_NetlistRead_idaaa54029.html#idaaa54029-2df9-47f7-8027-66279d1605c4__Command_NetlistRead_idaaa54029.xml#idaaa54029-2df9-47f7-8027-66279d1605c4" title="Reads the rule file for netlist information.">NETLIST READ</a>.</p>
+<p class="shortdesc">Reads in the layout and source
+netlists, along with any Hcell statements that may be in the rule file.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">hcells::read -rules</span> <span class="keyword ParameterName RequiredReplaceable">rulefile</span> [-source | -layout]<br />
+ [-auto_expand {<span class="keyword ParameterName OptionalReplaceable">n |</span> <span class="keyword ParameterName OptionalDefault">NONE</span> | <span class="keyword ParameterName Optional">ALL</span> | PRESET} [FILL]] <br />
+[‑report {<span class="keyword ParameterName OptionalReplaceable">n</span> | <span class="keyword ParameterName OptionalDefault">PRESET</span> | <span class="keyword ParameterName Optional">ALL</span> | <span class="keyword ParameterName Optional">NONE</span>} [FILL]] [-help]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__id4b0f6cda-3aa5-4931-b19f-833175056743"><span class="keyword ParameterName Required">-rules</span> <span class="keyword ParameterName RequiredReplaceable">rulefile</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that specifies
+the LVS rule file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__id62b25df2-fc6b-4dfe-a9aa-9a8743548fc0">-source</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument that specifies
+to read only the source netlist. The source netlist is read by default.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__idb706e02b-c5e3-4af2-bc73-27d3922c70a2">-layout</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument that specifies
+to read only the layout netlist. This option is only effective if
+the Layout System is SPICE. If the Layout System is SPICE, that
+netlist is read by default.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__ide0e2a202-ebed-4049-be39-a83c85a5bbd9"><span class="keyword ParameterName Optional">-auto_expand</span> {<span class="keyword ParameterName OptionalReplaceable">n</span> | <span class="keyword ParameterName OptionalDefault">NONE</span> | <span class="keyword ParameterName Optional">ALL</span> | <span class="keyword ParameterName Optional">PRESET</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument set that controls
+expansion of HIGH COST hcells in the layout geometry database. This
+option functions similarly to the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a> rule file statement and overrides that statement
+when present in the rule file. This option applies only when reading
+a layout geometry database. </p>
+<p class="p">NONE is the default and causes
+no hcells to be expanded. ALL expands all hcells that are subject
+to expansion. PRESET uses internal heuristics to determine the best
+hcells to expand, if any. The <span class="keyword ParameterName OptionalReplaceable">n</span> parameter
+is a positive integer less than 100 that specifies a threshold value
+as a percent. Hcells that exceed the threshold are expanded.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__id69ec5f8f-b240-4165-b7ba-17ed22180b75"><span class="keyword ParameterName Optional">-report</span> {<span class="keyword ParameterName OptionalReplaceable">n</span> | <span class="keyword ParameterName OptionalDefault">PRESET</span> | <span class="keyword ParameterName Optional">ALL</span> | <span class="keyword ParameterName Optional">NONE</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument set that identifies
+HIGH COST hcells in the layout geometry database and reports them
+in the transcript. This option functions similarly to the LVS Auto
+Expand Hcells rule file statement REPORT keyword and overrides that
+statement when present in the rule file. This option applies only
+when reading a layout geometry database. </p>
+<p class="p">PRESET is the default and uses
+internal heuristics to determine the hcells to report, if any. NONE
+specifies no hcells are reported. ALL reports all hcells that are
+subject to reporting. The <span class="keyword ParameterName OptionalReplaceable">n</span> parameter
+is a positive integer less than 100 that specifies a threshold value
+as a percent. Hcells that exceed the threshold are reported.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__id6277e455-65c9-42a6-920e-d6fa05bc45c4">FILL</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword that causes cells interacting
+with fill shapes, multi-patterning “color” shapes, and similar geometry,
+and that could adversely affect circuit extraction performance,
+not to serve as hcells. This option should be used if the aforementioned geometry
+is used as an essentially flat overlay of the original design hierarchy.
+This keyword applies to circuit extraction only.</p>
+<p class="p">When used with the -report option, cells meeting the aforementioned
+criteria are reported in the transcript.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ida90639f7-3ab1-463e-a7a0-ebec97969e4f__id2de5c23d-d7b8-487c-98c6-9e130eaa3044">-help</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument that shows
+the command usage.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">ERROR(134), ERROR(135), ERROR(145)</p>
+<p class="p"><a class="xref fm:HeadingOnly" href="MGCChap_QueryServerErrorFailureMessages_id8453e115.html#id8453e115-8417-43f8-b269-caeef10edcc4__MGCChap_QueryServerErrorFailureMessages_id8453e115.xml#id8453e115-8417-43f8-b269-caeef10edcc4" title="This section contains the runtime messages given by the Query Server.">Query Server Error and Failure Messages</a>.</p>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Causes the source and layout
+netlists specified in the <span class="keyword ParameterName RequiredReplaceable">rulefile</span> to
+be read into memory for analysis. Additionally, any <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> statements in the rule file are
+read and added to the current hcell list.</p>
+<p class="p">When neither -source nor -layout
+is specified, this command reads the source netlist and the layout
+netlist if Layout System SPICE is used (if not, layout cells are
+not evaluated for reporting purposes). Hcell analysis finds corresponding
+cells based upon the matching conditions specified: automatch, placementmatch,
+or explicit cell matching list. </p>
+<p class="p">The -source and -layout options
+cause this command to read only the source or layout netlist, respectively,
+and use it as both source and layout. The hcell analysis is based
+only upon the specified netlist.</p>
+<p class="p">When the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a> is
+geometric and automatching is requested, the layout database is examined
+for names that appear in the source netlist so that automatch hcell
+candidates can be appropriately identified.</p>
+<p class="p">The -auto_expand and -report
+options function similarly to the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a> specification statement options and are used
+for hcell expansion reporting and control.</p>
+<p class="p">The FILL keyword is useful for large designs containing an essentially
+flat geometry overlay of huge numbers of shapes on top of the original
+layout design. Using the FILL option in such situations can improve
+circuit extraction performance dramatically.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">This is an invocation from the Tcl shell. Both layout and source
+are SPICE.</p>
+<pre class="pre codeblock leveled"><code>&gt; hcells::read -rules calibreLVS.rul 
+ 
+Initializing LVS ... 
+ 
+READING layout ... 
+READING source ... 
+Identifying CORRESPONDING cells ... 
+CORRESPONDING Cells Identified. 
+Adding GLOBAL elements ... 
+Resolving DEEP SHORTS ... 
+Resolving HIGH SHORTS ... 
+      High Shorted pins VINP VSS of layout cell opamp2. 
+      High Shorted pins OUTB VSS of layout cell Switch_new. 
+      High Shorted pins OUTB VSS of source cell Switch_new. 
+      High Shorted pins VINP VSS of source cell opamp2. 
+HIGH SHORTS resolved.   
+Deleting TRIVIAL PINS ... 
+      Removed pin COM of layout cell Switch_new. 
+TRIVIAL PINS deleted. </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TclShellHcellAnalysisCommands_ida3ecde40.html" title="Hcell analysis commands provide information for constructing preliminary hcell correspondence lists.">Tcl Shell Hcell Analysis Commands</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_TclShellHcellAnalysisCommands_ida3ecde40.html" title="Hcell analysis commands provide information for constructing preliminary hcell correspondence lists.">Tcl Shell Hcell Analysis Commands</a></div>
+<div><a class="link" href="../topics/Concept_CurrentHcellList_id56991b78.html" title="The Query Server maintains an internal list of hcells called the current hcell list. Hcells are added to this list by reading the rule file, by reading an hcell list file, by specifying individual hcell pairs in Query Server commands, or by adding automatically matched hcells. Hcells can be removed from the current list either globally or by specifying individual pairs to be excluded. The current hcell list is used for Query Server analysis and reporting functions, as well as to select a list of hcells to be used for testing in LVS.">Current Hcell List</a></div>
+<div><a class="link" href="../topics/Concept_EvaluationHcellsLvsComparison_idd3b1613a.html" title="Hcells in the current hcell list should be evaluated for their effectiveness in LVS comparison. This can be done initially in the Query Server Tcl shell. Ultimately, every hcell list used for LVS comparison should be tested in Calibre nmLVS-H.">Evaluation of Hcells for LVS Comparison</a></div>
+<div><a class="link" href="../topics/Concept_EvaluationHcellsNetlistExtraction_id76a34ee5.html" title="The hcell analysis feature is typically used for LVS comparison when layout and source are both SPICE netlists. However, the hcell analysis can be used when the layout is geometric. This method has the disadvantage that the devices and connectivity from the layout have not yet been extracted, so comparison performance estimations are done entirely with the source netlist.">Evaluation of Hcells for Netlist Extraction</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "hcells::read"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Hcellsread_ida90639f7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

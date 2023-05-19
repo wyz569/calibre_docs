@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Tcl Script for User-Defined Hotspots" />
+<meta name="abstract" content="You can calculate user-defined hotspots by running a Tcl script that calls the cmp::register_hotspot_proc and cmp::register_hotspot_threshold_proc commands. The Tcl script calculates the hotspot metric and compares the value to a threshold." />
+<meta name="description" content="You can calculate user-defined hotspots by running a Tcl script that calls the cmp::register_hotspot_proc and cmp::register_hotspot_threshold_proc commands. The Tcl script calculates the hotspot metric and compares the value to a threshold." />
+<meta name="prodname" content="Calibre CMPAnalyzer User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cmpanalyzer_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 9, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® CMPAnalyzer User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf1c5395c-d509-4982-b9c7-6ab6e2053383" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Tcl Script for User-Defined Hotspots</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Tcl Script for User-Defined Hotspots" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf1c5395c-d509-4982-b9c7-6ab6e2053383">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Tcl Script for User-Defined Hotspots</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">You can calculate
+user-defined hotspots by running a Tcl script that calls the cmp::register_hotspot_proc
+and cmp::register_hotspot_threshold_proc commands. The Tcl script
+calculates the hotspot metric and compares the value to a threshold. </span>
+</div>
+<p class="p">Tcl scripts for user-defined hotspots are explained
+in the following sections with a description of the basic contents,
+a summary of the example code, and two example scripts.</p>
+<p class="p">Both of the following example scripts calculate a hotspot based
+on a perimeter metric using basic contents and Tcl procedures. Additionally,
+the second example script incorporates CMP grid operations to perform
+the hotspot calculation. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The vector property format
+is not compatible with iterator-based Tcl scripts (Example 1). Tcl
+scripts implemented with grid operations (Example 2) are compatible
+with the vector property format. See “<a class="xref fm:HeadingAndPage" href="GUIRefT_SimulatorOptionsTabOnInputsPane_id6b3e5212.html#id6b3e5212-0df2-4c3f-a820-d6fe61e69ec1__GUIRefT_SimulatorOptionsTabOnInputsPane_id6b3e5212.xml#id6b3e5212-0df2-4c3f-a820-d6fe61e69ec1" title="The Simulator Options tab in Calibre Interactive has options for the bucketing flow, the number of CPUs for simulation, saving grid files and vector properties, the Calibre CMPAnalyzer rerun flow, distributed processing, and the user‑defined (custom) hotspot flow.">Simulator Options Tab on the Inputs Pane</a>” for information on vector properties.</p>
+</div>
+<p class="p">See also “<a class="xref fm:HeadingAndPage" href="General_ExampleScriptToCalculateUserDefinedHotspots_id2994db71.html#id2994db71-ac9a-4d8d-ada3-c8748d540518__General_ExampleScriptToCalculateUserDefinedHotspots_id2994db71.xml#id2994db71-ac9a-4d8d-ada3-c8748d540518" title="You can use CMP YieldServer commands in a Tcl procedures to calculate user‑defined hotspot information.">Example Script to Calculate User‑Defined Hotspots</a>” to
+perform a thickness topology hotspot analysis in Calibre CMPAnalyzer.</p>
+<div class="section Subsections"><div class="section Subsection" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id7a7c64f6-d1d4-455d-89ec-f11e9d10c877"><h2 class="title Subheading sectiontitle">Basic Contents</h2><p class="p">In general, a Tcl script for user-defined hotspots
+has the following elements:</p>
+<ul class="ul"><li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id9ae720c5-3adc-4960-a5f6-c1a663dfa4ab"><p class="p">Procedure to calculate the hotspot metric
+for a layer and add the property to the layer. This procedure is
+called with a detail layer as an argument.</p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id2c041892-b94c-4257-99c2-2fb77e8ce8e1"><p class="p">Procedure to calculate the hotspot threshold
+property. Typically, the hotspot threshold property indicates the
+pass/fail status. This procedure is called with the detail layer
+and a value used in computing the hotspot threshold property. By
+default, Calibre RVE expects the hotspot threshold property to have
+the name “Hotspot_&lt;metric&gt;”, where &lt;metric&gt; is the property
+name of the hotspot metric. </p>
+<p class="p">The return value of this procedure should
+be the number of failing tiles. The return value is displayed in
+the column for the hotspot rule in the <span class="ph uicontrol">CMP</span> tab
+of Calibre RVE.</p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id8a43d0ff-231d-493b-8371-bc3c72fd3cf3"><p class="p">Call to cmp::register_hotspot_proc to
+register the procedure that calculates the hotspot metric. The argument
+to the ‑rule_name option should be the property name for the hotspot
+metric. The -output_properties argument gives the name of the hotspot threshold
+property, typically “Hotspot_&lt;metric&gt;”.</p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id38265725-4b4d-4705-8d03-d082de924e0c"><p class="p">Call to cmp::register_hotspot_threshold_proc
+to register the procedure that calculates the hotspot threshold
+property. The argument to the ‑rule_name option should be the property
+name for the hotspot metric. The -output_properties argument gives
+the name of the hotspot threshold property, typically “Hotspot_&lt;metric&gt;”.</p>
+</li>
+</ul>
+<h2 class="title Subheading sectiontitle">Example Code Summary</h2><p class="p">The example code calculates a user-defined
+hotspot based on the perimeter metric. The code has this basic outline:</p>
+<ul class="ul"><li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__idad74755f-4670-454f-a4dc-19c04fcc1cc6"><p class="p">proc calc_perimeter( geom_layer ) </p>
+<p class="p">Calculates a perimeter value from an input
+geometry layer. A temporary layer with the property is created using
+DFM Analyze, then the property “Perim_Density” is added to the _data_detail
+layer for the input geometry layer. </p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__ide4e99af6-ee4d-4ed9-9042-dc3775787acb"><p class="p">proc perimeter_metric( detail_layer ) </p>
+<p class="p">Gets the geometry layer from the input detail
+layer and calls the proc calc_perimeter() to calculate the hotspot
+metric. </p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__idca13c98e-f5f5-418e-9823-cd3516e658df"><p class="p">proc perimeter_fails( detail_layer hs_value
+) </p>
+<p class="p">Gets the hotspot metric for the layer and
+compares it to the threshold value. It creates the “Hotspot_Perim_Density”
+property, which is 0 or 1 to indicate pass/fail. The number of failing
+windows is totaled and returned; this return value is displayed
+in Calibre RVE for the hotspot rule. </p>
+</li>
+<li class="li" id="idf1c5395c-d509-4982-b9c7-6ab6e2053383__id3bcc572e-bc01-404a-b233-d6ef78a77ea3"><p class="p">cmp::register_hotspot_proc
+-rule_name Perim_Density \</p>
+<p class="p">      -proc perimeter_metric</p>
+<p class="p">cmp::register_hotspot_threshold_proc -rule_name Perim_Density
+\ </p>
+<p class="p">     -proc perimeter_fails values 5 -output_properties "Hotspot_Perim_Density"</p>
+<p class="p">Register the hotspot metric procedure and
+the hotspot threshold procedure so that they are called during hotspot
+calculation. The rule name is Perim_Density, the same as the property
+name for the metric. The ‑output_properties value is the hotspot
+threshold property name, “Hotspot_Perim_Density.”</p>
+</li>
+</ul>
+<h2 class="title Subheading sectiontitle">Example 1: Tcl Script
+for User-Defined Hotspot Calculation</h2><pre class="pre codeblock"><code># TCL script to generate perimeter property as a "hotspot"
+
+# First use DFM ANALYZE to calculate the perimeter density
+proc calc_perimeter { geom_layer X Y } {
+	# Calculate perimeter metric
+	# Use DFM ANALYZE to create the perimeter density on a temporary layer
+	# Note, window size needs to be a variable passed to this function as
+	#20 is only the default
+	set svrf "${geom_layer}_PD = DFM ANALYZE $geom_layer \
+		\[PERIMETER($geom_layer)/AREA()\] &gt;=0 WINDOW $X $Y \
+		INSIDE OF LAYER DB_EXTENT "
+	dfm::new_layer -svrf $svrf
+	# This generates a _PD layer and a _PD_detail layer
+	
+	# Copy the DV property from _PD_detail layer to data_detail layer
+	catch {dfm::delete_property ${geom_layer}_data_detail \
+		"Perim_Density"} msg
+	dfm::add_property ${geom_layer}_data_detail \
+		"Perim_Density" 0 -double -default
+	set geos_source [dfm::get_geometries ${geom_layer}_PD_detail]
+	set geos_destination [dfm::get_geometries ${geom_layer}_data_detail]
+	
+	# This works because the layers have the same window geometries and \
+	# Calibre sorts them in the same default order
+	while { $geos_source ne "" } {
+		set s_data [dfm::get_data $geos_source -geometry_property "DV"]
+		dfm::add_property $geos_destination "Perim_Density" $s_data -double
+		dfm::inc geos_source
+		dfm::inc geos_destination
+	}
+	# delete the temporary layers
+	dfm::delete_layer ${geom_layer}_PD
+	dfm::delete_layer ${geom_layer}_PD_detail
+}
+
+proc perimeter_metric { detail_layer } {
+	# Need to get geom data from detail layer name
+	# set tokens [split $detail_layer "_data_detail" ]
+	# set geom_layer [lindex $tokens 0]
+	set nameIdx [string first "_data_detail" $detail_layer]
+	set geom_layer [string range $detail_layer 0 [expr $nameIdx - 1]]
+	
+	set db_precision [dfm::get_db_precision]
+	set geos [dfm::get_geometries $detail_layer ]
+	set vertices [dfm::get_data $geos -vertices];
+	set tileX [expr ([lindex $vertices 2] - [lindex $vertices 0]) / \
+		$db_precision];
+	set tileY [expr ([lindex $vertices 3] - [lindex $vertices 1]) / \
+		$db_precision];
+
+	# Calculate the perimeter property
+	calc_perimeter $geom_layer $tileX $tileY
+	# Now have the Perim_Density property on the _data_detail layers
+}
+
+proc perimeter_fails { detail_layer hs_value } {
+	# Compares the Perim_Density property to a hotspot value and counts
+	# tiles which fail
+	# By default, RVE expects a hotspot threshold property name of
+	# Hotspot_&lt;property&gt;
+	# Note, property added is "0" if pass and "1" if fail
+	
+	# Try to delete this property if it already exists might do this in the
+	# above procs as well
+	catch {dfm::delete_property $detail_layer "Hotspot_Perim_Density"} msg
+	dfm::add_property $detail_layer \
+		"Hotspot_Perim_Density" 0 -double -default
+	set geos [dfm::get_geometries $detail_layer ]
+	
+	# Compare perimeter property to threshold and increment count if fails
+	set fails 0
+	while { $geos ne "" } {
+			set metric [dfm::get_data $geos -geometry_property \
+				"Perim_Density" ]
+			if { $metric &gt; $hs_value } {
+					dfm::add_property $geos "Hotspot_Perim_Density" 1 -double
+					incr fails
+		}
+		dfm::inc geos
+	}
+	puts "Number of $detail_layer Hotspot_Perim_Density $fails"
+	return $fails
+}
+	
+# register the calculation and hotspot comparison procs so they get
+# calculated with the normal hotspots
+cmp::register_hotspot_proc -rule_name Perim_Density \
+	-proc perimeter_metric \
+	-output_properties "Perim_Density"
+cmp::register_hotspot_threshold_proc -rule_name Perim_Density \
+	-proc perimeter_fails -values 5  \
+	-output_properties "Hotspot_Perim_Density"</code></pre><h2 class="title Subheading sectiontitle">Example 2: Tcl Script for User‑Defined Hotspot Calculation (Grid‑Based)</h2><pre class="pre codeblock"><code># TCL script to generate a perimeter property as a hotspot
+
+# First use DFM ANALYZE to calculate the perimeter density
+proc calc_perimeter { geom_layer Xsize Ysize } {
+	# Calculate perimeter metric Perim_Density
+	# Use DFM ANALYZE to create the perimeter density on a temporary layer
+	set svrf "${geom_layer}_PD = DFM ANALYZE $geom_layer \
+		\[PERIMETER($geom_layer)/AREA()\] &gt;=0 WINDOW $Xsize $Ysize \
+			INSIDE OF LAYER DB_EXTENT "
+	dfm::new_layer -svrf $svrf
+	# This generates a _PD layer and a _PD_detail layer
+	
+	# Always delete a property before adding it back with a default value
+	catch {dfm::delete_property ${geom_layer}_data_detail \
+		"Perim_Density"} msg
+	dfm::add_property ${geom_layer}_data_detail \
+		"Perim_Density" 0 -double -default
+	# Save the current rev to avoid issues with temp layers
+	dfm::save_rev
+	# Create a grid from the PD layer, save it to the detail layer
+	set geos_source \
+		[cmp::create_grid -layer ${geom_layer}_PD_detail -property "DV"]
+	cmp::save_grid $geos_source -layer ${geom_layer}_data_detail \
+		-property "Perim_Density"
+	# Delete the temporary layers
+	dfm::delete_layer ${geom_layer}_PD
+	dfm::delete_layer ${geom_layer}_PD_detail
+	dfm::save_rev
+}
+
+proc perimeter_metric { detail_layer } {
+	# Need to get geom data from detail layer name
+	# Set tokens [split $detail_layer "_data_detail" ]
+	# Set geom_layer [lindex $tokens 0]
+	set nameIdx [string first "_data_detail" $detail_layer]
+	set geom_layer [string range $detail_layer 0 [expr $nameIdx - 1]]
+	
+	# Note, X, Y, window sizes are variables extracted from the dfmdb
+	set db_precision [dfm::get_db_precision]
+	set geos [dfm::get_geometries $detail_layer ]
+	set vertices [dfm::get_data $geos -vertices];
+	set Xsize [expr ([lindex $vertices 2] - [lindex $vertices 0]) / \
+		 $db_precision];
+	set Ysize [expr ([lindex $vertices 3] - [lindex $vertices 1]) / \
+		 $db_precision];
+
+	# Calculate the perimeter property
+	calc_perimeter $geom_layer $Xsize $Ysize
+	# Now have the Perim_Density property on the _data_detail layers
+}
+
+proc perimeter_fails { detail_layer hs_value } {
+	# Compares the Perim_Density property to a hotspot value and counts
+	#tiles which fail
+	# By default, RVE expects a hotspot threshold property name of
+	#Hotspot_&lt;property&gt;
+	# Note, property added is "0" if pass and "1" if fail
+	
+	# Always delete a property before adding it back with a default value
+	catch {dfm::delete_property $detail_layer "Hotspot_Perim_Density"} msg
+	dfm::add_property $detail_layer \
+		"Hotspot_Perim_Density" 0 -double -default
+	
+	# Compare perimeter property to threshold
+	set PD_grid [cmp::create_grid -layer $detail_layer \
+		-property "Perim_Density"]
+	set result_grid [cmp::greater_grid $PD_grid -element \
+		-limit $hs_value -result_value {1 0}]
+	cmp::save_grid $result_grid -layer $detail_layer \
+		 -property "Hotspot_Perim_Density"
+	# Add up the fails
+	set fails \
+	 [expr int([cmp::get_grid_data $result_grid -sum_elements])]
+
+	puts "Number of $detail_layer Hotspot_Perim_Density $fails"
+	# A hotspot threshold proc must always return the number of fails
+	return $fails
+}
+	
+# register the calculation and hotspot comparison procs so they get
+#calculated with the normal hotspots
+cmp::register_hotspot_proc -rule_name Perim_Density \
+	-proc perimeter_metric \
+	-output_properties "Perim_Density"
+cmp::register_hotspot_threshold_proc -rule_name Perim_Density \
+	-proc perimeter_fails -values 5 \
+	-output_properties "Hotspot_Perim_Density"</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalculatingUserDefinedHotspots_idc7a0f3b0.html" title="You can calculate user-defined hotspots by running a Tcl script that calls the cmp::register_hotspot_proc and cmp::register_hotspot_threshold_proc commands. The results can be viewed in Calibre RVE for DFM.">Calculating User-Defined Hotspots</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_CmpYieldserverCommands_id9ba702a2.html#id9ba702a2-c473-4a1f-9e0f-747c1ba475dd__" title="Certain commands can be used to run Calibre CMPAnalyzer directly from Calibre YieldServer.">CMP YieldServer Commands</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cmpanalyzer_user"
+                DocTitle = "Calibre® CMPAnalyzer User’s Manual"
+                PageTitle = "Tcl Script for User-Defined Hotspots"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_TclScriptUserDefinedHotspots_idf1c5395c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® CMPAnalyzer User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

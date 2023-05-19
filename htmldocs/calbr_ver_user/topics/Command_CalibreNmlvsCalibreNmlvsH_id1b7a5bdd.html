@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="Calibre nmLVS and Calibre nmLVS-H Command Line" />
+<meta name="abstract" content="Performs flat and hierarchical LVS circuit extraction and comparison. Many LVS command line options are also relevant to Calibre PERC, where the behavior is occasionally somewhat different than in LVS. See the Calibre PERC User’s Manual for details." />
+<meta name="description" content="Performs flat and hierarchical LVS circuit extraction and comparison. Many LVS command line options are also relevant to Calibre PERC, where the behavior is occasionally somewhat different than in LVS. See the Calibre PERC User’s Manual for details." />
+<meta name="DC.subject" content="DRC, invocation examples, Calibre nmDRC, invocation, examples, Command lines, LVS" />
+<meta name="keywords" content="DRC, invocation examples, Calibre nmDRC, invocation, examples, Command lines, LVS" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre nmLVS and Calibre nmLVS-H Command Line</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre nmLVS and Calibre nmLVS-H Command Line" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre nmLVS and Calibre
+nmLVS-H Command Line</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">Performs
+flat and hierarchical LVS circuit extraction and comparison. </p>
+<p class="shortdesc">Many LVS command line options
+are also relevant to Calibre PERC, where the behavior is occasionally
+somewhat different than in LVS. See the <span class="ph FontProperty ManualTitle">Calibre PERC User’s Manual</span> for
+details.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">calibre</span> [<span class="keyword ParameterName Optional">-lvs</span> { { [ { ‑tl | ‑ts } <span class="keyword ParameterName OptionalReplaceable">cnet_file_name</span> ]<br />
+            [ -nonames ]<br />
+            [ -dblayers "<span class="keyword ParameterName OptionalReplaceable">name1</span>,…" ]<br />
+            [ ‑bpf [ no‑extents ] ] [ -nl ] [ -cb ] }<br />
+        | [ -hier [ -automatch | ‑genhcells[=<span class="keyword ParameterName OptionalReplaceable">qs_tcl_file_name</span> | select] ] ]<br />
+        | [ -flatten ]<br />
+        } <br />
+        [ -ixf ] [ -nxf ] <br />
+    ]<br />
+    [ -spice <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span> | -layout <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span> ] <br />
+    [ -hcell <span class="keyword ParameterName OptionalReplaceable">cell_correspondence_file_name</span> ] [ -xcell <span class="keyword ParameterName OptionalReplaceable">xcell_file_name</span> ]<br />
+    [ -siggen ]<br />
+    [ -nowait | -wait <span class="keyword ParameterName OptionalReplaceable">n</span> | -lmretry <span class="keyword ParameterName OptionalReplaceable">retry_args</span> ]<br />
+    [ -lmconfig <span class="keyword ParameterName OptionalReplaceable">licensing_config_filename</span> ] <br />
+    [ { -turbo [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>] [ -turbo_all ] <br />
+        [ -lvs_supplement [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>] ] }<br />
+        [ { -remote <span class="keyword ParameterName OptionalReplaceable">host</span>,<span class="keyword ParameterName OptionalReplaceable">host</span>,… | -remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> | -remotecommand <span class="keyword ParameterName OptionalReplaceable">filename</span> <span class="keyword ParameterName OptionalReplaceable">count</span> } <br />
+            [ -remotedata [ -recoverremote | <span class="keyword ParameterName OptionalDefault">-recoveroff</span> ] ] <br />
+        [ -hyper [ cmp ] [ pathchk ] [ remote ] ] ] ]<br />
+    [ -cmp_host <span class="keyword ParameterName OptionalReplaceable">host</span> | -cmp_remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> ]<br />
+    [ -waiver <span class="keyword ParameterName OptionalReplaceable">waiver_setup_file</span> ]<br />
+    [ -E <span class="keyword ParameterName OptionalReplaceable">svrf_output_from_tvf</span> ] [ -tvfarg <span class="keyword ParameterName OptionalReplaceable">argument</span> ] <br />
+    [ <span class="keyword ParameterName Optional">‑validprop</span> [ <span class="keyword ParameterName OptionalReplaceable">report_options</span> | <span class="keyword ParameterName OptionalDefault">all</span> ] [ trace ] ]<br />
+    <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> <br />
+<br />
+<span class="keyword ParameterName Required">calibre</span> {<span class="keyword ParameterName Required">‑lvs</span> | <a class="xref Link" href="../../calbr_perc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'calibre -perc', 'calbr_perc_user'); return false;">-perc</a>} { -cs [<span class="keyword ParameterName OptionalReplaceable">message_limit</span>] | -cl [<span class="keyword ParameterName OptionalReplaceable">message_limit</span>] }     <br />
+    [ ‑nowait | ‑wait <span class="keyword ParameterName OptionalReplaceable">n</span> | ‑lmretry <span class="keyword ParameterName OptionalReplaceable">retry_args</span>]<br />
+    [ -cb ] [ -lmconfig <span class="keyword ParameterName OptionalReplaceable">licensing_config_filename</span> ]<br />
+    [ -E <span class="keyword ParameterName OptionalReplaceable">svrf_output_from_tvf</span> ] [ -tvfarg <span class="keyword ParameterName OptionalReplaceable">argument</span> ] <br />
+    <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span></p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><p class="p">To display command line information,
+enter calibre on the command line with no arguments.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id06e4d71f-7bca-41df-b932-f97dc3c35706"><span class="keyword ParameterName Required">-lvs</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required option to run LVS
+comparison. It is not required when using ‑spice.</p>
+<p class="p">When <span class="keyword ParameterName Required">-lvs</span> is
+specified by itself, no layout netlist or circuit extraction report
+is produced (circuit extraction messages appear in the LVS Report).
+Connectivity is stored in memory and applied to flat LVS comparison.
+You can see the SPICE representation of the flat connectivity model
+by specifying the -nl command line option. If running LVS comparison flat,
+it is generally recommended to use the -flatten option.</p>
+<p class="p">When used
+with -flatten, Calibre nmLVS compares a source netlist to a layout
+netlist flat while using the hierarchical netlist comparison engine.</p>
+<p class="p">When used with -hier, Calibre
+nmLVS-H compares a source netlist to a layout netlist hierarchically.
+If the Layout System is geometric, LVS circuit extraction is also
+performed.</p>
+<p class="p">Circuit comparison is always
+a single-threaded process.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idd5cf04cd-8ae3-4bd1-b7b9-ce6f05e6b033">-auto[match]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies automatic
+correspondence matching by name for cells in Calibre nmLVS-H comparison.
+When -automatch is used, Calibre compares cells with the same name
+in the layout and source (in addition to any specified by the ‑hcell
+option or the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> rule
+file statement) as corresponding hierarchical entities. Calibre
+pushes all other cells down to the next level of hierarchy. </p>
+<p class="p">This option
+may not be specified with -genhcells, which applies to both circuit
+extraction and comparison.</p>
+<p class="p">This option does not apply to
+hierarchical circuit extraction, such as with -spice.</p>
+<p class="p">The -automatch option should
+only be used if the layout cells actually contain the same devices
+as the source subcircuits of the same name. Excellent performance
+is generally obtained with a relatively brief, but carefully chosen
+list of hcells instead of using ‑automatch.</p>
+<p class="p">The -automatch option allows
+the hierarchy to be handled as Calibre determines is best for performance.
+All layout cells that are neither flattened nor expanded by the
+system, and that have a like-named counterpart in the source netlist,
+are compared.</p>
+<p class="p">Cell names are treated as case-insensitive
+by default using -automatch, but become case-sensitive if you specify <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Compare Case', 'svrf_ur'); return false;">LVS Compare Case</a> YES or LVS Compare Case TYPES. If cell names are treated
+as case-sensitive, two cells having the same name in layout and
+source are not matched if their cases are different. Top-level cells
+always correspond regardless of their names, however.</p>
+<p class="p">Pseudocells having names of
+the form ICV_<span class="keyword ParameterName OptionalReplaceable">n</span>,
+which are generated by that tool as a performance optimization,
+do not participate in -automatch. Such cells are generated at artificial
+levels of hierarchy within Calibre and are unsuitable as hcells.</p>
+<p class="p">To exclude hcells that might
+be selected by -automatch, use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Exclude Hcell', 'svrf_ur'); return false;">LVS Exclude Hcell</a> specification statement.</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Contain_Hcells_id3166033d.html#id3166033d-83b0-4490-b357-13a9012a6b59__Contain_Hcells_id3166033d.xml#id3166033d-83b0-4490-b357-13a9012a6b59" title="The term hcell stands for hierarchically corresponding cell. Hcells are cells that exist in both the layout and source designs and that (presumably) perform the same function. Calibre cannot determine if cells are identical in function because mask layout formats or SPICE netlists do not contain such information. Also, simply because two cells may have the same name is not necessarily a guarantee they have the same topology or device properties. So the user must specify cell correspondence in hierarchical LVS flows.">Hcells</a>” for details on hcell comparison. </p>
+<p class="p">Calibre PERC also uses the -automatch
+option, but it has different behavior than Calibre nmLVS-H. See
+“<a class="xref Link" href="../../calbr_perc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'calibre -perc', 'calbr_perc_user'); return false;">calibre -perc</a>” in the <span class="ph FontProperty ManualTitle">Calibre PERC User’s Manual</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__ide7d084fb-1ced-4418-a838-09d6b9cee621">-bpf [no-extents]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that generates a database
+consisting of binary polygon format (BPF) files, a layout cross-reference
+file, and a ports file. You use BPF databases with third-party tools. This
+option is rarely used.</p>
+<p class="p">You can use this option in both
+historical flat operation (<span class="keyword ParameterName Required">-lvs </span>without
+-flatten) and in CNET translation runs. When used, this option is
+typically used with -nl.</p>
+<p class="p">You cannot specify this option
+with the -flatten, -hier, or -spice options; Calibre returns an error
+if this occurs.</p>
+<p class="p">The no-extents option instructs
+the BPF writer to output actual coordinates for all shapes. Without
+this option, some polygons that have edges not orthogonal to the
+database axes are represented by their rectangular extents.</p>
+<p class="p">By default, Calibre outputs
+all <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device </a>seed layers.
+You can use the ‑dblayers option to select a specific set layers.</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="General_BinaryPolygonFormatBpfDatabase_id8cf7e7c0.html#id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9__General_BinaryPolygonFormatBpfDatabase_id8cf7e7c0.xml#id8cf7e7c0-745c-4e3c-a68b-c0967b19bfa9" title="The BPF database provides an interface from flat Calibre nmLVS to external tools. It provides access to shapes on layers involved in circuit extraction and device recognition, and to some other related information. You create the BPF database with the -bpf command line option in flat LVS (-lvs with no -flatten option). You cannot create the BPF database in Calibre nmLVS‑H.">Binary Polygon Format (BPF) Database</a>” for additional information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id28129aa1-18b8-4b4e-aa99-efb66cfc2984">-cb </dt>
+<dd class="dd ArgumentDescription"><p class="p">This option is discussed under “<a class="xref fm:HeadingAndPage" href="Concept_CalibreCb_id383454f8.html#id383454f8-3e94-495e-a462-3cee987001f7__Concept_CalibreCb_id383454f8.xml#id383454f8-3e94-495e-a462-3cee987001f7" title="The Calibre Cell/Block license package provides interactive block verification to customers using layout editors. Note it is not a separate tool, but a license package that enables some of the Calibre applications described previously.">Calibre CB</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id473e95ee-c806-4510-abc0-acda2b1c334d">-cl [<span class="keyword ParameterName OptionalReplaceable">message_limit</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that causes LVS to
+read and verify the SPICE netlist specified in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a> specification
+statement. Calibre nmLVS issues any applicable warnings or errors
+and writes them to the logfile. The overall results are written
+to the LVS Report. Calibre nmLVS reads the SPICE netlist hierarchically
+(as is done with the -hier option) but does not generate any LVS
+comparison structures.</p>
+<p class="p">The primary status message in
+the LVS report is SYNTAX OK if the check succeeded or SYNTAX CHECK
+FAILED if the check failed.</p>
+<p class="p">By default, the count of error
+or warning discrepancy messages issued by the tool is 256 of each
+type. No more messages are issued after that count is reached for
+each discrepancy type. The <span class="keyword ParameterName OptionalReplaceable">message_limit </span>is
+a positive integer that specifies how many discrepancy messages to
+issue for each type.</p>
+<p class="p">This option cannot be used with
+input systems other than SPICE netlists.</p>
+<p class="p">Calibre nmLVS reserves a flat
+license when using this option.</p>
+<p class="p">Calibre nmLVS exits with a non-zero
+status if the syntax check fails. In most Linux shells, you can
+check this status by examining the $? shell variable.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idf2aee85b-7d8a-405d-89fa-cd1e7ac70f81">-cmp_host <span class="keyword ParameterName OptionalReplaceable">host</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies to run LVS-H comparison
+on a remote host. A Calibre nmLVS Advanced license is required to
+use this option. See the <a class="xref LinkItalic" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_admin_gd'); return false;">Calibre Administrator’s Guide</a> for license information.</p>
+<p class="p">This option may not be specified with ‑cmp_remotefile and is
+disallowed if circuit extraction is not performed as part of the
+LVS run. In other respects, this option has no direct dependencies
+on options controlling circuit extraction. Circuit comparison is
+single-threaded. See <a class="xref fm:HeadingOnly" href="#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id80509980-0fa8-4575-92dc-8cdf5fbc3883">Example 7</a>.</p>
+<p class="p">The remote <span class="keyword ParameterName OptionalReplaceable">host</span> machine
+must be able to access the current local working directory through the
+same namespace as the originating process. If this is not the case,
+or if the local host machine is unreachable, then the following
+message is written to the transcript, and the run stops:</p>
+<pre class="pre codeblock"><code>ERROR: Failed to connect to the remote LVS host &lt;hostname&gt;.</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id9c0892ba-9db2-4591-b983-661b471cebc7"><a id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id2e4b1b8d-5498-4237-8fea-6a5c8d0295eb"></a>-cmp_remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies a file containing
+commands for running LVS-H comparison on a remote host. A Calibre
+nmLVS Advanced license is required to use this option. See the <cite class="cite">Calibre
+Administrator’s Guide</cite> for license information.</p>
+<p class="p">This option may not be specified with -cmp_host and is disallowed
+if circuit extraction is not performed as part of the LVS run. In
+other respects, this option has no direct dependencies on options
+controlling circuit extraction. Circuit comparison is single-threaded.</p>
+<p class="p">The specified <span class="keyword ParameterName OptionalReplaceable">filename</span> must
+contain appropriate <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LAUNCH MANUAL', 'calbr_admin_gd'); return false;">LAUNCH MANUAL</a> and <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'REMOTE COMMAND', 'calbr_admin_gd'); return false;">REMOTE COMMAND</a> commands
+for initializing a remote LVS-H comparison host. See the <cite class="cite OptionalReplaceable">Calibre Administrator’s
+Guide</cite> for command reference material. </p>
+<p class="p">For example, this command sequence could be in the referenced <span class="ph filepath">filename</span>:</p>
+<pre class="pre codeblock"><code>// default is 600 seconds
+LAUNCH MANUAL WAIT 30
+REMOTE COMMAND ./config.sh ARGUMENTS [ lvs_host_7 ]</code></pre><p class="p">REMOTE COMMAND references <span class="ph filepath">config.sh</span>, which
+could contain this:</p>
+<pre class="pre codeblock"><code>#! /bin/sh
+ssh $1 $CALIBRE_HOME/bin/rcalibre `pwd` 1 \
+  CALIBRE_HOME $CALIBRE_HOME \
+  -par_cmp_remote $CALIBRE_LVS_REMOTE_CONNECTION</code></pre><p class="p">The argument lvs_host_7 is a remote host name
+and is referenced by $1 in the <span class="ph filepath">config.sh</span> script.
+This script passes the current working directory (pwd) as the destination
+for the MTflex log file (the default is <span class="ph filepath">/tmp</span>),
+the $CALIBRE_HOME tree value from the primary host (master) environment,
+and the primary host name and port number to the remote host. The
+path of a Calibre tree and the value of $CALIBRE_LVS_REMOTE_CONNECTION are
+required in order for comparison to be performed on a remote host.</p>
+<p class="p">The $CALIBRE_HOME value in the preceding script is from the primary’s
+environment. If that does not resolve correctly in the remote’s
+environment, then use a value that does resolve properly.</p>
+<p class="p">The REMOTE COMMAND must reference a command or script that uses
+this command line option to perform the LVS comparison:</p>
+<pre class="pre codeblock"><code>-par_cmp_remote <span class="keyword ParameterName OptionalReplaceable">host</span>:<span class="keyword ParameterName OptionalReplaceable">port</span></code></pre><p class="p">-par_cmp_remote is a required special option
+and only applies in the context of a remote LVS comparison job.
+(It is an error to use it in any other situation.) This option is
+used as the only argument to “calibre” if the calibre command is
+sent to remote host for execution. The option is used as an argument
+to “rcalibre” if rcalibre is used to launch the remote job from the
+primary host.</p>
+<p class="p">The <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'CALIBRE_LVS_REMOTE_CONNECTION', 'calbr_admin_gd'); return false;">CALIBRE_LVS_REMOTE_CONNECTION</a> environment
+variable is a special usage in this context and is available to
+any program or shell script specified by REMOTE COMMAND (<span class="ph filepath">config.sh</span> in
+the preceding example). Its value is “<span class="keyword ParameterName OptionalReplaceable">host</span>:<span class="keyword ParameterName OptionalReplaceable">port</span>”,
+where <span class="keyword ParameterName OptionalReplaceable">host</span> is
+the primary host name that the remote host connects with, and <span class="keyword ParameterName OptionalReplaceable">port</span> is
+the port number of the connection. See <a class="xref fm:HeadingOnly" href="#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id5a693417-c06a-4906-be6d-df3103c6cf63">Example 8</a> for related
+setup scripts.</p>
+<p class="p">The -cmp_remotefile file does not do environment variable substitution;
+however, it does do substitution of %H:%P constructs (host:port)
+as part of a REMOTE COMMAND specification, so something like this
+could appear in the -cmp_remotefile script:</p>
+<pre class="pre codeblock"><code>REMOTE COMMAND ./config.sh ARGUMENTS [ lvs_host_7 %H:%P ]</code></pre><p class="p">And <span class="ph filepath">config.sh</span> could have this:</p>
+<pre class="pre codeblock"><code>#! /bin/sh
+ssh $1 $CALIBRE_HOME/bin/rcalibre 1 \
+  CALIBRE_HOME $CALIBRE_HOME -par_cmp_remote $2</code></pre><p class="p">The remote host machine must be able to access the current working
+directory through the same namespace as the originating process.
+If this is not the case, or if the primary host is unreachable,
+then the following message is written to the transcript, and the
+run stops:</p>
+<pre class="pre codeblock"><code>ERROR: Failed to connect to the remote LVS host &lt;hostname&gt;.</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id2c2d2bb2-4e6f-4bff-8009-71a6a1ba27ba">-cs [<span class="keyword ParameterName OptionalReplaceable">message_limit</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that causes LVS to
+read and verify the SPICE netlist specified in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a> specification
+statement. Calibre nmLVS issues any applicable warnings or errors
+and writes them to the logfile. The overall results are written
+to the LVS Report. Calibre nmLVS reads the SPICE netlist but does
+not generate any LVS comparison structures.</p>
+<p class="p">The primary host status message
+in the LVS report is SYNTAX OK if the check succeeded or SYNTAX
+CHECK FAILED if the check failed.</p>
+<p class="p">By default, the count of error
+or warning discrepancy messages issued by the tool is 256 of each
+type. No more messages are issued after that count is reached for
+each discrepancy type. The <span class="keyword ParameterName OptionalReplaceable">message_limit </span>is
+a positive integer that specifies how many discrepancy messages to
+issue for each type.</p>
+<p class="p">Calibre nmLVS exits with a non-zero
+status if the syntax check fails. In most Linux shells, you can
+check this status by examining the $? shell variable. </p>
+<p class="p">This option cannot be used with
+input systems other than SPICE netlists.</p>
+<p class="p">Calibre nmLVS reserves a flat
+license when you use this option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id94c3dc59-a234-4b4c-9b6a-b3907453bcd8">-dblayers “<span class="keyword ParameterName OptionalReplaceable">name1</span>, …” (or -db “<span class="keyword ParameterName OptionalReplaceable">name1</span>, …”)</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option used in Pyxis Layout
+flows. This option controls the layer shapes written to a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask Results Database', 'svrf_ur'); return false;">Mask Results Database</a>, which is not used by Calibre RVE but is used in
+Pyxis Layout. You specify an argument of comma-separated layer names,
+enclosed in quotation marks. Calibre writes only these layer names
+to the Mask Results Database. Each name is a layer or a layer number
+that appears in the rule file. </p>
+<p class="p">If you omit this option, Calibre
+writes all relevant layers to the Mask Results Database. The relevant
+layers include those that appear in <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Connect', 'svrf_ur'); return false;">Connect</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Sconnect', 'svrf_ur'); return false;">Sconnect</a> operations,
+all <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> seed
+and pin layers from the rule file, and all <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Stamp', 'svrf_ur'); return false;">Stamp</a> target
+layers. Possible exceptions are contact layers, as specified with
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask Results Database', 'svrf_ur'); return false;">Mask Results Database</a> specification statement.</p>
+<p class="p">May not be specified with -flatten.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id87a13fad-eb4e-490a-8108-79e207c0abb4">-E <span class="keyword ParameterName OptionalReplaceable">svrf_output_from_tvf</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that causes the TVF
+pre-processor to write the equivalent SVRF rule file to the filename
+specified as the <span class="keyword ParameterName OptionalReplaceable">svrf_output_from_tvf</span> argument.
+This option may be used when your rule file is in compile-time TVF
+format (see the “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tcl Verification Format', 'svrf_ur'); return false;">Tcl Verification Format</a>” chapter of the <span class="ph FontProperty ManualTitle">SVRF Manual</span>).
+By default, the TVF rule file is echoed to the runtime logfile,
+but the equivalent SVRF code is not written. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id9b498a62-796a-406b-96aa-c4c4c20c2e87">-flatten</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that causes circuit
+extraction to generate a flat SPICE netlist and LVS circuit comparison
+is performed flat. The run transcript is similar to when a flat
+design is input when using the hierarchical engine.</p>
+<p class="p">When specified with the -spice
+option, or when a layout netlist is implicitly extracted, the layout
+netlist is flat. A circuit extraction report is produced. </p>
+<p class="p">When specified with the <span class="keyword ParameterName Required">‑lvs</span> option,
+netlist-to-netlist LVS comparison is performed (as with -hier),
+but the results are flat.</p>
+<p class="p">If you specify the <span class="keyword ParameterName Required">-lvs</span> -flatten
+options, you omit the -spice option, and the layout is a geometric
+database, then Calibre generates an extracted layout netlist and
+performs circuit comparison in a single run. When the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> statement is specified in the rule file, the extracted
+netlist is written to that directory with the name <span class="ph filepath italic">layout_primary</span>.sp. The <span class="ph filepath italic">layout_primary</span> name
+is the name of the primary cell. Otherwise, the netlist is written
+as <span class="ph filepath italic">lvs_report_name</span>.sp
+in the current working directory. The <span class="ph filepath italic">lvs_report_name</span> name
+is taken from the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a> specification
+statement in this case.</p>
+<p class="p">The -bpf, -cell, -dblayers,
+-nl, -nonames, -tl, and -ts options cause errors when used with ‑flatten.
+All hierarchical options are incompatible with -flatten. </p>
+<p class="p">The -cb, -ixf, and -nxf options
+may be used with -flatten.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id248ddbce-3363-47e1-8681-3ee5c1854f18">‑genhcells[<span class="keyword ParameterName OptionalReplaceable">=qs_tcl_file</span> | select]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+option that automatically generates an hcell list during circuit
+extraction based upon matching cell names. The generated hcell list
+is used during circuit extraction and LVS-H comparison. This option
+may not be specified with -automatch, which only applies during comparison.</p>
+<p class="p">The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source System', 'svrf_ur'); return false;">Source System</a> SPICE
+and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a> statements
+must be active in the rule file when this option is used or an error
+is given. </p>
+<p class="p">When the option is used by itself (no suffix
+or “select” keyword) during circuit extraction, the behavior is
+essentially the same as the following Query Server Tcl script:</p>
+<pre class="pre codeblock"><code>hcells::automatch -on
+hcells::read -auto_expand preset -rules &lt;rules&gt;
+hcells::add_matching_hcells
+hcells::print_hcells -file $CALIBRE_GENHCELLS_OUTPUT
+puts "\n\nGenerated HCELL Status:"
+puts [ hcells::status ]
+puts "GENERATED HCELL File: $CALIBRE_GENHCELLS_OUTPUT"</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">Total hierarchical instance count (THIC) is not used as
+an evaluation criterion by default. To employ it, specify hcells::select
+in a <span class="ph filepath">qs_tcl_file</span> script or specify the “select” keyword.</p>
+</div>
+<p class="p">The “select” keyword mimics the <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'hcellsselect', 'calbr_query_user'); return false;">hcells::select</a> command’s
+default thresholds for hcell selection criteria. An hcell evaluation
+report like what is generated by the Query Server is written to
+the Mask SVDB Directory as <span class="ph filepath">&lt;topcell&gt;.hcells.selectreport</span>,
+where <span class="keyword ParameterName OptionalReplaceable">&lt;topcell&gt;</span> is the
+primary layout cell. If Mask SVDB Directory is unspecified, then
+the report is written to the working directory as <span class="ph filepath">&lt;lvs_report&gt;.&lt;topcell&gt;.hcells.selectreport</span>,
+where <span class="keyword ParameterName OptionalReplaceable">&lt;lvs_report&gt;</span> is
+the LVS Report filename.</p>
+<p class="p">For performance reasons, the select keyword is generally preferred
+over using the =<span class="keyword ParameterName OptionalReplaceable">qs_tcl_file</span> suffix.</p>
+<p class="p">If the <span class="keyword ParameterName OptionalReplaceable">=qs_tcl_file</span> suffix
+is used during circuit extraction, then the <span class="keyword ParameterName OptionalReplaceable">qs_tcl_file</span> is
+the name of a user-defined Query Server Tcl script, and that script
+is executed instead of the default one described previously. See
+“<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'hcells99Hcell Analysis Commands', 'calbr_query_user'); return false;">Tcl Shell Hcell Analysis Commands</a>” in the <cite class="cite ManualTitle">Calibre
+Query Server Manual</cite> for details about script commands.</p>
+<p class="p">The CALIBRE_GENHCELLS_OUTPUT global Tcl variable specifies the
+output filename and location. This variable must be referenced in
+a user script to output the hcell list. The output file may be empty,
+in which case no hcells are contributed to the aggregate hcell list.</p>
+<p class="p">The generated hcell list is stored in the Mask SVDB Directory
+using the filename <span class="ph filepath">&lt;topcell&gt;.hcells</span>. If
+Mask SVDB Directory is unspecified, then <span class="ph filepath">&lt;lvs_report&gt;.&lt;topcell&gt;.hcells</span> is
+written to the working directory. </p>
+<p class="p">This file includes user provided hcells from an hcell file, Hcell
+specification statements, and hcells selected by the -genhcells
+command option. Cells that are eliminated by other features like
+unbalanced hcell expansion, seed promotion, high-cost hcell removal
+are not included in this list. The list contains exactly the list
+of hcells that appear in the LVS Report.</p>
+<p class="p">If the -genhcells option is used during a comparison-only run
+(that is, no circuit extraction is performed), then an hcell file
+having one of the automatically generated pathnames described previously
+must exist or an error is given. That hcell list becomes part of
+the aggregate hcell list used for comparison. An hcell list is not
+generated during a comparison-only run, and the <span class="keyword ParameterName OptionalReplaceable">=qs_tcl_file</span> suffix
+may not be used in this case.</p>
+<p class="p">If hcell list generation fails, a runtime error is given.</p>
+<p class="p">Expansion of hcells during circuit extraction
+is controlled by the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a> statement
+in the rule file. Cell names specified in <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Exclude Hcell', 'svrf_ur'); return false;">LVS Exclude Hcell</a> statements
+in the rule file do not participate as hcells during a run regardless
+of the method of hcell specification. As for hcells specified by
+any method, hierarchy is handled during comparison as Calibre determines
+is best for performance.</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Contain_Hcells_id3166033d.html#id3166033d-83b0-4490-b357-13a9012a6b59__Contain_Hcells_id3166033d.xml#id3166033d-83b0-4490-b357-13a9012a6b59" title="The term hcell stands for hierarchically corresponding cell. Hcells are cells that exist in both the layout and source designs and that (presumably) perform the same function. Calibre cannot determine if cells are identical in function because mask layout formats or SPICE netlists do not contain such information. Also, simply because two cells may have the same name is not necessarily a guarantee they have the same topology or device properties. So the user must specify cell correspondence in hierarchical LVS flows.">Hcells</a>” and “<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell and Hierarchical Analysis', 'calbr_query_user'); return false;">Hcell and Hierarchical Analysis</a>” in the <cite class="cite ManualTitle">Calibre
+Query Server Manual</cite> for more information about constructing
+hcell lists. Also see “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Performing Hcell Analysis in Calibre nmLVS', 'calbr_interactive_user'); return false;">Performing Hcell Analysis in Calibre nmLVS</a>” in the <cite class="cite ManualTitle">Calibre
+Interactive User’s Manual</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id27752278-31c5-4684-a69e-d21dd697e4fb">-hcell <span class="keyword ParameterName OptionalReplaceable">cell_correspondence_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that defines an hcell
+correspondence list. The specified file defines corresponding cells
+in layout and source, respectively. Cells from the layout list are
+preserved during circuit extraction. Cell pairs that are found in
+both layout and source are compared to each other during circuit
+comparison.</p>
+<p class="p">Expansion of hcells during circuit
+extraction is controlled by the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a> statement
+in the rule file. Subcircuits not specified as hcells get expanded
+during circuit comparison. </p>
+<p class="p">Excellent performance is generally
+obtained with a relatively brief but carefully chosen list of hcells.
+See “<a class="xref fm:HeadingAndPage" href="Contain_Hcells_id3166033d.html#id3166033d-83b0-4490-b357-13a9012a6b59__Contain_Hcells_id3166033d.xml#id3166033d-83b0-4490-b357-13a9012a6b59" title="The term hcell stands for hierarchically corresponding cell. Hcells are cells that exist in both the layout and source designs and that (presumably) perform the same function. Calibre cannot determine if cells are identical in function because mask layout formats or SPICE netlists do not contain such information. Also, simply because two cells may have the same name is not necessarily a guarantee they have the same topology or device properties. So the user must specify cell correspondence in hierarchical LVS flows.">Hcells</a>” and “<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell and Hierarchical Analysis', 'calbr_query_user'); return false;">Hcell and Hierarchical Analysis</a>” in the <cite class="cite ManualTitle">Calibre Query
+Server Manual</cite> for more information about constructing hcell
+lists. Also see “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Performing Hcell Analysis in Calibre nmLVS', 'calbr_interactive_user'); return false;">Performing Hcell Analysis in Calibre nmLVS</a>” in the <cite class="cite ManualTitle">Calibre
+Interactive User’s Manual</cite>.</p>
+<p class="p">You can also define cell correspondence
+using the -genhcells option and the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> specification
+statements in your rule file. If -automatch is specified, then automatically matched
+subcircuit names are added to the internal hcell list during circuit
+comparison (but not circuit extraction). All lists of hcells are
+concatenated internally. If no hcells are identified using any of
+these means, then the comparison is performed flat.</p>
+<p class="p">Hcell
+names are treated as case-insensitive by default, but become case-sensitive
+if you specify <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Compare Case', 'svrf_ur'); return false;">LVS Compare Case</a> YES or LVS Compare Case TYPES. If hcell names are treated as
+case-sensitive, two cells having the same name in layout and source
+are not matched if their cases are different.</p>
+<p class="p">Warnings are issued for cell
+names that do not exist in the input data. </p>
+<p class="p">Double quotation marks around
+a -hcell list name are treated as literal, but this is not true
+for the Hcell specification statement.</p>
+<p class="p">To prevent hierarchy modifications
+during circuit extraction only (but not during LVS comparison),
+use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Preserve Cell List', 'svrf_ur'); return false;">Layout Preserve Cell List</a> specification statement instead of an hcell list.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id90fff512-0540-4381-8e6b-00f69b176ae5">-hier</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that runs SPICE
+netlist-to-netlist comparison hierarchically. This option can only be
+specified with the <span class="keyword ParameterName Required">‑lvs</span> option. </p>
+<p class="p">In order to compare source and
+layout netlists hierarchically, the tool must be told how to match
+the subcircuit names by using an hcell list. This list is specified
+by using the -hcell, ‑genhcells, or the -automatch command line
+options, or the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> rule
+file specification statement. All of the hcells specified by any
+of these three methods are concatenated into a single list, which
+determines the subcircuits to compare in layout and source. If you
+have no hcell-identifying options specified, then the LVS comparison
+is performed flat.</p>
+<p class="p">If you specify ‑spice with -hier,
+then the Layout System must be geometric (such as GDSII or OASIS).
+The layout netlist is extracted to the filename associated with
+the ‑spice option and is then compared against the source netlist
+specified in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a> statement.</p>
+<p class="p">If you specify the -hier option,
+you omit the -spice option, and the layout is a geometric database,
+then Calibre nmLVS-H generates an extracted layout netlist and performs
+circuit comparison in a single run. When the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> statement is specified in the rule file, the extracted
+netlist is written to that directory with the name <span class="ph filepath italic">layout_primary</span>.sp. The <span class="ph filepath italic">layout_primary</span> name
+is the name of the primary cell. Otherwise, the netlist is written
+as <span class="ph filepath italic">lvs_report_name</span>.sp
+in the current working directory. The <span class="ph filepath italic">lvs_report_name</span> name
+is taken from the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a> specification
+statement in this case.</p>
+<p class="p">The name of the extracted netlist
+is reported at the end of the transcript. Note that the name of
+the extracted netlist is compatible with the standard naming convention
+of Calibre xRC.</p>
+<p class="p">Calibre PERC uses the -hier
+option, but it has different behavior than Calibre nmLVS-H. See
+“<a class="xref Link" href="../../calbr_perc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'calibre -perc', 'calbr_perc_user'); return false;">calibre -perc</a>” in the <cite class="cite ManualTitle">Calibre PERC
+User’s Manual</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id499102b0-1af6-4aa6-863b-21b678082ffd">-hyper [cmp] [pathchk] [remote] </dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+option that specifies hyperscaling mode, which improves hardware
+utilization and run times.</p>
+<p class="p">Hyperscaling mode enables the
+concurrent, parallel execution of rule file layer operations, thereby
+increasing the utilization of CPUs and improving scalability in
+the MT and Calibre MTflex environments. The -hyper option can only
+be specified with the -turbo option and is recommended when a machine
+has at least four cpus. Hyperscaling uses the same licensing environment
+as MT and MTflex modes. No additional licenses are required. There
+is increased memory usage on the primary host when using ‑hyper.</p>
+<p class="p">This -hyper option supports
+layer operations during connectivity extraction. For additional details,
+see “<a class="xref fm:HeadingAndPage" href="Concept_HyperscalingLvsConnectivityExtraction_ide0fc54c5.html#ide0fc54c5-3fda-4fd2-b8ca-e09d09983e5c__Concept_HyperscalingLvsConnectivityExtraction_ide0fc54c5.xml#ide0fc54c5-3fda-4fd2-b8ca-e09d09983e5c" title="Hyperscaling is enabled in Calibre nmLVS-H connectivity extraction through the -hyper command line option. The -hyper option can only be specified with the -turbo option. A minimum of four CPUs is recommended on the local host machine when running with ‑hyper.">Hyperscaling for LVS Connectivity Extraction</a>”. Hyperscaling is not applied to circuit comparison, which always
+runs on a single thread.</p>
+<p class="p">If cmp is
+specified when layout circuit extraction and <span class="keyword ParameterName Required">-lvs</span> -hier
+are performed in the same run, then the LVS comparison module performs
+tasks simultaneously with the extraction module that ordinarily
+would occur only after circuit extraction tasks are complete. Therefore,
+using cmp can improve run times. (By default, LVS comparison runs
+on the local host in MTflex mode. This can be changed by using the
+-cmp_host or ‑cmp_remotefile options.) The cmp option shows the
+greatest benefit in runs where ERC, soft connection checking, and
+short isolation are performed. </p>
+<p class="p">The pathchk option enables concurrency
+of <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Pathchk', 'svrf_ur'); return false;">Pathchk</a> layer
+operations in HDBs during an ERC run. This option is useful if Pathchk
+operations take the majority of time in a hyperscaling run. This
+option increases memory usage.</p>
+<p class="p">The remote
+option triggers remote pseudohierarchical database technology. This
+causes pseudo HDBs to be distributed across remote hosts in an MTflex
+run. Having 16 or more remote CPUs is optimal. For more details,
+see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+<p class="p">Using cmp and remote together enables reading of the source netlist
+from the start of the LVS run, which improves performance. Using
+cmp alone enables the reading the source netlist after the hierarchical
+database constructor finishes. See “<a class="xref fm:HeadingAndPage" href="#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id4fa013d2-4e55-4a7e-a47e-dfcc1b5f2698">Example 6</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id2553fd68-eeb9-4816-833d-f39fdc49453e">-ixf </dt>
+<dd class="dd ArgumentDescription"><p class="p">On option that generates an
+instance cross-reference file. For additional information about net
+cross-reference files, refer to the “<a class="xref fm:HeadingAndPage" href="Contain_SvdbCrossReferenceFiles_idde530f77.html#idde530f77-ed2c-4712-a892-38634835a352__Contain_SvdbCrossReferenceFiles_idde530f77.xml#idde530f77-ed2c-4712-a892-38634835a352" title="Calibre LVS applications can generate Mask SVDB Directory (commonly called SVDB) instance and net cross-reference files. These are useful in identifying layout and source object correspondence.">SVDB Cross-Reference Files</a>”.</p>
+<p class="p">The
+generated filename is <span class="ph filepath emphasis">lvs_report_name</span>.ixf,
+where <span class="ph filepath emphasis">lvs_report_name</span> is
+specified by the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Report', 'svrf_ur'); return false;">LVS Report</a> specification
+statement in the rule file. If you specify the -ixf option and your rule
+file includes the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> specification statement, Calibre nmLVS writes the
+instance cross-reference file to the SVDB directory. In this case,
+the output file is in the form <span class="ph filepath emphasis">layout_primary</span>.ixf,
+where <span class="ph filepath emphasis">layout_primary</span> is
+from the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Primary', 'svrf_ur'); return false;">Layout Primary</a> specification statement.
+If you do not specify the Layout Primary statement, ICV_UNNAMED_TOP
+is substituted for <span class="ph FontProperty emphasis">layout_primary</span>.</p>
+<p class="p">The cross-reference files generated
+in flat Calibre nmLVS with the use of the -ixf option are not equivalent
+to those generated for Calibre nmLVS-H.</p>
+<p class="p">This option is not valid with
+the -tl and -ts options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id72a33855-0b26-4138-89c9-9edefc94da17">-layout <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that overrides the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout System', 'svrf_ur'); return false;">Layout System</a> statements
+in the rule file (which specify a geometric layout for circuit extraction)
+and causes the <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span> netlist
+to be used as the layout netlist instead. </p>
+<p class="p">The option -layout can be specified
+only with the <span class="keyword ParameterName Required">-lvs</span> option
+but cannot be specified with the -spice option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id4ee18d96-24ae-41a9-9880-8f44b7b44b0a">-lmconfig <span class="keyword ParameterName OptionalReplaceable">licensing_config_filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that enables a user-specified
+search for default or substitute licenses. The user-specified search
+is used rather than the default license acquisition behavior. The <span class="keyword ParameterName OptionalReplaceable">licensing_config_filename</span> argument
+specifies a configuration file that controls how the license search
+occurs. Refer to the section “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre Licensing Configuration File', 'calbr_admin_gd'); return false;">Calibre Licensing Configuration File</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite> for
+more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idace56014-f801-439b-8c18-b32e27ae2b71">-lmretry <span class="keyword ParameterName OptionalReplaceable">retry_args</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies classic
+or loop licensing mode. See “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre Licensing Command Line Options', 'calbr_admin_gd'); return false;">Calibre Licensing Command Line Options</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite> for
+more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id923c4a4d-aa7a-481c-b01d-650fa8224caa">-lvs_supplement [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+that allows Calibre nmLVS-H license pairs (calibrelvs and calibrehlvs)
+to enable processing threads when the ‑turbo option is specified
+with -perc. This option does not apply to -turbo_all. For -perc
+usage, see “<a class="xref Link" href="../../calbr_perc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'calibre -perc', 'calbr_perc_user'); return false;">calibre -perc</a>” in the <cite class="cite ManualTitle">Calibre PERC User’s
+Manual</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id97713d58-a314-438f-8dda-37b0893cf296">-nl</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that produces a flat
+netlist from the layout. This option may not be used with ‑spice
+or -flatten. This option is rarely used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idf9b0199c-6944-47d8-ac8c-713144560d23">-nonames (or -non)</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that prevents the
+CNET writer from generating net and instance name files in the CNET
+database. Used only with -tl or -ts. This option is rarely used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id491be7d9-138c-4b63-9d89-11926f97c91b">-nowait</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that Calibre to queue
+only briefly (approximately 10 seconds) before attempting to acquire
+substitute licenses. This option is equivalent to specifying “‑wait 0”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idf6e76fa8-aed3-4419-baf6-43f2d9855a83">-nxf </dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that generates a net
+cross-reference file. For additional information about net cross-reference
+files, refer to the “<a class="xref fm:HeadingAndPage" href="Contain_SvdbCrossReferenceFiles_idde530f77.html#idde530f77-ed2c-4712-a892-38634835a352__Contain_SvdbCrossReferenceFiles_idde530f77.xml#idde530f77-ed2c-4712-a892-38634835a352" title="Calibre LVS applications can generate Mask SVDB Directory (commonly called SVDB) instance and net cross-reference files. These are useful in identifying layout and source object correspondence.">SVDB Cross-Reference Files</a>”.</p>
+<p class="p">The generated filename is <span class="ph filepath">lvs_report_name</span>.nxf,
+where <span class="ph filepath">lvs_report_name</span> is specified by the LVS
+Report specification statement in the rule file. If you specify
+the -nxf option and your rule file includes the Mask SVDB Directory
+specification statement, Calibre nmLVS writes the net cross-reference
+file to the SVDB directory. In this case, the output file is in
+the form <span class="ph filepath">layout_primary</span>.nxf, where <span class="ph filepath">layout_primary</span> is
+from the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Primary', 'svrf_ur'); return false;">Layout Primary</a> specification statement.
+If you do not specify the Layout Primary statement, ICV_UNNAMED_TOP
+is substituted for <span class="ph filepath">layout_primary</span>. </p>
+<p class="p">The cross-reference files generated
+in flat Calibre nmLVS with the use of the -nxf option are not equivalent
+to those generated for Calibre nmLVS-H.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id70b2fcd4-fc33-425c-adf4-05554903bf4f">-remote <span class="keyword ParameterName OptionalReplaceable">host</span>[, <span class="keyword ParameterName OptionalReplaceable">host</span> …]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies to
+use the MTflex multithreaded parallel processing architecture. It can
+only be specified with the -turbo option. It enables multithreaded
+operation on remote hosts of a distributed network. You must specify
+at least one host parameter. A list of hostnames is comma-delimited
+and specifies that multiple hosts participate in multithreaded operations.
+You must have the required number of licenses for your job.</p>
+<p class="p">This option applies only to
+hierarchical applications on a homogeneous set of hosts. That is, all
+machines are the same supported platform type and must have the
+same address mode.</p>
+<p class="p">You should avoid specifying
+the primary host as a remote host. Doing so can have an adverse
+effect on performance.</p>
+<p class="p">When using MTflex to run Calibre
+nmLVS-H on distributed processors, connectivity extraction modules
+run in multithreaded mode. The LVS comparison stage runs only on
+the primary host processor.</p>
+<p class="p">For more details, see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id191003c2-ae03-411a-9e4a-6ee5bbafac5c">-remotecommand <span class="keyword ParameterName OptionalReplaceable">filename</span> <span class="keyword ParameterName OptionalReplaceable">count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option
+used in MTflex runs in an LSF environment that allows you to specify
+two arguments from the command line directly. This option can only
+be used with ‑turbo. It may not be specified with -remotefile or
+‑remote.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">filename</span> argument
+specifies the <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'REMOTE COMMAND', 'calbr_admin_gd'); return false;">REMOTE COMMAND</a> setup
+file, and the <span class="keyword ParameterName OptionalReplaceable">count</span> argument
+specifies the <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LAUNCH CLUSTER', 'calbr_admin_gd'); return false;">LAUNCH CLUSTER</a> command’s
+COUNT parameter. The <span class="keyword ParameterName OptionalReplaceable">count</span> must
+be greater than or equal to 2.</p>
+<p class="p">The -remotecommand option is
+equivalent to using the following configuration file with the ‑remotefile
+option:</p>
+<pre class="pre codeblock leveled"><code>LAUNCH CLUSTER MINCOUNT 2 COUNT &lt;count&gt;
+REMOTE COMMAND &lt;queue_command&gt; ARGUMENTS [ %H:%P %C ]</code></pre><p class="p">For more details, see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <span class="ph FontProperty ManualTitle">Calibre Administrator’s Guide</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id9f29f520-4b3e-4820-bdd1-fbebffeed842">-remotedata [<span class="keyword ParameterName OptionalDefault">-recoveroff</span> | -recoverremote ] </dt>
+<dd class="dd ArgumentDescription"><p class="p">An option
+that controls the behavior of the Calibre Remote Data Server. These
+options can only be used with -remote, -remotefile, or ‑remotecommand.</p>
+<p class="p">The -remotedata option allows memory data to be distributed across
+remote hosts, thus reducing the storage overhead for the primary
+host. This option is enabled when -hyper remote is specified.</p>
+<p class="p">The -recoveroff option disables disaster recovery of remote data
+and is the default. The ‑recoverremote option enables disaster recovery
+of data in the event of remote host failures. This option is recommended
+when using large numbers of remotes or if the run typically takes
+more than 12 hours.</p>
+<p class="p">Further details are discussed
+under <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', '-remotedata', 'calbr_admin_gd'); return false;">-remotedata</a> in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id3fe64954-e503-44c0-87ac-b33936b78f2e">-remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies to
+use the MTflex multithreaded parallel processing architecture, which
+enables multithreaded operation on remote hosts of a distributed
+network. It can only be specified in conjunction with the -turbo
+option. The <span class="keyword ParameterName OptionalReplaceable">filename</span> specifies
+the pathname of a configuration file containing information for
+the local and remote hosts. You must have the required number of
+licenses for your job.</p>
+<p class="p">The remote hosts can be heterogeneous
+when using this option. That is, they may be different platform
+types and address spaces. However, it is recommended that you use
+hosts with the same address space for your runs.</p>
+<p class="p">In general,
+do not use any CPUs on the primary host as remote CPUs. If you choose
+to do so, use spare CPUs on the primary host by specifying the <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LOCAL HOST COMPUTE', 'calbr_admin_gd'); return false;">LOCAL HOST COMPUTE</a> statement
+in the configuration file. When this statement is enabled, the operations
+consume licenses for the local CPU count.</p>
+<p class="p">When using MTflex to run Calibre
+nmLVS-H on distributed processors, connectivity extraction modules
+run in multithreaded mode. The LVS comparison stage runs only on
+the primary host processor.</p>
+<p class="p">For more details, see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id2ef433fe-c179-4da3-8747-5662942f076b">-siggen</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that causes LVS to
+generate a device signature in the log file during the circuit extraction
+phase of the run. It is associated with the SIGNATURE keyword of
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> statement.
+For information about device signatures, see “<a class="xref fm:HeadingAndPage" href="Concept_DeviceSignatures_idac396a43.html#idac396a43-0753-433d-91d1-50c95972aea0__Concept_DeviceSignatures_idac396a43.xml#idac396a43-0753-433d-91d1-50c95972aea0" title="Device signatures are managed by the DEVice statement’s SIGNATURE keyword. A signature is a set of polygons that is in proximity to a device seed shape and is used to identify the device type of a layout instance.">Device Signatures</a>”. This option requires a Calibre Advanced Device Properties license.</p>
+<p class="p">This option is not valid with
+the -tl and -ts options.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id068b4b67-2edd-4a0d-9f2f-558b61ecb15a">-spice <span class="keyword ParameterName OptionalReplaceable">spice_file_name </span>(or -spi <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span>)</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that extracts a SPICE
+netlist from a geometric layout and directs output to <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span>.
+The extracted netlist is used in place of the original geometric
+layout for comparison against the source.</p>
+<p class="p">If <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span> ends
+with either the .Z or .gz suffixes, then the output file is compressed using
+the Linux compress or gzip commands, respectively. These utilities
+must be available in your environment in order for the compression
+to occur.</p>
+<p class="p">See the -hier and -flatten options
+for details of how to run circuit extraction implicitly without
+using the ‑spice option.</p>
+<p class="p">When you perform circuit extraction
+and circuit comparison in a single run, Calibre verifies that the
+Source Path and the LVS Report file are specified in the rule file
+and the paths accessible before executing the circuit extraction
+(-spice) step. This check is not performed when you specify -spice
+without <span class="keyword ParameterName Required">-lvs</span>.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When you
+use source names with Calibre xRC, <span class="keyword ParameterName OptionalReplaceable">spice_file_name</span> must
+be an explicit pathname that places the file in the SVDB directory.
+That is, &lt;<span class="ph filepath">directory_path</span>&gt;/<span class="ph filepath">layout_primary.sp</span>,
+where <span class="ph filepath">directory_path</span> and <span class="ph filepath">layout_primary</span> appear,
+respectively, in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> and the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Primary', 'svrf_ur'); return false;">Layout Primary</a> specification
+statements in the rule file.</p>
+</div>
+<p class="p">If you intend to run Calibre
+xRC using the extracted netlist, specify the Mask SVDB Directory
+XRC statement in your rule file. This writes the results of circuit
+extraction to a hierarchical database (HDB) and places it in the
+SVDB. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id3afd1643-7d0d-4fbb-b670-7ed1cd3dbd2e">-tl <span class="keyword ParameterName OptionalReplaceable">cnet_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that performs layout
+translation to a CNET netlist specified by <span class="keyword ParameterName OptionalReplaceable">cnet_file_name</span>. You
+specify the layout in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a> specification
+statement. This option may not be used with -flatten. This option
+is rarely used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idf4c63ff4-5071-4ce7-a0a5-f58703e45e21">-ts <span class="keyword ParameterName OptionalReplaceable">cnet_file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that performs source
+translation to a CNET netlist specified by <span class="keyword ParameterName OptionalReplaceable">cnet_file_name</span>. You
+specify the source in the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Path', 'svrf_ur'); return false;">Source Path</a> specification
+statement. This option is rarely used.</p>
+<p class="p">Output nets are identified with
+numerical IDs only, not names, with the exception of nets that are
+connected to texted port objects. Such nets are represented in the
+netlist by the name of the respective port object. If a net is connected
+to more than one texted port object, then one of the port names
+is arbitrarily chosen to represent the net. The netlist format is
+affected by the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS NL Pin Locations', 'svrf_ur'); return false;">LVS NL Pin Locations</a> specification statement. </p>
+<p class="p">The generated netlist may be
+useful with some third-party tools; however, it is not intended for
+general circuit extraction or LVS debugging.</p>
+<p class="p">This option may not be used
+with -flatten.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idac90200e-0509-4dca-9070-04a27e8ca70e"><span class="keyword ParameterName Optional">-turbo</span> [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that enables multithreaded
+parallel processing. </p>
+<p class="p">The optional <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> argument
+is a positive integer that specifies the number of CPUs to use.
+If you do not specify a <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>,
+Calibre nmLVS-H runs on the maximum number of CPUs available for
+which you have licenses. In general, you should avoid specifying <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>.</p>
+<p class="p">The -turbo applies only to hierarchical
+circuit extraction, not to the circuit comparison (‑lvs ‑hier).
+Also, -hyper applies to circuit extraction, and it is recommended
+to use ‑hyper for machines with at least four cpus. If -hyper cmp
+is specified with -lvs -hier -turbo, then LVS comparison processes
+run while circuit extraction processes are running, which is more
+efficient.</p>
+<p class="p">Calibre nmLVS-H runs on the
+maximum number of CPUs available if you specify a number greater
+than the maximum available. For example:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -hier ... -turbo 3 ...</code></pre><p class="p">operates on two processors for
+a 2-CPU machine.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Licensing for Multithreaded Operations', 'calbr_admin_gd'); return false;">Licensing for Multithreaded Operations</a>” in the <cite class="cite">Calibre Administrator’s
+Guide</cite> for additional information about license scaling with
+CPU count.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idc3373236-20a4-4bcd-8c9b-f3799b1f1b08">-turbo_all</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option used with -turbo that
+halts the run if the tool cannot obtain the exact number of CPUs
+you specified using -turbo.</p>
+<p class="p">Specifying the -turbo_all option
+without <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> is
+effectively the same as specifying the maximum number of CPUs on
+the machine. For example:</p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net -turbo -turbo_all rule_file </code></pre><p class="p">executed on an 8-CPU machine
+for a hierarchical LVS run is the same as specifying:</p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net -turbo 8 -turbo_all rule_file</code></pre><p class="p">Without -turbo_all, the Calibre
+tool normally uses fewer threads than requested if the requested
+number of licenses or CPUs is unavailable. </p>
+<p class="p">See “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Licensing for Multithreaded Operations', 'calbr_admin_gd'); return false;">Licensing for Multithreaded Operations</a>” in the <cite class="cite">Calibre Administrator’s
+Guide</cite> for additional information about license scaling with
+CPU count.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id6a0d5c49-829a-4ed7-8cb4-435095fee7d7">-tvfarg <span class="keyword ParameterName OptionalReplaceable">argument</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies an <span class="keyword ParameterName OptionalReplaceable">argument</span> that
+is passed to a compile-time TVF script. The <span class="keyword ParameterName OptionalReplaceable">argument</span> can
+contain no space characters. The <span class="keyword ParameterName OptionalReplaceable">argument</span> is
+read by the tvf::get_tvf_arg command in the TVF rule file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id4f009f20-158b-4a6a-84c9-c3356957d657">-validprop [<span class="keyword ParameterName OptionalReplaceable">report_options</span> | <span class="keyword ParameterName OptionalDefault">all</span>] [trace]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that invokes the “property validator,”
+which checks a rule file for missing and unused DFM properties.
+You must also specify -lvs and other arguments necessary for a Calibre
+run with the specified rule file. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id1f1df741-5e1a-41d4-ad9b-dd9b301ac76f"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">report_options</span> —
+Specify one or more of the following to control what properties
+are reported on.</p>
+<ul class="ul"><li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idf84dd004-a3a1-47d2-a407-f07c7e0818d9"><p class="p">missing
+— Report properties that are used but not defined. </p>
+</li>
+<li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idce79fd69-0e3e-4325-90ab-3fd4709b4408"><p class="p">unused — Report
+properties that are not used. </p>
+</li>
+<li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id0f89767f-9aea-4b49-9f10-072d2a4e7abd"><p class="p">outputonly
+— Report properties that are used only in output. </p>
+<p class="p">For example, properties are included in output from a DFM RDB
+operation. </p>
+</li>
+<li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id5f1113b2-2798-46ed-a805-40a306083401"><p class="p">automatic —
+Report properties that are not used or output, but are always generated
+by an operation, regardless of any user-specified options. May be abbreviated
+as auto.</p>
+<p class="p">For example, the Device Layer operation automatically generates
+DFM properties.</p>
+</li>
+<li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id9704ef1d-69e1-4134-8cbd-c36f7dbf75de"><p class="p">all — Report
+missing, unused, outputonly, and automatic properties. This is the default.</p>
+</li>
+<li class="li" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id2d7df02d-ecf4-4e5d-aaab-2d8cc62d9b66"><p class="p">trace — Include
+a trace of the property analysis in the output.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">The property validator examines a limited set of rule file operations;
+see “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Property Validator', 'svrf_ur'); return false;">Property Validator</a>”
+in the <span class="ph FontProperty ManualTitle">Standard Verification Rule Format (SVRF) Manual</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idaf71e124-82f5-41ef-8871-d5fa0b95cbde">-wait <span class="keyword ParameterName OptionalReplaceable">n</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that sets the maximum
+amount of time (<span class="keyword ParameterName OptionalReplaceable">n</span>)
+for Calibre to queue for a specific license. If the license is unavailable
+after queuing for <span class="keyword ParameterName OptionalReplaceable">n</span> minutes,
+Calibre attempts to acquire any substitute licenses or exits if
+no suitable substitutions are defined. The maximum value for <span class="keyword ParameterName OptionalReplaceable">n</span> is
+45000. Refer to the section “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Using License Substitution With Calibre Classic Licensing', 'calbr_admin_gd'); return false;">Using License Substitution With Calibre Classic Licensing</a>” in the <span class="ph FontProperty ManualTitle">Calibre Administrator’s Guide</span> for
+more information on substituting licenses.</p>
+<p class="p">In the following example, the
+-wait option queues on a license for five minutes:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -wait 5 rules</code></pre><p class="p">If a license does not become
+available within five minutes, the application exits with the following
+message:</p>
+<pre class="pre codeblock leveled"><code>// Queue time specified by -wait switch has elapsed.</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__ide3c9ab07-6c07-4f1b-bf05-d76e17bf8501">-waiver <span class="keyword ParameterName OptionalReplaceable">waiver_setup_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies a waiver
+setup file necessary for running the automatic error waiver flow.
+This option enables automatic waiving of ERC errors after appropriate
+data preparation has occurred. This option only applies when connectivity
+extraction is performed. See “<a class="xref Link" href="../../calbr_autowaiver_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Performing a Waiver Run', 'calbr_autowaiver_useref'); return false;">Performing a Waiver Run</a>” in the <span class="ph FontProperty ManualTitle">Calibre Auto-Waivers User’s and Reference Manual</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id581263ad-6df7-477b-977b-ea0894c0c268">-xcell <span class="keyword ParameterName OptionalReplaceable">file_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that specifies an
+xcell file, which is primarily used by Calibre xRC. If a layout cell
+name appears in the -xcell file and in the LVS hcell list, then
+the cell is never expanded during circuit extraction. See “<a class="xref Link" href="../../xrc_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hierarchy Control with Xcells', 'xrc_user'); return false;">Hierarchy Control with Xcells</a>” in the <span class="ph FontProperty ManualTitle">Calibre xRC User’s Manual</span> for
+details about xcell files.</p>
+<p class="p">Xcells are immune from geometry pushdown from higher levels of
+the design, except for layers derived using the Extent or Extent
+Cell operations. To globally allow this pushdown, you can specify
+Mask SVDB Directory NOPEXPCELLS along with the CCI, XACT, or XRC
+option. To achieve a similar effect on a per-cell basis, you can
+draw a shape on the desired layer in an xcell, or you can derive
+a layer using Extent and the AND operation with the LVSCAREFUL keyword.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id1bec2b24-90b0-4b79-8885-27c2b747b8f1"><span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument that specifies a
+rule file.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Flat LVS comparison occurs when
+the -flatten option is used. The runtime behavior is similar to LVS-H
+in that layout SPICE netlist extraction occurs first, but extraction
+and LVS comparison are both flat. If you want to perform flat comparison,
+this is the recommended method.</p>
+<p class="p">Flat circuit extraction is also performed when the -lvs option
+is used without the -hier or ‑flatten options. In general, this
+mode is not recommended. Connectivity information is stored in memory
+and compared against a flattened view of the geometric layout database.</p>
+<p class="p">LVS-H performs hierarchical SPICE
+circuit extraction from a geometric layout and hierarchical LVS
+comparison of SPICE netlists. The -spice option extracts a hierarchical
+layout SPICE netlist, and the -lvs -hier options perform hierarchical
+circuit comparison. However, if the Layout System is geometric,
+then -lvs -hier performs circuit extraction automatically without using
+-spice.</p>
+<p class="p">Integers are represented internally
+in sign-magnitude or twos-complement format. The maximum database
+coordinate precision range is +/‑ 2<span class="ph FontProperty LiteralSuperScript">61</span>.</p>
+<p class="p">The table “<a class="xref fm:HeadingAndPage" href="Concept_RuleFile_id769f9ec8.html#id769f9ec8-72eb-49cf-ae34-f1c7ec63fc6a__idd8088e1d-6ba8-4e2a-acf4-8bd476bb0363">Table 2</a>” shows the required rule file specification statements for Calibre nmLVS
+and Calibre nmLVS-H. </p>
+<p class="p">Calibre nmLVS applications exit
+with a non-zero status if they cannot complete any form of requested
+processing due to fatal error conditions. In most Linux shells,
+you can check this status by examining the $? shell variable. For
+example:</p>
+<pre class="pre codeblock leveled"><code>#! /bin/sh 
+calibre -lvs -hier rules 
+if [ $? -eq 0 ] 
+then 
+    echo "No errors." 
+else  
+    echo "Error in LVS!"
+fi </code></pre><p class="p">See “<a class="xref Link" href="../../calbr_solns_pv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Basic LVS Rule File Template', 'calbr_solns_pv_user'); return false;">Basic LVS Rule File Template</a>” in the <span class="ph FontProperty ManualTitle">Calibre Solutions for Physical Verification</span> manual. Also
+see “<a class="xref Link" href="../../calbr_solns_pv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Best Practices', 'calbr_solns_pv_user'); return false;">LVS Best Practices</a>” in the same manual.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idd4e14566-d9c5-4f48-b6ae-46eec1726a4d"><h2 class="title Subheading sectiontitle">Example 1</h2><p class="p">The following example extracts a hierarchical
+SPICE netlist from a geometric layout and writes the netlist to
+file <span class="ph filepath italic">layout.net</span>. </p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net rules.extract</code></pre><p class="p">The following two examples
+show how to do this using MT and MTflex modes with hyperscaling,
+respectively:</p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net -turbo rules.extract 
+
+calibre -spice layout.net -turbo -remote host1,host2 rules.extract </code></pre><p class="p">The -hyper option is also recommended if you have at least four
+CPUs on the local host.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id352d4f76-1fef-4720-b001-121cc8b58627"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">The following example performs hierarchical
+LVS comparison between a SPICE layout and source. The file called <span class="ph filepath italic">cells</span> specifies
+cell correspondence.</p>
+<p class="p">Rule file:</p>
+<pre class="pre codeblock leveled"><code>// layout is SPICE 
+LAYOUT SYSTEM SPICE 
+LAYOUT PATH "./layout.net" 
+LAYOUT PRIMARY top 
+... </code></pre><p class="p">Command line:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -hier -hcell cells rules.compare</code></pre></div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id44d77a02-6a06-4926-9a8d-0a2213f56c06"><h2 class="title Subheading sectiontitle">Example 3</h2><p class="p">The following example extracts a hierarchical
+SPICE netlist called <span class="ph filepath italic">layout.net</span> from
+a geometric layout and then compares it to a SPICE source. Both
+circuit extraction and comparison are hierarchical. The file called <span class="ph filepath italic">cells</span> specifies
+hcell correspondence and is used for netlist comparison. If the
+hcell list is not used and none are specified in the rules, then
+the comparison is flat.</p>
+<p class="p">Rule file:</p>
+<pre class="pre codeblock leveled"><code>// layout is geometric 
+LAYOUT SYSTEM GDSII 
+LAYOUT PATH "./design.gds" 
+LAYOUT PRIMARY "top" 
+
+SOURCE SYSTEM SPICE 
+SOURCE PATH "./top.spi" 
+SOURCE PRIMARY top 
+... </code></pre><p class="p">Circuit extraction and comparison
+command line:</p>
+<pre class="pre codeblock leveled"><code>calibre -spice layout.net -turbo -lvs -hier -hcell cells rules</code></pre><p class="p">If you omit the -spice option, then
+the netlist is written to the working directory as <span class="ph filepath italic">lvs_report.sp</span>, where <span class="keyword ParameterName OptionalReplaceable">lvs_report</span> is
+the name of the LVS Report specified in the rules. If you specify
+a Mask SVDB Directory, then the netlist is written there with the
+top-level cell name as part of the filename.</p>
+<p class="p">Performing netlist extraction and
+LVS comparison in the same run has a potential drawback in that
+if the circuit extraction phase has errors, the comparison phase
+almost certainly will also, so the comparison would be wasteful.</p>
+<p class="p">If you add “-hyper cmp” to the preceding
+command line, then connectivity extraction uses hyperscaling, and
+LVS comparison processes run during the extraction phase, which
+is more efficient. It is recommended to run -hyper when you have
+at least four CPUs on the local host.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id649c1a24-880d-42bc-b2e2-704fe2cc698a"><h2 class="title Subheading sectiontitle">Example 4</h2><p class="p">The following example extracts a flat
+SPICE netlist from a geometric layout system and then compares it
+to a SPICE source. Comparison is flat.</p>
+<p class="p">Rule file:</p>
+<pre class="pre codeblock leveled"><code>// geometric layout 
+LAYOUT SYSTEM GDSII 
+LAYOUT PATH "./design.gds" 
+LAYOUT PRIMARY "top" 
+
+SOURCE SYSTEM SPICE 
+... </code></pre><p class="p">Command line:</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -flatten rules </code></pre><p class="p">The extracted SPICE netlist is written
+in the same way in <a class="xref fm:HeadingOnly" href="#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id44d77a02-6a06-4926-9a8d-0a2213f56c06">Example 3</a>.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__idd1f5e489-972a-4e6c-b22c-b6add0fe5414"><h2 class="title Subheading sectiontitle">Example 5</h2><p class="p">The following example performs hierarchical
+LVS comparison between a SPICE layout and a SPICE source. Cells
+correspond automatically by name.</p>
+<pre class="pre codeblock leveled"><code>calibre -lvs -hier -automatch rules</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">Use -automatch
+only if the layout cells actually contain the same devices as the
+source subckts of the same name.</p>
+</div>
+<p class="p">If the rule file has a geometric Layout System, then using ‑turbo
+is also recommended, which benefits the circuit extraction phase.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id4fa013d2-4e55-4a7e-a47e-dfcc1b5f2698"><h2 class="title Subheading sectiontitle">Example
+6</h2><p class="p">This runs LVS-H in MTflex mode with circuit
+extraction on four remote hosts using hyperscaling and circuit comparison
+modules running simultaneously on the local host. Remote Data Server
+distribution is enabled with catastrophic recovery from a lost remote
+host disabled.</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -turbo -hyper cmp remote\
+  -remote host1,host2,host3,host4 -remotedata -recoveroff rules</code></pre><p class="p">If, in addition, you want to run LVS-H comparison on a remote
+host, you can add “‑cmp_host host5” to the preceding command line.
+This makes using the cmp option to -hyper redundant, so cmp could
+be omitted in this case, and you would get the same effect.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id80509980-0fa8-4575-92dc-8cdf5fbc3883"><h2 class="title Subheading sectiontitle">Example 7</h2><p class="p">To run LVS-H comparison on a remote host whose
+name is known in advance and circuit extraction in MTflex mode,
+you can do this:</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -turbo -remotedata -recoveroff \
+  -remotefile remote_script -cmp_host machine_name rules </code></pre><p class="p">The <span class="ph filepath">remote_script</span> is
+a MTflex configuration script similar to what is used for a DRC
+run. Substitute the appropriate host name for machine_name. The
+-hyper argument set can be included and is useful for host machines
+with at least four CPUs, with 16 being optimal.</p>
+</div>
+<div class="section Subsection" id="id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id5a693417-c06a-4906-be6d-df3103c6cf63"><h2 class="title Subheading sectiontitle">Example
+8</h2><p class="p">The following setup allows LVS-H comparison
+to run on a remote host requested through a set of user job queuing
+scripts. Here, <span class="ph filepath">remote.txt</span> contains MTflex commands
+that initiate the remote job. MT mode circuit extraction runs on
+the local host.</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -turbo -hyper cmp -cmp_remotefile remote.txt rules</code></pre><p class="p"><span class="ph FontProperty emphasis">remote.txt</span> file
+contents:</p>
+<pre class="pre codeblock"><code>LAUNCH MANUAL WAIT 30
+REMOTE COMMAND submit_script ARGUMENTS [ &lt;arg&gt; ... ]</code></pre><p class="p">The <span class="keyword ParameterName OptionalReplaceable">submit_script</span> (not
+shown) is frequently a wrapper script for a network queue management application
+that launches Calibre jobs. This script is for the LVS comparison
+portion of the run. The ARGUMENTS specification forwards information
+to the remote host via the <span class="keyword ParameterName OptionalReplaceable">submit_script</span>. This
+method is similar to how you might submit an MTflex DRC job. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The primary host’s environment is used for dereferencing
+variable values in the REMOTE COMMAND script. It is important to
+confirm that any values passed by that script apply in the remote
+host’s environment.</p>
+</div>
+<p class="p">The &lt;arg&gt; arguments shown previously are passed to the <span class="ph filepath">submit_script</span> for
+processing. For example, the name of the following script could
+be passed in the ARGUMENTS block to the <span class="ph filepath">submit_script</span>:</p>
+<pre class="pre codeblock"><code>#! /bin/sh
+
+CALPATH="/software/CALIBRE_TREES/aoi/latest"
+OPT="-par_cmp_remote $CALIBRE_LVS_REMOTE_CONNECTION"</code></pre><p class="p">The ‑par_cmp_remote option launches a remote comparison job.
+The path of the Calibre tree and the <span class="keyword ParameterName OptionalReplaceable">host</span>:<span class="keyword ParameterName OptionalReplaceable">port</span>  value
+from the built-in variable $CALIBRE_LVS_REMOTE_CONNECTION must resolve
+in the remote host’s environment in order to establish a connection.</p>
+<p class="p">If the preceding information were not passed as part of the REMOTE
+COMMAND ARGUMENTS set, then the <span class="ph filepath">submit_script</span> must
+provide the necessary information to a remote host as discussed
+in the <a class="xref" href="#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__id9c0892ba-9db2-4591-b983-661b471cebc7">-cmp_remotefile</a> section previously. </p>
+<p class="p">The following setup does not assume a queue management wrapper
+script and could be used to launch a remote job directly. This command
+initiates the job on the primary host:</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -turbo -cmp_remotefile remote.txt rules</code></pre><p class="p">(The -hyper argument set may be included.)</p>
+<p class="p"><span class="ph FontProperty emphasis">remote.txt</span> file
+contents:</p>
+<pre class="pre codeblock"><code>LAUNCH MANUAL WAIT 30 
+REMOTE COMMAND ./launch ARGUMENTS [ host_name %H:%P ]</code></pre><p class="p">The host_name is the name of a remote host and %H:%P is resolved
+as the primary host name and the port number for the connection.
+These are passed to <span class="ph filepath">launch</span> as arguments. (%H:%P
+is used here because environment variables like $CALIBRE_LVS_REMOTE_CONNECTION
+do not resolve in the -cmp_remotefile file.)</p>
+<p class="p"><span class="ph filepath">launch</span> file contents:</p>
+<pre class="pre codeblock"><code>#! /bin/sh
+ssh $1 $CALIBRE_HOME/bin/rcalibre `pwd` 1 CALIBRE_HOME $CALIBRE_HOME \
+-par_cmp_remote $2</code></pre><p class="p">From the primary host, a secure socket connection
+(ssh) is established with host_name ($1) to run LVS comparison remotely.
+“rcalibre” launches the Calibre job. The path to the run directory (pwd)
+becomes the destination for the MTflex log file. The number of environment
+variables passed to the remote host is 1, which corresponds to CALIBRE_HOME.
+Here, $CALIBRE_HOME is assumed to resolve both in the primary’s
+and the remote’s environment. This may not necessarily be true,
+so be careful to check this. The %H:%P value ($2) resolves automatically
+in the environment of the primary host and the value is provided
+to the remote to establish a port connection. </p>
+<p class="p">The most likely causes of failure for this sort configuration
+are passing an incorrect path to the Calibre tree in the remote
+environment or passing an incorrect <span class="keyword ParameterName OptionalReplaceable">host</span>:<span class="keyword ParameterName OptionalReplaceable">port</span> argument
+to the ‑par_cmp_remote option. So if the run fails, begin by checking
+those items.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SetupToolInvocation_id19cd41c3.html" title="Calibre nmDRC and Calibre nmLVS require rule file and design database inputs in certain formats in order to perform verification tasks. The command lines for these tools have a large set of options for configuring the runs.">Setup and Tool Invocation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Calibre nmLVS and Calibre nmLVS-H Command Line"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalibreNmlvsCalibreNmlvsH_id1b7a5bdd.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

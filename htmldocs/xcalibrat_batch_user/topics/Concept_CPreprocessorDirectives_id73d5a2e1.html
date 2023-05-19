@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="C Preprocessor Directives" />
+<meta name="abstract" content="The C preprocessor directives and the -cpp command line option can be used to control which portions of the MIPT file are processed." />
+<meta name="description" content="The C preprocessor directives and the -cpp command line option can be used to control which portions of the MIPT file are processed." />
+<meta name="prodname" content="xCalibrate Batch User's Manual" />
+<meta name="version" content="None" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xcalibrat_batch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="LicenseType" content="EULA" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="xCalibrate™ Batch User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id73d5a2e1-5079-4320-b7df-c88476ef63c0" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>C Preprocessor Directives</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="C Preprocessor Directives" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id73d5a2e1-5079-4320-b7df-c88476ef63c0">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">C Preprocessor Directives</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The C preprocessor
+directives and the -cpp command line option can be used to control
+which portions of the MIPT file are processed. </span>
+</div>
+<p class="p">The MIPT file can
+be preprocessed to contain specific blocks of syntax using conditional compilation
+with the -cpp command line option in two ways. </p>
+<ul class="ul"><li class="li" id="id73d5a2e1-5079-4320-b7df-c88476ef63c0__id4566d74b-d043-4e8b-945f-1d34a047062b"><p class="p">Generate the preprocessed MIPT file (<span class="ph filepath">filename_cpp.mipt</span>).</p>
+<pre class="pre codeblock"><code>xcalibrate -cpp mytech_file.mipt</code></pre></li>
+<li class="li" id="id73d5a2e1-5079-4320-b7df-c88476ef63c0__id967988e9-9e33-427b-9635-f4b2ae947ac0"><p class="p">Generate the preprocessed MIPT file and run calibration.</p>
+<pre class="pre codeblock"><code>xcalibrate -exec -cpp mytech_file.mipt</code></pre></li>
+</ul>
+<p class="p">If the MIPT file is calibrated without the -cpp
+command line option, then the C preprocessor directives such as
+#IFDEF, #ENDIF, and #DEFINE directives are treated as comments.
+For more information on the -cpp command line option, see “<a class="xref fm:HeadingAndPage" href="Command_XcalibrateExec_idbb7ee8af.html#idbb7ee8af-2150-42c2-90ae-3b456ea0af4e__Command_XcalibrateExec_idbb7ee8af.xml#idbb7ee8af-2150-42c2-90ae-3b456ea0af4e" title="The xCalibrate invocation command, which performs calibration to produce encrypted capacitance and resistance rule files, rules.C, rules.R, rules.xact, and rules.ptf. xCalibrate accepts MIPT or ITF technology files as input.">xcalibrate -exec</a>” or “<a class="xref fm:HeadingAndPage" href="Command_XcalibrateCpp_id79d85f25.html#id79d85f25-fb29-437c-b017-8484f91d5800__Command_XcalibrateCpp_id79d85f25.xml#id79d85f25-fb29-437c-b017-8484f91d5800" title="Command used to preprocess the MIPT file using the C preprocessor directives.">xcalibrate -cpp</a>”.</p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_SvrfVerbatim_idcde7bc82.html#idcde7bc82-e560-4856-9d4f-337f966d802f__Command_SvrfVerbatim_idcde7bc82.xml#idcde7bc82-e560-4856-9d4f-337f966d802f" title="An optional global parameter that specifies a text string or text block that allows the insertion of SVRF statements into the calibrated rule file.">svrf_verbatim</a> parameter is ignored during C preprocessor execution to
+avoid potential conflicts with macro syntax that may be used to
+specify SVRF statements. The svrf_verbatim specifications are written
+directly to the <span class="ph filepath">filename_cpp.mipt</span> file.</p>
+<p class="p">The syntax for the #IFDEF directive is:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">#IFDEF</span> <span class="keyword ParameterName RequiredReplaceable">name</span></code></pre><p class="p">where <span class="keyword ParameterName RequiredReplaceable">name</span> is
+a single alpha numeric string. More than one #IFDEF directive can
+be specified. Each #IFDEF directive must have a corresponding #ENDIF
+directive. </p>
+<p class="p">MIPT syntax specified within the scope of the
+#IFDEF and #ENDIF directives is only recognized when the #DEFINE
+for the #IFDEF condition is specified. The syntax for #DEFINE is:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Required">#DEFINE</span> <span class="keyword ParameterName RequiredReplaceable">name</span></code></pre><p class="p">If the #DEFINE is not specified, then the syntax
+within the #IFDEF and #ENDIF directives is ignored. </p>
+<p class="p">Consider the following example file called <span class="ph filepath">mytech.mipt</span>,
+which contains two #IFDEF directives called TECH1 and TECH2, and
+only one #DEFINE for TECH1:</p>
+<pre class="pre codeblock leveled"><code>mipt_version = 2.0
+process = cmos
+author = Foundry
+calibration_type = ALL 
+#DEFINE TECH1
+...
+
+base = base_diel {
+	zbottom = -1
+	thickness = 1
+}
+
+dielectric = tech_base_diel {
+	diel_type = planar
+	 thickness = 0.4
+	eps = 3.29
+}
+
+#IFDEF TECH1
+conductor = M1_tech1 {
+	# zbottom = 0.4
+	thickness = 0.1
+	min_width = 0.044
+	min_spacing = 0.055
+	max_width = 0.19
+	max_spacing = 5
+	r_sheet = 9
+}
+#ENDIF
+...
+#IFDEF TECH2
+conductor = M1_tech2 {
+	# zbottom = 0.4
+	thickness = 0.1
+	min_width = 0.033
+	min_spacing = 0.044
+	max_width = 0.20
+	max_spacing = 5
+	r_sheet = 9
+}
+#ENDIF
+
+...</code></pre><p class="p">The following command:</p>
+<pre class="pre codeblock"><code>xcalibrate -cpp mytech.mipt</code></pre><p class="p">produces a file called <span class="ph filepath">mytech_cpp.mipt</span> that
+only contains the conductor layer named M1_tech1:</p>
+<pre class="pre codeblock leveled"><code># 1 "mytech.mipt_tmp"
+# 1 "&lt;built-in&gt;"
+# 1 "&lt;command-line&gt;"
+# 1 "mytech.mipt_tmp"
+mipt_version = 2.0
+process = cmos
+author = Foundry
+calibration_type = ALL 
+...
+
+base = base_diel {
+	zbottom = -1
+	thickness = 1
+}
+
+dielectric = tech_base_diel {
+	diel_type = planar
+	thickness = 0.4
+	eps = 3.29
+}
+
+conductor = M1_tech1 {
+	# zbottom = 0.4
+	thickness = 0.1
+	min_width = 0.044
+	min_spacing = 0.055
+	max_width = 0.19
+	max_spacing = 5
+	r_sheet = 9
+}
+...</code></pre><p class="p">The conductor layer definition for M1_tech2 is
+ignored.</p>
+<p class="p">You can also nest the #DEFINE, #IFDEF, and #ENDIF
+directives. The following example demonstrates how to define different
+stacks using nested directives:</p>
+<pre class="pre codeblock"><code>#DEFINE BEOL_STACK4
+#DEFINE PACKAGE_OPTION2
+#IFDEF BEOL_STACK3
+#DEFINE M3
+#ENDIF
+#IFDEF BEOL_STACK4
+#DEFINE M3
+#DEFINE M4
+#ENDIF
+#IFDEF BEOL_STACK5
+#DEFINE M3
+#DEFINE M4
+#DEFINE M5
+#ENDIF
+...
+mipt_version= 2.0
+process = my_process
+calibration_type= ALL
+...
+conductor = metal1
+via = via1
+...
+conductor = metal2
+...
+#IFDEF M3
+conductor = metal3
+via = via2
+dielectric = metal3_diel
+#ENDIF
+
+#IFDEF M4
+conductor = metal4
+via = via3
+dielectric = metal4_diel
+#ENDIF
+
+#IFDEF M5
+conductor = metal5
+via = via4
+dielectric = metal5_diel
+#ENDIF
+...
+#IFDEF PACKAGE_OPTION1
+“Pkg1”
+#ENDIF
+#IFDEF PACKAGE_OPTION2
+“Pkg2”
+#ENDIF</code></pre><p class="p">By specifying “#DEFINE BEOL_STACK4” and “#DEFINE
+PACKAGE_OPTION2”, the preprocessed MIPT file contains only the requested
+layers and package definition syntax:</p>
+<pre class="pre codeblock"><code># 1 "mytech.mipt_tmp"
+# 1 "&lt;built-in&gt;"
+# 1 "&lt;command-line&gt;"
+# 1 "mytech.mipt_tmp"
+mipt_version= 2.0
+process = my_process
+calibration_type= ALL
+...
+conductor = metal1 {
+...
+}
+via = via1 {
+...
+}
+conductor = metal2 {
+...
+}
+
+conductor = metal3 {
+...
+}
+via = via2 {
+...
+}
+dielectric = metal3_diel {
+...
+}
+
+conductor = metal4 {
+...
+}
+via = via3 {
+...
+}
+dielectric = metal4_diel {
+...
+}
+...
+"Pkg2"
+...</code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MiptSyntaxConventions_id674e81db.html" title="The MIPT language follows certain syntax conventions.">MIPT Syntax Conventions</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xcalibrat_batch_user"
+                DocTitle = "xCalibrate™ Batch User’s Manual"
+                PageTitle = "C Preprocessor Directives"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CPreprocessorDirectives_id73d5a2e1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">xCalibrate™ Batch User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

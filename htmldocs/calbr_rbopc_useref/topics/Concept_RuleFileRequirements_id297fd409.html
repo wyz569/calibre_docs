@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Rule File Requirements" />
+<meta name="abstract" content="The SVRF file has structure and syntax requirements." />
+<meta name="description" content="The SVRF file has structure and syntax requirements." />
+<meta name="prodname" content="Calibre Rule-Based OPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-01-30" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rbopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Rule-Based OPC User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Rule File Requirements</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Rule File Requirements" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Rule File Requirements</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The SVRF file
+has structure and syntax requirements.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idef1049c5-edbf-4e57-b62d-d9cb703ef67a"><h2 class="title Subheading sectiontitle">Order</h2><p class="p">SVRF rule files are compiled before
+processing. Except for nested variable declarations and conditional
+statements, you can write statements and operations in any order.
+For clarity, the examples in this manual organize the operations
+according to function and the expected order of processing. This
+is also good practice, because it enhances readability and maintainability.</p>
+<p class="p">Within individual SVRF operations, keyword
+order is only important when changing the order results in ambiguity.
+For example, the following four operations are all equivalent:</p>
+<ul class="ul"><li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idefa3be15-3555-4af5-84b3-203805bfe1cf"><p class="p">INTERNAL metal &lt; 3</p>
+</li>
+<li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idb0e578e7-fbc0-4e35-b0f3-0ed23d832b23"><p class="p">INTERNAL &lt; 3 metal</p>
+</li>
+<li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__id4310b7a7-0795-41e0-8876-01ac681c9e4f"><p class="p">metal INTERNAL &lt; 3</p>
+</li>
+<li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idb2937e68-ec6a-449e-9ced-a65c89f8ca43"><p class="p">&lt; 3 metal INTERNAL</p>
+</li>
+</ul>
+<h2 class="title Subheading sectiontitle">Case Sensitivity</h2><p class="p">Keywords and names are not case-sensitive. </p>
+<p class="p">Because of their relationship to the host platform’s
+directory system, structure names, and pathnames are case-sensitive.
+To avoid ambiguity, you should enclose pathnames in single or double
+quotes.</p>
+<h2 class="title Subheading sectiontitle">Reserved Words</h2><p class="p">All SVRF keywords are reserved words. Do not
+use them as names of variables or layers. For a complete list of
+reserved words, refer to “Keyword - Name Conflicts” in the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Keyword - Name Conflicts', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual. </a></p>
+<h2 class="title Subheading sectiontitle">Abbreviations</h2><p class="p">When an SVRF keyword can
+be abbreviated, its entry in the <cite class="cite ManualTitle">Standard Verification Rule Format
+(SVRF) Manual</cite> shows the keyword with the portion that can be
+used as the abbreviation displayed in uppercase letters.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Not all SVRF keywords
+can be abbreviated.</p>
+</div>
+<h2 class="title Subheading sectiontitle">Comments</h2><p class="p">SVRF supports three types of comments:</p>
+<ul class="ul"><li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__id25e53568-cba4-4d82-b8f6-d52a3ea66080"><p class="p"><span class="ph FontProperty shellcommand">In-line comments</span> begin
+with slashes (//), and can begin anywhere on the input line, and
+end at the end of the line. In-line comments are ignored by the
+Calibre nmDRC hierarchical engine.</p>
+</li>
+<li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idabadc657-d0cf-49fe-8ae2-7e7124a9fb7b"><p class="p"><span class="ph FontProperty shellcommand">Block comments</span> begin
+with /* and end with */. They may begin anywhere on a line and span
+multiple lines. The Calibre nmDRC hierarchical engine ignores block
+comments.</p>
+</li>
+<li class="li" id="id297fd409-8bbe-40e6-992c-cbd7d6c9b9c8__idc9688c0a-e901-4de9-bf44-41a2264703cb"><p class="p"><span class="ph FontProperty shellcommand">Calibre nmDRC rulecheck comments</span> begin
+with @, and can begin anywhere on the input line, and end at the
+end of the line, as long as they are inside of a rulecheck statement.
+Calibre nmDRC rulecheck comments are included in rulecheck output,
+so you can view them in the Calibre<sup>®</sup> RVE™ results viewer. </p>
+</li>
+</ul>
+<p class="p">For more information, refer to the <a class="xref LinkItalic" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_rve_user'); return false;">Calibre RVE User’s Manual</a>.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_SVRFRuleFiles_id9dcb2bd0.html" title="An SVRF file is an ASCII text file comprising SVRF statements. It contains everything needed to read layout data, process layer data, and apply RET solutions.">SVRF Rule Files</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rbopc_useref"
+                DocTitle = "Calibre® Rule-Based OPC User’s and Reference Manual"
+                PageTitle = "Rule File Requirements"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_RuleFileRequirements_id297fd409.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Rule-Based OPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

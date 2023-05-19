@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="CalCM Application Development Overview" />
+<meta name="abstract" content="This section describes the process of developing an application for CalCM by analyzing a sample “Activity Log” Tcl application (calcm_actlog_app.tcl). This application is provided in an encrypted format in the software tree. The Activity Log application dumps snapshots of a cluster state into a log file, which can then be used to analyze cluster activity over a period of time." />
+<meta name="description" content="This section describes the process of developing an application for CalCM by analyzing a sample “Activity Log” Tcl application (calcm_actlog_app.tcl). This application is provided in an encrypted format in the software tree. The Activity Log application dumps snapshots of a cluster state into a log file, which can then be used to analyze cluster activity over a period of time." />
+<meta name="prodname" content="Calibre Cluster Manager (CalCM) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cm_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Cluster Manager (CalCM) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.1" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id228dc2ae-9f40-487d-b620-a32e13a29d7a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>CalCM Application Development Overview</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="CalCM Application Development Overview" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id228dc2ae-9f40-487d-b620-a32e13a29d7a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">CalCM Application Development Overview</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This section
+describes the process of developing an application for CalCM by
+analyzing a sample “Activity Log” Tcl application (<span class="ph filepath">calcm_actlog_app.tcl</span>).
+This application is provided in an encrypted format in the software
+tree. The Activity Log application dumps snapshots of a cluster
+state into a log file, which can then be used to analyze cluster
+activity over a period of time.</span>
+</div>
+<p class="p">When
+you invoke CalCM, the application reads the configuration file which
+includes the following APPLICATION TCL statement, used to initialize
+the <span class="ph filepath">calcm_actlog_app.tcl</span> application:</p>
+<pre class="pre codeblock leveled"><code>APPLICATION TCL $CALCM_HOME/calcm_actlog_app.tcl FILE [ 
+	LOGPATH			= My_PATH 
+	USERNAME			= Me 
+	JOBQUEUE			= This_directory 
+]</code></pre><p class="p">The <span class="ph filepath">calcm_actlog_app.tcl </span>file
+includes “proc” statements
+that perform the following functions:</p>
+<ul class="ul"><li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__ide17f71d2-dcdd-40bf-ad3b-0225cbc6f68e"><p class="p"><a class="xref fm:HeadingOnly" href="#id228dc2ae-9f40-487d-b620-a32e13a29d7a__id68fc0c6b-c39b-4699-a19d-0af621d70231">Application Entry Point</a> — The “proc <a class="xref fm:HeadingOnly" href="Command_Nemoapplication_ide04bc1fb.html#ide04bc1fb-a781-4317-99e9-63a6681ad6a4__Command_Nemoapplication_ide04bc1fb.xml#ide04bc1fb-a781-4317-99e9-63a6681ad6a4" title="Establishes the callback interface of CalCM application.">nemo::application</a>” statement defines the entry point
+for CalCM applications.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id2f405c22-c732-4acb-902a-5b3333ad0058"><p class="p"><a class="xref fm:HeadingOnly" href="#id228dc2ae-9f40-487d-b620-a32e13a29d7a__ided061687-bd5c-4b9f-82de-7d5db014e53b">Application Initialization</a> — The “proc
+configureApp” statement parses the application section of the configuration
+file.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id3b274112-bb6c-408d-97cb-fe369629cafd"><p class="p"><a class="xref fm:HeadingOnly" href="#id228dc2ae-9f40-487d-b620-a32e13a29d7a__id3db96422-9690-4df3-9a92-5cc3f403d894">Status Update</a> — The “proc
+updateLog” statement creates a snapshot of the cluster state and
+updates the information in the log file. A snapshot is a collection
+of consistent information about the state of a cluster at a specific
+moment in time.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id26e73a7d-9d2b-4524-9f0f-05a8c1de5162"><p class="p"><a class="xref fm:HeadingOnly" href="#id228dc2ae-9f40-487d-b620-a32e13a29d7a__idc9642c21-4b12-4d61-9a99-9649e374b5ae">Message Processing</a> — The “proc
+processMessage” statement processes information received by CalCM
+and displays the information in a web browser.</p>
+</li>
+</ul>
+<div class="section Subsections" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idd0372d78-be6d-4d7d-a185-196d8a3b54c1"><div class="section Subsection" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id68fc0c6b-c39b-4699-a19d-0af621d70231"><h2 class="title Subheading sectiontitle">Application
+Entry Point</h2><p class="p">Calibre
+Cluster Manager uses “events” to notify hosted applications about
+conditions that occur during the execution. Events are processed
+by application-defined callback routines that implement the desired
+behavior.</p>
+<p class="p">Each
+event that occurs during CalCM execution is broadcast to all applications,
+which can either react to the event or ignore it. In general, applications
+should ignore an event if they cannot “understand” its meaning;
+this provides for backward compatibility. The order in which a particular
+event is delivered to its recipients is unspecified and may vary
+even from one event instance to another.</p>
+<p class="p">The following types of events exist:</p>
+<ul class="ul"><li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idc75f4231-9cfa-4925-967f-69e7772f357d"><p class="p">Configuration — This event allows applications
+to set various options by interpreting respective sections of the
+CalCM configuration file. It occurs once when the application is
+loaded.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__ida2ed2331-db6c-4b6d-a7d0-6366291fd82a"><p class="p">Startup — This event occurs once during
+CalCM startup after all applications have been configured and indicates
+that the host has initialized successfully and applications can begin
+to perform their function.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id7f9e54c6-67e8-4043-8350-6ce4ba1a1cf5"><p class="p">Shutdown — This event occurs once during
+CalCM shutdown before the application is unloaded from memory. It
+allows applications to perform a graceful cleanup.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idcca3030c-cf59-40ef-8ebc-a64b6944acd2"><p class="p">Status Update — This is a periodic event
+that occurs every time information about the global cluster state
+is updated. It allows applications to detect important changes in cluster
+state and react accordingly.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idcea2bde9-1678-4ac7-b27b-a3eeab322607"><p class="p">Message — This event occurs when CalCM
+receives a message from an external source. It allows applications
+to implement remote communication and control via an application-defined
+text-based protocol.</p>
+</li>
+</ul>
+<p class="p">The following Tcl application implements a
+reaction to events by processing a series of subcommands. The <a class="xref fm:HeadingOnly" href="Command_Nemoapplication_ide04bc1fb.html#ide04bc1fb-a781-4317-99e9-63a6681ad6a4__Command_Nemoapplication_ide04bc1fb.xml#ide04bc1fb-a781-4317-99e9-63a6681ad6a4" title="Establishes the callback interface of CalCM application.">nemo::application</a> procedure is the callback interface
+for event handling. Comments are used to describe the event reaction.</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id0c915730-b694-4f21-86b0-b5cd72e72339"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Defining Event Subcommands in
+the nemo::application Statement</span><pre class="pre codeblock leveled"><code>proc nemo::application {subCmd args} { 
+	switch $subCmd { 
+		// Parse the configuration section and read path to log file 
+		configure { configureApp [lindex $args 0] } 
+		// Return the application name "Activity Log". 
+		name { return "Activity Log" } 
+		// Open and initialize the log file. 
+		attach { openLogFile } 
+		// Close the log file. 
+		detach { closeLogFile } 
+		// Write a new entry to the log file. 
+		update_status { updateLog [lindex $args 0] } 
+		// Handle HTTP request from a web browser and reply with a HTML page 
+		// containing the current log file size and a link to its contents. 
+		process_message { processMessage [lindex $args 0] } 
+	} 
+} </code></pre></div>
+</div>
+<div class="section Subsection" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__ided061687-bd5c-4b9f-82de-7d5db014e53b"><h2 class="title Subheading sectiontitle">Application
+Initialization</h2><p class="p">The
+configure subcommand allows an application to initialize itself
+by parsing the corresponding section of a configuration file, which
+is passed as an argument. The syntax of the configuration section
+is defined by the application. The following CalCM configuration
+file configures the “Activity Log” and associated applications:</p>
+<pre class="pre codeblock leveled"><code>APPLICATION TCL $CALBR_APPS/calcm/calcm_actlog_app.tcl FILE [ 
+	LOGPATH=/home/calcm/calcmlog.txt 
+] 
+ </code></pre><p class="p">The “name” subcommand is used by CalCM to obtain
+the human-readable name of the application. The returned string
+is used for display and identification purposes only and does not necessarily
+have to be unique, although the use of clearly distinguishing application
+names is certainly encouraged. If the application does not process
+the name event (in other words, if the result of the query is empty),
+the path to the application script is used by CalCM.</p>
+<p class="p">The attach and detach subcommands represent
+the “Startup” and “Shutdown” events. The difference between configure
+and attach is that the latter is only invoked after CalCM has successfully
+started and is always complemented by detach.</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idd8e0d6a7-0f5b-4e3e-a74f-e09edf83f2c4"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Application Initialization</span><pre class="pre codeblock leveled"><code>proc configureApp {configText} { 
+	global logFilePath 
+	foreach line [split $configText "\n"] { 
+		regexp {^\s*LOGPATH\s*=\s*(\S+)} $line -&gt; logFilePath 
+	} 
+} 
+ 
+proc openLogFile {} { 
+	global logFilePath logFileId 
+	set logFileId [open $logFilePath "w"] 
+	puts $logFileId "JOBS,Running jobs,MTflex,Hyperscaling" 
+	puts $logFileId "CPUS,CPU usage,Total,Active" 
+} 
+ 
+proc closeLogFile {} { 
+	global logFileId 
+	close $logFileId 
+} </code></pre></div>
+</div>
+<div class="section Subsection" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id3db96422-9690-4df3-9a92-5cc3f403d894"><h2 class="title Subheading sectiontitle">Status Update</h2><p class="p">The cluster state is represented
+in the form of a “snapshot,” which is a collection of consistent information
+about the cluster state at a certain moment in time. A cluster snapshot
+contains objects of different types that form a hierarchy. The most
+general type is named “Object,” where “Job,” “Process,” and “Node”
+are three different kinds of objects. There is a specific type of “Process”
+named “Calibre”, which, in turn, has two different types named “Calibre
+Master” (primary process ) and “Calibre Remote” (remote process).
+There are additional object types that represent miscellaneous system
+information, such as “Interface” (network interface) and “Filesystem”
+(file system). Refer to the “<a class="xref fm:HeadingOnly" href="MGCAppe_CalcmNemoApiReferenceDictionary_idfc68f3b5.html#idfc68f3b5-3a0e-43ff-998e-9f75f120f1dc__MGCAppe_CalcmNemoApiReferenceDictionary_idfc68f3b5.xml#idfc68f3b5-3a0e-43ff-998e-9f75f120f1dc" title="This section provides reference information on the Tcl commands that can be used to create or customize CalCM applications. Information is also provided on the cluster snapshot and related object types.">CalCM Nemo API Reference Dictionary</a>” for more information.</p>
+<p class="p">The
+taxonomy of a snapshot embodies similarities between different types,
+or classes, of objects that can be present in a cluster snapshot.
+These similarities are reflected in the commands of the Nemo API
+where options for some commands are also available in commands that
+correspond to specific object types. For example, the options available
+in the <a class="xref fm:HeadingOnly" href="Command_Nemoobject_id0e77bcf7.html#id0e77bcf7-0ef1-4415-876a-1276c66b9b8a__Command_Nemoobject_id0e77bcf7.xml#id0e77bcf7-0ef1-4415-876a-1276c66b9b8a" title="Returns information about an object in the cluster snapshot.">nemo::object</a> command can also be found in <a class="xref fm:HeadingOnly" href="Command_Nemojob_id593e22ab.html#id593e22ab-dc5f-4ac7-ad64-96086bf13bfd__Command_Nemojob_id593e22ab.xml#id593e22ab-dc5f-4ac7-ad64-96086bf13bfd" title="Returns information on the Calibre job that is running.">nemo::job</a> and <a class="xref fm:HeadingOnly" href="Command_Nemoprocess_iddb36340b.html#iddb36340b-2bca-4ef4-9be3-24447efde4d0__Command_Nemoprocess_iddb36340b.xml#iddb36340b-2bca-4ef4-9be3-24447efde4d0" title="Returns information about a process running in the cluster snapshot.">nemo::process</a>. For example, the following two
+lines of code are equivalent:</p>
+<pre class="pre codeblock leveled"><code>set jobOwner [nemo::job attr $jobObj "owner"] 
+set jobOwner [nemo::object attr $jobObj "owner"] </code></pre><p class="p">All commands in the Nemo API follow this pattern.
+For instance, options available in <a class="xref fm:HeadingOnly" href="Command_Nemoprocess_iddb36340b.html#iddb36340b-2bca-4ef4-9be3-24447efde4d0__Command_Nemoprocess_iddb36340b.xml#iddb36340b-2bca-4ef4-9be3-24447efde4d0" title="Returns information about a process running in the cluster snapshot.">nemo::process</a> are also available in <a class="xref fm:HeadingOnly" href="Command_Nemomaster_id9b8d692b.html#id9b8d692b-9cba-45f5-aac9-8f94a723417a__Command_Nemomaster_id9b8d692b.xml#id9b8d692b-9cba-45f5-aac9-8f94a723417a" title="Returns information about the Calibre primary process.">nemo::master</a>, <a class="xref fm:HeadingOnly" href="Command_Nemoremote_id72d7daa2.html#id72d7daa2-7620-4c42-bc95-40b90e508b2f__Command_Nemoremote_id72d7daa2.xml#id72d7daa2-7620-4c42-bc95-40b90e508b2f" title="Returns information about a remote Calibre process.">nemo::remote</a>, and <a class="xref fm:HeadingOnly" href="Command_Nemocalibre_id51f42888.html#id51f42888-ed2f-4ce8-8b0a-26741e5dfe09__Command_Nemocalibre_id51f42888.xml#id51f42888-ed2f-4ce8-8b0a-26741e5dfe09" title="Returns information about a Calibre job object.">nemo::calibre</a>. The choice of which command name
+to use in each particular situation obviously depends on whether
+a concrete object type is known, but factors like readability and
+clarity of code must also be taken into account.</p>
+<p class="p">A reference to the most current snapshot is
+passed as an argument to the update status subcommand. The snapshot
+is guaranteed to remain unchanged and consistent as long as at least one
+reference to it exists in one of the running applications. The only
+allowed usage of the snapshot reference is as an argument to the <a class="xref fm:HeadingOnly" href="Command_Nemosnapshot_id789779f0.html#id789779f0-9c3b-448f-bedb-5c0816f4b45c__Command_Nemosnapshot_id789779f0.xml#id789779f0-9c3b-448f-bedb-5c0816f4b45c" title="Analyze the cluster snapshot.">nemo::snapshot</a> procedure.</p>
+<p class="p">Each cluster snapshot contains
+a list of active Calibre jobs (nemo::snapshot jobs) and available nodes
+(nemo::snapshot nodes). Each Calibre job has a one-to-many association
+with Calibre primary processes (nemo::job masters) that represent
+Hyperscaling HDBs (in case of Calibre MTflex, there is a single
+HDB0). Each Calibre primary has a one-to-many association with Calibre
+remote processes connected to the primary (nemo::master remotes).
+On the other hand, each cluster node has a one-to-many association
+with processes that are currently running on that node (nemo::node
+processes).</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id03a3d216-42bf-4823-9f99-a31c3380e303"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Cluster State</span><pre class="pre codeblock leveled"><code>proc updateLog {snapshotObj} { 
+	global updateCount logFileId 
+	set t [nemo::snapshot timestamp $snapshotObj] 
+	set entryId [format "T%04d" $updateCount] 
+	set entryTime [clock format $t -format {%T,%d-%b-%Y} -gmt 0] 
+	set mtflexJobs 0 
+	set hyperscalingJobs 0 
+	set totalCpus 0 
+	set activeCpus 0 
+	foreach jobObj [nemo::snapshot jobs $snapshotObj] { 
+		set n [nemo::job number_of_masters $jobObj] 
+		if {$n == 1} { incr mtflexJobs } 
+		if {$n &gt; 1} { incr hyperscalingJobs } 
+	} 
+	foreach nodeObj [nemo::snapshot nodes $snapshotObj] { 
+		incr totalCpus [nemo::node cpu_count $nodeObj] 
+		incr activeCpus [nemo::node number_of_processes $nodeObj  
+			-type calibre] 
+	} 
+	puts $logFileId "JOBS,$entryId,$mtflexJobs,$hyperscalingJobs" 
+	puts $logFileId "CPUS,$entryId,$totalCpus,$activeCpus" 
+	puts $logFileId "ZZZZ,$entryId,$entryTime" 
+	flush $logFileId 
+	incr updateCount 
+} </code></pre></div>
+</div>
+<div class="section Subsection" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idc9642c21-4b12-4d61-9a99-9649e374b5ae"><h2 class="title Subheading sectiontitle">Message Processing</h2><p class="p">Upon
+startup, CalCM creates a TCP/IP server (default port number is 9900)
+that can be used by external clients to connect to the Cluster Manager
+and exchange information with running applications using an application-defined
+text-based communication protocol. Currently, CalCM imposes only
+one common convention on protocols used by applications: a double “Carriage
+Return” sequence (“\n\n”) must be used as the message terminator.
+This is compatible with HTTP protocol used by web browsers, which
+allows CalCM applications to implement web-based interfaces.</p>
+<p class="p">Messages received by CalCM are delivered to
+applications via a process message subcommand of the nemo::application
+callback interface. A reference to the object representing the received message
+is passed as the subcommand’s argument and can be used with nemo::message
+to retrieve message attributes.</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id5a4b3cd8-70b3-4b28-bf7b-3495d4e93327"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Message Processing</span><pre class="pre codeblock leveled"><code>proc processMessage {messageObj} { 
+	global logFilePath 
+	set messageText [nemo::message text $messageObj] 
+	if {[regexp {^GET\s+/actlog/?(\S*)\s+HTTP} $messageText -&gt; requestDir]} { 
+		set replyChannelId [nemo::message channel $messageObj] 
+		puts $replyChannelId "&lt;html&gt;&lt;title&gt;[nemo::application 
+			name]&lt;/title&gt;&lt;body&gt;" 
+		switch $requestDir { 
+			"“ { 
+				set fileSize [file size $logFilePath] 
+				puts $replyChannelId "Current log file size: $fileSize&lt;br&gt;" 
+				puts $replyChannelId "&lt;a href=\"/actlog/view\"&gt;View log 
+					file&lt;/a&gt;" 
+			} 
+			"view" { 
+				puts $replyChannelId "&lt;pre&gt;" 
+				set f [open $logFilePath "r"] 
+				while {[gets $f line] != -1} { 
+					puts $replyChannelId $line 
+				} 
+				close $f 
+				puts $replyChannelId "&lt;/pre&gt;" 
+			} 
+			default { 
+				puts $replyChannelId "&lt;font size=\"+3\" 
+					color=\"red\"&gt;404&lt;/font&gt;" 
+			} 
+		} 
+		puts $replyChannelId "&lt;/body&gt;&lt;/html&gt;" 
+	} 
+} </code></pre></div>
+<p class="p">The following steps describe the message processing
+of the CalCM Activity Log application.</p>
+<ol class="ol"><li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id5a405a96-ec62-4e03-a067-aaa335fbe90c"><p class="p">The CalCM Application is invoked in a browser
+window by entering the server name and port number. For example:</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__iddd58f23d-f72b-4b2f-b64b-6c68d18fad0e"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/app_dev_apps1a.png" /></div><br /></div>
+<p class="p">The solicit command is invoked only once
+when the CalCM Activity Log application is initialized:</p>
+<pre class="pre codeblock leveled"><code>	# nemo::application -- 
+	# 
+	#       Entry point of CalCM application. 
+	# 
+	proc nemo::application {subCmd args} { 
+		switch $subCmd { 
+			configure { configureApp [lindex $args 0] } 
+			name { 
+				set v "\$Revision: 1.9 $" 
+				regexp {.Revision: ([0-9.]+) } $v x subversion 
+				return "Activity Log v1.0_$subversion" 
+			} 
+		attach { openLogFile } 
+		detach { closeLogFile } 
+		update_status { updateLog [lindex $args 0] } 
+		<span class="ph CodeHighlight red">solicit { return {^GET\s+/actlog/?.*} }</span> 
+		process_message { processMessage [lindex $args 0] } 
+	} 
+}</code></pre></li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__ide09057bb-22d4-4c10-a5d3-6a206e135866"><p class="p">Upon clicking the <span class="ph uicontrol bold">Actlog</span> link
+or entering the URL, the web browser sends the “GET /actlog” message
+to the CalCM daemon. </p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id92568574-0cd4-4e65-96a2-479b72d925d1"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/app_dev_apps2a.png" /></div><br /></div>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id333201c4-2e7d-41f3-9f8e-7eef1f83f454"><p class="p">The CalCM daemon then calls the process_message
+command. </p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id2bbe2a1e-eb99-42d6-a3c1-4cc86a0586b9"><p class="p">The CalCM Activity Log application processes
+the message.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id630a70df-7ad5-4098-b793-4da9368ccaab"><p class="p">The CalCM Activity Log application sends the
+results to the browser.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id5850b8ef-cb4c-4618-8d21-5da6328bdabf"><p class="p">The browser window is updated to display the
+results.</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__ide7dbc8d7-028c-4f84-8f68-01af6901413d"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/app_dev_apps3a.png" /></div><br /></div>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__idb0894a99-6589-4d97-8de6-727293d7a3cb"><p class="p">Clicking the <span class="ph uicontrol bold">View
+log file</span> link or entering the URL sends the “GET /actlog/view” message
+to the CalCM daemon:</p>
+<pre class="pre codeblock leveled"><code>	--- APP UPDATE (Tue Jan 31 15:52:12 2012) --- 
+	Received connection request from sj184dy165:53774 
+	sj184dy165:53774: <span class="ph CodeHighlight red">GET /actlog/view</span> HTTP/1.1 
+	Connection with sj184dy165:53774 closed</code></pre></li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id8e9dd0dc-2d64-4716-8a94-4feee1e244a2"><p class="p">The solicited message is then processed by
+process_message.</p>
+</li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id35438c8d-1491-4700-acd1-8b564926ab19"><p class="p">The message is parsed and processed based
+on a URL with the “/actlog/view” string:</p>
+<pre class="pre codeblock leveled"><code>	if {[regexp {^GET\s+/actlog/?(\S*)\s+HTTP} $messageText -&gt; requestDir]} { 
+		set replyChannelId [nemo::message channel $messageObj] 
+		puts $replyChannelId "&lt;html&gt;&lt;title&gt;[nemo::application name] 
+			&lt;/title&gt;&lt;body&gt;" 
+		switch $requestDir { 
+		""{ 
+			set fileSize [file size $logFilePath] 
+			puts $replyChannelId "Current log file size: $fileSize&lt;br&gt;" 
+			puts $replyChannelId "&lt;a href=\"/actlog/view\"&gt;View log file&lt;/a&gt;" 
+		} 
+<span class="ph CodeHighlight red">		"view" {</span> 
+<span class="ph CodeHighlight red">		puts $replyChannelId "&lt;pre&gt;"</span> 
+<span class="ph CodeHighlight red">		set f [open $logFilePath "r"]</span> 
+<span class="ph CodeHighlight red">		while {[gets $f line] != -1} {</span> 
+<span class="ph CodeHighlight red">			puts $replyChannelId $line</span> 
+<span class="ph CodeHighlight red">		}</span></code></pre></li>
+<li class="li" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id2aa6ce7a-d4f1-4ebf-b807-2c75e041c5fe"><p class="p">The results are sent to the browser and the
+browser is updated.</p>
+<div class="fig fignone" id="id228dc2ae-9f40-487d-b620-a32e13a29d7a__id28656437-51fb-4080-9785-6e35d511a4d9"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/app_dev_apps4a.png" /></div><br /></div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_DevelopingCalcmApplications_id7f3060be.html" title="This section provides information on using Tcl to develop custom CalCM applications.">Developing CalCM Applications</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cm_user"
+                DocTitle = "Calibre® Cluster Manager (CalCM) User’s Manual"
+                PageTitle = "CalCM Application Development Overview"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CalcmApplicationDevelopmentOverview_id228dc2ae.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Cluster Manager (CalCM) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

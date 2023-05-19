@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Using a DMACRO in a Rule File for a Pattern Matching Run" />
+<meta name="abstract" content="A pattern matching rule file uses a CMACRO command to run pattern matching on a compiled DMACRO pattern library. The CMACRO creates derived layer(s) containing the marker shapes for each match." />
+<meta name="description" content="A pattern matching rule file uses a CMACRO command to run pattern matching on a compiled DMACRO pattern library. The CMACRO creates derived layer(s) containing the marker shapes for each match." />
+<meta name="prodname" content="Calibre Pattern Matching User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_pmatch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/17/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Pattern Matching User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id96c1a048-53be-490a-9372-b540618ac89e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Using a DMACRO in a Rule File for a Pattern Matching Run</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Using a DMACRO in a Rule File for a Pattern Matching Run" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id96c1a048-53be-490a-9372-b540618ac89e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Using a DMACRO in a Rule File for a Pattern Matching Run</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">A pattern matching
+rule file uses a CMACRO command to run pattern matching on a compiled DMACRO
+pattern library. The CMACRO creates derived layer(s) containing
+the marker shapes for each match. </p>
+<p class="p">When writing the CMACRO command, you should be aware of the target
+layers and pattern markers for the pattern libraries that are used.
+This example runs matching on two pattern libraries. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ide960a2fc-c9b2-493f-abe1-2fba0d07075c" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:1.085in" /><col style="width:1.181in" /><col style="width:1.662in" /><col style="width:1.922in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10419e31"><p class="p">Library</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10419e34"><p class="p">Target Layers</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10419e37"><p class="p">Pattern Markers</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d10419e40"><p class="p">Compile Option</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e31 "><p class="p"><span class="ph filepath">libM1.pmdb</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e34 "><p class="p">m1, via1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e37 "><p class="p">Marker, m1_custom</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e40 "><p class="p">gen_count_layer </p>
+<p class="p">enable_runtime_options</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e31 "><p class="p"><span class="ph filepath">libM2.pmdb</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e34 "><p class="p">m2, via2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e37 "><p class="p">Marker</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d10419e40 "><p class="p">gen_count_layer</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">Both libraries are compiled with the gen_count_layer argument,
+which adds a count marker to the compiled library. Library <span class="ph filepath">libM1.pmdb</span> is
+also compiled with enable_runtime_options, so that a runtime option
+can be specified with a CMACRO options string. The compiled DMACRO
+pattern libraries are named <span class="ph filepath">dmacro_libM1.svrf</span> and<span class="ph filepath"> dmacro_libM2.svrf</span>,</p>
+<p class="p">The DMACRO statements for
+each library are shown here: </p>
+<pre class="pre codeblock leveled"><code>DMACRO pm:libM1 in_m1 in_via1 
+  options_string 
+  out_Marker out_m1_custom out_count {
+	&lt;Encrypted block ...&gt;
+} </code></pre><pre class="pre codeblock leveled"><code>DMACRO pm:libM2 in_m2 in_via2
+  options_string 
+  out_Marker out_count {
+	&lt;Encrypted block ...&gt;
+} </code></pre></div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id96c1a048-53be-490a-9372-b540618ac89e__id9a1f6308-595f-48ab-a047-0492f7fc7e9a"><p class="p">One or
+more compiled DMACRO pattern libraries. </p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_CompilingAPatternLibraryWithTheCompileUtility_idf7c9279b.html#idf7c9279b-6376-48b1-a486-f0516e8b1f8c__TaskTop_CompilingAPatternLibraryWithTheCompileUtility_idf7c9279b.xml#idf7c9279b-6376-48b1-a486-f0516e8b1f8c" title="You can create an SVRF DMACRO from a pattern matching database (PMDB) file with the pdl_lib_mgr compile utility.">Compiling a Pattern Library With the compile Utility</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id96c1a048-53be-490a-9372-b540618ac89e__id34212828-428a-42e9-a672-00c4a199721f"><span class="ph cmd">Create a Calibre rule file
+using the following entries:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>// Define the target layers. 
+LAYER m1    11 
+LAYER via1  12 
+LAYER m2    13 
+LAYER via2  14</code></pre><pre class="pre codeblock leveled"><code>// DRC results database
+DRC RESULTS DATABASE "pm_results.db" 
+
+// Include the compiled DMACRO libraries 
+INCLUDE "./dmacro_libM1.svrf" 
+INCLUDE "./dmacro_libM2.svrf" </code></pre><pre class="pre codeblock leveled"><code>// Use CMACRO to call the DMACRO. The number and order of 
+// CMACRO arguments must match those of the DMACRO.
+// Add runtime option -maxjog for libM1 
+CMACRO pm:libM1 m1 via1 "-maxjog 0.001" match_M1 custom_M1 count_M1 
+CMACRO pm:libM2 m2 via2 " " match_M2 count_M2</code></pre><pre class="pre codeblock leveled"><code>// Output matches to the results database.
+libM1_match    { copy match_M1 }
+libM1_custom   { copy custom_M1 }
+libM1_count    { copy count_M1 }
+
+libM2_match    { copy match_M2 } 
+libM2_count    { copy count_M2 } </code></pre></div></li>
+<li class="li step stepexpand" id="id96c1a048-53be-490a-9372-b540618ac89e__id25f1d7a8-865a-44b4-b7bb-970af41234b7"><span class="ph cmd">Add the following code to
+also write the output to a DFM RDB, which includes property data:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>libM1_match_dfm    { DFM RDB match_M1 M1_dfm.rdb }
+libM1_custom_dfm   { DFM RDB custom_M1 M1_dfm.rdb }
+libM1_count_dfm    { DFM RDB count_M1 M1_dfm.rdb }
+
+libM2_count_dfm {DFM RDB count_M2 M2_dfm.rdb }
+libM2_match_dfm {DFM RDB match_M2 M2_dfm.rdb }</code></pre><p class="p">By default, DFM RDB writes out results as one rule check for
+each layout cell. </p>
+</div></li>
+<li class="li step stepexpand" id="id96c1a048-53be-490a-9372-b540618ac89e__id6f9e1041-f17b-4ddc-93f0-6b97894106dd"><span class="ph cmd">Invoke a Calibre nmDRC run
+at the command line with the rule file you just created.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>calibre -drc rules |&amp; tee log</code></pre></div></li>
+<li class="li step stepexpand" id="id96c1a048-53be-490a-9372-b540618ac89e__id096acf92-5e6f-42a7-aa99-7629c0af9a8e"><span class="ph cmd">Use Calibre RVE to view the
+results database (RDB).</span><div class="itemgroup info StepInfo"><p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_UsingCalibreRveViewMatchResults_idc025e496.html#idc025e496-0488-4018-b2b2-c89d0d5168a8__TaskTop_UsingCalibreRveViewMatchResults_idc025e496.xml#idc025e496-0488-4018-b2b2-c89d0d5168a8" title="Calibre RVE is a graphical debug program that interfaces with most IC layout tools. You can use Calibre RVE to view your pattern matching results.">Using Calibre RVE to View Match Results</a>”.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Pattern matching results are reported
+in the DRC results database (<span class="ph filepath">pm_results.db</span>)
+and the DFM RDBs (<span class="ph filepath">M1_dfm.rdb</span> and <span class="ph filepath">M2_dfm.rdb</span>). </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_PatternMatchingIntegrationWithSvrf_id16d80bb7.html" title="You can capture and export pattern library files in batch mode using the DFM Pattern Capture SVRF command.">Pattern Matching Integration with SVRF</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_Compile_idd97904bf.html" title="Generates an SVRF DMACRO file from the input pattern library. The DMACRO file is the compiled pattern library that is used in a pattern matching run.">compile</a></div>
+<div><a class="link" href="../topics/Concept_DmacroFilesCalibrePatternMatching_id01ba9a42.html" title="Calibre Pattern Matching uses a DMACRO definition to include pattern libraries in the SVRF rule file. The DMACRO is compiled from a pattern library (PMDB).">DMACRO File for Calibre Pattern Matching</a></div>
+<div><a class="link" href="../topics/Command_CmacroOptionStrings_id7335a8a6.html" title="The CMACRO command runs pattern matching on the specified DMACRO pattern library. CMACRO creates derived layer(s) containing the marker layer shapes generated from the pattern matching process. Runtime options are specified with an option string.">CMACRO for Calibre Pattern Matching</a></div>
+<div><a class="link" href="../topics/Concept_PatternMatchingInvocation_idd353a5cf.html" title="Calibre Pattern Matching runs as a set of SVRF operations enclosed in an SVRF DMACRO statement. The pattern matching SVRF DMACRO rule file is included in a standard Calibre rule file, which is then run with the standard Calibre invocation options.">Pattern Matching Invocation</a></div>
+<div><a class="link" href="../topics/Concept_CountMarkers_idf74826a6.html" title="You can add count markers to the results from a pattern matching run. Count markers are small, non-overlapping markers for each matched result. They can be used to determine a count of matched results. Count markers are added when you compile a pattern library.">Count Markers</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_pmatch_user"
+                DocTitle = "Calibre® Pattern Matching User’s Manual"
+                PageTitle = "Using a DMACRO in a Rule File for a Pattern Matching Run"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_UsingADMACROInARuleFile_id96c1a048.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Pattern Matching User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

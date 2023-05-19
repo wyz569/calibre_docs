@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="topo_model Format" />
+<meta name="abstract" content="Describes topographical models inside model-layer files or litho model files." />
+<meta name="description" content="Describes topographical models inside model-layer files or litho model files." />
+<meta name="prodname" content="Calibre® WORKbench™ Topography Modeling User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-22" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_topo_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="NONE" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="February 22, 2021" />
+<meta name="DocumentTitle" content="Calibre® WORKbench™ Topography Modeling User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="Draft" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ideec2822f-734f-4bd2-819f-e707b068156c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>topo_model Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="topo_model Format" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ideec2822f-734f-4bd2-819f-e707b068156c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">topo_model
+Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">model_layer file block</p>
+<p class="shortdesc">Describes topographical models inside model-layer files
+or litho model files.</p>
+<p class="p">Defines a topographical model as a
+block inside a litho model file. The litho model file is optimized
+with Calibre nmModelflow. The information defined in the topographical
+model instructs Calibre WORKbench to combine multiple optical model
+characteristics in order to model transitional exposure effects.</p>
+<p class="p">The optimized topo_model interpolates multiple
+transitional optical models between multiple film stacks (film and
+film2, and potentially film3). </p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><pre class="pre codeblock"><code><span class="keyword ParameterName Required">topo_model ‘{’
+</span><span class="keyword ParameterName Required">version 1</span>
+<span class="keyword ParameterName Required">modeltype TOPO</span> 
+<span class="keyword ParameterName Required">transit</span> <span class="keyword ParameterName RequiredReplaceable">te1</span> <span class="keyword ParameterName RequiredReplaceable">te2</span> …<span class="keyword ParameterName RequiredReplaceable">teT</span> 
+<span class="keyword ParameterName Required">from</span><span class="keyword ParameterName RequiredReplaceable"> umin</span> 
+<span class="keyword ParameterName Required">to</span> <span class="keyword ParameterName RequiredReplaceable">umax</span> 
+[dsigma <span class="keyword ParameterName OptionalReplaceable">value</span>] | [density {exposure <span class="keyword ParameterName OptionalReplaceable"> pe1 </span>[<span class="keyword ParameterName OptionalReplaceable">pe2 … peT</span>]} | 
+	{<span class="keyword ParameterName OptionalReplaceable">layer1</span> <span class="keyword ParameterName OptionalReplaceable">layer2</span> … <span class="keyword ParameterName OptionalReplaceable">layerT</span>}] 
+[property <span class="keyword ParameterName OptionalReplaceable">name</span>] 
+[mtype {efield | zeroorder}]
+[dupsize <span class="keyword ParameterName OptionalReplaceable">dupsize_value</span>]
+[transit_dose <span class="keyword ParameterName OptionalReplaceable">dte1</span> <span class="keyword ParameterName OptionalReplaceable">dte2 … dteT</span>] 
+[csigma <span class="keyword ParameterName OptionalReplaceable">csigma_value</span>]
+[cterm <span class="keyword ParameterName OptionalReplaceable">cindex</span> <span class="keyword ParameterName OptionalReplaceable">cterm_value</span>] 
+[cquadratic_mult <span class="keyword ParameterName OptionalReplaceable">cquad_value</span>]
+[fsigma <span class="keyword ParameterName OptionalReplaceable">fsigma_value</span>]
+[fterm <span class="keyword ParameterName OptionalReplaceable">findex</span> <span class="keyword ParameterName OptionalReplaceable">fterm_value</span>]
+[fwsigma <span class="keyword ParameterName OptionalReplaceable">fwsigma_value</span>]
+[fwterm <span class="keyword ParameterName OptionalReplaceable">fwindex</span> <span class="keyword ParameterName OptionalReplaceable">fterm_value</span>]
+[fwupsize <span class="keyword ParameterName OptionalReplaceable">fwupsize_value</span>] 
+[fwasym <span class="keyword ParameterName OptionalReplaceable">fwasym_value</span>]
+[gsigma <span class="keyword ParameterName OptionalReplaceable">gsigma_value</span>]
+[gterm <span class="keyword ParameterName OptionalReplaceable">gindex</span> <span class="keyword ParameterName OptionalReplaceable">gterm_value</span>] 
+[gupsize <span class="keyword ParameterName OptionalReplaceable">gupsize_value</span>]
+[isigma <span class="keyword ParameterName OptionalReplaceable">isigma_value</span>]
+[iterm <span class="keyword ParameterName OptionalReplaceable">iindex</span> <span class="keyword ParameterName OptionalReplaceable">iterm_value</span>] 
+[iupsize <span class="keyword ParameterName OptionalReplaceable">iupsize_value</span>]
+[obiasinit <span class="keyword ParameterName OptionalReplaceable">globalrxbias</span>]
+[obiasmax <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span>]
+[obiaswsat <span class="keyword ParameterName OptionalReplaceable">obiassaturation</span>_<span class="keyword ParameterName OptionalReplaceable">width</span>]
+[oterm <span class="keyword ParameterName OptionalReplaceable">oindex</span> <span class="keyword ParameterName OptionalReplaceable">otermvalue</span>]
+[squadratic_mult <span class="keyword ParameterName OptionalReplaceable">squad_value</span>]
+[squadratic_mult_im <span class="keyword ParameterName OptionalReplaceable">squadim_value</span>]
+[ssigma <span class="keyword ParameterName OptionalReplaceable">ssigmavalue</span>]
+<span class="keyword ParameterName Required">sterm</span> <span class="keyword ParameterName RequiredReplaceable">sindex</span> <span class="keyword ParameterName RequiredReplaceable">sterm_value</span>
+[<span class="keyword ParameterName Optional">stermim </span><span class="keyword ParameterName OptionalReplaceable">sindex</span> <span class="keyword ParameterName OptionalReplaceable">stermim_value</span>]
+[supsize <span class="keyword ParameterName OptionalReplaceable">supsize_value</span>]
+[tsigma <span class="keyword ParameterName OptionalReplaceable">tsigmavalue</span>]
+[tsurface {active | field}]
+<span class="keyword ParameterName Required">tterm</span> <span class="keyword ParameterName RequiredReplaceable">tindex </span><span class="keyword ParameterName RequiredReplaceable">tterm_value
+</span>[<span class="keyword ParameterName Optional">ttermim </span><span class="keyword ParameterName OptionalReplaceable">tindex ttermim_value</span>]
+[t2sigma <span class="keyword ParameterName OptionalReplaceable">t2sigma_value</span>]
+[t2term <span class="keyword ParameterName OptionalReplaceable">t2index</span> <span class="keyword ParameterName OptionalReplaceable">t2value</span>]
+[t4sigma <span class="keyword ParameterName OptionalReplaceable">t4sigma_value</span>]
+[t4term <span class="keyword ParameterName OptionalReplaceable">t4index</span> <span class="keyword ParameterName OptionalReplaceable">t4value</span>]
+[vsigma <span class="keyword ParameterName OptionalReplaceable">vsigma_value</span>]
+[vterm <span class="keyword ParameterName OptionalReplaceable">vindex</span> <span class="keyword ParameterName OptionalReplaceable">vterm_value</span>]
+[c2term <span class="keyword ParameterName OptionalReplaceable">c2index</span> <span class="keyword ParameterName OptionalReplaceable">c2term_value</span>]
+[c2quadratic_mult <span class="keyword ParameterName OptionalReplaceable">c2quad_value</span>] 
+[c2sigma <span class="keyword ParameterName OptionalReplaceable">c2sigma_value</span>]
+[s2term <span class="keyword ParameterName OptionalReplaceable">s2index</span> <span class="keyword ParameterName OptionalReplaceable">s2term_value</span>]
+[s2quadratic_mult <span class="keyword ParameterName OptionalReplaceable">s2quad_value</span>] 
+[s2sigma <span class="keyword ParameterName OptionalReplaceable">s2sigma_value</span>]
+[so2sigma <span class="keyword ParameterName OptionalReplaceable">so2sigma_value</span>]
+[so2term <span class="keyword ParameterName OptionalReplaceable">so2index</span> <span class="keyword ParameterName OptionalReplaceable">so2term_value</span>]
+[to2sigma <span class="keyword ParameterName OptionalReplaceable">to2sigma_value</span>]
+[to2surface {active | <span class="keyword ParameterName OptionalDefault">field</span>}]
+[to2term <span class="keyword ParameterName OptionalReplaceable">to2index</span> <span class="keyword ParameterName OptionalReplaceable">to2term_value</span>]
+[t2o2sigma <span class="keyword ParameterName OptionalReplaceable">t2o2sigma_value</span>]
+[t2o2term <span class="keyword ParameterName OptionalReplaceable">t2o2index</span> <span class="keyword ParameterName OptionalReplaceable">t2o2term_value</span>]
+[t4o2sigma <span class="keyword ParameterName OptionalReplaceable">t4o2sigma_value</span>]
+[t4o2term <span class="keyword ParameterName OptionalReplaceable">t4o2index</span> <span class="keyword ParameterName OptionalReplaceable">t4o2term_value</span>]
+[execute_mode <span class="keyword ParameterName OptionalReplaceable">execute_mode_number</span>]
+[linearity {linear | <span class="keyword ParameterName OptionalDefault">efield</span>}]
+‘<span class="keyword ParameterName Required">}</span>’</code></pre></div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><div class="note note"><span class="notetitle">Note:</span> <p class="p">Some parameters are expressed
+in “P1” units. One P1 unit corresponds to 1 optical wavelength in
+photoresist. For example, a 248 nm laser illumination lambda and
+a 1.75 index of refraction results in a P1 unit that is equal to
+141.7 nm. </p>
+</div>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id7d72ad92-f59d-4732-9a34-0ee6f8396670">version 1</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter specifying the model version. The only accepted value
+is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1283ea21-c84a-4b9a-8e42-f8263428b920">modeltype TOPO</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter specifying the model type. The only accepted value for
+topographical models is TOPO. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id8ed0b85f-5ff4-409a-971e-89fe45d0f9bf"><span class="keyword ParameterName Required">transit</span> <span class="keyword ParameterName RequiredReplaceable">te1 te2 … teT</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter that references topographical optical models by number.
+Each number used must reference one of the optical models defined
+with the optical_model statement inside the litho model. </p>
+<ul class="ul"><li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idec791c28-32b9-4c6e-a812-eea27b4ac350"><p class="p">For single densities, the
+ordering of optical models is required. The oxide exposure must
+be first and the silicon exposure must be second. The topmost layer
+exposure must be last.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idd4075e0a-7a48-4f4b-a6c5-c092d7b7a6e5"><p class="p">For multiple densities,
+the only ordering requirements are that each transit value specified
+corresponds with the order of the specified density exposures. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idfa1853ee-4a9f-4b48-86cb-71f5a879f9be"><span class="keyword ParameterName Required">from</span> <span class="keyword ParameterName RequiredReplaceable">umin</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p"><span class="keyword ParameterName Required">to</span> <span class="keyword ParameterName RequiredReplaceable">umax</span></p>
+<p class="p">A required pair of parameters
+specifying the endpoints of the optical model list to be sampled
+by transitional exposures. <span class="keyword ParameterName RequiredReplaceable">umin</span> must
+be less than <span class="keyword ParameterName RequiredReplaceable">umax</span>,
+and both must be non-negative integers. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id8e784c4f-2839-4c65-bceb-4386ff71548d">dsigma <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+value used to specify the density diffusion length in P1 units,
+used for single density configurations. In this case, converting
+a diffusion length from um to P1 units uses the formula: </p>
+<pre class="pre codeblock leveled"><code>P1 = <span class="keyword ParameterName OptionalReplaceable">sqrt(2) * length_um * K_ref / optical_lambda</span> </code></pre><p class="p">where <span class="keyword ParameterName OptionalReplaceable">K_ref</span> is
+the resist refractive index. The default value is sqrt(2)*0.05*1.75/0.248
+= 0.498966, corresponding to 50nm.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id82a0293c-f5ee-43cb-8a87-e1ad69931cb3">density {exposure <span class="keyword ParameterName OptionalReplaceable">pe</span> [<span class="keyword ParameterName OptionalReplaceable">pe2 … peT</span>]} | {<span class="keyword ParameterName OptionalReplaceable">layer1 </span>[<span class="keyword ParameterName OptionalReplaceable">layer2 … layerT</span>]}</dt>
+<dd class="dd ArgumentDescription"><div class="note note"><span class="notetitle">Note:</span> <p class="p">This option is only used
+for post-PC configurations. Single density configurations should
+use dsigma instead. </p>
+</div>
+<p class="p">An optional parameter that
+references density optical models by exposure number or by underlying
+layer name or number. These references correspond to the values
+specified for transit <span class="keyword ParameterName OptionalReplaceable">te1… teT</span>.
+Calibre WORKbench calculates density exposures as convolutions of
+the specified wafer stack layers with the Gaussian kernel. You specify
+the kernel parameters in a density optical model.</p>
+<ul class="ul"><li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id964bbf5d-ea54-41be-9b31-06e41d2bd97d"><p class="p">For multiple density exposures,
+you must specify a single negative value of the density parameter
+as part of the list. This negative density value indicates that
+the density corresponds to the “transitional type” exposure that
+belongs to a field area, <span class="keyword ParameterName OptionalReplaceable">usually the oxide stack</span>.
+The field density is calculated using the following formula:</p>
+<p class="p"><img class="image fmdpi:100" src="../graphics/topo_field_density_eq.png" /></p>
+<p class="p">An example for two density exposures
+might have the following code:</p>
+<pre class="pre codeblock leveled"><code>	transit 0 1 
+	density exposure -2 2 
+	from 0 
+	to 1 
+ </code></pre><p class="p">where:</p>
+<ul class="ul"><li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id69249cba-f9cc-42ec-bec8-dd9ad3ec7bf7"><p class="p">The 0th transitional exposure
+corresponds to oxide optics.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id313213f0-9bfa-4a49-9d48-a37adcd92a89"><p class="p">The 1st transitional exposure
+corresponds to silicon optics.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idd10bc311-ef5e-4564-be4e-48ada4988c17"><p class="p">Masks 0 and 1 are specified
+as the implant layer.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id252a1036-d24a-4744-b417-fa523b2758e7"><p class="p">Mask 2 is specified as the
+Rx layer.</p>
+</li>
+</ul>
+<p class="p">The density of the 0th transitional
+exposure is modulated by the density exposure 1-u(x,y) and the 1st
+transitional exposure is modulated by the density exposure u(x,y). </p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id45af7e16-c582-4080-a24e-b682a89853a9"><p class="p">For multiple density underlying
+layers (which is different from the underlying layers specification
+in the model-layer file), specify the type of layer for each transit exposure
+using the following keywords: </p>
+<ul class="ul"><li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idf16ad603-1f5b-4302-a568-9fd08f68068b"><p class="p">oxide —
+Specifies an underlying oxide (field) stack.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idbfdbb9f3-080a-40aa-97a8-12186e8be39d"><p class="p">oxide2 — Specifies an underlying oxide2 (field)
+stack. </p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id776263a2-de42-467b-8890-fa55a77ed6b1"><p class="p">active — Specifies
+an underlying active silicon (RX) stack.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id753bb43f-43fd-4d68-9c3d-ccad288dbf6e"><p class="p">active2 — Specifies
+an underlying active2 (SOI) stack.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__id770b98f6-a490-42c1-91a3-e3c09a61d125"><p class="p">poly — Specifies
+an underlying poly stack.</p>
+</li>
+<li class="li" id="ideec2822f-734f-4bd2-819f-e707b068156c__idda43d12f-6698-4d92-9780-a1b3e1c3137e"><p class="p">finfet — Specifies
+an underlying FinFET stack.</p>
+</li>
+</ul>
+<p class="p">An example for density underlying
+layers thusly resembles the following code:</p>
+<pre class="pre codeblock leveled"><code>transit 0 1 2
+density oxide active poly
+from 0
+to 1</code></pre></li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idbab6a7b9-c33f-4412-9846-5feb505c69c0">property <span class="keyword ParameterName OptionalReplaceable">name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying an optical property (such as beamfocus or stack_weight) to
+be sampled for the transitional exposures between the <span class="keyword ParameterName RequiredReplaceable">umin</span> and <span class="keyword ParameterName RequiredReplaceable">umax</span> values. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1cf6b696-0527-41cd-8345-98a525eb66d3">mtype efield | zeroorder</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying that all signals are multiplied by the electrical
+field (efield argument) or by the zeroth order harmonic of the mask
+(zeroorder argument). </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id16911e6f-bd89-4263-834a-6d5376d20a92">dupsize <span class="keyword ParameterName OptionalReplaceable">dupsize_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that upsizes the density layer, usually the Rx layer,
+by the <span class="keyword ParameterName OptionalReplaceable">dupsize_value</span> in
+P1 units. The upsize function happens before convolution. The default
+is 0.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+dupsize option is only used for internal density calculations. It
+is not allowed when calibrating external density.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idd1c005fb-fbb1-4336-9c65-afb836664b69">transit_dose <span class="keyword ParameterName OptionalReplaceable">dte1 dte2 … dteT</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying a list of real numbers, one per dose, that
+are used as transitional intensity multipliers.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idaa179643-7416-4279-90fc-20f30b88bfdf">csigma <span class="keyword ParameterName OptionalReplaceable">csigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter specifying the diffusion
+length of the corner diffraction kernels in P1 units. The default
+value is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__ide9d0cdc1-3e69-49fd-98f3-765d27c43555">cterm <span class="keyword ParameterName OptionalReplaceable">cindex cterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument specifying the corner diffraction of a single kernel. Each
+cterm kernel gets its own line.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id5b9e716e-8eab-4d64-9d2a-fdf412334a33"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">cindex is </span>an
+integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode. </p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id0607096d-43e3-41bd-9176-67e0312f3520"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">cterm_value</span> is
+a multiplier for the corner diffraction kernel used with the corresponding <span class="keyword ParameterName OptionalReplaceable">cindex</span>.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1b105e74-226d-42ef-94b9-01380f96362c">cquadratic_mult <span class="keyword ParameterName OptionalReplaceable">cquad_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument specifying a multiplier for the quadratic part of the corner
+diffraction signal. The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id3d0bf081-eb9a-4572-b77a-1cdf118d4b27">fsigma <span class="keyword ParameterName OptionalReplaceable">fsigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the size in P1 units for all FinFET kernels.
+The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id03746309-d67d-47b2-a489-169807a49815">fterm <span class="keyword ParameterName OptionalReplaceable">findex fterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the multiplier for the <span class="keyword ParameterName OptionalReplaceable">n</span>th
+term for a FinFET scattering signal kernel, corresponding to <span class="keyword ParameterName OptionalReplaceable">findex</span>.
+This kernel is only used when underlying finfet layers are present.
+The kernels affect “FinFET over active” layout regions and “active
+not FinFET” regions of active layout features that interact with
+FinFET structures.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idbdc8f0f7-2544-48fb-8c55-872446927076">fwasym <span class="keyword ParameterName OptionalReplaceable">fwasym_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+value of the asymmetry multiplier for the FinFET sidewall signal. <span class="keyword ParameterName OptionalReplaceable">fwasym_value</span> is
+a dimensionless floating point integer between 0 and 1, and defines
+the power ratio of the signal sources between the horizontal and
+vertical fin sidewalls. The power of sources on the vertical fin
+sidewalls is computed as (1-<span class="keyword ParameterName OptionalReplaceable">fwasym_value</span>)
+for the linearity intensity, and sqrt(1-<span class="keyword ParameterName OptionalReplaceable">fwasym_value</span>^2)
+for the linearity efield. </p>
+<p class="p">The default value is 1, which assumes horizontal fin sidewalls
+only. </p>
+<p class="p">Setting <span class="keyword ParameterName OptionalReplaceable">fwasym_value</span> to
+0 assumes vertical fin sidewalls only. </p>
+<p class="p">Values between 0 and 0.5 correspond to cases of continuous vertical
+sidewalls and perforated horizontal sidewalls. </p>
+<p class="p">Values between 0.5 and 1.0 correspond to cases of perforated
+vertical sidewalls and continuous horizontal sidewalls.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1800dd79-d308-44a0-89e4-5c254b73ab5b">fwsigma <span class="keyword ParameterName OptionalReplaceable">fwsigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the size in P1 units for all FinFET sidewall
+scattering kernels. The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id92a0fa0f-a60d-4c41-aa48-ea391800a830">fwterm <span class="keyword ParameterName OptionalReplaceable">fwindex fterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the multiplier for the <span class="keyword ParameterName OptionalReplaceable">n</span>th
+term for a FinFET sidewall scattering signal kernel, corresponding
+to <span class="keyword ParameterName OptionalReplaceable">findex</span>.
+This kernel is only used when underlying finfet layers are present.
+The kernels affect “FinFET over active” layout regions and “active not
+FinFET” regions of active layout features that interact with FinFET
+structures.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id88119a7f-b385-4fd8-952f-7486355e1630">fwupsize <span class="keyword ParameterName OptionalReplaceable">fwupsize_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that moves the FinFET sidewall layer outward in P1 units
+by the specified amount before topo signal calculation. Must be
+positive. The default is 0. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idbeea0e69-fc49-47f8-aa06-683cc66e8dac">gsigma <span class="keyword ParameterName OptionalReplaceable">gsigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the size of the gate scattering kernels
+in P1 units. The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id2161a703-7025-48a4-b10a-5a052e806b95">gterm <span class="keyword ParameterName OptionalReplaceable">gindex</span> <span class="keyword ParameterName OptionalReplaceable">gterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies a multiplier for the kernel of the gate
+scattering signal corresponding to <span class="keyword ParameterName OptionalReplaceable">gindex</span>.
+These kernels affect only layout regions with poly over active (the PC
+stack).</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id200ac398-27d0-45aa-bba1-39d583c4307f"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">gindex</span> is
+an integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode. </p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idd19b28f1-a256-410a-b85e-510d5fe43cd9"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">gterm_value</span> is
+the multiplier.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id9170e887-2528-4a71-ad80-18ac439fe26f">gupsize <span class="keyword ParameterName OptionalReplaceable">gupsize_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that upsizes the gate part of the poly layer by <span class="keyword ParameterName OptionalReplaceable">gupsize_value</span> in
+P1 units. The default is 0. Gate polygons are detected as the result
+of a logical AND between poly and Rx polygons.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idf0faff37-5c1b-4ca4-8123-2b86f31f3fbe">isigma <span class="keyword ParameterName OptionalReplaceable">isigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the size of the poly interconnect kernels
+in P1 units. The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id60825fd6-bc3a-46de-8448-2f7913725149">iterm <span class="keyword ParameterName OptionalReplaceable">iindex iterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies a multiplier for the kernel of the poly
+interconnect scattering signal corresponding to <span class="keyword ParameterName OptionalReplaceable">iindex</span>.
+These kernels affect regions that are not poly over active.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idbc97f4c4-3671-4429-a12c-f96040cfa066"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">iindex</span> can
+be between 0 and 23, inclusive (24 signals). The number of terms
+for each signal can be up to 24 for fasttopo 2 mode, but the recommended
+(default) number of terms is 8 (index of 7). You cannot use index
+values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id4d9d7adb-bb5b-43dc-8103-6fb71500ab02"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">iterm_value</span> is
+the multiplier used with the corresponding <span class="keyword ParameterName OptionalReplaceable">iindex</span>.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1ede5585-72be-4714-9182-edd096457165">iupsize <span class="keyword ParameterName OptionalReplaceable">iupsize_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that upsizes the interconnect part of the poly layer by <span class="keyword ParameterName OptionalReplaceable">iupsize_value</span> in
+P1 units. The default is 0. Interconnect polygons are detected as
+the result of a logical NOT between poly and Rx polygons. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id83e3a242-641c-4d2a-9582-58b8da05092e">obiasinit <span class="keyword ParameterName OptionalReplaceable">globalrxbias</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the upsize value in P1 units. This value is
+applied to all original RX features before internal density simulations
+and topo signal computations. </p>
+<p class="p">After the obiasinit operation
+completes, all edges in the RX layer are moved by the distance <span class="keyword ParameterName OptionalReplaceable">globalrxbias</span>.
+The <span class="keyword ParameterName OptionalReplaceable">globalrxbias</span> value
+can be positive or negative. Specifying a positive value means that
+an RX edge moves to the inside of the RX feature; specifying a negative value
+moves it to the outside of the original feature. The typical absolute
+value of <span class="keyword ParameterName OptionalReplaceable">globalrxbias</span> is
+between 0.15 and 0.65 P1 units. The recommended range is from -0.6
+to 0.6. The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id2c4305ed-79a5-4050-af2b-c5e5b8aeb64c">obiasmax <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the saturation value of the variable part
+of the oxide bias in P1 units. It assumes that any RX edge (or part
+of an edge) forms a trench with a paired RX edge (or part of an
+edge). If any RX edge has no paired RX edge, then it is considered
+that the corresponding trench has infinite width. </p>
+<p class="p">The absolute value of the
+variable oxide bias increases monotonically with the width reaching
+a saturation value of <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span> at
+the width of <span class="keyword ParameterName OptionalReplaceable">obiassaturation_width</span>. </p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span> can
+be positive or negative. Specifying a positive value means that
+an RX edge moves to the inside of the RX feature; specifying a negative
+value moves it to the outside of the original feature. A zero value
+means that there is no variable part of the oxide bias. The recommended
+range is from -0.6 to 0.6. The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id00adb95a-d6b0-4da8-9e52-68f8b2a6ecc2">obiaswsat <span class="keyword ParameterName OptionalReplaceable">obiassaturation_width</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies the width in P1 units at which the variable
+trench bias stops increasing. </p>
+<p class="p">Trenches that are wider than <span class="keyword ParameterName OptionalReplaceable">obiassaturation_width </span>are
+biased by <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span>. The <span class="keyword ParameterName OptionalReplaceable">obiassaturation_width</span> value
+must be positive. This argument is only used when <span class="keyword ParameterName OptionalReplaceable">obiassaturation_value</span> is
+not equal to zero. The recommended range of <span class="keyword ParameterName OptionalReplaceable">obiassaturation_width</span> is
+between 0.5 and 3.0. The default is 2.0 P1 units.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id144bf42d-08a9-448e-b8e6-de2e4e9ca1f3">oterm <span class="keyword ParameterName OptionalReplaceable">oindex oterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that specifies a multiplier for the kernel of the oxide
+bias polynomial corresponding to <span class="keyword ParameterName OptionalReplaceable">oindex</span>. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id65acc152-fd30-4b54-b601-655c5f513775"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">oindex</span> is
+an integer value between 0 and 2, inclusive. Each oterm kernel must
+be specified on its own line.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__ide791b866-fc3c-4cba-8619-192d88b49b9b"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">oterm_value</span> is
+the multiplier.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id9edc0b68-ece9-4127-bc8e-85a0b69835c1">squadratic_mult <span class="keyword ParameterName OptionalReplaceable">squad_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying a multiplier for the quadratic part of the
+sidewall reflection signal. The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id7f2b8c0c-2b8c-4d19-bef7-ebdabe2e088d">squadratic_mult_im <span class="keyword ParameterName OptionalReplaceable">squadim_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying a multiplier for the quadratic imaginary part
+of the sidewall reflection signal. The default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id4ecc197a-6750-4801-a573-44ede6d22ae0">ssigma <span class="keyword ParameterName OptionalReplaceable">sigmavalue</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the diffusion length of the sidewall reflection
+kernels in P1 units. The default is 1. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idb1c786f9-d501-497e-86e4-545173058b73"><span class="keyword ParameterName Required">sterm</span> <span class="keyword ParameterName RequiredReplaceable">sindex sterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter specifying the sidewall reflection of a single kernel.
+Each sterm kernel gets its own line.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id3f2262db-ba42-4539-ba5e-f0f4f8a3a33a"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">sindex </span>is
+an integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id448dc020-fe09-4e6f-bdef-1251484d316a"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">sterm_value</span> is
+a multiplier for the sidewall kernel used with the corresponding <span class="keyword ParameterName OptionalReplaceable">sindex</span>.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__ida298f2d9-0f74-4074-8d19-cc0b1d5c46e4"><span class="keyword ParameterName Optional">stermim </span> <span class="keyword ParameterName OptionalReplaceable">sindex</span> <span class="keyword ParameterName OptionalReplaceable">stermim_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the imaginary part of the sidewall signal for
+the <span class="keyword ParameterName OptionalReplaceable">sindex</span>’th kernel.
+It is added to the final intensity.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id5cc9ec57-8c0d-4df1-bf4f-d0fe9cedb357">supsize <span class="keyword ParameterName OptionalReplaceable">supsize_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter specifying the upsize
+value for the active layer to be used in sidewall reflection signal
+calculation. Active layer edges are shifted outwards by the specified
+value in P1 units before sidewall signals are added. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id0969d870-df0f-41d0-86c3-d9f91b9b22a1">tsigma <span class="keyword ParameterName OptionalReplaceable">tsigmavalue</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the diffusion length of the trench radiation
+kernel in P1 units. The default is 1. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idfadd3d85-eb3b-4761-bb92-4fde0586d073">tsurface {active | field}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter designating the region in which to apply trench radiation
+signal modifiers to the image intensity. “active” specifies the
+Rx region, and “field” specifies that it is not the Rx region. The
+default value is “field”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id635db1c1-3294-44d8-8cf1-83adb99d46db"><span class="keyword ParameterName Required">tterm</span> <span class="keyword ParameterName RequiredReplaceable">tindex tterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+parameter specifying a multiplier for the kernel of a trench radiation
+signal.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__iddd63d762-28fa-4661-8afc-f1c6eb9e9983"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">tindex</span> is
+an integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id099cdbfa-2ae6-470f-9a93-3850c4e23003"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">tterm_value</span> is
+the multiplier value.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id20f01a95-bbd1-447e-8cbf-ae64a3dbf6d4"><span class="keyword ParameterName Optional">ttermim </span> <span class="keyword ParameterName OptionalReplaceable">tindex</span> <span class="keyword ParameterName OptionalReplaceable">ttermim_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the imaginary part of the trench radiation
+signal for the <span class="keyword ParameterName OptionalReplaceable">tindex</span>’th
+kernel. It is added to the final intensity.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id065618db-8c53-4f69-8a56-e54e1354943d">t2sigma <span class="keyword ParameterName OptionalReplaceable">t2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the diffusion length of the trench2 radiation
+signal kernel in P1 units.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id880a0413-5786-4d21-9a28-c682a5c429b5">t2term <span class="keyword ParameterName OptionalReplaceable">t2index t2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying a multiplier for the kernel of a trench2 radiation
+signal. It describes the height along the trench width with a Chebyshev
+second order polynomial.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idef99648a-a9fc-430f-8e80-49c9a9e5e118"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">t2index</span> is
+an integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idd13bf8cb-a2d2-4246-9a03-d8498264008b"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">t2term_value</span> is
+the multiplier value.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1e66b107-4e63-4f66-8484-b0a3954e90c1">t4sigma <span class="keyword ParameterName OptionalReplaceable">t4sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying the diffusion length of the trench4 radiation
+signal kernel in P1 units. The default value is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id1fd601f5-06a8-4c89-bf23-1a74bc3144a5">t4term <span class="keyword ParameterName OptionalReplaceable">t4index t4term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter specifying a multiplier for the kernel of a trench4 radiation
+signal. It describes the height along the trench width with a Chebyshev
+fourth order polynomial.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id60bc639d-269d-4303-a001-314148ae4b24"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">t4index</span> is
+an integer value between 0 and 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__ide52ab050-1e1d-4a33-bc82-08b336bc67ec"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">t4term_value</span> is
+the multiplier value.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idfc867733-11f8-4b69-b5e0-e14d2e265399">vterm <span class="keyword ParameterName OptionalReplaceable">vindex</span> <span class="keyword ParameterName OptionalReplaceable">vterm_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter specifying a kernel
+multiplier for a vertical corner diffraction signal. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id13bd65e0-1633-4a5a-97e6-8416d5072227"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">vindex</span> is
+an integer number from 0 to 23, inclusive (24 signals). The number
+of terms for each signal can be up to 24 for fasttopo 2 mode, but
+the recommended (default) number of terms is 8 (index of 7). You
+cannot use index values higher than 7 for fasttopo 0 mode.</p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id29edee07-7371-4eef-8b29-f0907c442fce"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">vterm_value</span> is
+a multiplier for the vindex vertical corner diffraction signal kernel.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id41b38b53-f273-4dfb-8b3b-752c7d560687">vsigma <span class="keyword ParameterName OptionalReplaceable">vsigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter specifying the diffusion
+length of the vertical corner diffraction kernel in P1 units. The
+default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idc93c1884-c948-4afa-96aa-0f422392acc5">c2term <span class="keyword ParameterName OptionalReplaceable">c2index</span> <span class="keyword ParameterName OptionalReplaceable">c2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter used for corner2 signal
+kernels (for SOI processes). <span class="keyword ParameterName OptionalReplaceable">c2index</span> is
+an integer from 0 to 23, inclusive (24 signals). The number of terms
+for each signal can be up to 24 for fasttopo 2 mode, but the recommended
+(default) number of terms is 8 (index of 7). You cannot use index
+values higher than 7 for fasttopo 0 mode.</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">c2term_value</span> is
+the multiplier for the <span class="keyword ParameterName OptionalReplaceable">c2index</span> corner2
+diffraction signal kernel. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idfc63d072-4771-4084-ac91-c823ec619ea3">c2quadratic_mult <span class="keyword ParameterName OptionalReplaceable">c2quad_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+multiplier in front of the quadratic part of the corner2 diffraction
+signal (for SOI processes). Default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id8a203436-4e83-4db0-9673-db1336512895">c2sigma <span class="keyword ParameterName OptionalReplaceable">c2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+diffusion length of the corner2 diffraction kernels in P1 units
+(for SOI processes). Default is 1. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id0b60b885-2b70-4d12-af5a-fe091e3e046f">s2term <span class="keyword ParameterName OptionalReplaceable">s2index</span> <span class="keyword ParameterName OptionalReplaceable">s2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies a sidewall2
+reflection signal (for SOI processes). </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">s2index</span> is
+an integer <span class="keyword ParameterName OptionalReplaceable">i</span> from
+0 to 23, inclusive (24 signals). The number of terms for each signal
+can be up to 24 for fasttopo 2 mode, but the recommended (default)
+number of terms is 8 (index of 7). You cannot use index values higher
+than 7 for fasttopo 0 mode.</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">s2term_value</span> is
+a multiplier for the <span class="keyword ParameterName OptionalReplaceable">s2index</span> of
+the <span class="keyword ParameterName OptionalReplaceable">i</span>th
+sidewall2 kernel. The sidewall2 signal is added to the final intensity
+in linear and quadratic fashions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idc46c0811-c0a0-4263-96e3-0d75bba03264">s2quadratic_mult <span class="keyword ParameterName OptionalReplaceable">s2quad_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+multiplier for the quadratic part of the sidewall2 reflection signal
+(for SOI processes). Default is 0.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id13ae1e9d-9849-47df-b58f-cb22d9806f09">s2sigma <span class="keyword ParameterName OptionalReplaceable">s2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+diffusion length of the sidewall2 reflection kernels in P1 units
+(for SOI processes). Default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id9a1d1f6b-36cd-464e-a9eb-ca14f1986223">so2sigma <span class="keyword ParameterName OptionalReplaceable">so2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies the diffusion length of the sidewallo2
+reflection kernels in P1 units (for STI processes). Default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id6c42ef77-7376-4f19-a60b-588c8289845d">so2term <span class="keyword ParameterName OptionalReplaceable">so2index</span> <span class="keyword ParameterName OptionalReplaceable">so2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies a sidewallo2 reflection signal
+(for STI processes). </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">so2index</span> is
+an integer <span class="keyword ParameterName OptionalReplaceable">i</span> from
+0 to 23, inclusive (24 signals). The number of terms for each signal
+can be up to 24 for fasttopo 2 mode, but the recommended (default)
+number of terms is 8 (index of 7). You cannot use index values higher
+than 7 for fasttopo 0 mode. </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">so2term_value</span> is
+a multiplier for the <span class="keyword ParameterName OptionalReplaceable">so2index</span> of
+the <span class="keyword ParameterName OptionalReplaceable">i</span>th
+sidewallo2 kernel. The sidewallo2 signal is added to the final intensity
+in linear and quadratic fashions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idfa19b23e-e938-405b-b088-f20003b5db6a">to2sigma <span class="keyword ParameterName OptionalReplaceable">to2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter
+that specifies the diffusion length of the trencho2 radiation kernel
+in P1 units (for STI processes). Default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__idb577c560-e1b4-493b-b6c1-a3164c2891e4">to2surface {active | <span class="keyword ParameterName OptionalDefault">field</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies the region where the trench radiation
+signal is added to the image intensity. </p>
+<p class="p">active — Applies to the RX layout region.</p>
+<p class="p"><span class="keyword ParameterName OptionalDefault">field</span> —
+Applies to the not-RX layout region (default). </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id4fd86bc1-6cfd-4021-89b7-3ecb2a40fdaa">to2term <span class="keyword ParameterName OptionalReplaceable">to2index</span> <span class="keyword ParameterName OptionalReplaceable">to2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies a trencho2 radiation signal (for
+STI processes). </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">to2index</span> is
+an integer <span class="keyword ParameterName OptionalReplaceable">i</span> from
+0 to 23, inclusive (24 signals). The number of terms for each signal
+can be up to 24 for fasttopo 2 mode, but the recommended (default)
+number of terms is 8 (index of 7). You cannot use index values higher
+than 7 for fasttopo 0 mode. </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">to2term_value</span> is
+a multiplier for the <span class="keyword ParameterName OptionalReplaceable">to2index</span> of
+the <span class="keyword ParameterName OptionalReplaceable">i</span>th
+trencho2 kernel. The trencho2 signal is added to the final intensity
+in linear and quadratic fashions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id94020c92-4fa2-449b-be04-7aed8511907d">to2o2sigma <span class="keyword ParameterName OptionalReplaceable">to2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter
+that specifies the diffusion length of the trench2o2 radiation kernels in
+P1 units (for STI processes). Default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id5068219f-c68f-4cc4-b131-60ffcc108f06">t2o2term <span class="keyword ParameterName OptionalReplaceable">t2o2index</span> <span class="keyword ParameterName OptionalReplaceable">t2o2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies a trench2o2 radiation signal (for
+STI processes). For this signal, the trench form (height) along
+the trench width is defined with a Chebyshev polynomial of the 2nd
+order.</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">t2o2index</span> is
+an integer <span class="keyword ParameterName OptionalReplaceable">i</span> from
+0 to 23, inclusive (24 signals). The number of terms for each signal
+can be up to 24 for fasttopo 2 mode, but the recommended (default)
+number of terms is 8 (index of 7). You cannot use index values higher
+than 7 for fasttopo 0 mode. </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">t2o2term_value</span> is
+a multiplier for the <span class="keyword ParameterName OptionalReplaceable">t2o2index</span> of
+the <span class="keyword ParameterName OptionalReplaceable">i</span>th
+trench2o2 kernel. The trench2o2 signal is added to the final intensity
+in linear and quadratic fashions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id6942cf65-52eb-42a2-ac5d-0ea3964c6b38">t4o2sigma <span class="keyword ParameterName OptionalReplaceable">t4o2sigma_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter
+that specifies the diffusion length of the trench4o2 radiation kernels in
+P1 units (for STI processes). Default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id26ea4bae-984d-492f-8581-afcfa9d46d28">t4o2term <span class="keyword ParameterName OptionalReplaceable">t4o2index</span> <span class="keyword ParameterName OptionalReplaceable">t4o2term_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies a trench4o2 radiation signal (for
+STI processes). For this signal, the trench form (height) along
+the trench width is defined with a Chebyshev polynomial of the 4th
+order.</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">t4o2index</span> is
+an integer <span class="keyword ParameterName OptionalReplaceable">i</span> from
+0 to 23, inclusive (24 signals). The number of terms for each signal
+can be up to 24 for fasttopo 2 mode, but the recommended (default)
+number of terms is 8 (index of 7). You cannot use index values higher
+than 7 for fasttopo 0 mode. </p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">t4o2term_value</span> is
+a multiplier for the <span class="keyword ParameterName OptionalReplaceable">t4o2index</span> of
+the <span class="keyword ParameterName OptionalReplaceable">i</span>th
+trench4o2 kernel. The trench4o2 signal is added to the final intensity
+in linear and quadratic fashions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__ida68ae0f5-d14d-4325-84fb-2ec7c4bfa598">execute_mode {<span class="keyword ParameterName OptionalDefault">0</span> | 1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that sets the execution mode for the topo model. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__ida37349e1-d6f9-4917-a1b4-160937dc9c4d"><p class="p Opt">0 — Specifies “ordinary”
+mode, where standard routines for separate fast fourier transform
+(fft) operations are used for topo signal calculations. This is
+the default setting. </p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__id54474960-1644-4254-9542-6d1a45c98be5"><p class="p Opt">1 — Specifies “transposed”
+mode, where special routines that aggregate fft operations and spectra
+processing are used. Usually “transposed” mode is 20-30% faster
+than “ordinary” mode.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="ideec2822f-734f-4bd2-819f-e707b068156c__id4a300f8a-b29d-4d11-a303-8b0ebece7322">linearity {intensity | <span class="keyword ParameterName OptionalDefault">efield</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter that controls how the signals are added to the intensity. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idf77fc4c4-68d7-4325-920a-5f57037cbc9a"><p class="p Opt">intensity — Adds signals
+linearly to intensity. </p>
+</li>
+<li class="li ArgOption" id="ideec2822f-734f-4bd2-819f-e707b068156c__idde22f702-6aab-4892-90dc-83fbdfb520ea"><p class="p Opt">efield — Adds signals linearly
+to square root of the intensity, then the result is squared. The
+default is “efield”.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">This example describes a topo_model
+for a pre-PC stack. Its sterms and tterms have already been optimized,
+since the sterms and tterms have non-zero values. </p>
+<pre class="pre codeblock leveled"><code>	transit 0 1 
+	from 0 
+	to 1 
+	transit_dose 1 1 
+	squadratic_mult 0.0031580031 
+	sterm 0 -0.0015999079 
+	sterm 1 0.0047998875 
+	sterm 2 -0.0015999079 
+	sterm 3 -0.0073601007 
+	sterm 4 0.0041601658 
+	sterm 5 -0.0047995001 
+	sterm 6 0.0015990734 
+	sterm 7 0.0022394657 
+	tsurface active 
+	tterm 0 0.1200005 
+	tterm 1 -0.12320461 
+	tterm 2 0.043184131 
+	tterm 3 -0.024000928 
+	tterm 4 -0.12000256 
+	tterm 5 -0.02400133 
+	tterm 6 -0.15520051 
+	tterm 7 -0.12000051 
+ </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_TopographicalModelReference_id25026456.html" title="The commands for topographical modeling are either a subset of the commands from Calibre WORKbench or a command specifically created for topo modeling.">Topographical Model Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_topo_useref"
+                DocTitle = "Calibre® WORKbench™ Topography Modeling User’s and Reference Manual"
+                PageTitle = "topo_model Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_TopoModelFormat_ideec2822f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® WORKbench™ Topography Modeling User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

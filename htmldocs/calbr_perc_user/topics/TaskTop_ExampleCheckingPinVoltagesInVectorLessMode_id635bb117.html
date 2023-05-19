@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Example: Checking Pin Voltages in Vector-Less Mode" />
+<meta name="abstract" content="This example shows the use of perc::voltage_max and perc::voltage_min to find MOS gates where the device is MN(N_LV), and the voltage difference between gate and source pins exceeds a maximum threshold. This check employs vector-less analysis, so only source voltages are specified." />
+<meta name="description" content="This example shows the use of perc::voltage_max and perc::voltage_min to find MOS gates where the device is MN(N_LV), and the voltage difference between gate and source pins exceeds a maximum threshold. This check employs vector-less analysis, so only source voltages are specified." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id635bb117-0882-4f93-bd7a-8e71c4df2b79" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Checking Pin Voltages in Vector-Less Mode</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Checking Pin Voltages in Vector-Less Mode" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id635bb117-0882-4f93-bd7a-8e71c4df2b79">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Checking Pin Voltages in Vector-Less Mode</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">This example
+shows the use of perc::voltage_max and perc::voltage_min to find
+MOS gates where the device is MN(N_LV), and the voltage difference
+between gate and source pins exceeds a maximum threshold. This check
+employs vector-less analysis, so only source voltages are specified. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id38db7388-4196-466b-8ec6-7cdbd47e6c66"><p class="p">You
+understand voltage propagation as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_ConnectivityBasedVoltagePropagation_idde127dbd.html#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93__Concept_ConnectivityBasedVoltagePropagation_idde127dbd.xml#idde127dbd-0c53-4f7c-b790-f5dfb04aeb93" title="Calibre PERC employs static, connectivity-based voltage propagation. Unlike dynamic circuit simulators, Calibre PERC voltage propagation does not consider resistance or current. Voltage labels are passed along well-defined paths and are subsequently checked by rules.">Connectivity-Based Voltage Propagation</a>”.</p>
+</li>
+<li class="li" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__idf2c5f405-d9ca-40e7-83cd-c8bd9fdb061b"><p class="p">You
+have created a file called <span class="ph filepath">utilities.tcl</span>, which
+contains the Tcl procs discussed under “<a class="xref fm:HeadingAndPage" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__Concept_UsefulUtilityProcedures_ide324021e.xml#ide324021e-abe0-4793-bc35-3ee9d47a4885" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a>”.</p>
+</li>
+<li class="li" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id12223e13-e1ae-4b73-beea-4d6d728b3859"><p class="p">You understand
+the use of Unified Power Format as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_UnifiedPowerFormatSupport_idca5116bc.html#idca5116bc-9b93-40a9-a903-495eb8a50bac__Concept_UnifiedPowerFormatSupport_idca5116bc.xml#idca5116bc-9b93-40a9-a903-495eb8a50bac" title="Calibre PERC supports Unified Power Format (UPF). A UPF file defines a design’s power domain intent. The file includes elements such as voltages, supply nets, power states, power switches, level shifters, isolation, and retention.">Unified Power Format Support</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id018d66a6-7d5b-433f-bebe-846961cc9ac1"><span class="ph cmd">Start your
+rule file with this code</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>PERC LOAD voltage.lib INIT init_8 SELECT rule_8 
+ 
+TVF FUNCTION voltage.lib [/* 
+package require CalibreLVS_PERC</code></pre></div></li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__ida57f5727-01a2-4a8a-8f58-41996fc225b5"><span class="ph cmd">You can define your voltages
+using a UPF file or in a text file using a list format. Both options
+are shown.</span><ol type="a" class="ol substeps"><li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__idde95a595-56f6-48b6-915d-929d12fd246c"><span class="ph cmd">(Option
+1: using a UPF file.) Create a file called <cite class="cite">power_table.upf</cite> and
+insert this code:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>#---------------------------------------------------------------
+# Create power domain
+#---------------------------------------------------------------
+create_power_domain top 
+#---------------------------------------------------------------
+# Create top level power domain supply ports
+#---------------------------------------------------------------
+create_supply_port vddL -domain top
+create_supply_port vddH -domain top
+create_supply_port vss  -domain top
+#---------------------------------------------------------------
+# Create power domain supply nets
+#---------------------------------------------------------------
+create_supply_net vddL -domain top
+create_supply_net vddH -domain top
+create_supply_net vss  -domain top
+</code></pre><pre class="pre codeblock"><code>#---------------------------------------------------------------
+# Connect top level power domain supply ports to supply nets
+#---------------------------------------------------------------
+connect_supply_net vddL -ports vddL
+connect_supply_net vddH -ports vddH
+connect_supply_net vss  -ports vss
+#---------------------------------------------------------------
+# Create port power states
+#---------------------------------------------------------------
+add_port_state vddL -state {ON  1.8}
+add_port_state vddH -state {ON  3.3}
+add_port_state vss  -state {ON  0}
+#---------------------------------------------------------------
+# Create power state table and enable global states
+#---------------------------------------------------------------
+create_pst top_pst -supplies {vddL vddH vss}
+add_pst_state ON -pst top_pst -state {ON ON ON}</code></pre></div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id35eac435-568b-4ba8-a8c0-edd6da5ecb40"><span class="ph cmd">In the
+rule file, enter this line outside the scope of the TVF Function
+block:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock"><code>PERC UPF PATH power_table.upf</code></pre></div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__idf7b00282-53a5-446a-b69a-3ee588ac31c6"><span class="ph cmd">In the
+rule file, start your initialization procedure with this code:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>proc init_8 {} { 
+ 
+#----------Voltage definitions------------ 
+ 
+# UPF setup
+  set supplies [perc::get_upf_pst_data -supplies \
+  -table "top_pst"]
+  foreach supply $supplies {
+    set voltage_tuple [perc::get_upf_pst_data -voltages \
+      -table "top_pst" -state "ON" -supply $supply] 
+    set nom_voltage   [lindex $voltage_tuple 1]
+    perc::define_net_voltage $nom_voltage $supply
+  }</code></pre></div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__idca176804-a8f7-4c94-b6d7-b909d1623585"><span class="ph cmd">(Option
+2: using a list file.) Create a net voltages file called <span class="ph filepath">voltages.txt</span>,
+as discussed under “<a class="xref fm:HeadingAndPage" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__Concept_UsefulUtilityProcedures_ide324021e.xml#ide324021e-abe0-4793-bc35-3ee9d47a4885" title="Three useful utility procedures can be used for Calibre PERC voltage assignment and propagation reporting.">Useful Utility Procedures</a>”. Here is an example:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>VDDH 3.3 
+VDDL 1.8 
+VSS  0.0 </code></pre><p class="p">There can be more than one voltage per net in vector-less mode.</p>
+</div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id35a43187-6a18-4606-87ab-989e7967400c"><span class="ph cmd">In the rule file TVF Function
+block, source the <span class="ph filepath">utilities.tcl</span> file containing
+your utilities procs:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>source utilities.tcl </code></pre></div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__idf75495b5-bd42-4641-8395-de04a66eb407"><span class="ph cmd">Start the initialization procedure
+by calling the <a class="xref fm:HeadingOnly" href="Concept_UsefulUtilityProcedures_ide324021e.html#ide324021e-abe0-4793-bc35-3ee9d47a4885__id0c811fc9-a1b8-435a-ab42-65738390412f">define_net_voltages_from_file proc</a> in <span class="ph FontProperty emphasis">utilities.tcl</span>.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>proc init_8 {} { 
+ 
+#----------Voltage definitions------------ 
+ 
+# Required voltage definitions 
+ 
+    define_net_voltages_from_file voltages.txt </code></pre><p class="p">This portion of the initialization
+proc defines the net voltages for the design using the list file
+you created previously.</p>
+</div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id50407ef2-96f6-4c42-8daa-868655f4a1d5"><span class="ph cmd">In the initialization proc,
+define the power and ground net types.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Required to define -break net types 
+    <a class="xref fm:HeadingOnly" href="Command_PercdefineNetType_id94dce3ed.html#id94dce3ed-08eb-4906-8920-4023848dda4b__Command_PercdefineNetType_id94dce3ed.xml#id94dce3ed-08eb-4906-8920-4023848dda4b" title="Assigns a net type to nets from an input list of net names.">perc::define_net_type</a> power  { VDD? } 
+    perc::define_net_type ground { VSS? } </code></pre></div></li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id14d17945-c60c-4116-a620-25ff4cb52b15"><span class="ph cmd">In the initialization proc,
+define the voltage path to go through the s/d pins of MN and MP
+devices.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>#---------Propagation definition---------- 
+ 
+    <a class="xref fm:HeadingOnly" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__Command_PerccreateVoltagePath_id2094c0cf.xml#id2094c0cf-1da3-41d7-9049-860de10b6ca7" title="Enables voltage propagation through selected devices and pins.">perc::create_voltage_path</a> -type {MN MP} -pin {s d} \
+      -break { power || ground } 
+} </code></pre></div><div class="itemgroup info StepInfo"><p class="p">This completes the initialization proc.</p>
+</div></li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id8052b5c8-7244-4c7b-9b38-ba47700ea986"><span class="ph cmd">Write the rule check in two
+procedures.</span><ol type="a" class="ol substeps"><li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id19b36507-cd0c-4a75-bc02-1d2721cb3015"><span class="ph cmd">The first procedure finds
+MN(N_LV) devices and calls a -condition procedure.</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>#---------MN(N_LV) Over-voltage Check---------- 
+ 
+  proc rule_8 {} { 
+    <a class="xref fm:HeadingOnly" href="Command_PerccheckDevice_id3faa8842.html#id3faa8842-b865-4759-8041-19b4db0d1f9a__Command_PerccheckDevice_id3faa8842.xml#id3faa8842-b865-4759-8041-19b4db0d1f9a" title="Matches each primitive device in the design by default. Devices that are selectively matched can be configured using the options.">perc::check_device</a> -type {MN} -subtype {N_LV} \
+      -condition check_mn_g-&gt;s \
+      -comment "Error: MN(N_LV) g -&gt; s over volt" 
+  } </code></pre></div></li>
+<li class="li substep" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id368b9313-57ee-420c-9181-c2f02945b248"><span class="ph cmd">The -condition proc checks
+for an over-voltage condition on the device:</span><div class="itemgroup info SubStepInfo"><pre class="pre codeblock leveled"><code>  proc check_mn_g-&gt;s {dev} { 
+     set g_max [<a class="xref fm:HeadingOnly" href="Command_PercvoltageMax_ida5217c7b.html#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee__Command_PercvoltageMax_ida5217c7b.xml#ida5217c7b-ab7c-4d86-894a-1ce9355a32ee" title="Returns the maximum voltage for an instance’s pin.">perc::voltage_max</a> $dev g] 
+     set s_min [<a class="xref fm:HeadingOnly" href="Command_PercvoltageMin_id209a3f13.html#id209a3f13-3368-4085-b325-0678fbe219d8__Command_PercvoltageMin_id209a3f13.xml#id209a3f13-3368-4085-b325-0678fbe219d8" title="Returns the minimum voltage for an instance’s pin.">perc::voltage_min</a> $dev s] 
+     if { ($g_max ne "") &amp;&amp; ($s_min ne "") } { 
+       set gs_delta [expr {$g_max - $s_min}] 
+       if { $gs_delta &gt; 1.8 } { 
+         <a class="xref fm:HeadingOnly" href="Command_PercreportBaseResult_idb3fbfdac.html#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978__Command_PercreportBaseResult_idb3fbfdac.xml#idb3fbfdac-f8a1-4f80-9abb-5451cd2ee978" title="Writes user-defined content to the PERC Report file or to the Mask SVDB Directory. This command must be called in the context of a high-level rule check command.">perc::report_base_result</a> \
+           -value "g -&gt; s voltage: ${gs_delta}V &gt; 1.8V" 
+         return 1 
+       } 
+     } 
+     return 0    
+  } </code></pre></div></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id01c8d0f9-a881-43bf-8c04-9f28bedfa012"><span class="ph cmd">Complete
+the TVF Function block with this line:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>*/]</code></pre></div></li>
+<li class="li step stepexpand" id="id635bb117-0882-4f93-bd7a-8e71c4df2b79__id3f3fd4a8-61ed-48fe-813c-090921aba572"><span class="ph cmd">The complete rule check is
+as follows:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>PERC LOAD voltage.lib INIT init_8 SELECT rule_8 
+// uncomment if using UPF
+// PERC UPF PATH power_table.upf
+ 
+TVF FUNCTION voltage.lib [/* 
+package require CalibreLVS_PERC 
+
+# uncomment if using a list file
+# source utilities.tcl </code></pre><pre class="pre codeblock leveled"><code>###################################################################
+### RULE 8 
+########## 
+ 
+  proc init_8 {} { 
+ 
+#----------Voltage definitions------------ 
+
+# uncomment if using a UPF file
+# UPF setup
+#   set supplies [perc::get_upf_pst_data -supplies -table "top_pst"]
+#   foreach supply $supplies {
+#     set voltage_tuple [perc::get_upf_pst_data -voltages \
+#       -table "top_pst" -state "ON" -supply $supply]  
+#     set nom_voltage   [lindex $voltage_tuple 1]
+#     perc::define_net_voltage $nom_voltage $supply
+#   }
+ 
+# Required voltage definitions 
+# uncomment if using a list file
+#   define_net_voltages_from_file voltages.txt 
+ 
+# Required to define -break net types 
+    perc::define_net_type power  { VDD? } 
+    perc::define_net_type ground { VSS? } 
+ 
+#---------Propagation definition---------- 
+ 
+    perc::create_voltage_path -type {MN MP} -pin {s d} \
+      -break { power || ground } 
+}</code></pre><pre class="pre codeblock leveled"><code>#---------MN(N_LV) Over-voltage Check---------- 
+ 
+  proc rule_8 {} { 
+    perc::check_device -type {MN} -subtype {N_LV} \
+      -condition check_mn_g-&gt;s \
+      -comment "Error: MN(N_LV) g -&gt; s over volt" 
+  } 
+ 
+  proc check_mn_g-&gt;s {dev} { 
+    set g_max [perc::voltage_max $dev g] 
+    set s_min [perc::voltage_min $dev s] 
+    if { ($g_max ne "")&amp;&amp; ($s_min ne "") } { 
+      set gs_delta [expr {$g_max - $s_min}] 
+      if { $gs_delta &gt; 1.8 } { 
+        perc::report_base_result \
+          -value "g -&gt; s voltage: ${gs_delta}V &gt; 1.8V" 
+        return 1 
+      } 
+    } 
+    return 0    
+  } 
+*/] </code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Results in the PERC Report appear
+similar to this:</p>
+<pre class="pre codeblock leveled"><code>o PERC LOAD voltage.lib INIT init_8 
+o RuleCheck:  rule_8 (Error: MN(N_LV) g -&gt; s over volt) 
+------------------------------------------------------------------------- 
+ 
+  1    M1 [ MN(N_LV) ]  (1 placement, LIST# = L1) 
+         g: IN [ ] [ ] [ ] [ 0 3.3 ] 
+         s: VSS [ ] [ ] [ 0 ] [ 0 ] 
+         d: OUT [ ] [ ] [ ] [ 0 1.8 ] 
+         b: VSS [ ] [ ] [ 0 ] [ 0 ] 
+       g -&gt; s voltage: 3.3V &gt; 1.8V </code></pre><p class="p">Vector-less analysis can report impossible
+situations for voltage configurations in certain circuits. This
+is because vector-less analysis assumes that gates are always on.
+In such cases, using unidirectional current checks is helpful in
+eliminating false errors. See “<a class="xref fm:HeadingAndPage" href="Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html#iddd0d1ab0-d5fb-49c0-8083-7893862fc978__Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.xml#iddd0d1ab0-d5fb-49c0-8083-7893862fc978" title="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming.">Code Guidelines for Unidirectional Current Checks</a>”.</p>
+<p class="p">The annotations to the pins indicate
+the voltage values at initialization time and after voltage propagation
+throughout the design, respectively. The general form of pin annotations
+is this:</p>
+<pre class="pre codeblock leveled"><code>&lt;pin&gt;: &lt;net&gt; [ &lt;initialized_net_type_list&gt; ] [ &lt;propagated_path_type_list&gt; ] [ &lt;initialized_voltage_list&gt; ] [ &lt;propagated_voltage_list&gt; ] </code></pre><p class="p">The list fields can appear empty or
+are suppressed if information is not available for those fields. </p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibrePercVoltageRuleChecks_id2b941fd5.html" title="The Calibre PERC voltage checking capability is used for static voltage verification of a design. The voltage checking capability entails assignment of numeric labels to nets (logical labels are also supported, which may have underlying numeric values). These voltage labels can then be propagated throughout the design along topological paths meeting well-defined conditions. Numeric valued labels implicitly have an order to them, which is something that net and path type labels do not generally support. This facilitates sorting and testing of voltage values using mathematical expressions in appropriate checks.">Calibre PERC Voltage Rule Checks</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Checking Pin Voltages in Vector-Less Mode"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExampleCheckingPinVoltagesInVectorLessMode_id635bb117.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

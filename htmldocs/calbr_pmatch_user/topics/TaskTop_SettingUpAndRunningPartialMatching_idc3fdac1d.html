@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Setting Up and Running Partial Matching" />
+<meta name="abstract" content="Partial matching can be used to debug a pattern that does not match where it is expected to match. Partial matching requires a pattern library compiled with appropriate options. Partial matching is specified with CMACRO options in the rule file. The output of a partial matching run is the per-layer XOR difference between the pattern layers and the design layers in the layout regions that meet the partial matching criteria." />
+<meta name="description" content="Partial matching can be used to debug a pattern that does not match where it is expected to match. Partial matching requires a pattern library compiled with appropriate options. Partial matching is specified with CMACRO options in the rule file. The output of a partial matching run is the per-layer XOR difference between the pattern layers and the design layers in the layout regions that meet the partial matching criteria." />
+<meta name="prodname" content="Calibre Pattern Matching User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_pmatch_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/17/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Pattern Matching User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Setting Up and Running Partial Matching</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Setting Up and Running Partial Matching" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Setting Up and Running
+Partial Matching</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Partial matching can be used to debug a
+pattern that does not match where it is expected to match. Partial
+matching requires a pattern library compiled with appropriate options.
+Partial matching is specified with CMACRO options in the rule file.
+The output of a partial matching run is the per-layer XOR difference
+between the pattern layers and the design layers in the layout regions
+that meet the partial matching criteria. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Partial matching is only intended for debugging a small
+area of the layout. It is not a substitute for pattern matching
+with appropriately defined pattern constraints. In particular, partial matching
+may not find all locations of a partial match if a suitable partial
+match candidate is not identified. </p>
+</div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id8d1fed5b-d068-4d68-a88c-ec0baae43c24"><p class="p">A pattern
+library, and knowledge of the name of the pattern to debug. </p>
+<p class="p">Partial matching only applies to exact TEM patterns. For grid-based
+puzzle matching, the patterns must be Manhattan shapes only. </p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The examples in this procedure assume the library name
+is “library” and the pattern to debug is “pattern1”. The pattern
+has three layers: M1, V1, and M2. </p>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id9cd9dabd-bedf-47df-8aa4-08e3611fafad"><span class="ph cmd">Compile
+the pattern library into a DMACRO. </span><div class="itemgroup info StepInfo"><p class="p">Compile options are used to do the following:</p>
+<ul class="ul"><li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__idc243dddd-0d9a-45a3-99ee-7839872a835d"><p class="p">Add matched
+layer marker output for each pattern layer.</p>
+</li>
+<li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__ida0cbf846-8fb3-4743-a507-bdb4216ef826"><p class="p">Enable runtime
+CMACRO options.</p>
+</li>
+<li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id4aa18758-679c-4723-8537-0b2d7d7a4a00"><p class="p">(Optional)
+Output a count marker. </p>
+</li>
+</ul>
+<p class="p">The following command is used for this example:</p>
+<pre class="pre codeblock"><code>pdl_lib_mgr compile input library.pmdb output lib_pat1.svrf 
+	marker matched_m1 matched layer M1
+	marker matched_v1 matched layer V1
+	marker matched_m2 matched layer M2
+	enable_runtime_options
+	gen_count_layer &gt; compile.log</code></pre><p class="p">If you want debug only one pattern in a library, you can use
+the option “patterns <span class="keyword ParameterName OptionalReplaceable">pattern_name</span>”
+in the compile command. </p>
+<p class="p">For this example, the compiled DMACRO includes these lines:</p>
+<pre class="pre codeblock"><code>DMACRO pm:library in_M1 in_V1 in_M2
+options_string
+out_matched_m1 out_matched_v1 out_matched_m2 out_match_count</code></pre><div class="note tip"><span class="tiptitle">Tip</span> <p class="p">You can also use the pattern matching GUI
+to compile a pattern library with the necessary options, including
+the matched layer compile-time markers. See “<a class="xref fm:HeadingAndPage" href="TaskTop_CompilingAPatternLibraryWithTheCalibrePatternMatchingGUI_idea966f6a.html#idea966f6a-417c-44dc-9a52-7dd40c2e0c0c__TaskTop_CompilingAPatternLibraryWithTheCalibrePatternMatchingGUI_idea966f6a.xml#idea966f6a-417c-44dc-9a52-7dd40c2e0c0c" title="You can use the Calibre Pattern Matching GUI to compile patterns into a DMACRO file for use in a Calibre pattern matching run.You can compile all patterns in the library or selected patterns.">Compiling a Pattern Library with the Calibre Pattern Matching GUI</a>”. </p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id62a5e668-69b3-4532-846f-49d828aa97fa"><span class="ph cmd">Determine
+which partial matching method to use and which options to specify
+in the CMACRO options string. </span><div class="itemgroup info StepInfo"><p class="p">See “<a class="xref fm:HeadingAndPage" href="Contain_PartialMatchingOverview_id79e74f09.html#id79e74f09-d873-4202-9e2e-73720817b2a9__Contain_PartialMatchingOverview_id79e74f09.xml#id79e74f09-d873-4202-9e2e-73720817b2a9" title="Partial matching identifies areas in a layout that match an input pattern within a given tolerance. If Calibre Pattern Matching does not report a match where expected, partial matching can help debug the problem. Partial matching applies only to exact TEM patterns.">Pattern Debug with Partial Matching</a>” for
+a summary. </p>
+<ul class="ul"><li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id2373edbd-0973-4985-8273-433b72024bd6"><p class="p"><span class="ph FontProperty HeadingLabel">Grid-Based Partial Matching</span> —
+Supports both single-layer and multilayer patterns and uses the
+‑puzzle_matcher option in the CMACRO call. See “<a class="xref fm:HeadingAndPage" href="Concept_GridBasedPartialMatchingPuzzleMatching_id6b028d7d.html#id6b028d7d-7389-4016-8fcf-14048b057c5c__Concept_GridBasedPartialMatchingPuzzleMatching_id6b028d7d.xml#id6b028d7d-7389-4016-8fcf-14048b057c5c" title="Partial matching identifies regions in a layout that match an input pattern within a given tolerance. Grid-based partial matching, or puzzle matching, divides the pattern into a grid of nine windows and the matching criteria is calculated on a per-window basis. A match candidate is located by exact match to at least one window, then a puzzle match is returned if a specified minimum number of windows match within a specified tolerance.">Grid-Based Partial Matching (Puzzle Matching)</a>” for an
+overview and tips on choosing options. </p>
+</li>
+<li class="li" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id8148635c-492c-48d6-b51b-95b6ba04c2e3"><p class="p"><span class="ph FontProperty HeadingLabel">Per-Layer Partial Matching</span> —
+Supports multilayer patterns only and uses the ‑enable_partial_match
+option in the CMACRO call. See “<a class="xref fm:HeadingAndPage" href="Command_CmacroOptionStrings_id7335a8a6.html#id7335a8a6-8c36-4627-964c-86a4bdaa6058__Command_CmacroOptionStrings_id7335a8a6.xml#id7335a8a6-8c36-4627-964c-86a4bdaa6058" title="The CMACRO command runs pattern matching on the specified DMACRO pattern library. CMACRO creates derived layer(s) containing the marker layer shapes generated from the pattern matching process. Runtime options are specified with an option string.">CMACRO for Calibre Pattern Matching</a>” for
+the available options. </p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id0b332a18-2f05-4938-9223-5f14dfe97f4e"><span class="ph cmd">Set up
+the CMACRO call and the rule checks in the rule file.</span><div class="itemgroup info StepInfo"><p class="p">Use the CMACRO option string arguments determined in
+the previous step, the appropriate input and output arguments for
+your pattern, and the compile options used in Step <a class="xref fm:NumberOnlyBlack" href="#idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id9cd9dabd-bedf-47df-8aa4-08e3611fafad">1</a>. Include rule
+checks for each output layer from the partial matching run.</p>
+<p class="p">This example is for a multilayer pattern, so the ‑enable_partial_match
+option is used. The first two numbers, 1 and 0.9, specify that at
+most 1 layer may be below the match tolerance of 0.9. The design
+layers v1 and m2 must match exactly, so they are listed with the
+req_layer argument. </p>
+<pre class="pre codeblock"><code>CMACRO pm:library m1 v1 m2 
+"-enable_partial_match {1 0.9 req_layer {v1 m2}}"
+xor_m1 xor_v1 xor_m2 count_marker
+
+XOR_m1 {COPY xor_m1}
+XOR_v1 {COPY xor_v1}
+XOR_m2 {COPY xor_m2}
+partial_matches {COPY count_marker}</code></pre><p class="p">If working with a full chip layout, run partial matching on only
+a small portion of the layout where a match was expected but not
+found.</p>
+</div></li>
+<li class="li step stepexpand" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__ide5df1889-5160-4166-bf99-cdeec4511040"><span class="ph cmd">Run Calibre. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>calibre -drc -hier rules &gt; log</code></pre><p class="p">The output layers from the matched layer markers contains the
+XOR difference of the pattern layer and the design layer in the
+regions that meet the partial matching criteria. </p>
+</div></li>
+<li class="li step stepexpand" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id34a21f2f-d122-4a5c-bf8e-d1ea098fff5c"><span class="ph cmd">View the
+results using Calibre RVE. </span><div class="itemgroup info StepInfo"><p class="p">The XOR layer differences appear in the results and
+can be highlighted in the layout.</p>
+<p class="p">In this example, the XOR differences for layer m1 are in the
+rule check XOR_m1. The rule checks for the layers m2 and v1 (XOR_v1
+and XOR_m1) do not have results, as these layers were specified
+to match exactly (the req_layer argument in the CMACRO option string). </p>
+<div class="fig fignone" id="idc3fdac1d-efb1-4aa5-a4cd-bd7e35e89594__id84f216f1-e1ee-4d17-be2a-8812c973714d"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Partial
+Matching</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/partial_match_ex1.png" /></div><br /></div>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_PartialMatchingOverview_id79e74f09.html" title="Partial matching identifies areas in a layout that match an input pattern within a given tolerance. If Calibre Pattern Matching does not report a match where expected, partial matching can help debug the problem. Partial matching applies only to exact TEM patterns.">Pattern Debug with Partial Matching</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_pmatch_user"
+                DocTitle = "Calibre® Pattern Matching User’s Manual"
+                PageTitle = "Setting Up and Running Partial Matching"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_SettingUpAndRunningPartialMatching_idc3fdac1d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Pattern Matching User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

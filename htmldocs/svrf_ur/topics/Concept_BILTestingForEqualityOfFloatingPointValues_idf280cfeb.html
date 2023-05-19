@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Testing for Equality of Floating-Point Values" />
+<meta name="abstract" content="Testing for equality of floating-point numeric values using the == operator requires care because the floating-point representation of a number is not necessarily equal to the arithmetic value. Additionally, floating-point representations of numbers can vary depending on the operating system and host hardware. The solution for equality testing is to check if values are within a certain tolerance range of each other that guarantees the necessary precision for the evaluation of equivalence." />
+<meta name="description" content="Testing for equality of floating-point numeric values using the == operator requires care because the floating-point representation of a number is not necessarily equal to the arithmetic value. Additionally, floating-point representations of numbers can vary depending on the operating system and host hardware. The solution for equality testing is to check if values are within a certain tolerance range of each other that guarantees the necessary precision for the evaluation of equivalence." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf280cfeb-0090-4a7c-9d8d-d2650f17dcca" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Testing for Equality of Floating-Point Values</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Testing for Equality of Floating-Point Values" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf280cfeb-0090-4a7c-9d8d-d2650f17dcca">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Testing for Equality
+of Floating-Point Values</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><p class="p ContextMGC">Device property computation
+built-in language.</p>
+<p class="shortdesc">Testing for equality of floating-point
+numeric values using the == operator requires care because the floating-point
+representation of a number is not necessarily equal to the arithmetic value.
+Additionally, floating-point representations of numbers can vary
+depending on the operating system and host hardware. The solution
+for equality testing is to check if values are within a certain
+tolerance range of each other that guarantees the necessary precision
+for the evaluation of equivalence.</p>
+</div>
+<p class="p">Suppose a
+layout measurement value is 0.5 um and you want to test if a parameter
+has that value in a property computation. You might try this:</p>
+<pre class="pre codeblock"><code>if (W == 0.5 * 1e-06) { ...</code></pre><p class="p">A potential problem here is W may be 0.5e-06 exactly,
+but “0.5 * 1e-06” might be stored as a floating-point value of 0.49999999999999919.
+In that case, the equality test fails.</p>
+<p class="p">A consideration in device property computation
+is the precision at which properties are traced and compared in
+LVS. The Trace Property statement checks for property equivalence
+using a value of base × 1e-05, where base is the source design’s
+value. So equivalence should be checked to at least that precision.</p>
+<p class="p">With this in mind, the aforementioned equality
+test can be performed as follows:</p>
+<pre class="pre codeblock"><code>if |a - b| &lt; minimum(a, b) × 1e-05 then ...</code></pre><p class="p">In a device property computation program, this
+might be implemented as in this example:</p>
+<pre class="pre codeblock"><code>DEVICE ... [
+  PROPERTY W ...
+
+  <span class="ph CodeHighlight Bold">W</span> = 0.5 * PERIM_CO(dev_layer,pin_layer)
+  <span class="ph CodeHighlight Bold">W_exp</span> = 0.5 * 1e-06
+
+  if (W &lt;= W_exp) {
+    <span class="ph CodeHighlight Bold">min</span> = W
+  } else {
+    <span class="ph CodeHighlight Bold">min</span> = W_exp
+  }
+
+  if (<span class="ph CodeHighlight Bold">ABS(W - W_exp) &lt; min * 1e-05</span>) { ...
+]</code></pre><p class="p">In the TVF functional interface for device property
+computation, Tcl is used. In that interface, this code performs
+the same role as the code discussed previously:</p>
+<pre class="pre codeblock"><code>if {<span class="ph CodeHighlight Bold">[expr abs($x - $y) &lt;  min($x,$y) * 1e-05]</span>} { ... </code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_BuiltInLanguagesDevices_id02f7bb14.html" title="SVRF supports several built-in languages for user-defined calculations. They are used for tasks such as device property computations, device reduction computations, and device property tracing.">Built-In Languages for Devices</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Testing for Equality of Floating-Point Values"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_BILTestingForEqualityOfFloatingPointValues_idf280cfeb.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

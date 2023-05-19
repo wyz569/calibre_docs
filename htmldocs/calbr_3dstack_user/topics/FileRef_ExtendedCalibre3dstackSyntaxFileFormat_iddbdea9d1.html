@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Rule File Format and Syntax" />
+<meta name="abstract" content="File format used to define the physical assembly of a 3D or 2.5D IC." />
+<meta name="description" content="File format used to define the physical assembly of a 3D or 2.5D IC." />
+<meta name="prodname" content="Calibre 3DSTACK User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_3dstack_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® 3DSTACK User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Rule File Format and Syntax</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Rule File Format and Syntax" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Rule File Format and Syntax</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input for: Calibre 3DSTACK</p>
+<p class="shortdesc">File format used to define
+the physical assembly of a 3D or 2.5D IC.</p>
+<p class="p">The Calibre
+3DSTACK rule file supports an extended version of the 3D-IC Description Language
+(3D‑IC DL) commands, referred to as 3DSTACK+. The 3DSTACK+ syntax
+is a universal language that allows you to define your assembly
+and rule checks and supports some advantages over the standard syntax.</p>
+<p class="p">The Calibre 3DSTACK+ syntax can be used
+to decouple rule and analysis specifications from the physical assembly,
+similar to a typical design flow. This enables you to reuse rule
+files for multiple assemblies.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The tool writes temporary files to <span class="ph filepath">/tmp</span> by
+default. Set the MGC_TMPDIR environment variable to a different
+path to customize the temporary file output location.</p>
+</div>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A Calibre 3DSTACK+ rule file must
+conform to the following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__ida25cfd71-69df-41bc-9d7e-91496dcceb12"><p class="p">The file is
+parsed as a Tcl file. It must follow standard Tcl syntax and formatting
+rules. Standard Tcl constructs are supported and can be useful for
+parameterizing your assembly (for example, using loops and variables
+to define layers and die locations).</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">You can optionally
+create additional information about Tcl errors generated from your Calibre 3DSTACK
+rule files by setting the CALIBRE_ENABLE_3DSTACKPLUS_DECK_DUMP environment
+variable to a non-null value. This option will export a file named <span class="ph filepath"><var class="keyword varname">rule_file</var>_exported.3dstack+</span> that contains
+enables you to debug the source of Tcl errors in your rules.</p>
+</div>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__idd41db813-4de8-479c-8c12-96b335e43014"><p class="p">There is a required opening line
+and set_version command:</p>
+<pre class="pre codeblock"><code>#!3dstack+ 
+
+set_version -version 1.0</code></pre></li>
+</ul>
+<ul class="ul"><li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__id9185b870-da60-4c99-867c-f88f5aab1f51"><p class="p">The main assembly commands are
+die, config, and stack. These are summarized in the following section.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__id9a2b0044-e2ca-4a84-b190-9dd988d96207"><p class="p">All distances are specified in
+microns.</p>
+</li>
+<li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__id356e838d-e7e0-4c9c-a985-399379d267e9"><p class="p">The System
+and Assembly commands must be written in the order as listed in
+the following table. Rule checks should be written last, as the
+rule checks usually depend on the layers, dies, and assembly configuration.</p>
+</li>
+<li class="li" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__idf5e755da-045b-4897-b0df-b80f5632abe7"><p class="p">It can be convenient
+to include sets of operations in different files and then source
+them from a main rule file. For example, you may have the following
+files:</p>
+<pre class="pre codeblock"><code>main.3dstack
+processes.3dstack
+die_definitions.3dstack
+stacked_system.3dstack
+rule_checks_<var class="keyword varname">process</var>.3dstack</code></pre><p class="p">The <span class="ph filepath">main.3dstack</span> rule file calls the other
+rule files as follows:</p>
+<pre class="pre codeblock"><code>#!3dstack+
+
+set_version 1.0
+
+#define layers
+source "./processes.3dstack"
+
+#define dies
+source "./die_definitions.3dstack"
+
+#define assembly
+source "./stacked_system.3dstack"
+
+#run verification checks
+source "./rule_checks_16.3dstack"</code></pre></li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="iddbdea9d1-1304-4ee4-8ba5-d0e1fd96030d__id4c7e8644-5f6d-48d7-8361-cc4be811a268" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Extended
+Calibre 3DSTACK+ Command Summary</span></caption><colgroup><col style="width:1.844in" /><col style="width:1.157in" /><col style="width:3.500in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24806e211"><p class="p">Keyword</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24806e214"><p class="p">Usage</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d24806e217"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d24806e211 d24806e214 d24806e217 "><p class="p"><span class="ph FontProperty HeadingLabel">System Commands</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Run_id03e43bdc.html#id03e43bdc-f895-497a-9f16-2edb70d6b479__Command_Run_id03e43bdc.xml#id03e43bdc-f895-497a-9f16-2edb70d6b479" title="Runs Calibre using the specified rule file and command-line options.">run</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p">Optional</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Enables you to run other
+Calibre verification rules, such as DRC, LVS, and extraction, on
+layouts in your stack.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_SetVersion_id233abfee.html#id233abfee-4cf5-41f3-afaa-7af35af23719__Command_SetVersion_id233abfee.xml#id233abfee-4cf5-41f3-afaa-7af35af23719" title="Sets the syntax version of the Calibre 3DSTACK rule file.">set_version</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p"><span class="keyword ParameterName Required">Required</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Must specify the version
+as 1.0.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d24806e211 d24806e214 d24806e217 "><p class="p"><span class="ph FontProperty HeadingLabel">Assembly Commands</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Process_id27f6c13d.html#id27f6c13d-2f55-4453-8033-86895e7b78fd__Command_Process_id27f6c13d.xml#id27f6c13d-2f55-4453-8033-86895e7b78fd" title="Defines technology kit layer information for the dies, interposers, packages, and other components used in a 3D-IC.">process</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p">Optional</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Specifies information about a collection
+of layers that can be referenced in a die or component.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Die_id26689578.html#id26689578-2ecc-4874-b178-e06e0beb9afc__Command_Die_id26689578.xml#id26689578-2ecc-4874-b178-e06e0beb9afc" title="Defines a single die in the assembly. This statement includes a number of arguments that define the name, layout path, and layers.">die</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p"><span class="keyword ParameterName Required">Required</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Defines a single die
+(or interposer) in the assembly. This statement includes a number
+of arguments that define the name, layout path, and physical information
+about the die, such as the material, layers, and dimensions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Component_idef09b76b.html#idef09b76b-6af9-4db9-99d1-42eaa7be573d__Command_Component_idef09b76b.xml#idef09b76b-6af9-4db9-99d1-42eaa7be573d" title="Defines a single component in the assembly. A component can be an object, such as a resistor, capacitor, or inductor, but it cannot be a die.">component</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p"><span class="keyword ParameterName Required">Required</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Defines a single component
+(such as a resistor) in the assembly. This statement includes a
+number of arguments that define the name, layout path, and physical
+information about the component, such as the material, layers, and
+dimensions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Connect3stack_idda0e3bef.html#idda0e3bef-31ea-4a64-a2e6-f787707accbc__Command_Connect3stack_idda0e3bef.xml#idda0e3bef-31ea-4a64-a2e6-f787707accbc" title="Defines explicit connectivity between die layers in a stack. This enables you to manually define connectivity between layers instead of using only the implicit connectivity provided by the physical assembly.">connect</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p">Optional</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Defines explicit connectivity between die
+layers in a stack.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Stack_idc72517dc.html#idc72517dc-d5aa-43a3-8099-3009ac56a341__Command_Stack_idc72517dc.xml#idc72517dc-d5aa-43a3-8099-3009ac56a341" title="Defines the locations of objects in the assembly.">stack</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p"><span class="keyword ParameterName Required">Required</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Defines the locations
+of dies and components in the assembly.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d24806e211 d24806e214 d24806e217 "><p class="p"><span class="ph FontProperty HeadingLabel">Configuration and Export Commands</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Config_id17125fa6.html#id17125fa6-47bc-4e26-b623-89f8ca695921__Command_Config_id17125fa6.xml#id17125fa6-47bc-4e26-b623-89f8ca695921" title="Specifies configuration information for the 3DSTACK+ syntax format rule file. The top cell name, source netlist, report file, connectivity, and other information can be specified.">config</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p">Optional</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Specifies configuration information, such
+as the top cell name, source netlist, report file, and connectivity.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e211 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_ExportLayout_idfe3ea413.html#idfe3ea413-465b-45fd-8918-3cb616f852c2__Command_ExportLayout_idfe3ea413.xml#idfe3ea413-465b-45fd-8918-3cb616f852c2" title="Generates an annotated GDS and extraction data for a specified portion of the assembly.">export_layout</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e214 "><p class="p">Optional</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d24806e217 "><p class="p">Generates layouts of dies in the assembly.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="3" style="vertical-align:top;" headers="d24806e211 d24806e214 d24806e217 "><p class="p"><a class="xref fm:HeadingOnly" href="Contain_RuleCheckCommands_ida491cdb9.html#ida491cdb9-d3df-4946-9fa6-6f7a711c87b2__Contain_RuleCheckCommands_ida491cdb9.xml#ida491cdb9-d3df-4946-9fa6-6f7a711c87b2" title="Rule check commands perform specific checks on your design during a verification run.">Rule Check Commands</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock leveled"><code>#!3dstack+
+#===========================================# 
+# Calibre 3DSTACK+ Rule File  
+# ==========================================# 
+set_version -version 1.0</code></pre><pre class="pre codeblock leveled"><code>config &lt;options&gt;
+
+die &lt;options&gt;
+…
+
+stack &lt;options&gt;
+… 
+
+&lt;verification commands&gt;
+… </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CommandReference_idd6942771.html" title="The Calibre 3DSTACK rule file uses its own set of commands to assemble and verify your 3D-IC design intent.">Command Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_3dstack_user"
+                DocTitle = "Calibre® 3DSTACK User’s Manual"
+                PageTitle = "Rule File Format and Syntax"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_ExtendedCalibre3dstackSyntaxFileFormat_iddbdea9d1.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® 3DSTACK User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

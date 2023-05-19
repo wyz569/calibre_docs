@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Power and Ground Signal Overrides" />
+<meta name="abstract" content="The v2lvs::override_globals ‑custom_override option (command line: -so) allows module- and instance-specific overrides for numeric constant signals in Verilog netlists. This option governs the conversion of numeric constants like 1'b1 and 1'b0 within Verilog netlists. This is implemented through a supply override file." />
+<meta name="description" content="The v2lvs::override_globals ‑custom_override option (command line: -so) allows module- and instance-specific overrides for numeric constant signals in Verilog netlists. This option governs the conversion of numeric constants like 1'b1 and 1'b0 within Verilog netlists. This is implemented through a supply override file." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd0050876-80fc-4a48-8007-34a28081135e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Power and Ground Signal Overrides</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Power and Ground Signal Overrides" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="idd0050876-80fc-4a48-8007-34a28081135e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Power and Ground Signal Overrides</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">The v2lvs::override_globals
+‑custom_override option (command line: -so) allows module- and instance-specific
+overrides for numeric constant signals in Verilog netlists. This
+option governs the conversion of numeric constants like 1'b1 and
+1'b0 within Verilog netlists. This is implemented through a supply
+override file.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="idd0050876-80fc-4a48-8007-34a28081135e__id08cdc802-09b7-42f2-9ca0-19451ab58333"><p class="p">The format of a line in the override file is
+this:</p>
+<p class="p BlockIndent"><span class="keyword ParameterName RequiredReplaceable">module</span> [<span class="keyword ParameterName OptionalReplaceable">instance_name</span>] <span class="keyword ParameterName Required">supply0=</span> <span class="keyword ParameterName RequiredReplaceable">spice_net</span> <span class="keyword ParameterName Required">supply1=</span> <span class="keyword ParameterName RequiredReplaceable">spice_net</span></p>
+<p class="p BlockIndent"><span class="keyword ParameterName RequiredReplaceable">module</span> —
+A required Verilog module name. This field is parsed as a Verilog
+identifier. Escaped identifiers are allowed and interpreted similarly
+to the way they are in a Verilog netlist. See “<a class="xref fm:HeadingOnly" href="Concept_Expressions_id393baea1.html#id393baea1-d629-4f98-aada-3115254fb3bc__Concept_Expressions_id393baea1.xml#id393baea1-d629-4f98-aada-3115254fb3bc" title="Expressions are used throughout the Verilog language. V2LVS supports expressions used for structural description. These include things like identifiers; binary, hexadecimal, octal, and decimal numbers; port ranges; port selections; bit selection concatenations; and multiple concatenations.">Expressions</a>” for more information.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">instance_name</span> —
+An optional Verilog instance name. This field is also parsed as
+a Verilog name similarly to <span class="keyword ParameterName RequiredReplaceable">module</span>.
+If not present, the override functions similarly to a supply0 or
+supply1 statement in the Verilog module itself and applies to all instances
+in the module that do not have separately-specified instance-specific
+overrides. SPICE signals generated by these overrides are also issued
+as .GLOBAL statements in the output SPICE netlist unless overridden
+by the -use_local_supply option.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">supply0=</span> —
+A literal keyword indicating a ground supply name mapping. </p>
+<p class="p BlockIndent"><span class="keyword ParameterName Required">supply1=</span> —
+A literal keyword indicating a power supply name mapping.</p>
+<p class="p BlockIndent"><span class="keyword ParameterName RequiredReplaceable">spice_net </span>—
+A SPICE net name specified with <span class="keyword ParameterName Required">supply0=</span> and <span class="keyword ParameterName Required">supply1=</span>.
+This field is parsed as a SPICE name and follows SPICE conventions.</p>
+<p class="p">The overrides are specified one per line. The
++ character on the first character of a line serves as a line continuation
+character similar to SPICE. Comments are specified with //.</p>
+<h2 class="title Subheading sectiontitle">Example — Use of supply override
+file</h2><p class="p">Consider the following Verilog modules:</p>
+<pre class="pre codeblock leveled"><code>module A ( i, i2 ); 
+input i,i2; 
+endmodule 
+
+module B ( ); 
+supply0 VSS; 
+supply1 VDD; 
+A A1( 1'b1, 1'b0 ); 
+A A2( 1'b1, 1'b0 ); 
+A A3( 1'b1, 1'b0 ); 
+endmodule </code></pre><p class="p">With this command sequence:</p>
+<pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_V2lvsloadVerilog_ida6b20476.html#ida6b20476-ba78-42f0-83a3-86b49eaac201__Command_V2lvsloadVerilog_ida6b20476.xml#ida6b20476-ba78-42f0-83a3-86b49eaac201" title="Specifies a Verilog structural netlist or library file.">v2lvs::load_verilog</a> -filename example.v 
+<a class="xref fm:HeadingOnly" href="Command_V2lvsoverrideGlobals_idc62905a5.html#idc62905a5-f364-47d3-bf75-693a9e2554de__Command_V2lvsoverrideGlobals_idc62905a5.xml#idc62905a5-f364-47d3-bf75-693a9e2554de" title="Specifies handling of global nets, including supply nets.">v2lvs::override_globals</a> -use_local_supply -default_not_connected </code></pre><p class="p">the module normally creates the following output
+from V2LVS:</p>
+<pre class="pre codeblock leveled"><code>.SUBCKT A i i2 
+.ENDS 
+
+.SUBCKT B 
+XA1 A $PINS i=VDD i2=VSS 
+XA2 A $PINS i=VDD i2=VSS 
+XA3 A $PINS i=VDD i2=VSS 
+.ENDS </code></pre><p class="p">The following can be used instead:</p>
+<pre class="pre codeblock leveled"><code>v2lvs::load_verilog -filename example.v  
+v2lvs::override_globals -use_local_supply -default_not_connected \ 
+‑custom_override supply_overrides.txt  </code></pre><p class="p">If the file <span class="ph filepath italic">supply_overrides.txt</span> contains
+the following override entries:</p>
+<pre class="pre codeblock leveled"><code>// Global override for module B 
+B supply0=GND supply1=PWR 
+// Instance specific overrides for module B 
+B A1 supply0=VSS0 supply1=VDD0 
+B A2 supply0=VSS1 supply1=VDD1 </code></pre><p class="p">this is the SPICE netlist result:</p>
+<pre class="pre codeblock leveled"><code>.SUBCKT A i i2 
+.ENDS 
+
+.SUBCKT B 
+XA1 A $PINS i=VDD0 i2=VSS0 
+XA2 A $PINS i=VDD1 i2=VSS1 
+XA3 A $PINS i=PWR i2=GND 
+.ENDS </code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_NetTypes_idd0b99e20.html" title="V2LVS uses the supply0 and supply1 net types to specify net connections to power and ground nets when numeric values are used for connections. For example, 1'b1 becomes a power connection using the supply1 net name.">Net Types</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_PowerGroundConnections_id97a5180f.html" title="Since Verilog is a simulation language and is not generally used to specify power and ground routing, several options are provided to support different power and ground conventions used in different chips.">Power and Ground Connections</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Power and Ground Signal Overrides"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_PowerGroundSignalOverrides_idd0050876.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

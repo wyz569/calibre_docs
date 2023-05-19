@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="calibre -rve Command Line for Calibre RDB Conversion" />
+<meta name="abstract" content="The Calibre RVE command includes options to convert results from an ASCII format Calibre results database (RDB) to native Place and Route tool formats. You execute the command in the Linux shell and save the converted output to file. The results can then be imported into your Place and Route tool." />
+<meta name="description" content="The Calibre RVE command includes options to convert results from an ASCII format Calibre results database (RDB) to native Place and Route tool formats. You execute the command in the Linux shell and save the converted output to file. The results can then be imported into your Place and Route tool." />
+<meta name="prodname" content="Calibre RVE User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rve_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® RVE™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idd98508fc-74af-48f7-9d8d-2157e6ad070c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>calibre -rve Command Line for Calibre RDB Conversion</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="calibre -rve Command Line for Calibre RDB Conversion" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">calibre -rve Command
+Line for Calibre RDB Conversion</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">The Calibre
+RVE command includes options to convert results from an ASCII format
+Calibre results database (RDB) to native Place and Route tool formats.
+You execute the command in the Linux shell and save the converted
+output to file. The results can then be imported into your Place
+and Route tool. </span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">calibre -rve -drc</span> <span class="keyword ParameterName RequiredReplaceable">input_RDB</span> <br />
+<span class="keyword ParameterName Required">-convert_to </span>{ <span class="keyword ParameterName Required">icc_drc</span> | <span class="keyword ParameterName Required">icc_rgf</span> | <span class="keyword ParameterName Required">edi_drc</span> | <span class="keyword ParameterName Required">edi_blk</span> }<br />
+<span class="keyword ParameterName Required">-output_file</span> <span class="keyword ParameterName RequiredReplaceable">converted_rdb</span> <br />
+[ -check_map_file <span class="keyword ParameterName OptionalReplaceable">map_file</span>] <br />
+[ -min_feature <span class="keyword ParameterName OptionalReplaceable">min_size</span>]<br />
+[ -offset <span class="keyword ParameterName OptionalReplaceable">x_offset</span> <span class="keyword ParameterName OptionalReplaceable">y_offset</span> ] <br />
+[ -mag <span class="keyword ParameterName OptionalReplaceable">mag_value</span>] <br />
+[ -cell <span class="keyword ParameterName OptionalReplaceable">cell</span>]<br />
+[ -checks { <span class="keyword ParameterName OptionalDefault">ALL</span> | <span class="keyword ParameterName OptionalReplaceable">check_N</span> … }] <br />
+[ -side_rdb {YES | <span class="keyword ParameterName OptionalDefault">NO</span>} ] <br />
+[-no_transcript] </p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id32335433-1408-4190-aeed-ded988812225"><span class="keyword ParameterName RequiredReplaceable">input_RDB</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required parameter specifying
+the Calibre results database to converted. See “<a class="xref fm:HeadingAndPage" href="Concept_RequirementsConvertingCalibreRdbsNativePlaceRouteFormat_idb4f5dc27.html#idb4f5dc27-582d-42e8-a604-f968f78c5bd6__Concept_RequirementsConvertingCalibreRdbsNativePlaceRouteFormat_idb4f5dc27.xml#idb4f5dc27-582d-42e8-a604-f968f78c5bd6" title="You can convert results from an ASCII format Calibre results database (RDB) to error markers and route guides in your Place and Route tool. Certain requirements for the design tool and Calibre results database must be met.">Requirements for Converting Calibre RDBs to Native Place and Route Format</a>” for the RDB formats that are
+allowed. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id1f62b697-7f15-4cf9-8a6a-b32fd3c59d45"><span class="keyword ParameterName Required">-convert_to </span>{ <span class="keyword ParameterName Required">icc_drc</span> | <span class="keyword ParameterName Required">icc_rgf</span> | <span class="keyword ParameterName Required">edi_drc</span> | <span class="keyword ParameterName Required">edi_blk</span> }</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and parameter
+specifying the format for the converted results. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__idc1761fe3-2386-40f6-90ea-ff66f3116a41"><p class="p Opt"><span class="keyword ParameterName Required">icc_drc </span>—
+Synopsys IC Compiler DRC error marker format. </p>
+</li>
+<li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id3de66bcf-cdbc-41b8-825d-4c09f15d5785"><p class="p Opt"><span class="keyword ParameterName Required">icc_rgf </span>—
+Synopsys IC Compiler route guide format. </p>
+</li>
+<li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id7f1f84ba-2f39-4436-9147-d028d96bfc06"><p class="p Opt"><span class="keyword ParameterName Required">edi_drc</span> —
+Cadence Encounter DRC error marker format.</p>
+</li>
+<li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id96f3e859-017a-4fe5-ba8a-2e0ef96a7d3b"><p class="p Opt"><span class="keyword ParameterName Required">edi_blk </span>—
+Cadence Encounter route blockage format.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id739912cd-77aa-4fb8-99ba-abc435263926"><span class="keyword ParameterName Required">-output_file</span>  <span class="keyword ParameterName RequiredReplaceable">converted_rdb</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and parameter
+specifying the filename for the converted output<span class="keyword ParameterName OptionalReplaceable">.</span> </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id7055735e-1f9c-45b4-992d-6eafb4f941ec">-check_map_file <span class="keyword ParameterName OptionalReplaceable">map_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword and parameter specifying
+the check map file. The check map file is required when converting
+to route guides or route blockages and optional when converting
+to DRC error marker format. See “<a class="xref fm:HeadingAndPage" href="FileRef_CheckMapFileFormatCalibreRdbConversion_id16f66d6d.html#id16f66d6d-7033-4976-8d70-8fd7ed53593a__FileRef_CheckMapFileFormatCalibreRdbConversion_id16f66d6d.xml#id16f66d6d-7033-4976-8d70-8fd7ed53593a" title="The check map file is used when converting a Calibre results database (RDB) to native Place and Route formats. It associates check names in the RDB with layer names in the Place and Route environment. The check map file is required when converting to route guide or route blockage format.">Check Map File Format for Calibre RDB Conversion</a>” for details. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id9091a150-66d8-45d9-9d87-1ac824943726">-min_feature <span class="keyword ParameterName OptionalReplaceable">min_size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameter
+specifying the minimum width of the converted route guides or route
+blockages in user units. This option is only valid when converting
+to Synopsys IC Compiler route guides (‑convert_to icc_rgf) or Cadence
+Encounter route blockages (‑convert_to edi_blk). A default of 0.002
+user units is used if this option is not specified. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id76888065-d168-4f2c-9fb2-3af679c7ea05">-offset <span class="keyword ParameterName OptionalReplaceable">x_offset y_offset</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameters
+specifying an x- and y-offset. Values are given in user units. If
+both -offset and -mag are specified, the magnification is applied
+first.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id4b3da6e7-03cd-4873-b1f4-bddd70d66a29">-mag <span class="keyword ParameterName OptionalReplaceable">mag_value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameter
+specifying the magnification of the converted results. A <span class="keyword ParameterName OptionalReplaceable">mag_value </span>of
+2 magnifies the results by 2; a <span class="keyword ParameterName OptionalReplaceable">mag_value</span> of
+0.5 shrinks the results.</p>
+<p class="p">Use this option if the precision
+of the input RDB is not the same as the precision of the layout
+database. If both -offset and -mag are specified, the magnification
+is applied first.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id9cc8ea8d-c2dd-43e9-8e50-b9c2ae1e90e2">-cell <span class="keyword ParameterName OptionalReplaceable">cell</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameter
+specifying to only convert results from <span class="keyword ParameterName OptionalReplaceable">cell</span>.
+If this keyword is not present all results are converted.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id1c6affc9-c31f-4aec-b865-38eba1a45bc1">-checks { <span class="keyword ParameterName OptionalDefault">ALL</span> | <span class="keyword ParameterName OptionalReplaceable">check_N</span> … }</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameter
+specifying the rule check results to convert. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__idd73d1ac2-7494-43b1-b801-1094a7bb83c4"><p class="p Opt"><span class="keyword ParameterName OptionalDefault">ALL</span> —
+Results from all rule checks are converted. This is the default if
+the ‑checks option is not included.</p>
+</li>
+<li class="li ArgOption" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__idd7ca7eb9-c23d-4da0-ae2c-514e925c5b63"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">check_N</span> …
+— Only results from the listed rule checks are converted. </p>
+<p class="p">If a list of rule checks
+is provided, only those rule checks are converted. Results from
+a rule check listed in the check map file but not in the ‑checks
+list are not converted.</p>
+<p class="p">The asterisk (*) and question
+mark (?) wildcards may be used but must be escaped to prevent wildcard
+expansion in the shell environment. Double quotes around the check
+list and the backslash escape character (\) before the wildcard
+are required. For example: ‑checks “M2\*” matches all rule checks
+starting with M2.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id068429a7-4dfe-41c9-b640-bd32a8cd5f22">-side_rdb {YES | <span class="keyword ParameterName OptionalDefault">NO</span>} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword and parameter
+specifying whether to include the results from side (auxiliary)
+RDBs in the conversion. Side RDB results are not included by default.
+See “<a class="xref fm:HeadingAndPage" href="Concept_HandlingSideRdbsInCalibreRdbConversion_idd62c65f1.html#idd62c65f1-5c51-4dce-9b2e-0a4aa535a73c__Concept_HandlingSideRdbsInCalibreRdbConversion_idd62c65f1.xml#idd62c65f1-5c51-4dce-9b2e-0a4aa535a73c" title="By default, results from side or auxiliary RDBs are not included when you convert results from an ASCII format Calibre results database (RDB) to a native Place and Route format. You use the “-side_rdb YES” option to include side RDB results.">Handling of Side RDBs in Calibre RDB Conversion</a>” for more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__idc38f39ef-ddcd-4a5a-ba48-74c276636306">-no_transcript</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword that turns off transcript
+output. </p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The Calibre RVE command with
+the ‑drc, ‑convert_to, and ‑output_file options is used to convert
+result shapes from Calibre rule checks to native Place and Route
+formats. You must have an existing ASCII format Calibre results
+database (RDB); see “<a class="xref fm:HeadingAndPage" href="Concept_RequirementsConvertingCalibreRdbsNativePlaceRouteFormat_idb4f5dc27.html#idb4f5dc27-582d-42e8-a604-f968f78c5bd6__Concept_RequirementsConvertingCalibreRdbsNativePlaceRouteFormat_idb4f5dc27.xml#idb4f5dc27-582d-42e8-a604-f968f78c5bd6" title="You can convert results from an ASCII format Calibre results database (RDB) to error markers and route guides in your Place and Route tool. Certain requirements for the design tool and Calibre results database must be met.">Requirements for Converting Calibre RDBs to Native Place and Route Format</a>”.</p>
+<p class="p">The format of the converted results
+is specified with the ‑convert_to option. See the equivalent tool
+command for information about the conversion process. The converted
+output is saved to the file specified with the ‑output_file option.
+Use the appropriate import command in the Place and Route tool session
+to import the converted results. The following table lists the equivalent
+tool command and the associated import command for each ‑convert_to
+option. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id3a2dee17-99c9-4d87-9608-b6533b063ff4" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre RDB Conversion with calibre -rve</span></caption><colgroup><col style="width:0.992in" /><col style="width:2.692in" /><col style="width:2.492in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d115448e414"><p class="p">‑convert_to Option</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d115448e417"><p class="p">Equivalent Tool Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d115448e420"><p class="p">Import Command</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e414 "><p class="p">icc_drc</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e417 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreconvertToDrcErrors_id0a56d5fc.html#id0a56d5fc-de91-43e3-b4e7-5a70a7653162__Command_CalibreconvertToDrcErrors_id0a56d5fc.xml#id0a56d5fc-de91-43e3-b4e7-5a70a7653162" title="Converts results from an ASCII format Calibre results database (RDB) to native Place and Route DRC error marker format. Used in the Synopsys IC Compiler or Cadence Encounter environment.">Calibre::convert_to_drc_errors</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e420 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreimportDrcErrors_id0c0b702f.html#id0c0b702f-bac9-4ce2-899e-5a04d36a7e16__Command_CalibreimportDrcErrors_id0c0b702f.xml#id0c0b702f-bac9-4ce2-899e-5a04d36a7e16" title="Imports a file saved from a previous Calibre RDB conversion to DRC error markers. Used in the Synopsys IC Compiler or Cadence Encounter environment.">Calibre::import_drc_errors</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e414 "><p class="p">icc_rgf</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e417 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreconvertToRouteGuides_ide8ecbee8.html#ide8ecbee8-bbac-4f35-afc5-00643902e52b__Command_CalibreconvertToRouteGuides_ide8ecbee8.xml#ide8ecbee8-bbac-4f35-afc5-00643902e52b" title="Converts results from an ASCII format Calibre results database (RDB) to Synopsys IC Compiler route guides. The command is executed from the icc_shell prompt.">Calibre::convert_to_route_guides</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e420 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreimportRouteGuides_id40fb2f54.html#id40fb2f54-e605-4861-9a4a-73af57ae09ed__Command_CalibreimportRouteGuides_id40fb2f54.xml#id40fb2f54-e605-4861-9a4a-73af57ae09ed" title="Imports a file saved from a previous Calibre RDB conversion to Synopsys IC Compiler route guides. The cell containing the results you want to import must be the working design in your Synopsys IC Compiler session. The route guides can be viewed in the Synopsys IC Compiler session after the import. Used in the Synopsys IC Compiler environment.">Calibre::import_route_guides</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e414 "><p class="p">edi_drc </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e417 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreconvertToDrcErrors_id0a56d5fc.html#id0a56d5fc-de91-43e3-b4e7-5a70a7653162__Command_CalibreconvertToDrcErrors_id0a56d5fc.xml#id0a56d5fc-de91-43e3-b4e7-5a70a7653162" title="Converts results from an ASCII format Calibre results database (RDB) to native Place and Route DRC error marker format. Used in the Synopsys IC Compiler or Cadence Encounter environment.">Calibre::convert_to_drc_errors</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e420 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreimportDrcErrors_id0c0b702f.html#id0c0b702f-bac9-4ce2-899e-5a04d36a7e16__Command_CalibreimportDrcErrors_id0c0b702f.xml#id0c0b702f-bac9-4ce2-899e-5a04d36a7e16" title="Imports a file saved from a previous Calibre RDB conversion to DRC error markers. Used in the Synopsys IC Compiler or Cadence Encounter environment.">Calibre::import_drc_errors</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e414 "><p class="p">edi_blk</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e417 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreconvertToRouteBlockages_idf82f945a.html#idf82f945a-959e-4a79-aeb8-2ffb8c8cef7c__Command_CalibreconvertToRouteBlockages_idf82f945a.xml#idf82f945a-959e-4a79-aeb8-2ffb8c8cef7c" title="Converts results from an ASCII format Calibre results database (RDB) to Cadence Encounter route blockages. The command is executed from the Cadence Encounter command prompt.">Calibre::convert_to_route_blockages</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d115448e420 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreimportRouteBlockages_ida2a289b7.html#ida2a289b7-1bb1-4837-8dd4-443caeafd431__Command_CalibreimportRouteBlockages_ida2a289b7.xml#ida2a289b7-1bb1-4837-8dd4-443caeafd431" title="Imports a file saved from a previous Calibre RDB conversion to Cadence Encounter route blockages. Used in the Cadence Encounter environment.">Calibre::import_route_blockages</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The check map file (‑check_map_file
+option) is required when converting to route guides or route blockages
+and optional when converting to DRC error marker format. See “<a class="xref fm:HeadingAndPage" href="FileRef_CheckMapFileFormatCalibreRdbConversion_id16f66d6d.html#id16f66d6d-7033-4976-8d70-8fd7ed53593a__FileRef_CheckMapFileFormatCalibreRdbConversion_id16f66d6d.xml#id16f66d6d-7033-4976-8d70-8fd7ed53593a" title="The check map file is used when converting a Calibre results database (RDB) to native Place and Route formats. It associates check names in the RDB with layer names in the Place and Route environment. The check map file is required when converting to route guide or route blockage format.">Check Map File Format for Calibre RDB Conversion</a>”.</p>
+<p class="p">After successful conversion the
+following message is written to stdout:</p>
+<pre class="pre codeblock leveled"><code>//  RDB written as PR input file &lt;converted_rdb&gt;</code></pre><p class="p">A transcript with information such as a the cell list, rule check
+list, precision, output file, and execution details is included
+by default. The transcript can be turned off with the ‑no_transcript
+option; errors, warnings, and notes are still output. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id0f62a3c9-ea24-4fd5-9f69-630b2160223c"><h2 class="title Subheading sectiontitle">Example 1 — Synopsys
+IC Compiler</h2><p class="p">The following command converts results
+from the results database <span class="ph filepath">drc.results</span> to Synopsys
+IC Compiler DRC error markers. The converted output is saved to
+the file <span class="ph filepath">top_calibre_drc.rdbout</span>.
+By default all results are converted. </p>
+<p class="lines ApplCommand">% calibre -rve -drc drc.results -convert_to icc_drc -output_file top_calibre_drc.rdbout</p>
+<p class="p">Use the following command at the icc_shell
+prompt to import the converted results to the Synopsys IC Compiler
+session:</p>
+<p class="lines ApplCommand">icc_shell&gt; Calibre::import_drc_errors top_calibre_drc.rdbout</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_ImportingCalibreResultsSynopsysIcCompilerDrcErrorMarkers_idd465f2b8.html#idd465f2b8-6c55-44cb-bfec-1ea620de818e__TaskTop_ImportingCalibreResultsSynopsysIcCompilerDrcErrorMarkers_idd465f2b8.xml#idd465f2b8-6c55-44cb-bfec-1ea620de818e" title="You can convert results from an ASCII format Calibre results database (RDB) to Synopsys IC Compiler DRC error markers. The conversion process automatically imports the error markers to the Synopsys IC Compiler session, where you can view them in the Error Browser.">Importing Calibre Results as Synopsys IC Compiler DRC Error Markers</a>” for instructions on viewing
+the results in the Synopsys IC Compiler Error Browser. </p>
+</div>
+<div class="section Subsection" id="idd98508fc-74af-48f7-9d8d-2157e6ad070c__id7a115bc3-63ec-4610-a98c-e7e78902d718"><h2 class="title Subheading sectiontitle">Example 2 — Cadence
+Encounter</h2><p class="p">The following command converts results
+from the results database drc.results to Cadence Encounter DRC error
+markers. The converted output is saved to the file <span class="ph filepath">top_calibre_drc.rdbout</span>.
+By default all results are converted. </p>
+<p class="lines ApplCommand">% calibre -rve -drc drc.results -convert_to edi_drc -output_file top_calibre_drc.rdbout</p>
+<p class="p">Use the following command at the
+encounter prompt to import the converted results to the Cadence
+Encounter session:</p>
+<p class="lines ApplCommand">encounter &gt; Calibre::import_drc_errors top_calibre_drc.rdbout</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_ImportingCalibreResultsCadenceEncounterDrcErrorMarkers_idfe1773da.html#idfe1773da-a011-48fb-ae00-0f092b599a2a__TaskTop_ImportingCalibreResultsCadenceEncounterDrcErrorMarkers_idfe1773da.xml#idfe1773da-a011-48fb-ae00-0f092b599a2a" title="You can convert results from an ASCII format Calibre results database (RDB) to Cadence Encounter DRC error markers. The conversion process automatically imports the error markers to the Cadence Encounter session, where you can view them in the Violation Browser.">Importing Calibre Results as Cadence Encounter DRC Error Markers</a>” for instructions on viewing
+the results in the Cadence Encounter Violation Browser.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ReferenceCalibreRdbConversionNativePlaceRouteToolFormats_id6b5fdd17.html" title="Several commands are available for converting results from an ASCII format Calibre results database (RDB) to native Place and Route tool formats. A check map file is required when converting to route guides or route blockages.">Reference for Calibre RDB Conversion to Native Place and Route Tool Formats</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_ImportingCalibreResultsSynopsysIcCompiler_id714fd6d0.html#id714fd6d0-0105-42fe-81ad-5df71f42f4ae__" title="You can convert results from an ASCII format Calibre results database (RDB) to Synopsys IC Compiler DRC error markers and route guides. This makes it easier to user the native Synopsys IC Compiler tools to debug errors and make design corrections.">Importing Calibre Results to Synopsys IC Compiler</a></div>
+<div><a class="link" href="../topics/Contain_ImportingCalibreResultsCadenceEncounter_ide69f4677.html#ide69f4677-7352-457c-a85b-6dfa866d02bd__" title="You can convert results from an ASCII format Calibre results database (RDB) to Cadence Encounter DRC error markers and route blockages. This makes it easier to user the native Cadence Encounter tools to debug errors and make design corrections.">Importing Calibre Results to Cadence Encounter</a></div>
+<div><a class="link" href="../topics/MGCChap_CalibreRdbConversionWorkingCalibreResultsInPlaceRouteTools_id7901a5cd.html#id7901a5cd-c5bc-4343-80ee-6215daa4e72b__" title="You can convert results from an ASCII format Calibre results database (RDB) to error markers and route guides in your Place and Route tool. This allows you to use familiar tools when debugging errors and correcting the design. Calibre RDB Conversion is available for Synopsys IC Compiler and Cadence Encounter Digital Implementation (EDI).">Calibre RDB Conversion: Working with Calibre Results in Place and Route Tools</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rve_user"
+                DocTitle = "Calibre® RVE™ User’s Manual"
+                PageTitle = "calibre -rve Command Line for Calibre RDB Conversion"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalibreRveCommandLineCalibreRdbConversion_idd98508fc.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® RVE™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

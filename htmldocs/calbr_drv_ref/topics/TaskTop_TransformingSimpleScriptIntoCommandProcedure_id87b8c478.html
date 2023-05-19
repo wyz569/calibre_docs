@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Transforming a Simple Script into a Command Procedure" />
+<meta name="abstract" content="This procedure describes how to turn a simple script into a command procedure. You learn about the requirements for a command procedure and how to source a Tcl script from the shell window." />
+<meta name="description" content="This procedure describes how to turn a simple script into a command procedure. You learn about the requirements for a command procedure and how to source a Tcl script from the shell window." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id87b8c478-6e40-477d-a23a-fd729f4b879a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Transforming a Simple Script into a Command Procedure</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Transforming a Simple Script into a Command Procedure" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id87b8c478-6e40-477d-a23a-fd729f4b879a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Transforming a Simple
+Script into a Command Procedure</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">This procedure
+describes how to turn a simple script into a command procedure.
+You learn about the requirements for a command procedure and how
+to source a Tcl script from the shell window. </p>
+<p class="p">The command procedure performs all the data
+processing for the macro. After you have written and tested it,
+you write the GUI plug-in that calls this procedure.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idf1830e78-ae3a-48e3-9e1f-a11a74152133"><p class="p">The <span class="ph filepath italic">dump_hier.tcl</span> file.
+Refer to “<a class="xref fm:HeadingAndPage" href="TaskTop_Example5UsingRecursiveProcedureWriteLayoutHierarchy_id71d05f31.html#id71d05f31-9f8f-42f2-b57f-03115bac763a__TaskTop_Example5UsingRecursiveProcedureWriteLayoutHierarchy_id71d05f31.xml#id71d05f31-9f8f-42f2-b57f-03115bac763a" title="In this example, you write a script that writes the layout hierarchy for any layout file, regardless of how many levels there are in the hierarchy. You do this by writing a procedure that traverses the hierarchy until it can go no further. Explanations follow the example code.">Example 5 - Using a Recursive Procedure to Write a Layout Hierarchy</a>” for information on creating
+this file.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idce8d1750-e6f8-4785-8127-de3f084eba80"><span class="ph cmd">Open the <span class="ph filepath italic">dump_hier.tcl</span> file
+and look for ways to make it more flexible:</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idec38b9f7-9bb4-4e88-a6b3-2e967af366ab"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:100" src="../graphics/simple_script.png" /></div><br /></div>
+<p class="p">Some possible ways to make it more flexible include:</p>
+<ul class="ul"><li class="li" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id7388ef95-5410-4f8d-b1a8-8aa533a812af"><p class="p">Name of file to open —
+For maximum flexibility, change the hard-coded filename into a variable.
+Later, you write the GUI plug-in to get the full pathname for the
+file from the user.</p>
+</li>
+<li class="li" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idad5981e5-d748-48bb-a5f5-ae45eb49fd21"><p class="p">Layout handle — Macros
+only work from the GUI, and you can assume the layout is already
+opened. Instead of using the create layout command, you can get
+the handle for the current layout using the <span class="keyword ParameterName Required">$cwb cget</span> command.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idb27e1302-df96-4dbf-8e65-cb1e4d5fc00f"><span class="ph cmd">Modify this portion of the
+script, then save the modified file as <span class="ph filepath italic">write_hier.tcl</span>:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>set fileID [open $File w] 
+set layout [$cwb cget -_layout] 
+dump_hier $layout $fileID  
+close $fileID</code></pre></div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id996528d0-1cca-4e0f-9108-eef74c6b832e"><span class="ph cmd">By examining the body of the
+procedure you have written, you can tell what arguments you need
+to pass to the procedure. These are <span class="keyword ParameterName Required">File</span> and <span class="keyword ParameterName Required">cwb</span>.
+Modify the code, using the proc command to pass this information
+to the code you have written:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>proc write_hier { cwb File} { 
+   set fileID [open $File w] 
+   set layout [$cwb cget -_layout] 
+   dump_hier $layout $fileID  
+   close $fileID 
+}</code></pre><p class="p">This command serves as the
+command procedure.</p>
+</div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idbaf28060-1aa2-41de-af24-6053d89712ed"><span class="ph cmd">Add comments to the new procedure
+to make the file easier to read and update, then save the file again: </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>############################################################## 
+# PROC: dump_hier 
+############################################################## 
+# L      = layout object name 
+# F      = file to dump hierarchy to 
+# C      = cell to start dumping from, "" means use topcell 
+# Indent = string used to format the hierarchy 
+############################################################## 
+proc dump_hier { L  F {C ""} {Indent ""} } { 
+   if {$C == ""} { 
+      set C [$L topcell] 
+   } 
+   puts $F "$Indent --&gt; $C" 
+   append Indent "       " 
+   foreach child [$L children $C] { 
+      dump_hier $L $F $child $Indent 
+   } 
+} 
+############################################################## 
+# COMMAND PROC: write_hier 
+############################################################## 
+# Args:  
+#    cwb   = Calibre WORKbench object handle 
+#    File  = path to file to write to 
+############################################################## 
+proc write_hier { cwb File} { 
+   set fileID [open $File w] 
+   set layout [$cwb cget -_layout] 
+   dump_hier $layout $fileID  
+   close $fileID 
+}</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">The remaining
+steps test the functioning of the command procedure.</p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id88b3555a-bc06-44d0-96ca-c0c3233b1492"><span class="ph cmd">Invoke Calibre DESIGNrev in
+interactive GUI mode.</span><div class="itemgroup info StepInfo"><pre class="pre ShellCommand">calibredrv</pre>
+</div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idd46bf709-9d3a-46a8-aa17-50c44439baba"><span class="ph cmd">Load in the layout of your
+choice.</span></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id9b3f9d99-6037-430f-8873-65047f4e591c"><span class="ph cmd">Switch from the GUI window
+to the terminal window.</span></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idc9d68e8b-6602-4920-beb7-6a4e81b8673c"><span class="ph cmd">Press Enter to access the
+Tcl “%” prompt, then source the file you have just written:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>source write_hier.tcl</code></pre><p class="p">The Tcl source command passes
+the contents of the file to the Tcl interpreter. It is equivalent
+to typing the script directly into the shell window. Notice that
+because the Tcl file contains only two procedures and no actual
+commands to evaluate, nothing appears to happen.</p>
+</div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id3bb05b1d-0d24-4b7c-9d09-50713da0331c"><span class="ph cmd">Get the handle for the application:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>set cwb [find objects -class cwbWorkBench]</code></pre></div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__id36087125-b1b9-42f8-a64e-9e3852b84835"><span class="ph cmd">Invoke the write_hier procedure,
+passing it the handle to the application plus the name of a file
+to create:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>write_hier $cwb "sample_hier.txt" </code></pre></div></li>
+<li class="li step stepexpand" id="id87b8c478-6e40-477d-a23a-fd729f4b879a__idd53219ee-148d-4044-99db-d5fc462f2a5a"><span class="ph cmd">View the contents of the file
+you just created:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>more sample_hier.txt </code></pre><p class="p">For example:</p>
+<pre class="pre codeblock leveled"><code>% source write hier.tcl 
+% set cwb [find objects -class cwbWorkBench] 
+::cwbWorkBench::cwbWorkBench0 
+% write hier $cwb_sample_hier.txt 
+% cat sample_hier.txt 
+--&gt; tcp_level_cell 
+	--&gt; cell_i 
+	--&gt; cell_g 
+	--&gt; cell_h </code></pre></div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExplorationsInCreatingMacros_id35535188.html" title="Examples are used to explore the process of creating a simple macro that writes the hierarchy of the current layout to a file the user specifies.">Explorations in Creating Macros</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_WriteCommandProcedure_idb341892f.html#idb341892f-8949-415a-b5b6-51ed0371209d__" title="You can write a command procedure to invoke another application or perform data manipulation. The macro command procedure must be GUI-independent. It relies on the GUI plug-in to pass it the proper user input.">Write the Command Procedure</a></div>
+<div><a class="link" href="../topics/Command_CwbCgetLayout_idd5e1fb72.html#idd5e1fb72-fb67-41f3-8729-d001d062a365__" title="Returns the handle of the layout visible in the layout viewer main window.">$cwb cget -_layout</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Transforming a Simple Script into a Command Procedure"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_TransformingSimpleScriptIntoCommandProcedure_id87b8c478.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

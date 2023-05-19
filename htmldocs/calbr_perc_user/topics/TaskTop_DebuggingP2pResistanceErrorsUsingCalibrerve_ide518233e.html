@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Debugging P2P Resistance Errors Using Calibre RVE" />
+<meta name="abstract" content="This procedure shows how to view the LDL P2P results in Calibre RVE and debug resistance problems by reviewing properties such as the resistance, constraint, and net name. You can create histograms and colormaps of the properties." />
+<meta name="description" content="This procedure shows how to view the LDL P2P results in Calibre RVE and debug resistance problems by reviewing properties such as the resistance, constraint, and net name. You can create histograms and colormaps of the properties." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ide518233e-e482-404d-b72b-2d48565bdfea" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Debugging P2P Resistance Errors Using Calibre RVE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Debugging P2P Resistance Errors Using Calibre RVE" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ide518233e-e482-404d-b72b-2d48565bdfea">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Debugging P2P Resistance Errors Using Calibre RVE</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">This procedure
+shows how to view the LDL P2P results in Calibre RVE and debug resistance
+problems by reviewing properties such as the resistance, constraint,
+and net name. You can create histograms and colormaps of the properties. </span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="ide518233e-e482-404d-b72b-2d48565bdfea__id670db388-e504-4f39-b178-03c147213e90"><p class="p">A
+successful LDL P2P run. See “<a class="xref fm:HeadingAndPage" href="TaskTop_RunningCalibrePercP2pFlow_id568522db.html#id568522db-4f2e-43e4-af18-b32ac3881b32__TaskTop_RunningCalibrePercP2pFlow_id568522db.xml#id568522db-4f2e-43e4-af18-b32ac3881b32" title="This procedure shows how to set up and run the Calibre PERC P2P flow.">Running the Calibre PERC P2P Flow</a>”.</p>
+</li>
+<li class="li" id="ide518233e-e482-404d-b72b-2d48565bdfea__id4a2f432e-195d-4652-9491-cdd425f4f061"><p class="p">A
+Calibre RVE license.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="ide518233e-e482-404d-b72b-2d48565bdfea__id76f5e141-40ec-46c6-85e8-fdd69f366411"><li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__idf2348163-d12d-44d4-99aa-d466321129d2"><span class="ph cmd">Open your layout in your layout
+viewer.</span></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__id61683632-8f94-41cb-8c6d-3cd11176f19e"><span class="ph cmd">Start Calibre RVE in PERC
+mode and open the DFM database from the LDL P2P run. See “<a class="xref fm:HeadingAndPage" href="TaskTop_OpeningLdlP2pResultsInCalibreRve_idb1c73a2e.html#idb1c73a2e-d159-4307-b62e-ae6c3f6c3581__TaskTop_OpeningLdlP2pResultsInCalibreRve_idb1c73a2e.xml#idb1c73a2e-d159-4307-b62e-ae6c3f6c3581" title="A Calibre PERC LDL P2P run produces a DFM database. This procedure shows how to open the DFM database in Calibre RVE for PERC. The DFM database includes the perc_report_name.p2p.rdb results database (RDB). When you open the DFM database in PERC RVE you have access to connectivity information and most of the tools of PERC RVE, such as the Finder tab and Info Pane.">Opening LDL P2P Results in Calibre RVE</a>” for complete instructions.</span></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__idfa4c2fb6-72d5-4d9c-bd0f-2c9bcaa3e6fb"><span class="ph cmd">Click the <span class="ph uicontrol">P2P: perc_report_name.p2p.rdb</span> tab;
+data is displayed in table format by default, as shown in <a class="xref fm:Figure" href="#ide518233e-e482-404d-b72b-2d48565bdfea__id306597f3-6209-453c-8a28-3d8c5a6202d6">Figure 1</a>.</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="ide518233e-e482-404d-b72b-2d48565bdfea__id306597f3-6209-453c-8a28-3d8c5a6202d6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>P2P Tab in Calibre
+RVE for PERC LDL</span><br /><div class="imageleft"><img class="image imageleft" height="231" src="../graphics/rve_ldl_p2p_tab.gif" width="468" /></div><br /></div>
+<p class="p">The Details view shows statistics
+about each parasitic resistor result polygon. You can right-click
+any column header for a context-sensitive menu. Following is the complete
+list of column descriptions. </p>
+<p class="p">The value “NaN” is given for
+some measurements when a polygon is missing in disjoint path results
+or when certain nets are not netlisted by the parasitic extractor. Other
+values show “N/A” when they are not available.</p>
+<p class="p"><span class="ph uicontrol bold">ID</span> —
+Internally generated result number.</p>
+<p class="p"><span class="ph uicontrol bold">Constraint</span> —
+Value in ohms specified using the perc::export_pin_pair -p2p option.</p>
+<p class="p"><span class="ph uicontrol bold">Experiment</span> —
+Experiment name (rule check). </p>
+<p class="p"><span class="ph uicontrol bold">Net</span> —
+Net name.</p>
+<p class="p"><span class="ph uicontrol bold">R(ohms)</span> —
+Resistance in ohms of the Net polygons between the Source and Sink.
+The value “NaN” is given when a polygon is missing in disjoint path
+results.</p>
+<p class="p"><span class="ph uicontrol bold">Sink</span> —
+Sink pin identifier. Shows the device type, device name, and pin
+name.</p>
+<p class="p"><span class="ph uicontrol bold">Source</span> —
+Source pin identifier. Shows the source type and net name.</p>
+<p class="p"><span class="ph uicontrol bold">Test</span> —
+Test name.</p>
+</div></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__id4682e8cd-78bb-45af-8665-1e044e9e055d"><span class="ph cmd">Optional. You can click the <span class="ph uicontrol bold">Group By</span> button (<img class="image" height="12" src="../graphics/rve_icon_group_by.gif" width="13" />) to
+select the grouping in the tree view. Results are grouped by Experiment/Test/Net
+by default.</span><div class="itemgroup info StepInfo">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ide518233e-e482-404d-b72b-2d48565bdfea__id06b90619-bce1-4888-b998-905a34737a48" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:0.492in" /><col style="width:2.992in" /><col style="width:2.692in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"> </td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">The Custom grouping option
+allows you to group by properties. When specifying a Custom grouping,
+click the top entry of a menu selection to end the grouping hierarchy;
+see “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tree View with Custom Grouping', 'calbr_rve_user'); return false;">Tree View with Custom Grouping</a>” in the <cite class="cite">Calibre RVE User’s Manual</cite> for
+complete instructions.</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><img class="image" height="114" src="../graphics/rve_group_by.gif" width="183" /> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__id3fe8b4bc-d0c1-4d80-93ea-23cae8a4ad25"><span class="ph cmd">Expand the results tree on
+the left and select an Experiment or Test. The failures for that
+group appear in the results table, as shown in Step <a class="xref fm:NumberOnlyBlack" href="#ide518233e-e482-404d-b72b-2d48565bdfea__idfa4c2fb6-72d5-4d9c-bd0f-2c9bcaa3e6fb">3</a>.</span></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__id2504e8ec-0a78-491b-9fa1-f10405d5efb8"><span class="ph cmd">Select a result row in the
+table and press H on your keyboard. The result highlights in the
+layout editor. LDL P2P results are shown as a flyline.</span><div class="itemgroup info StepInfo"><p class="p">When you have analyzed all
+the results that interest you in a given cell, repeat Steps 5 and
+6 for the remaining results.</p>
+</div></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__id0f46df2d-d60a-4e6a-8378-9394099fbafd"><span class="ph cmd">To create a histogram of the
+resistance, select the result set of interest in the tree view,
+then right click the “R(ohms)” column header in the results table
+and select <span class="ph uicontrol bold">Histogram R(ohms)</span>.</span><div class="itemgroup info StepInfo"><p class="p">A histogram of the property
+values appears.</p>
+<div class="fig fignone" id="ide518233e-e482-404d-b72b-2d48565bdfea__id402e84cd-3ec6-4aa5-8019-114753c01da0"><br /><div class="imagecenter"><img class="image imagecenter" height="119" src="../graphics/rve_ldl_p2p_histogram.gif" width="418" /></div><br /></div>
+<p class="p">This gives a graphical representation
+of the frequency of results within the specified ranges of values.
+You can modify the appearance of the histogram by right-clicking
+in the graph and selecting <span class="ph uicontrol bold">Show
+Range Controls</span>. A control panel appears with various
+options for changing the appearance of the histogram.</p>
+</div></li>
+<li class="li step stepexpand" id="ide518233e-e482-404d-b72b-2d48565bdfea__iddd987df0-b776-4e1f-97aa-30c5c1284de1"><span class="ph cmd">To highlight data from one
+of the histogram bars, right-click the bar and select <span class="ph uicontrol bold">Highlight This Bar</span>. </span><div class="itemgroup info StepInfo">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ide518233e-e482-404d-b72b-2d48565bdfea__idde90b828-8c44-4347-8ff3-91138a8c69e8" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:0.503in" /><col style="width:2.170in" /><col style="width:3.503in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"> </td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All results represented by
+the selected bar are highlighted in the layout.</p>
+<p class="p">To highlight all results using the histogram
+color scheme, select <span class="ph uicontrol bold">Show Color Map</span>.</p>
+<p class="p">Repeat Steps <a class="xref fm:NumberOnlyBlack" href="#ide518233e-e482-404d-b72b-2d48565bdfea__id0f46df2d-d60a-4e6a-8378-9394099fbafd">7</a> and <a class="xref fm:NumberOnlyBlack" href="#ide518233e-e482-404d-b72b-2d48565bdfea__iddd987df0-b776-4e1f-97aa-30c5c1284de1">8</a> for other experiments and properties.</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><img class="image" height="101" src="../graphics/rve_ldl_cd_hist_bar.gif" width="226" /> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">For each of the rule checks, use the
+Calibre RVE functions shown in the Procedure section to determine
+the portions of your layout that need to be modified. After making
+the modifications, run DRC, LVS, and LDL P2P again to verify your
+layout is clean.</p>
+<p class="p">You can click the <span class="ph uicontrol">Bookmarks</span> button, <img class="image" height="11" src="../graphics/rve_icon_bookmark.gif" width="18" />, to save a view configuration;
+see “<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Bookmarks for Result Tab Views in Calibre RVE for PERC', 'calbr_rve_user'); return false;">Bookmarks for Result Tab Views in Calibre RVE for PERC</a>” in the <cite class="cite">Calibre
+RVE User’s Manual</cite>.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ViewingLdlP2pResultsInCalibreRve_idfa17decd.html" title="The following sections describe how to use Calibre RVE to debug resistance problems from an LDL P2P run.">Viewing LDL P2P Results in Calibre RVE</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Debugging P2P Resistance Errors Using Calibre RVE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_DebuggingP2pResistanceErrorsUsingCalibrerve_ide518233e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

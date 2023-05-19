@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Example: Reporting Objects With Iterator Functions" />
+<meta name="abstract" content="This example shows how a number of iterator functions can work together to traverse a netlist and report objects to the run transcript." />
+<meta name="description" content="This example shows how a number of iterator functions can work together to traverse a netlist and report objects to the run transcript." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6898d635-b50e-41b5-a816-b6e274c532f2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Example: Reporting Objects With Iterator Functions</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Example: Reporting Objects With Iterator Functions" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id6898d635-b50e-41b5-a816-b6e274c532f2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Example: Reporting Objects With Iterator Functions</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This example
+shows how a number of iterator functions can work together to traverse
+a netlist and report objects to the run transcript. </span>
+</div>
+<p class="p">This example does the following things:</p>
+<ol class="ol"><li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id24a2436e-3574-4242-a050-06340d5bf85b"><p class="p">Report each cell.</p>
+</li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id7b06fdfe-92b6-4d5a-9ec0-c0846ebd8dc3"><p class="p">For each cell, report the placements in it.</p>
+</li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__idd49e2869-22f0-4664-b504-05c0377db6d2"><p class="p">For each placement:</p>
+<ol class="ol" type="a"><li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id4d433dee-6331-47d6-a684-fc5e50abdb59"><p class="p">Report the nets in the placement.</p>
+</li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__idb7a4d66d-e803-40cf-bf3d-67dc14c66375"><p class="p">For each net, report the pins on it along
+with the instances associated with each pin.</p>
+</li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__idc7dc6d22-b7d6-4878-87a1-dd790e8f2945"><p class="p">For each instance in the placement, report
+type, subtype, pins, and pin nets.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p class="p">The steps for writing the procedures are as
+follows. This example requires no initialization procedure and uses
+only low-level iterator functions (see “<a class="xref" href="Concept_IteratorConcepts_id51cc0a59.html#id51cc0a59-3db0-4f03-81e1-cd179d70be3a__id8f9e54fe-85c6-4814-8259-dfc0c275aae4">Calibre PERC Iterator Types</a>”).
+Low-level functions do not write results to the PERC Report file.
+In this procedure, all results are written to the run transcript.</p>
+<ol class="ol"><li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id6ccc2b1a-e826-41f5-aab4-438483cc1c9f"><p class="p">Get the cell names and write them.</p>
+<pre class="pre codeblock leveled"><code>proc perc_check {} { 
+# get cell names and write them 
+    set cell [<a class="xref fm:HeadingOnly" href="Command_PercgetCells_id51a08d17.html#id51a08d17-5eeb-40f2-bc72-37cfb68b71ec__Command_PercgetCells_id51a08d17.xml#id51a08d17-5eeb-40f2-bc72-37cfb68b71ec" title="Creates a cell iterator pointing to the first cell in the list of all hcells in the design hierarchy.">perc::get_cells</a>] 
+    while {$cell ne ""} {
+      puts "Cell = [<a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> $cell]" </code></pre></li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id9a4bf5f0-6ef9-4ddf-9bb5-876bf511f24c"><p class="p">Get the names of placements in each cell and
+write them.</p>
+<pre class="pre codeblock leveled"><code># get placement names and write them 
+      set placement [<a class="xref fm:HeadingOnly" href="Command_PercgetPlacements_idbb97f715.html#idbb97f715-1a39-433c-af27-25ad6d2679ef__Command_PercgetPlacements_idbb97f715.xml#idbb97f715-1a39-433c-af27-25ad6d2679ef" title="Creates a placement representative iterator.">perc::get_placements</a> $cell] 
+      while {$placement ne ""} { 
+        puts "  Placement = [perc::name $placement]" </code></pre></li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__idf11158be-e759-4c4c-a91d-422f90364dcd"><p class="p">Get the net names within each placement and
+write them.</p>
+<pre class="pre codeblock leveled"><code># get net names and write them 
+        set net [<a class="xref fm:HeadingOnly" href="Command_PercgetNets_id591349e2.html#id591349e2-717e-4ca8-aad7-1a22ad2a4aea__Command_PercgetNets_id591349e2.xml#id591349e2-717e-4ca8-aad7-1a22ad2a4aea" title="Creates a net iterator.">perc::get_nets</a> $placement] 
+        while {$net ne ""} { 
+          puts "    net = [perc::name $net]" </code></pre></li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id11577c41-5a33-4019-8a55-4f859191fece"><p class="p">Get the pin names for each net and write the
+pin names with the associated instance names.</p>
+<pre class="pre codeblock leveled"><code># get pin names and write them with associated instances 
+          set pin [<a class="xref fm:HeadingOnly" href="Command_PercgetPins_idcfb94cf6.html#idcfb94cf6-a4dc-4442-ac03-614d308693ed__Command_PercgetPins_idcfb94cf6.xml#idcfb94cf6-a4dc-4442-ac03-614d308693ed" title="Creates a pin iterator.">perc::get_pins</a> $net] 
+          while {$pin ne ""} { 
+            set ins [<a class="xref fm:HeadingOnly" href="Command_PercgetInstances_ida25f2cc5.html#ida25f2cc5-1190-4526-9b5b-902fd708e689__Command_PercgetInstances_ida25f2cc5.xml#ida25f2cc5-1190-4526-9b5b-902fd708e689" title="Creates an instance iterator.">perc::get_instances</a> $pin] 
+# initialize an instance name 
+            set insName [perc::name $ins] 
+            puts "     pin = [perc::name $pin], instance = $insName" 
+            <a class="xref fm:HeadingOnly" href="Command_Percinc_iddc737eea.html#iddc737eea-a394-4075-9bfb-2485eb98c208__Command_Percinc_iddc737eea.xml#iddc737eea-a394-4075-9bfb-2485eb98c208" title="Increments the given iterator to point to the next entry.">perc::inc</a> pin 
+          } ; # end while $pin 
+          perc::inc net 
+        } ; # end while $net </code></pre></li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__ida0d1c792-c9d8-44d8-b49b-2cb042376688"><p class="p">Get the instance names within each placement
+and write instance names with type and subtype.</p>
+<pre class="pre codeblock leveled"><code># get instances within each placement and write their type
+# and subtype 
+          set ins [perc::get_instances $placement] 
+          while {$ins ne ""} { 
+            puts "    instance = [perc::name $ins] \
+                      ([<a class="xref fm:HeadingOnly" href="Command_Perctype_id19c43fdf.html#id19c43fdf-9288-4113-8906-7d1cf825ce84__Command_Perctype_id19c43fdf.xml#id19c43fdf-9288-4113-8906-7d1cf825ce84" title="Returns the type of the referenced instance, the net, or a pin’s net types or path types. For a cell instance, it returns the cell name.">perc::type</a> $ins] ([<a class="xref fm:HeadingOnly" href="Command_Percsubtype_id4e5bb46a.html#id4e5bb46a-159a-49ba-beca-e803701fb8a1__Command_Percsubtype_id4e5bb46a.xml#id4e5bb46a-159a-49ba-beca-e803701fb8a1" title="Returns the device subtype, if the argument points to a primitive device.">perc::subtype</a> $ins]))" </code></pre></li>
+<li class="li" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id1aefeee9-266f-438f-a5c9-9b074956c64b"><p class="p">Get the pin names within each instance and
+write pin names with associated net names.</p>
+<pre class="pre codeblock leveled"><code># get pins within each instance and write their nets 
+            set pin [perc::get_pins $ins] 
+            while {$pin ne ""} { 
+              puts "     pin = [perc::name $pin], \
+                         net = [perc::name [perc::get_nets $pin]]" 
+              perc::inc pin 
+            } ; # end while $pin 
+            perc::inc ins 
+          } ; # end while $ins 
+        perc::inc placement 
+      } ; # end while $placement 
+    perc::inc cell 
+  } ; # end while $cell 
+} </code></pre></li>
+</ol>
+<p class="p">The complete check is as follows.</p>
+<div class="fig fignone ExampleTitle" id="id6898d635-b50e-41b5-a816-b6e274c532f2__idc7ddaab2-a372-4098-a0aa-a428f585eadc"><span class="figcap"><span class="fig--title-label">Example 1. </span>Demonstration
+of Iterator Functions</span><pre class="pre codeblock leveled"><code>proc perc_check {} { 
+  # get cell names and write them 
+    set cell [perc::get_cells] 
+    while {$cell ne ""} {    
+      puts "Cell = [perc::name $cell]" 
+# get placement names and write them 
+      set placement [perc::get_placements $cell] 
+      while {$placement ne ""} { 
+        puts "  Placement = [perc::name $placement]" 
+# get net names and write them 
+        set net [perc::get_nets $placement] 
+        while {$net ne ""} { 
+          puts "    net = [perc::name $net]" </code></pre><pre class="pre codeblock leveled"><code># get pin names and write them with associated instances 
+          set pin [perc::get_pins $net] 
+          while {$pin ne ""} { 
+            set ins [perc::get_instances $pin] 
+# initialize an instance name 
+            set insName outline 
+            if {$ins ne ""} { 
+              set insName [perc::name $ins] 
+           } 
+            puts "     pin = [perc::name $pin], instance = $insName" 
+            perc::inc pin 
+          } ; # end while $pin 
+        perc::inc net 
+      } ; # end while $net 
+# get instances within each placement and write their type and subtype 
+        set ins [perc::get_instances $placement] 
+        while {$ins ne ""} { 
+          puts "    instance = [perc::name $ins] \
+                    ([perc::type $ins] ([perc::subtype $ins]))" 
+# get pins within each instance and write their nets 
+          set pin [perc::get_pins $ins] 
+          while {$pin ne ""} { 
+            puts "     pin = [perc::name $pin], \
+                       net = [perc::name [perc::get_nets $pin]]" 
+            perc::inc pin 
+          } ; # end while $pin 
+          perc::inc ins 
+        } ; # end while $ins 
+        perc::inc placement 
+      } ; # end while $placement 
+      perc::inc cell 
+    } ; # end while $cell 
+} ; # end proc</code></pre></div>
+<div class="section Subsections"><div class="section Subsection" id="id6898d635-b50e-41b5-a816-b6e274c532f2__id9e95a7c5-167c-41b4-bf0b-eab6c5bfa401"><h2 class="title Subheading sectiontitle">Results</h2><p class="p">The results output to the run transcript could
+look like this:</p>
+<pre class="pre codeblock leveled"><code>Executing RuleCheck "perc_check" ... 
+Cell = CELL_B 
+  Placement = CELL_B 
+    net = VSS 
+     pin = g,  instance = j2 
+     pin = g,  instance = j1 
+     pin = b,  instance = q2 
+     pin = b,  instance = q1 
+... 
+    net = VDD 
+     pin = d,  instance = j2 
+     pin = d,  instance = j1 
+     pin = c,  instance = q2 
+     pin = c,  instance = q1 
+... </code></pre><pre class="pre codeblock leveled"><code>
+    instance = Ma  (MN (n)) 
+     pin = g,  net = VSS 
+     pin = s,  net = VSS 
+     pin = d,  net = VSS 
+     pin = b,  net = 78 
+    instance = Mb  (MN (n)) 
+     pin = g,  net = VDD 
+     pin = s,  net = VDD 
+     pin = d,  net = VDD 
+     pin = b,  net = 78</code></pre><p class="p">The output shows each cell name, followed by
+each placement representative name for the cell, followed by each
+net within the placement, followed by the pins and their associated
+instances. Then for each placement, the instances are listed, followed
+by each pin and its associated net.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_LowLevelFunctionExamples_id47db4b65.html" title="This appendix provides examples of how the low-level iterator functions can be used. Ordinarily, you will want to use the high-level functions like perc::check_device or perc::check_net. The high-level functions are easier to use and require less coding. However, in certain cases, the low-level functions can provide useful results.">Low-Level Function Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Example: Reporting Objects With Iterator Functions"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ExampleReportingObjectsIteratorFunctions_id6898d635.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

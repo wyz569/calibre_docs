@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Encrypted File Structure" />
+<meta name="abstract" content="The encryption process converts #ENCRYPT directives to #DECRYPT directives and adds a header statement." />
+<meta name="description" content="The encryption process converts #ENCRYPT directives to #DECRYPT directives and adds a header statement." />
+<meta name="prodname" content="Calibre SVRFencrypt User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_svrfencrypt_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="February 09, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® SVRFencrypt User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="NONE" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id692b52f7-f635-48e7-b303-3042de671fcd" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Encrypted File Structure</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Encrypted File Structure" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10117,product.id.P10119" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id692b52f7-f635-48e7-b303-3042de671fcd">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Encrypted
+File Structure</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The encryption
+process converts #ENCRYPT directives to #DECRYPT directives and
+adds a header statement.</span>
+</div>
+<p class="p"><span class="ph FontProperty HeadingLabel">#DECRYPT Directive</span> —
+Calibre SVRFencrypt and Calibre TVFencrypt convert an #ENCRYPT directive
+into a #DECRYPT directive followed by an encrypted tag (highlighted below).</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Before encryption:</span></p>
+<pre class="pre codeblock"><code>#ENCRYPT
+LAYOUT SYSTEM OASIS
+LAYOUT PATH "../Shared/Design/fullchip.oas"
+...
+#ENDCRYPT</code></pre><p class="p"><span class="ph FontProperty HeadingLabel">After encryption:</span></p>
+<pre class="pre codeblock"><code><span class="ph CodeHighlight orange">#DECRYPT &amp;).~1E)JR5A!,'"W;K'U]S&gt;7U5DD#KW*;&gt;S1#@04,HOAR\U!#67...</span>
+G:.L&gt;6!&amp;7!\:G;M`5^-W6Q!!"+HH,YF&lt;^-DR7.OK?)[Q!)@+#VR2A#Y(R;A]PPJB=C1A!#
+IAP1$/6E;?B!SI5#P8/QI1!!"Z&amp;Q&lt;)[E\S7U(R;/]L;IC1JS6*V`XW-I)=PF"8IL3B6...
+#ENDCRYPT</code></pre><p class="p"><span class="ph FontProperty HeadingLabel">Header Statement</span> —
+Calibre SVRFencrypt adds a header to the top of the encrypted rule
+file that includes a legal disclaimer and reference to the version
+of Calibre used to verify the rule file.</p>
+<pre class="pre codeblock"><code>// Calibre SVRFencrypt v2020.2_0.61
+// This rule file or portions thereof includes data that is
+// encrypted. Lines between the #DECRYPT and the #ENDCRYPT
+// statements must not be altered in any manner.
+// Mentor Graphics Corporation does not provide support for the
+// encrypted portion of the rules file. This is the sole responsibility of
+// the providing organization and problems encountered are to be reported
+// to the provider. Support by Mentor Graphics for an encrypted
+// rules file requires the availability of the original rules file.
+//</code></pre><pre class="pre codeblock"><code>// This deck was developed using Mentor Graphics proprietary SVRF and TVF
+// formats.  The deck is to be used only in Calibre tools.  For further
+// information about SVRF/TVF File Use Restrictions, please go to
+// http://www.mentor.com/terms_conditions/svrf-tvf.html
+// LIMITATION OF LIABILITY: Mentor Graphics is not liable for any property
+// damage, personal injury, loss of profits, interruption of business, or 
+// any other special, consequential or incidental damages, however caused,
+// whether for breach of warranty, contract, tort (including negligence),
+// strict liability or otherwise. In no event shall Mentor Graphics'
+// liability exceed the amount paid for the product giving rise to the
+
+//
+// This rule file is verified using Calibre version v2020.2_0.61
+//</code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CreatingAnEncryptedRuleFile_idf958c601.html" title="Once you have prepared your rule files for encryption, you use the calsvrfencrypt program to encrypt your files.">Creating an Encrypted Rule File</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_svrfencrypt_user"
+                DocTitle = "Calibre® SVRFencrypt User’s Manual"
+                PageTitle = "Encrypted File Structure"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_EncryptedFiles_id692b52f7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® SVRFencrypt User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

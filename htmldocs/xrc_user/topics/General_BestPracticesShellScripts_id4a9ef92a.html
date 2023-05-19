@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="Best Practices for Shell Scripts" />
+<meta name="abstract" content="This section contains an example run script and tips for writing shell scripts. The tips are based on experience helping customers set up their solutions." />
+<meta name="description" content="This section contains an example run script and tips for writing shell scripts. The tips are based on experience helping customers set up their solutions." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Best Practices for Shell Scripts</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Best Practices for Shell Scripts" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Best Practices for Shell Scripts</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">This section
+contains an example run script and tips for writing shell scripts.
+The tips are based on experience helping customers set up their
+solutions.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__ide1ae6c21-2265-4e0e-9dd3-85dd8f21071d">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id74a29249-5389-478c-9699-45a123caba04" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Best Practices for Shell Scripts</span></caption><colgroup><col style="width:2.020in" /><col style="width:4.479in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d8985e146"><p class="p">Tip</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d8985e149"><p class="p">Reason</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e146 "><p class="p">Explicitly set the shell.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e149 "><p class="p">This ensures the script
+will run for all users, no matter their shell preference. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e146 "><p class="p">Use redirects to capture messages.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e149 "><p class="p">Many
+examples in training and on Support Center use “| tee” to capture
+logs as well as display messages in the terminal. However, “| tee”
+does not copy the standard error (stderr) output to the log file.
+Use “&gt;&amp;” or “&gt;&amp;!” in most shells to redirect both standard
+output and standard error to the same file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e146 "><p class="p">Have the script remove
+any Calibre-generated files before invoking Calibre.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e149 "><p class="p">Calibre leaves databases
+in the working directory so that users can come back to their results
+later. However, subsequent runs will overwrite data in existing
+files and this could cause misleading results — for example, left
+over netnames appearing in a netlist or erroneously swapped pins.</p>
+<p class="p"> Because some users may
+have a local version of rm, we recommend setting it explicitly also
+as</p>
+<pre class="pre ShellCommand">/bin/rm -rf</pre>
+<p class="p">or as appropriate for your operating system.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e146 "><p class="p">Set environment variables explicitly
+in the script rather than the user environment.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d8985e149 "><p class="p">Setting environment variables
+explicitly in the script serves several purposes:</p>
+<ul class="ul"><li class="li" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id92cc6f66-f023-4d92-b031-11afa83575ad"><p class="p">Easier to verify when debugging.</p>
+</li>
+<li class="li" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id35320426-03c3-49cf-8710-6a629b53f54c"><p class="p">Reduces problems due to variables remaining
+set in the shell; they are only active while the script is executing.</p>
+</li>
+<li class="li" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id1eb7de01-defd-437f-9ea4-378c199162e2"><p class="p">Less typing than setting in the shell
+each time.</p>
+</li>
+<li class="li" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id3a36a8c1-a1f7-4067-abf5-1bd92b05277a"><p class="p">Easier to package complete testcases.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p"> The following is an example
+shell script that follows best practices. Alternatives are provided together,
+with all but one commented out. This example run script can be used
+as the basis of your scripts.</p>
+<div class="fig fignone ExampleTitle" id="id4a9ef92a-c2a3-4ae5-9973-b5bf5ba02a75__id8d0cea34-6b32-4008-ad1f-2c39986a8dc2"><span class="figcap"><span class="fig--title-label">Example 1. </span>Example
+Shell Script to Run Calibre</span><pre class="pre codeblock leveled"><code>#!/bin/csh -f 
+ 
+## Ensure which version will be run  
+setenv MGC_HOME /net/tools/calibre/2007.3_18.11/lv_micro.ixl 
+setenv PATH $MGC_HOME/bin:$PATH 
+ 
+## Clean the working directory  
+/bin/rm -r *svd* *SVD* lvs.log phdb.log pdb.log fmt.log *sum tr* 
+ 
+ 
+####### Use this environment variable for debugging ############### 
+################################################################### 
+#setenv CALIBRE_ECHO_RULE_FILE YES 
+ 
+######## Run-Specific Environment Variables ####################### 
+################################################################### 
+#            Siemens EDA Variables 
+#setenv PEX_FMT_HP_PORT_MAP_MODE TEMPLATE 
+#setenv PEX_FMT_SOURCE_BASED_FLOW ON 
+ 
+#            Your Flow Variables 
+#setenv PROCESS_SIZE 90 
+#setenv PROCESS_TYPE CU 
+#setenv ADD_FILL NO 
+ 
+ 
+## Hcells for LVS and PHDB 
+set h = "" 
+#set h = "-hcell hcells" 
+ 
+## Xcells for xRC PDB 
+set x = "" 
+#set x = "-xcell xcells" 
+ 
+set r = "rules"  
+set c = "layout_primary"  
+ 
+###### Run PHDB, PDB, and FMT steps 
+$MGC_HOME/bin/calibre -lvs -hier -spice svdb/$c.sp $h $r &gt;&amp;! lvs.log 
+#$MGC_HOME/bin/calibre -xrc -phdb                  $x $r &gt;&amp;! phdb.log 
+$MGC_HOME/bin/calibre -xrc -pdb -rcc               $x $r &gt;&amp;! pdb.log 
+$MGC_HOME/bin/calibre -xrc -fmt -all               $x $r &gt;&amp;! fmt.log 
+ </code></pre></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_Integration_ida0f65c81.html" title="The goal of this section is to provide information for CAD engineers who are deploying pre-configured tools to their engineering groups.">Integration</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Best Practices for Shell Scripts"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_BestPracticesShellScripts_id4a9ef92a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

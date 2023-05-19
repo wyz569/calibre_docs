@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="calcm_jobqueue_app.tcl" />
+<meta name="abstract" content="Creates a job dispatcher and the configuration files to run each job." />
+<meta name="description" content="Creates a job dispatcher and the configuration files to run each job." />
+<meta name="DC.subject" content="calcm_jobqueue_app.tcl, CalCM applications" />
+<meta name="keywords" content="calcm_jobqueue_app.tcl, CalCM applications" />
+<meta name="prodname" content="Calibre Cluster Manager (CalCM) User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_cm_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Cluster Manager (CalCM) User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.1" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>calcm_jobqueue_app.tcl</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="calcm_jobqueue_app.tcl" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.sys,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">calcm_jobqueue_app.tcl</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">Creates
+a job dispatcher and the configuration files to run each job.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">APPLICATION TCL</span> <span class="keyword ParameterName RequiredReplaceable">path</span><span class="keyword ParameterName Required">/calcm_jobqueue_app.tcl</span> [ FILE ‘[’ </p>
+<p class="lines UsageLine">   [ALLPENDINGREASON = [<span class="keyword ParameterName OptionalDefault">false</span> | <span class="keyword ParameterName Optional">true</span>]]</p>
+<p class="lines UsageLine">   [ANNOUNCERETRY = <span class="keyword ParameterName OptionalReplaceable">count</span>]</p>
+<p class="lines UsageLine">   [CHECKREMOTEALIVE = <span class="keyword ParameterName OptionalReplaceable">flag</span>]</p>
+<p class="lines UsageLine">   [CLUSTERCONF = <span class="keyword ParameterName OptionalReplaceable">cluster_conf_filename</span>]</p>
+<p class="lines UsageLine">   [CLUSTERCOUNT = <span class="keyword ParameterName OptionalReplaceable">cpu_count</span>]</p>
+<p class="lines UsageLine">   [CLUSTERLIMIT = <span class="keyword ParameterName OptionalReplaceable">count</span>]</p>
+<p class="lines UsageLine">   [CLUSTERMAX = <span class="keyword ParameterName OptionalReplaceable">maxcount</span>]</p>
+<p class="lines UsageLine">   [CLUSTERMIN = <span class="keyword ParameterName OptionalReplaceable">mincount</span>]</p>
+<p class="lines UsageLine">   [CONFDIRNAME = <span class="keyword ParameterName OptionalReplaceable">confdir_name</span>[<span class="keyword ParameterName OptionalReplaceable">,perm</span>]]</p>
+<p class="lines UsageLine">   [COPYCONFFILES = [<span class="keyword ParameterName OptionalDefault">true</span> | <span class="keyword ParameterName Optional">false</span>]]</p>
+<p class="lines UsageLine">   [ENDGUID = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [GUIDDIGIT = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [INITREMOTEPERNODE = <span class="keyword ParameterName OptionalReplaceable">count</span>]</p>
+<p class="lines UsageLine">   [JOBDB = <span class="keyword ParameterName OptionalReplaceable">file_path</span>]</p>
+<p class="lines UsageLine">   [JOBNOTIFYCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span>]</p>
+<p class="lines UsageLine">   [<span class="keyword ParameterName Optional">JOBNOTIFYEMAIL</span> = <span class="keyword ParameterName OptionalReplaceable">email</span>] </p>
+<p class="lines UsageLine">   [<span class="keyword ParameterName Optional">KEEPINITIAL</span> = <span class="keyword ParameterName OptionalReplaceable">flag</span>] </p>
+<p class="lines UsageLine">   [LAUNCHDELAY = <span class="keyword ParameterName OptionalReplaceable">delay_time</span>]</p>
+<p class="lines UsageLine">   [NODENOTIFY = <span class="keyword ParameterName OptionalReplaceable">flag</span>]</p>
+<p class="lines UsageLine">   [NODENOTIFYCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span>]</p>
+<p class="lines UsageLine">   [PRUNEDBINTERVAL = <span class="keyword ParameterName OptionalReplaceable">interval</span>]</p>
+<p class="lines UsageLine">   [PRUNEDBSAVETIME = <span class="keyword ParameterName OptionalReplaceable">value</span>]</p>
+<p class="lines UsageLine">   [PRUNEDBSTARTTIME = <span class="keyword ParameterName OptionalReplaceable">time</span>]</p>
+<p class="lines UsageLine">   [QUEUEDIR = <span class="keyword ParameterName OptionalReplaceable">queue_dir</span>]</p>
+<p class="lines UsageLine">   [QUOTALEVELLIMIT = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [QUOTAOVERDRAFT = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [QUOTAOVERDRAFTLEVEL = <span class="keyword ParameterName OptionalReplaceable">range</span>]</p>
+<p class="lines UsageLine">   [QUOTAPOLICY = <span class="keyword ParameterName OptionalReplaceable">quota_policy_list</span>]</p>
+<p class="lines UsageLine">   [SCANJOBS = <span class="keyword ParameterName OptionalReplaceable">flag</span>] </p>
+<p class="lines UsageLine">   [SCANJOBINFO = <span class="keyword ParameterName OptionalReplaceable">flag</span>] </p>
+<p class="lines UsageLine">   [STARTGUID = <span class="keyword ParameterName OptionalReplaceable">num</span>]</p>
+<p class="lines UsageLine">   [VERSIONFILTERS = <span class="keyword ParameterName OptionalReplaceable">filters</span>]</p>
+<p class="lines UsageLine">‘]’ ]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idd33ddc31-ecaa-4565-b17f-264d59f4d939">ALLPENDINGREASON = [<span class="keyword ParameterName OptionalDefault">false</span> | <span class="keyword ParameterName Optional">true</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether to record the pending
+reasons for all jobs in the queue. The default is “false”, which
+specifies to record only the reasons for the jobs on the top of
+the queue. The pending reasons appear as messages in the CalCM daemon
+transcript along with the queue information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id8a26263a-4246-4fb6-b341-404012a3b351">ANNOUNCERETRY = <span class="keyword ParameterName OptionalReplaceable">count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the amount of time
+in which the CalCM should reannounce a job to the CalCM daemon.
+This parameter is used when CalCM announces a job to the daemon
+and it fails for some reason, such as the restart of the daemon.
+The default is 300 seconds.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ida130e03a-2060-4718-b90f-db9c089857a1">CHECKREMOTEALIVE = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether to check the
+status of remote hosts before allocating these hosts to the job. The
+remote host is not allocated if there is no response. Valid values
+include:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id934612ee-8804-450d-aa39-cb189bec2f58"><p class="p Opt">0
+— No check is performed (default).</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id4c98321f-5184-4b37-b1d2-86918251909e"><p class="p Opt">1
+— Remote hosts are checked for a response. If there is no response
+(failed state), the remote is not allocated for the job.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id8bc53349-a115-4251-8c86-5040ce063f14"><p class="p Opt">-<span class="keyword ParameterName OptionalReplaceable">n </span>—
+After <span class="keyword ParameterName OptionalReplaceable">n</span> consecutive
+failures, the failed remote is unregistered from the node list. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ida0929d43-bf63-4233-8bf0-127b1cc6e12c">CLUSTERCONF = <span class="keyword ParameterName OptionalReplaceable">cluster_conf_filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the filename for the
+cluster configuration file. The default is none, which means no cluster
+configuration is specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id389150c6-8d39-4595-ac00-f4b85b958295">CLUSTERCOUNT = <span class="keyword ParameterName OptionalReplaceable">cpu_count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the total number of CPUs on the remote host(s) to which the primary
+host will connect. The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id0b416810-4797-4ce4-8627-bad930ccbda6">CLUSTERLIMIT = <span class="keyword ParameterName OptionalReplaceable">count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a limit for
+the number of jobs that can be launched based on the number of <span class="keyword ParameterName OptionalReplaceable">max</span> remotes
+specified in the job configuration (<span class="ph filepath">job.conf</span>)
+file. The job launch behavior is controlled by comparing the CLUSTERLIMIT
+value to a sum of the <a class="xref fm:HeadingOnly" href="Command_RemoteMax_id2fd421be.html#id2fd421be-00b7-468c-aa1f-172de21ded4c__Command_RemoteMax_id2fd421be.xml#id2fd421be-00b7-468c-aa1f-172de21ded4c" title="Specifies a maximum number of remotes.">REMOTE MAX</a> values as follows:</p>
+<ul class="ul"><li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id3eb9f8e6-074d-4970-800a-13d3fc2b3e25"><p class="p">The REMOTE
+MAX values (cluster string <span class="keyword ParameterName OptionalReplaceable">max</span> values)
+of all running (active) jobs are summed with the REMOTE MAX value
+of the next job in queue.</p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idf1a34e08-e0ca-4c35-a925-3c8267725abb"><p class="p">If this sum is larger than the CLUSTERLIMIT
+value, then no job is launched and the remaining jobs are suspended,
+even if free job slots are available on the primary host(s).</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id67775aed-510c-46a8-b3cc-0a4ec5eb9981">CLUSTERMAX = <span class="keyword ParameterName OptionalReplaceable">maxcount</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the maximum number
+of remote connections for the Calibre job. The default is 100.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id75a46295-d0e5-45a1-a9cf-7233f17a083e">CLUSTERMIN = <span class="keyword ParameterName OptionalReplaceable">mincount</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the minimum number
+of remote connections that must be established in order for the
+Calibre job to run. The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id106fbf99-9ab8-41fd-9071-9d1d57cdcd85">CONFDIRNAME = <span class="keyword ParameterName OptionalReplaceable">confdir_name</span>,<span class="keyword ParameterName OptionalReplaceable">perm</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the directory to create
+run and configuration files (<span class="ph filepath">calcm_run</span>, <span class="ph filepath">calcm_mtflex.conf</span>, <span class="ph filepath">calcm_launch.tcl</span>,
+and <span class="ph filepath">calcm_announce.tcl</span>) for a job. The default
+is “.$jobID”. Optionally the permission of the directory and the
+files created under it can be specified after “,”. This example
+creates the directory with the job ID and the permission read/write/execute
+for all:</p>
+<p class="p">CONFDIRNAME = $jobID,777.</p>
+<p class="p">A Tcl expression can be used to create multiple hierarchies.
+For example,</p>
+<p class="p">[expr $jobID/100000*100000]/$jobID</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id55431c39-6d96-4582-9401-a7ace514fdf2">COPYCONFFILES = [<span class="keyword ParameterName OptionalDefault">true</span> | <span class="keyword ParameterName Optional">false</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the version (and behavior) of
+the <span class="ph filepath">calcm_submit_job</span> script that is created
+in the <span class="ph filepath">CALCM_HOME/jobqueue</span> directory. By default
+the parameter is “true”, and the created version of the <span class="ph filepath">calcm_submit_job</span> script
+copies the job related files (<span class="ph filepath">job.conf</span> and <span class="ph filepath">job.env</span>)
+to CONFDIRNAME in the calcm_jobqueue_app.tcl application. If the
+COPYCONFFILES parameter is set to “false”, the created version of
+the <span class="ph filepath">calcm_submit_job</span> script leaves the job related
+files in their original directory locations.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id3d18b5c8-8cf6-47b1-ade6-fcc3f0f7e549">ENDGUID = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the end job ID. The default is
+(10 ^ 6) - 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id1336a92d-16ea-4ca6-9869-1a5c4ed50921">GUIDDIGIT = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the number of characters (alphanumeric)
+used for a job ID. In most cases, numerical job IDs are used, so
+the maximum job ID is (10 ^ <span class="keyword ParameterName OptionalReplaceable">num</span>)
+- 1. The default is 6, meaning that a job ID is stored using six
+characters only. </p>
+<p class="p">When CalCM is used in platform mode (IBM<sup>®</sup> Platform™ LSF<sup>®</sup> (LSF) or Univa<sup>®</sup> Grid Engine<sup>®</sup> (Grid)),
+commonly, the platform tool’s job ID is re‑used as the CalCM job
+ID. In this case, the GUIDDIGIT number must be large enough to store
+the platform tool’s job ID. The default number for LSF is six characters,
+but this number can be increased using the LSF MAX_JOBID parameter.
+The Grid platform often uses eight characters, but the MAX_SEQNUM
+constant can increase this number. See “<a class="xref fm:HeadingAndPage" href="Contain_PlatformToolJobAndRemotesControl_id9b90fac0.html#id9b90fac0-dadf-454c-a283-6fceb46e21f0__Contain_PlatformToolJobAndRemotesControl_id9b90fac0.xml#id9b90fac0-dadf-454c-a283-6fceb46e21f0" title="CalCM supports IBM Platform LSF (LSF) and Univa Grid Engine (Grid) platform tools for controlling Calibre jobs and remotes. One method is to control the Calibre jobs with the platform tool and the remotes with remote shell. The other method is to control both the Calibre jobs and the remotes with the platform tool.">Platform Tool Job and Remotes Control</a>” for
+more information on using platform tools with CalCM.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__iddfce1caf-7396-4d26-8e81-10f9eee4549e">INITREMOTEPERNODE = <span class="keyword ParameterName OptionalReplaceable">count</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the maximum number
+of initial remotes per node. The default is 1024.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id5148ddc7-4b9e-4cb7-b83a-122b2250b195">JOBDB = <span class="keyword ParameterName OptionalReplaceable">file_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the path to the SQL
+database file for jobs. The default is <span class="ph filepath">calcm_job.db</span>.</p>
+<p class="p">For backward compatibility,
+you can migrate the data from the job database to another version
+of the database by setting the CALCM_MIGRATE_DB environment variable
+to 1. This allows you to move to a different version of the database
+and not lose any data when the database schema changed. The supported
+changes in the schema include:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id0e72111a-5a59-497c-8188-d25a194735b7"><p class="p Opt">Add
+column</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id6be7a6ca-010e-4590-9970-1020df87a47a"><p class="p Opt">Remove
+column</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id07482506-c92b-429b-87c2-9e7412ff71d4"><p class="p Opt">Change
+the data type of a column to “TEXT”</p>
+</li>
+</ul>
+<p class="p">The database file with the old
+schema is renamed to “<span class="ph filepath">databaseFileName.db.backup</span>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ida50831b8-a5b4-4a52-a951-6fc802ecb9a7">JOBNOTIFYCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies an additional command
+that sends a notification about the job status change and reports
+the notification to the <a class="xref fm:HeadingOnly" href="Command_CalcmNotificationAppTcl_id720d743c.html#id720d743c-7ba3-44d8-befe-aa2263917509__Command_CalcmNotificationAppTcl_id720d743c.xml#id720d743c-7ba3-44d8-befe-aa2263917509" title="Monitors a calcmd log file and cluster status to send notifications to the job administrator if necessary.">calcm_notification_app.tcl</a>. The
+default is empty (no notification). An example of this command using
+the Linux mail command is as follows:</p>
+<p class="p">JOBNOTIFYCMD = {mail -s $subject
+$user &lt;&lt; $body &amp;}</p>
+<p class="p">where <span class="keyword ParameterName OptionalReplaceable">cmd </span>is
+enclosed in braces ({ }), and both $subject and $body are set by
+the calcmd.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id75ca2fe0-1840-4445-a020-6a9cfa739c81"><span class="keyword ParameterName Optional">JOBNOTIFYEMAIL</span> = <span class="keyword ParameterName OptionalReplaceable">email</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies an additional e‑mail
+address that receives the job notification status.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id3571ca32-5825-4b92-984f-a17010bdd43c"><span class="keyword ParameterName Optional">KEEPINITIAL</span> = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the flag that sets “JOB FLAG 1”
+to keep the initial remotes launched in CalCM from being revoked
+if certain job mode and RDS usage conditions are met. The following values
+specify the conditions to set the flag:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idd27d2f6c-7211-4775-a651-084041a3fa15"><p class="p Opt">1
+— RDS is used.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id33dfe362-1bdd-4e6c-af3a-b7da1e1801d4"><p class="p Opt">2
+— RDS is allocated automatically in Calibre.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idd2b24962-18f4-4d10-ac4d-68cb8db45c54"><p class="p Opt">4
+— HYPER mode is enabled.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idfe52ef4b-5a6e-4173-b8a7-abe58cff030b"><p class="p Opt">8
+— HYPER REMOTE mode is enabled (default).</p>
+</li>
+</ul>
+<p class="p">You can choose the conditions when the initial remote hosts should
+be kept for all Calibre jobs, by summing the values and specifying
+this sum to the KEEPINITIAL keyword.</p>
+<p class="p">For example, if you want CalCM to keep the initial remotes allocated
+automatically for all Calibre jobs using RDS technology and all
+Calibre jobs launched with ‑hyper remote mode, specify “KEEPINITIAL
+11”, because the sum of the values is 1+2+8 = 11 (includes 8 by default).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idc645bde2-5781-4d35-83fb-5c01d9998213">LAUNCHDELAY = <span class="keyword ParameterName OptionalReplaceable">delay_time</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the delay time between
+remote launches. Units are in milliseconds. It is a value or a Tcl
+expression respectively, and can be specified as:</p>
+<p class="p">LAUNCHDELAY = 500</p>
+<p class="p">LAUNCHDELAY = [expr round(rand() * 500)]</p>
+<p class="p">If the <a class="xref fm:HeadingOnly" href="Command_LaunchDelay_id2a998436.html#id2a998436-99ba-4eba-92be-d3ab12fb9c88__Command_LaunchDelay_id2a998436.xml#id2a998436-99ba-4eba-92be-d3ab12fb9c88" title="Specifies the amount of delay time before launching RCS or RDS hosts.">LAUNCH DELAY</a> statement
+is specified in the <span class="ph filepath">job.conf</span> file, it overrides LAUNCHDELAY.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id1974cebe-f5b2-4278-adec-7d3a697a2e75">NODENOTIFY = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a flag to notify when there is
+a node status change as in the case when a node is unregistered.
+The following flag values control the notification behavior:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id0d27b6e1-5902-45bf-9912-112b836a3e67"><p class="p Opt">0
+— The default value. This value notifies of the node status change
+only after all the processes on the node are removed.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id1cec2e44-d570-4677-a6fa-380d37573e79"><p class="p Opt">1
+— This value notifies the removal of a node after it is unregistered. </p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id868842d1-2a40-459e-966a-cfb4edc69364"><p class="p Opt">2
+— This value notifies the removal of all nodes that are unregistered.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idc8d403ff-8664-48d9-87f9-95414eaad64e">NODENOTIFYCMD = <span class="keyword ParameterName OptionalReplaceable">cmd</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies an additional command that is
+run when sending a notification on the node status change. The variable
+$flag is set by the value specified in NODENOTIFY and the $nodeName
+for the removed node names. An example of the command usage is as
+follows (the default is empty):</p>
+<pre class="pre codeblock"><code>NODENOTIFYCMD = {echo "$flag: $nodeName" &gt;&gt; removed.txt &amp;}</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ide5e23e29-12af-47c5-9eb7-c2886b624717">PRUNEDBINTERVAL = <span class="keyword ParameterName OptionalReplaceable">interval</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the interval for the
+job database pruning in seconds. Pruning begins at the next update,
+and subsequent attempts to prune are done at each interval time.
+The default interval is 0, which means no pruning. Pruning reduces
+the size of the database by removing historical information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id3b57413b-3f43-4960-9ed0-6add3b03f2d6">PRUNEDBSAVETIME = <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the maximum value in seconds that
+data is saved in a table when the job database pruning is attempted.
+For example, if this value is set to 3600 and pruning is attempted,
+any data older than 3600 seconds in the table is pruned. The default
+value is 0, which means no pruning is attempted. Pruning reduces
+the size of the database by removing historical information. </p>
+<p class="p">You can specify the values separately for each table. The default
+value applies to any tables without explicit values. Syntax for
+wildcard (*) and multiple specifications are supported as shown
+in these examples.</p>
+<p class="p">Specify that all tables in the application save up to 3600 seconds
+of data.</p>
+<pre class="pre codeblock"><code>PRUNEDBSAVETIME = {* 3600}</code></pre><p class="p">Specify that the “finished jobs” table save up to 2400 seconds
+of data, and the remaining tables save up to 3600 seconds of data.</p>
+<pre class="pre codeblock"><code>PRUNEDBSAVETIME = {* 3600} \
+				{finished jobs 2400}</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ide2ab392f-04b6-424c-a466-9592f10d9775">PRUNEDBSTARTTIME = <span class="keyword ParameterName OptionalReplaceable">time</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies when the job database
+pruning occurs. Pruning is attempted at the specified time. If specified
+with PRUNEDBINTERVAL, the PRUNEDBINTERVAL setting is ignored, and
+a warning is issued to the transcript. Pruning reduces the size
+of the database by removing historical information.</p>
+<p class="p">The following formats are supported:</p>
+<ul class="ul"><li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id507cd7ee-dea8-4ac7-b418-66204fad9ff2"><p class="p">For daily
+pruning, specify time as <span class="keyword ParameterName OptionalReplaceable">hour</span>:<span class="keyword ParameterName OptionalReplaceable">minute</span>.
+For example, to prune the database at 1:00 a.m. each day, specify
+“01:00”.</p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id45ad9674-13dd-46d7-9965-948aad5b1354"><p class="p">For weekly
+pruning, specify time as <span class="keyword ParameterName OptionalReplaceable">day‑of‑week</span>‑<span class="keyword ParameterName OptionalReplaceable">hour</span>:<span class="keyword ParameterName OptionalReplaceable">minute</span>.
+For example, to prune the database on Monday at 8:00 a.m. each week,
+specify “Monday‑08:00”.</p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idc20015a6-8fdf-4cdc-921f-cb5c897fb07e"><p class="p">For monthly
+pruning, specify time as <span class="keyword ParameterName OptionalReplaceable">week‑of‑the‑month</span>‑<span class="keyword ParameterName OptionalReplaceable">day‑of‑week</span>‑<span class="keyword ParameterName OptionalReplaceable">hour</span>:<span class="keyword ParameterName OptionalReplaceable">minute</span>. For
+example, to prune the database at 1:00 a.m.on the first Sunday of
+each month, specify “1st‑Sunday‑01:00”. To prune on the last Sunday
+of each month at 1:00 a. m., specify “4th‑Sunday‑01:00”.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ide5088285-e6ad-4a0a-9975-8d55d43250f9">QUEUEDIR = <span class="keyword ParameterName OptionalReplaceable">queue_dir</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the path for the job
+queue directory. The default is the current working directory.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id4b5a4000-e29a-4640-9c72-4f9944200e09">QUOTALEVELLIMIT = <span class="keyword ParameterName OptionalReplaceable">num </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the level to apply
+the quota. By default, the lower level quota is ignored and the jobs
+are launched by FIFO. Refer to “<a class="xref fm:HeadingAndPage" href="Concept_CalcmResourceManagement_id5ad885f6.html#id5ad885f6-d0fe-433d-a557-96111f81c637__Concept_CalcmResourceManagement_id5ad885f6.xml#id5ad885f6-d0fe-433d-a557-96111f81c637" title="This section describes some of the basic CalCM resource management tasks.">CalCM Resource Management</a>” for more information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id74aca702-341f-4026-87eb-1c1229877ca9">QUOTAOVERDRAFT = <span class="keyword ParameterName OptionalReplaceable">num </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the percentage value
+for the quota overdraft. The actual number is the value times the
+quota value of the group. Jobs belonging to the same quota group
+can grow up to the quota value plus the overdraft. This argument
+can be used to limit the number of jobs launched. Refer to “<a class="xref fm:HeadingAndPage" href="Concept_CalcmResourceManagement_id5ad885f6.html#id5ad885f6-d0fe-433d-a557-96111f81c637__Concept_CalcmResourceManagement_id5ad885f6.xml#id5ad885f6-d0fe-433d-a557-96111f81c637" title="This section describes some of the basic CalCM resource management tasks.">CalCM Resource Management</a>” for more
+information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id8af51d18-60f0-4d06-83b4-495de63c5178">QUOTAOVERDRAFTLEVEL = <span class="keyword ParameterName OptionalReplaceable">range</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the range where the
+quota overdraft level can be applied. By default, there is no restriction
+on the quota overdraft between quota groups. The range is specified
+as [<span class="keyword ParameterName OptionalReplaceable">start</span>‑]<span class="keyword ParameterName OptionalReplaceable">end</span>.
+The quota overdraft is applied from the start level to the end level.
+The quota level below the start value is limited to the quota, but
+no overdraft happens. If the start value is not specified, it defaults
+to 1. Refer to “<a class="xref fm:HeadingAndPage" href="Concept_CalcmResourceManagement_id5ad885f6.html#id5ad885f6-d0fe-433d-a557-96111f81c637__Concept_CalcmResourceManagement_id5ad885f6.xml#id5ad885f6-d0fe-433d-a557-96111f81c637" title="This section describes some of the basic CalCM resource management tasks.">CalCM Resource Management</a>” for more
+information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id4c1257ea-e2c5-4287-9860-9e102f23f0c9">QUOTAPOLICY = <span class="keyword ParameterName OptionalReplaceable">quota_policy_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the policy for each
+quota. Accepts a list in the form of “<span class="keyword ParameterName OptionalReplaceable">quota:policy</span>”
+separated by ‘,’. If quota “*” is used, all quotas are affected.
+Either FIFO or FAIRSHARE can be passed to the policy. When FAIRSHARE
+is specified, the sub quota launches jobs based on the quota and
+the summation of the maximum number of attributes for all jobs launched
+by the user. The default is “*:FIFO”. </p>
+<p class="p">QUOTAPOLICY = DEFAULT:FAIRSHARE</p>
+<p class="p">In this example, quota group
+D1/P1 and all of the D2 group use FAIRSHARE, and the rest of the
+quota uses FIFO policy:</p>
+<p class="p">QUOTAPOLICY = D1/P1:FAIRSHARE,D2:FAIRSHARE</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ida5609e3d-663a-4b5b-96a9-a815fabeb66e">SCANJOBS = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the job scan mode.
+If specified, job scanning is performed while attaching the application.
+Valid modes include:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id5bf4448e-e2fd-47fc-b2df-15f6cc6b3165"><p class="p Opt">0
+— No scanning is performed (default).</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id0183cf10-eb0d-4ddc-8722-1a473b3692d4"><p class="p Opt">1
+— Pings the jobs recorded in the job database.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idd0390213-64cb-4c37-ba2b-31f5e6772d45"><p class="p Opt">2 — Scans
+the ports on the primary hosts specified in the cluster configuration
+file.</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idf292a914-ec39-4cdd-a2c1-9fe1bf3a9d36"><p class="p Opt">3
+— Performs modes 1 and 2.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idcc754e8c-df68-4ad5-b9a6-bfcbd8c2de0f">SCANJOBINFO = <span class="keyword ParameterName OptionalReplaceable">flag</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies whether to scan the job transcript
+to gather job information and record it in the info_jobs table.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ide3a94e74-2852-429e-837c-6442f2a12e1a"><p class="p Opt">0
+— No scanning of the job transcript is performed (default).</p>
+</li>
+<li class="li ArgOption" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id79c9c3e3-0e3a-4e4f-b18d-09de2a81b169"><p class="p Opt">1
+— Scanning and recording of the job transcript is performed. </p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ida43cef3e-4ece-41f4-9857-81a779a3d7ab">STARTGUID = <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies the start job ID. In LSF, the
+job ID starts from 100000 to maintain the number of digits for jobs.
+The default is 1.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id1146e40a-f64e-45b7-bd73-8635847a492c">VERSIONFILTERS = <span class="keyword ParameterName OptionalReplaceable">filters</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a Calibre version that is not
+supported in CalCM. The job with the version and mode that matches
+the filter is modified to not use the specified job mode. To avoid
+the job mode from being changed, you can specify “JOB FLAG 1024”
+in the <span class="ph filepath">job.conf</span> file. If no mode is specified,
+the job is not launched. You can specify “JOB NOTIFICATION” in the <span class="ph filepath">job.conf</span> file
+to include the filter with the job status notification. The syntax
+is the same as that used for calcm_notification_app.tcl VERSIONFILTERS.
+After the filter is matched, no further version checking is done.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The calcm_jobqueue_app.tcl application
+creates a job dispatcher for the jobs located in a given directory.
+It also creates the necessary configuration files to run each job,
+sets environment parameters, receives job announcements from CalCM,
+and reads the network configuration.</p>
+<p class="p">When the calcm_jobqueue_app.tcl application launches a job, the
+potential resource usage of the active jobs is taken into account
+to determine whether the job to be launched exceeds the cluster
+or quota remote limits. The potential resource usage of the active
+jobs is also used in determining the priority order of different
+quota groups. Any suspended jobs are removed from the calculation
+of cluster and quota remote maximum values.</p>
+<div class="section Subsection" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__ide8b17090-5fc4-4f83-8904-f5cf056cbbc7"><h2 class="title Subheading sectiontitle">Messaging Commands</h2><p class="p">You can use the following messaging
+commands with <a class="xref fm:HeadingOnly" href="Command_CalcmSendMessage_ide06c5e73.html#ide06c5e73-0276-474f-80bb-197e23235a0a__Command_CalcmSendMessage_ide06c5e73.xml#ide06c5e73-0276-474f-80bb-197e23235a0a" title="Sends a message to CalCM.">calcm_send_message</a> to change
+the priority for a job, or adjust or update the cluster:</p>
+<ul class="ul"><li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id360552a5-dc2b-47b4-9f14-b35be619fdd3"><p class="p"><a class="xref fm:HeadingOnly" href="Command_AdjustCluster_idc82088d4.html#idc82088d4-9fec-40b5-9306-83e4b2c14e10__Command_AdjustCluster_idc82088d4.xml#idc82088d4-9fec-40b5-9306-83e4b2c14e10" title="Adjusts the cluster string for the specified job.">adjust_cluster</a></p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id041aba97-4faa-4aa4-858c-6f8c16a7764a"><p class="p"><a class="xref fm:HeadingOnly" href="Command_CheckClusterLimit_id293ac43b.html#id293ac43b-6c81-4d95-b657-b4d1028b0a81__Command_CheckClusterLimit_id293ac43b.xml#id293ac43b-6c81-4d95-b657-b4d1028b0a81" title="Previews the result of a cluster limit adjustment for the specified job.">check_cluster_limit</a></p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id01534a7d-7550-462c-a483-d88c53f8386a"><p class="p"><a class="xref fm:HeadingOnly" href="Command_PrioritizeJob_id89a3e6cf.html#id89a3e6cf-89c1-4dcf-9315-d16b1da5e570__Command_PrioritizeJob_id89a3e6cf.xml#id89a3e6cf-89c1-4dcf-9315-d16b1da5e570" title="Changes the priority for the specified job.">prioritize_job</a> </p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id8d4ef65f-8e0f-432a-8c7c-a88e4ef98289"><p class="p"><a class="xref fm:HeadingOnly" href="Command_CloseNode_id80b53a5b.html#id80b53a5b-039e-4928-833d-04baa6e61b30__Command_CloseNode_id80b53a5b.xml#id80b53a5b-039e-4928-833d-04baa6e61b30" title="Closes slots in the specified nodes.">close_node</a></p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id2c7c05a1-6db1-43c7-b688-0f0e18974c69"><p class="p"><a class="xref fm:HeadingOnly" href="Command_OpenNode_id3ec37e05.html#id3ec37e05-75ed-40b3-a411-bde317511cde__Command_OpenNode_id3ec37e05.xml#id3ec37e05-75ed-40b3-a411-bde317511cde" title="Opens closed slots in the specified nodes.">open_node</a></p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__id174629c3-175b-4246-8727-ee856fa6dc17"><p class="p"><a class="xref fm:HeadingOnly" href="Command_ReadConf_idb9550ec2.html#idb9550ec2-20a7-4a2d-aec5-efbaad2842fd__Command_ReadConf_idb9550ec2.xml#idb9550ec2-20a7-4a2d-aec5-efbaad2842fd" title="Reads the cluster configuration file and updates the cluster.">read_conf</a> </p>
+</li>
+<li class="li" id="idfa5ec92b-30fa-45ff-912b-fcd30134f4a9__idfc44dd0b-44f0-482c-93e7-68e2b7933760"><p class="p"><a class="xref fm:HeadingOnly" href="Command_RegisterNode_id0a162323.html#id0a162323-8001-42a2-8f7d-d8ebf93bd8c4__Command_RegisterNode_id0a162323.xml#id0a162323-8001-42a2-8f7d-d8ebf93bd8c4" title="Registers a specified remote node with the cluster manager along with an optional number of remote host job slots.">register_node</a></p>
+</li>
+</ul>
+<p class="p">For a full list of valid messaging commands, see “<a class="xref fm:HeadingOnly" href="Contain_MessagingCommands_id8faf0381.html#id8faf0381-dc98-43a9-b731-093c436a7f74__Contain_MessagingCommands_id8faf0381.xml#id8faf0381-dc98-43a9-b731-093c436a7f74" title="This section provides reference information on the messaging commands you can use with the calcm_send_message script. These messaging commands enable you to change aspects, such as the budget or priority, of a job that is currently running. Certain commands (as noted) are also accessible from the CalCM dashboard web interface if you supply the required authentication.">Messaging Commands</a>.”</p>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock leveled"><code>APPLICATION TCL calcm_jobqueue_app.tcl FILE [  
+	QUEUEDIR = calcm/jobqueue 
+	CLUSTERCONF = cluster.conf 
+	CLUSTERCOUNT = 1 
+	CLUSTERMIN = 1 
+	CLUSTERMAX = 100 
+] 
+ </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalcmTclApplicationReference_id59ca9376.html" title="This section provides reference information on the CalCM Tcl applications (default unless noted otherwise).">CalCM Tcl Application Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_cm_user"
+                DocTitle = "Calibre® Cluster Manager (CalCM) User’s Manual"
+                PageTitle = "calcm_jobqueue_app.tcl"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalcmJobqueueAppTcl_idfa5ec92b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Cluster Manager (CalCM) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Importing Chips into the Database" />
+<meta name="abstract" content="Import SPICE netlists and create chips for the design." />
+<meta name="description" content="Import SPICE netlists and create chips for the design." />
+<meta name="prodname" content="Calibre 3DSTACK User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_3dstack_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® 3DSTACK User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Importing Chips into the Database</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Importing Chips into the Database" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Importing Chips into the Database</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Import SPICE
+netlists and create chips for the design.</p>
+<p class="p">When you import a chip netlist into an active
+System Netlist Generator project, a SPICE subcircuit is defined
+for that chip. You can view the pins and properties of the chips
+in the Chips tree.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Set the MGC_SNG_SPICE_IMPORT_TEMP_DIR environment
+variable to the path of a temporary directory if you are importing
+large netlists.</p>
+</div>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id1984cb0f-26e1-4862-a85c-b0a81c5a9867"><p class="p">You
+have netlists to import or you have saved the <span class="ph filepath">myram_netlist.spi</span> and <span class="ph filepath">controller_netlist.spi</span> netlists
+in <a class="xref fm:Table" href="Contain_SystemNetlistGeneratorExample_ida63d3085.html#ida63d3085-51a7-47fa-83ad-70c42582c618__idd014e3d9-4d66-48e3-9929-6f2834ecef3e">Table 1</a> to two separate files.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id8960178c-5a73-4557-8fd2-85c42c4f929b"><li class="li step stepexpand" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id5804736e-401d-4a82-a6e8-74ac2f08c29d"><span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Import Chips</span></span> to
+load the SPICE netlists into the active database.</span><div class="itemgroup info StepInfo"><p class="p">The Import Chips pane opens
+in a tab in the Console area at the bottom of the main window.</p>
+</div></li>
+<li class="li step stepexpand" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__ide8bec9b3-d62b-476c-b70b-54a3bb82fde3"><span class="ph cmd">Click the <span class="ph uicontrol">Add Row</span> button.</span></li>
+<li class="li step stepexpand" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__idd5bb4dd8-2a24-4f68-877c-42fc1196a1db"><span class="ph cmd">Enter the Chip Name, Cell
+Name, Type, File Location, and Bus Characters of the netlist as
+shown:</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id81e420c8-3516-4c54-be76-3ca3f69b38bd"><br /><div class="imagecenter"><img class="image imagecenter" height="54" src="../graphics/system_netlister_example_import.gif" width="397" /></div><br /></div>
+<p class="p">Note, the controller and ram
+chips use different characters to denote a bus. The Bus columns
+are described under “<a class="xref fm:HeadingAndPage" href="Command_SngimportChip_id421b2e6a.html#id421b2e6a-89f6-4ad8-b382-8b7d20c5daa1__Command_SngimportChip_id421b2e6a.xml#id421b2e6a-89f6-4ad8-b382-8b7d20c5daa1" title="Imports an existing chip definition.">sng::import_chip</a>”.</p>
+</div></li>
+<li class="li step stepexpand" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id9d4e0ab7-d472-41e3-aab0-8b657d881254"><span class="ph cmd">Click the <span class="ph uicontrol">Import
+chips</span> button.</span><div class="itemgroup info StepInfo"><p class="p">Any syntax errors in the source
+netlists are immediately reported in the console. </p>
+<p class="p">If you make
+a mistake and want to import the source files again, choose <span class="ph menucascade"><span class="ph uicontrol">Edit</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Remove Chips</span></span> and
+select the items that you want to delete from the project. After
+removing the chips, you can then follow steps 1 to <a class="xref fm:NumberOnlyBlack" href="#id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__id9d4e0ab7-d472-41e3-aab0-8b657d881254">4</a> again.</p>
+</div></li>
+<li class="li step stepexpand" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__idc8abf0a0-6d76-4b19-9acf-ce2904e02a25"><span class="ph cmd">Save the database when you
+are done.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The imported chips are now displayed
+in the Chips tree as shown here:</p>
+<div class="fig fignone" id="id46aa7b41-3a48-43d1-8c8a-3e45e98fa44b__idf56b2326-2b9b-4f3c-b813-a943611a5159"><br /><div class="imagecenter"><img class="image imagecenter" height="59" src="../graphics/system_netlister_example_import_complete.gif" width="318" /></div><br /></div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following statements achieve
+the same steps using the Tcl console prompt:</p>
+<pre class="pre codeblock leveled"><code>sng::<a class="xref fm:HeadingOnly" href="Command_SngimportChip_id421b2e6a.html#id421b2e6a-89f6-4ad8-b382-8b7d20c5daa1__Command_SngimportChip_id421b2e6a.xml#id421b2e6a-89f6-4ad8-b382-8b7d20c5daa1" title="Imports an existing chip definition.">sng::import_chip</a> {sng::database} -chip_name {controller} \
+-cell_name {controller} -type {SPICE} -path {./controller_netlist.spi} \
+-bus_detection {Yes} -bus_chars {\&lt;\&gt;} 
+ 
+sng::import_chip {sng::database} -chip_name {ram} -cell_name {myram} \
+-type {SPICE} -path {./myram_netlist.spi} -bus_detection {Yes} \
+-bus_chars {\[\]} </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_SystemNetlistGeneratorExample_ida63d3085.html" title="Create a source netlist for an interposer design using the System Netlist Generator GUI. Design data is included.">System Netlist Generator Flow Example</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_SystemNetlistGeneratorExample_ida63d3085.html#ida63d3085-51a7-47fa-83ad-70c42582c618__" title="Create a source netlist for an interposer design using the System Netlist Generator GUI. Design data is included.">System Netlist Generator Flow Example</a></div>
+<div><a class="link" href="../topics/Concept_Workflow_ida0d941a3.html#ida0d941a3-fca0-4f32-98f9-ba442d154744__id242bf9c1-7e5b-4231-85b4-61e04ba2eda7">System Netlist Generator Workflow</a></div>
+<div><a class="link" href="../topics/Command_SngimportChip_id421b2e6a.html#id421b2e6a-89f6-4ad8-b382-8b7d20c5daa1__" title="Imports an existing chip definition.">sng::import_chip</a></div>
+<div><a class="link" href="../topics/Command_SngremoveChip_ida4516dc8.html#ida4516dc8-7623-446d-888e-70101b48d479__" title="Removes the selected chip definition.">sng::remove_chip</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_3dstack_user"
+                DocTitle = "Calibre® 3DSTACK User’s Manual"
+                PageTitle = "Importing Chips into the Database"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ImportingChipsIntoDatabase_id46aa7b41.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® 3DSTACK User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Check Text Override (CTO) File With Calibre Interactive nmDRC" />
+<meta name="abstract" content="Calibre Interactive nmDRC can create a Check Text Override file to control layer visibility for highlight actions and to define categories for filtering by category. The CTO file is used by Calibre RVE for DRC and DRC HTML reporting. The automatically generated CTO file causes only the layers used in the rule check to be displayed when highlighting a result. Category definitions are optional." />
+<meta name="description" content="Calibre Interactive nmDRC can create a Check Text Override file to control layer visibility for highlight actions and to define categories for filtering by category. The CTO file is used by Calibre RVE for DRC and DRC HTML reporting. The automatically generated CTO file causes only the layers used in the rule check to be displayed when highlighting a result. Category definitions are optional." />
+<meta name="prodname" content="Calibre Interactive (New GUI) User’s Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_n_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="3" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ (New GUI) User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="no" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id658dd609-e542-4077-9575-cb85913f6b53" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Check Text Override (CTO) File With Calibre Interactive nmDRC</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Check Text Override (CTO) File With Calibre Interactive nmDRC" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id658dd609-e542-4077-9575-cb85913f6b53">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating a Check Text Override
+(CTO) File With Calibre Interactive nmDRC</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Calibre Interactive
+nmDRC can create a Check Text Override file to control layer visibility
+for highlight actions and to define categories for filtering by
+category. The CTO file is used by Calibre RVE for DRC and DRC HTML
+reporting. The automatically generated CTO file causes only the
+layers used in the rule check to be displayed when highlighting
+a result. Category definitions are optional.</p>
+<p class="p">The CTO file includes RVE Show Layers statements
+based on the rule checks in your DRC rule file. If your design tool
+uses a layer map file to control the layout export to GDS, the layer
+map file can be specified so that the layout viewer layer names
+are used in the CTO file.</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layer', 'svrf_ur'); return false;">Layer</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layer Map', 'svrf_ur'); return false;">Layer Map</a> statements
+in the rule file are considered when creating the RVE Show Layers
+command in the CTO file. Restrictions apply if the Layer Map statement
+has an open-ended range for the layer or datatype. </p>
+</div>
+<div class="section Restrictions"><h2 class="title Subheading sectiontitle">Restrictions and Limitations</h2><ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id0297d74a-2b7b-4457-be59-2402adfaff16"><p class="p"><span class="ph FontProperty HeadingLabel">With a Layer Map File</span></p>
+<p class="p">If a layer map file is used, the
+following must be true in order for the layer to be included in
+the RVE Show Layers statement:</p>
+<ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id06507a16-ea93-4aaf-bc5f-07822a0c1f9c"><p class="p">Each layer must be listed
+in the layer map file. </p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__ida2f03b38-366f-40da-872a-eb003fd01ca2"><p class="p">Layer Map statements in
+the rule file must have closed ranges for the layer and datatype.</p>
+</li>
+</ul>
+<p class="p">If any of the above conditions
+is not met when using a layer map file, the corresponding layer
+is not used in the RVE Show Layers statement. </p>
+<p class="p">When using a layer map file, if there are Layer statements in
+your rule file without a corresponding Layer Map statement, all
+layer:purpose pairs mapped to the corresponding GDS layer in the
+layer map file are used in the RVE Show Layers statement for that
+layer.</p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id0729ccc4-686c-47d7-bfb3-662655083706"><p class="p"><span class="ph FontProperty HeadingLabel">Without a Layer Map File</span></p>
+<p class="p">If a layer map file is <span class="ph FontProperty emphasis">not</span> used,
+Layer Map statements in the rule file that have open ended ranges
+for the layer or datatype are ignored and a warning is issued. The
+corresponding Layer statement alone is used to determine the layer
+number for the RVE Show Layers statement. </p>
+</li>
+</ul>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__idd220fd97-1b4c-41eb-91f2-50307567bb95"><p class="p">A
+Calibre nmDRC rule file.</p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id1e4da54e-cb10-44a2-9d59-6a57c3da3729"><p class="p">(Optional)
+A layer map file in one of the following formats:</p>
+<ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__idce72cdb2-2db1-40d3-9336-0d02e992ef12"><p class="p">Calibre
+DESIGNrev layerprops file — See “<a class="xref Link" href="../../calbr_drv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'layerprops File Format', 'calbr_drv_user'); return false;">layerprops File Format</a>”
+in the <span class="ph FontProperty ManualTitle">Calibre DESIGNrev Layout Viewer User’s Manual</span></p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id862f88af-4274-45c0-afe0-917e72a7a244"><p class="p">Third-party
+layer map file format:</p>
+<ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id6092cc73-461a-4be6-a26b-5035181553e8"><p class="p">One
+entry per line with the following format: </p>
+<pre class="pre codeblock not-leveled"><code>viewer_layer_name viewer_purpose_name GDS_layer_num GDS_datatype</code></pre></li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id114b8625-b4f8-4437-a3a0-edc28c35f1d3"><p class="p">ASCII
+text file.</p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id02f65c2e-ea93-4932-8413-1f562f5c945f"><p class="p">Comment
+lines start with #.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">The Cadence Innovus layer map file (<span class="ph filepath">streamOut.map</span>)
+is not supported. </p>
+<p class="p">Use the layer map file if
+you want the RVE Show Layers statements in the CTO file to use layer
+and purpose pairs or layer names rather than layer numbers. The
+layer map file is also used when generating the Layers category
+definition; see Step <a class="xref fm:NumberOnlyBlack" href="#id658dd609-e542-4077-9575-cb85913f6b53__idaa9ba0a3-b3b6-46a9-a8a1-b128b36f9680">5</a>.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__ida72ba7d4-d2a8-4f7f-8bdb-e4de416e84c3"><span class="ph cmd">Open Calibre Interactive—nmDRC. </span></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__id17da53af-1196-4acd-8167-ab8f8129a7b7"><span class="ph cmd">Specify the rule file and
+other settings for the run. </span></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__id8dd68810-3004-418b-957d-42cd9fd83611"><span class="ph cmd">Click <span class="ph uicontrol">Outputs</span> on
+the left panel. </span></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__id2f1a9f86-f968-48c0-a028-19fa8e2b31e0"><span class="ph cmd">For DRC
+Results Database, select ASCII as the Format. </span></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__idaa9ba0a3-b3b6-46a9-a8a1-b128b36f9680"><span class="ph cmd">Enable
+“Create CTO file” and specify options:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__idbada2a70-3c29-4ca3-96ca-df5a049d7821"><p class="p">Viewer
+Layer Map File — Specify a layer map file if you want design tool
+layer and purpose pairs to be used in the RVE Show Layers statements
+rather than the GDS or OASIS layer numbers.</p>
+<p class="p">See the “Prerequisites” section
+for the format of the layer map file and the “Restrictions and Limitations”
+section for additional information. </p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id8795df7b-0ef5-4fcc-bb89-5910c061af20"><p class="p">Generate Categories
+from — Select Groups, Layers, and⁄or Recipes to include the selected
+categories in the CTO file. The category definitions are used to
+filter by category in Calibre RVE for DRC. See “Filtering DRC Results
+by Category” in the <span class="ph FontProperty ManualTitle">Calibre RVE User’s Manual</span>.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__id946d39f3-f465-4401-9e3a-ce004b2846b4"><span class="ph cmd">Click <span class="ph uicontrol">Run DRC</span>. </span></li>
+<li class="li step stepexpand" id="id658dd609-e542-4077-9575-cb85913f6b53__id3a951bf7-13ed-43cf-873c-c68dc7dce8e9"><span class="ph cmd">Examine the resulting CTO
+file. If you received any warnings, examine the layers and rules
+checks affected by the warnings and correct the CTO file if necessary. </span><div class="itemgroup info StepInfo"><p class="p">If you are using a layer map
+file and there are Layer statements in your rule file without a
+corresponding Layer Map statement, all layer:purpose pairs mapped
+to the corresponding GDS layer in the layer map file are used in
+the RVE Show Layers statement for that layer. </p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">A CTO file with RVE Show Layers statements
+for each rule check is created. The format of the layer parameter
+in the RVE Show Layers statement is as follows:</p>
+<ul class="ul"><li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id357c1787-4c95-42db-8c24-6f6673147fb9"><p class="p"><span class="ph FontProperty HeadingLabel">Layer map file is used</span> —
+The layer is given as <span class="keyword ParameterName OptionalReplaceable">layer:purpose</span>. </p>
+</li>
+<li class="li" id="id658dd609-e542-4077-9575-cb85913f6b53__id3e84b427-a3be-409a-9f47-0be30a38213a"><p class="p"><span class="ph FontProperty HeadingLabel">Layer map file not used</span> —
+The layer is given as <span class="keyword ParameterName OptionalReplaceable">layer</span>,
+where <span class="keyword ParameterName OptionalReplaceable">layer</span> is
+the layer number, or <span class="keyword ParameterName OptionalReplaceable">layer.datatype</span> if
+Layer Map statements in the rule file provide a datatype. </p>
+</li>
+</ul>
+<p class="p">Results with and without a layer map
+file are given in the “Examples” section.</p>
+<p class="p">If a results database with the name <span class="ph filepath">results_rdb</span> is
+open in Calibre RVE and the created CTO file is named <span class="ph filepath">results_rdb.cto</span> and
+in the same directory, then the results database is reloaded and
+the CTO file is applied. </p>
+<p class="p">Also see the examples included with “Creating a Check Text Override
+(CTO) File Using Calibre RVE” in the <span class="ph FontProperty ManualTitle">Calibre RVE User’s Manual</span>.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreInteractiveNmdrc_id3f1d700f.html" title="You can specify inputs, outputs, and options for a Calibre nmDRC run using Calibre Interactive nmDRC.">Calibre Interactive nmDRC</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_n_user"
+                DocTitle = "Calibre® Interactive™ (New GUI) User’s Manual"
+                PageTitle = "Creating a Check Text Override (CTO) File With Calibre Interactive nmDRC"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingACheckTextOverrideCTOFileWithCalibreInteractiveNmDRC_id658dd609.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ (New GUI) User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

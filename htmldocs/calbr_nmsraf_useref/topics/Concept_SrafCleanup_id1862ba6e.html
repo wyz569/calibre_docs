@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="SRAF Cleanup" />
+<meta name="abstract" content="Calibre nmSRAF uses multiple steps to clean generated SRAFs for their optimal placement." />
+<meta name="description" content="Calibre nmSRAF uses multiple steps to clean generated SRAFs for their optimal placement." />
+<meta name="prodname" content="Calibre® nmSRAF™ User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmsraf_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 23, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmSRAF™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id1862ba6e-2af6-44f7-a288-f2b8c427a96c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>SRAF Cleanup</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="SRAF Cleanup" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id1862ba6e-2af6-44f7-a288-f2b8c427a96c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">SRAF Cleanup</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Calibre nmSRAF uses
+multiple steps to clean generated SRAFs for their optimal placement.</span>
+</div>
+<p class="p">Calibre nmSRAF
+generates SRAFs within each tile of the input design. The tiles
+are then processed sequentially. For each tile, SRAFs are generated
+in a loop over all specified priorities from the lowest to highest
+priority number. For each priority specified by each template, field SRAFs
+are initially generated. These SRAFs follow the rules and tags specified
+within the templates. Because of the interrelationship of various
+priorities and rules, generated field SRAFs may violate MRCs (mask
+rule checks), or overlap other SRAFs or target shapes.</p>
+<p class="p">To resolve these violations, after field SRAFs
+are generated, cleanup is performed to remove MRC conflicts between
+SRAFs of the current priority and SRAFs of other priorities, and
+SRAF overlap of target shapes. All cleanup steps are performed for
+each priority. MRC parameters and cleanup options may be used to
+tune cleanup steps for individual priorities.</p>
+<p class="p">SRAF cleanup is ordered by priority, and all
+SRAFs retain their original priority throughout all cleanup phases.
+SRAFs are prioritized by specifying the ‘prior’ keyword in the generating template;
+a ‘prior’ value of 1 is the highest priority (greater values representing
+lower priorities), and these SRAFs take cleanup precedence. After
+SRAFs of highest priority are MRC-clean, the next lower-priority
+SRAFs are processed. Subsequently processed SRAFs of lower priorities
+respect all previously cleaned SRAFs of higher priorities. In this
+example, the template specifying ‘prior 2’ takes precedence, followed
+by ‘prior 3’, and lastly by ‘prior 4’:</p>
+<pre class="pre codeblock"><code>rectedge tag tag2
+	width 0.025 extension 0.01 offset 0.10 <span class="ph CodeHighlight red">prior 2</span>
+rectcorner tag tag1
+	width 0.03 length 0.03 offsetx 0.12 offsety 0.12 <span class="ph CodeHighlight red">prior 3</span>
+rectedge tag tag1
+	width 0.03 extension 0.01 offset 0.16 <span class="ph CodeHighlight red">prior 4</span></code></pre><p class="p">After each tile has been processed, some SRAFs near tile boundaries
+may be hierarchically promoted to provide spatial context, allowing
+those SRAFs across boundaries to be cleaned and meet MRCs.</p>
+<p class="p">SRAF cleanup processes are detailed in the
+following table, consisting of cleanup steps, the respective impact
+of available cleanupversion settings and their associated debug
+layers that are generated. Each cleanup step is shown in the order
+in which it is processed, and as a function of the cleanupversion
+parameter setting, 0 or 1. Each step generates their respective
+debug layers (when specifying the corresponding setlayer cnsraf
+debug command) shown in the last column. See the table footnote
+for step name explanations.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id1862ba6e-2af6-44f7-a288-f2b8c427a96c__id6f899e8a-6168-46c2-802b-bf872e9a9959" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Cleanup Steps, cleanupversion Impact and Associated Debug Layers</span></caption><colgroup><col style="width:0.887in" /><col style="width:1.599in" /><col style="width:1.599in" /><col style="width:3.390in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d58097e183"><p class="p">Step Name </p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d58097e186"><p class="p">CV0</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d58097e189"><p class="p">CV1</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d58097e192"><p class="p">Debug Layer(s)</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>INI</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">field, candidates, lineend, protected, extra2, maxoffset,
+tags, cornerrange, edgerange, initialfield, densefilter</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a>PRE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">clipears, preclean</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_3" href="#fntarg_3"><sup>3</sup></a>IPA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if IPA parameters
+are specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Run if IPA parameters
+are specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">align, ambiguous</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_4" href="#fntarg_4"><sup>4</sup></a>BSP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if dynamicsizing is
+specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run unless cleanmode
+immediate is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">barsplit, unsizablebarsplit</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_5" href="#fntarg_5"><sup>5</sup></a>LEM1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">N/A</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">lem1, lem1u</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_6" href="#fntarg_6"><sup>6</sup></a>CM0</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if centermerge is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Run if centermerge is specified
+or if <span class="ph FontProperty P10">dynamicsizingrunlength</span> equals
+0.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">centermerge0raw, centermerge0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_7" href="#fntarg_7"><sup>7</sup></a>SDS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if dynamicsizing is
+greater than 0.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run unless cleanmode
+immediate is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">dynamic, unsizabledynamic</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_8" href="#fntarg_8"><sup>8</sup></a>ADS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if dynamicsizing is
+greater than 0 and intersection is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">asymmetric, unsizableasymmetric,
+process</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_9" href="#fntarg_9"><sup>9</sup></a>ADS1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if dynamicsizing is
+greater than 0.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">asymmetric1, unsizable_asymmetric1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_10" href="#fntarg_10"><sup>10</sup></a>BSP1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if reducedbarsplit is
+equal to 3.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Run if reducedbarsplit is
+equal to 3.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">barsplit1, unsizablebarsplit1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_11" href="#fntarg_11"><sup>11</sup></a>CM</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if centermerge is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">centermergeraw, centermerge,
+process</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_12" href="#fntarg_12"><sup>12</sup></a>CR</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Run if maxconflict is greater
+than 0.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Run if maxconflict is greater
+than 0.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">unsizable, hardconflict, conflict, conflictbbox, conflictbar,
+resolution, conflictres, unsizableconflictres</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_13" href="#fntarg_13"><sup>13</sup></a>LEM</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">lem, lemu</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_14" href="#fntarg_14"><sup>14</sup></a>UBAR</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">N/A</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">ubarsplitpostcr</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e183 "><p class="p"><a name="fnsrc_15" href="#fntarg_15"><sup>15</sup></a>ISO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e186 "><p class="p">Always run, controlled
+by intersection and maxlength.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e189 "><p class="p">Always run, controlled
+by intersection and maxlength.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d58097e192 "><p class="p">maxlength, intersection,
+unsizable_intersection, post_intersection, unsizable_post_intersection, final,
+oprotected, positive, negative, sraf_pn</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_SrafCleanup_id95a2e300.html" title="Optimal placement of SRAFs require an iterative cleanup process during generation.">SRAF Cleanup</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  INI - Initialization. SRAF candidates
+are generated.</div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  PRE - Pre-clean. Removes duplicate SRAFs
+and SRAFs found within other SRAFs of the same priority.</div><div class="fn"><a name="fntarg_3" href="#fnsrc_3"><sup>3</sup></a>  IPA - Intra- and
+inter-priority alignment. Aligns SRAFs by width, then merges line-ends
+of same and different priorities, respectively.</div><div class="fn"><a name="fntarg_4" href="#fnsrc_4"><sup>4</sup></a>  BSP - Preliminary bar splitting. Removes
+initial conflicts between perpendicular SRAFs.</div><div class="fn"><a name="fntarg_5" href="#fnsrc_5"><sup>5</sup></a>  LEM1 - Preliminary line-end merging.
+Merges line-ends after preliminary bar splitting.</div><div class="fn"><a name="fntarg_6" href="#fnsrc_6"><sup>6</sup></a>  CM0 - Preliminary center merging. Generates
+an SRAF centered between a pair of parallel SRAFs still in need
+of cleanup. </div><div class="fn"><a name="fntarg_7" href="#fnsrc_7"><sup>7</sup></a>  SDS - Symmetric dynamic sizing. Removes
+conflicts in the length direction of SRAFs.</div><div class="fn"><a name="fntarg_8" href="#fnsrc_8"><sup>8</sup></a>  ADS - Asymmetric dynamic sizing. Reduces
+the length of regular SRAFs to make space to place unsizable SRAFs. </div><div class="fn"><a name="fntarg_9" href="#fnsrc_9"><sup>9</sup></a>  ADS1 - Final asymmetric dynamic sizing.
+Performs dynamic sizing for unsizable SRAFs</div><div class="fn"><a name="fntarg_10" href="#fnsrc_10"><sup>10</sup></a>  BSP1
+- Final bar splitting. Bar splitting subsequent to the previous
+asymmetric dynamic sizing.</div><div class="fn"><a name="fntarg_11" href="#fnsrc_11"><sup>11</sup></a>  CM - Final center merge. Generates an
+SRAF centered between a pair of parallel SRAFs. </div><div class="fn"><a name="fntarg_12" href="#fnsrc_12"><sup>12</sup></a>  CR - Conflict resolution. Identifies
+conflict regions and inserts a single square or rectangular SRAF
+into the conflict region.</div><div class="fn"><a name="fntarg_13" href="#fnsrc_13"><sup>13</sup></a>  LEM - Final line-end merging. Merges
+all line-ends.</div><div class="fn"><a name="fntarg_14" href="#fnsrc_14"><sup>14</sup></a>  UBAR - Unsizable bar splitting. Final
+priority-based cleanup step; performs bar splitting for all unsizable
+SRAFs.</div><div class="fn"><a name="fntarg_15" href="#fnsrc_15"><sup>15</sup></a>  ISO - SRAF isolation. Outputs MRC-clean
+SRAFs for all priorities at the end of the cleanup process.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmsraf_useref"
+                DocTitle = "Calibre® nmSRAF™ User’s and Reference Manual"
+                PageTitle = "SRAF Cleanup"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_SrafCleanup_id1862ba6e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmSRAF™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

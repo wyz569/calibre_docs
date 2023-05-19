@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Efficient Width and Spacing Checks" />
+<meta name="abstract" content="In general, it is best to avoid using a dimensional check operation when other operations would suffice. Dimensional check operations are slower than other layer operations because of the computational overhead of checking distances between numerous edges." />
+<meta name="description" content="In general, it is best to avoid using a dimensional check operation when other operations would suffice. Dimensional check operations are slower than other layer operations because of the computational overhead of checking distances between numerous edges." />
+<meta name="DC.subject" content="Dimensional check operations, improving runtime" />
+<meta name="keywords" content="Dimensional check operations, improving runtime" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Efficient Width and Spacing Checks</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Efficient Width and Spacing Checks" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Efficient Width and Spacing Checks</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">In general,
+it is best to avoid using a dimensional check operation when other
+operations would suffice. Dimensional check operations are slower
+than other layer operations because of the computational overhead
+of checking distances between numerous edges.</span>
+</div>
+<p class="p">One
+example where this applies is contact checking. For example, consider
+the design rule:</p>
+<p class="p BlockIndent">Contacts must
+be rectangles of width greater than or equal 0.10 and less than
+or equal to 0.15. </p>
+<p class="p">One way to check this is the following:</p>
+<pre class="pre codeblock leveled"><code>contact_size {
+    INT (contact) &gt;= 0.10 &lt;= 0.15 ABUT &lt; 90  
+    // Output the bad edges </code></pre><p class="p">This is functionally correct, but relatively
+slow because of the number of contact edges that must be measured.</p>
+<p class="p">A faster rule is this one:</p>
+<pre class="pre codeblock leveled"><code>contact_size { 
+    NOT RECTANGLE contact &gt;= 0.10 &lt;= 0.15 BY &gt;= 0.10 &lt;= 0.15 
+} </code></pre><div class="note tip"><span class="tiptitle">Tip</span> <p class="p">The [<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Rectangle', 'svrf_ur'); return false;">Not</a>] <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Rectangle', 'svrf_ur'); return false;">Rectangle</a> operation
+is optimized to look for [non-]rectangular polygons and to filter them
+according to edge length criteria.</p>
+</div>
+<p class="p">Another general rule for avoiding excessive
+run time is never to use a very large design rule constraint in
+a dimensional check operation on a layer whose average feature size
+is much smaller than the rule’s constraint or where the layer has
+a high density of polygons. This can slow DRC down by orders of
+magnitude. For example:</p>
+<pre class="pre codeblock leveled"><code>Rule_5 { 
+    EXT pad metal2 &lt; 32 // this is a huge constraint distance 
+} </code></pre><p class="p">The
+constraint used in this check is huge in comparison to typical feature
+sizes, and the number of metal2 polygons in the design is probably
+large. Calibre nmDRC does not ignore the potentially large number
+of metal2 shapes that are in the middle of the circuit and that
+can have no possible interaction with the pads. Therefore, this
+check is very slow.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">To avoid the performance
+penalty of using large constraints, <span class="ph FontProperty emphasis">reduce the layer data</span> that
+the dimensional check operation must consider whenever this is possible.
+You can do this by filtering out non-essential objects using well-constructed
+layer derivations.</p>
+</div>
+<p class="p">Because a polygon topological operation is
+faster than a dimensional check operation, and because there are
+generally very few pad shapes, the following rule can offer significant
+speed improvement: </p>
+<div class="fig fignone ExampleTitle" id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4__id2ad96e39-233b-4a10-83d1-a90fb2e073bc"><span class="figcap"><span class="fig--title-label">Example 1. </span>Optimized
+Spacing Check for Large Measurement Distance</span><pre class="pre codeblock leveled"><code>Rule_5 { 
+    X = SIZE pad BY 32.1       // make pads larger by 32.1 units 
+    Y = metal2 NOT OUTSIDE X  
+    // any metal 2 touching or within X? probably not much. 
+    EXT pad Y &lt; 32             //now do the external check 
+} </code></pre></div>
+<p class="p">For this check, note the following things:</p>
+<ul class="ul"><li class="li" id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4__ideaf8106a-ab19-4768-9a3b-1f58e9d32235"><p class="p">The choice of 32.1 for the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Size', 'svrf_ur'); return false;">Size</a> BY operation is somewhat arbitrary.
+You want to grow the pads just a bit more than the constraint distance
+you want to check in order to ensure all metal2 polygons that could
+cause errors are considered. </p>
+</li>
+<li class="li" id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4__idcdddf28c-5dee-4df5-bec6-ffc401765644"><p class="p">All metal2 polygons inside or touching
+layer X are output as layer Y. There are likely few of these polygons,
+so the end result of deriving layers X and Y is to filter out all
+the metal2 you are not concerned about.</p>
+</li>
+</ul>
+<p class="p">For the remainder of this discussion, assume
+you have the following layer derivation:</p>
+<pre class="pre codeblock leveled"><code>x = EXT layer1 &gt; 30.0 &lt; 90.0 OPPOSITE REGION</code></pre><p class="p">The intent of this sort of a derivation is
+to store the regions between layer1 polygons that are spaced &gt; 30.0
+and lie within a cell boundary. These regions are then used for
+further checks.</p>
+<p class="p">Assuming layer1 is rather dense, this derivation
+is inefficient because the lower bound of this constraint is huge,
+and the constraint interval is likewise huge.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">When you want to
+take EXTernal-type measurements and the measurement interval is
+large, you can use either <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Expand Edge', 'svrf_ur'); return false;">Expand Edge</a> or
+Size to write a more efficient rule. Also consider using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Space', 'svrf_ur'); return false;">DFM Space</a>.</p>
+</div>
+<p class="p">For the derivation of layer x above, layer1
+could either be a derived edge layer or a polygon layer. The following
+derivations cover these two cases and are far more efficient from
+a runtime standpoint than using EXTernal.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Case 1</span> —
+Input layer is derived-edge type.</p>
+<div class="fig fignone ExampleTitle" id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4__id76ccb818-8fca-472a-921d-559af8688ffe"><span class="figcap"><span class="fig--title-label">Example 2. </span>Using
+Expand Edge Instead of EXTernal</span><pre class="pre codeblock leveled"><code>w = EXPAND EDGE layer1 OUTSIDE BY 15.0 
+// Merge layer1 shapes that are &lt;= 30.0 user units apart. 
+// If they are spaced &gt; 30, there will be more than one shape on w. 
+
+y = EXTENT DRAWN ORIGINAL // get the extent of the chip 
+
+z = y INTERACT w &gt; 1 
+// If there is more than one shape on w, then z = chip extent.  
+// Otherwise, z is empty. 
+
+layer1_big = w INTERACT z   
+// Oversized layer1. Use this for further derivations as needed. </code></pre></div>
+<p class="p">This derivation avoids using a dimensional
+check operation completely. It also uses techniques like reducing
+the layer data that layer operations must consider. The Expand Edge
+operation merges numerous polygons together, thus making the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Interact', 'svrf_ur'); return false;">Interact</a> operation
+very fast.</p>
+<div class="note tip"><span class="tiptitle">Tip</span> <p class="p">Interact is a versatile
+layer operation and quite fast. It is useful for filtering polygons
+that overlap or touch each other.</p>
+</div>
+<p class="p"><span class="ph FontProperty HeadingLabel">Case 2 </span>—
+Input layer is polygon type.</p>
+<p class="p">The only difference between Case 2 and Case
+1 is Size is used instead of Expand Edge.</p>
+<div class="fig fignone ExampleTitle" id="id01f9cd4e-de67-4096-b815-75b3ce9ea0b4__id72bcfb61-dbe5-4535-b45d-9a74c474c4c6"><span class="figcap"><span class="fig--title-label">Example 3. </span>Using
+Size Instead of EXTernal</span><pre class="pre codeblock leveled"><code>w = SIZE layer1 BY 15.0 
+y = EXTENT DRAWN ORIGINAL 
+z = y INTERACT w &gt; 1 
+layer1_big = w INTERACT z  </code></pre></div>
+<p class="p">One drawback to using this type of derivation
+is the results presentation is not as refined as for EXTernal because
+the output more closely represents the use of the SQUARE metric
+as opposed to the default Euclidean metric. However, if you look
+at the results from these two cases in the context of the original
+layout shapes, you should be able to determine which edges satisfy
+the constraints of the original rule.</p>
+<p class="p">To get a better approximation of the Euclidean
+measurement, you can remove small convex corners from layer1 polygons,
+thus leaving small 45-degree edges at the corners instead.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MaximizingDrcCapacityMinimizingRunTime_id42d8d446.html" title="Calibre nmDRC applications produce derived layer data during the course of operation and delete all original and derived data when they are no longer required. Some systems produce all derived layer data up front and delete all of the data when the run is complete. Calibre nmDRC attempts to maximize capacity by delaying data production until it is required and by deleting data when it is no longer required.">Maximizing DRC Capacity and Minimizing Run Time</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Efficient Width and Spacing Checks"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_EfficientWidthSpacingChecks_id01f9cd4e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

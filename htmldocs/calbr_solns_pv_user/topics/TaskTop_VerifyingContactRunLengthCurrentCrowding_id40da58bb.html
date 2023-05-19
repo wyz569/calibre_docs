@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Verifying Contact Run Length for Current Crowding" />
+<meta name="abstract" content="You can quantify current crowding through a gate based on the run length of contacts on each side of the gate and identify gates that have the worst current crowding effects." />
+<meta name="description" content="You can quantify current crowding through a gate based on the run length of contacts on each side of the gate and identify gates that have the worst current crowding effects." />
+<meta name="DC.subject" content="Equation-based DRC checks, current crowding - contact run length" />
+<meta name="keywords" content="Equation-based DRC checks, current crowding - contact run length" />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id40da58bb-d122-4d15-bfbb-efb79f04f362" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Verifying Contact Run Length for Current Crowding</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Verifying Contact Run Length for Current Crowding" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id40da58bb-d122-4d15-bfbb-efb79f04f362">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Verifying Contact Run Length for Current Crowding</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">You can quantify
+current crowding through a gate based on the run length of contacts
+on each side of the gate and identify gates that have the worst
+current crowding effects.</p>
+<p class="p">This rule uses the ratio of gate width to
+total contact run length. As this ratio increases, the current density
+around the contacts is likely to increase, causing an undesirable
+increase in the series resistance of the device. See <a class="xref fm:Figure" href="#id40da58bb-d122-4d15-bfbb-efb79f04f362__id15341524-6dae-4d69-8e44-6099aba3af5d">Figure 1</a>.</p>
+<div class="fig fignone" id="id15341524-6dae-4d69-8e44-6099aba3af5d"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Contact Run Length Current Crowding</span><br /><div class="imagecenter"><img class="image imagecenter" height="212" src="../graphics/adv_drc03a.png" width="258" /></div><br /></div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idd5b7a3c0-e183-4e61-b297-a42640ee6837" class="table" frame="hsides" border="1" rules="cols"><colgroup><col style="width:0.989in" /><col style="width:5.186in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p">    <span class="ph FontProperty HeadingLabel">Try It!</span> </p>
+<img class="image fmdpi:96" src="../graphics/try_it_note_small.png" /></td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre Advanced DRC (eqDRC) Tutorial and Example Kit</span></p>
+<p class="p">Go to <a class="xref" href="http://supportnet.mentor.com/infohub.cfm?infohub=ver_ih&amp;link=cal_ekit_IC" target="_blank">this page</a> on Support Center
+to download the complete eKit.</p>
+<p class="p">This example is in the contact_via_checks/current_crowding_con_run_length
+example directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id40da58bb-d122-4d15-bfbb-efb79f04f362__id04ae751a-5758-43a5-8237-317d69ea1b4a"><span class="ph cmd">Derive the contact to gate
+edge pairs:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>con_gate_spc = EXT CON gate &lt; 0.15 OPPOSITE </code></pre></div></li>
+<li class="li step stepexpand" id="id40da58bb-d122-4d15-bfbb-efb79f04f362__id72773668-e780-4111-bbad-f4b7b3068df4"><span class="ph cmd">Derive the gate edges:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>gate_edges = COIN EDGE gate sd </code></pre></div></li>
+<li class="li step stepexpand" id="id40da58bb-d122-4d15-bfbb-efb79f04f362__id21fdabb3-5141-4921-a694-0a856855362f"><span class="ph cmd">Use the LENGTH function to
+measure the length of the gate edge, and the EC function to measure
+the common run length of the contact-to-gate edge pairs. Divide
+these quantities to obtain a ratio: </span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>current_crowding = DFM PROPERTY gate_edges con_gate_spc
+                     OVERLAP ABUT ALSO
+                     [ratio = LENGTH(gate_edges)/EC(con_gate_spc)] </code></pre><p class="p">A high ratio suggests increased
+current crowding.</p>
+</div></li>
+<li class="li step stepexpand" id="id40da58bb-d122-4d15-bfbb-efb79f04f362__ide78967d9-9261-4391-bd7b-f31d06823725"><span class="ph cmd">Output the results using a
+DFM RDB operation.</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>current_crowding {
+  DFM RDB current_crowding eqdrc.rdb CHECKNAME "%_l_" 
+       CELL SPACE ALL CELLS 
+}</code></pre></div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ContactViaChecks_id2eebc3bb.html" title="This section presents various contact and via checks.">Contact and Via Checks</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Introduction to DFM Property', 'calbr_ver_user'); return false;">Introduction to DFM Property [Calibre Verification User's Manual]</a></div>
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Measurement Functions', 'svrf_ur'); return false;">Measurement Functions [Standard Verification Rule Format (SVRF) Manual]</a></div>
+<div><a class="link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Introduction to DFM RDB', 'calbr_ver_user'); return false;">Introduction to DFM RDB [Calibre Verification User's Manual]</a></div>
+<div><a class="link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Math Operators', 'svrf_ur'); return false;">Math Operators [Standard Verification Rule Format (SVRF) Manual]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Verifying Contact Run Length for Current Crowding"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_VerifyingContactRunLengthCurrentCrowding_id40da58bb.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

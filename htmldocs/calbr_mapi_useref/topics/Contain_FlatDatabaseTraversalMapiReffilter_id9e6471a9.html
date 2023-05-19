@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Flat Database Traversal (MAPI_RefFilter)" />
+<meta name="abstract" content="Frequently, it becomes necessary to transform some element of a hierarchical database to the top-level coordinate system. For instance, it becomes necessary to find all flat-perspective placements of a particular cell. The MAPI_Flatten function and MAPI_RefFilter class provide a flexible mechanism for such flat data traversal." />
+<meta name="description" content="Frequently, it becomes necessary to transform some element of a hierarchical database to the top-level coordinate system. For instance, it becomes necessary to find all flat-perspective placements of a particular cell. The MAPI_Flatten function and MAPI_RefFilter class provide a flexible mechanism for such flat data traversal." />
+<meta name="prodname" content="Calibre Metrology API (MAPI) User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mapi_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Metrology API (MAPI) User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9e6471a9-5273-4584-8c0a-bed61e28810b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Flat Database Traversal (MAPI_RefFilter)</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Flat Database Traversal (MAPI_RefFilter)" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9e6471a9-5273-4584-8c0a-bed61e28810b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Flat Database
+Traversal (MAPI_RefFilter)</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">Frequently,
+it becomes necessary to transform some element of a hierarchical
+database to the top-level coordinate system. For instance, it becomes necessary
+to find all flat-perspective placements of a particular cell. The
+MAPI_Flatten function and MAPI_RefFilter class provide a flexible
+mechanism for such flat data traversal.</span>
+</div>
+<p class="p">To initiate flat data traversal,
+submit a layout, starting cell, starting transform, and “reference
+filter” to the MAPI_Flatten function. That function recursively flattens
+every placement in the layout to the top coordinate system. For
+each such placement, it calls the “FilterRef” function of the filter
+object with the cell and placement transform. You can perform whatever
+action is necessary as indicated by the information, as well as
+return a signal that will halt the recursion into the sub-hierarchy
+of that placement.</p>
+<p class="p">Complete details of the structures involved
+can be found in Appendix <a class="xref fm:NumberOnly" href="MGCAppe_MapiInterfaces_id81942161.html#id81942161-6ca6-4faf-b0e6-ce045b74e233__MGCAppe_MapiInterfaces_id81942161.xml#id81942161-6ca6-4faf-b0e6-ce045b74e233" title="All Calibre MAPI interfaces can be found in the mdp_mapi.itcl file distributed with the Calibre MAPI product.">MAPI Interfaces</a>, “<a class="xref fm:HeadingOnly" href="MGCAppe_MapiInterfaces_id81942161.html#id81942161-6ca6-4faf-b0e6-ce045b74e233__MGCAppe_MapiInterfaces_id81942161.xml#id81942161-6ca6-4faf-b0e6-ce045b74e233" title="All Calibre MAPI interfaces can be found in the mdp_mapi.itcl file distributed with the Calibre MAPI product.">MAPI Interfaces</a>.”</p>
+<p class="p">The MAPI_RefFilter class uses the method
+FilterRef function to filter and generate application-specific output
+for flattened EGDS references. In this case, “cell” is the EGDS
+cell name and “xform” is the MAPI transform from the cell coordinate
+system to the output coordinate system. The function will return
+a Boolean value; if it is true, it will not flatten the sub-hierarchy,
+otherwise, it will return false.</p>
+<p class="p">The following is covered in this section:</p>
+<ul class="ul"><li class="li" id="id9e6471a9-5273-4584-8c0a-bed61e28810b__id49c5abc5-4c09-44bf-a08a-e2a4f8318d93"><p class="p"><a class="xref fm:HeadingOnly" href="Command_MapiFlattenConstructor_id1233fe6d.html#id1233fe6d-d576-47c3-98ea-37238b0edbef__Command_MapiFlattenConstructor_id1233fe6d.xml#id1233fe6d-d576-47c3-98ea-37238b0edbef" title="The MAPI_Flatten constructor recursively flattens the layout. This function can be modified by the choice of the filter input parameter.">MAPI_Flatten Constructor</a> — Recursively flattens the layout.</p>
+</li>
+</ul>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Command_MapiFlattenConstructor_id1233fe6d.html" title="The MAPI_Flatten constructor recursively flattens the layout. This function can be modified by the choice of the filter input parameter.">MAPI_Flatten Constructor</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreMapiReference_id03a91caf.html" title="The Calibre MAPI interface is composed of Tcl-based batch scripting commands.">Calibre MAPI Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mapi_useref"
+                DocTitle = "Calibre® Metrology API (MAPI) User’s and Reference Manual"
+                PageTitle = "Flat Database Traversal (MAPI_RefFilter)"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_FlatDatabaseTraversalMapiReffilter_id9e6471a9.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Metrology API (MAPI) User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

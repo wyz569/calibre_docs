@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Generating a Flare Map With RET FLARE_CONVOLVE" />
+<meta name="abstract" content="The flare map is a PNG file which, when used with an EUV litho model, specifies the flare as a function of position in the layout. EUV flare effects have a very long range, and are approximated by a convolution with the mask instead of the intensity to speed up computation." />
+<meta name="description" content="The flare map is a PNG file which, when used with an EUV litho model, specifies the flare as a function of position in the layout. EUV flare effects have a very long range, and are approximated by a convolution with the mask instead of the intensity to speed up computation." />
+<meta name="prodname" content="Calibre WORKbench User's and Reference Manual" />
+<meta name="version" content="2017.3" />
+<meta name="release" content="v2017.3" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre WORKbench User's and Reference Manual" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-18" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_wbench_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 20, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® WORKbench™ User’s and Reference Manual" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ide5152252-6ac1-4828-a3cf-0e73c248825c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Generating a Flare Map With RET FLARE_CONVOLVE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Generating a Flare Map With RET FLARE_CONVOLVE" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ide5152252-6ac1-4828-a3cf-0e73c248825c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Generating a Flare Map With RET FLARE_CONVOLVE</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The flare map
+is a PNG file which, when used with an EUV litho model, specifies
+the flare as a function of position in the layout. EUV flare effects
+have a very long range, and are approximated by a convolution with
+the mask instead of the intensity to speed up computation.</p>
+<p class="p">The <a class="xref Link" href="../../calbr_nmopc_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_nmopc_useref'); return false;">RET FLARE_CONVOLVE</a> SVRF
+statement, documented in the <span class="keyword ParameterName OptionalReplaceable">Calibre nmOPC User’s and Reference Manual</span>, creates
+a PNG file that shows density values after applying convolution
+algorithms. The algorithms evaluate the density value of a window
+by taking into consideration the layout densities in the surrounding
+regions. </p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id069bfb4c-ef9d-475f-b741-063626caca2a"><p class="p">A
+flare model file (see “<a class="xref fm:HeadingAndPage" href="TaskTop_CreatingFlareModelFile_idea5ec89d.html#idea5ec89d-ad4c-4bff-a3d7-47fb46957af9__TaskTop_CreatingFlareModelFile_idea5ec89d.xml#idea5ec89d-ad4c-4bff-a3d7-47fb46957af9" title="A flare model file is required for creating the PNG flare map.">Creating a Flare Model File</a>”) or litho model containing
+the flare model file</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idf76df87d-3172-47a8-8a7e-3c5e9a53a84d"><p class="p">A
+design file</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id2f32e3a1-8b2d-4f16-ac5a-da02ae20ffb5"><span class="ph cmd">Create an SVRF rule file that
+contains the layer list for the flare map design file.</span></li>
+<li class="li step stepexpand" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id2f83e4ee-5f11-4b6b-86fe-36b3a026e3fc"><span class="ph cmd">Add a RET FLARE_CONVOLVE call
+to the rule file, using the following syntax:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code><span class="keyword ParameterName RequiredReplaceable">dummy_layer</span> = <span class="keyword ParameterName Required">RET FLARE_CONVOLVE</span> <span class="keyword ParameterName RequiredReplaceable">input_layer</span> [<span class="keyword ParameterName OptionalReplaceable">marker_layer</span>]
+[INSIDE OF EXTENT | INSIDE OF <span class="keyword ParameterName OptionalReplaceable">x1 y1 x2 y2</span> | INSIDE OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer3</span>]
+FILE ‘<span class="keyword ParameterName Required">[</span>’ 
+		{<span class="keyword ParameterName Required">flare_model</span> <span class="keyword ParameterName RequiredReplaceable">FM </span>|<span class="keyword ParameterName RequiredReplaceable"> </span><span class="keyword ParameterName Required">litho_model </span><span class="keyword ParameterName RequiredReplaceable">lm</span>} 
+		<span class="keyword ParameterName Required">PNGOUT</span> <span class="keyword ParameterName RequiredReplaceable">pngfile</span> 
+		[WINDOW w] 
+		<span class="keyword ParameterName Required">TRUNCATE</span> | 
+			{<span class="keyword ParameterName Required">WRAP</span> [<span class="keyword ParameterName Optional">field_overlap</span> <span class="keyword ParameterName OptionalReplaceable">um</span> [<span class="keyword ParameterName OptionalReplaceable">um</span>][field_type clear | <span class="keyword ParameterName OptionalDefault">dark</span>]]}
+		[dummy_fill {<span class="keyword ParameterName OptionalReplaceable">value</span> | auto}]
+‘<span class="keyword ParameterName Required">]</span>’ 
+ </code></pre><p class="p">where:</p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idb59c09e8-926a-40c8-b0dd-52c32d8c1688"><p class="p"><span class="keyword ParameterName RequiredReplaceable">input_layer</span> —
+A required keyword that specifies the name of an original or derived
+polygon layer. This is the layer containing the data to which Calibre
+applies the convolution functionality. In other words, this is the
+layer that is used to calculate the pattern density.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idf99107a3-e362-4deb-a01e-cc1eafef058f"><p class="p" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idc9a2d7fb-6623-4df4-9e7e-c43c19ee202b"><span class="keyword ParameterName OptionalReplaceable">marker_layer</span> —
+The name of an original or derived polygon layer. This layer should
+only be specified with the dummy_fill argument.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idf8da8189-d50d-486c-948c-faa2ce8d6986"><p class="p">INSIDE OF EXTENT | INSIDE OF <span class="keyword ParameterName OptionalReplaceable">x1</span> <span class="keyword ParameterName OptionalReplaceable">y1</span> <span class="keyword ParameterName OptionalReplaceable">x2</span> <span class="keyword ParameterName OptionalReplaceable">y2</span> |
+INSIDE OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer3</span></p>
+<p class="p">An optional keyword set that
+defines a rectangular boundary within which the tool creates the
+density grid. The choices are:</p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__iddbd3af24-ca78-43a1-a538-51fd6cdae58c"><p class="p">INSIDE OF EXTENT — Specifies
+that the rectangular boundary is the extent of the <span class="keyword ParameterName RequiredReplaceable">input_layer</span>.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id177a6d96-8dd4-46a0-8a2e-6a903ae9f3f2"><p class="p">INSIDE OF <span class="keyword ParameterName OptionalReplaceable">x1</span> <span class="keyword ParameterName OptionalReplaceable">y1</span> <span class="keyword ParameterName OptionalReplaceable">x2</span> <span class="keyword ParameterName OptionalReplaceable">y2</span> —
+Specifies the lower-left and upper-right corners of the rectangular
+boundary in user units. You must write the coordinates relative
+to the origin of the Calibre database, and enclose any negative
+coordinates in parentheses (). For example: </p>
+<pre class="pre codeblock leveled"><code>	INSIDE OF (-123) 123 (-12) 456</code></pre></li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id70e46ece-1ea0-4a6f-8f87-ab471067220e"><p class="p">INSIDE OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer3</span> —
+Specifies that the rectangular boundary is the extent of <span class="keyword ParameterName OptionalReplaceable">layer3</span>.
+The layer specified by <span class="keyword ParameterName OptionalReplaceable">layer3</span> cannot
+be the same as <span class="keyword ParameterName RequiredReplaceable">input_layer</span>.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id0f26c329-5673-4e16-8517-483f8934cadc"><p class="p"><span class="keyword ParameterName Required">flare_model </span><span class="keyword ParameterName RequiredReplaceable">FM</span> —
+A required keyword that specifies the flare model file. </p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id650d2751-6adb-482f-bf91-e447d4fc8691"><p class="p"><span class="keyword ParameterName Required">litho_model </span><span class="keyword ParameterName RequiredReplaceable">lm — </span>Instead
+of using a flare model file directly, you can specify a litho model
+that contains flare model information.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id4800d74d-301c-487c-94d9-599f3b492830"><p class="p"><span class="keyword ParameterName Required">PNGOUT</span> <span class="keyword ParameterName RequiredReplaceable">pngfile</span> —
+A required keyword that specifies the PNG-format output file (the
+flare map).</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id809a906e-53b0-4320-8e98-468491b240b7"><p class="p"><span class="keyword ParameterName Optional">WINDOW</span> <span class="keyword ParameterName OptionalReplaceable">w</span> —
+An optional keyword that specifies the size of the window in user
+units within which the tool calculates the density and applies the
+convolution algorithm. The recommended value for this parameter
+is 1 um or larger. </p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id00dd6f55-1f6c-4037-8c58-ee14a05a3a2f"><p class="p"><span class="keyword ParameterName Required">TRUNCATE</span> | <span class="keyword ParameterName Required">WRAP</span> —
+An required keyword (one of <span class="keyword ParameterName Required">TRUNCATE</span> or <span class="keyword ParameterName Required">WRAP</span> is
+required) that specifies how the tool calculates the density of
+a window that overlaps the boundary box of the <span class="keyword ParameterName RequiredReplaceable">input_layer</span>. </p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idf884ed0b-0bf9-4c3e-b38f-8dbc01a2872a"><p class="p"><span class="keyword ParameterName Required">TRUNCATE</span> — Instructs
+the tool to compute the density of the overlapping window by truncating
+the size of the window so that it does not extend beyond the boundary box. </p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id4109877a-8adb-4463-93ff-d131529d375f"><p class="p"><span class="keyword ParameterName Required">WRAP</span> —
+Instructs the tool to compute the density of the overlapping window
+by duplicating and adding the boundary box, and its data, to the
+right-hand or top side of the main boundary box. The density measurement
+is then taken in the window that intersects the duplicated boundaries.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id91a788bf-263d-40a0-a719-7beb725ad686"><p class="p">field_overlap <span class="keyword ParameterName OptionalReplaceable">um</span> [<span class="keyword ParameterName OptionalReplaceable">um</span>]
+[field_type clear | <span class="keyword ParameterName OptionalDefault">dark</span>]</p>
+<p class="p">An optional argument for WRAP that specifies how much overlap
+to assume in the neighboring fields. The distance <span class="keyword ParameterName OptionalReplaceable">um</span> should
+be in microns measured at the wafer.</p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id7f180fb7-29b7-4408-8c17-4a96510efb4c"><p class="p" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id29e5eaab-7d04-47fe-9c61-ec5982f1124c">field_overlap <span class="keyword ParameterName OptionalReplaceable">um</span> —
+This form calculates the overlap from all eight neighboring fields
+(top, left, right, bottom, ne, se, nw, and sw) to the center is
+the same.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id2d3dedb1-7947-4b0d-b13d-078106e1e772"><p class="p" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idb00876b4-a0d4-405b-963f-8fbeb4e6941f">field_overlap <span class="keyword ParameterName OptionalReplaceable">um</span> <span class="keyword ParameterName OptionalReplaceable">um</span> —
+This form applies the first floating-point value to the left and
+right neighbors, and the second value to the top and bottom neighbors.
+The corners (ne, nw, se, and sw) combine the overlaps of their respective
+X and Y values.</p>
+</li>
+</ul>
+<p class="p">A warning is added to the log file if overlapping polygons are
+detected during the part of the operation when eight neighboring
+fields are created.</p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id44600a73-7e44-449f-a2b3-57ad9966ed95"><p class="p" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id00ec3b63-0ff4-444a-a4e6-17799526eccd">field_type {clear
+| <span class="keyword ParameterName OptionalDefault">dark</span>}
+— An optional argument for field_overlap that specifies the type
+of the final layout, clear or dark. (Dark is the default.) If it
+is set incorrectly, the field_overlap results can be inaccurate. </p>
+</li>
+</ul>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idcd426cf1-40c2-4370-bbf3-0a28c2f51446"><p class="p">dummy_fill
+{<span class="keyword ParameterName OptionalReplaceable">value</span> | auto}</p>
+<p class="p">An optional keyword that assigns the area covered by <span class="keyword ParameterName OptionalReplaceable">marker_layer</span> a
+pre-convolution density. This can be useful when the layout has
+large “cutouts” with zero density, as is common with kerf regions.</p>
+<p class="p">A <span class="keyword ParameterName OptionalReplaceable">marker_layer</span> is
+required when specifying dummy_fill. The layer may contain multiple
+polygons.</p>
+<p class="p">The dummy_fill keyword must include one of the following arguments
+that specifies the density to assign:</p>
+<ul class="ul"><li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idc655cd5d-68e6-4149-996d-10c872f27010"><p class="p" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idaa53e4df-bdb9-4643-8201-ea8d7c2758a1"><span class="keyword ParameterName OptionalReplaceable">value</span> —
+A number from 0 to 1, inclusive.</p>
+</li>
+<li class="li" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idb0d92adc-6d67-4b48-a9e5-814a590f4c6c"><p class="p">auto — A keyword
+that uses the average density of <span class="keyword ParameterName RequiredReplaceable">input_layer</span> outside
+of <span class="keyword ParameterName OptionalReplaceable">marker_layer</span>.</p>
+</li>
+</ul>
+<p class="p">Note that the dummy_fill value is <span class="ph FontProperty emphasis">added</span> to any
+density that would normally be computed during convolution for the
+region covered by the marker layer. </p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__id428278c9-4d06-45fb-a708-2368d0fe3297"><span class="ph cmd">Add a DRC CHECK MAP call using
+the <span class="keyword ParameterName OptionalReplaceable">dummy_layer</span> as
+an output. This is required to perform the density calculations
+even though there is no visible output and it contains no useful
+information. </span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code><span class="keyword ParameterName OptionalReplaceable">dummy_layer</span> { COPY <span class="keyword ParameterName OptionalReplaceable">dummy_layer</span> } DRC CHECK MAP <span class="keyword ParameterName OptionalReplaceable">dummy_layer</span> <span class="keyword ParameterName OptionalReplaceable">layernum</span></code></pre></div></li>
+<li class="li step stepexpand" id="ide5152252-6ac1-4828-a3cf-0e73c248825c__idf4fd0cd3-533b-404d-b816-cec59ff60be4"><span class="ph cmd">Run the rule file. </span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">A flare map output file (<span class="keyword ParameterName OptionalReplaceable">&lt;pngfile&gt;.png</span>)
+is created. If it completes successfully, proceed to “<a class="xref fm:HeadingAndPage" href="TaskTop_CreatingEuvOpticalModelFile_id34c56563.html#id34c56563-b684-44a2-8401-002175058026__TaskTop_CreatingEuvOpticalModelFile_id34c56563.xml#id34c56563-b684-44a2-8401-002175058026" title="An initial EUV optical model is most effectively created by using the Optical Model Tool in Calibre WORKbench.">Creating an EUV Optical Model File</a>”.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_BasicFlowCreatingEuvModel_id658c4654.html" title="Creating an EUV model is similar to creating a DUV model, but adds steps to the flow.">Basic Flow for Creating an EUV Model</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_wbench_useref"
+                DocTitle = "Calibre® WORKbench™ User’s and Reference Manual"
+                PageTitle = "Generating a Flare Map With RET FLARE_CONVOLVE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_GeneratingFlareMapRetFlareConvolve_ide5152252.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® WORKbench™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

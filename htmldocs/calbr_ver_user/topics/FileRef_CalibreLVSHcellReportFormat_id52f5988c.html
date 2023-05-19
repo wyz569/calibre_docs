@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Calibre LVS Hcell Report Format" />
+<meta name="abstract" content="This report shows which hcells were matched and how, which hcells were rejected and why, and is useful for hcell list optimization for the input designs in a hierarchical LVS run." />
+<meta name="description" content="This report shows which hcells were matched and how, which hcells were rejected and why, and is useful for hcell list optimization for the input designs in a hierarchical LVS run." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre LVS Hcell Report Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre LVS Hcell Report Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre LVS Hcell Report Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Output from LVS Hcell Report specification
+statement.</p>
+<p class="shortdesc">This report shows which hcells were matched and how,
+which hcells were rejected and why, and is useful for hcell list
+optimization for the input designs in a hierarchical LVS run.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The CALIBRE LVS HCELL REPORT consists of a header followed by
+named sections. The form of the report is controlled using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Hcell Report', 'svrf_ur'); return false;">LVS Hcell Report</a> BY
+REJECTION (default) or BY HCELL keywords. The major sections are
+identical regardless of which report format is selected.</p>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id8417de45-c247-4290-b4a9-cd9d4ab56df9"><h2 class="title Subheading sectiontitle">Header</h2><p class="p">The report header has the following entries:</p>
+<pre class="pre codeblock"><code>REPORT FILE NAME:         &lt;filename&gt;
+LAYOUT NAME:              &lt;pathname&gt; ('&lt;primary_cell&gt;')
+SOURCE NAME:              &lt;pathname&gt; ('&lt;primary_cell&gt;')
+RULE FILE:                &lt;filename&gt;
+CREATION TIME:            &lt;timestamp&gt;
+CURRENT DIRECTORY:        &lt;working_directory_pathname&gt;
+USER NAME:                &lt;username&gt;
+CALIBRE VERSION:          &lt;Calibre_version&gt;</code></pre><p class="p">The names of the fields that are completed at runtime are as
+shown.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__idb603e2a8-cd68-41ad-8a4d-1925bb2be0a5"><h2 class="title Subheading sectiontitle">SETTINGS</h2><p class="p">This section shows the rule file configuration for the following
+statements when the report was produced:</p>
+<ul class="ul"><li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id462d2cad-7074-4e60-979a-881ddac9e315"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Auto Expand Hcells', 'svrf_ur'); return false;">LVS Auto Expand Hcells</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__idd5522824-3642-4f8a-b9dd-9bea60efea10"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Compare Case', 'svrf_ur'); return false;">LVS Compare Case</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id54964a4d-2e85-41f5-87c9-1698d7c2daa4"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Exclude Hcell', 'svrf_ur'); return false;">LVS Exclude Hcell</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id45341bd7-9be1-4924-a74d-74483b696409"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Ambiguously High Shorted Hcells', 'svrf_ur'); return false;">LVS Expand Ambiguously High Shorted Hcells</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__idb98b7f66-27db-492d-89fb-564b5d7b3892"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Seed Promotions', 'svrf_ur'); return false;">LVS Expand Seed Promotions</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id2ba5159a-4acf-4319-8e6e-ad1fdbc4fec3"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Unbalanced Cells', 'svrf_ur'); return false;">LVS Expand Unbalanced Cells</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id9dcc2347-e560-4e0a-a946-47290748404f"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Flatten Inside Cell', 'svrf_ur'); return false;">LVS Flatten Inside Cell</a></p>
+</li>
+<li class="li" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id41a385ca-f39d-4173-a34e-82a024ae7839"><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Hcell Report', 'svrf_ur'); return false;">LVS Hcell Report</a></p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__idf5b76d5d-5b30-4af6-9da8-f31e09e9c44a"><h2 class="title Subheading sectiontitle">HCELL
+SPECIFICATIONS</h2><p class="p">This section summarizes how the aggregate list of hcells used
+for the run was comprised. Entries are as follows:</p>
+<pre class="pre codeblock"><code>Hcell file from &lt;-genhcells | -hcell&gt;:   &lt;filename&gt;
+Command included -automatch:  &lt;no | yes&gt;
+Hcells found in SVRF:         &lt;no | yes&gt;</code></pre><p class="p">The -hcell or -genhcells entries only appear if those options
+are used on the command line. If a custom script is specified for
+-genhcells, the path to the script and its contents are listed.
+The final line pertains to use of the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> specification
+statement (or its TVF equivalent) in the rule file.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id4c6b3fa8-2709-4f0d-97af-f84ee59f59cc"><h2 class="title Subheading sectiontitle">HCELLS
+EXCLUDED BY LVS EXCLUDE HCELL</h2><p class="p">If any hcells are excluded by an LVS Exclude Hcell statement
+in the rule file, then this section of the report appears with a
+list of such cells.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id3ba6c1d3-828e-43cd-ab47-ed7073f957e8"><h2 class="title Subheading sectiontitle">FAUX
+BIN CELLS</h2><p class="p">If faux bin cells are constructed during a
+circuit extraction run and the LVS Hcell Report statement was active,
+then this section of the report appears. A faux bin cell is a pseudocell (ICV_*
+cell) generated by the hierarchical database constructor that can
+be traced to a single cell in the original layout design. The pseudocell
+name and the corresponding original name are listed in this section.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id71fc7d7f-daa6-4b92-89fa-e0a6dab4f78a"><h2 class="title Subheading sectiontitle">CORRESPONDENCE
+DETAILS</h2><p class="p">This is the primary section of the report. The section contains
+a detailed table with entries related to the handling of hcell correspondences.
+The meanings of the names of the columns are largely intuitive and
+are defined in <a class="xref fm:Table" href="#id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__CEGEHDFD">Table 1</a>.</p>
+<p class="p">For every pair of cells that Calibre considered
+as a potential correspondence, this section provides information
+about the pair, whether the correspondence was established, and
+if not, why it was rejected. If a pair was established, the report
+shows whether any instances of the cells were expanded due to LVS
+Expand Unbalanced Cells YES or LVS Flatten Inside Cell. Also, if
+circuit extraction identified the layout cell as a high-cost hcell
+or was subject to layer operations that degrade hierarchy, the optimization
+operation and score are provided whether or not the cell was automatically
+expanded during comparison.</p>
+<p class="p">The default report form (optionally specified with the BY REJECTION
+keyword) and the form specified using the BY HCELL keyword are similar
+in many ways, but there are notable differences.</p>
+<p class="p">The default report contains a column named “Hcell specification,”
+which lists corresponding cell pairs as they were originally specified.
+The BY HCELL form replaces the “Hcell specification” column with
+a “Rejected” column that lists whether or not a pair was rejected and,
+if so, the reason why.</p>
+<p class="p">A given potential correspondence can be implied by multiple user-specified
+hcells, or by both hcells and the -automatch option. Such a potential
+correspondence is only listed once in either report form. In the
+default report, it is arbitrary which hcell specification and match
+type are listed with it. In the BY HCELL report, the correspondence
+appears in only one HCELL SPECIFICATION subheading (described later
+in this section).</p>
+<p class="p">The default report format contains subsections listed in <a class="xref fm:Table" href="#id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__CEGIAEDH">Table 2</a>. The CORRESPONDENCES ESTABLISHED
+subsection always appears, and it is always the final subsection
+if there is more than one. The other subsections appear in arbitrary
+order and only when required.</p>
+<p class="p">In the default report, if any specified hcells cannot be found
+in the layout or source, then they are listed at the end of the
+section in a table like this:</p>
+<pre class="pre codeblock"><code>UNMATCHED HCELLS
+----------------
+
+  Layout     Source
+  name       name       From
+  --------   --------   --------
+  &lt;cell&gt;     &lt;cell&gt;     &lt;originating source&gt;</code></pre><p class="p">The cell names appear as they do in the originating source for
+the hcell specification indicated in the “From” column.</p>
+<p class="p">The BY HCELL format contains additional lines as follows:</p>
+<pre class="pre codeblock"><code>HCELL SPECIFICATION - LAYOUT NAME: &lt;layout list name&gt;   SOURCE NAME: &lt;source list name&gt;   FROM: &lt;list origin&gt;</code></pre><p class="p">This shows original names (in the original text case) that appear
+in the hcell lists, along with the originating source of the names:
+“SVRF” for Hcell statements in the rule file, or a pathname for a
+-hcell file or the list generated by a -genhcells script. Under
+each subheading, potential correspondences that were rejected are
+listed before those that are accepted. These lines can be particularly
+helpful when wildcard matching of hcell names is used. </p>
+<p class="p">If -automatch is specified on the command line, then the BY HCELL
+report includes an AUTOMATCHING subheading, and all potential correspondences
+for this matching method are listed afterward. Primary cells are
+listed here if not matched elsewhere in the report.</p>
+<p class="p">When an hcell specification leads to no potential correspondences,
+it is given a subheading in the BY HCELLS report followed by no
+line items (an empty subsection). This allows easy identification
+of those hcell specifications that did not match any actual cell
+pairs. The same holds for AUTOMATCHING subsections. If no cell pairs
+were found having matching names, and the top-level cells were explicitly
+matched, an empty AUTOMATCHING section will be present.</p>
+<p class="p">At the end of this section, there is a legend that lists the
+various mnemonics that actually appear as reason codes, along with
+their meanings.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id734a6e26-bace-4726-a7bb-14c8e3c9d910"><h2 class="title Subheading sectiontitle">LARGEST
+FLATTENED CELLS</h2><p class="p">This section lists non-hcells having the greatest
+internal instance counts prior to flattening. The cells may be non-hcells
+either because they were in no hcell list (including -automatch)
+or they were hcells subject to expansion. Up to 20 cells are listed
+for each design. Cells in this list might make good hcells.</p>
+<p class="p">The layout and source cells are listed separately by name along
+with the numbers of instances contained in these cells. The contained
+instance counts are broken out into two classes: “Cell” which refers
+to cell placements, and “Primitive” which refers to primitive device
+instances.</p>
+<p class="p">If there are no flattened cells, then this section of the report
+is omitted.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id6c017c8c-442f-4172-bee3-4a7528312a13"><h2 class="title Subheading sectiontitle">UNBALANCED
+HCELLS EXPANDED</h2><p class="p">This section is included only when the WITH EXPANDED keyword
+is specified in the LVS Hcell Report statement, and then only when
+there is at least one expanded hcell that meets the threshold for
+inclusion. The data are formatted as a table with the following
+column headings:</p>
+<pre class="pre codeblock"><code>Layout                               Source
+----------------------------------   ------------------------------------
+Within      Expanded    Placements   Within       Expanded     Placements
+cell        cell        expanded     cell         cell         expanded 
+----------  ----------  ----------   ----------   ----------   ----------</code></pre><p class="p">Each row in the table represents the expansion of one hcell within
+another. The columns labeled “Within cell” contain the layout and
+source names for the containing hcell, while those labeled “Expanded
+cell” contain the names for the hcell that was expanded. The “Placements expanded”
+columns provide the number of placements of the cell that were expanded
+into the containing cell in the layout and source circuits. One
+row is generated for each pair of hcells where both of the following
+are true:</p>
+<p class="p BlockIndent">The expanded cell was expanded into the containing
+cell due to LVS Expand Unbalanced Cells processing.</p>
+<p class="p BlockIndent">The expanded cell's overall placement count in either
+the layout or the source circuit (or both) is greater than or equal
+to the threshold given in the WITH EXPANDED specification. The overall
+placement count here means the sum of the placement counts of the
+cell across all other hcells after flattening non-hcells.</p>
+<p class="p">In scenarios involving one-to-many correspondences, multiple
+rows may be written to provide all the data relating to the expansion
+of one correspondence within another.</p>
+</div>
+<div class="section Subsection" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__id3d4971fd-6dea-4879-9260-66e26db7c32b"><h2 class="title Subheading sectiontitle">POTENTIAL
+HCELL ADDITIONS</h2><p class="p">This section lists any hcells that potentially could make good
+hcells, thus providing additional memory and runtime savings. When
+present, it identifies certain layout or source non-hcells based
+on various metrics.</p>
+<p class="p">In each case, a source cell name or a layout cell name is provided.
+Since Calibre cannot generally determine how cells in the layout
+and source should correspond (no such information exists in GDS,
+OASIS, or SPICE), the user must determine how to match such names
+in hcell specifications. No distinction is drawn between cells that
+did not match any hcell specification and those that were rejected
+for some reason, they are both non-hcells.</p>
+<p class="p">Two different metrics identify cells that it might benefit performance
+to make into hcells: HIC and internal instance count.</p>
+<p class="p">The Hierarchical Instance Count (HIC) of a layout or source design
+is the sum of instance counts across all that design's hcells after
+expanding all non-hcells. Reductions in the HIC tend to correspond
+to reduced LVS memory usage and run times. There are two related
+subsections in the LVS report, one for the layout circuit and one
+for the source circuit. In each case, potential hcells are chosen
+by their calculated HIC reduction potential, which is expressed
+as a percentage rounded to the nearest integer. For each such cell,
+the cell name and percentage are listed in the appropriate subsection. </p>
+<p class="p">The actual HIC reduction that occurs upon making one of these
+cells an hcell may be different from the calculated potential due
+to factors like unbalanced hcell expansion, which the simple calculations
+done for this report do not account for. The Query Server's hcell
+analyzer accounts for such factors, however. Also note that the
+HIC reduction potential for each listed cell is calculated assuming
+that the given cell is added as an hcell and all else remains constant. Therefore,
+though several cells may be listed, once one of them is converted
+to an hcell, the calculations for the others are no longer valid.
+The hcell analyzer solves this by updating the calculations after
+each hcell is chosen, and before identifying the next candidate.
+For these reasons, the hcell analyzer is the preferred tool for
+finding potential hcell additions. A generic message to that effect
+appears in this subsection of the report.</p>
+<p class="p">Up to three source cells and three layout cells may be listed.
+Each is a non-hcell with a potential to improve the HIC in its circuit
+by at least five percent. Large cells are defined as those whose internal
+instance count is at least one percent of the total flat instance
+count of the circuit. Such cells are often good choices for hcells.
+Subsections are provided to list the large cells in the source and
+layout designs. Each such subsection provides a list of cell names
+with instance counts.</p>
+<p class="p">All empty subsections are omitted. For example, if there are
+no large cells in the source design, there will be no subsection
+for them. If there are no cells to list in any of the subsections,
+the entire section is omitted.</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">The entries in the following table are organized
+by the CORRESPONDENCE DETAILS column headers as they appear from
+left to right and reading from top to bottom. Header names that
+appear more than once in a given report format are not repeated.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__CEGEHDFD" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Correspondence Table Column Header Definitions</span></caption><colgroup><col style="width:1.973in" /><col style="width:4.527in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d125940e351"><p class="p">Column</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d125940e354"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Layout</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists cells from the layout design.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">High-cost hcell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">If there is an adverse
+performance impact for maintaining a cell as an hcell during circuit
+extraction, or the cell is subject to layer operations that degrade
+hierarchy, that information appears in this column. The former is
+related to the LVS Auto Expand Hcells specification statement. This
+column does not apply in an exclusively SPICE-to-SPICE comparison
+run.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Source</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists cells from the source design that
+correspond to those in the Layout column in the aggregate hcell
+list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Hcell specification</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists hcell names as they were specified
+and the originating source. Appears only the default form of the
+report. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Rejected</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates whether an hcell pair was rejected
+and, if so, why. Appears only in the BY HCELL form of the report.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Expanded</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates whether an hcell (for correspondences
+that were actually established) was expanded due to <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Unbalanced Cells', 'svrf_ur'); return false;">LVS Expand Unbalanced Cells</a> YES
+or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Flatten Inside Cell ', 'svrf_ur'); return false;">LVS Flatten Inside Cell</a> statements.
+If so, the instance count and reason are given.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Cell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists the names of cells as returned from
+the SPICE parser. These names are case-sensitive if the rule file
+specifies such handling. Names receive a “&gt;” prefix if the cell
+has an internal instance count representing at least 1% of the overall
+flat instance count of the circuit containing the cell (source or
+layout).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Ports</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists initial cell port counts.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Match type</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates how the cell was matched. Types
+include the following:</p>
+<p class="p">direct — exact match (case-insensitive by default).</p>
+<p class="p">wildcard — matched by a wildcard pattern.</p>
+<p class="p">clone — a layout cell is a clone cell whose original name matches a
+specified hcell name (not applicable to Source names).</p>
+<p class="p">auto — matched by the -automatch command line option heuristic (case-insensitive
+by default). This category always applies to top-level cells.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Optimization</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates the layout optimization applied
+to calculate a high cost hcell during circuit extraction. The optimization
+is an acronym code. The codes are defined in the report. These codes
+are not generally useful to an end user except possibly for regression purposes.
+What is important is the cost associated with an optimization, as
+cost can be used to control hcell expansion.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Cost</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates the cost a layout cell incurs
+if it is maintained as an hcell. This is calculated only for high-cost
+layout cells. The value is a percentage represented as an integer
+used in the LVS Auto Expand Hcells specification statement.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Layout name</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists layout cell names as they appear in
+a user specification. Blank if matched by -automatch heuristic.
+Appears only in default report form.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Source name</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists source cell names as they appear in
+a user specification. Blank if matched by -automatch heuristic.
+Appears only in default report form.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">From</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists the originating source of an hcell
+pair specification. The value is either a filename or “SVRF”. SVRF
+indicates a rule file Hcell statement (or equivalent in TVF). Appears
+only in default report form. This field is blank if the cell was
+matched with -auto, and the Match type field will show “auto”.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Y/N</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates whether an hcell pair was rejected.
+N means no; Y means yes. Appears only in BY HCELL report form.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Reason</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates the reason why an hcell pair was
+rejected using a code. Appears only in BY HCELL report form. Codes
+are described in <a class="xref fm:Table" href="#id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__CEGIAEDH">Table 2</a>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Instances</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Lists the total number
+of expanded instances in layout and source when an expansion occurs
+due to LVS Expand Unbalanced Cells YES or LVS Flatten Inside Cell
+statements. This applies only to valid correspondences. If the correspondence
+was rejected, or if no instances of either cell were expanded, this
+field is left blank.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e351 "><p class="p">Reason</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e354 "><p class="p">Indicates the reason why a valid hcell pair
+was expanded. The reason is given as an acronym code related to
+rule file statements. The codes are these:</p>
+<p class="p">LEUC — due to LVS Expand Unbalanced Cells YES.</p>
+<p class="p">LFIC — due to LVS Flatten Inside Cell.</p>
+<p class="p">BOTH — due to both specification statements.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following table lists subsections that can appear in the
+default report format. The BY HCELL report code is a corresponding
+Reason code that appears in the Rejected column of that report.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id52f5988c-c6c8-4b8a-be7a-ed61bc8553ba__CEGIAEDH" class="table ArgumentTable" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>BY REJECTION Report CORRESPONDENCES Subsections
+and Related BY HCELL Reason Codes</span></caption><colgroup><col style="width:6.500in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d125940e520"><p class="p">Subsection Title in Default Report</p>
+<p class="p">Description</p>
+<p class="p">BY HCELL Reason Code</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES ESTABLISHED</p>
+<p class="p">Lists valid hcell correspondences. This subsection is always
+present in the default report.</p>
+<p class="p">BY HCELL Reason Code: not applicable</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES EXPANDED DUE TO AMBIGUOUS
+HIGH SHORTING</p>
+<p class="p">Lists cells rejected as hcells because their pins are ambiguously
+high-shorted. See <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Ambiguously High Shorted Hcells', 'svrf_ur'); return false;">LVS Expand Ambiguously High Shorted Hcells</a>.</p>
+<p class="p">BY HCELL Reason code: AHS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES FULLY EXPANDED DUE TO LVS
+FLATTEN INSIDE CELL</p>
+<p class="p">Lists cells rejected as hcells due to <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Flatten Inside Cell', 'svrf_ur'); return false;">LVS Flatten Inside Cell</a> statements.
+Hcells that are expanded in some instances but not others due to
+LVS Flatten Inside Cell are listed as established.</p>
+<p class="p">BY HCELL Reason code: FEXP LFIC</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES FULLY EXPANDED DUE TO UNBALANCED
+HCELL EXPANSION</p>
+<p class="p">Lists cells rejected due to <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Expand Unbalanced Cells', 'svrf_ur'); return false;">LVS Expand Unbalanced Cells</a> YES
+(the default). Hcells that are expanded in some instances but not
+others due to LVS Expand Unbalanced Cells are listed as established.</p>
+<p class="p">BY HCELL Reason code: FEXP LEUC</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES FULLY EXPANDED DUE TO LVS
+FLATTEN INSIDE CELL AND UNBALANCED HCELL EXPANSION</p>
+<p class="p">Lists cells rejected as hcells for both of
+the preceding two reasons listed in this table. Hcells that are
+expanded in some instances but not others due to the two specification
+statements are listed as established.</p>
+<p class="p">BY HCELL Reason code: FEXP BOTH</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES IGNORED DUE TO HIERARCHICAL
+CONFLICTS</p>
+<p class="p">Lists cells rejected as hcells because using them would create
+a cyclical reference in the merged hierarchy. This phenomenon is
+discussed under “<a class="xref fm:HeadingAndPage" href="Concept_HcellCorrespondence_id79a27645.html#id79a27645-8511-4a69-906c-6f9a5942e6d9__Concept_HcellCorrespondence_id79a27645.xml#id79a27645-8511-4a69-906c-6f9a5942e6d9" title="Cell correspondence between layout and source is defined in an hcell list. An hcell list has layout cell names in the left column with corresponding source cell names in the right column.">Hcell Correspondence</a>”.</p>
+<p class="p">BY HCELL Reason code: HIERCONF</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES REJECTED BECAUSE THEY WOULD
+HAVE RESULTED IN MANY-TO-MANY RELATIONSHIPS</p>
+<p class="p">Lists cells rejected as hcells because they form a many-to-many
+match. This phenomenon is discussed under “<a class="xref fm:HeadingAndPage" href="Concept_HcellCorrespondence_id79a27645.html#id79a27645-8511-4a69-906c-6f9a5942e6d9__Concept_HcellCorrespondence_id79a27645.xml#id79a27645-8511-4a69-906c-6f9a5942e6d9" title="Cell correspondence between layout and source is defined in an hcell list. An hcell list has layout cell names in the left column with corresponding source cell names in the right column.">Hcell Correspondence</a>”. </p>
+<p class="p">BY HCELL Reason code: MANYMANY</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES REJECTED DUE TO AUTOEXPANSION</p>
+<p class="p">Lists cells rejected as hcells because they
+were subject to layer operations that degrade hierarchy.</p>
+<p class="p">BY HCELL Reason code: AUTO</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES REJECTED DUE TO DEFERRED
+STRICTNESS CONSTRAINTS</p>
+<p class="p">Lists cells rejected as hcells due to mismatch in port counts.
+This can occur when the ‑genhcells command line option is used.
+See <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'hcellsautomatch', 'calbr_query_user'); return false;">hcells::automatch</a> in
+the <cite class="cite">Calibre Query Server Manual</cite> for details.</p>
+<p class="p">BY HCELL Reason code: STRICT</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES REJECTED DUE TO INCOMPATIBLE
+KINDS</p>
+<p class="p">Lists cells rejected as hcells because one of the cells is a
+primary cell but the other is not.</p>
+<p class="p">BY HCELL Reason code: DIFFKIND</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d125940e520 "><p class="p">CORRESPONDENCES REJECTED DUE TO SEED PROMOTION</p>
+<p class="p">Lists cells rejected as hcells because seed promotion has occurred
+in a layout cell. See “<a class="xref" href="Concept_HcellsCircuitComparison_id1a9d220b.html#id1a9d220b-15eb-4fd7-9259-761562bccac5__id7c5587d5-0d8b-4de8-843c-825ac169eed6">Seed Promotion and Hcells</a>.”</p>
+<p class="p">BY HCELL Reason code: SEEDPROM</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">See the example under <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Hcell Report', 'svrf_ur'); return false;">LVS Hcell Report</a>.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_Hcells_id3166033d.html" title="The term hcell stands for hierarchically corresponding cell. Hcells are cells that exist in both the layout and source designs and that (presumably) perform the same function. Calibre cannot determine if cells are identical in function because mask layout formats or SPICE netlists do not contain such information. Also, simply because two cells may have the same name is not necessarily a guarantee they have the same topology or device properties. So the user must specify cell correspondence in hierarchical LVS flows.">Hcells</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Calibre LVS Hcell Report Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_CalibreLVSHcellReportFormat_id52f5988c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

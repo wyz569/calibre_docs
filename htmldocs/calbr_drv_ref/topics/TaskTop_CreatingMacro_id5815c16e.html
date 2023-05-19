@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Macro" />
+<meta name="abstract" content="You can add new functionality to the layout viewer by writing application extensions, called macros. Once you create a macro, it is available through the Macros menu. By default, the Macros menu contains several Calibre layout viewer-supplied macros. These macros provide useful functionality and also serve as examples of the sorts of functionality you can add to the application." />
+<meta name="description" content="You can add new functionality to the layout viewer by writing application extensions, called macros. Once you create a macro, it is available through the Macros menu. By default, the Macros menu contains several Calibre layout viewer-supplied macros. These macros provide useful functionality and also serve as examples of the sorts of functionality you can add to the application." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5815c16e-ad5f-4f96-948f-d75a5c824fb9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Macro</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Macro" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5815c16e-ad5f-4f96-948f-d75a5c824fb9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating
+a Macro</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">You can add new
+functionality to the layout viewer by writing application extensions,
+called macros. Once you create a macro, it is available through
+the Macros menu. By default, the Macros menu contains several Calibre
+layout viewer-supplied macros. These macros provide useful functionality
+and also serve as examples of the sorts of functionality you can
+add to the application.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><p class="p">Assume you have the following
+simple Tcl procedure you want made into a macro:</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id5815c16e-ad5f-4f96-948f-d75a5c824fb9__id545f88d2-4c4e-4ea0-87ad-cab5febe5e00"><span class="ph cmd">Create the following Tcl script:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code># Tcl procedure to print out the children of a given cell. 
+proc myfunction { L F {C ""} {Indent ""} } { 
+	if {$C == ""} { 
+		set C [$L topcell] 
+	} 
+	puts $F "$Indent --&gt; $C" 
+	append Indent " " 
+	foreach child [$L children $C] { 
+		proc_cell_tree $L $F $child $Indent 
+	} 
+} </code></pre></div></li>
+<li class="li step stepexpand" id="id5815c16e-ad5f-4f96-948f-d75a5c824fb9__idf535d0b8-1d33-4659-8794-efb006a9dd29"><span class="ph cmd">Add a second proc named “myfunction_plug_in”,
+which invokes the command procedure from the GUI plug-in:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>proc myfunction_plug_in { wbHandle window} { 
+	myfunction 
+} </code></pre><p class="p">A GUI plug-in procedure is
+passed two arguments: the handle for the layout viewer application
+and the handle for the window from which the macro is invoked.</p>
+</div></li>
+<li class="li step stepexpand" id="id5815c16e-ad5f-4f96-948f-d75a5c824fb9__id5092ad64-2f6d-4ef0-999d-153ac1831e45"><span class="ph cmd">Add the following Tcl call
+to register the original Tcl procedure as a macro:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>if {[info exists tk_version]} { 
+	Macros create "my example" myfunction myfunction_plug_in 
+} </code></pre><p class="p">The Macros create Tcl command
+is only available when running the layout viewer’s GUI, and not
+when running shell mode. Therefore, the call is wrapped in an if block
+to avoid errors when the Tcl script is sourced.</p>
+</div></li>
+<li class="li step stepexpand" id="id5815c16e-ad5f-4f96-948f-d75a5c824fb9__idce7a8c3a-9756-41a9-aed7-6c1efff76028"><span class="ph cmd">To add the macro to the layout
+viewer <span class="ph uicontrol">Macros</span> menu, source
+the macro from your <span class="ph filepath italic">$HOME/wbinit.tcl</span> file,
+and then invoke the layout viewer:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>echo "source macro_file.tcl" &gt;&gt; ~/wbinit.tcl 
+calibredrv </code></pre></div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ExampleScript_id91446712.html" title="Typically, the Calibre layout viewers are accessed using the Calibre DESIGNrev GUI. Alternatively, layout viewer batch commands can be used. Additionally, these commands can be combined into stand-alone programs called scripts. Scripts are a simple way to string together a series of batch commands for execution together. It is often useful to develop a script interactively, to see the output of each command as you step through them.">Example Script</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "Creating a Macro"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingMacro_id5815c16e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

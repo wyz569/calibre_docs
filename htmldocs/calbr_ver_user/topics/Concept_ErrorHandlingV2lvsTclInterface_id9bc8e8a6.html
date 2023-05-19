@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Error Handling for the V2LVS Tcl Interface" />
+<meta name="abstract" content="The V2LVS command line interface performs two levels of parsing before generating an output SPICE file. In the first pass, a database is created and only interfaces for the Verilog modules are parsed. In the second pass, the complete module structure is parsed and converted from Verilog to SPICE." />
+<meta name="description" content="The V2LVS command line interface performs two levels of parsing before generating an output SPICE file. In the first pass, a database is created and only interfaces for the Verilog modules are parsed. In the second pass, the complete module structure is parsed and converted from Verilog to SPICE." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9bc8e8a6-b06c-452c-b14c-1e82f96b18a8" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Error Handling for the V2LVS Tcl Interface</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Error Handling for the V2LVS Tcl Interface" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9bc8e8a6-b06c-452c-b14c-1e82f96b18a8">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Error Handling for the V2LVS Tcl Interface</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The V2LVS command
+line interface performs two levels of parsing before generating
+an output SPICE file. In the first pass, a database is created and
+only interfaces for the Verilog modules are parsed. In the second
+pass, the complete module structure is parsed and converted from
+Verilog to SPICE.</span>
+</div>
+<p class="p">When using the <a class="xref fm:HeadingOnly" href="Contain_V2lvsTclInterface_id273724ee.html#id273724ee-77fa-42ae-a1dc-0b74bfcdb102__Contain_V2lvsTclInterface_id273724ee.xml#id273724ee-77fa-42ae-a1dc-0b74bfcdb102" title="The V2LVS Tcl interface supports programmability of the Verilog-to-SPICE translation process through standard Tcl language features. The interface has a Tcl pre-processor similar to other Calibre tools.">V2LVS Tcl Interface</a>, the first pass is only done when
+required. The only commands that require a first pass are <a class="xref fm:HeadingOnly" href="Command_V2lvsfindModule_id071160ab.html#id071160ab-bb51-4957-8617-f748cb480871__Command_V2lvsfindModule_id071160ab.xml#id071160ab-bb51-4957-8617-f748cb480871" title="Creates a list of module names from the input Verilog netlist. When used without any optional argument sets, this command returns a list of all module names.">v2lvs::find_module</a> and exit, since both of these
+commands require database creation. The exit command only generates
+output if the <a class="xref fm:HeadingOnly" href="Command_V2lvswriteOutput_id9fb31825.html#id9fb31825-aa26-4092-9575-68231a218d93__Command_V2lvswriteOutput_id9fb31825.xml#id9fb31825-aa26-4092-9575-68231a218d93" title="Specifies to output a translated SPICE netlist of the input Verilog design. Optionally specifies the name of a consolidated SPICE library file.">v2lvs::write_output</a> is used before it.</p>
+<p class="p">If an error occurs while creating a database
+or generating output when using the V2LVS Tcl Interface, then the
+application might need to be terminated and restarted. V2LVS only creates
+a database once per invocation. Once a database is loaded, all other
+load commands are ignored.</p>
+<p class="p">During a V2LVS run, there can be errors at
+different stages:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Error before the creation of a database</span> —
+You can continue working with the current session, and there is
+no need to restart the application.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Errors during the creation of a database</span> —
+In these instances, it is advisable to terminate the current session
+and restart the application.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Errors after the creation of a database</span> —
+You can continue working with the current session, and there is
+no need to restart. Once a database is created you cannot update
+or change the database without restarting the application.</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Errors during the generation of output</span> —
+In these instances, fixing the error and restarting the application
+is the best course of action.</p>
+<p class="p">When a Tcl command is given to V2LVS there
+can be two types of errors:</p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Usage Error</span> —
+If there is a syntax or usage issue in the Tcl command, then V2LVS
+gives an error explaining the correct usage of that command. </p>
+<p class="p BlockIndent"><span class="ph FontProperty HeadingLabel">Run Time Processing Error </span>—
+These errors occur during the creation of a database or when generating
+output. In these instances, terminating the application and restarting
+the session is advisable.</p>
+<p class="p">When sourcing a Tcl file, an error may occur.
+If a database is created before an erroneous command, then fixing
+the error and restarting the application is the best solution. If
+a syntax or usage error occurs before the creation of the database,
+then fixing the error and sourcing the file again is acceptable.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TclInterfaceCommandEncyclopedia_id2cd4726d.html" title="Throughout the command encyclopedia, the brace characters “{ }” indicate choices between required options. The bracket characters “[ ]” indicate non-required options. Both of these characters have special meaning in Tcl so it is important not to include these markup characters as part of the literal command syntax in a script.">Tcl Interface Command Encyclopedia</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Error Handling for the V2LVS Tcl Interface"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ErrorHandlingV2lvsTclInterface_id9bc8e8a6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

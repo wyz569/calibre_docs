@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Optimize the Number of Process Window Iterations" />
+<meta name="abstract" content="The number of process window iterations has the largest impact on the PV Band PWOPC runtime. In general, the initial recommendation is to use a 50/50 ratio between non-process window and process window iterations settings, ranging down to a ratio of 3/12 (no-PW/PW) for good quality of results." />
+<meta name="description" content="The number of process window iterations has the largest impact on the PV Band PWOPC runtime. In general, the initial recommendation is to use a 50/50 ratio between non-process window and process window iterations settings, ranging down to a ratio of 3/12 (no-PW/PW) for good quality of results." />
+<meta name="prodname" content="Calibre nmOPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="None" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® nmOPC™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Optimize the Number of Process Window Iterations</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Optimize the Number of Process Window Iterations" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,doc.type.documentation.ref,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Optimize the Number of Process Window Iterations</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The number
+of process window iterations has the largest impact on the PV Band
+PWOPC runtime. In general, the initial recommendation is to use
+a 50/50 ratio between non-process window and process window iterations
+settings, ranging down to a ratio of 3/12 (no-PW/PW) for good quality
+of results.</span>
+</div>
+<p class="p">A typical setup for the PV Band
+PWOPC is as follows:</p>
+<pre class="pre codeblock leveled"><code>image nominal .. .. 
+pw_conditions cond_1 .. .. pvband 
+pw_conditions cond_2 .. .. pvband 
+ 
+OPC_ITERATION 5 
+OPC_ITERATION 4 -PW exclude gates min_space connects 0.036 \
+	min_width connects 0.038 </code></pre><p class="p">This example shows five nominal OPC iterations,
+switching to four process window iterations (using OPC_ITERATION)
+during which no PWOPC is done for the tag set called “gates”. Space
+and width 36 nm/38 nm limits are also applied to the “connects”
+tag set.</p>
+<p class="p">In order to get the best choice, you can experiment
+where the number of PW iterations will be as a variable with one
+result being run time and the other a number of Calibre OPCverify
+bridge, pinch, or contact errors (or some combination of them).</p>
+<p class="p"><a class="xref fm:Figure" href="#ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__ida736df4e-10d4-4d4f-8fdd-907bb09a8201">Figure 1</a> shows is a plot that summarizes one
+example:</p>
+<div class="fig fignone" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__ida736df4e-10d4-4d4f-8fdd-907bb09a8201"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Optimizing PW Iterations</span><br /><div class="imagecenter"><img class="image imagecenter" height="224" src="../graphics/impact_of_pw_iters.jpg" width="458" /></div><br /></div>
+<p class="p">In this figure:</p>
+<ul class="ul"><li class="li" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__id3e44806e-19ea-4ed8-a8f1-b46530691916"><p class="p">Both CPU time and score are normalized
+to the no PW iterations run.</p>
+</li>
+<li class="li" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__idca1e2240-b708-42b1-bcf6-4006401fa4cd"><p class="p">Score is a cost function representing
+the Calibre OPCverify flag counts.</p>
+</li>
+<li class="li" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__id6762b508-be6b-4d53-bdd5-a671ae0e1808"><p class="p">Cost is the product of score and CPU
+time.</p>
+</li>
+<li class="li" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__id997b25b3-90c9-46d1-a840-4ed6be3d868a"><p class="p">High run time is undesirable. </p>
+</li>
+<li class="li" id="ida4f187c0-2564-4f0a-9f07-2bfa807ae6c4__idf74bb669-07ec-4634-861d-972e3023cdd7"><p class="p">A lower score means better quality of
+results.</p>
+</li>
+</ul>
+<p class="p">The cost function minimum at two process window
+iterations shows the optimal number of iterations. Before this,
+the quality was poor and after this run time was too high. The essentially flat
+score confirms there are no improvements in quality of results with
+the additional iterations.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Increasing the number
+of process window iterations beyond the optimal is one option to
+account for the unknown. For example, the limited calibration of
+the test case might not include all possible geometries, requiring
+a larger process window iteration number for good quality of results.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ProcessWindowOpcImprovement_ida540a8fb.html" title="The Calibre nmOPC Process Window OPC (PWOPC) capability is available to improve the litho process window. Process Window OPC is used to reduce the risk of critical failures due to a number of process variations.">Process Window OPC Improvement</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmopc_useref"
+                DocTitle = "Calibre® nmOPC™ User’s and Reference Manual"
+                PageTitle = "Optimize the Number of Process Window Iterations"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_OptimizeNumberProcessWindowIterations_ida4f187c0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmOPC™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

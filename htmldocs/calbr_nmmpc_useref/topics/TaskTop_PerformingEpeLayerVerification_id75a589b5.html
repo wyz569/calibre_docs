@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Verifying EPE Layers" />
+<meta name="abstract" content="EPEs in an MPC recipe can be verified by deriving a specific EPE layer, running a Calibre nmMPC simulation, and then passing it to Calibre MPCverify for verification. When generating the EPE layer, the measurement locations should be consistent with the correction layer. This means specifying an opc layer as the target layer, and an external layer as the corrected layer for EPE layer verification. Measurement sites are placed in the opc target layer, and the external layer is used for simulation. This ensures that both the correction flow and verification flow get the same measurement points, provided the same recipe settings for fragmentation, epe_spacing, and so on, in both flows." />
+<meta name="description" content="EPEs in an MPC recipe can be verified by deriving a specific EPE layer, running a Calibre nmMPC simulation, and then passing it to Calibre MPCverify for verification. When generating the EPE layer, the measurement locations should be consistent with the correction layer. This means specifying an opc layer as the target layer, and an external layer as the corrected layer for EPE layer verification. Measurement sites are placed in the opc target layer, and the external layer is used for simulation. This ensures that both the correction flow and verification flow get the same measurement points, provided the same recipe settings for fragmentation, epe_spacing, and so on, in both flows." />
+<meta name="prodname" content="Calibre nmMPC and Calibre nmCLMPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_nmmpc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Verifying EPE Layers</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Verifying EPE Layers" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref, product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Verifying EPE Layers </h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">EPEs in an MPC recipe
+can be verified by deriving a specific EPE layer, running a Calibre nmMPC
+simulation, and then passing it to Calibre MPCverify for verification.</p>
+<p class="shortdesc">When generating the EPE layer, the measurement
+locations should be consistent with the correction layer. This means
+specifying an opc layer as the target layer, and an external layer
+as the corrected layer for EPE layer verification. Measurement sites
+are placed in the opc target layer, and the external layer is used
+for simulation. This ensures that both the correction flow and verification
+flow get the same measurement points, provided the same recipe settings
+for fragmentation, epe_spacing, and so on, in both flows.</p>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__id9ca8215b-ea11-46aa-9ffa-d2b1270cd80c"><span class="ph cmd">In your Calibre nmMPC recipe, create an EPE
+layer using the following rules:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__id795022f2-eef4-49fb-b7f8-d8ec32664b04"><p class="p">Specify
+the target layer as the opc layer.</p>
+</li>
+<li class="li" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__id3f8a940c-0fd2-45b2-8f1f-7b75368c2588"><p class="p">Specify the corrected layer as an external layer.
+This means that only this layer is to be simulated. Note that, in
+this particular context, this is not the final simulated layer as
+typically generated in an MPC recipe. This is used specifically
+for EPE layer verification.</p>
+</li>
+<li class="li" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__idd0f4cb99-8440-40f0-b64f-fc0997c3fbc4"><p class="p">Set max_iterations to 1</p>
+</li>
+<li class="li" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__idd8e1f4f9-65b1-4620-9cc3-acb57e967bd0"><p class="p">Set feedback to 1</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__id04ef17c3-fb64-4f58-ad98-02e0ad33e869"><span class="ph cmd">Simulate
+the corrected layer.</span></li>
+<li class="li step stepexpand" id="id75a589b5-e7c2-45bc-a7fb-bb1eea3d5d9f__id4ecb5060-94db-4e56-ae90-e1d39a09b4a5"><span class="ph cmd">Use the Calibre MPCverify
+command measure_epe to measure EPE from the target layer to the
+contour layer edges.</span></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">In hier or hybrid mode, tiling is slightly shifted
+in EPE layer generation compared to the correction tiling. This
+is due to the additional correction layer as input to the EPE layer generation
+recipe, which slightly changes the cell extents. This issue exists
+only in hier or hybrid mode, where tiling depends on the cell extents.
+In flat mode, the tiling is consistent in both correction and EPE
+layer generation flows and the measurement points are consistent.</p>
+<p class="p">Due to this shift in the tiling in hier or hybrid
+mode, a few fragments at tile boundaries may get different measurement
+points and EPEs computed in correction may differ slightly on these
+tile boundary fragments. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">The following example illustrates both a correction
+and verification rule file for EPE layer verification: </p>
+<pre class="pre codeblock"><code>// --- MPC RECIPE FOR GENERATING EPE LAYER
+LITHO FILE MPC.recipe [
+...
+    layer MpcTarget
+    layer MpcOut
+...    
+    tilemicrons 40
+...
+    denseopc_options mpcOptions {
+...
+        version          1
+        background       dark
+        algorithm        1
+...
+// --- Specify an opc target layer and an external layer specifically 
+// --- for edge movement
+        layer MpcTarget        opc        clear
+        layer MpcOut           external clear
+        
+...
+// --- Set max_iterations to 1 and feedback to 1
+
+        max_iterations 1
+        feedback 1
+...
+        OPC_ITERATION 1
+...
+   }
+setlayer EPE_layer = mpc MpcTarget MpcOut MAP MpcTarget OPTIONS mpcOptions
+]
+
+LITHO FILE MPCV.recipe [
+...
+    layer MpcTarget
+    layer EPE_layer
+...
+    setlayer lineEnds = identify_edge MpcTarget length &lt;= 0.300 &gt; 0.120 \
+                        length1 &gt;= 0.150 length2 &gt;= 0.150 \
+                        corner1 convex corner2 convex extend -0.045 \
+                        expand $filterWidth
+...
+    setlayer epeLE = measure_epe EPE_layer MpcTarget inside lineEnds \
+                    epe_spacing 0.030 function  max  \
+                    min_featsize 0.030 max_edgelen 0.35 \
+                    fragment only not &gt; -0.0006 &lt; 0.0006   \
+                    output_expanded_edges 0.001 trim_ends 0.002 \
+                    property {magnitude_max
+                      } classify {
+                         context MpcTarget
+                         halo 0.05
+                         maximum_error_number 100000
+                         anchor MpcTarget
+                         reflections_rotations_match yes
+                         score bin_size 0.001 largest
+                         worst 500 exact
+                      }
+...
+ ]
+
+// --- Generate the EPE layer using the MPC recipe
+EPE_layer = LITHO MPC MpcTarget MpcOut MAP EPE_layer  FILE MPC.recipe
+
+// --- Generate verify output using MPCv recipe
+epeLE = LITHO MPCVERIFY MpcTarget EPE_layer MAP  epeLE FILE MPCV.recipe</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_VerifyCorrections_id5f2c2d40.html" title="Validate the output of your correction run using Calibre OPCverify and with Calibre nmMPC.">Verify Corrections</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_nmmpc_useref"
+                DocTitle = "Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual"
+                PageTitle = "Verifying EPE Layers"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_PerformingEpeLayerVerification_id75a589b5.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® nmMPC™ and Calibre® nmCLMPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

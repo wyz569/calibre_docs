@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="opcIter" />
+<meta name="abstract" content="Applies a different OPC iteration algorithm than fastIter." />
+<meta name="description" content="Applies a different OPC iteration algorithm than fastIter." />
+<meta name="prodname" content="Calibre OPCpro User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcpro_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="Mar. 12, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® OPCpro™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id2fb3d128-2c4e-43bc-abf4-180dd8939b49" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>opcIter</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="opcIter" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">opcIter</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Type: <a class="xref fm:HeadingOnly" href="Contain_LithoSetupFileKeywords_id5d361e7b.html#id5d361e7b-8fac-4d3f-b66e-9b32db85fbd8__Contain_LithoSetupFileKeywords_id5d361e7b.xml#id5d361e7b-8fac-4d3f-b66e-9b32db85fbd8" title="Setup file keywords define OPC and simulation parameters and define the layers used in Calibre OPCpro, Calibre ORC, and Calibre PRINTimage operations. Keywords may only be specified once per setup file.">Litho Setup File Keywords</a>. <span class="ph fmvar:SupportedBy">  
+  Used by Calibre OPCpro, Calibre ORC, and Calibre PRINTimage.</span></p>
+<p class="shortdesc">Applies a different OPC iteration
+algorithm than fastIter.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine">[exec] <span class="keyword ParameterName Required">opcIter</span> [adaptiveSites {true | <span class="keyword ParameterName OptionalDefault">false</span>}] <br />
+[cornerRadius <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[cornerRadiusConcave <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[cornerRadiusConvex <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[criticalDistance <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[enclose <span class="keyword ParameterName OptionalReplaceable">layer</span> by <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[fastIterMode {true | false}] <br />
+[freezeStepFragment {<span class="keyword ParameterName OptionalDefault">true</span> | false | <span class="keyword ParameterName OptionalReplaceable">length</span>}] <br />
+[globalEpeTolerance <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[jogSmooth <span class="keyword ParameterName OptionalReplaceable">value</span> [jogSmoothTagSet <span class="keyword ParameterName OptionalReplaceable">tagName</span>]] <br />
+[limitTag <span class="keyword ParameterName OptionalReplaceable">tagName</span> to <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[lineEndRatio <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[lineEndWidth <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[maxJog <span class="keyword ParameterName OptionalReplaceable">size</span>] <br />
+[modifiedTarget {true |<span class="keyword ParameterName OptionalDefault">false</span>}] <br />
+[nIterations <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[parameterOutputFile <span class="keyword ParameterName OptionalReplaceable">file</span>] <br />
+[preferMid {true | <span class="keyword ParameterName OptionalDefault">false</span>}<br />
+[midSpanExt <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[maxMidSpan <span class="keyword ParameterName OptionalReplaceable">value</span>]]<br />
+[printApd {true | false}] <br />
+[printHeader {true | false}] <br />
+[printTime {true | false}] <br />
+[roundCorner {true |<span class="keyword ParameterName OptionalDefault">false</span>}<br />
+[roundedCornerRadius <span class="keyword ParameterName OptionalReplaceable">value</span>]] <br />
+[siteControl {<span class="keyword ParameterName OptionalDefault">true</span> |false}] <br />
+[spaceEndRatio <span class="keyword ParameterName OptionalReplaceable">value</span>]<br />
+[spaceEndWidth <span class="keyword ParameterName OptionalReplaceable">value</span>] <br />
+[statisticsFileName <span class="keyword ParameterName OptionalReplaceable">filename</span>] <br />
+[targetLayer <span class="keyword ParameterName OptionalReplaceable">layer</span>]<br />
+[turnOffSlivers <span class="keyword ParameterName OptionalReplaceable">width</span>] <br />
+[-outLayer {child_owned_fragments | corners | epe_tolerance | false_fragments | <br />
+                    jogs | limit_tags | modified_target | mrcBlocked<span class="keyword ParameterName OptionalReplaceable">_iter_layer</span> |<br />
+                    parent_owned_fragments | site_extents | sites | <br />
+                    target_band | tolerance_band | valid_fragments | violations}] </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The “exec”
+portion of the command is optional and does not explicitly need
+to be specified in the setup file for Calibre versions 2008.3 and
+later.</p>
+</div>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id8cf07ca4-10fc-4835-ba3d-7ffa1e33cdff">adaptiveSites {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">If adaptiveSites is set to true,
+control points outside the previous simulation’s minimum and maximum
+intensity locations are ignored in the current simulation. This
+reduces simulation time in most cases with very little change in
+final output.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id2f88ea81-b905-4172-87bf-e81fbe09096f">cornerRadius <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that is
+used at corners to estimate the achievable target. Users should optimize
+this parameter around the default value by plus or minus 50% to
+obtain the best results for their applications.</p>
+<p class="p">The value must be an integer
+greater than 0. The default is criticalDistance. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id87c78e79-e146-48ab-bded-eba8cbde0e14">cornerRadiusConcave <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The radius of curvature used
+to estimate the achievable target for concave corners only. This value
+is also used for space ends. The value must be an integer greater
+than 0. The default is to use the cornerRadius <span class="keyword ParameterName OptionalReplaceable">value</span> specified
+for opcIter.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id4328f4c7-a772-4e00-ab6e-a76c2225745d">cornerRadiusConvex <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The radius of curvature used
+to estimate the achievable target for convex corners only. This value
+is also used for line ends. The value must be an integer greater
+than 0. The default is opcIter’s cornerRadius. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">In jogs
+and s-shapes that have overlapping convex and concave corners, the
+larger of cornerRadiusConcave or cornerRadiusConvex is used.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id57a2da2a-446c-4b1e-8d27-5add48c2cf50">criticalDistance <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The smallest feature that must
+be resolved. Normally this should not be left at its default value,
+(R<span class="ph FontProperty LiteralSubScript">ο</span>/3),
+where R<span class="ph FontProperty LiteralSubScript">o</span> is
+the resolution value obtained from the optical model parameters (lambda/NA).
+Optimize this argument around the default value by plus or minus
+50% to obtain the best results for their applications.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id628dd973-cfe6-42c3-aa1e-3ad6bed4d5a4">enclose <span class="keyword ParameterName OptionalReplaceable">layer</span> by <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that ensures
+all features on the named layer are enclosed by at least <span class="keyword ParameterName OptionalReplaceable">value</span> distance
+in the final results. By default, no such check is made.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf9d039be-9f07-4033-a8c0-12d8f8493aab">fastIterMode {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">If fastIterMode is set to true,
+then fastIter is executed instead of opcIter. If you want to use fastIter
+with opcIter siteControl, set siteControl to true and fastIterMode
+to true. If siteControl is false and fastIterMode is true then the
+results should be identical to using fastIter directly.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id17539efe-fdb7-4daa-af0c-318ecbcf5dde">freezeStepFragment {<span class="keyword ParameterName OptionalDefault">true</span> | false | <span class="keyword ParameterName OptionalReplaceable">length</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Controls whether step fragments
+(fragments less than 2*<a class="xref fm:HeadingOnly" href="Command_Cornerradius_id31369237.html#id31369237-9b25-4f43-82be-632b00a5657e__Command_Cornerradius_id31369237.xml#id31369237-9b25-4f43-82be-632b00a5657e" title="Controls how sites are rotated on corner fragments.">cornerRadius</a> connecting two fragments longer
+than itself) are simulated or not. </p>
+<p class="p">In version 2009.2 and earlier,
+step fragments were not treated differently from other fragments;
+this is the same as the “false” setting. In version 2009.3 and later,
+step fragments are not simulated by default.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">length</span> parameter
+allows you to control which step fragments are simulated based on length
+in microns. Fragments shorter than <span class="keyword ParameterName OptionalReplaceable">length</span> are
+not simulated.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id60807895-669e-468d-b21f-be4016c862f6">globalEpeTolerance <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The EPE tolerance on all fragments
+that are not otherwise specified by using the limitTag. The default
+value is set to 0.06 * criticalDistance. Users should optimize this
+parameter from <a class="xref fm:HeadingOnly" href="Command_Stepsize_id49e8ee78.html#id49e8ee78-63cb-4f32-8ab7-41a3201f28f7__Command_Stepsize_id49e8ee78.xml#id49e8ee78-63cb-4f32-8ab7-41a3201f28f7" title="Specifies the movement distance in microns for each edge in one OPC iteration.">stepsize</a> up to a value of 5*stepsize or
+more.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idcf1563c1-f942-48c6-b7f7-ae72cd696e3b">jogSmooth <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">When specified, jogSmooth smooths
+all jogs created by OPC that are smaller than or equal to <span class="keyword ParameterName OptionalReplaceable">value</span>.
+There is no default.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idd1dad860-4477-497a-b1ee-3c3da33658f1">jogSmoothTagSet <span class="keyword ParameterName OptionalReplaceable">tagName</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">This argument restricts smoothing
+to the named tag set, otherwise everything gets smoothed.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id25288ef7-b944-479d-b982-bb8fcd7f422d">limitTag <span class="keyword ParameterName OptionalReplaceable">tagName</span> to <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+that limits <span class="keyword ParameterName OptionalReplaceable">tagName</span> fragments
+to being no more than <span class="keyword ParameterName OptionalReplaceable">value</span> distance from
+their EPE tolerance.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id1b70d4c8-33d6-454d-b3b5-5989b63ced93"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">tagName</span> specifies
+the name of a tag set you want to impose restrictions on.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ida97b427d-7bfe-463b-a4f9-16ce794daaec"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">value </span>is
+a limit value in user units.</p>
+</li>
+</ul>
+<p class="p">For example, “limitTag line_end
+to 0.001” puts a tolerance of one nanometer on all fragments in
+the line_end tag set. The EPE tolerance values set by the limitTag
+arguments override the value set globally by globalEpeTolerance.
+There can be any number of limitTag arguments for opcIter. There
+are no default values for these arguments.</p>
+<p class="p">There are two built-in tags
+for limitTag: “corners” and “straights”. The argument corners specifies
+fragments that touch corners or fragments that have simulation sites
+within the cornerRadius value of a corner. Jogs are ignored when
+these corners are defined. Use the ‑outLayer corners option to see
+how corners are classified. The argument straights is defined as
+anything that is not a corner.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id8a81ba48-58c6-4fb0-8b6c-cbfd7cae40ae">lineEndRatio <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that moves
+the simulation sites for line-end adjacent fragments to control
+hammerheads. Setting this to a small value creates large hammerheads.
+Setting it to a value larger than one disables the feature and simulation
+sites do not move. The default site placement is equivalent to a
+value of 0.5.</p>
+<p class="p">The image at line-end adjacent
+fragments is expected to cross the target at (<span class="keyword ParameterName OptionalReplaceable">value</span> *
+D) from the line end, where D is the width of the line. The simulation
+sites for line-end adjacent fragments are moved to this location
+if reasonable. Adjusting this value makes the algorithm match line–end
+targets much better, but often causes image ringing far back from
+the line end. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ida53ccef4-a770-43ed-9aaf-aba37185915d">lineEndWidth <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The minimum width at which an
+edge with two convex corners is not classified as a line end. Edges
+with length less than <span class="keyword ParameterName OptionalReplaceable">value</span> are
+treated as line ends. The units for <span class="keyword ParameterName OptionalReplaceable">value</span> are
+user units. The default value is 2*cornerRadiusConvex.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ide88fbf1c-5d32-4d16-888c-d01ac852d257">maxJog <span class="keyword ParameterName OptionalReplaceable">size</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The maximum length at which
+an edge is considered a jog and not a feature. Smaller values cause
+fewer edges to be considered jogs. The units for <span class="keyword ParameterName OptionalReplaceable">size</span> are
+user units. The default value is approximately 0.292893*radius,
+where radius is the minimum of cornerRadiusConcave, cornerRadiusConvex,
+and cornerRadius. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idbfb5c62f-95d2-4ce7-bf03-160dddc5cc69">maxMidSpan <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used only
+when preferMid is true. This argument determines the maximum length
+of a span of fragments that can be a straight line instead of a
+curve. Single fragments or edges longer than <span class="keyword ParameterName OptionalReplaceable">value</span> are
+represented by curves. The valid range of <span class="keyword ParameterName OptionalReplaceable">value</span> is 0
+to 1 microns, in user units. The default is 2*criticalDistance/3.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id242b77e4-a4a7-41f6-acfb-8f2574d74058">midSpanExt <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used only
+when preferMid is true. This argument indirectly controls the slope
+of the line drawn for the span. The valid range of <span class="keyword ParameterName OptionalReplaceable">value</span> is
+0 to 10. The default is 1.</p>
+<p class="p">A value of 1 draws a straight
+line at a 45-degree angle through the midpoint of a jog within the
+span. Setting midSpanExt to 0.5 draws a line half as long, resulting
+in a steeper angle. Setting it to 2 draws a line twice as long as
+the default setting, which results in a much shallower angle.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id0fe1afee-1550-4e8f-a6aa-888dff08c33f">modifiedTarget {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><div class="note note"><span class="notetitle">Note:</span> <p class="p">As of version 2011.3, modifiedTarget
+is deprecated. Use the targetLayer argument.</p>
+</div>
+<p class="p">If modifiedTarget is set to
+true, the OPC target is redefined by the positions of the fragments.
+If it is set to false (the default) then the original fragment biases
+are ignored. </p>
+<p class="p">If “modifiedTarget true” is
+specified, the simulation sites are moved to the biased fragment locations
+even if “siteControl false” is specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idcda1d51a-90c7-44ca-8a9f-a5ab57398855">nIterations <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The maximum number of iterations.
+Set it to zero if you only want to perform site control or create
+the auxiliary output layers. The default value is 8. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id0987af73-7130-4b03-b66c-653141f1a3c1">preferMid {true | <span class="keyword ParameterName OptionalDefault">false</span>} </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that affects
+how curved targets are created. When true, straight lines are used
+instead of curves to represent a span of the polygon edge. The lines
+can be skew. This sometimes provides a much better fit than a true
+curve. The default setting is false.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf04380ed-d282-47c8-966a-950a293727b8">roundCorner {true |<span class="keyword ParameterName OptionalDefault">false</span>} [roundedCornerRadius <span class="keyword ParameterName OptionalReplaceable">value</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that causes
+opcIter to round concave corners formed by edges both shorter than
+cornerRadiusConcave. When roundCorner is set to true, the target
+is moved out towards the printed image by roundedCornerRadius. The
+default setting is false (no adjustments).</p>
+<p class="p">Use roundedCornerRadius to increase
+the distance from the original corner from which the target is moved.
+The default value is derived from cornerRadiusConcave and is typically smaller
+than optimum. The roundedCornerRadius setting is ignored when roundCorner
+is false.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf8a98d51-eba1-488b-acb5-07b202990536">siteControl {<span class="keyword ParameterName OptionalDefault">true</span> | false}</dt>
+<dd class="dd ArgumentDescription"><p class="p">By default, opcIter does automatic
+site control, moving sites to improve convergence. If you want to
+perform site control using other techniques this feature can be
+turned off with “siteControl false”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id7859ea2b-0c2d-40dc-9f23-83ff7fee98d5">spaceEndRatio <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that overrides
+the lineEndRatio setting, which controls hammerheads, for space
+ends. Smaller values are more aggressive than larger ones. The default
+value is the setting of lineEndRatio.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idab9bc62e-88c3-4b1e-adf1-9d6278b4c1ab">spaceEndWidth <span class="keyword ParameterName OptionalReplaceable">value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The minimum width at which an
+edge with two concave corners is not classified as a space end.
+Edges with length less than <span class="keyword ParameterName OptionalReplaceable">value</span> are
+treated as space ends. The units for <span class="keyword ParameterName OptionalReplaceable">value</span> are
+user units. The default value is 2*cornerRadiusConcave.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id69b2ad3e-ef54-463e-a0c8-69cfb78d71a3">targetLayer <span class="keyword ParameterName OptionalReplaceable">layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Use this argument to prebias
+a layer. The initial sites are placed relative to <span class="keyword ParameterName OptionalReplaceable">layer</span> rather
+than the opc layer. The opc and correction layers are still used
+for fragmentation. By default, <span class="keyword ParameterName OptionalReplaceable">layer</span> is
+the opc layer specified by the <a class="xref fm:HeadingOnly" href="Command_Layer_id24bcf6df.html#id24bcf6df-916f-445c-80b7-a063af955d1e__Command_Layer_id24bcf6df.xml#id24bcf6df-916f-445c-80b7-a063af955d1e" title="Required. Defines how the given mask layer is treated by OPC and simulation.">layer</a> command.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id877baa86-b248-4ef8-8d96-35ca63da1da4">turnOffSlivers <span class="keyword ParameterName OptionalReplaceable">width</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The width at which a polygon
+is determined to be a sliver. Slivers are polygons that should not
+receive corrections because they are thin enough that correcting
+them is likely to degrade their neighbors’ corrections without improving
+overall results. Generally slivers occur in the contextual halo
+around cells. The default value is criticalDistance/2.</p>
+<p class="p">The
+arguments turnOffSlivers and modifiedTarget are mutually exclusive.
+(There is no conflict with targetLayer, the preferred alternative
+to modifiedTarget.) If “modifiedTarget true” is specified, then
+you must also specify “turnOffSlivers 0”. </p>
+<p class="p">Fragments on a sliver still
+receive control sites but are not corrected.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Debugging Arguments</h2><div class="note note"><span class="notetitle">Note:</span> <p class="p">These parameters do not affect the operation
+of opcIter. </p>
+<p class="p">They generate reports that are
+helpful in understanding the results. Be aware that writing out
+a statistics file causes one extra optical simulation of every simulation
+site in the analyzed area. This is so the data reported on the final
+result uses accurate results, not results from earlier simulations
+that may have been incomplete.</p>
+</div>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ida59ae41f-f271-41ef-983f-e70ee203cfe9">statisticsFileName <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The name of the file where statistics
+should be reported. If this argument is not specified, a report
+is not written.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id8e2d1218-2f2f-4f17-b8c9-bdb3a59d8698">parameterOutputFile <span class="keyword ParameterName OptionalReplaceable">file</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying
+a file for parameter values. All parameters used by opcIter are
+written to this file for reference; it cannot be used as input to
+OPCpro. By default, this file is not created.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ide288f481-9522-43f0-9887-e774dd35a597">printApd {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">If set to true then APD data
+is also printed to the statistics file. The default value is false.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id5bef36ff-0f38-43ae-bb6d-1f1d2e42826c">printHeader {<span class="keyword ParameterName OptionalDefault">true</span> | false}</dt>
+<dd class="dd ArgumentDescription"><p class="p">By default header information
+is printed to the statistics file before writing the data. You should
+set printHeader to false if you use the statistics file to collect
+performance data on fastIter. In that case, you want the header
+information only on the first opcIter call and not on subsequent
+opcIter calls. The default value is true.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__ida307f221-aec9-450b-8f68-a6b504b9330a">printTime {true | <span class="keyword ParameterName OptionalDefault">false</span>} </dt>
+<dd class="dd ArgumentDescription"><p class="p">If this argument is set to true,
+then timing information is printed to the log file, not the statistics
+file. The default value is false.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id92fc95d0-bc9a-45af-9c71-53e10873a704">-outLayer {child_owned_fragments | corners | epe_tolerance | false_fragments | jogs | limit_tags | modified_target | parent_owned_fragments | site_extents | sites | target_band | tolerance_band | valid_fragments | violations}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Output layers are additional
+layers that can be written by opcIter. They are helpful for understanding
+problem areas. The -outLayer parameters must be the last arguments
+on the opcIter call. A separate -outLayer declaration needs to be
+specified for each generated layer. An -outLayer parameter with
+a different keyword generates an error message.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id6df212ad-adc0-43bf-bbcf-d4ec728e8770"><p class="p Opt">child_owned_fragments</p>
+<p class="p">Draws a box around each fragment
+that is child owned in the current hierarchy.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idc097e517-1135-403a-9512-df4618c77b93"><p class="p Opt">corners</p>
+<p class="p">Draws a box around fragments classified
+as corners.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id9b44be93-5295-44df-a46b-162285ddcb0b"><p class="p Opt">epe_tolerance</p>
+<p class="p">Puts a box around every fragment
+showing the tolerance bounds for each fragment.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id987cf6ce-c7d8-4b42-81f1-4024744ba7f6"><p class="p Opt">false_fragments</p>
+<p class="p">Draws a box around each fragment
+that is false in the current hierarchy. False fragments are introduced
+to break large shapes.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf23a8fab-b56d-4af3-bc76-d9b80b797953"><p class="p Opt">jogs</p>
+<p class="p">Draws a box around fragments
+that are classified as jogs.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id66b50a0c-2624-4db6-a1ce-ef0c6598a45b"><p class="p Opt">limit_tags</p>
+<p class="p">Draws a box around any fragment
+specified in a limit_tag argument.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id2f908eaf-deec-4ce8-b6af-9c8057773305"><p class="p Opt">modified_target</p>
+<p class="p">If the command–line option
+“modifiedTarget true” is used, then opcIter uses the initial fragment
+biases to define a modified target shape. This output layer is that modified
+target. If modifiedTarget is set to false or left at its default
+value, then this output layer is the same as the original OPC target
+layer.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id27908859-1088-4813-856f-07556c7bb643"><p class="p Opt">mrcBlocked_<span class="keyword ParameterName OptionalReplaceable">iter</span>_<span class="keyword ParameterName OptionalReplaceable">layer</span> </p>
+<p class="p">Outputs a layer with boxes
+indicating fragment movements that were blocked by MRC or other
+constraints. </p>
+<p class="p">To see fragments specified
+on a particular iteration, supply a number for <span class="keyword ParameterName OptionalReplaceable">iter</span>.
+For example, mrcBlocked_1 outputs boxes for fragments blocked on
+the first iteration.</p>
+<p class="p">To see fragments from a particular
+layer, specify the layer name for <span class="keyword ParameterName OptionalReplaceable">layer</span>.
+For example, mrcBlocked_m1 outputs boxes for m1 fragments whose
+movements were blocked on the last iteration.</p>
+<p class="p">The basic form is simply
+mrcBlocked, which outputs polygons for blocked fragments movements
+for all layers on the last iteration. Forms such as mrcBlocked_1_m1
+are permissible.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf1066121-08f4-4fb5-bef2-bdf825599ffc"><p class="p Opt">parent_owned_fragments</p>
+<p class="p">Draws a box around each parent
+owned fragment in the current hierarchy.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id3e318a4b-47e2-4118-aebe-959387576d3e"><p class="p Opt">site_extents</p>
+<p class="p">Draws a box around every
+control point of every simulation site. This is particularly useful
+for checking adaptiveSites output.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id63d86ab2-40d9-45f3-b9ca-e394140fb5e2"><p class="p Opt">sites</p>
+<p class="p">Draws a box around every
+simulation site.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idf8a7ca9a-6ebb-4bb4-8cfe-abb89d1cbd4e"><p class="p Opt">target_band</p>
+<p class="p">This is the difference between
+the original drawn target and the achievable target computed by
+opcIter. The drawn target is the original polygon that opcIter receives. The
+target_band argument rounds off the corners according to other parameters
+given to opcIter.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id3d0466ce-c2a2-488f-91cb-241ed17b3900"><p class="p Opt">tolerance_band</p>
+<p class="p">This is the area between
+the outer and inner acceptable print images.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id5f8216d4-ed00-4cbd-afe0-5928e7500f27"><p class="p Opt">valid_fragments</p>
+<p class="p">Draws a box around each fragment
+that is valid in the current hierarchy. Along with the next three
+output layers this can help you understand what is happening in
+the hierarchy.</p>
+</li>
+<li class="li ArgOption" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id6ea2df60-603b-46ee-b2a8-3b036868ff72"><p class="p Opt">violations</p>
+<p class="p">Outputs a layer containing
+the violations remaining after the algorithm completes. The box
+shows the size and direction of the error.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">OpcIter is a setup file keyword
+similar to <a class="xref fm:HeadingOnly" href="Command_Fastiter_idb6d2b204.html#idb6d2b204-961d-443e-a20a-4ac13473fab9__Command_Fastiter_idb6d2b204.xml#idb6d2b204-961d-443e-a20a-4ac13473fab9" title="Provides a direct method of executing fast iterations in the tagging commands.">fastIter</a>. OpcIter has its own set of parameters
+used for tuning purposes. These parameters are only meant to be
+used with opcIter. When opcIter is used, the <a class="xref fm:HeadingOnly" href="Command_Iterations_id521149da.html#id521149da-f234-407a-bdd3-a089386e066a__Command_Iterations_id521149da.xml#id521149da-f234-407a-bdd3-a089386e066a" title="Specifies how many iterations of OPC movement to perform on the design.">iterations</a> keyword must be set to zero, otherwise
+additional iterations may occur.</p>
+<p class="p">Outlined below are three methods
+of carrying out OPC.</p>
+<ul class="ul"><li class="li" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id9cfad1a1-49dd-47e9-91de-e5c254b934e9"><p class="p">Iterations Keyword</p>
+<p class="p">Using the iterations keyword
+in the setup file carries out full chip simulations in batch mode.
+When the iterations keyword is used in Calibre WORKbench, OPCpro
+iterates over the area currently displayed in the window. </p>
+</li>
+<li class="li" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id0ab2881c-4632-4db2-886f-61fe8c47fb80"><p class="p">fastIter Setup Keyword</p>
+<p class="p">The fastIter setup file keyword
+is used to target a specific set of tags in a design. This command
+is used in cases where a full iteration over the chip is not necessary.
+When particular sites are tagged for an iteration, fastIter provides
+a targeted way to iterate only those selected areas. In most cases,
+fastIter is tuned with the opcTag -hintOffset option. The iterations
+keyword is ignored when fastIter is used.</p>
+</li>
+<li class="li" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id831c3a27-68e9-489d-9474-17d729eac509"><p class="p">OpcIter Setup Keyword</p>
+<p class="p">OpcIter belongs in the same family
+of iteration commands as the iterations keyword and fastIter, but
+can also provide better results for denser layers in the way that
+it handles each iteration. OpcIter requires less tuning than fastIter
+and converges on an answer while fastIter continually iterates over
+simulation sites for the specified number of times. OpcIter has
+its own options for performance tuning that should not be used with
+other setup commands. OpcIter must be the final entry in your setup
+file. Output layers generated with the -outLayer option must be
+the last arguments specified in the opcIter call. A separate -outLayer
+declaration needs to be specified for each generated layer.</p>
+</li>
+</ul>
+<div class="section Subsection" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__idce04fa59-776b-49ca-8a8d-a773b9de80e4"><h2 class="title Subheading sectiontitle">Optimizations</h2><p class="p">Two keywords can decrease your
+run time. They are available also to fastIter, when fastIter is specified
+using the fastIterMode keyword with the opcIter command.</p>
+<ul class="ul"><li class="li" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id988dc1f1-6c57-4908-91c7-abe6d11b8eb3"><p class="p">The argument jogSmooth smooths
+the design after every opcIter iteration. It reduces run-time by
+10 to 15 percent at a small cost of image quality. A good starting
+value for jogSmooth is one or two database units. Initial trials
+with the jogSmooth keyword should not include any limiting tag sets
+to first assess the impact and results of jogSmooth and opcIter
+together.</p>
+</li>
+<li class="li" id="id2fb3d128-2c4e-43bc-abf4-180dd8939b49__id38eaf46f-0100-4482-bff5-c5d2442b7687"><p class="p">The argument adaptiveSites
+begins with all control points on the control sites. After the first
+iteration, it turns off control points outside the minimum and maximum
+intensity. In a typical layout, each iteration turns off more control
+points and calculates fewer intensities and EPEs. This technique
+is not recommended for layouts where minimum and maximum intensity
+occur near the edges of the control site because the few control points
+trimmed from runs are offset by the time required to check.</p>
+</li>
+</ul>
+<p class="p">Neither of these optimizations
+is available with siteControl false or nIterations 0.</p>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock leveled"><code>exec opcIter criticalDistance 0.065 \
+limitTag line_end to 0.001 \
+-outLayer sites -outLayer tolerance_band </code></pre><p class="p">In this example, opcIter is called
+in the last line in the setup file. This example creates two output
+layers, the first showing the location of sites and a second layer
+that shows the tolerance band. In normal production runs, neither
+of these would be present.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_LithoSetupFileKeywords_id5d361e7b.html" title="Setup file keywords define OPC and simulation parameters and define the layers used in Calibre OPCpro, Calibre ORC, and Calibre PRINTimage operations. Keywords may only be specified once per setup file.">Litho Setup File Keywords</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_Iterations_id521149da.html#id521149da-f234-407a-bdd3-a089386e066a__" title="Specifies how many iterations of OPC movement to perform on the design.">iterations</a></div>
+<div><a class="link" href="../topics/Command_Fastiter_idb6d2b204.html#idb6d2b204-961d-443e-a20a-4ac13473fab9__" title="Provides a direct method of executing fast iterations in the tagging commands.">fastIter</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcpro_useref"
+                DocTitle = "Calibre® OPCpro™ User’s and Reference Manual"
+                PageTitle = "opcIter"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Opciter_id2fb3d128.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCpro™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Writing Custom Checks" />
+<meta name="abstract" content="Writing custom checks allows you to evaluate PV-band data for specific situations or characteristics beyond those provided through the built-in checks." />
+<meta name="description" content="Writing custom checks allows you to evaluate PV-band data for specific situations or characteristics beyond those provided through the built-in checks." />
+<meta name="DC.subject" content="Custom Checks, writing, Checks, custom" />
+<meta name="keywords" content="Custom Checks, writing, Checks, custom" />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idba2e00ca-02dc-4313-b450-237f6aa26f71" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Writing Custom Checks</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Writing Custom Checks" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idba2e00ca-02dc-4313-b450-237f6aa26f71">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Writing
+Custom Checks</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Writing custom
+checks allows you to evaluate PV-band data for specific situations
+or characteristics beyond those provided through the built-in checks. </p>
+<p class="p">The basic process is as follows:</p>
+<div class="fig fignone" id="id2d9d8d4f-2456-45d6-bfe4-101eca72b065"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/lfd_cad11a.png" /></div><br /></div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__ida30f46de-0ae4-46e7-bf5b-31aa1c425b42"><span class="ph cmd">Identify the PV-band data
+that is of interest.</span><div class="itemgroup info StepInfo"><p class="p">The <a class="xref fm:HeadingOnly" href="Command_Pvband_id5279462d.html#id5279462d-b17c-4ff8-bc0f-a256a905e66b__Command_Pvband_id5279462d.xml#id5279462d-b17c-4ff8-bc0f-a256a905e66b" title="Generates PV-band data for the specified layer.">PVband</a> function generates six derived
+layers, all of which are available to you for designing custom checks. </p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id3dd5bd1a-6564-47cc-bef3-05533478d059" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Accessing PV-Band Data</span></caption><colgroup><col style="width:2.588in" /><col style="width:1.354in" /><col style="width:1.909in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d49810e171"><p class="p">Layer Content</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d49810e174"><p class="p">Access Through</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d49810e177"><p class="p">See...</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Regular PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Outputbands_id87526daf.html#id87526daf-7acd-4747-9de6-e983a41cf7bd__Command_Outputbands_id87526daf.xml#id87526daf-7acd-4747-9de6-e983a41cf7bd" title="Writes PV-band data to the specified database.">OutputBands</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingPvBandData_id57d16d71.html#id57d16d71-9a15-4735-9c25-1c1f952edcac__TaskTop_AccessingPvBandData_id57d16d71.xml#id57d16d71-9a15-4735-9c25-1c1f952edcac" title="You must use the LFD::OutputBands command in order to have access to PV-band data for later processing or saving to a database.">Accessing PV-Band Data</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Inner edge of the regular
+PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Capturecontour_idfa097bc1.html#idfa097bc1-c826-4af8-a1cf-83947ac986db__Command_Capturecontour_idfa097bc1.xml#idfa097bc1-c826-4af8-a1cf-83947ac986db" title="Stores a previously generated contour as a derived layer.">CaptureContour</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingContourData_id45f152d8.html#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513__TaskTop_AccessingContourData_id45f152d8.xml#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513" title="If you want to perform additional processing or checking that involves individual contours generated by Calibre LFD, you must first save those contours as derived layers. You do this using the LFD::CaptureContour function.">Accessing Contour Data</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Outer edge of the regular
+PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Capturecontour_idfa097bc1.html#idfa097bc1-c826-4af8-a1cf-83947ac986db__Command_Capturecontour_idfa097bc1.xml#idfa097bc1-c826-4af8-a1cf-83947ac986db" title="Stores a previously generated contour as a derived layer.">CaptureContour</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingContourData_id45f152d8.html#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513__TaskTop_AccessingContourData_id45f152d8.xml#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513" title="If you want to perform additional processing or checking that involves individual contours generated by Calibre LFD, you must first save those contours as derived layers. You do this using the LFD::CaptureContour function.">Accessing Contour Data</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Absolute PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Outputbands_id87526daf.html#id87526daf-7acd-4747-9de6-e983a41cf7bd__Command_Outputbands_id87526daf.xml#id87526daf-7acd-4747-9de6-e983a41cf7bd" title="Writes PV-band data to the specified database.">OutputBands</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingPvBandData_id57d16d71.html#id57d16d71-9a15-4735-9c25-1c1f952edcac__TaskTop_AccessingPvBandData_id57d16d71.xml#id57d16d71-9a15-4735-9c25-1c1f952edcac" title="You must use the LFD::OutputBands command in order to have access to PV-band data for later processing or saving to a database.">Accessing PV-Band Data</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Inner edge of the absolute
+PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Capturecontour_idfa097bc1.html#idfa097bc1-c826-4af8-a1cf-83947ac986db__Command_Capturecontour_idfa097bc1.xml#idfa097bc1-c826-4af8-a1cf-83947ac986db" title="Stores a previously generated contour as a derived layer.">CaptureContour</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingContourData_id45f152d8.html#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513__TaskTop_AccessingContourData_id45f152d8.xml#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513" title="If you want to perform additional processing or checking that involves individual contours generated by Calibre LFD, you must first save those contours as derived layers. You do this using the LFD::CaptureContour function.">Accessing Contour Data</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e171 "><p class="p">Outer edge of the absolute
+PV-band </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e174 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Capturecontour_idfa097bc1.html#idfa097bc1-c826-4af8-a1cf-83947ac986db__Command_Capturecontour_idfa097bc1.xml#idfa097bc1-c826-4af8-a1cf-83947ac986db" title="Stores a previously generated contour as a derived layer.">CaptureContour</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d49810e177 "><p class="p"><a class="xref fm:HeadingOnly" href="TaskTop_AccessingContourData_id45f152d8.html#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513__TaskTop_AccessingContourData_id45f152d8.xml#id45f152d8-2ad1-4ba3-87a9-4eabbc31c513" title="If you want to perform additional processing or checking that involves individual contours generated by Calibre LFD, you must first save those contours as derived layers. You do this using the LFD::CaptureContour function.">Accessing Contour Data</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">All PV-band data is present
+as polygon layers. Inner edge layers represent locations in the
+layout that always print, across all process window conditions.
+Outer edge layers represent locations in the layout that print at
+some point within the process window conditions.</p>
+</div></li>
+<li class="li step stepexpand" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__ida681d8cf-6c8e-4462-8381-b0ea0a2a5683"><span class="ph cmd">Use the <span class="keyword ParameterName Required">-layerOut</span> keyword
+with <a class="xref fm:HeadingOnly" href="Command_Outputbands_id87526daf.html#id87526daf-7acd-4747-9de6-e983a41cf7bd__Command_Outputbands_id87526daf.xml#id87526daf-7acd-4747-9de6-e983a41cf7bd" title="Writes PV-band data to the specified database.">OutputBands</a> or <a class="xref fm:HeadingOnly" href="Command_Capturecontour_idfa097bc1.html#idfa097bc1-c826-4af8-a1cf-83947ac986db__Command_Capturecontour_idfa097bc1.xml#idfa097bc1-c826-4af8-a1cf-83947ac986db" title="Stores a previously generated contour as a derived layer.">CaptureContour</a> to save the desired PV-band data
+as a derived layer.</span></li>
+<li class="li step stepexpand" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id037527d4-924c-4053-a55e-fe1c0f3eabbb"><span class="ph cmd">Manipulate these PV-band layers
+as needed (just as you manipulate any other derived polygon layers).
+For example, you can combine them using Boolean operations, isolate specific
+portions using user-supplied island layers, and so on. Island layers
+define areas of special interest or requiring special treatment.</span></li>
+<li class="li step stepexpand" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id8793ca8b-fdef-4749-bba7-dd472a88162a"><span class="ph cmd">Write custom checks using
+standard Calibre nmDRC operations, such as EXTERNAL, INTERNAL, and
+ENCLOSURE. Use these operations to examine properties of these PV-band
+layers or explore relationships between sets of PV-band layers or
+between PV-band layers and other layers (original or derived. Output
+results in the form of error markers (polygons).</span><div class="itemgroup info StepInfo"><div class="note note"><span class="notetitle">Note:</span> <p class="p">Within
+the TVF rule file, all code used for preparing data or performing
+the actual checks must be supplied in the form of a VERBATIM block.</p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id4fab7450-f29b-483e-9f97-31a138b8c304"><span class="ph cmd">Use <a class="xref fm:HeadingOnly" href="Command_Addcustomcheck_id375b7ada.html#id375b7ada-6aad-4377-8ce1-584ecd7915b4__Command_Addcustomcheck_id375b7ada.xml#id375b7ada-6aad-4377-8ce1-584ecd7915b4" title="Registers a user-defined check with the Calibre LFD check registry.">AddCustomCheck</a> to register the each check with
+the Calibre LFD engine so results are factored into variability
+indices and written to the Calibre LFD output database. You must
+supply the following information:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id99dafb79-b41d-4a15-afbc-7472bccc923e"><p class="p">The name of the derived
+layer containing the error markers resulting from the custom check.</p>
+</li>
+<li class="li" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__idd9531a5b-e605-4dd9-b758-69a56e0e236c"><p class="p">The name of the layer
+for which the PV-bands are generated.</p>
+</li>
+<li class="li" id="idba2e00ca-02dc-4313-b450-237f6aa26f71__id58d197d0-4762-4552-97fc-ffbd287f4932"><p class="p">The experiment (subwindow)
+for which the PV-bands are generated.</p>
+</li>
+</ul>
+</div></li>
+</ol>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">Generate error markers for those
+areas where the target and PV‑bands do not overlap.</p>
+<pre class="pre codeblock leveled"><code>VERBATIM “ 
+// Begin custom check 
+targetProcessBandMismatch_poly = lfd_poly_Band_p1 NOT targetBand_poly 
+Mismatch_poly_check = Extent targetProcessBandMismatch_poly 
+ 
+LFD::AddCustomCheck -layer poly
+   -customCheck Mismatch_poly_check
+   -subwindow 1
+   -checkName Mismatch_poly_check
+   -priority 900
+   -comment “target and PV-bands do not overlap”
+   -database $lfd_results” 
+// End custom check 
+” </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TranslatingFailuresIntoRules_idd2ddb59f.html" title="Calibre LFD failure rules should identify those areas where variation in printing due to process variation is likely to cause critical errors. The lithographer should provide you with the graphical, mathematical, or verbal descriptions of the rules (checks) you need to write.">Translating Failures into Rules</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "Writing Custom Checks"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_WritingCustomChecks_idba2e00ca.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Coding Efficiency Considerations" />
+<meta name="abstract" content="Because you can generate property computations for each of a large number of device instances, it is important to consider efficiency when writing property specifications using the built-in language." />
+<meta name="description" content="Because you can generate property computations for each of a large number of device instances, it is important to consider efficiency when writing property specifications using the built-in language." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id84154fa3-8847-4959-b2e2-53c83d26423e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Coding Efficiency Considerations</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Coding Efficiency Considerations" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id84154fa3-8847-4959-b2e2-53c83d26423e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Coding Efficiency Considerations</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Because you
+can generate property computations for each of a large number of
+device instances, it is important to consider efficiency when writing
+property specifications using the built-in language. </span>
+</div>
+<p class="p">The rule file compiler attempts
+to move parts of the computation from the evaluation phase to the
+initiation phase. (For information on the initiation and evaluation
+phases of computation, refer to “<a class="xref fm:HeadingAndPage" href="Concept_PropertyComputationStructure_id7316ccf0.html#id7316ccf0-ec4f-4472-808b-98db1fa3d15f__Concept_PropertyComputationStructure_id7316ccf0.xml#id7316ccf0-ec4f-4472-808b-98db1fa3d15f" title="At the time a rule file is loaded, each DEVice statement containing a property computation causes the generation of a value array. The value array is an array of properties indexed from zero through a maximum number.">Property Computation Structure</a>”.) This is because the initiation
+computation is performed only once per run, whereas the evaluation
+computation is performed once per device instance recognized.</p>
+<p class="p">The parts of the computation that the rule
+compiler can move to the initiation phase are those that are instance-independent.
+That is, computations that do not depend on data from a recognized
+instance get moved. Because the computations do not depend on instance
+data, they are performed only once during initiation and the results
+used many times during evaluation.</p>
+<p class="p">The source of instance-dependent data is the
+following functions:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id0a0b2e62-cf8f-4398-9c3a-707db48fa985" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:2.600in" /><col style="width:2.600in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All AREA functions</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">X_LOCATION()</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All PERIMETER functions</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Y_LOCATION()</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">COUNT()</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">PIN_NET()</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">BENDS()</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">INSTANCE()</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All ENClosure_* functions</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All DFM_* functions</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">All TVF_* functions</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">All other functions, including NAMED_NET(),
+deliver instance-independent data. (For reference, the complete
+descriptions of device property calculation functions are found
+under “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device Property Computation Function Reference', 'svrf_ur'); return false;">Device Property Computation Function Reference</a>” in the <cite class="cite">SVRF Manual</cite>.)</p>
+<p class="p">The compiler uses two methods to move computations
+to the initiation phase: </p>
+<ol class="ol"><li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id3c257f83-be92-48be-bfa5-7e773abcec12"><p class="p">Locate the first line in the program that
+contains a call to an instance-dependent function. This is considered
+the maximum initial portion of the program. </p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__ide8e5e8e7-7c74-494f-8ea3-4278a75632d4"><p class="p">Move all preceding lines to the initiation
+phase, provided this does not split an IF/ELSE structure between
+initiation and evaluation. If necessary, it moves fewer lines to initiation
+to avoid splitting an IF/ELSE computation between phases.</p>
+</li>
+</ol>
+<p class="p">Once the compiler has moved the initial instance-independent
+portion of the program to the initiation phase, the compiler examines
+the remaining expressions in the program and locates all sub-expressions
+that are instance-independent. It moves the computation of these
+sub-expressions to the initiation phase and stores the results in
+temporary variables whose names begin with “init.” During the evaluation
+computation, the values stored in these variables are used in place
+of the original sub-expressions.</p>
+<p class="p">In examining sub-expressions, the compiler
+treats constants, process variables, and instance-independent function
+calls as instance-independent. However, the compiler is not capable
+of determining if a reference to a local variable or a property
+variable is instance-independent, so all such references are treated
+as instance-dependent.</p>
+<p class="p">The following example illustrates some of the
+preceding concepts. In this example, you should assume that P and
+Q represent pin names, and that normal_adjustment is a process variable.</p>
+<pre class="pre codeblock leveled"><code><span class="CodeLine">   1   </span>[
+<span class="CodeLine">   2   </span>    property ap, aq, inst
+<span class="CodeLine">   3   </span>    power_adjustment = 0.04 + normal_adjustment
+<span class="CodeLine">   4   </span>    power_net = named_net(“VDD”)
+<span class="CodeLine">   5   </span>    if (pin_net(P) == power_net)
+<span class="CodeLine">   6   </span>        pin_adjustment = power_adjustment
+<span class="CodeLine">   7   </span>    else
+<span class="CodeLine">   8   </span>        pin_adjustment = normal_adjustment
+<span class="CodeLine">   9   </span>    ap = area(P) + pin_adjustment
+<span class="CodeLine">  10   </span>    aq = area(Q) + 2 * normal_adjustment
+<span class="CodeLine">  11   </span>    inst = instance()
+<span class="CodeLine">  12   </span>]
+</code></pre><p class="p">Lines 3 and 4 are instance-independent, but
+line 5 is not. Therefore, the computations performed in lines 3
+and 4 are done during the initiation phase. That is, the values
+of the variables power_adjustment and power_net are computed and
+placed in a value array during initiation. The evaluation phase
+obtains these variables directly from the value array. Also, the
+statement sub-expression:</p>
+<p class="p BlockIndent">2 * normal_adjustment </p>
+<p class="p">on line 10 is instance-independent. A variable
+“init1” is created in the value array to store the value of this
+sub-expression. Line 10 is then treated as if it read like this:</p>
+<p class="p BlockIndent">aq = area(Q) + init1</p>
+<p class="p">Note that the compiler’s two strategies do
+not find all of the instance-independent computations that could
+be moved. In the preceding example, if the statement:</p>
+<p class="p BlockIndent">inst = instance() </p>
+<p class="p">had been moved from line 11 to just ahead of
+line 3, there would have been no instance-independent initial segment
+of the program. The only optimizations the compiler could perform would
+be on the two instance-independent sub-expressions:</p>
+<p class="p BlockIndent">0.04 + normal_adjustment </p>
+<p class="p">and </p>
+<p class="p BlockIndent">2 * normal_adjustment</p>
+<p class="p">However, if you use the following guidance,
+you can ensure that all instance-independent computations are computed
+only once in the initiation phase.</p>
+<p class="p">Here are some tips on writing clear and efficient
+property specification programs. </p>
+<ul class="ul"><li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id5da57aca-3c90-4380-b306-60ab634afbd3"><p class="p"><span class="ph FontProperty HeadingLabel">Create an instance-free initial segment</span> —
+Try to create an initial set of statements in the program in which
+all of the instance-independent computations (computations that do
+not depend upon instance properties) are performed and stored in
+local variables. This portion is performed only once in the initiation
+phase. If you intermix independent and dependent portions, the compiler
+still attempts to move independent sub-expressions to the initiation
+phase, but it is not capable of moving entire assignment statements.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id6f5a1a6d-edaa-4e54-b083-aad9da83eebc"><p class="p"><span class="ph FontProperty HeadingLabel">Use variables for constants</span> —
+You can assign constants to mnemonic variables in the initial instance
+independent section of your program without loss of performance.
+This allows you to give the constants meaningful names. For example,
+the following two programs are equally efficient in the evaluation
+phase. The second one performs the assignment bend_effect = 0.5
+during initiation. Then during each evaluation, it accesses the
+bend_effect value just as efficiently as the first program accesses
+the constant 0.5 value.</p>
+<pre class="pre codeblock leveled"><code>[   // Use of unnamed constant. (OK) 
+    property w 
+    w = perimeter_coincident(G,pin_layer) - 0.5 * bends(G) 
+] 
+
+[   // Use of named constant. (Just as fast, but possibly 
+    // more meaningful.) 
+    property w 
+    bend_effect = 0.5 // This takes place only once at  
+                      // initiation time. 
+    w = perimeter_coincident(G,pin_layer) - bend_effect*bends(G) 
+] </code></pre></li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id6ed04dd7-66bc-4d51-96ba-1e8d923e7d24"><p class="p"><span class="ph FontProperty HeadingLabel">Parenthesize instance-independent sub-expressions</span> —
+You might have to use parentheses for instance-independent expressions.
+For example, consider the following assignment statement where var
+is a process variable:</p>
+<pre class="pre codeblock leveled"><code>a = area(P) + 0.5 + var</code></pre><p class="p">The compiler does not find the instance independent
+sub-expression 0.5 + var in the preceding statement because it does
+addition from left to right by default. Thus, the expression is
+treated as if were parenthesized as follows:</p>
+<pre class="pre codeblock leveled"><code>a = ( area(P) + 0.5 ) + var</code></pre><p class="p">To optimize the original statement, you can
+introduce your own parentheses as follows:</p>
+<pre class="pre codeblock leveled"><code>a = area(P) + ( 0.5 + var )</code></pre><p class="p">The compiler uses this to compute “0.5 +
+var” before adding in area(P). In this case, it recognizes (0.5
++ var) as being instance-independent and computes it only once during initiation.</p>
+<p class="p">A second way to handle this situation is
+to use the “variables for constants” method of the previous tip
+by computing “0.5 + var” and storing it in an appropriately-named
+local variable in the initial portion of your program.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id4e5f939c-28a4-4df0-9fad-e78b807b4688"><p class="p"><span class="ph FontProperty HeadingLabel">Use data functions directly</span> —
+The values of any instance data functions to which you refer are
+computed only once per instance and stored in the value array. This
+occurs before the property computation is performed for that instance.
+That is, if you refer to the same instance data function with the
+same arguments in more than one place in your program, you are simply
+accessing the pre-computed value, not causing it to be computed
+each time you reference it. Therefore, you do not have to store
+the value in a local variable. The assignment to a local variable
+would be an extra step and would slow the evaluation. </p>
+<p class="p">For example, the first of the following two
+programs takes more time to evaluate since it contains an extra
+assignment statement, which must be executed at evaluation time.</p>
+<pre class="pre codeblock leveled"><code>[ // Use of function values indirectly through local 
+    // variable. (SLOWER) 
+    property w, l 
+    common_perim = perimeter_coincident(G, pin_layer) 
+    w = common_perim 
+    l = perim(G) - common_perim 
+] 
+
+[ // Use of  function values directly. (FASTER) 
+    property w, l 
+    w = perimeter_coincident(G, pin_layer) 
+    l = perim(G) - perimeter_coincident(G, pin_layer) 
+] </code></pre></li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__idda531413-5666-42f2-a73d-33a6d00989bc"><p class="p"><span class="ph FontProperty HeadingLabel">Use local property measurements</span> —
+Use seed layers for property calculations instead of pin layers
+or pin names. For example, if you have this Device statement:</p>
+<pre class="pre codeblock leveled"><code>DEVICE MP <span class="ph CodeHighlight orange">pgate</span> poly(G) psd(S) psd(D) nw(B) &lt;aux&gt; ...</code></pre><p class="p">You should use a function call like this:</p>
+<pre class="pre codeblock leveled"><code>z = perimeter_coincide(<span class="ph CodeHighlight orange">pgate</span>, aux)</code></pre><p class="p">rather than using poly or G for pgate. Even
+though pgate is likely derived from poly and is coincident with
+the G pin, using the local layer (the seed layer) prevents expansion
+of the poly layer during processing.</p>
+<p class="p">To further illustrate this idea, consider
+the following.</p>
+<p class="p">Suppose the devices to be recognized have
+a pin “P”, which is known to lie strictly within the area of the
+seed shape on layer dev_lay. Therefore, the two functions shown next
+are numerically equivalent. However, the area requested in the first
+function is not known by the compiler to lie entirely within the
+seed shape. In the second function, the area to be computed is guaranteed
+to lie entirely inside of the seed shape on dev_lay and is thus
+faster to compute.</p>
+<pre class="pre codeblock leveled"><code>AREA(P) // slower
+AREA_COMMON(P, dev_lay) // faster, because dev_lay is a seed layer</code></pre><p class="p">In <a class="xref fm:Figure" href="#id84154fa3-8847-4959-b2e2-53c83d26423e__id3a09e166-ea7e-4c87-9cde-6bae7509d04f">Figure 1</a>, A and B are two rectangular shapes
+that intersect to form a third rectangular shape D. In the device
+statement, D is the device shape, and A and B are pin shapes. In
+the property computation, the goal is to find the length of the
+vertical boundary at the left of the D shape. </p>
+<p class="p">Either of the two expressions shown can do
+this, but the first involves the interaction of two pins and the
+second involves a pin and the device shape. Thus, the second is
+more efficient.</p>
+<div class="fig fignone" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id3a09e166-ea7e-4c87-9cde-6bae7509d04f"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Efficient Function Choice</span><br /><div class="imagecenter"><img class="image imagecenter" height="135" src="../graphics/dev_recog5.png" width="407" /></div><br /></div>
+<p class="p">In some situations, you might have a choice
+of which layer to use for the seed layer. If so, consider using
+a seed layer whose shapes contain most of the other shapes involved so
+that the geometry on or within the seed shape applies to more of
+the functions that must be computed.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__idf01b43ff-2560-4e96-ba0d-f58d5b6afc6b"><p class="p"><span class="ph FontProperty HeadingLabel">Avoid time-consuming geometry functions</span> —
+Some of the geometric instance data functions are more time-consuming
+to compute than others. In some cases, you can rewrite an expression
+involving more time-consuming functions to use more efficient functions.</p>
+<ul class="ul"><li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id2170c564-9170-4a6e-9260-22be03c3897b"><p class="p">Functions that request information about
+geometry on the boundary of, or within the interior of the seed
+shape are the least time-consuming. For example, AREA(device_layer)
+or AREA_COMMON(device_layer, pin_layer) fall in this class.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__iddb4e7e99-85ab-4d1d-9008-6ca06fb09ef8"><p class="p">Functions that require information about
+a single pin or auxiliary layer or about geometry lying strictly
+outside the seed shape are more time-consuming. For example, AREA(pin_layer)
+or PERIMETER_OUTSIDE(pin_name, device_layer) are in this class.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__idd9c3bf2a-9eee-41bf-bba5-58294d65b02d"><p class="p">Some of the most time-consuming functions
+are those that request information about geometric interactions
+between different pins, pin layers, or auxiliary layers. For example,
+AREA_COMMON(pin_1, pin_2) or PERIMETER_OUTSIDE(pin_1, auxiliary_layer)
+are in this class.</p>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id5ea20998-d765-454d-aaad-bac9e1eba3a1"><p class="p">The most time-consuming functions are
+the ENClosure_* functions that make collections of pin-specific
+geometric measurements. See “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Historical Well Proximity Calculation Methods', 'svrf_ur'); return false;">Historical Well Proximity Calculation Methods</a>” in the <cite class="cite">SVRF Manual</cite> for
+a summary of these.</p>
+</li>
+</ul>
+<p class="p">Next is a list of the functions classified
+according to speed. In the list, dev_lay represents the device layer
+or the device as a pin, and pin_lay, pin_lay_1, pin_layN represent
+other pins or layers including auxiliary layers.</p>
+<ul class="ul"><li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id7a1ea3f5-f897-4c7e-b480-eef246daa279"><p class="p"><span class="ph FontProperty HeadingLabel">Fastest functions</span> —
+Geometry on or within seed shape:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id84154fa3-8847-4959-b2e2-53c83d26423e__idca26e5e8-a690-4c12-80c5-3c50449416af" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:4.875in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">area(dev_lay)</p>
+<p class="p">area_common(&lt;args&gt;)</p>
+<p class="p">perimeter(dev_lay)</p>
+<p class="p">perimeter_outside(dev_lay, pin_lay)</p>
+<p class="p">perimeter_&lt;variant&gt;(&lt;args&gt;) all coincide and inside variants</p>
+<p class="p">bends(dev_lay)</p>
+<p class="p">x_location(&lt;arg&gt;)</p>
+<p class="p">y_location(&lt;arg&gt;)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__idfc35b135-376a-4103-819b-1d107d8ac848"><p class="p"><span class="ph FontProperty HeadingLabel">Intermediate functions </span>—
+Single pin or layer geometry, or geometry outside of seed shape:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id5341609f-bed9-45f5-8437-72fb60546631" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:4.875in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">area(pin_lay)</p>
+<p class="p">perimeter(pin_lay)</p>
+<p class="p">perimeter_outside(pin_lay, dev_lay)</p>
+<p class="p">count(pin_lay)</p>
+<p class="p">bends(pin_lay)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id4b89ea3d-6235-4202-91f2-75ab09de4c3f"><p class="p"><span class="ph FontProperty equationvariable">Slower functions</span> —
+Interaction between non-device layer shapes:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id84154fa3-8847-4959-b2e2-53c83d26423e__ida67de38f-81e1-4453-90b9-52067e21e90f" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:4.875in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">area_common(pin_lay_1, pin_lay_2)</p>
+<p class="p">perimeter_&lt;variant&gt;(pin_lay_1, pin_lay_2) all coincide, inside,
+and outside variants</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id84154fa3-8847-4959-b2e2-53c83d26423e__id4b97a6a3-4b7c-42a1-b69a-1fad9e6b3eb6"><p class="p"><span class="ph FontProperty HeadingLabel">Slowest functions</span> —
+These should generally be avoided because other device property
+APIs offer much better performance:</p>
+<p class="p">enclosure_parallel(&lt;args&gt;), enclosure_perpendicular(&lt;args&gt;), enclosure_vector(&lt;args&gt;)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">The complete descriptions of device property
+calculation functions are found under “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device Property Computation Function Reference', 'svrf_ur'); return false;">Device Property Computation Function Reference</a>” in the <cite class="cite">SVRF Manual</cite>.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_UserDefinedPropertyComputation_idfb457ba5.html" title="The DEVice statement allows you to define your own property computation algorithm for any device. For any device, including built-in devices, if you choose to compute properties using your own algorithm, you assume responsibility for calculating all properties for that device, including any properties that would have been computed by default.">User-Defined Property Computation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Coding Efficiency Considerations"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CodingEfficiencyConsiderations_id84154fa3.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="MGCChapter" />
+<meta name="DC.Title" content="Pre- and Post-Processing for Calibre Runs" />
+<meta name="abstract" content="Some form of pre- or post-processing is often performed with a Calibre run. For example, pre-processing can prepare a layout or netlist for verification or construct an input file. Post-processing can prepare or analyze report files. There are several methods for automatically executing a pre- or post-processing procedure or script with your Calibre run. The method you choose depends on your design environment and the execution environment for the pre- or post-processing procedure." />
+<meta name="description" content="Some form of pre- or post-processing is often performed with a Calibre run. For example, pre-processing can prepare a layout or netlist for verification or construct an input file. Post-processing can prepare or analyze report files. There are several methods for automatically executing a pre- or post-processing procedure or script with your Calibre run. The method you choose depends on your design environment and the execution environment for the pre- or post-processing procedure." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida32a3e07-86da-4813-a852-d06907db0aea" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Pre- and Post-Processing for Calibre Runs</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Pre- and Post-Processing for Calibre Runs" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida32a3e07-86da-4813-a852-d06907db0aea">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1"> Pre- and Post-Processing
+for Calibre Runs</h1>
+<div class="body MGCBody"><div class="abstract MGCAbstract"><span class="shortdesc">Some form
+of pre- or post-processing is often performed with a Calibre run.
+For example, pre-processing can prepare a layout or netlist for
+verification or construct an input file. Post-processing can prepare
+or analyze report files. There are several methods for automatically executing
+a pre- or post-processing procedure or script with your Calibre
+run. The method you choose depends on your design environment and
+the execution environment for the pre- or post-processing procedure.</span>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ida32a3e07-86da-4813-a852-d06907db0aea__id2b8318f1-8c9d-42a5-a4cf-d70cf02bc58f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Pre- and
+Post-Processing Methods with Calibre Verification</span></caption><colgroup><col style="width:3.344in" /><col style="width:1.188in" /><col style="width:0.983in" /><col style="width:0.983in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5781e180"><p class="p">Method</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5781e183"><p class="p">Execution environment</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5781e186"><p class="p">Pre- or post-processing</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5781e189"><p class="p">In Calibre Interactive runset?</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e180 "><p class="p">External trigger in Calibre
+Interactive</p>
+<p class="p">These run in the design tool before and after Calibre
+Interactive execution. External triggers are typically defined in
+the initialization code for the design tool.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'External Triggers in Calibre Interactive', 'calbr_interactive_user'); return false;">External Triggers in Calibre Interactive</a>”</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e183 "><p class="p">Design tool<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e186 "><p class="p">Both</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e189 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e180 "><p class="p">Internal trigger in Calibre
+Interactive</p>
+<p class="p">Internal triggers are part of Calibre Interactive and
+execute before and after the Calibre run. </p>
+<p class="p">See “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Internal Triggers in Calibre Interactive', 'calbr_interactive_user'); return false;">Internal Triggers in Calibre Interactive</a>”</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e183 "><p class="p">Shell or Cadence Virtuoso</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e186 "><p class="p">Both</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e189 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e180 "><p class="p">Custom menu command</p>
+<p class="p">You can add custom menu items in supported design
+tools and tie the menu item to one or more commands. In Cadence
+Virtuoso, you have the option of defining a Skill function to run before
+the main (shell) command.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_interactive_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Custom Menu Items in Design Tools', 'calbr_interactive_user'); return false;">Custom Menu Items in Design Tools</a>”</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e183 "><p class="p">Shell or Cadence Virtuoso</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e186 "><p class="p">Pre-processing in Cadence Virtuoso</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5781e189 "><p class="p">No</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following examples demonstrate pre-
+and post-processing using Calibre tools.</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_OneClickCustomMenuCommandSkillPreProcessing_idd0571f0b.html" title="You can define a custom menu command for Cadence Virtuoso to first call a SKILL function, then execute one or more commands. This example demonstrates how to create a custom menu item that calls a SKILL procedure, runs Calibre Interactive in batch mode, then executes a shell command for post-processing.">Creating a One-Click Custom Menu Command With SKILL Pre-Processing</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_ProcessingNetlistBeforeCalibreRun_idf6e50278.html" title="You can use Calibre Interactive to specify a trigger function that runs just before the Calibre run starts. This example defines a trigger function to process the source netlist. The Calibre Interactive internal trigger runs after source and layout export completes and before the Calibre nmLVS run starts. ">Processing a Netlist Before the Calibre Run</a></strong></li>
+</ul>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  Calibre DESIGNrev, Cadence Virtuoso, and
+Synopsys IC Compiler</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Pre- and Post-Processing for Calibre Runs"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/MGCChap_PrePostProcessingCalibreRuns_ida32a3e07.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

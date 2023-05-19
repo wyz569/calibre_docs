@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Step 2 — Creating the Parasitic Database" />
+<meta name="abstract" content="Once you have created the PHDB, you create the parasitic database (PDB)." />
+<meta name="description" content="Once you have created the PHDB, you create the parasitic database (PDB)." />
+<meta name="DC.subject" content="Calibre xACT 3D, creating PDB" />
+<meta name="keywords" content="Calibre xACT 3D, creating PDB" />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Step 2 — Creating the Parasitic Database</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Step 2 — Creating the Parasitic Database" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Step 2 — Creating the
+Parasitic Database</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Once you have
+created the PHDB, you create the parasitic database (PDB). </p>
+<p class="p">The PDB stores the parasitic models for
+each extracted net. This step can be run multiple times without
+regenerating the PHDB. You might want to do this if you are extracting
+different types of parasitics on different nets or if you are also extracting
+inductance with the Calibre<sup>®</sup> xL Parasitic
+Inductance Engine.</p>
+<p class="p">There
+are many decisions that affect how you create the PDB. The most important
+is speed versus level of detail, which affects
+accuracy. Parasitic extraction for an entire chip can take from
+hours to more than a day. (The exact duration depends on the capabilities
+of the computer on which you run the analysis and the number of
+nets in the IC design.)</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id0a348268-2a61-4f39-9195-7ea5ac18886e"><p class="p"><span class="ph FontProperty HeadingLabel">PHDB</span> created
+in <a class="xref fm:HeadingOnly" href="TaskTop_Step1CreatingPhdb_id66ef7ed4.html#id66ef7ed4-eab1-4f87-9094-0d2f24304534__TaskTop_Step1CreatingPhdb_id66ef7ed4.xml#id66ef7ed4-eab1-4f87-9094-0d2f24304534" title="The Persistent Hierarchical Database, usually referred to as the PHDB, contains information about your design’s layout, connectivity, and devices necessary for calculating the parasitic information. You can create the PHDB with Calibre  nmLVS‑H or Calibre xACT 3D.">Step 1 — Creating the PHDB</a>.</p>
+<p class="p">If you are doing multiple
+runs, you must use the same PHDB each time. The PHDB must be in
+the <span class="ph filepath">SVDB</span> directory; you cannot separately specify
+the location.</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id0577d2c5-ad8f-4665-bd4b-a2f875ef9596"><p class="p"><span class="ph FontProperty HeadingLabel">Xcell file</span> (non-flat
+extraction only) </p>
+<p class="p">When performing hierarchical
+extraction, the hierarchy is specified by means of an xcell file.
+If you are doing a transistor-level extraction, or working with
+LEF/DEF layouts, you do not need an xcell file.</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id7e1bb6dc-356c-45da-997b-e04b8018bfea"><p class="p"><span class="ph FontProperty HeadingLabel">SVRF rule file</span>. </p>
+<p class="p">This should be the same file
+used in Step 1. </p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id8b68d94f-a622-400b-8d2d-5d778a97716f"><span class="ph cmd">Determine which parasitics
+you need. The choices are: </span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id28d84906-98ee-450e-b655-c975328281cc"><p class="p">Resistance (‑r)</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idd484826c-22ff-4ac0-aeaa-2e5d8436f67b"><p class="p">Resistance and distributed
+capacitance (‑rc)</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id12991798-3d1c-49cf-85d0-e5b1a4af4143"><p class="p">Resistance with distributed
+capacitance and coupled capacitance between nets (‑rcc) </p>
+</li>
+</ul>
+<p class="p">There is a trade-off between
+the amount of detail and how long the netlist takes to simulate.
+For example, a netlist with parasitics as lumped capacitance takes
+less time to simulate than one with coupled capacitance between
+nets, which takes less time than one with coupled capacitance between
+nets including floating nets.</p>
+</div></li>
+<li class="li step stepexpand" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id0693c36f-7407-412f-8b3b-0bd058955b90"><span class="ph cmd">Determine how much of the
+design you need to extract.</span><div class="itemgroup info StepInfo"><p class="p">The less of the design you
+perform parasitic extraction for, the faster simulation will run.
+Your choices are:</p>
+<ul class="ul"><li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id14036314-5ae7-47cb-8a9c-c7acf0c6f995"><p class="p">Transistor-level (“flat”)
+extraction, which flattens all design hierarchy and extracts parasitics
+for everything not explicitly excluded. This is the default if no
+xcell list is added.</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id0940ee1d-dd74-42c5-a822-b2588f6abd28"><p class="p">Gate-level extraction,
+which ignores portions of the design listed in an xcell file. (The
+portions are usually devices or standard cells that have been verified separately.)
+The part of the design being extracted is flattened, just as with
+transistor-level extraction.</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__ided90894d-f279-4706-b3b5-8c65a88c36cb"><p class="p">Full hierarchical extraction,
+which extracts each cell listed in an xcell file only once. This
+method is only recommended for designs with large, symmetrically
+placed cells such as memory chips.</p>
+</li>
+<li class="li" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id80a5ec27-526b-4b4a-98ab-04f9391eecc3"><p class="p">Any of the above, with
+“select net”. This option extracts only nets explicitly specified.
+Use this with iterative extraction to handle critical nets: first most
+of the design is extracted with minimal detail, and then extraction
+is run again selecting the critical nets with more parasitic detail.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If you
+are performing multiple extractions on the same design into a single
+PDB, the extractions need to all be the same type (for example,
+all gate-level).</p>
+</div>
+</li>
+</ul>
+<p class="p">Transistor-level (“flat”) extraction
+is the most accurate, but also slow. For large designs, flat extraction
+may produce netlists that are too large to simulate. However, where
+accuracy is critical, transistor-level extraction on a limited section
+of the design provides detailed information.</p>
+</div><ol type="a" class="ol substeps"><li class="li substep" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idda5a59f5-76fb-402f-b9c8-3a6a262a8162"><span class="ph cmd">If you decide on gate-level
+or full hierarchical extraction, construct an xcell list. See “<a class="xref fm:HeadingAndPage" href="Concept_HierarchyControlXcells_id204ea755.html#id204ea755-fdad-4f91-934a-9fada94279c3__Concept_HierarchyControlXcells_id204ea755.xml#id204ea755-fdad-4f91-934a-9fada94279c3" title="When performing hierarchical extraction, you define your design’s hierarchy for the Calibre xACT tool by identifying the lower-level cells in the design hierarchy.">Hierarchy Control with Xcells</a>” for details.</span></li>
+<li class="li substep" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idea22cfbc-0631-47ed-87aa-19078e5b5b16"><span class="ph cmd">If you decide on select-net
+extraction, add a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Extract Include', 'svrf_ur'); return false;">PEX Extract Include</a> statement to your rule file.</span></li>
+<li class="li substep" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id4437da79-5abd-44f7-ac51-f40aa052447f"><span class="ph cmd">If you decide to extract a
+limited section of the design, and you are performing resistance
+and distributed capacitance (‑rc) or resistance with distributed
+capacitance and coupled capacitance between nets (‑rcc) extraction where
+highest accuracy is important, you can control the accuracy by adding
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Fieldsolver Mode', 'svrf_ur'); return false;">PEX Fieldsolver Mode</a> statement to your rule file. Accuracy can be set to
+200 or 600. The default setting for this statement is 200. Setting
+the accuracy to 600 is more accurate, but will significantly increase runtime.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id09005310-1d3a-416d-a9b5-f288f397988c"><span class="ph cmd">Run the extraction.</span><div class="itemgroup info StepInfo"><p class="p">The PDB step always contains
+at least the following:</p>
+<pre class="pre ShellCommand">calibre ‑xact ‑3d -pdb <span class="ph FontProperty emphasis">parasitic_switch</span> <span class="ph FontProperty emphasis">SVRF_file</span> </pre>
+<p class="p">where <span class="keyword ParameterName OptionalReplaceable">parasitic_switch</span> is
+determined in Step 1. For example: </p>
+<pre class="pre ShellCommand">calibre -xact -3d -pdb -rc rules.svrf</pre>
+<p class="p">The above example would perform
+a transistor-level extraction for resistance and distributed capacitance
+using the settings specified in the file <span class="ph filepath">rules.svrf</span>,
+and any files it included. More simple examples are described in
+“<a class="xref fm:HeadingOnly" href="MGCChap_BasicExtractionMethods_id3dc64c3f.html#id3dc64c3f-d4ed-424a-8d90-8f7a24a4b35c__MGCChap_BasicExtractionMethods_id3dc64c3f.xml#id3dc64c3f-d4ed-424a-8d90-8f7a24a4b35c" title="Extraction can be performed in a variety of ways including extraction type, netlist type, or design hierarchy, and produce various netlists or reports depending on your verification needs.">Basic Extraction Methods</a>”.</p>
+</div></li>
+<li class="li step stepexpand" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idfbbfe220-e316-4455-959b-51d88fe740c5"><span class="ph cmd">If you need additional detail
+on parts of the design (for example, getting precise couplings for
+critical nets), run extraction again using the same files.</span><div class="itemgroup info StepInfo"><p class="p">For example:</p>
+<pre class="pre ShellCommand">calibre -xact -3d -pdb -rcclm -select rules.svrf
+</pre>
+<p class="p"><a class="xref fm:Table" href="#id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id60faf808-5d75-47d9-ab23-e0fed64c65db">Table 1</a> shows common options for the PDB creation step.
+The decisions you made earlier let you choose among the extraction
+and parasitic options. Only one extraction option and one parasitic
+option can be specified per run.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__id60faf808-5d75-47d9-ab23-e0fed64c65db" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Invocation Line for PDB Step in Calibre
+xACT 3D PDB Flow</span></caption><colgroup><col style="width:1.726in" /><col style="width:1.615in" /><col style="width:1.026in" /><col style="width:1.621in" /><col style="width:0.837in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d28228e331"><p class="p">Required</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d28228e334"><p class="p">Extraction Options</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d28228e339"><p class="p">Parasitic Options<a class="xref fm:Footnote" href="#id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idafc90f01-6e1e-43e3-9a83-980c2e2a00d7"><sup>1</sup></a></p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d28228e345"><p class="p">Additional Options</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d28228e348"><p class="p">Required</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry row-nocellborder default-entry" rowspan="3" style="vertical-align:top;" headers="d28228e331 "><p class="p"> </p>
+<p class="p">calibre ‑xact ‑3d -pdb</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;" headers="d28228e334 "><p class="p">no
+switch (flat)</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;" headers="d28228e339 "><p class="p">  ‑r</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;" headers="d28228e345 "><p class="p">-noasic</p>
+</td>
+<td class="entry cellrowborder default-entry" rowspan="3" style="vertical-align:top;" headers="d28228e348 "><p class="p"> </p>
+<p class="p"><span class="keyword ParameterName RequiredReplaceable">rule_file</span> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;" headers="d28228e334 "><p class="p">‑xcell <span class="keyword ParameterName RequiredReplaceable">xcell_file</span> </p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;" headers="d28228e339 "><p class="p">  ‑rc</p>
+</td>
+<td class="entry cell-norowborder default-entry" style="vertical-align:top;" headers="d28228e345 "><p class="p">‑select </p>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder default-entry" style="vertical-align:top;" headers="d28228e334 "><p class="p">‑xcell <span class="keyword ParameterName RequiredReplaceable">xcell_file</span> ‑full</p>
+</td>
+<td class="entry row-nocellborder default-entry" style="vertical-align:top;" headers="d28228e339 "><p class="p">  ‑rcc</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d28228e345 "> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The procedures in “<a class="xref fm:HeadingOnly" href="MGCChap_BasicExtractionMethods_id3dc64c3f.html#id3dc64c3f-d4ed-424a-8d90-8f7a24a4b35c__MGCChap_BasicExtractionMethods_id3dc64c3f.xml#id3dc64c3f-d4ed-424a-8d90-8f7a24a4b35c" title="Extraction can be performed in a variety of ways including extraction type, netlist type, or design hierarchy, and produce various netlists or reports depending on your verification needs.">Basic Extraction Methods</a>” give complete command line invocations.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Calibre xACT 3D ends the transcript
+with a summary of errors and warnings. Be sure to check for any
+errors; these invalidate results.</p>
+<p class="p">This step creates the <span class="ph filepath">PDB</span> directory
+in the <span class="ph filepath">SVDB</span> directory. The PDB stores the parasitic
+models for each extracted net. These models consist of the net’s
+name and the collection of device pins, ports, parasitic delays,
+and circuit elements.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_UsingTheCalibreXact3dPdbFlow_id2e4742df.html" title="Use the Calibre xACT 3D PDB flow to create a parasitic database and format a netlist.">Using the Calibre xACT 3D PDB Flow</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_HierarchyControlXcells_id204ea755.html#id204ea755-fdad-4f91-934a-9fada94279c3__" title="When performing hierarchical extraction, you define your design’s hierarchy for the Calibre xACT tool by identifying the lower-level cells in the design hierarchy.">Hierarchy Control with Xcells</a></div>
+<div><a class="link" href="../topics/TaskTop_Step3GeneratingNetlistReport_idad22c6cd.html#idad22c6cd-5f60-47d4-a64b-27680985e768__" title="As the last step, you produce a netlist or report using the Calibre xACT formatter. The netlist can be in any of several formats such as HSPICE or DSPF. You can also set the formatter to perform different types of reductions to produce netlists that are more easily simulated.">Step 3 — Generating A Netlist or Report</a></div></div>
+</div></div>
+<div class="fn"><a id="id020a3e47-1d77-48aa-a522-5c8eb0d67cd4__idafc90f01-6e1e-43e3-9a83-980c2e2a00d7"><sup>1</sup></a>  Select
+only one from this column.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Step 2 — Creating the Parasitic Database"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_Step2CreatingParasiticDatabase_id020a3e47.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

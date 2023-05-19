@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Parameters File Format" />
+<meta name="abstract" content="The parameters file contains information regarding the input mask or layout data file, blank mask inspection (defect data) files, and other run control settings that are loaded into Calibre MDPDefectAvoidance for a run." />
+<meta name="description" content="The parameters file contains information regarding the input mask or layout data file, blank mask inspection (defect data) files, and other run control settings that are loaded into Calibre MDPDefectAvoidance for a run." />
+<meta name="prodname" content="Calibre MDPDefectAvoidance User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Calibre MDPDefectAvoidance product manual." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdpdefav_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® MDPDefectAvoidance™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idfe9264d7-7c9a-4525-ae49-8f010fe29776" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Parameters File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Parameters File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idfe9264d7-7c9a-4525-ae49-8f010fe29776">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Parameters File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Calibre MDPDefectAvoidance
+run settings file</p>
+<p class="shortdesc">The parameters file contains
+information regarding the input mask or layout data file, blank mask
+inspection (defect data) files, and other run control settings that
+are loaded into Calibre MDPDefectAvoidance for a run.</p>
+<p class="p">This file can be generated and modified through
+the Calibre MDPDefectAvoidance tool in Calibre MDPview (see “<a class="xref fm:HeadingAndPage" href="TaskTop_SavingLoadingParameterFile_idaa157135.html#idaa157135-1972-40a9-9f82-afe82456f015__TaskTop_SavingLoadingParameterFile_idaa157135.xml#idaa157135-1972-40a9-9f82-afe82456f015" title="You can export all Calibre MDPDefectAvoidance parameter values into a parameter file.">Saving and Loading a Parameter File</a>”).</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">There
+are two different formats that Calibre MDPDefectAvoidance will accept
+input from:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id01cfc6a8-f23a-49f9-a342-5739ae68355b"><p class="p">A text (.txt) parameter file. The following
+illustrates an example of a text parameter file.</p>
+<pre class="pre codeblock"><code>daparamfile_version 2
+max_shift_x 50
+max_shift_y 50
+resist_type PCAR
+defect_placement_type OPAQUE
+small_angle_step_count 0
+small_angle_rotation_range 0
+clear_edge_setback 0.0125
+opaque_edge_setback 0.0125
+global_defect_size_threshold 0.01
+global_defect_area_threshold 0.0001
+global_defect_type_filters 1, 2, 1A, 2A
+mask_data_name MASK1
+mask_data_file "/home/user/demo.jb"
+mask_data_type MEBESJOB
+mask_data_layer 1:0 2:0
+mask_data_layer_rule 1:0 100 -defectsizetolerance 0.002
+mask_data_layer_rule 2:0 50 -defectsizetolerance 0.0005
+blank_defect_map_source_directory "/home/user/basedir"
+mask_blank_defect_data "/home/user/demoklarf.klarf" klarf
+mask_blank_defect_data "/home/user/demoldf.ldf" ldf
+mask_blank_defect_data "/home/user/demotxt.txt" txt
+DBfile da_demo.db
+overwrite true
+create_html_report false
+create_oasis_report true
+report_directory "/home/user/reports"
+defect_type 1 priority HIGH
+defect_type 2 priority MEDIUM
+defect_type 3 priority LOW
+do_care_region_file "/home/user/docare.txt"
+do_not_care_region_file "/home/user/donotcare.txt"</code></pre></li>
+</ul>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id7742b3b8-b951-487a-baf5-066980dbe612"><p class="p">An XML (.xml) parameter file. <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__id80650f1e-0008-42d7-a0b0-5304db4a579e">Figure 1</a> illustrates an example of an XML parameter file.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id80650f1e-0008-42d7-a0b0-5304db4a579e"><span class="figcap"><span class="fig--title-label">Figure 1. </span>XML Parameter File (Part
+One)</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/xml_param_format.jpg" /></div><br /></div>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ide6c03fb7-4c51-4e2f-9add-02e0b0747273"><span class="figcap"><span class="fig--title-label">Figure 2. </span>XML Parameter
+File (Part Two)</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/xml_param_format_b.jpg" /></div><br /></div>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Input
+Parameters</h2><p class="p">These parameters specify the inputs
+for a Calibre MDPDefectAvoidance run, including specifying mask
+data and blank mask inspection file information, as well as identifying
+critical and non-critical layout regions for analysis.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id79c7e910-4bc3-431f-8ad4-ba8092a8f827">daparamfile_version <span class="keyword ParameterName OptionalReplaceable">num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter file version. The
+version number is used for backward compatibility. All previous
+version of parameter files should continue to work with the current
+version of Calibre MDPDefectAvoidance. The current parameter file
+version is 4. The default setting is 1 if not otherwise specified.</p>
+<p class="p">Equivalent XML parameter name: DAParamFile</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3de1fa84-a871-4aa3-8d01-10af3d2ddcb7"><span class="keyword ParameterName Required">mask_data_name</span><span class="keyword ParameterName RequiredReplaceable"> mask_identifier </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required unique identifier
+for the input mask. The mask identifier can be any string that uniquely
+identifies the mask.</p>
+<p class="p">Equivalent XML parameter name:
+MaskDataName</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idf388c5fd-441c-4a3f-873e-7a0f0cc706c3"><span class="keyword ParameterName Required">mask_data_file</span><span class="keyword ParameterName RequiredReplaceable"> input_mask_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the path of the input mask file. </p>
+<p class="p">Equivalent XML parameter name:
+MaskDataFile</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id15409e2a-3205-44cc-a8fc-35226535468a"><span class="keyword ParameterName Required">mask_data_type</span><span class="keyword ParameterName RequiredReplaceable"> input_mask_type</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the type of the input mask file.
+The following types are supported: OASIS, VSB, VSBJOB, MEBES, MEBESJOB,
+and JEOL.</p>
+<p class="p">Equivalent XML parameter name:
+MaskDataType</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id72268e99-38e5-41bf-859f-fb3130ca0c67"><span class="keyword ParameterName Required">layout_name</span><span class="keyword ParameterName RequiredReplaceable"> name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+parameter is required when <span class="keyword ParameterName Required">mask_data_type </span>is
+VSBJOB. The layout name should correspond to the MDS (Mask Drawing
+Script) of the selected VSBJOB file. </p>
+<p class="p">Equivalent XML parameter name:
+LayoutNameForVSBJOB</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idbdbffa41-54a2-4b0d-8d63-57be89a5050b">do_care_region_file <span class="keyword ParameterName OptionalReplaceable">docare_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies the do-care regions, or critical
+regions that should be examined by the run. Regions are specified
+in the following sequence: bottom-left X coordinate, bottom-left
+Y coordinate, top-right X coordinate and top-right Y coordinate. Coordinates
+should be specified in microns. If only do-care regions are specified,
+then the other regions are considered as do-not-care regions.</p>
+<p class="p">You can specify the critical
+layout regions using do-care region text files. Defects appearing on
+these regions may affect the features and should be avoided.</p>
+<p class="p">Equivalent XML parameter name:
+DoCareRegionFile</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id09b2bbc9-4010-4b68-bcbd-7b194c671a24">do_not_care_region_file <span class="keyword ParameterName OptionalReplaceable">do_not_care_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+optional parameter specifies the do-not-care regions, or non-critical
+regions that should be ignored during the run. Regions are specified
+in the following sequence: bottom-left X coordinate, bottom-left
+Y coordinate, top-right X coordinate, and top-right Y coordinate. Coordinates
+should be specified in microns. </p>
+<p class="p">You can specify the non-critical
+layout regions using do-not-care region text files. Defects appearing
+on these regions are ignored as they do not impact the yield. If
+only do-not-care regions are specified, then the other regions are
+considered as do-care regions. An example text file is shown in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd73c65d1-5cef-4d4a-ae0d-d723d3b899a5">Figure 3</a>.</p>
+<p class="p">Equivalent XML parameter name:
+DoNotCareRegionFile</p>
+<p class="p"></p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd73c65d1-5cef-4d4a-ae0d-d723d3b899a5"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Do-Care and Do-Not-Care
+Regions Example Format</span><br /><div class="imagecenter"><img class="image imagecenter" height="185" src="../graphics/do_do_not_care.jpg" width="299" /></div><br /></div>
+<p class="p">The following apply:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3f47bc13-c08a-41b6-8df7-c780e870e8fe"><p class="p">If both do-care and do-not-care
+region files are not specified then the complete area is considered
+as a do-care region.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id25c0d096-4b87-45ce-8bdb-798abb27332e"><p class="p">If both do and do-not-care
+regions files are specified then do-care and do-not-care regions
+for defect avoidance are computed.</p>
+</li>
+</ul>
+<p class="p">For example:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id7b8523f4-b9fe-4e59-aa36-e8a37bbf14ee"><p class="p">If do-care and do-not-care
+regions do not overlap, then regions other than do-care regions
+are considered as do-not-care regions even they are not specified
+in the do-not-care regions file as shown in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__id88356f56-69ba-4ba7-b9af-5f3cda75628b">Figure 4</a>.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id88356f56-69ba-4ba7-b9af-5f3cda75628b"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Do and Do-Not-Care
+Regions Do Not Overlap</span><br /><div class="imagecenter"><img class="image imagecenter" height="185" src="../graphics/do_care_ex1.jpg" width="316" /></div><br /></div>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id6a27c9ae-f26c-481f-bdf3-2cbcf13a5c4b"><p class="p">If do and do-not-care regions
+overlap, then regions other than do-care regions and overlapping
+regions are considered as do-not-care regions as shown in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__idae959746-3d4c-4702-a996-745ec8082408">Figure 5</a>.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idae959746-3d4c-4702-a996-745ec8082408"><span class="figcap"><span class="fig--title-label">Figure 5. </span>Do and Do-Not-Care
+Regions Overlap</span><br /><div class="imagecenter"><img class="image imagecenter" height="169" src="../graphics/do_care_ex2.jpg" width="387" /></div><br /></div>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd47a5d36-841f-40e0-9e8a-12e86769cf9a">do_care_jdchips_file <span class="keyword ParameterName OptionalReplaceable">do_care_chips_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+do-care chip names or critical chip regions that should be examined
+by the run. If only a do-care chip name file is specified, then
+the other chips are considered as do-not-care chips.</p>
+<p class="p">You can specify the critical layout regions using do-care chip
+names text files. Defects appearing on these regions can affect
+the features and should be avoided.</p>
+<p class="p">Equivalent XML parameter name: DoCareChipsFile</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id98567083-d047-4730-b167-4173788ab9b0">do_not_care_jdchips_file <span class="keyword ParameterName OptionalReplaceable">do_not_care_chips_file</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies the
+do-not-care chip names. If only a do-not-care chip name file is
+specified, then the other chips are considered as do-care chips.</p>
+<p class="p">You can specify the non-critical layout regions using do-not-care
+chips. Defects appearing on these regions are ignored as they do
+not impact the yield. If only do-not-care chips are specified, then
+the other chips are considered as do-care chips.</p>
+<p class="p">Equivalent XML parameter name: DoNotCareChipsFile</p>
+<p class="p">The following applies to do_care_jdchips_file and do_not_care_jdchips_file:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id41d1f1d0-7839-43e6-b40f-047986ce4c5c"><p class="p">In chips
+text files, each chip name is specified on a separate line.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id06bdc460-6aed-4537-9525-70af9c60e311"><p class="p">Chip names
+should be in the format of <span class="ph filepath">XXXXXXXXX.XX</span> (9.2),
+which is the actual chip file name.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id9932735d-7945-4fbc-aabb-f776be170c40"><p class="p">You can specify
+do-care and do-not-care regions in both the formats. Existing text files
+include Bounding Boxes and files containing chip names.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id4f1e4259-f58e-4158-98f9-2f632c5ee8d5"><p class="p">Chip name files
+are supported only for MEBES JOBDECK.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd2c836f2-fb5f-43e5-b535-4b33cb7f1a34"><p class="p">Chip names
+provided inside chip name files are used to extract chip bounding
+boxes, then bounding boxes are considered as do-care and do-not-care
+regions. The following operations are performed to compute actual
+do-care and do-not-care regions in the case of an overlap between
+their bounding boxes:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id59670d02-c656-44a6-8f3a-a0d91fdf2d01"><p class="p">Do_care
+region: Do-care bounding box extracted from do-care chips</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__iddd31405f-6e8b-43a2-8977-42394d122724"><p class="p">Do-not-care
+region: (Do-not-care bounding box extracted from do-not-care chips)
+– (Do care bounding box extracted from do-care chips).</p>
+</li>
+</ul>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id94b73895-3971-4e1e-a808-d000ba07f8c7"><p class="p">If do-care
+chips are specified, only do-care regions are calculated using do-care
+chip bounding boxes. Other chips are ignored and they are considered
+non-critical regions.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3ce31326-2976-4677-a8f2-1cfe03774f12"><span class="keyword ParameterName Required">mask_blank_defect_data</span><span class="keyword ParameterName RequiredReplaceable"> blank_file_path</span><span class="keyword ParameterName RequiredReplaceable">blank_type</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the details of the blank mask
+file including pathname (<span class="keyword ParameterName RequiredReplaceable">blank_file_path</span>)
+and type (<span class="keyword ParameterName RequiredReplaceable">blank_type</span>).
+The base name of <span class="keyword ParameterName RequiredReplaceable">blank_file_path </span>is
+used as a unique identifier for the blank. For example, if <span class="keyword ParameterName RequiredReplaceable">blank_file_path </span>is <span class="keyword ParameterName OptionalReplaceable">/home/user1/blank1.ldf </span>then <span class="keyword ParameterName OptionalReplaceable">blank1.ldf</span> is
+used as the blank file identifier. At least one valid blank file
+is required to run Calibre MDPDefectAvoidance.</p>
+<p class="p">Equivalent XML parameter names:
+MaskBlankFile, MaskBlankType.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id2290b216-9061-49f4-bec5-8cbc57eddee7">blank_defect_map_source_directory <span class="keyword ParameterName OptionalReplaceable">base_dir_path_for_blanks</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that provides the base directory for all blanks.
+When selecting a blank file from the GUI, this base directory is
+opened by default.</p>
+<p class="p">Equivalent XML parameter name:
+BlankDefectMapSourceDirectory.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Control
+Parameters</h2><p class="p">These
+parameters specify defect avoidance controls such as allowable shifts,
+image tone, defect priorities and edge setbacks.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ide9480dfd-3f35-44eb-94b9-826b3c0ca583"><span class="keyword ParameterName Required">max_shift_x</span><span class="keyword ParameterName RequiredReplaceable"> val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required parameter (an unsigned double)
+that specifies the furthest distance (in microns) the pattern can
+be shifted relative to the blank in X-dimension (left and right).
+The default value is 100 microns and the range is [0, 500].</p>
+<p class="p">An error is issued if the value specified is more than 500 microns.
+A warning is displayed if the value is more than 200 microns but
+less than or equal to 500 microns.</p>
+<p class="p">Equivalent XML parameter name:
+MaxShiftX.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idaaf840f0-782b-4b73-9927-98c3fc7e4c46"><span class="keyword ParameterName Required">max_shift_y</span><span class="keyword ParameterName RequiredReplaceable"> val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter (an unsigned double) that specifies the furthest
+distance (in microns) the pattern can be shifted relative to the
+blank in Y-dimension (top and bottom). The default value is 100
+microns and the range is [0, 500].</p>
+<p class="p">An error is issued if the value specified is more than 500 microns.
+A warning is displayed if the value is more than 200 microns but
+less than or equal to 500 microns.</p>
+<p class="p">Equivalent XML parameter name:
+MaxShiftY.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id8e0edfb0-a5c1-4547-8396-ae951a7d0876">major_rotations <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter specifying major rotational
+angles with the five allowed values: All, 0, 90, 180 and 270. Major
+rotations are used to find the best defect avoidance solutions by rotation
+blank masks with different angles. A combination of major rotations
+such as “0, 180” can be used to find a solution using only 0 and
+180 angle rotations. By default, all major angles 0, 90, 180 and
+270 are used.</p>
+<p class="p">Equivalent XML parameter name: MajorRotations.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idda8fd568-4d33-47c7-88f5-3b84e68cab94">small_angle_rotation_range <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter (an unsigned double) that specifies the length
+(in microns) of the arc subtended by two radii after the micro rotation.
+The default value is 0.</p>
+<p class="p">Using small_angle_rotation_range,
+Calibre MDPDefectAvoidance computes the maximum allowable rotation.
+The allowable small-angle-rotation values are determined by ensuring that
+the corners of the pattern do not move outside the allowed displacement
+limits (as illustrated by the dotted line in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__id1a715140-cc24-4659-bdb9-ae09d0d46ffa">Figure 6</a>).</p>
+<p class="p">Equivalent XML parameter name:
+SmallAngleRotationRange.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id1a715140-cc24-4659-bdb9-ae09d0d46ffa"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Definition of Maximum
+Shift in X and Y Directions</span><br /><div class="imagecenter"><img class="image imagecenter" height="163" src="../graphics/smal_angle_rot.jpg" width="415" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3f68d3bc-6e60-4247-a9a7-27422b9677bc">small_angle_step_count <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter (an unsigned integer) that specifies the number
+of steps to be used for micro rotation. The default value is 0.</p>
+<p class="p">The small angle rotation is
+controlled by the number of steps that should be used. If you specify
+3 steps, the tool calculates the angle of rotation (in this case,
+0.05, 0.1 and 0.15 degrees) and rotates the pattern both clockwise
+and counter-clockwise by each of these angles.</p>
+<p class="p">In addition, since rotating
+using a small angle and then shifting the pattern by the maximum allowable
+translation moves the corner of the pattern outside of the allowed
+region, the tool automatically reduces the allowable translation
+for each rotation. This ensures that the pattern always stays within
+the displacement limits (as illustrated in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3467fe13-b9b6-47f8-8f1c-c1df97d6729e">Figure 7</a>).</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3467fe13-b9b6-47f8-8f1c-c1df97d6729e"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Relationship Between
+Rotation, Translation, and Displacement Limits</span><br /><div class="imagecenter"><img class="image imagecenter" height="142" src="../graphics/small_angle_step_count.jpg" width="406" /></div><br /></div>
+<p class="p">Equivalent XML parameter name:
+SmallAngleStepCount.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd57935da-84d6-4a8a-aef5-c99be379427e"><span class="keyword ParameterName Required">resist_type</span> {<span class="keyword ParameterName RequiredDefault">PCAR</span><span class="keyword ParameterName Required"> | NCAR</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the image tone type. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id4d99ab16-a02e-4d48-ae81-12569d6c8880"><p class="p Opt">PCAR — Drawn shapes are clear
+(reflective) on the mask. This is the default value.</p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id7d116050-df00-4fde-82b3-0f13fefb905f"><p class="p Opt">NCAR — Drawn shapes are opaque
+(absorber) on the mask.</p>
+</li>
+</ul>
+<p class="p">Equivalent XML parameter name:
+ResistType.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ided6bbc6b-675e-423e-860b-789b2d30b5e1"><span class="keyword ParameterName Required">defect_placement_type</span> {<span class="keyword ParameterName RequiredDefault">OPAQUE</span> |CLEAR | EITHER}</dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the region where defects should
+be placed such that it does not affect the patterns.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id2316d001-c56c-4e37-86a2-873fb5fc5a48"><p class="p Opt"><span class="keyword ParameterName OptionalDefault">OPAQUE</span> —
+Defects are be placed in opaque (absorber) regions. This is the
+default value.</p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ide42c224d-e61a-4d73-98b6-3599d68c69b3"><p class="p Opt">CLEAR — Defects are be placed
+in clear (reflective) regions. </p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__iddff9d12a-8be5-40c8-8a32-b5b520f1b6d0"><p class="p Opt">EITHER — Defects are allowed
+to be placed in both opaque and clear regions. </p>
+</li>
+</ul>
+<p class="p">Used with the resist_type
+settings, this creates the six defect placement possibilities (valid defect
+avoidance locations) as illustrated in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__idc6b84006-98f2-4916-9439-17a8aeee32d9">Figure 8</a>. </p>
+<p class="p">Equivalent XML parameter name:
+DefectPlacementType.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idc6b84006-98f2-4916-9439-17a8aeee32d9"><span class="figcap"><span class="fig--title-label">Figure 8. </span>Resist Type and Defect
+Placement</span><br /><div class="imagecenter"><img class="image imagecenter" height="141" src="../graphics/resist_type_and_defect.jpg" width="394" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id346a9389-4f50-483b-b5a3-0e456adea5d0">clear_edge_setback <span class="keyword ParameterName OptionalReplaceable">val </span>opaque_edge_setback <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+parameters (signed doubles) that specify the distance (in microns)
+from the edge of the drawn shape to the edge of the defect (as illustrated
+in <a class="xref fm:Figure" href="#idfe9264d7-7c9a-4525-ae49-8f010fe29776__id914fc11e-c247-4d83-ae4a-da4f8ea9eff4">Figure 9</a>). Which parameter applies depends on
+where the defect is placed (as specified by the defect_placement_type parameter). </p>
+<p class="p">Defects placed in clear regions
+use clear_edge_setback (the setback from the edge of the clear region
+where they are located). </p>
+<p class="p">Defects placed in opaque regions
+use opaque_edge_setback (the setback from the edge of the opaque
+regions where they are located). </p>
+<p class="p">Negative edge setbacks allow
+defects to protrude out of their region up to the amount of negative
+setback you specify.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id914fc11e-c247-4d83-ae4a-da4f8ea9eff4"><span class="figcap"><span class="fig--title-label">Figure 9. </span>Clear and Opaque
+Edge Setbacks</span><br /><div class="imagecenter"><img class="image imagecenter" height="281" src="../graphics/clear_and_opaque_edge.jpg" width="361" /></div><br /></div>
+<p class="p">For clear_edge_setback and
+opaque_edge_setback, the default value is 0.05 microns and the range
+is [-5.0, 5.0].</p>
+<p class="p">Equivalent XML parameter names:
+ClearEdgeSetback, OpaqueEdgeSetback.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id9148182f-7f0d-4252-b5ab-6a116a54c4c7">defect_type <span class="keyword ParameterName OptionalReplaceable">defect_class </span>priority {HIGH | MEDIUM | LOW}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the priority of the defect class. The classification of the defect
+is extracted from the input blank mask file. There may be multiple
+entries of defect_type in the parameter file. Each entry specifies
+the priority of a single defect-class.</p>
+<p class="p">LOW priority defects are less
+critical defects compared to MEDIUM priority defects that are, in
+turn, less critical than HIGH priority defects.</p>
+<p class="p">For example:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idca8d5326-c789-4d3a-850a-a580f0dca8c5"><p class="p">LDF</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id1725a02a-3cbb-4c43-92d0-980d5f69a62f"><p class="p">defect_type 1 priority HIGH</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id49dd813e-78fd-46cd-8120-31bcb1378a58"><p class="p">defect_type 2 priority HIGH</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3790897c-b093-4dbe-84b6-141158f9a5c9"><p class="p">defect_type 3 priority MEDIUM</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id45c905e1-2479-4ad8-807b-7dd5282fb306"><p class="p">defect_type 4 priority LOW</p>
+</li>
+</ul>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id6286ff62-8ef4-453f-9596-71dd485abcd7"><p class="p">KLARF</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id2cad8f8a-2304-4142-b180-3263fffbd1f1"><p class="p">defect_type 1A priority HIGH</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idac090284-0e57-4eef-aba3-4ed0d7007f98"><p class="p">defect_type 2B priority HIGH</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id5dd44f0c-352c-462a-8b4d-200f5e6905e5"><p class="p">defect_type 3D priority MEDIUM</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id4a7acd6b-af1b-4d5d-9292-f0918b6568b6"><p class="p">defect_type 4A priority LOW</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">Equivalent XML parameter name:
+DefectPriorities.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Layer
+Priorities Parameters </h2><p class="p">The layer priorities capability of Calibre
+MDPDefectAvoidance allows you to prioritize the defects based on
+the layer geometries they appear on by splitting input layers out
+into different layers or levels based upon their functional intent.
+These parameters are used only with MEBES job deck and OASIS design
+inputs. </p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id6de7babc-cada-451c-b5a8-1611ee6e1e63">mask_data_layer [<span class="keyword ParameterName OptionalReplaceable">layer</span>[:<span class="keyword ParameterName OptionalReplaceable">datatype</span>]]...</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies the design layers to be considered
+and loaded into Calibre MDPDefectAvoidance. All other layers present
+in the input design file are ignored.</p>
+<p class="p">Equivalent XML parameter name:
+MaskDataLayer.</p>
+<p class="p">For example: </p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idbd7b394b-e13c-4fb0-ba8f-6539f5b516bb"><p class="p">MEBESJOB</p>
+<pre class="pre codeblock leveled"><code># Load layers 1, 2, 20, and 30 from a MEBES job deck. 
+ 
+mask_data_layer  1 2 20 30 
+ </code></pre></li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idaa577064-9034-481b-a141-94f1903ab1cc"><p class="p">OASIS</p>
+<pre class="pre codeblock leveled"><code># Load layers 1 with data type 0, 2 with data type 
+# 1, 20 with data type 1 and 30 with data type 0 from OASIS. 
+ 
+mask_data_layer 1:0 2:1 20:1 30:0 
+ </code></pre></li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id627e9624-bcdc-4b79-b781-ab965406c085">mask_data_layer_rule <span class="keyword ParameterName OptionalReplaceable">layer_num</span><span class="keyword ParameterName OptionalReplaceable"> data_type priority </span>-defectsizetolerance <span class="keyword ParameterName OptionalReplaceable">size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that specifies a rule for a particular layer.
+If mask_data_layer_rule is not specified for any loaded layer, the
+default priority of 100 (most critical layer) and defect size tolerance
+of 0 um are used for layer processing.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id22b3d1ba-b2cb-46f0-98a2-6fc4421b8a84"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">layer_num </span>—
+Specifies the layer number. </p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idcd0d7deb-dedf-4000-bc41-8d40ac2ba44f"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">data_type </span>—
+Specifies the data type of the layer. This applies only to the OASIS
+format. </p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id794995e3-5dfc-4b54-93e6-04dba07c122f"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">priority </span>—
+Specifies the priority. The higher the number, the higher the priority
+(or critical) the layer. The maximum priority is 100. 100 is also
+the default priority for any layer. </p>
+</li>
+<li class="li ArgOption" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idedca470a-3f06-4d20-a71a-84f8432e89da"><p class="p Opt">-defectsizetolerance <span class="keyword ParameterName OptionalReplaceable">size — </span>If
+the defect size is more than 0.025 um, then the defect is considered
+for avoidance or else it is ignored. The size of the defect is extracted
+from the blank defect inspection report.</p>
+</li>
+</ul>
+<p class="p">For example:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id6d25935b-aad7-48bc-bb2c-1a24826cbf4e"><p class="p">MEBESJOB</p>
+<pre class="pre codeblock leveled"><code># Layer 1 has priority 100 and defects of size less than 0.025 um 
+# are to be ignored.  
+	 
+mask_data_layer_rule 1 100 -defectsizetolerance 0.025  
+ 
+# Layer 20 has priority 99 and tolerance 0 um. All other layers 
+# loaded have a default priority 100 and tolerance 0 um. 
+ 
+mask_data_layer_rule 20 99</code></pre></li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id96b056e3-639f-45d9-99ca-4e30f9f9344f"><p class="p">OASIS</p>
+<pre class="pre codeblock leveled"><code># Layer 1 with data type 0 has priority 100 and defects of size 
+# less that 0.025 um are ignored.  
+ 
+mask_data_layer_rule 1:0 100 -defectsizetolerance 0.025  
+ 
+# Layer 20 with data type 1 has priority 99 and tolerance 0 um.  
+# All other layers loaded will have a default priority 100 and  
+# tolerance 0 um. 
+mask_data_layer_rule 20:1 99 
+ </code></pre></li>
+</ul>
+<p class="p">Equivalent XML parameter name:
+MaskDataLayerRules.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Order
+of Priority for Defects and Layers</h2><p class="p">Defect classification
+(defect_type parameter) and layers priority (mask_data_layer_rule) together
+provides the order in which defects can be processed to find the
+solution space. This is described in detail in “<a class="xref fm:HeadingAndPage" href="Concept_OrderOfPriority_id6bcf6a94.html#id6bcf6a94-97f7-4717-8642-d8aea4cd67b3__Concept_OrderOfPriority_id6bcf6a94.xml#id6bcf6a94-97f7-4717-8642-d8aea4cd67b3" title="Defect classification (defect_type parameter) and layers priority (mask_data_layer_rule) together provides the order in which defects can be processed to find the solution space.">Order of Priority for Defects and Layers</a>”</p>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Defect Filters</h2><p class="p">These parameters control how defects are filtered in Calibre
+MDPDefectAvoidance. </p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id6b10ace1-9fc9-42a8-8c5e-b60a88cd961f">global_defect_size_threshold <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter (signed double) that specifies the defect size
+threshold (in microns) to filter the non-critical defects based
+on their size. The default value is 0. The size information is extracted
+from the mask inspection reports. None of these defects are considered
+for defect avoidance.</p>
+<p class="p">Equivalent XML parameter name:
+GlobalDefectSizeThreshold.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id42831cb6-76fa-48b5-822f-e682cfd4e448">global_defect_area_threshold <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter (signed double) that specifies the defect area
+threshold (in microns) to filter the non-critical defects based
+on their area. The default value is 0. The area of defect is computed
+from defect sizes information extracted from the mask inspection
+reports. None of these defects are considered for defect avoidance.</p>
+<p class="p">Equivalent XML parameter name:
+GlobalDefectAreaThreshold.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ida53947aa-c070-4d19-a0aa-7b3dba39d9ee">global_defect_type_filters <span class="keyword ParameterName OptionalReplaceable">defect_types</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+parameter to filter the non-critical defects based on their types.
+Defect types from various mask inspection formats can be specified
+with global_defect_type_filters. The defect types should be separated
+by a comma (<span class="keyword ParameterName Required">,</span>).
+The default value is an empty string. The defect type information
+is extracted from the mask inspection reports. None of these defects are
+considered for defect avoidance.</p>
+<p class="p">Equivalent XML parameter name:
+GlobalDefectTypeFilters.</p>
+<p class="p">For example:</p>
+<pre class="pre codeblock leveled"><code>global_defect_type_filters 1, 2, 1A, 2B 
+&lt;GlobalDefectTypeFilters&gt;1, 2, 1A, 2B&lt;/ GlobalDefectTypeFilters&gt; </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idaaa72896-b764-4801-824b-1621a79e54ef">jd_chips_thresholds_file <span class="keyword ParameterName OptionalReplaceable">filename</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that filters chip
+data while processing a defect if the defect size is less than the
+threshold value specified in the job deck chips thresholds file.
+This parameter only applies to job decks.</p>
+<p class="p">Typically, the boundary region (approximately 60 mm from the
+mask center) is a don’t care region. You can place large defects
+in that region. However, the boundary region is not completely empty,
+as there are chips with patterns present. To ensure that large defects
+are placed on these chips, use the jd_chips_thresholds_file parameter
+to filter the chip data.</p>
+<p class="p">The format of the job deck chips thresholds file is:</p>
+<pre class="pre codeblock"><code>&lt;<span class="keyword ParameterName RequiredReplaceable">chip_name</span>, <span class="keyword ParameterName RequiredReplaceable">threshold_val</span>&gt;
+DEFAULT_DEFECTSIZE_THRESHOLD, &lt;<span class="keyword ParameterName OptionalReplaceable">val</span>&gt;</code></pre><p class="p">For example:</p>
+<pre class="pre codeblock"><code>Chip_A, 0.5
+Chip_B, 0.04
+Chip_C, 1.3
+DEFAULT_DEFECTSIZE_THRESHOLD, 0.1</code></pre><p class="p">In this example, for every solution identified in each major
+rotation, the tool checks if there are any exposed defects in Chip_A
+that exceed the 0.5 um threshold, any exposed defects in Chip_B
+that exceed the 0.04 um threshold, and any exposed defects in Chip_C
+that exceed 1.3 um. If any of these thresholds are exceeded, the
+solution should be discarded.</p>
+<p class="p">DEFAULT_DEFECTSIZE_THRESHOLD is an optional argument in the chips
+file that specifies the size of the threshold that can be applied
+to all other chips in the job deck. If this value is not specified,
+it defaults to 0. </p>
+<p class="p">Before running the Calibre MDPDefectAvoidance operation, the
+tool checks that chips listed in the text file exists in the job
+deck. If no chips are detected, a warning is output in the log file
+and the process continues. </p>
+<p class="p">For any chips that exist in the job deck but are neither mentioned
+explicitly in the text file, nor have DEFAULT_DEFECTSIZE_THRESHOLD
+specified, the tool defaults to the threshold size of 0. </p>
+<p class="p">The following apply:</p>
+<ul class="ul"><li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__ide9edd6f4-68e2-4f6a-995f-b7640a84f734"><p class="p">You can specify one, many,
+or none for the size, area, type, or chip-based defect size threshold
+filters.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id3e5de845-fd19-4ea2-8e3f-d195da798129"><p class="p">Defect filtering based on
+size, area, and type are combined by an OR operation.</p>
+</li>
+<li class="li" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id5a253b75-1e9c-43c0-9c7f-39282f1bad1a"><p class="p">If any of size, area or type
+filter is satisfied, the defect is filtered and not considered for
+defect avoidance.</p>
+</li>
+</ul>
+<p class="p">Equivalent XML parameter name: JdChipsThresholds file.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Output
+Parameters</h2><p class="p">You specify output directives
+in the parameters file for Calibre MDPDefectAvoidance.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id4697f1b0-963c-432b-aa79-2c57e8e09d7e"><span class="keyword ParameterName Required">dbfile</span><span class="keyword ParameterName RequiredReplaceable"> database_file_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the SQLite database file location
+containing information about blank mask, design and blank-design
+pairing. </p>
+<p class="p">The SQLite database file should have either the extensions <span class="ph filepath">.db</span> or <span class="ph filepath">.sqlite</span>,
+which are case sensitive. For example, <span class="ph filepath">test1.db</span> and <span class="ph filepath">test2.sqlite</span> are
+SQLite database files.</p>
+<p class="p">Equivalent XML parameter name:
+DatabaseFile.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd73b08a6-34d7-4e65-89e1-c2fd717221a3">overwrite {true | false}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter that, if set to true and if a solution for blank
+design pairing already exists, overwrites the file.</p>
+<p class="p">Equivalent XML parameter name:
+OverwriteDatabase.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id711a8590-c6e7-48c2-9a2f-9e241514a0b0">create_html_report {true | false}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional parameter to instruct the tool to create HTML report. Specifying
+true enables the creation of the HTML report; specifying false deactivates
+report generation.</p>
+<p class="p">Equivalent XML parameter name:
+CreateHtmlReport.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id8510430b-41f2-4bed-9f43-8f21ee3c0283">html_report_windowsize <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that defines the clip
+image size (in microns) inside the HTML report. The layout clip
+in the HTML report also considers defect size for clipping so that
+its window size can be equal to or greater than the size specified.
+For example, if the window size is specified as 6 microns and the
+defect width and height are 2 x 2 microns, the window clip in the
+HTML report is 8 x 8 microns. The default value is 6 microns.</p>
+<p class="p">Equivalent XML parameter name: HtmlReportWindowSize.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id9270ee40-f4eb-4930-9cc3-944d06cb4371"><span class="figcap"><span class="fig--title-label">Figure 10. </span>HTML Report
+Window Size Node</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/html_report_window_node.jpg" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id842717fd-6f87-49f5-86a5-2e452e0ea468">only_defect_marker {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that generates defect
+markers in the visualization RDB file. When set to true, only one
+DefectMarker is reported in the visualization RDB file. If set to
+false, DefectMarker and DefectWithMargin markers are both reported
+in the RDB file. In the HTML report, only DefectMarker is generated
+in a layer, regardless of the parameter’s value. The default value
+is false. </p>
+<p class="p">Equivalent XML parameter name: OnlyDefectMarker.</p>
+<div class="fig fignone" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idd1d774e0-328f-4acb-88a5-2b9ec61bb5fd"><span class="figcap"><span class="fig--title-label">Figure 11. </span>OnlyDefectMarker
+Node</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:150" src="../graphics/only_defect_marker.jpg" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id8685ca81-8d93-4cfb-9a12-21240a559485">create_oasis_report {true | <span class="keyword ParameterName OptionalDefault">false</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that instructs the
+tool to create an OASIS report. Specifying true enables the creation
+of the OASIS report; specifying false deactivates the report generation. The
+default value is false.</p>
+<p class="p">Equivalent XML parameter name: CreateOasisReport.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__id7e8f0000-1315-4bf8-945b-37b045d53419"><span class="keyword ParameterName Required">report_directory</span><span class="keyword ParameterName RequiredReplaceable"> report_dir_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+required parameter that specifies the location where output report
+files and directories are stored. A unique report directory is generated
+within <span class="keyword ParameterName RequiredReplaceable">report_dir_path </span>using
+a current time stamp. The results file, visualization results database
+file and HTML report-related files are stored inside that unique
+directory.</p>
+<p class="p">Equivalent XML parameter name:
+ReportDirectory.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idfe9264d7-7c9a-4525-ae49-8f010fe29776__idcafbc913-2367-44c0-a664-e52e8c14b99e">sections_x <span class="keyword ParameterName OptionalReplaceable">val</span> sections_y <span class="keyword ParameterName OptionalReplaceable">val</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional parameters that define the maximum
+parallelism that defect avoidance can achieve. The default value
+for sections_x and sections_y is 2 x 2. Parallel processing is limited
+by sections_x and sections_y and the number of cores available.
+The <span class="keyword ParameterName OptionalReplaceable">val</span> is
+a positive nonzero number. The sections_x and sections_y parameters
+must be specified in separate lines in the parameter file.</p>
+<p class="p">For example, comparing 1 x 1 for sections_x and sections_y with
+using 2 x 2 sections, a defect avoidance efficiency of 4 times can
+be achieved in an ideal case.</p>
+<p class="p">Specifying sections_x and sections_y is best used when the defect
+avoidance process is run in Calibre MTflex mode.</p>
+<p class="p">Equivalent XML parameter name: XSections for sections_x and YSections
+for sections_y.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreMdpdefectavoidanceFiles_id270a3ffb.html" title="The parameters file and run configuration file directly affect Calibre MDPDefectAvoidance.">Calibre MDPDefectAvoidance Files</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdpdefav_user"
+                DocTitle = "Calibre® MDPDefectAvoidance™ User’s Manual"
+                PageTitle = "Parameters File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_ParametersFileFormat_idfe9264d7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® MDPDefectAvoidance™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

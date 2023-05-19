@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Adjustments for Odd-Multiple Grid Sizing" />
+<meta name="abstract" content="In order to maintain alignment within the job deck, each of the fractured files must have its center in the same position relative to the centers of the fractured data as in the original data." />
+<meta name="description" content="In order to maintain alignment within the job deck, each of the fractured files must have its center in the same position relative to the centers of the fractured data as in the original data." />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id86d6f396-b305-497d-9b00-4db2fe8a2461" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Adjustments for Odd-Multiple Grid Sizing</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Adjustments for Odd-Multiple Grid Sizing" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id86d6f396-b305-497d-9b00-4db2fe8a2461">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Adjustments for
+Odd-Multiple Grid Sizing</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">In order to
+maintain alignment within the job deck, each of the fractured files
+must have its center in the same position relative to the centers
+of the fractured data as in the original data. </span>
+</div>
+<p class="p">Because the FRACTURE operation
+uses the lower left corner of the region as the origin of the fracture
+data, you can force the fractured file to retain the original center
+of the data by increasing the size of the region you pass to the
+FRACTURE operation by 1/2 address unit in all directions. As a result
+of this increase, the center of the region is also offset by 1/2
+an address unit. <a class="xref fm:Figure" href="#id86d6f396-b305-497d-9b00-4db2fe8a2461__id5fbeb530-8f98-4136-ab3e-8762fad395f5">Figure 1</a> illustrates this behavior.</p>
+<div class="fig fignone" id="id86d6f396-b305-497d-9b00-4db2fe8a2461__id5fbeb530-8f98-4136-ab3e-8762fad395f5"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Shifting the Center by Adjusting the Region</span><br /><div class="imagecenter"><img class="image imagecenter" height="265" src="../graphics/shift_center.jpg" width="393" /></div><br /></div>
+<p class="p">If the odd-multiple sizing you perform must
+also be border-aware, as described in Chapter <a class="xref fm:NumberOnly" href="MGCChap_PreprocessingSvrf_id60680448.html#id60680448-65c7-4dca-b351-9664526ded34__MGCChap_PreprocessingSvrf_id60680448.xml#id60680448-65c7-4dca-b351-9664526ded34" title="Before invoking the fracture software, you can perform various preprocessing tasks on mask data using functionality provided by the Calibre nmDRC hierarchical engine. There are several SVRF statements and operations that are most applicable to mask data preparation.">Preprocessing With SVRF</a>, “<a class="xref fm:HeadingOnly" href="MGCChap_PreprocessingSvrf_id60680448.html#id60680448-65c7-4dca-b351-9664526ded34__MGCChap_PreprocessingSvrf_id60680448.xml#id60680448-65c7-4dca-b351-9664526ded34" title="Before invoking the fracture software, you can perform various preprocessing tasks on mask data using functionality provided by the Calibre nmDRC hierarchical engine. There are several SVRF statements and operations that are most applicable to mask data preparation.">Preprocessing With SVRF</a>,” you must make sure that you
+preserve the data/edge relationships at the same time that you adjust
+the region to correct for the center shift. This involves expanding
+the border by 1/2 an address unit in all directions before sizing,
+to adjust to the fact that region you pass to FRACTURE is larger. </p>
+<p class="p"><a class="xref fm:Figure" href="#id86d6f396-b305-497d-9b00-4db2fe8a2461__id9c209783-024c-423c-ac0e-61c038319b0f">Figure 2</a> illustrates the process used for border-aware
+shrinking.</p>
+<div class="fig fignone" id="id86d6f396-b305-497d-9b00-4db2fe8a2461__id9c209783-024c-423c-ac0e-61c038319b0f"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Border-Aware Sizing</span><br /><div class="imagecenter"><img class="image imagecenter" height="515" src="../graphics/border_aware_size.jpg" width="362" /></div><br /></div>
+<p class="p">When correcting for the center shift caused
+by odd-multiple sizing and performing border-aware sizing at the
+same time, the border ring you create must be 1/2 an address unit
+wider than otherwise. This forces the geometries that touch the
+border to grow by 1/2 an address unit on the border-edge at the
+same time that they shrink along all other edges.</p>
+<div class="fig fignone" id="id86d6f396-b305-497d-9b00-4db2fe8a2461__id551cc051-d3ab-45dc-ab7f-f42854087aa6"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Border-Aware
+Odd-Multiple Shrinking</span><br /><div class="imagecenter"><img class="image imagecenter" height="335" src="../graphics/border_aware_odd.jpg" width="398" /></div><br /></div>
+<p class="p">The following SVRF excerpt performs this border-aware
+shrinking plus border adjustment. If you choose to use this code
+in your own SVRF, be sure to replace the value (S) with the actual shrink
+size. </p>
+<pre class="pre codeblock leveled"><code>border = EXTENT xxxx// returns bounding box of all data 
+border_ring = (SIZE border BY (-S + 1/2AU)) NOT border 
+sized_layer = SIZE (final OR border_ring) BY S </code></pre></div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_OddMultipleGridSizing_id30d010ee.html" title="Sizing data by an odd multiple of address units before fracturing results in that data being off-grid relative to the fracture address unit grid. This has an impact on your data and there are some possible work-arounds that allow you to retain your chosen address unit for optimum mask writing time.">Odd-Multiple Grid Sizing</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "Adjustments for Odd-Multiple Grid Sizing"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_AdjustmentsOddMultipleGridSizing_id86d6f396.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

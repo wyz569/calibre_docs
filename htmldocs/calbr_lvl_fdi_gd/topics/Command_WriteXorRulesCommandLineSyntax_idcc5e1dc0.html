@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="Write XOR Rules Command Line Syntax" />
+<meta name="abstract" content="The -write_xor_rules DBdiff command syntax is used for automatic generation of XOR rules." />
+<meta name="description" content="The -write_xor_rules DBdiff command syntax is used for automatic generation of XOR rules." />
+<meta name="prodname" content="Calibre Layout Comparison and Translation Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="DBdiff, FastXOR, fdi2gds, fdi2oasis, and fdiBA" />
+<meta name="SourceHandle" content="calbr_lvl_fdi_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Layout Comparison and Translation Guide" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Write XOR Rules Command Line Syntax</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Write XOR Rules Command Line Syntax" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Write XOR Rules Command Line Syntax</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">The -write_xor_rules
+DBdiff command syntax is used for automatic generation of XOR rules.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">dbdiff</span> <span class="keyword ParameterName Required">-system</span> { <span class="keyword ParameterName Required">GDS</span> | <span class="keyword ParameterName Required">OASIS </span>| <span class="keyword ParameterName Required">LEFDEF</span> | {<span class="keyword ParameterName Required">OA </span>[<span class="keyword ParameterName OptionalReplaceable">version</span>]} }<br />
+{{ <span class="keyword ParameterName Required">-design</span><span class="keyword ParameterName RequiredReplaceable"> </span>{<span class="keyword ParameterName RequiredReplaceable">library </span>|<span class="keyword ParameterName RequiredReplaceable"> filename</span>} [<span class="keyword ParameterName OptionalReplaceable">cell</span>] } | <br />
+{ <span class="keyword ParameterName Required">-lef</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> [<span class="keyword ParameterName OptionalReplaceable">filename</span> …] <span class="keyword ParameterName Required">-def</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> [<span class="keyword ParameterName OptionalReplaceable">cell</span>] }}<br />
+{{ <span class="keyword ParameterName Required">-refdesign</span><span class="keyword ParameterName RequiredReplaceable"> filename</span> [<span class="keyword ParameterName OptionalReplaceable">cell</span>] } | <br />
+{ <span class="keyword ParameterName Required">-reflef </span><span class="keyword ParameterName RequiredReplaceable">filename</span> [<span class="keyword ParameterName OptionalReplaceable">filename</span> …] <span class="keyword ParameterName Required">-refdef</span> <span class="keyword ParameterName RequiredReplaceable">filename</span> [<span class="keyword ParameterName OptionalReplaceable">cell</span>] }}<br />
+<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-write_xor_rules', 'calbr_lvl_fdi_gd'); return false;">-write_xor_rules</a> <span class="keyword ParameterName RequiredReplaceable">rule_file</span> [<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-prefix', 'calbr_lvl_fdi_gd'); return false;">prefix</a>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-base_layers', 'calbr_lvl_fdi_gd'); return false;">-base_layers</a> <span class="keyword ParameterName OptionalReplaceable">layer1 </span>[<span class="keyword ParameterName OptionalReplaceable">layer2</span> <span class="keyword ParameterName OptionalReplaceable">layer3</span>…]]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-common_only', 'calbr_lvl_fdi_gd'); return false;">-common_only</a>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-comparetext', 'calbr_lvl_fdi_gd'); return false;">-comparetext</a>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-cto', 'calbr_lvl_fdi_gd'); return false;">-cto</a>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-enhanced', 'calbr_lvl_fdi_gd'); return false;">-enhanced</a>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-exclude_layer', 'calbr_lvl_fdi_gd'); return false;">-exclude_layer</a> <span class="keyword ParameterName OptionalReplaceable">filename</span> | <a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-include_layer', 'calbr_lvl_fdi_gd'); return false;">-include_layer</a> <span class="keyword ParameterName OptionalReplaceable">filename</span>]<span class="keyword ParameterName OptionalReplaceable"> </span>[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-layermap', 'calbr_lvl_fdi_gd'); return false;">‑layermap</a> <span class="keyword ParameterName OptionalReplaceable">filename</span>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-include_rules', 'calbr_lvl_fdi_gd'); return false;">‑include_rules</a> <span class="keyword ParameterName OptionalReplaceable">filename</span>]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-refsystem', 'calbr_lvl_fdi_gd'); return false;">-refsystem</a> {GDS | OASIS | LEFDEF | OA}]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-resultformat', 'calbr_lvl_fdi_gd'); return false;">-resultformat</a> [<span class="keyword ParameterName OptionalDefault">ASCII</span>] [<span class="keyword ParameterName OptionalDefault">GDS</span>] [OASIS]]<br />
+[<a class="xref Link" href="../../calbr_lvl_fdi_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'write_xor99-resultmode ', 'calbr_lvl_fdi_gd'); return false;">-resultmode </a>{userMerged | pseudo | user | top | combine}] </p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id16f6258b-9687-4e0d-947c-507f1bdc42ab"><span class="keyword ParameterName Required">-write_xor_rules </span>   <span class="keyword ParameterName RequiredReplaceable">rule_file</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and parameter
+that specifies the name of the generated rule file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id2448fca2-daa3-46c3-b8be-180eb2086b20"><span class="keyword ParameterName OptionalReplaceable">prefix</span>   </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional string used for
+the root names of the output DRC Results Database, DRC Summary Report,
+and DRC Check Map statements. The prefix then appears as the root name
+in the corresponding output files in a subsequent Calibre nmDRC
+run. By default, the <span class="keyword ParameterName OptionalReplaceable">prefix</span> is
+the <span class="keyword ParameterName RequiredReplaceable">rule_file</span> name.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id0a982ab8-f038-49fb-a884-d9298c32cb74">-base_layers <span class="keyword ParameterName OptionalReplaceable">layer</span>1 [<span class="keyword ParameterName OptionalReplaceable">layer2</span> <span class="keyword ParameterName OptionalReplaceable">layer3</span> …]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies base layers during XOR rule generation. This option can
+only be specified with the -write_xor_rules argument. If a layer
+does not exist in the design, then dbdiff creates layer mapping
+for this layer and defines it using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Base Layer', 'svrf_ur'); return false;">Layout Base Layer</a> specification statement. The <span class="keyword ParameterName OptionalReplaceable">layer</span> arguments
+must only be layer numbers and datatypes. Layer and datatype combinations
+must be separated by a period, for example:</p>
+<pre class="pre codeblock leveled"><code>-base_layers 1 2.0 4 9.76</code></pre><p class="p">DBdiff issues the following warning if you do not specify ‑base_layers:</p>
+<pre class="pre codeblock"><code>WARNING: [FDI2043] LAYOUT BASE LAYER statement was not generated. It is highly recommended to generate XOR rules with -base_layers and the device creation layer.datatypes for polysilicon, diffusion and contacts.</code></pre><p class="p">You can disable this warning with the following environment variable
+setting:</p>
+<pre class="pre codeblock"><code>setenv FDI_DBDIFF_SUPPRESS_VALUES "FDI2043 0"</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">If you specify this option with the ‑layerMap option, and
+your layer map contains statements that map multiple layers to the
+same layer name, then all of the layers must be either base layers
+or not base layers.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id974112e5-3ff5-40e9-9c5f-ca97c25a135f">-common_only </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that generates
+XOR rules only for the layers that appear in both input databases.
+This means both layer numbers and datatype numbers match, respectively. Layers
+that do not appear in both input databases are called “exclusive
+layers.” No XOR rules are generated for these layers. A list of
+exclusive layers appears at the end of the DBdiff transcript when
+‑common_only is specified:</p>
+<pre class="pre codeblock leveled"><code>EXCLUSIVE LAYERS IN CURRENT DESIGN: &lt;current_design_path_name&gt; 
+	met2  2  0 
+	met2  3  0 
+EXCLUSIVE LAYERS IN REFERENCE DESIGN: &lt;reference_design_path_name&gt; 
+	met2  2  2 
+	met2  3  3 </code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__idf55b4859-ae73-4154-b862-09842181d372">-comparetext</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that enables
+text comparison statements in the XOR rule file. This enables a
+comparison of the text string, location, and the layer on which
+the text occurs. This option is enabled by default for the ‑write_xor_rules
+usage.</p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="TaskTop_ComparingText_id4369adfb.html#id4369adfb-f03b-4b35-93c5-e2132cc10ffd__TaskTop_ComparingText_id4369adfb.xml#id4369adfb-f03b-4b35-93c5-e2132cc10ffd" title="DBdiff generates a summary of differences in a text report and a Calibre RVE results database when you apply the ‑report and ‑rdb options, respectively.">Comparing Text with DBdiff</a>” ”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id9734e7d0-6809-4cd0-af00-9815f8334ab7">-cto</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that instructs DBdiff
+to generate Check Text Override (CTO) comments in the generated
+rules file. The CTO comments apply layer highlighting in Calibre
+RVE using the physical and mapped layers in the design. The CTO
+comments are written in the following format:</p>
+<pre class="pre codeblock"><code>@ RVE Show Layers  <span class="keyword ParameterName OptionalReplaceable">physical_layer_num.pnum</span> <span class="keyword ParameterName OptionalReplaceable">mapped_layer_name</span></code></pre><p class="p">The following is an excerpt from a FastXOR rules file using the
+‑cto option:</p>
+<pre class="pre codeblock"><code>L10_D0 { @ compare layer 10 datatype 0
+<span class="ph CodeHighlight Bold">@ RVE Show Layers: 10.0 L10_D0
+</span>    XOR L10_D0 B_L10_D0
+}</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__idf458c6ef-419a-40cd-be1f-7194db731522">-enhanced </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter that specifies
+to write a pair of NOT operations for each pair of layers appearing
+in an XOR operation. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__idef2945c7-429a-42a6-8ba7-3f4d04f6e6c5">-exclude_layer <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies that all layers except the ones listed in the <span class="keyword ParameterName OptionalReplaceable">filename</span> parameter
+are compared. This option generates <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DRC Unselect Check By Layer', 'svrf_ur'); return false;">DRC Unselect Check By Layer </a>statements in the output rule file. May not
+be used with the -include_layer option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id07de6393-1fdc-4e91-bec9-f32692379788">-include_layer <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies that only the layers listed in the <span class="keyword ParameterName OptionalReplaceable">filename</span> parameter are
+compared. This option generates <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DRC Select Check By Layer', 'svrf_ur'); return false;">DRC Select Check By Layer </a>statements in the output rule file. May not
+be used with the -exclude_layer option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id5d21fc1a-0091-489b-9731-37bf8a94f674">-layermap <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies the name of a layer mapping file. By default, the generated <span class="keyword ParameterName OptionalReplaceable">rule_file</span> uses
+system-generated layer names for output. Rule check names follow these
+system-generated names. The -layermap option causes user-specified
+layer names to be used in the generated <span class="keyword ParameterName OptionalReplaceable">rule_file</span> instead.
+If multiple layers are mapped to the same name, then rules are generated
+for combining those layers and comparing them. Layers that are not mapped
+in the file are written in the output rule file using the system-generated
+names. For additional information see “<a class="xref fm:HeadingAndPage" href="#idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__ide3265321-2808-430d-abb8-f7b031b3245d">‑layermap Option Details for -write_xor_rules</a>”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id86ba0f9e-1455-4376-aa1a-fccbc619be79">-include_rules <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies the name of a file containing SVRF specification statements.
+These specification statements are imported directly into the DBdiff-generated <span class="keyword ParameterName OptionalReplaceable">rule_file</span>.
+There is no sanity check performed by DBdiff for the imported statements.
+Hence, you need to ensure that the imported statements are valid
+and do not conflict with the other SVRF statements generated by
+DBdiff.</p>
+<p class="p">See the section “<a class="xref fm:HeadingAndPage" href="General_DbdiffUsageExamples_ida010f0b5.html#ida010f0b5-8f6a-4178-8955-3297d2d6924d__id3b63d821-5482-494d-9b5a-3e4c027148dd">Write XOR Usage Example</a>” for additional information
+on the SVRF specification statements which are written to the generated
+rule file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id2784d189-53f5-49ab-ba94-c8d68a2d4c00">‑refsystem {GDS | OASIS | LEFDEF | OA} </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies the format of the reference design. This parameter set
+must be specified when the two input designs use different formats.
+The descriptions for the allowed formats are the same as for <span class="keyword ParameterName Required">‑system</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id86ff198e-5299-41c2-99bb-357a5335ad94">‑resultformat [<span class="keyword ParameterName OptionalDefault">ASCII</span>] [<span class="keyword ParameterName OptionalDefault">GDS]</span> [OASIS] </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional parameter set that
+specifies which DRC result database formats are output. The output
+databases are named as follows:</p>
+<p class="p BlockIndent">ASCII — <span class="ph filepath"><var class="keyword varname OptionalReplaceable">rule_file</var>.asc</span></p>
+<p class="p BlockIndent">GDS — <span class="ph filepath"><var class="keyword varname">rule_file</var>.gds</span></p>
+<p class="p BlockIndent">OASIS — <span class="ph filepath"><var class="keyword varname italic">rule_file</var>.oas</span></p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__id700c47c3-5435-48ca-a8e3-f8dc7a7d6daf">-resultmode {userMerged | pseudo | user | top | combine}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional argument set that specifies options
+for the DRC Results Database statement in the generated rule file.
+By default, if you do not specify the ‑resultmode option, then the
+tool does not generate a mode statement in the rule file.</p>
+<p class="p">For details on the modes see “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DRC Results Database', 'svrf_ur'); return false;">DRC Results Database</a>”
+in the <cite class="cite">SVRF</cite> manual. For example, if you specify the
+following DBdiff invocation arguments:</p>
+<pre class="pre codeblock"><code> dbdiff … -write_xor_rules … -resultmode top</code></pre><p class="p">DBdiff includes the following statement in the generated XOR
+rule file: </p>
+<pre class="pre codeblock"><code>DRC RESULTS DATABASE rules.fxor.asc ASCII <span class="ph CodeHighlight Bold">TOP</span></code></pre></dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">DBdiff has two syntaxes. This
+section describes the syntax for generating an XOR rules file. The
+syntax used for database comparison is discussed under “<a class="xref fm:HeadingAndPage" href="Command_LayoutComparisonCommandLineSyntax_iddd548256.html#iddd548256-bd93-48b6-bcea-0b0658bfb29d__Command_LayoutComparisonCommandLineSyntax_iddd548256.xml#iddd548256-bd93-48b6-bcea-0b0658bfb29d" title="The DBdiff application compares databases of different types. This section covers the syntax and arguments for DBdiff.">Layout Comparison Command Line Syntax</a>”.</p>
+<p class="p">The <span class="keyword ParameterName Optional">-write_xor_rules</span> option
+instructs DBdiff to generate an SVRF rule file (<span class="keyword ParameterName OptionalReplaceable">rule_file</span>)
+for performing Calibre XOR operations on the two input layouts specified.
+This command only writes comparison rules for layers with geometries.
+It does not write comparison rules for layers that have only text.
+If you want to include comparison rules for layers with text, you
+must also specify the ‑comparetext option.</p>
+<p class="p">The ‑write_xor_rules argument
+cannot be used with options related to layout comparison. </p>
+<p class="p">The <span class="keyword ParameterName Required">-design</span> option
+applies to the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path', 'svrf_ur'); return false;">Layout Path</a> statement
+in the output rule file. The <span class="keyword ParameterName Required">‑refdesign</span> option
+applies to <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Path2', 'svrf_ur'); return false;">Layout Path2</a>.
+When the Layout System is LEFDEF, then the <span class="keyword ParameterName Required">‑lef</span> and <span class="keyword ParameterName Required">-def</span> options
+apply to the Layout Path in the output rule file. The <span class="keyword ParameterName Required">-reflef</span> and <span class="keyword ParameterName Required">-refdef</span> options
+apply to Layout Path2.</p>
+<p class="p">By default, the generated rule
+file specifies creation of the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DRC Summary Report', 'svrf_ur'); return false;">DRC Summary Report</a> file and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DRC Results Database', 'svrf_ur'); return false;">DRC Results Database</a> files in ASCII and GDS format; the output files
+are named <span class="keyword ParameterName OptionalReplaceable">rule_file.</span>summary, <span class="keyword ParameterName OptionalReplaceable">rule_file.</span>asc<span class="keyword ParameterName OptionalReplaceable">, </span>and<span class="keyword ParameterName OptionalReplaceable">rule_file.</span>gds<span class="keyword ParameterName OptionalReplaceable">, </span>respectively.
+You can use the ‑resultformat argument to specify which DRC result
+database formats are output.</p>
+<div class="section Subsection" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__ide3265321-2808-430d-abb8-f7b031b3245d"><h2 class="title Subheading sectiontitle">‑layermap Option Details for -write_xor_rules</h2><p class="p">The layer mapping file for -write_xor_rules
+can have two forms, depending on usage. The file is case insensitive.
+The line formats are as follows. All the arguments must be on a
+single line.</p>
+<p class="p">GDS or OASIS layout:</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName OptionalReplaceable">layer_number datatype layer_name</span> [CURrent | REFerence]
+ [{layout_window | layout_windel} [<span class="keyword ParameterName OptionalReplaceable">layer_number</span>]]</code></pre><p class="p">Place and Route layout:</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName OptionalReplaceable">layer_name purpose_name
+layer_number purpose_number</span> [CURrent | REFerence]
+ [{layout_window | layout_windel} [<span class="keyword ParameterName OptionalReplaceable">layer_number</span>]]</code></pre><p class="p">In the GDS or OASIS format, the
+columns refer to layer constraint, datatype constraint, and layer
+name, respectively. Layer and datatype constraints use the customary
+Calibre forms, but whitespace is not allowed in a constraint string.
+For example:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__idb05d2ddf-c661-49a5-ab93-6a578241d120" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:1.644in" /><col style="width:1.662in" /><col style="width:1.245in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"># layer</p>
+<p class="p"># constraint</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">datatype</p>
+<p class="p">constraint</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">layer name</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&gt;2&lt;=5</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&gt;0&lt;4</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">MET1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&gt;5&lt;7</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&lt;5</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">MET2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">8</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">0</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">MET3</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The layers in the specified layer
+and datatype ranges are assigned the names MET1, MET2, and MET3,
+respectively, in the output rule file.</p>
+<p class="p">In the Place and Route format,
+the columns are layer name, purpose name, layer number, and datatype
+number. For example, if the layer map file contains this:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idcc5e1dc0-99f5-428c-94c6-4d7ec3b79298__iddffa457e-2ef1-4af1-ac36-cdc586f7fbd2" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:1.300in" /><col style="width:1.300in" /><col style="width:1.300in" /><col style="width:1.300in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">#Layer Name</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Purpose Name</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Layer Number</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Datatype</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">  METAL1</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">DRAWING</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">2</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">0</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">  METAL2</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">DRAWING </p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">3</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">then the output would be this:</p>
+<pre class="pre codeblock leveled"><code>// LAYOUT BUMP2 15 assumed 
+LAYER MAP 2 DATATYPE 0 65535  
+LAYER MAP 17 DATATYPE 0 65534  
+LAYER METAL1.DRAWING 65535  
+LAYER B_METAL1.DRAWING 65534  
+DRC CHECK MAP METAL1.DRAWING GDSII 2 0 "rules.gds"  
+DRC CHECK MAP METAL1.DRAWING ASCII  
+METAL1.DRAWING { @ compare layer METAL1.DRAWING  
+    XOR METAL1.DRAWING B_METAL1.DRAWING  
+}  
+
+LAYER MAP 3 DATATYPE 0 65533  
+LAYER MAP 18 DATATYPE 0 65532  
+LAYER METAL2.DRAWING 65533  
+LAYER B_METAL2.DRAWING 65532  
+DRC CHECK MAP METAL2.DRAWING GDSII 3 0 "rules.gds"  
+DRC CHECK MAP METAL2.DRAWING ASCII  
+METAL2.DRAWING { @ compare layer METAL2.DRAWING  
+    XOR METAL2.DRAWING B_METAL2.DRAWING  
+}  </code></pre><p class="p">If the same layer name is mapped
+to multiple layer numbers, such as here:</p>
+<pre class="pre codeblock leveled"><code>METAL1 DRAWING 2 0  
+METAL2 DRAWING 3 0  
+METAL1 DRAWING 4 0  </code></pre><p class="p">then the union of the numbered
+layers is taken. For this example the union of layers 2 and 4 is taken:</p>
+<pre class="pre codeblock leveled"><code>LAYER MAP 2 DATATYPE 0 65535  
+LAYER MAP 17 DATATYPE 0 65534  
+LAYER MAP 4 DATATYPE 0 65533  
+LAYER MAP 19 DATATYPE 0 65532  
+LAYER METAL1.DRAWING 65535 65533  
+LAYER B_METAL1.DRAWING 65534 65532  
+DRC CHECK MAP METAL1.DRAWING GDSII 2 0 "rules.gds"  
+DRC CHECK MAP METAL1.DRAWING ASCII  
+METAL1.DRAWING { @ compare layer METAL1.DRAWING  
+    XOR METAL1.DRAWING B_METAL1.DRAWING  
+}  
+
+LAYER MAP 3 DATATYPE 0 65531  
+LAYER MAP 18 DATATYPE 0 65530  
+LAYER METAL2.DRAWING 65531  
+LAYER B_METAL2.DRAWING 65530  
+DRC CHECK MAP METAL2.DRAWING GDSII 3 0 "rules.gds"  
+DRC CHECK MAP METAL2.DRAWING ASCII  
+METAL2.DRAWING { @ compare layer METAL2.DRAWING  
+    XOR METAL2.DRAWING B_METAL2.DRAWING  
+}  </code></pre><p class="p">If multiple layer names are mapped
+to the same layer number and purpose number, then a warning is issued
+and the issue is resolved automatically. For example, assume this
+in the layer mapping file:</p>
+<pre class="pre codeblock leveled"><code>M6 drawing  36 40 
+M6 drawingz 36 40 </code></pre><p class="p">This is given in the output file:</p>
+<pre class="pre codeblock leveled"><code> LAYER MAP 36 DATATYPE 40 65535 
+ LAYER MAP 94 DATATYPE 40 65534 
+ LAYER M6 65535 
+ LAYER B_M6 65534 
+ DRC CHECK MAP M6 GDSII 36 40 "rules.fxor.gds" 
+ DRC CHECK MAP M6 ASCII 
+ M6.drawing { @ compare layer M6 drawing drawingz 
+    XOR M6 B_M6 
+} </code></pre><p class="p">This warning is issued:</p>
+<pre class="pre codeblock leveled"><code>WARNING: Single physical layer number 36 datatype 40 is mapped to more
+ than one layer M6.drawing (36  40) and M6.drawingz (36  40).</code></pre><p class="p">When -layermap option is used
+with either ‑include_layer or ‑exclude_layer, then the include or exclude
+layer file must contain the layer name instead of the layer number
+and datatype. The layer name is taken from the -layermap file.</p>
+<p class="p">In certain cases, it is necessary
+to specify which layers to compare from which design. For example,
+if layer 10 datatype 0 is mapped to metal1 in the reference design,
+but layer 17 datatype 0 is used in the current design, additional
+information is necessary to compare METAL1 between the two databases.</p>
+<p class="p">To handle this situation, there
+is an optional column that specifies a CURrent or REFerence keyword
+that corresponds to a specific design. These two keywords can be
+abbreviated with their first three letters. CURrent refers to a
+current layer to compare to a reference layer. CURrent is defined
+either by the ‑<span class="keyword ParameterName Required">design</span> parameter
+or the -<span class="keyword ParameterName Required">lef</span> and
+-<span class="keyword ParameterName Required">def</span> parameters.
+REFerence specifies the original reference layer for comparison
+with the current layer. REFerence is defined by either -<span class="keyword ParameterName Required">redesign</span> or
+-<span class="keyword ParameterName Required">reflef</span> and
+‑<span class="keyword ParameterName Required">refdef</span>.</p>
+<p class="p">A CURrent layer must match to
+a corresponding REFerence layer; if not, a warning occurs. If CURrent
+or REFerence is specified on one layer of the layer map file, then
+these keywords must be specified for all layers in that file, such
+as here:</p>
+<pre class="pre codeblock leveled"><code>1  &gt;=0 met1 CUR 
+11 &gt;=0 met1 REF 
+2  &gt;=0 met2 CUR 
+12 &gt;=0 met2 REF 
+In this case, the output would be this: 
+//assume LAYOUT BUMP2 103 
+LAYER MAP 1 DATATYPE &gt;=0 65535 
+LAYER MAP 114 DATATYPE &gt;=0 65534 
+LAYER met1 65535 
+LAYER B_met1 65534 
+DRC CHECK MAP met1 GDSII 1 0 "rules.gds" 
+met1 { @ compare layer met1 
+	XOR met1 B_met1 
+LAYER MAP 2 DATATYPE &gt;=0 65533 
+LAYER MAP 115 DATATYPE &gt;=0 65532 
+LAYER met2 65533 
+LAYER B_met2 65532 
+DRC CHECK MAP met2 GDSII 2 0 "rules.gds" 
+met2 { @ compare layer met2 
+	XOR met2 B_met2 
+} </code></pre><p class="p">If a layer is specified as a
+CUR and REF layer, but is only present in one of the designs, an
+XOR rule is written for that layer. The layer is listed as an exclusive
+layer at the end of the transcript.</p>
+<p class="p">An error occurs if CURrent and
+REFerence are used without -write_xor_rules. An additional example
+and error information can be found in the section “<a class="xref fm:HeadingAndPage" href="General_DbdiffUsageExamples_ida010f0b5.html#ida010f0b5-8f6a-4178-8955-3297d2d6924d__idc963ddfa-12f2-4dd0-b19e-11447cf933e1">Errors when using ‑write_xor_rules with CURrent and REFerence in DBdiff</a>”.</p>
+<p class="p">You can also use an optional
+column that specifies a WINDEL_LAYER or WINDOW_LAYER keyword that
+corresponds to specific layer data in the layer map. The additional
+column provides a way to exclude or include layers in a design.
+Using the WINDEL_LAYER or WINDOW_LAYER keywords allows layers to
+be handled without an additional rule file using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Windel Layer', 'svrf_ur'); return false;">Layout Windel Layer</a> or <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Window Layer', 'svrf_ur'); return false;">Layout Window Layer</a>.</p>
+<p class="p">The CUR and REF keywords can
+also be used along with the WINDEL_LAYER or WINDOW_LAYER keywords.
+For example:</p>
+<pre class="pre codeblock leveled"><code>99 0 MARKER CUR WINDOW_LAYER</code></pre><p class="p">In this case, the MARKER layer
+in the current design is used as a Layout Window Layer.</p>
+<p class="p">Optionally, an integer layer
+number can be specified as a destination layer for the included
+or excluded layers. If a number is not provided a layer number is
+generated by the tool automatically. For example:</p>
+<pre class="pre codeblock leveled"><code>99 0 MARKER CUR WINDOW_LAYER 990</code></pre><p class="p">In this case, the MARKER layer
+is mapped to layer 990.</p>
+<p class="p">If WINDEL_LAYER or WINDOW_LAYER
+is used along with -write_xor_rules, XOR rules are not generated
+for the specified layer.</p>
+<p class="p">See the sections “<a class="xref fm:HeadingAndPage" href="TaskTop_UsingFastXorPerformLvl_id62db4620.html#id62db4620-d16a-41e9-911a-623669bdb8a2__TaskTop_UsingFastXorPerformLvl_id62db4620.xml#id62db4620-d16a-41e9-911a-623669bdb8a2" title="Use FastXOR to compare two layouts.">Using FastXOR to Perform LVL</a>” and “<a class="xref fm:HeadingAndPage" href="TaskTop_UsingCalibreNmdrcHPerformLvl_id503e1dbf.html#id503e1dbf-e259-4fc7-9ed8-f4e407e6cd42__TaskTop_UsingCalibreNmdrcHPerformLvl_id503e1dbf.xml#id503e1dbf-e259-4fc7-9ed8-f4e407e6cd42" title="Use Calibre nmDRC-H for performing LVL comparison.">Using Calibre nmDRC-H to Perform LVL</a>” for procedures
+that use the generated rule file to perform Layout Versus Layout
+comparison. Also see “<a class="xref fm:HeadingAndPage" href="MGCChap_FastXorLayoutComparison_id2665bec9.html#id2665bec9-b815-48b2-ba64-6c4c0bc0b027__MGCChap_FastXorLayoutComparison_id2665bec9.xml#id2665bec9-b815-48b2-ba64-6c4c0bc0b027" title="Calibre FastXOR uses the DBdiff utility to decrease Layout Versus Layout (LVL) XOR comparison run times. FastXOR often runs five times faster than a normal dual-database XOR run.">FastXOR Database Comparison</a>”.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DBdiffLayoutComparison_id5f80593f.html" title="DBdiff enables you to compare two design databases and isolate differences between each one.">DBdiff Database Comparison</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_LayoutComparisonCommandLineSyntax_iddd548256.html#iddd548256-bd93-48b6-bcea-0b0658bfb29d__" title="The DBdiff application compares databases of different types. This section covers the syntax and arguments for DBdiff.">Layout Comparison Command Line Syntax</a></div>
+<div><a class="link" href="../topics/Concept_InputOutput_idfdfb0854.html#idfdfb0854-a737-433e-bf81-c2509dd13b12__" title="DBdiff accepts GDS and OASIS databases in addition to the supported third-party layout databases.">Input and Output</a></div>
+<div><a class="link" href="../topics/General_DbdiffErrorWarningMessages_id640e452c.html#id640e452c-8ab8-4a02-9f64-2185c37d4d4c__" title="Use these error and warning summary tables to debug errors in DBdiff.">DBdiff Messages</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lvl_fdi_gd"
+                DocTitle = "Calibre® Layout Comparison and Translation Guide"
+                PageTitle = "Write XOR Rules Command Line Syntax"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_WriteXorRulesCommandLineSyntax_idcc5e1dc0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Layout Comparison and Translation Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

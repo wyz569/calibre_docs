@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="LVS Softchk Debug Method" />
+<meta name="abstract" content="When running LVS Softchk, sometimes the number of results can be overwhelming to debug. In order to fix soft connection problems efficiently, it is best to focus on fixing the central problem, and then divide the remaining problems up into more manageable pieces. While the material in this section is written from the standpoint of LVS Softchk, it also applies to Calibre nmLVS Reconnaissance Softchk (calibre -recon -softchk), qs::softchk, and qs::softchks results, with appropriate accommodation of the syntax elements that map to each other in the various usages." />
+<meta name="description" content="When running LVS Softchk, sometimes the number of results can be overwhelming to debug. In order to fix soft connection problems efficiently, it is best to focus on fixing the central problem, and then divide the remaining problems up into more manageable pieces. While the material in this section is written from the standpoint of LVS Softchk, it also applies to Calibre nmLVS Reconnaissance Softchk (calibre -recon -softchk), qs::softchk, and qs::softchks results, with appropriate accommodation of the syntax elements that map to each other in the various usages." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id44bbc51f-7e43-4318-8310-92663faa4259" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>LVS Softchk Debug Method</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="LVS Softchk Debug Method" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id44bbc51f-7e43-4318-8310-92663faa4259">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">LVS Softchk
+Debug Method</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><p class="shortdesc">When running
+LVS Softchk, sometimes the number of results can be overwhelming
+to debug. In order to fix soft connection problems efficiently,
+it is best to focus on fixing the central problem, and then divide
+the remaining problems up into more manageable pieces.</p>
+<p class="shortdesc">While the material in this section is
+written from the standpoint of LVS Softchk, it also applies to Calibre
+nmLVS Reconnaissance Softchk (calibre -recon -softchk), qs::softchk,
+and qs::softchks results, with appropriate accommodation of the
+syntax elements that map to each other in the various usages.</p>
+</div>
+<p class="p">A primary problem that <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Softchk', 'svrf_ur'); return false;">LVS Softchk</a> detects
+is a connection of differing nets through a well polygon, although
+there are other applications. The ability to detect this is based
+upon the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Sconnect', 'svrf_ur'); return false;">Sconnect</a> statement,
+which has two forms:</p>
+<pre class="pre codeblock leveled"><code>SCONNECT upper_layer lower_layer</code></pre><p class="p">or </p>
+<pre class="pre codeblock leveled"><code>SCONNECT upper_layer lower_layer BY contact_layer</code></pre><p class="p">The lower_layer is often a well layer. The
+upper_layer is often a tap (diffusion) layer or a metal layer. The
+contact_layer is usually a contact layer, or a tap layer if metal
+has been used for an upper_layer.</p>
+<p class="p">From this point forward, assume you are debugging
+problems with a lower_layer called pwell and another layer called
+ptap. Bad pwell polygons are ones that contain shorts between two
+or more nets.</p>
+<p class="p">To find bad pwell polygons, this statement
+is used in the rule file:</p>
+<pre class="pre codeblock leveled"><code>LVS SOFTCHK pwell LOWER</code></pre><p class="p">The LOWER keyword is optional.
+If this keyword is not in the rule file, it is helpful to add it
+for clarity.</p>
+<p class="p">Bad pwells appear in the softchk results database
+in this form:</p>
+<pre class="pre codeblock leveled"><code>SOFTCHK pwell.</code></pre><p class="p">This check name flags all
+the bad pwell polygons. Once the bad pwell polygons are known, the immediate
+goal becomes resolving the bad connections to these polygons.</p>
+<p class="p">To find bad taps, this statement is used in
+the rule file:</p>
+<pre class="pre codeblock leveled"><code>LVS SOFTCHK pwell UPPER </code></pre><p class="p">If ptap polygons have been specified as an
+upper_layer in an Sconnect operation, then bad ptap polygons are
+found in the softchk results database in a check name of this form:</p>
+<pre class="pre codeblock leveled"><code>SOFTCHK ptap UPPER.</code></pre><p class="p">If ptap polygons are specified as a contact_layer,
+then you can specify this:</p>
+<pre class="pre codeblock leveled"><code>LVS SOFTCHK pwell CONTACT</code></pre><p class="p">and bad ptap polygons are found in a check
+name of this form:</p>
+<pre class="pre codeblock leveled"><code>SOFTCHK ptap CONTACT.</code></pre><p class="p">This also works for contact polygons that are
+not necessarily well taps.</p>
+<p class="p">If these types of check names do not appear
+in your softchk database, you should consider adding the appropriate
+LVS Softchk statement to your rule file to generate the corresponding results.</p>
+<p class="p">By highlighting the appropriate
+SOFTCHK results discussed in the preceding paragraphs, you can see
+both the bad pwell polygons and the ptap polygons that cause the
+well stamping problems. Note that only the ptap polygons that were <span class="ph FontProperty emphasis">not chosen</span> to
+stamp the pwell polygons are highlighted. The ptap polygons that
+LVS chooses to stamp the pwells are not output by default. If you
+want to see UPPER or CONTACT polygons from all the nets involved
+in the stamping conflict, use the ALL option for LVS Softchk.</p>
+<p class="p">For each of the bad pwell
+polygons, look for the corresponding ptap polygon that is bad. Try
+to determine why the ptap polygon is not on the same node as the
+pwell it touches. Is there an open or short circuit somewhere? Is
+there a bad connection to a tap? Is there a text problem? In some cases,
+the problem will be obvious. In other cases, the issue may be more
+subtle.</p>
+<p class="p">To assist in debugging more complicated cases,
+you can use ERC rule checks and some layer derivations. You can
+add the following SVRF code to your rule file and run LVS circuit extraction
+again.</p>
+<p class="p">To derive all bad pwell polygons, you can use
+this definition:</p>
+<pre class="pre codeblock leveled"><code>bad_pwell = pwell INTERACT ptap != 1 BY NET</code></pre><p class="p">This finds all pwells that do not interact
+with ptap polygons that are on only one net. The bad_pwell layer
+contains both shorted and floating pwell polygons. </p>
+<p class="p">You can then derive all ptaps in bad pwells
+like this:</p>
+<pre class="pre codeblock leveled"><code>ptap_in_bad_pwell = ptap INTERACT bad_pwell</code></pre><p class="p">Assume that all pwells are supposed to be on
+the VSS node. Use these layer derivations:</p>
+<pre class="pre codeblock leveled"><code>bad_pwell_vss = bad_pwell NET "VSS" // bad pwell that is vss 
+// ptap that is vss interacting with bad vss pwell 
+bad_ptap_vss = ptap_in_bad_pwell NET "VSS"  </code></pre><p class="p">These checks show bad ptaps and pwells:</p>
+<pre class="pre codeblock leveled"><code>bad_ptap_other { 
+@ ptap is not VSS  
+ptap_in_bad_pwell NOT bad_ptap_vss 
+} 
+
+bad_pwell_other {  
+@ pwell is not VSS 
+@ also show all taps in these wells 
+// either the pwell is stamped by some net other than vss, 
+// or it is floating 
+bad_pwell_other = bad_pwell NOT bad_pwell_vss 
+// show all taps in the bad well 
+ptap_in_bad_pwell INTERACT bad_pwell_other 
+COPY bad_pwell_other 
+} 
+
+bad_pwell_vss { 
+@ pwell is vss and shorted to some other net 
+@ also show non-vss taps in these wells 
+COPY bad_pwell_vss 
+(ptap_in_bad_pwell NOT bad_ptap_vss) INTERACT bad_pwell_vss 
+} 
+
+LVS EXECUTE ERC YES // default 
+LVS ABORT ON ERC ERROR YES // default 
+GROUP pwell_checks bad_p? 
+ERC SELECT CHECK ABORT LVS pwell_checks 
+ERC SUMMARY REPORT erc.report 
+ERC RESULTS DATABASE erc.db // results database for Calibre RVE 
+ERC CELL NAME YES CELL SPACE // present results in subcell context whenever possible</code></pre><p class="p">These layer derivations and checks can be expanded
+upon if there is more than one allowed ground net (but only one
+per well).</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DetectionSoftConnections_id7ab42a47.html" title="Conflicts in Sconnect connectivity are reported in the circuit extraction transcript and the circuit extraction report. In addition, SPICE comments are written into the extracted SPICE netlist in subcircuits where Sconnect conflicts occur.">Detection of Soft Connections</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Concept_SoftConnectionChecks_id9f875fce.html" title="Calibre DRC applications can check for soft connections with the External operation. Calibre nmLVS checks for soft connections with the LVS Softchk specification statement, which you cannot use with DRC applications. The INSIDE ALSO and NOT CONNECTED secondary keywords of the External operation are useful in soft connection DRC checks.">Soft Connection Checks</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "LVS Softchk Debug Method"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_LvsSoftchkDebugMethod_id44bbc51f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

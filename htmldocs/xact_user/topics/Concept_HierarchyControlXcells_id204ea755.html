@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Hierarchy Control with Xcells" />
+<meta name="abstract" content="When performing hierarchical extraction, you define your design’s hierarchy for the Calibre xACT tool by identifying the lower-level cells in the design hierarchy." />
+<meta name="description" content="When performing hierarchical extraction, you define your design’s hierarchy for the Calibre xACT tool by identifying the lower-level cells in the design hierarchy." />
+<meta name="prodname" content="Calibre xACT User's Manual" />
+<meta name="version" content="2017" />
+<meta name="release" content="v2017" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-24" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xact_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xACT™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id204ea755-fdad-4f91-934a-9fada94279c3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Hierarchy Control with Xcells</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Hierarchy Control with Xcells" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id204ea755-fdad-4f91-934a-9fada94279c3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Hierarchy Control with Xcells</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">When performing
+hierarchical extraction, you define your design’s hierarchy for
+the Calibre xACT tool by identifying the lower-level cells in the
+design hierarchy.</span>
+</div>
+<p class="p">You define this hierarchy by creating
+a cell correspondence list that matches source and layout names.
+This cell correspondence list, also known as an hcell list, is input
+into the Calibre nmLVS‑H tool using the “‑hcell” switch. An xcell
+list is derived from the hcell list; the xcell list can only contain
+cells that were named in the hcell list. The xcell list is specified
+as part of the Calibre xACT 3D invocation.</p>
+<div class="section Subsections"><div class="section Subsection" id="id204ea755-fdad-4f91-934a-9fada94279c3__id0fca83c7-ed61-4530-a219-b4d180e0b043"><h2 class="title Subheading sectiontitle">The
+Xcell List</h2><p class="p">An
+xcell list is an ASCII file that you create. The cells listed in
+the xcell list define the design hierarchy and designate the cells
+the extraction will preserve. Cells not in the xcell list are flattened
+into the top circuit.</p>
+<p class="p">During Parasitic Database (PDB) creation, the
+Calibre xACT 3D tool caches a copy of the xcell list you input into
+the tool, even if the xcell list is empty. If you supply an empty
+xcell list, or if none of the cells in the provided xcell list are
+found in the layout, the Calibre xACT 3D tool issues the following
+warning message at the conclusion of the PDB stage:</p>
+<p class="lines ApplCommand"><span class="ph FontProperty HeadingLabel">WARNING: Could not match any layout cell names against the XCELL file: </span><span class="keyword ParameterName RequiredReplaceable">xcell_file_name</span></p>
+<p class="p">An empty xcell list effectively produces a
+transistor-level (flat) PDB and, consequently, a flat netlist or
+report.</p>
+</div>
+<div class="section Subsection" id="id204ea755-fdad-4f91-934a-9fada94279c3__idd88c8a94-2d3e-4a55-8a4d-8c8b62864618"><h2 class="title Subheading sectiontitle">Calibre
+nmLVS‑H and Calibre xACT 3D Cell List Compatibility</h2><p class="p">When performing source name extraction,
+you must provide the Calibre nmLVS‑H tool with an hcell list that
+includes the cells you will use as xcells with the Calibre xACT
+3D tool. The hcell list uses the following format:</p>
+<pre class="pre codeblock leveled"><code><span class="ph FontProperty emphasis">layout_name source_name</span></code></pre><p class="p">With the Calibre nmLVS‑H tool, you indicate
+the cell list using the “‑hcell” switch. For example, the following
+command line invocations demonstrate a typical Calibre nmLVS‑H and Calibre
+xACT tool run using the same cell list throughout, called hcell_list:</p>
+<pre class="pre codeblock"><code>calibre ‑lvs ‑hier ‑spice svdb/design.sp ‑hcell hcell_list rules</code></pre><pre class="pre codeblock"><code>calibre ‑xact -3d ‑rc ‑xcell hcell_list rules</code></pre><pre class="pre codeblock"><code>calibre ‑xact ‑fmt ‑all rules</code></pre><p class="p">The cell list performs the following functions
+in each of the tools:</p>
+<ul class="ul"><li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__idc3eed82d-2d91-4ed4-b492-35869aa7b35e"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre nmLVS‑H tool</span> —
+Maps the layout’s cell names to their corresponding source’s cell
+names when you perform source name extraction. When invoking the Calibre
+nmLVS‑H tool, you specify the hcell list by using the “‑hcell hcell_list”
+switch; see “<a class="xref fm:HeadingOnly" href="Command_CalibreLvs_id78958f6e.html#id78958f6e-657a-4239-a183-1f7a41c99ea7__Command_CalibreLvs_id78958f6e.xml#id78958f6e-657a-4239-a183-1f7a41c99ea7" title="Runs the Calibre nmLVS-H tool and creates the persistent hierarchical database (PHDB) for use by the Calibre xACT tool.">calibre ‑lvs</a>” for details. See “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcells', 'calbr_ver_user'); return false;">Hcells</a>” in the <span class="ph FontProperty emphasis">Calibre Verification User’s Manual</span> for information
+on hcells.</p>
+</li>
+<li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__id05f7cc0d-ec16-45eb-9b31-5328d0392297"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre xACT 3D tool</span> —
+Defines the design hierarchy for global net extraction. You create
+an xcell list based on the hierarchy you want, and the Calibre xACT
+3D tool analyzes and extracts the hierarchy.</p>
+</li>
+</ul>
+<p class="p">Although
+an hcell list can be used as an xcell list, xcell lists have additional
+options. If you add xcell options to your hcell file, be sure to
+rename the file since these options will not work for Calibre nmLVS-H.
+Xcell entries can use wildcards to match multiple cells. </p>
+</div>
+<div class="section Subsection" id="id204ea755-fdad-4f91-934a-9fada94279c3__id91aef9ea-f81d-438e-8ea2-60e0782bd55e"><h2 class="title Subheading sectiontitle">Xcell List
+Format</h2><p class="p">An xcell list can have either of two formats.
+You can use the hcell list format:</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName RequiredReplaceable">layout_name</span><span class="keyword ParameterName OptionalReplaceable"> source_name</span> </code></pre><p class="p">or
+you can use the xcell-specific format:</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName RequiredReplaceable">layout_name</span> [<span class="keyword ParameterName OptionalReplaceable">source_name</span>] [ -PCDEF [-INTRINSIC] [-CONLY]
+                          | -P [-GDS <span class="keyword ParameterName OptionalReplaceable">gds_macro</span>] 
+                          | -FILL <span class="keyword ParameterName OptionalReplaceable">file.gds</span> <span class="keyword ParameterName OptionalReplaceable">cellname</span> 
+                          | -I 
+                          | -NOBLOCK ] [//Comment ] </code></pre><p class="p">In both formats, each cell is on its own line
+and can only appear once. If the xcell file follows the hcell list
+format, you can use the same file for both source name extraction
+and parasitic extraction. The second column (the source column)
+is ignored during parasitic extraction. The second, xcell-specific
+format can only be used for parasitic extraction and will not work
+as an hcell list for source name extraction.</p>
+<p class="p">The flags in the xcell-specific format can
+appear in either upper or lower case. <a class="xref fm:Table" href="#id204ea755-fdad-4f91-934a-9fada94279c3__id1cebbe8c-4e6e-4f0e-a1e8-cda569224026">Table 1</a> provides more information on each flag.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id204ea755-fdad-4f91-934a-9fada94279c3__id1cebbe8c-4e6e-4f0e-a1e8-cda569224026" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Xcell Flags </span></caption><colgroup><col style="width:1.934in" /><col style="width:4.565in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d38572e290"><p class="p">Flag</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d38572e293"><p class="p">Usage</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-PCDEF</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Indicates the cell is
+a pcell. The pcell contents are not extracted. The intentional device
+represented by the pcell will be netlisted. The parasitics outside
+the pcell boundary will be extracted. For nets that exit an xcell
+through an xcell pin, the coupling capacitance between nets outside
+the xcell and nets inside the xcell will be extracted and netlisted;
+this includes connections between the outside net and the xcell
+participating in the relationship. For nets totally enclosed within
+the xcell (they do not exit the xcell through any xcell pin), coupling
+capacitance is computed to the outside nets and is netlisted on
+the outside net dropped to ground.</p>
+<p class="p">You can also use -PCDEF -I to generate an empty .subckt definition
+for the xcell, by specifying the xcell in an <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Box', 'svrf_ur'); return false;">LVS Box</a> statement
+and specifying <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Preserve Box Cells', 'svrf_ur'); return false;">LVS Preserve Box Cells</a> YES
+in your rule file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-INTRINSIC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Used only in the PCDEF
+flow. Specifies that the pin intrinsic capacitance will be ignored
+for the device layers within the cell. Can only be specified in
+conjunction with -PCDEF.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-CONLY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Used
+only in the PCDEF flow. Indicates that the SPICE model for the cell
+only contains parasitic capacitance. This means only parasitic resistance
+is extracted for the cell. These resistors are identified in the
+extracted netlist with the property called $pcell_res=1. Can only
+be specified together with -PCDEF.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-P </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Indicates the cell is
+a primitive. The contents are not extracted. In gate-level extraction,
+all cells are treated as primitives.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-GDS <span class="keyword ParameterName OptionalReplaceable">gds_macro</span> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Used only with LEF/DEF
+designs. Indicates that a cell is a GDS macro. Can only be specified
+in conjunction with -P.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-FILL <span class="keyword ParameterName OptionalReplaceable">file.gds</span> <span class="keyword ParameterName OptionalReplaceable">cellname</span> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Used only with the top
+cell of a LEF/DEF design. Specifies that metal fill is in a separate
+file, <span class="keyword ParameterName OptionalReplaceable">file.gds</span>,
+in cell <span class="keyword ParameterName OptionalReplaceable">cellname</span>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-I</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Indicates the cell is
+an ideal xcell. The contents are not extracted, but are written
+to the netlist. Only cells with the -I flag are treated as ideal
+xcells.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e290 "><p class="p">-NOBLOCK</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d38572e293 "><p class="p">Indicates
+the cell is not a pcell. The contents are still extracted and written
+to the netlist. Used only in cases where the cell name is part of
+a wildcard list and should be treated differently. Cannot be specified
+with -I. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The following is a valid example of an xcell
+file:</p>
+<pre class="pre codeblock leveled"><code>// layout_name source_name flag 
+NOR         NOR     -I     //treated as an ideal cell 
+NAND        NAND    -P     //use gds layout for extraction 
+INV         INV            //handling depends on the extraction type
+NMOS        NMOS    -PCDEF //treated as a pcell 
+NMOS        PMOS    -PCDEF -CONLY //only extract resistance for the pcell </code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+Calibre xACT tool disregards any <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcell', 'svrf_ur'); return false;">Hcell</a> statements
+you specify in the SVRF rule file. You must include any cell you
+identify with the Hcell statement in the xcell file <span class="ph FontProperty emphasis">or</span> use
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Xcell', 'svrf_ur'); return false;">PEX Xcell</a> statement.</p>
+</div>
+</div>
+<div class="section Subsection" id="id204ea755-fdad-4f91-934a-9fada94279c3__ida756db56-a2dc-43c7-855f-706ede9ad2b8"><h2 class="title Subheading sectiontitle">Wildcards in Xcell List</h2><p class="p">You can use an asterisk (*) as a wildcard
+in the xcell list, to ease the task of creating an xcell file.When
+wildcards are used in xcell specifications, a cell name could match
+multiple xcell specifications. By default all matching xcell specifications
+are applied to the cell. </p>
+<p class="p">If the specifications use conflicting flags,
+Calibre xACT 3D generates an error and extraction stops. For example,
+the following wildcard xcell specifications generates an error:</p>
+<pre class="pre codeblock leveled"><code>pmos_rf* -I -P         // Treat as ideal xcell and primitive 
+pmos* -PCDEF           // Treat as pcell </code></pre><p class="p">You can use the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PEX Xcell Precedence', 'svrf_ur'); return false;">PEX Xcell Precedence </a>statement with the BEST keyword to resolve such conflicts.
+The BEST keyword finds the best matching wildcard xcell name and
+applies only the flags for that specification. All other matches
+are ignored. With the BEST keyword, cells whose names match pmos_rf*
+would be treated as primitive xcells and the xcell specification
+to indicate the cell is a pcell (-PCDEF) is not applied.</p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Use the
+asterisk (*) wildcard in the xcell list with discretion as it could
+potentially increase runtime. It is recommended to specify as much
+of the name as possible before using a wildcard.</p>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id204ea755-fdad-4f91-934a-9fada94279c3__ida27e3b83-60d2-405d-aa3e-e582fff227d1" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Wildcards in an Xcell List</span></caption><colgroup><col style="width:2.477in" /><col style="width:2.397in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Xcell file without wildcards</span> </p>
+<p class="p">pmos_rf1</p>
+<p class="p">pmos_rf2</p>
+<p class="p">pmos_rf3</p>
+<p class="p">pmos_rf7</p>
+<p class="p">...</p>
+<p class="p">nmos_rf1</p>
+<p class="p">nmos_rf2</p>
+<p class="p">nmos_rf3</p>
+<p class="p">nmos_rf5</p>
+<p class="p">...</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph FontProperty HeadingLabel">Same Xcell file with wildcards</span> </p>
+<p class="p">pmos_rf*</p>
+<p class="p">nmos_rf*</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="id204ea755-fdad-4f91-934a-9fada94279c3__id43f541b0-fd8c-4742-b8d0-3151bc9c9494"><h2 class="title Subheading sectiontitle">Tips
+For Choosing Xcells for Full Hierarchical Extraction</h2><p class="p">For
+most GDS-based extractions, you can shorten extraction time by using
+only a subset of the LVS hcells as Calibre xACT xcells. The cells
+you specify affect performance and accuracy.</p>
+<ul class="ul"><li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__id8d4f1a87-7b0e-4733-a8f0-6d790fe48aa4"><p class="p">Select cells that occur multiple times.
+The more times a cell appears, the faster extraction will be.</p>
+</li>
+<li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__id98eb363d-0c65-4898-98bc-b3109a3acc66"><p class="p">Do not specify densely packed cells as
+xcells. In full hierarchical extraction, coupling between xcells
+is not modeled. For example, in a memory design, specify the cell containing
+an array rather than the cell containing a single bit.</p>
+</li>
+<li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__id43f08fd2-1685-4f54-a977-8f873210872b"><p class="p">Do not specify cells that overlap another
+xcell. The contents in the overlapped area will be counted more
+than once.</p>
+</li>
+<li class="li" id="id204ea755-fdad-4f91-934a-9fada94279c3__id793bcc6f-a2cf-494a-b266-7cf0cdded590"><p class="p">Do not specify cells with feedthrough nets as xcells, unless
+you are formatting the netlist in extended DSPF with the HSIM keyword
+set.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_HandlingInput_idd27fc2d8.html" title="Extraction flows can be customized to handle different types of input.">Handling Input</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xact_user"
+                DocTitle = "Calibre® xACT™ User’s Manual"
+                PageTitle = "Hierarchy Control with Xcells"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_HierarchyControlXcells_id204ea755.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xACT™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

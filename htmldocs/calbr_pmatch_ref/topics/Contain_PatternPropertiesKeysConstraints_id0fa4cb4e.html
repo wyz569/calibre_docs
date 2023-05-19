@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Pattern Properties, Keys, and Constraints" />
+<meta name="abstract" content="These commands retrieve pattern properties, keys, and constraints." />
+<meta name="description" content="These commands retrieve pattern properties, keys, and constraints." />
+<meta name="prodname" content="Calibre Pattern Matching Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-20" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="API Batch Command Support" />
+<meta name="SourceHandle" content="calbr_pmatch_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/17/2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Pattern Matching Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="YES" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id0fa4cb4e-7d7e-4549-a511-cb0ca24386f2" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Pattern Properties, Keys, and Constraints</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Pattern Properties, Keys, and Constraints" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id0fa4cb4e-7d7e-4549-a511-cb0ca24386f2">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Pattern Properties, Keys, and Constraints</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">These
+commands retrieve pattern properties, keys, and constraints.</span>
+</div>
+<p class="p">Pattern properties give you
+the ability to operate on output markers based on property names and
+values using other commands, or to output the property directly
+to a Calibre DFM RDB. </p>
+<p class="p">Keys enable you to select specific patterns
+that are used in the pattern matching run. If no keys are defined,
+all patterns are matched. A pattern may specify zero or more keys. </p>
+<p class="p">Constraints enable you to specify the
+distance an edge can shift and still be considered a match. TEM
+patterns support both single-edge constraints and edge to edge constraints.
+Single-edge constraints enable specific edges to vary from the original
+location. Edge to edge constraints enable any two parallel edges
+to vary from the original pattern, and the two edges can be on different
+layers.</p>
+<p class="p">For information on creating and managing
+pattern libraries using the Calibre Pattern Matching GUI, refer
+to the <a class="xref LinkItalic" href="../../calbr_pmatch_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_pmatch_user'); return false;">Calibre Pattern Matching User’s Manual</a>.</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchaddIntAttr_ide534b708.html" title="Adds an integer attribute to the specified pattern.">pmatch::add_int_attr</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchaddKeys_id8218c65a.html" title="Add a specified list of keys to a pattern in the active library.">pmatch::add_keys</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchAddPatternOrient_id479271f1.html" title="Specifies to match the pattern in the given orientation. All other orientation values for the pattern are unchanged. ">pmatch::add_pattern_orient</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchaddProperties_id4ff986b8.html" title="Adds a specified list of properties to a pattern in the active library.">pmatch::add_properties</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PatchaddTextAttribute_id5a9afafb.html" title="Adds a text attribute to the specified pattern.">pmatch::add_text_attribute</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Pmatchdeleteconstraintlabel_idfdb43944.html" title="Deletes the label for a specified constraint, or deletes all instances of a specified label in the pattern. ">pmatch::delete_constraint_label</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchdeleteKeys_id7603967a.html" title="Deletes a specified list of keys from a pattern in the active library.">pmatch::delete_keys</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchdeleteProperties_id7102b191.html" title="Deletes specified properties from a pattern in the active library.">pmatch::delete_properties</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetCglobal_id336fff74.html" title="Get the value of the cglobal constraint for a pattern.">pmatch::get_cglobal</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetConstraints_idc6f9b0bf.html" title="Gets a list of the constraints in a pattern.">pmatch::get_constraints</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Pmatchgetconstraintlabel_idd5d4d83b.html" title="Gets the label for a constraint.">pmatch::get_constraint_label</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetIntAttr_idf03dcae7.html" title="Gets the value of an integer attribute for a pattern. ">pmatch::get_int_attr</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetKeys_id2ee1033e.html" title="Gets the list of keys for a pattern.">pmatch::get_keys</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetLibraryAttribute_id72204289.html" title="Gets the value of a global attribute with the specified name.">pmatch::get_library_attribute</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchGetPatternOrient_id3a3cbec9.html" title="Gets the orientation settings for a pattern. ">pmatch::get_pattern_orient</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetProperties_id002ee4c0.html" title="Gets the properties in a pattern.The pattern may be specified with a pattern handle or a pattern name.">pmatch::get_properties</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetPropertyValue_id984bd978.html" title="Gets the value of the specified property in a pattern.">pmatch::get_property_value</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchgetTextAttribute_id3b9aed5c.html" title="Gets the value of the specified text attribute for a pattern.">pmatch::get_text_attribute</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchsetCglobal_id97f63ea8.html" title="Sets the global constraint (cglobal) value for a pattern. The command overwrites any previously specified cglobal value. ">pmatch::set_cglobal</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_Pmatchsetconstraintlabel_id40dbc144.html" title="Defines a label for a constraint.">pmatch::set_constraint_label</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchsetLibraryAttribute_ide354257f.html" title="Sets the value of a global (library-level) attribute.">pmatch::set_library_attribute</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Command_PmatchSetPatternOrient_ida68f1c39.html" title="Specifies to match the pattern in the given orientation only. All other orientation values are set to 0 (not matched). ">pmatch::set_pattern_orient</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_BatchCommandsPatternMatching_idcefee60e.html" title="All supported API batch commands available in Calibre pattern matching are arranged according to functional areas, such as pattern library commands, pattern data retrieval, and pattern markers.">Batch Commands for Pattern Matching</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_pmatch_ref"
+                DocTitle = "Calibre® Pattern Matching Reference Manual"
+                PageTitle = "Pattern Properties, Keys, and Constraints"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_PatternPropertiesKeysConstraints_id0fa4cb4e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Pattern Matching Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

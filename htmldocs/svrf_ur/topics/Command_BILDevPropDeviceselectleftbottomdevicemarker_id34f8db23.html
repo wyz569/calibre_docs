@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="device::select_left_bottom_device_marker" />
+<meta name="abstract" content="Returns a derived polygon layer containing marker shapes coincident with the bottom-left corners of device seed shapes (where “bottom” and “left” can change due to cell placement transformations, but is always consistent with a certain corner). Input layers must be rectangular with edges parallel to the database axes. Pin shapes must be coincident with edges of seed shapes on each side of a seed shape. Devices that do not conform to these criteria cause the function to have empty output. This function is always called in the context of a tvf::SETLAYER command." />
+<meta name="description" content="Returns a derived polygon layer containing marker shapes coincident with the bottom-left corners of device seed shapes (where “bottom” and “left” can change due to cell placement transformations, but is always consistent with a certain corner). Input layers must be rectangular with edges parallel to the database axes. Pin shapes must be coincident with edges of seed shapes on each side of a seed shape. Devices that do not conform to these criteria cause the function to have empty output. This function is always called in the context of a tvf::SETLAYER command." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id34f8db23-b21e-4ff0-b545-aa129d77b152" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>device::select_left_bottom_device_marker</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="device::select_left_bottom_device_marker" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id34f8db23-b21e-4ff0-b545-aa129d77b152">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">device::select_left_bottom_device_marker</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Device TVF
+layer generation function. Used only in a compile-time TVF rule
+file.</p>
+<p class="shortdesc">Returns a derived polygon layer
+containing marker shapes coincident with the bottom-left corners
+of device seed shapes (where “bottom” and “left” can change due
+to cell placement transformations, but is always consistent with
+a certain corner). Input layers must be rectangular with edges parallel
+to the database axes. Pin shapes must be coincident with edges of
+seed shapes on each side of a seed shape. Devices that do not conform
+to these criteria cause the function to have empty output. This
+function is always called in the context of a tvf::SETLAYER command.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">device::select_left_bottom_device_marker</span> <span class="keyword ParameterName RequiredReplaceable">seed_layer</span> <span class="keyword ParameterName RequiredReplaceable">pin_layer</span> <span class="keyword ParameterName RequiredReplaceable">marker_width</span><span class="keyword ParameterName Optional"> [‑help | ?]</span></p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id34f8db23-b21e-4ff0-b545-aa129d77b152__id3f0e06f7-b333-4201-9e33-d6c8f67b5d55"><span class="keyword ParameterName RequiredReplaceable">seed_layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that specifies
+a device seed layer. Usually this is the gate layer of a MOS transistor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id34f8db23-b21e-4ff0-b545-aa129d77b152__id39b22e16-451c-4827-9394-618750a8fe8c"><span class="keyword ParameterName RequiredReplaceable">pin_layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument set that
+defines a pin layer having shapes that touch the <span class="keyword ParameterName RequiredReplaceable">seed_layer</span>. Usually
+this is a source/drain layer of a MOS transistor.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id34f8db23-b21e-4ff0-b545-aa129d77b152__id2483d4b2-1d58-40b1-ab98-77f5f33e46a6"><span class="keyword ParameterName RequiredReplaceable">marker_width</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that specifies
+a floating-point number in user units of length. This is the output
+width of marker polygons. This value must be less than one half
+the length of the minimum seed shape edge or no output occurs.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id34f8db23-b21e-4ff0-b545-aa129d77b152__ida92598a5-ac83-4ee7-89a9-0c0fb125f8e0">-help | ? </dt>
+<dd class="dd ArgumentDescription"><p class="p">Prints the usage message for
+this function in a Tcl shell.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">Derived polygon layer.</p>
+</div>
+<div class="section Examples" id="id34f8db23-b21e-4ff0-b545-aa129d77b152__idec55bfa2-c3ad-440a-b415-750e54babf94"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">In this example, four enclosure properties are calculated for
+NMOS devices. The property values are the measurements from the
+corners of ngate polygons to the enclosing corners of pwell polygons.
+Four ngate corner marker layers are derived, and then DFM property
+layers for the enclosure measurements are generated using the marker
+layers. Then the device annotation layer “n_annot_layer” is derived
+from the DFM property layers and used for attaching properties to
+ngate devices.</p>
+<div class="p">The following figure shows an ngate polygon with associated corner
+marker polygons. The “encTL” measurement is one of four such measurements
+that are taken, and these are used as device properties.<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/LVS/device_corner_props.png" /></div><br /></div>
+<p class="p">The following rule file calculates the device properties using
+the LVS Annotate Devices interface. This rule file can be sourced
+from other circuit extraction rule files.</p>
+<pre class="pre codeblock leveled"><code>#! tvf
+
+package require CalibreDFM_DEVICE 
+namespace import tvf::// tvf::setlayer tvf::outlayer tvf::verbatim \tvf::rulecheck
+
+verbatim {
+// include layer definitions and connectivity rules.
+
+// required for the LVS Annotate Devices flow
+MASK SVDB DIRECTORY svdb QUERY CCI
+LVS ANNOTATE DEVICES n_annot_layer
+
+// well enclosure proximity distance
+VARIABLE wencpd 5
+
+// device orientation marker width
+VARIABLE mw 0.010
+}</code></pre><pre class="pre codeblock"><code>// ngate corner markers
+setlayer ngate_BL = [device::select_left_bottom_device_marker  ngate nsd \
+                     mw]
+setlayer ngate_TL = [device::select_left_top_device_marker     ngate nsd \
+                     mw]
+setlayer ngate_BR = [device::select_right_bottom_device_marker ngate nsd \
+                     mw]
+setlayer ngate_TR = [device::select_right_top_device_marker    ngate nsd \
+                     mw]</code></pre><pre class="pre codeblock"><code>verbatim {
+// macro that derives corner edges, gets horizontal and vertical enclosure 
+// measurements, and then gets the distance between a seed shape corner
+// and the enclosing corner of a well polygon.
+// it is assumed there is only one horizontal and vertical enclosure
+// distance from a seed shape corner.
+DMACRO corner_edges marker seed well "OUTPUT" {
+  corner_edges = marker COIN INSIDE EDGE seed
+  corner_enc   = ENC corner_edges well &lt; wencpd OPPOSITE
+  corner_enc_p = DFM PROPERTY marker corner_enc OVERLAP MULTI
+                   [ "+enc_x" = MAX(EWX(corner_enc)) ]
+                   [ "+enc_y" = MAX(EWY(corner_enc)) ]
+ [ enc_d = SQRT((PROPERTY_REF("+enc_x")^2) + (PROPERTY_REF("+enc_y")^2)) ]
+  OUTPUT = DFM COPY corner_enc_p
+}</code></pre><pre class="pre codeblock"><code>// derive device DFM property layers
+CMACRO corner_edges ngate_BL ngate pwell ngate_BL_p
+CMACRO corner_edges ngate_TL ngate pwell ngate_TL_p
+CMACRO corner_edges ngate_BR ngate pwell ngate_BR_p
+CMACRO corner_edges ngate_TR ngate pwell ngate_TR_p
+
+// macro for device annotation properties
+DMACRO mos_prop bottom_left top_left bottom_right top_right {
+  [ 
+    PROPERTY encBL, encTL, encBR, encTR
+    W = DEVICE_NUMERIC_VALUE( "W" )
+    L = DEVICE_NUMERIC_VALUE( "L" )
+ // get the four enclosure property values.
+    encBL = dfm_numeric_value(bottom_left,"enc_d")
+    encTL = dfm_numeric_value(top_left,"enc_d")
+    encBR = dfm_numeric_value(bottom_right,"enc_d")
+    encTR = dfm_numeric_value(top_right,"enc_d")
+  ]
+}
+
+// derive MN device annotation layer
+n_annot_layer = DEVICE LAYER MN 
+                ANNOTATE ngate_BL_p ngate_TL_p ngate_BR_p ngate_TR_p
+               CMACRO mos_prop ngate_BL_p ngate_TL_p ngate_BR_p ngate_TR_p
+
+DEVICE MN ngate ngate(G) nsd(S) nsd(D) pwell(B)</code></pre><p class="p">Derivations for PMOS devices would follow similar code. The corner_edges
+and mos_prop macros can apply to PMOS devices without modification.</p>
+<p class="p">After running connectivity extraction with
+the preceding code, you can run the Calibre Connectivity Interface
+using the Query Server Tcl shell command script shown here to generate the
+corresponding netlist and annotated GDS files: </p>
+<pre class="pre codeblock"><code>qs::annotated_device_layer_map -write annotated_dev_map
+qs::set_gds_options -annotated_devices YES
+dfm::set_layout_netlist_options -annotated_devices YES
+qs::write_agf annotated_MN.agds
+dfm::write_spice_netlist annotated_MN.sp
+qs::quit</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DeviceAnnotationBuiltInLanguage_id7f618268.html" title="The Device annotation built-in language is useful for MOS device well proximity and shallow trench isolation (STI) stress effect property calculations and similar applications. It is primarily used to extract physical parameters for the newer BSIM4 models.">Device Annotation Built-In Language</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "device::select_left_bottom_device_marker"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_BILDevPropDeviceselectleftbottomdevicemarker_id34f8db23.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Via Variables File Specifications" />
+<meta name="abstract" content="The via variables file is a text file that describes the via parameters." />
+<meta name="description" content="The via variables file is a text file that describes the via parameters." />
+<meta name="prodname" content="Calibre YieldAnalyzer and YieldEnhancer User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_yaye_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="15" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 24, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id37e458b6-74e5-4548-b3e6-36faf04df3b4" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Via Variables File Specifications</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Via Variables File Specifications" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id37e458b6-74e5-4548-b3e6-36faf04df3b4">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Via Variables File Specifications</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The via variables file is a text file
+that describes the via parameters.</span>
+</div>
+<p class="p">Only lines with the “VARIABLE” keyword are parsed
+in this file with leading whitespaces allowed. The VARIABLE keyword
+is followed by the name of the variable and the value. The value
+can be any real number. The file is case insensitive.</p>
+<div class="section Subsections"><div class="section Subsection" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__ided8b8b96-6cb6-4df8-bcdd-2db0b17097b2"><h2 class="title Subheading sectiontitle">Mandatory for All Technology Nodes</h2><p class="p">The following parameters are mandatory for all technology nodes:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id647ba3ea-13bd-470f-ae90-cc3b4137991b"><p class="p"><span class="ph FontProperty HeadingLabel">width</span> —
+The length of the short edge of the via.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id81d8d114-6cb9-4d9e-b464-bc0bc6b02206"><p class="p"><span class="ph FontProperty HeadingLabel">length</span> —
+The length of the long edge of the via (same value as the width
+parameter for square vias).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id24844085-6e3d-4e06-83dd-092e80a6e707"><p class="p"><span class="ph FontProperty HeadingLabel">step</span> —
+The distance in x- and y‑directions between the fill vias (interpreted
+to be in the positive x- and y‑direction).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__ida088cc65-420d-430c-8cba-7276dd878d1c"><p class="p"><span class="ph FontProperty HeadingLabel">offset</span> —
+The offset between the fill vias to allow for staggering (interpreted
+to be in the positive x‑ and negative y‑direction).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idb7a75dba-9488-44fd-add9-a57abe5f5ad8"><p class="p"><span class="ph FontProperty HeadingLabel">enclosure</span> —
+The value used for fill area adjusting.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id5887375b-dac9-4dfd-9c83-b45f8f1f1d93"><p class="p"><span class="ph FontProperty HeadingLabel">space</span> —
+The space from a different via variation of the same via or from
+an existing via and a same via that is inserted. See “<a class="xref fm:HeadingAndPage" href="Concept_SpacingBetweenVias_id4bf128a5.html#id4bf128a5-f118-4641-a68f-949ae378e7fd__Concept_SpacingBetweenVias_id4bf128a5.xml#id4bf128a5-f118-4641-a68f-949ae378e7fd" title="The spacing checks between vias on neighboring (upper and lower) via layers in the Calibre YieldEnhancer PowerVia flow can be controlled by adding Tcl procedures to the techlib.tcl file and space constraints to the via variables files.">Spacing Between Vias</a>” and “<a class="xref fm:HeadingAndPage" href="Concept_SpacingFromBARVias_id45e98b26.html#id45e98b26-2708-4812-898c-2733a84b088a__Concept_SpacingFromBARVias_id45e98b26.xml#id45e98b26-2708-4812-898c-2733a84b088a" title="The spacing checks between bar (BAR) vias, whether existing in the design or inserted by the Calibre YieldEnhancer PowerVia flow, can be controlled by adding additional space constraints to the via variables files.">Spacing from BAR Vias</a>”.</p>
+</li>
+</ul>
+<p class="p">The variable names are specified as follows:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id29bb621a-1140-416d-b3e2-a72bcd7c0409"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_WIDTH
+— Specifies the width for each via type (square, bar, large).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idf125e401-0ad7-4f05-ba89-bf0c7bc664d8"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_LENGTH
+— Specifies the length for each via type (square, bar, large).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__ide7dea91c-52c4-4f1f-837c-6afb5bb992a9"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_STEP
+— Specifies the single step‑size in both the x‑ and y‑directions.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">For square (SQR) and large (LRG) vias, the WIDTH and LENGTH
+should be equal.</p>
+</div>
+<p class="p">Or:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id4fda2265-475f-416c-a1e8-cc37007bd706"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_STEPx
+— Specifies the single step‑size in the x‑direction.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idb87d8cec-8cc6-49e5-9858-48261073636f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_STEPy
+— Specifies the single step‑size in the y‑direction.</p>
+</li>
+</ul>
+<p class="p">Or for bar vias:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id7ef0d2f4-8bd1-4d19-a7a7-4dce31be0269"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_LONGEDGE_STEP
+— Specifies the single step‑size between the long edges of inserted
+bar vias.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id926f580b-9068-43a1-bff7-9cc5010b5056"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_SHORTEDGE_STEP
+— Specifies the single step‑size between the short edges of inserted
+bar vias.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idbdc984de-c935-4888-866b-bd7def87e410"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_OFFSET
+— Species the fill offset value used for the via.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__ided165a76-a075-464d-91aa-8466fa16b873"><p class="p">M_<span class="keyword ParameterName OptionalReplaceable">via</span>_ENC
+— Species the enclosure area used for the via.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id607279c6-8b98-4d65-91e2-4869d9f037f2"><p class="p">SPACE — Specifies
+the spacing distance for each pair of via types using the following naming
+convention:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id5cc7912e-e5f8-4ce5-beb8-0af3304b4810"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">viaVariation</span>_SPACE
+— Specifies the space from a different via variation of the same
+via.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id96ccf3a6-37cb-47d3-ba33-4902e8fcb168"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>_SPACE
+— Specifies the space from an existing via to a fill via of the
+same type.</p>
+</li>
+</ul>
+<p class="p">Or for bar vias (see also “<a class="xref fm:HeadingAndPage" href="Concept_SpacingFromBARVias_id45e98b26.html#id45e98b26-2708-4812-898c-2733a84b088a__Concept_SpacingFromBARVias_id45e98b26.xml#id45e98b26-2708-4812-898c-2733a84b088a" title="The spacing checks between bar (BAR) vias, whether existing in the design or inserted by the Calibre YieldEnhancer PowerVia flow, can be controlled by adding additional space constraints to the via variables files.">Spacing from BAR Vias</a>”):</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id3fc9ab2b-7ff0-46f6-80e0-096e76a77223"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_LONGEDGE_SPACE <span class="keyword ParameterName OptionalReplaceable">— </span> Specifies
+the space from the long edge of an existing bar via to a fill via
+(square, BAR, or LRG).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id2436aabf-d6bf-4377-b68e-4613a54cd117"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_SHORTEDGE_SPACE
+— Specifies the space from the short edge of an existing bar via
+to a fill via (square, BAR, or LRG).</p>
+</li>
+</ul>
+<p class="p">For example:</p>
+<pre class="pre codeblock"><code>VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns
+</span>VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns
+</span>VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>LRG_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span>
+VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>BAR_<span class="keyword ParameterName OptionalReplaceable">via</span>LRG_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span></code></pre><p class="p">Or:</p>
+<pre class="pre codeblock"><code>VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns
+</span>VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_SHORTEDGE_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span>
+VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_LONGEDGE_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span>
+VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>LRG_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span>
+VARIABLE <span class="keyword ParameterName OptionalReplaceable">via</span>BAR_<span class="keyword ParameterName OptionalReplaceable">via</span>LRG_SPACE <span class="keyword ParameterName OptionalReplaceable">distance_microns</span></code></pre></li>
+</ul>
+</div>
+<div class="section Subsection" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id24c7f440-4185-4483-81ca-615b77c5505c"><h2 class="title Subheading sectiontitle">Optional
+for All Technology Nodes</h2><p class="p">The following variables are optional for all technology nodes:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id0f2a9fa6-ddac-43af-9cab-cd40ecc8c4f8"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_SPACE
+(for same‑layer spacing).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id4b44f1c8-0508-43e8-a2d0-ee232f232d90"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_LONGEDGE_SPACE
+(for bar vias spacing).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idba090340-2a35-4035-b5bb-4374b84cabd8"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_
+SHORTEDGE _SPACE (for bar vias spacing).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id1bafa20a-fa1b-4291-b682-15ac9eb28462"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_DIFFERENT_NET_SPACE(see “<a class="xref fm:HeadingAndPage" href="Concept_ConnectivityBasedSpacingForSameLayerVias_idc576fade.html#idc576fade-c9f0-499b-a89b-5c6fbfffef11__Concept_ConnectivityBasedSpacingForSameLayerVias_idc576fade.xml#idc576fade-c9f0-499b-a89b-5c6fbfffef11" title="The Calibre YieldEnhancer PowerVia flow uses certain variable specifications to enable connectivity‑based spacing for same‑layer vias on the same nets and on different nets.">Connectivity-Based Spacing for Same-Layer Vias</a>”, also
+includes variables for SHORTEDGE and LONGEDGE different net spacing). </p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__idedd0bab9-b856-4f57-b296-ad3d782b1fc5"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span><span class="keyword ParameterName OptionalReplaceable">_via2</span>_DIFFERENT_NET_SHORTEDGE_SPACE
+(for bar vias spacing).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id784c8d3d-c94a-4cfe-932d-dbdd29e8ab37"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_DIFFERENT_NET_LONGEDGE_SPACE
+(for bar vias spacing).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id74d17e9e-eed3-4cb2-88a7-0f2e0c914cad"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_COUNT
+(see “<a class="xref fm:HeadingAndPage" href="Concept_ViaCountRulesFiltering_id298667d0.html#id298667d0-8055-4a5a-8a44-9b962d4edf4d__Concept_ViaCountRulesFiltering_id298667d0.xml#id298667d0-8055-4a5a-8a44-9b962d4edf4d" title="In certain technology flows, DRC rules are used to create filters for the vias that are inserted into the design. You can use the post‑filtering ability of the Calibre YieldEnhancer PowerVia flow to apply rule constraint options to check the minimum via count in a via array.">Via Count Rules Filtering</a>”).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id47e8b605-c286-4f50-bb9f-64b371327ed4"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_STEPx, <span class="keyword ParameterName OptionalReplaceable">via</span>_STEPy
+(if not specified, then <span class="keyword ParameterName OptionalReplaceable">via</span>_STEP
+must be specified).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id6f7ee92c-6b1c-4bc0-937a-f361f50da40f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_LONGEDGE_STEP, <span class="keyword ParameterName OptionalReplaceable">via</span>_SHORTEDGE_STEP
+(for bar vias, if not specified, then <span class="keyword ParameterName OptionalReplaceable">via</span>_STEP
+must be specified).</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id53bf956b-0b47-4c35-8754-56ada72c4414"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_SHORTEDGE_SPACE, <span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">via</span>BAR_LONGEDGE_SPACE
+(for bar vias, if not specified, then SPACE must be specified).
+See “<a class="xref fm:HeadingAndPage" href="Concept_SpacingFromBARVias_id45e98b26.html#id45e98b26-2708-4812-898c-2733a84b088a__Concept_SpacingFromBARVias_id45e98b26.xml#id45e98b26-2708-4812-898c-2733a84b088a" title="The spacing checks between bar (BAR) vias, whether existing in the design or inserted by the Calibre YieldEnhancer PowerVia flow, can be controlled by adding additional space constraints to the via variables files.">Spacing from BAR Vias</a>”.</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id2c054342-40fc-4c01-a131-874cacc5b59f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">UpperViaType</span>_<span class="keyword ParameterName OptionalReplaceable">LowerViaType</span>_SPACE
+for Vx to Vx‑1 spacing. See “<a class="xref fm:HeadingAndPage" href="Concept_SpacingBetweenVias_id4bf128a5.html#id4bf128a5-f118-4641-a68f-949ae378e7fd__Concept_SpacingBetweenVias_id4bf128a5.xml#id4bf128a5-f118-4641-a68f-949ae378e7fd" title="The spacing checks between vias on neighboring (upper and lower) via layers in the Calibre YieldEnhancer PowerVia flow can be controlled by adding Tcl procedures to the techlib.tcl file and space constraints to the via variables files.">Spacing Between Vias</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id7f45e86a-795c-47ff-afb3-bee731858e09"><h2 class="title Subheading sectiontitle">Variables
+Specific to Foundry Process Flows</h2><div class="note note"><span class="notetitle">Note:</span> <p class="p">The via variables specifications for
+the following flows are specific to your foundry process. Depending
+on your technology flow, you use a predefined or a generated via
+variables file. If you have questions on the content of these files,
+configuration instructions are provided by your foundry or Siemens
+Digital Industries Software. Contact your Siemens EDA representative
+for details if needed.</p>
+</div>
+</div>
+<div class="section Subsection" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id890da3c8-65d5-4157-ad46-b3d4e822a5da"><h2 class="title Subheading sectiontitle">(predefined)
+Via Variables File Process Flows</h2><p class="p">This flow uses a predefined via variables file that contains
+the via parameters for each metal group. </p>
+<p class="p">Mandatory for this flow:</p>
+<p class="p">For all via types (square, bar, and large) the sizes as specified
+by the width and length parameters are mandatory. For example:</p>
+<pre class="pre codeblock"><code>VARIABLE V2_WIDTH 0.02
+VARIABLE V2_LENGTH 0.02
+VARIABLE V2BAR_WIDTH 0.02
+VARIABLE V2BAR_LENGTH 0.02
+VARIABLE V2LRG_WIDTH 0.02
+VARIABLE V2LRG_LENGTH 0.02
+…</code></pre><p class="p">These parameters are specified along with the variable statements
+for the step, offset, enclosure, and space parameter values. For
+example:</p>
+<pre class="pre codeblock"><code>// V2 variables
+VARIABLE M_V2_ENC 0.02
+VARIABLE V2_WIDTH 0.02
+VARIABLE V2_LENGTH 0.02
+VARIABLE V2_STEPx 0.03
+VARIABLE V2_STEPy 0.04
+VARIABLE V2_offset 0.0
+…
+// V2-V2 space variables
+VARIABLE V2_V2_SPACE 0.034
+…</code></pre><p class="p">For certain technologies using Ax (A4, A5 …) vias, the “<span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger”
+variable is required for square and LRG vias. This uses a specific
+method for filling vias in areas specified as “finger”. For example:</p>
+<pre class="pre codeblock"><code>VARIABLE A4_C4finger 0.632</code></pre><p class="p">Optional for this flow:</p>
+<p class="p">For certain technologies using Ax (A4, A5 …) vias, these step‑size
+variables are optional.</p>
+<p class="p">Optional for square and large via types:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id0355b37e-9c9a-4b9a-8251-09e6c7ce4fe4"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_STEPx</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id7653e6d7-4bcb-44c4-adbf-02c9358a349d"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_STEPy </p>
+</li>
+</ul>
+<p class="p">Optional for bar via types:</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id1a54f33a-f314-4f18-8df4-7e0072772868"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_LONGEDGE_STEP</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id14b74cb6-6a98-4198-bb08-0947209ad189"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_SHORTEDGE_STEP</p>
+</li>
+</ul>
+<p class="p">For certain technologies using Ax (A4, A5 …) vias, these space
+variables are optional.</p>
+<ul class="ul"><li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id9146e0a1-fa81-4c00-9471-47abcc0befb6"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_LONGEDGE_SPACE</p>
+</li>
+<li class="li" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id6759ea9f-3db2-4eab-bb49-420cf8e2a142"><p class="p"><span class="keyword ParameterName OptionalReplaceable">via1</span>_<span class="keyword ParameterName OptionalReplaceable">via2</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_SHORTEDGE_SPACE</p>
+</li>
+</ul>
+<p class="p">Where via1 and via2 can be type square, BAR, or LRG, and at least
+one of via1 and via2 is type BAR.</p>
+<p class="p">If the above two space variables are not specified, then the
+following space option is used:</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">via</span>_<span class="keyword ParameterName OptionalReplaceable">lower_metal</span>finger_SPACE</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The naming convention of the variable statement follows
+the insertion priority of the different via types, which are prioritized
+starting with the addition of large (LRG), followed by bar (BAR),
+and then square via types. In the variable statement, the lower
+priority via type is specified to the left of the higher priority
+via type.</p>
+</div>
+<p class="p">For example:</p>
+<pre class="pre codeblock"><code>VARIABLE A4_C4finger_STEPx 0.092
+VARIABLE A4_C4finger_STEPy 0.064
+VARIABLE A4BAR_C4finger_LONGEDGE_STEP 0.05
+VARIABLE A4BAR_C4finger_SHORTEDGE_STEP 0.02
+VARIABLE A4_A4BAR_C4finger_LONGEDGE_SPACE 0.04
+VARIABLE A4_A4BAR_C4finger_SHORTEDGE_SPACE 0.08
+VARIABLE A4BAR_A4LRG_C4finger_SHORTEDGE_SPACE 0.08
+VARIABLE A4BAR_A4LRG_C4finger_LONGEDGE_SPACE 0.57</code></pre></div>
+<div class="section Subsection" id="id37e458b6-74e5-4548-b3e6-36faf04df3b4__id717cab6e-eb07-4466-8b88-b55a94c53252"><h2 class="title Subheading sectiontitle">(generated)
+Via Variables File Process Flows</h2><p class="p">This flow has an intermediate step that generates a new via variables
+file during the run based on the information in the input via variables
+file. The generated via variables filename has the format &lt;<span class="ph filepath">filename</span>&gt;<span class="ph filepath">_gen</span>.
+For example, set the directory path (full or relative) in the <span class="ph filepath">techlib.tcl</span> file:</p>
+<pre class="pre codeblock"><code>set VIA_VARIABLES "<span class="ph filepath">/usr/project/work/var_types</span>"</code></pre><p class="p">The input file with filename <span class="ph filepath">var_types</span> must
+be located at the specified directory path and is used to generate
+a new via variables file with filename <span class="ph filepath">var_types_gen</span> in
+the output directory. The input file contains information for each
+via type as specified in the BEOL layer stack. The generated via
+variables file contains the via parameters for each via from the
+layer stack. </p>
+<p class="p">For example, if VIAli has via type Vxa in the input via variables
+file:</p>
+<pre class="pre codeblock"><code>VARIABLE Vxa_WIDTH 0.020</code></pre><p class="p">The line becomes the following in the output via variables file:</p>
+<pre class="pre codeblock"><code>VARIABLE VIA1i_WIDTH 0.020</code></pre><p class="p">Mandatory for this flow:</p>
+<p class="p">For all via type variations (square, bar, and large), the sizes
+as specified by the width and length parameters are mandatory. For
+example:</p>
+<pre class="pre codeblock"><code>VARIABLE Vx_WIDTH 0.020
+VARIABLE Vx_LENGTH 0.020
+VARIABLE VxBAR_WIDTH 0.020
+VARIABLE VxBAR_LENGTH 0.040
+VARIABLE VxLRG_WIDTH 0.080
+VARIABLE VxLRG_LENGTH 0.080
+…</code></pre><p class="p">For extended via types, the width and length parameters must
+also be specified:</p>
+<pre class="pre codeblock"><code>VARIABLE VxaBAR2_WIDTH 0.020
+VARIABLE VxaBAR2_LENGTH 0.040</code></pre><p class="p">The width and length parameters are specified along with the
+variable statements for the step, offset, enclosure, and space parameter
+values. For example:</p>
+<pre class="pre codeblock"><code>// Vx variables
+VARIABLE Mx_Vx_ENC 0.002
+VARIABLE Vx_WIDTH 0.02
+VARIABLE Vx_LENGTH 0.02
+VARIABLE Vx_STEP 0.04
+VARIABLE Vx_offset 0.0
+…
+// Vx-Vx space variables
+VARIABLE Vx_Vx_SPACE 0.064
+…
+// Vx count variables (optional)
+VARIABLE Vx_count 1
+…</code></pre><p class="p">Optional for this flow:</p>
+<p class="p">For some via types, there can be two sizes for bar vias. In these
+cases, if the variable <span class="keyword ParameterName OptionalReplaceable">via</span>_LENGTH2
+is added to the input via variables file, then the flow also extracts
+these bar via sizes. For example:</p>
+<pre class="pre codeblock"><code>VARIABLE VxBAR_LENGTH 0.040
+VARIABLE VxBAR_LENGTH2 0.060</code></pre><p class="p">When there are two length specifications for a particular bar
+via, both of these specifications are considered as one bar via
+layer. The count checks and spacing constraints are applied to both bar
+via specifications as one layer.</p>
+<p class="p">All other variables (VxBAR_COUNT, Vx_VxBAR_SPACE, …) are the
+same for both sizes of bar vias (VxBAR_LENGTH, VxBAR_LENGTH2).</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreYieldEnhancerPowerViaFilesAndSpecifications_idddee2176.html" title="The files and specifications used in the flow depend on your foundry process and may vary from the examples in this section. See your Siemens EDA representative for assistance with customizing your inputs for the Calibre YieldEnhancer PowerVia flow.">Calibre YieldEnhancer PowerVia Files and Specifications</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_yaye_ref"
+                DocTitle = "Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual"
+                PageTitle = "Via Variables File Specifications"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ViaVariablesFileSpecifications_id37e458b6.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

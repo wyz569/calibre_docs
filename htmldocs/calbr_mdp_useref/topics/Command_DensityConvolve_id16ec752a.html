@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="DENSITY CONVOLVE" />
+<meta name="abstract" content="SVRF mask data preparation command that applies a convolution algorithm to input layers to represent density values" />
+<meta name="description" content="SVRF mask data preparation command that applies a convolution algorithm to input layers to represent density values" />
+<meta name="DC.subject" content="DENSITY CONVOLVE, syntax" />
+<meta name="keywords" content="DENSITY CONVOLVE, syntax" />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id16ec752a-6a15-4671-ab13-ec69199e2983" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DENSITY CONVOLVE</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DENSITY CONVOLVE" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id16ec752a-6a15-4671-ab13-ec69199e2983">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DENSITY CONVOLVE</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><span class="shortdesc">SVRF mask
+data preparation command that applies a convolution algorithm to
+input layers to represent density values</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">DENSITY CONVOLVE</span> <span class="keyword ParameterName RequiredReplaceable">input_layer</span> [<span class="keyword ParameterName OptionalReplaceable">marker_layer</span>] [ ‘<span class="keyword ParameterName Optional">[</span>’<span class="keyword ParameterName OptionalReplaceable">density_expr</span> ‘<span class="keyword ParameterName Optional">]</span>’] <span class="keyword ParameterName RequiredReplaceable">constraint</span> [WINDOW <span class="keyword ParameterName OptionalReplaceable">wxy</span>] <br />
+[INSIDE OF EXTENT | INSIDE OF <span class="keyword ParameterName OptionalReplaceable">x1</span> <span class="keyword ParameterName OptionalReplaceable">y1</span> <span class="keyword ParameterName OptionalReplaceable">x2</span> <span class="keyword ParameterName OptionalReplaceable">y2</span> | INSIDE OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer2</span>]<br />
+[<span class="keyword ParameterName OptionalDefault">TRUNCATE</span> | WRAP] [PRINT [ONLY] <span class="keyword ParameterName OptionalReplaceable">filename</span>]<br />
+<span class="keyword ParameterName Required">FILE</span> {<span class="keyword ParameterName RequiredReplaceable">parameter_block</span> | ‘<span class="keyword ParameterName Required">[</span>’<br />
+   {{<span class="keyword ParameterName Required">SCALE</span> <span class="keyword ParameterName RequiredReplaceable">c_n</span> <span class="keyword ParameterName Required">GAUSS</span> <span class="keyword ParameterName RequiredReplaceable">s_n</span> [CONVOLUTION_GRID <span class="keyword ParameterName OptionalReplaceable">cg_n</span>] <br />
+           [NORMALIZATION <span class="keyword ParameterName OptionalReplaceable">type</span>]}... |<br />
+   {<span class="keyword ParameterName Required">SCALE</span> <span class="keyword ParameterName RequiredReplaceable">c_n</span> <span class="keyword ParameterName Required">FRACTAL</span> {<span class="keyword ParameterName RequiredReplaceable">n_n</span> | <span class="keyword ParameterName RequiredReplaceable">filename_n</span>} <span class="keyword ParameterName Required">RMAX</span> <span class="keyword ParameterName RequiredReplaceable">rmax_n</span> [RMIN <span class="keyword ParameterName OptionalReplaceable">rmin_n</span>]  <br />
+           [CONVOLUTION_GRID {<span class="keyword ParameterName OptionalReplaceable">cg_n</span> <span class="keyword ParameterName Optional">| AUTO</span>}] [PARTIAL {AUTO | <span class="keyword ParameterName OptionalReplaceable">r1_n r2_n</span>}]<br />
+           [NORMALIZATION <span class="keyword ParameterName OptionalReplaceable">type</span>] [skip]}...}<br />
+[spatialPolynomial [<span class="keyword ParameterName OptionalReplaceable">a0</span>] [<span class="keyword ParameterName OptionalReplaceable">a1</span>x] [<span class="keyword ParameterName OptionalReplaceable">a2</span>y] [<span class="keyword ParameterName OptionalReplaceable">a3</span>xy] [<span class="keyword ParameterName OptionalReplaceable">a4</span>x2y] [<span class="keyword ParameterName OptionalReplaceable">a5</span>xy2] …]<br />
+[upsample_interpolation [linear | <span class="keyword ParameterName OptionalDefault">none</span>]]<br />
+[{<span class="keyword ParameterName Optional">input_mask</span>  <span class="keyword ParameterName OptionalReplaceable">format_specific_options</span> } | <br />
+ {vboasis_path <span class="keyword ParameterName OptionalReplaceable">file_path</span> [-noCheck] [<span class="keyword ParameterName Optional">-fastIndex</span> [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]]<br />
+   [vboasis_precision_multiplier {<span class="keyword ParameterName OptionalReplaceable">n</span>[/<span class="keyword ParameterName OptionalReplaceable"> d</span>] | AUTO}]<br />
+   [vboasis_layout_magnify <span class="keyword ParameterName OptionalReplaceable">n</span> [/ <span class="keyword ParameterName OptionalReplaceable">d</span>]]<br />
+   [vboasis_injection [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1]]}<br />
+[<span class="keyword ParameterName Optional">density_algorithm</span> {<span class="keyword ParameterName OptionalDefault">1</span> | <span class="keyword ParameterName Optional">2</span>}]  <br />
+[direct_FS_access INPUT] <br />
+[dummy_fill {<span class="keyword ParameterName OptionalReplaceable">value</span> | auto}]<br />
+[file_format {<span class="keyword ParameterName OptionalDefault">text</span> | binary | png [gray | grey | color | colour]}]<br />
+[&lt;SVRFSTART&gt;<br />
+      <span class="keyword ParameterName OptionalReplaceable">svrf_statements<br />
+</span>&lt;SVRFEND&gt; ]<br />
+[svrf_layer_name {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> <span class="keyword ParameterName OptionalReplaceable">oasis_layer_number</span>       [<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}...}]<br />
+[density_precision [<span class="keyword ParameterName OptionalDefault">double</span> | float]]<br />
+[dose_ring <span class="keyword ParameterName OptionalReplaceable">dose</span> <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span>]<br />
+[blade_shadow <span class="keyword ParameterName OptionalReplaceable">blade_x_um</span> <span class="keyword ParameterName OptionalReplaceable">blade_y_um</span>]<br />
+[RDB [ONLY] <span class="keyword ParameterName OptionalReplaceable">filename</span> [MAG <span class="keyword ParameterName OptionalReplaceable">value</span>]]<br />
+[globalMapFile {binary | ascii} <span class="keyword ParameterName OptionalReplaceable">file_path</span>]<br />
+[section_size <span class="keyword ParameterName OptionalReplaceable">sz</span>]<br />
+}<br />
+‘<span class="keyword ParameterName Required">]</span>’ }</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The DENSITY CONVOLVE SVRF statement
+allows you to create a representation of your input layer that shows
+density values after applying convolution algorithms. Convolution
+is a mathematical procedure that produces a weighted moving average
+of two functions. In this case, it evaluates the density value of
+a density window by taking into consideration the values of those
+windows surrounding it. Therefore, the density values are “spread
+out” to nearby density windows.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id5744926d-6343-4c1d-9e6e-b930b8344436"><span class="keyword ParameterName RequiredReplaceable">input_layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">The name of an original or
+derived polygon layer. This is the layer containing the data to which
+Calibre applies the convolution functionality.</p>
+<p class="p">This differs from Density in
+that you can only specify a single layer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id971c9d9f-636b-4636-9efd-1d8a85b3aa7d"><span class="keyword ParameterName OptionalReplaceable">marker_layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The name of an original or derived polygon
+layer. This layer should only be specified with the dummy_fill parameter.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idfc1b0c8f-da00-4d4c-a210-848c08ab9fff">‘<span class="keyword ParameterName Optional">[</span>’ <span class="keyword ParameterName OptionalReplaceable">density_expr</span> ‘<span class="keyword ParameterName Optional">]</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional expression enclosed
+in brackets ( [ ] ) that allows customized control over the density
+computations. The expression may contain numbers, numeric variables,
+binary operators ( *, / , +, -), unary operators (+, -, !, ~), and
+AREA functions of the input layer of the form, where the parentheses
+( ) are required:</p>
+<pre class="pre codeblock"><code>AREA (<span class="keyword ParameterName OptionalReplaceable">input_layer</span>)</code></pre><p class="p">The expression must not result
+in strictly negative values because they cannot be checked by a
+constraint. The AREA function returns values based upon user units
+of length squared. AREA() returns the area of the data capture window.</p>
+<p class="p">For example, to return the
+value “1 - density” to the convolution operation you would specify:</p>
+<pre class="pre codeblock"><code>[1 - AREA(layer_name)/AREA()]</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idcb09ed68-44b9-41ee-820a-9320723cc805"><span class="keyword ParameterName RequiredReplaceable">constraint</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required constraint bounded
+by the following:.</p>
+<p class="p">If the density value, after
+convolution, of a window meets this constraint, the window is output
+to the derived layer.</p>
+<p class="p">If a <span class="keyword ParameterName OptionalReplaceable">density_expr</span> is
+provided, the result of the expression is tested against the constraint. </p>
+<p class="p">If the ratio is intended as
+a percent, it should be a number between 0 and 1, where division by
+100 has occurred. For example, if you want the constraint to be
+20 percent, you would specify “0.20” not “20”.</p>
+<p class="p">You cannot specify the constraint
+“&lt; 0”.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id0e5835c7-6f69-457a-b80f-6c3b37cd9ee6">WINDOW <span class="keyword ParameterName OptionalReplaceable">wxy</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword set that
+specifies the size of the window within which the tool calculates
+the density and applies the convolution algorithm.</p>
+<p class="p">Specifies a square window with
+a height and width of <span class="keyword ParameterName OptionalReplaceable">wxy</span> user
+units. The string <span class="keyword ParameterName OptionalReplaceable">wxy</span> must
+be a positive real number. If you do not specify this optional keyword
+set, the default window size is defined by the INSIDE OF boundary,
+resulting in a single window. </p>
+<p class="p">To prevent any WINDOWs from
+overlapping, the tool STEPs the window by the same value (<span class="keyword ParameterName OptionalReplaceable">wxy</span>).</p>
+<p class="p">Consult your process engineer
+for the best size of the density window. Typically, this would be
+about two orders of magnitude larger than the nominal feature size.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id2693dbd2-374a-4176-9ea2-262a447cadf3">INSIDE OF EXTENT | INSIDE OF <span class="keyword ParameterName OptionalReplaceable">x1 y1 x2 y2</span> | INSIDE OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer2</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword set that
+defines a rectangular boundary within which the tool creates the
+density grid. The choices are:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id00cf7193-8bfe-488c-9112-ead21a586b1c"><p class="p Opt">INSIDE
+OF EXTENT — Specifies that the rectangular boundary is the extent
+of <span class="keyword ParameterName OptionalReplaceable">input_layer</span>.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idef640b5e-5435-4e48-a6f5-5c6b631ca199"><p class="p Opt">INSIDE
+OF <span class="keyword ParameterName OptionalReplaceable">x1 y1 x2 y2</span> —
+Specifies the lower-left and upper-right corners of the rectangular
+boundary in user units. You must write the coordinates relative
+to the origin of the Calibre database and enclose any negative coordinates
+in parentheses ( ), for example: </p>
+</li>
+</ul>
+<pre class="pre codeblock"><code>INSIDE OF (-123) 123 (-12) 456</code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id0859cc36-2ef9-4064-926f-b6404655bbcb"><p class="p Opt">INSIDE
+OF LAYER <span class="keyword ParameterName OptionalReplaceable">layer2</span> —
+Specifies that the rectangular boundary is the extent of <span class="keyword ParameterName OptionalReplaceable">layer2</span>.
+This is different behavior from the Density SVRF statement and <span class="keyword ParameterName OptionalReplaceable">layer2</span> cannot be
+the same layer as <span class="keyword ParameterName OptionalReplaceable">layer1</span>.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ided2c648d-35b1-4545-b962-98daeadd2b11"><span class="keyword ParameterName OptionalDefault">TRUNCATE</span> | WRAP </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies how the tool calculates
+the convolution of a window that overlaps the boundary box of the <span class="keyword ParameterName OptionalReplaceable">input_layer</span>.
+(Density behavior is always truncate.)</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id9ebd031a-f33c-4cf8-a3f7-38cfa9509d8d"><p class="p Opt"><span class="keyword ParameterName OptionalDefault">TRUNCATE</span> —
+An optional keyword that instructs the tool to compute the convolution of
+the overlapping window by truncating the size of the window so that
+it does not extend beyond the boundary box. This is the default
+behavior.</p>
+</li>
+</ul>
+<div class="fig fignone" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idd44189f1-cff8-48bb-a5aa-5d469ee90257"><span class="figcap"><span class="fig--title-label">Figure 1. </span>TRUNCATE
+Keyword</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/coin_dev34.png" /></div><br /></div>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id8e7d32c4-8376-4b8e-8413-e670fa1d4269"><p class="p Opt">WRAP
+— An optional keyword that instructs the tool to compute the convolution
+of the overlapping window by duplicating and adding the boundary
+box and its data to the right-hand or top side of the main boundary
+box. The convolution is then taken from the window that intersects
+the duplicated boundaries.</p>
+</li>
+</ul>
+<div class="fig fignone" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id042cd35c-508b-44c0-bb98-5c4bae34d0dc"><span class="figcap"><span class="fig--title-label">Figure 2. </span>WRAP Keyword</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/coin_dev35.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id5796b67d-84fc-4645-b99c-54d12a502676">PRINT [ONLY] <span class="keyword ParameterName OptionalReplaceable">filename</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword set that
+instructs the tool to write data about each window to the desired
+location. The choices are:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id4f955833-79c7-4af4-972f-ac12bda5c4c4"><p class="p Opt">PRINT <span class="keyword ParameterName OptionalReplaceable">filename</span>—Writes
+the window data to the specified <span class="keyword ParameterName OptionalReplaceable">filename</span> and
+the result layer.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id6768ffb8-2853-4ae5-b4a8-77851cb2d0c0"><p class="p Opt">PRINT
+ONLY <span class="keyword ParameterName OptionalReplaceable">filename</span> —
+Writes the window data only to the specified <span class="keyword ParameterName OptionalReplaceable">filename</span> and leaves
+the result layer empty. This saves operation time if you are not
+interested in the geometric result. </p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">filename</span> parameter
+can contain environment variables.</p>
+<p class="p">The file is a list of all the
+windows in the following format:</p>
+<pre class="pre codeblock"><code>x1 y1 x2 y2 value </code></pre><p class="p">where, </p>
+<ul class="ul"><li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id3e99b7f0-24a8-47a0-8375-a9b0833454fd"><p class="p">x1 y1 x2 y2 — reports the
+position of the window</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ida7057cd2-f0d1-4cf2-9bf4-4c5362749d42"><p class="p">value — reports the density
+value, after convolution</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id2d0d0181-52f8-465c-bf7e-e102a6dd61b2"><span class="keyword ParameterName Required">FILE</span> <span class="keyword ParameterName RequiredReplaceable">parameter_block</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword and argument pair
+specifying the density convolution parameters. The parameters are
+contained in a reusable parameter block defined using a Litho File
+SVRF statement.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id29a2a5dc-c631-490d-9dcb-0c2cf1f6752c"><span class="keyword ParameterName Required">FILE</span> ‘<span class="keyword ParameterName Required">[</span>’… ‘<span class="keyword ParameterName Required">]</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword and argument set
+specifying that the density convolution parameters are contained
+inline within the brackets ( [ ] ). Brackets must surround all operation
+arguments appearing after the keyword FILE. In addition, everything
+within the brackets must comply with the following requirements:</p>
+<ul class="ul"><li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7747ab72-942b-42c3-b5c3-cd72de4b6101"><p class="p">Keywords and parameters must
+be on lines <span class="keyword ParameterName OptionalReplaceable">strictly between</span> the
+left and right brackets (that is, cannot be on the same line).</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id253cac0d-cfe1-4d44-8b35-945c5f6ade98"><p class="p">You can include comments
+within the section of the operation set off by brackets, if you
+begin the comments with a double forward slash (//). This comment
+character indicates that all text until the next newline is comment
+text.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id23c34a3d-180c-4084-9268-e66ea42e312b"><span class="keyword ParameterName Required">SCALE </span><span class="keyword ParameterName RequiredReplaceable">c_n </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword and argument
+pair specifying a scaling factor. This factor is associated with
+each two-dimensional Gaussian kernel. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idecef06ca-1fe8-425c-a21f-dd752543cdd0"><span class="keyword ParameterName Required">GAUSS </span><span class="keyword ParameterName RequiredReplaceable">s_n</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword (if you
+are using Gaussian kernels) and argument pair specifying a Gaussian
+sigma value. This value represents the sigmas for each two-dimensional
+Gaussian kernel.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ida3c81769-3972-4a9a-9a17-ce9127ea23ce"><span class="keyword ParameterName Required">FRACTAL</span> {<span class="keyword ParameterName RequiredReplaceable">n_n</span> | <span class="keyword ParameterName RequiredReplaceable">filename_n</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword (if you
+are using fractal kernels) and argument pair that specifies a fractal
+value, representing the power of the two dimensional fractal kernel
+that will be convolved with the density values. Note that fractal
+kernels may not be combined with Gaussian kernels, but you may have
+multiple fractal kernels. The value of <span class="keyword ParameterName RequiredReplaceable">n</span> must
+be positive. Alternatively, a filename can be specified that contains
+a text based fractal kernel that will be read in and used for the
+convolution. The text file must contain a series of samples that
+strictly adheres to the following format:</p>
+<pre class="pre codeblock"><code>// this is a comment
+# this is also a comment
+// All white space is ignored.
+// This is alist of sample values of radius in microns followed by 
+// the fractal value.
+// Only white space is allowed between the radius and fractal value.
+&lt;r1&gt; &lt;f1&gt;
+&lt;r2&gt; &lt;f2&gt;
+....
+&lt;rn&gt; &lt;fn&gt;</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idfeaec926-b623-4c8b-96d1-aaec4393427f">RMAX <span class="keyword ParameterName OptionalReplaceable">rmax_n</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument if you
+are using fractal kernels that specifies a Fractal maximum radius value
+in microns, representing the cutoff value for which the Fractal
+kernel will be set to zero if <span class="keyword ParameterName OptionalReplaceable">r</span> &gt; <span class="keyword ParameterName OptionalReplaceable">rmax_n</span>.
+The default value is 90 percent of energy in fractal kernel.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id765cc01e-7e0b-4be3-bf54-e9c88ba2096e">RMIN <span class="keyword ParameterName OptionalReplaceable">rmin_n</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies
+a Fractal minimum radius value in microns, representing the cutoff
+value for which the Fractal kernel will be set to zero if 0 &lt; <span class="keyword ParameterName OptionalReplaceable">r </span>&lt; <span class="keyword ParameterName OptionalReplaceable">rmax_n</span>.
+The default value is 1.0 um.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7f0d219f-f55d-4d25-9646-7e9e5ac7fdf9">CONVOLUTION_GRID {<span class="keyword ParameterName OptionalReplaceable">cg_n</span> <span class="keyword ParameterName Optional">| AUTO</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+pair specifying a convolution grid (<span class="keyword ParameterName OptionalReplaceable">cg_n</span>)
+for each two-dimensional Gaussian kernel. </p>
+<p class="p">You can use this setting to
+speed up the convolution of the density grid at the expense of precision.</p>
+<p class="p">If the AUTO keyword is specified
+for PARTIAL, the AUTO keyword must also be specified for CONVOLUTION_GRID.</p>
+<p class="p">The default value is the value
+assigned to GAUSS (<span class="keyword ParameterName OptionalReplaceable">s</span>)
+divided by 4.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idffad102f-c15d-461d-b74a-d054012d0aa3">PARTIAL {AUTO | <span class="keyword ParameterName OptionalReplaceable">r1_n r2_n</span>} </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a partial fractal
+kernel, where only the portion <span class="keyword ParameterName OptionalReplaceable">r1_n</span> &lt; <span class="keyword ParameterName OptionalReplaceable">r_n</span> &lt; <span class="keyword ParameterName OptionalReplaceable">r2_n</span> of
+the original fractal kernel is convolved at the given convolution
+grid. In this manner, the entire original range of the fractal kernel
+must be built up by using partial kernels. This allows you to customize
+the convolution grid accuracy and runtime trade-offs associated
+with very large fractal kernels. It is highly recommended to use
+“upsample_interpolation linear” when using partial fractal kernels
+to avoid “stair-stepping” when combining the partial fractal kernels.
+If AUTO is specified, Calibre automatically breaks up the fractal
+kernel into partial kernels and sets their convolution grids in
+a reasonable manner to balance both speed and accuracy trade-offs.
+If AUTO is specified, the corresponding AUTO setting must be set
+on the CONVOLUTION_GRID keyword as well.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ida5dfa834-53ce-431b-9786-509175261417">NORMALIZATION { <span class="keyword ParameterName OptionalDefault">area</span> | none }</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional normalization flag
+for each kernel. The “area” option normalizes the convolution kernel
+to have an area of 1.0, which is then multiplied by the scale factor,
+while “none” performs no normalization on the convolution kernel
+but is multiplied by the scale factor. The default setting is <span class="keyword ParameterName OptionalDefault">area</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id5532081c-cc97-4a76-a04b-febe98d507f7">skip</dt>
+<dd class="dd ArgumentDescription"><p class="p">This secondary keyword is only
+used by fractal kernels. It specifies that this particular kernel
+is supposed to be “skipped” (not performed). This is useful when
+you would like a particular partial range of the kernel to be handled
+by the EUV flare simulator.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idc6b8e2de-ba06-404f-bf68-3863b685b3f4">spatialPolynomial [<span class="keyword ParameterName OptionalReplaceable">a0</span>] [<span class="keyword ParameterName OptionalReplaceable">a1</span>x] [<span class="keyword ParameterName OptionalReplaceable">a2</span>y] [<span class="keyword ParameterName OptionalReplaceable">a3</span>xy] [<span class="keyword ParameterName OptionalReplaceable">a4</span>x2y] [<span class="keyword ParameterName OptionalReplaceable">a5</span>xy2] …</dt>
+<dd class="dd ArgumentDescription"><p class="p">Defines up to a 4th order polynomial
+that is evaluated on the user units of the layout that is added
+to the convolution output. Coefficients can be negative or positive,
+while the order term must place ‘x’ before ‘y’. Only non-zero coefficients
+need to be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id6aec9aa6-4045-4902-a25a-ae29944e28d4">upsample_interpolation [linear | <span class="keyword ParameterName OptionalDefault">none</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies that Calibre use
+linear interpolation on upsampling to reduce “stair-stepping” from mismatched
+density and convolution grids. By default, upsampling is performed
+without linear interpolation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id3313a66f-16c8-4ace-b06d-3bd3de565d04">input_mask <span class="keyword ParameterName OptionalReplaceable">format_specific_options</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument for direct input of
+VSBJOB or MEBESJOB jobdecks or MEBES pattern files for density calculations.
+When this parameter is specified, Density Convolve uses the geometrical
+data from the specified mask instead of the input hierarchical layer.
+All data in the mask is merged. If the extent is specified with
+INSIDE OF, it must conform to the coordinate system of the jobdeck.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idad7106dd-2dcf-463e-84f0-63ccf695e671"><p class="p Opt"><span class="keyword ParameterName Required">VSBJOB:</span> <span class="keyword ParameterName OptionalReplaceable">jobdeck_path</span> <span class="keyword ParameterName OptionalReplaceable">mask_name</span> —
+Specify a directory path and mask name. If used with density_algorithm
+2, the VSBJOB should have only VSB12 variant chips.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idba688ee8-312b-4343-9a9a-59804c771774"><p class="p Opt"><span class="keyword ParameterName Required">MEBES:</span> <span class="keyword ParameterName OptionalReplaceable">mebes_pattern_path</span> —
+Specify a directory path to the MEBES pattern.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id06117381-d488-49ba-b754-ef7c90ed28be"><p class="p Opt"><span class="keyword ParameterName Required">MEBESJOB:</span> <span class="keyword ParameterName OptionalReplaceable">jobdeck_path</span> [‑levels <span class="keyword ParameterName OptionalDefault">ALL</span> | <span class="keyword ParameterName OptionalReplaceable">list</span>]
+[‑ejobdeck_pattern_suffix <span class="keyword ParameterName OptionalReplaceable">suffix</span>] [‑data_search_path <span class="keyword ParameterName OptionalReplaceable">path</span>]
+— Specify a jobdeck file path and additional options that control
+what is read in.</p>
+<p class="p">GDS placements in extended MEBES jobdecks are not supported when
+used with density_algorithm 1 or 2. Reverse-tone placements in MEBESJOB
+are not supported with density_algorithm 2.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id13a2ca7f-044d-410c-ba2d-f6a26bc36ddb"><p class="p Opt">‑levels
+ALL | <span class="keyword ParameterName OptionalReplaceable">list</span> —
+The levels to consider. By default, all levels are included in the density
+computation. If using a list, separate levels by commas. Ranges
+are allowed but not space. For example: “‑levels 501-504,508,512”</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id63d858b8-5a0f-45b9-9560-a16b0117dd03"><p class="p Opt">‑ejobdeck_pattern_suffix <span class="keyword ParameterName OptionalReplaceable">suffix</span> —
+Allows pattern files with different nomenclature (such as the OASIS
+.<span class="ph filepath">oas</span> extension) to be read in MEBES extended
+job decks. </p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7e26e654-9c73-49f3-a024-685844baeea8"><p class="p Opt">‑data_search_path <span class="keyword ParameterName OptionalReplaceable">path</span> —
+Specifies the path for a data search. Separate directories with
+a colon (:).</p>
+</li>
+</ul>
+<p class="p">This example specifies a job deck that includes OASIS files located
+in directories “.”, <span class="ph filepath">mb</span>, and <span class="ph filepath">om</span>.
+All levels are read in.</p>
+<pre class="pre codeblock leveled"><code>input_mask ./jobdeck/tsisram.om_mb.ejb -ejobdeck_pattern_suffix oas -data_search_path .:mb:om</code></pre></li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id2c3015c5-01e1-4b11-b253-a38e0355b820">vboasis_path <span class="keyword ParameterName OptionalReplaceable">file_path </span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A file path to the optional
+direct input OASIS file. If this parameter is specified, input geometrical
+data for the density computation is taken from the specified OASIS
+file instead of the input hierarchical layer. All data in the file
+is merged to form the input to the density computation. The specified
+extent must match that of the OASIS file. Several restrictions and
+caveats apply to the use of this alternate input method:</p>
+<ul class="ul"><li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id61e25d73-3813-4ff3-b186-803da0a2f54a"><p class="p">Limited compile-time extent
+checking is possible since the extent of the OASIS file is not known
+until it is parsed entirely. The extent is thoroughly checked at
+run time.</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id176b5ea0-adb1-4ec3-b36f-27aca41211fe"><p class="p">For distributed
+processing (Calibre MTflex) with 32-bit remotes, the maximum allowed
+data size of any cell in the OASIS file is 2GB, although the practical
+limit will be determined by the remote memory. Files generated by
+conversion from any fracture format will always have sufficiently
+small cells.</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id3c0be894-c955-44ae-be0e-06cf894cba30"><p class="p">Oasis file indices. Section
+mode will always attempt to reuse an existing index file for the
+input VB:OASIS file. Hierarchical mode will always rebuild the index
+in order to check that the file contains only trapezoids. Any index
+constructed by the fracture command, whether in hierarchical or
+section mode, will not contain viewer components, and so may not
+be suitable for use in the viewer.</p>
+</li>
+</ul>
+<p class="p">While any valid VB:OASIS file
+(considering the restrictions) can be used as an argument to this
+keyword, use only OASIS.VSB files (a standardized subset of VB:OASIS)
+or the outputs of the Calibre MDPview format-to-oasis converters.
+These files have hierarchies that can be effectively used as spatial
+indices. Using VB:OASIS files not constrained by this trait will
+likely result in unacceptably poor fracture performance.</p>
+<p class="p">Several side effects occur
+when input is taken from a VB:OASIS file. The HDB precision is temporarily
+replaced by the precision in the VB:OASIS file for the duration
+of the fracture command. Also, the default HDB extent may no longer
+be a meaningful way of specifying the DENSITY CONVOLVE window, since
+there is no relationship between the HDB and input OASIS file.</p>
+<p class="p">The Density Convolve statement
+may not specify both vboasis_path and input_mask.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id68e1a200-d41e-4f17-b4b9-e4bfcf15767f"><span class="keyword ParameterName Optional">-noCheck</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument to vboasis_path. The
+‑noCheck option can be specified in circumstances when checks on
+the input VBOASIS layout file are not possible because it has not
+been generated. This would typically happen when the file is expected
+to be generated by another SVRF command and thus is not available
+during parsing for checking purpose. When using ‑noCheck, extra
+care should be given to specifying the file path and associated
+precision values to avoid errors that will be encountered much later.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id1d179a4a-258d-472a-b606-8acfc06b094d"><span class="keyword ParameterName Optional">-fastIndex</span> [<span class="keyword ParameterName OptionalReplaceable">layer</span> <span class="keyword ParameterName OptionalReplaceable">datatype</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument to vboasis_path. The
+‑fastIndex option generates the index more quickly, but is restricted
+to OASIS.MASK files that contain only a single layer and datatype. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Do not use this option when there are multiple
+layers or datatypes in the input.</p>
+</div>
+<p class="p">The default <span class="keyword ParameterName OptionalReplaceable">layer</span> and <span class="keyword ParameterName OptionalReplaceable">datatype</span> are
+0 0. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id20940142-4ec3-470d-9d53-42d62db0d65a">vboasis_precision_multiplier {<span class="keyword ParameterName OptionalReplaceable">n </span>[/ <span class="keyword ParameterName OptionalReplaceable">d</span>] | AUTO}</dt>
+<dd class="dd ArgumentDescription"><p class="p">When direct input is specified
+using the vboasis_path keyword, this keyword will multiply the precision
+of the oasis file before operating on it. The precision will be
+multiplied by the ratio created by the numerator (<span class="keyword ParameterName OptionalReplaceable">n</span>)
+and optional denominator (<span class="keyword ParameterName OptionalReplaceable">d</span>)
+integer input. The default for <span class="keyword ParameterName OptionalReplaceable">d</span> is <span class="keyword ParameterName OptionalDefault">1</span> if
+otherwise unspecified.</p>
+<p class="p">If the AUTO is supplied instead
+of a ratio, Calibre will attempt to infer the correct ratio but will
+fail if it is not a rational number, or if the combination of inferred
+numerator and denominator would cause arithmetic overflow. This
+keyword requires the use of embedded SVRF.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id68372d93-6efd-4cbe-bf80-e5f3fcdcd89e">vboasis_layout_magnify <span class="keyword ParameterName OptionalReplaceable">n</span> [/ <span class="keyword ParameterName OptionalReplaceable">d</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Aligns the OASIS-direct-input
+coordinate system with the HDB coordinate system by adjusting its
+scale. The scale is specified as the numerator and denominator of
+a rational number.</p>
+<p class="p">This keyword is primarily used
+to apply embedded SVRF at the scale of the mask, but after all inverse
+transforms have been applied to align the MDP file inputs with the
+HDB coordinate system. In this case one would scale up the HDB coordinate
+system using LAYOUT MAGNIFY, and also use this keyword to apply
+the same scale to the direct-input database.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id34b86c1d-8215-492a-81b6-cda2ce55b945">vboasis_injection [-size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> | -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>] [-preserve 0 | 1]</dt>
+<dd class="dd ArgumentDescription"><p class="p">The VB:OASIS file specified
+using vboasis_path may contain cells that have large amounts of
+data and have a large extent. These large cells degrade performance
+in section mode processing. To overcome this issue, cells can be
+partitioned into bins. </p>
+<p class="p">The size of the cells that
+should be binned and the size of each bin (<span class="keyword ParameterName OptionalReplaceable">bin_size</span>)
+is determined automatically by default when vboasis_injection parameter
+is specified. You can control the bin size by providing a <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span> using
+the option -size_factor <span class="keyword ParameterName OptionalReplaceable">size_multiplier</span>.
+The default value is 1.0. </p>
+<p class="p">Alternately the <span class="keyword ParameterName OptionalReplaceable">bin_size</span> can
+be explicitly specified using the option -size <span class="keyword ParameterName OptionalReplaceable">bin_size</span> in microns.
+Any cell whose extent has width or height more the <span class="keyword ParameterName OptionalReplaceable">bin_size</span> is
+considered for binning. </p>
+<p class="p">The vboasis_injection option
+creates temporary data which may be reused if it is preserved using
+the -preserve option. The default value is 0.</p>
+<p class="p">The temporary data is read
+or written in a directory named <span class="keyword ParameterName OptionalReplaceable">file_path</span>.lcb
+where <span class="keyword ParameterName OptionalReplaceable">file_path</span> is argument
+specified to vboasis_path. The location of this directory is same
+as that of <span class="keyword ParameterName OptionalReplaceable">file_path</span>.
+This behavior can be changed by specifying a colon-separated list
+of directories using the UNIX environment variable MDPIndexSearchPath.
+The directories are searched in the order they are listed for reading
+or writing the temporary directory.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id389291db-3f02-4ebd-81a2-23e1f9ffe6cc">density_algorithm {<span class="keyword ParameterName OptionalDefault">1</span> | 2}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies the
+algorithm for computing density for direct-input VSBJOB and MEBESJOB
+jobdecks and MEBES pattern files. GDS placements in extended MEBES
+jobdecks are not supported. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idbeda8b16-742b-4285-9e90-9d578eb9e0d7"><p class="p Opt">1
+— This is the default. It indicates to use the full-featured algorithm.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__iddc440509-2de2-462f-a304-a31683f5ce73"><p class="p Opt">2
+— A faster, more limited algorithm for calculating density. It does
+not affect convolution speed. This algorithm does not merge geometries.
+It supports multithreading (Calibre MT) but not distributed processing
+(Calibre MTflex). MEBESJOB jobdecks with reverse-tone placements
+are not supported.</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Do not use density_algorithm 2 when the input
+still contains overlapped polygons. Because geometries are not merged
+in the faster algorithm, the overlapped area is counted multiple
+times. </p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idbfc38b03-dcbc-47df-a616-41e0ce9601d1">direct_FS_access INPUT</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that permits remote
+processes in a Calibre MTflex run to directly access a file system
+for direct input (input_mask or vboasis_path). </p>
+<p class="p">This keyword is supported only for extended MEBES jobdecks that
+use only OASIS placements.</p>
+<p class="p">The default behavior allows remote processes
+to access the file system through the primary process using the
+Calibre Remote Protocol. When “direct_FS_access INPUT” is specified, remote
+processes read direct input files using system calls. Note
+that “INPUT” is case sensitive.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idc9b2e84e-07e3-4598-8ee9-039b4456624e">dummy_fill {<span class="keyword ParameterName OptionalReplaceable">value</span> | auto}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that assigns density
+to the area covered by <span class="keyword ParameterName OptionalReplaceable">marker_layer</span>.
+This can be useful when the layout has large cutouts with zero density,
+as is common with kerf regions.</p>
+<p class="p">A <span class="keyword ParameterName OptionalReplaceable">marker_layer</span> is
+required when specifying dummy_fill. The layer may contain multiple polygons.</p>
+<p class="p">The dummy_fill keyword must include one of the following arguments
+that specifies the density to assign:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idaa53e4df-bdb9-4643-8201-ea8d7c2758a1"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">value</span> —
+A number from 0 to 1, inclusive.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idb0d92adc-6d67-4b48-a9e5-814a590f4c6c"><p class="p Opt">auto
+— A keyword that uses the average density of <span class="keyword ParameterName RequiredReplaceable">input_layer</span> outside
+of <span class="keyword ParameterName OptionalReplaceable">marker_layer</span>.</p>
+</li>
+</ul>
+<p class="p">Note that the dummy_fill value is added<span class="ph FontProperty emphasis"></span> to
+any density that would normally be computed during convolution for
+the region covered by the marker layer. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id24e6c1a1-5255-462f-a5ee-5ff9788d1429">file_format {<span class="keyword ParameterName OptionalDefault">text</span> | binary | png [gray | grey | color | colour]} </dt>
+<dd class="dd ArgumentDescription"><p class="p">This
+optional keyword works in tandem with the PRINT [ONLY] keyword to
+print density convolve output into a file in specified format. Currently
+it supports text, binary and PNG formats. In addition, you can specify
+PNG files to be either in gray or color encoding. The default setting
+is text. </p>
+<p class="p">It is often easier to open
+and check flare values in text format. However, the file sizes in
+text format is usually an order of magnitude (10x or higher) larger
+than the next biggest size which is binary format. </p>
+<p class="p">The binary format preserves
+the precision completely and preferred over other modes if precision
+is of utmost importance. </p>
+<p class="p">PNG files preserve most of
+the accuracy (especially in color mode), but can also be viewed in
+one of the PNG supported image viewers. PNG files also uses loss-less
+compression to reduce file sizes. PNG files in color mode can typically
+be 3 to 4x smaller than the corresponding files in binary format.
+PNG files in gray scale are typically smaller (by 2 to 3x) than
+PNG files in color mode and have less accuracy compared to color
+mode. Gray scale PNG format is preferred over other formats when
+file size is of utmost importance. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id80042a79-948e-4d9f-8e55-781876caad88">&lt;SVRFSTART&gt;</dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword indicating the beginning
+of the embedded SVRF statement group. Further information on using
+embedded SVRF can be found in the <a class="xref LinkItalic" href="../../calbr_mdp_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_mdp_useref'); return false;">Calibre Mask Data Preparation User’s and Reference Manual</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7d4a1f0d-c890-4278-ba19-c39d9fb88c8c"><span class="keyword ParameterName OptionalReplaceable">svrf_statements</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Embedded SVRF statements must
+obey the same rules as SVRF with the additional constraints:</p>
+<ul class="ul"><li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idf0e26a4c-1d55-4212-832b-461627ea40aa"><p class="p">Lines cannot be longer than
+1023 characters. (Calibre truncates any SVRF line to 1023 characters
+if you exceed this value.)</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id32e9b5a3-159d-4c34-9f3c-16bdbea42360"><p class="p">One output rule check with
+a single polygon output is allowed.</p>
+</li>
+<li class="li" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id752450d3-ac49-4c1b-82d4-6984820c5667"><p class="p">No left- or right-brackets
+are allowed.</p>
+</li>
+</ul>
+<p class="p">You must specify a single rule
+check within the embedded SVRF statement group. The output of this
+rule check is what Calibre uses as the input to the FRACTURE operation,
+and must only be polygon data, not edge or error data. Refer to
+the <a class="xref LinkItalic" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_ver_user'); return false;">Calibre Verification User’s Manual</a> for more information about rule
+checks.</p>
+<p class="p">You cannot specify left- or
+right-brackets within the embedded SVRF statement group. Therefore,
+any occurrence of brackets must be replaced as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7910f0f1-9dbd-40be-b27c-725ab51b0926" class="table" frame="void" border="0" rules="none"><colgroup><col style="width:2.112in" /><col style="width:2.112in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Left bracket ( [ )</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&lt;LB&gt; </p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">Right bracket ( ] )</p>
+</td>
+<td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><p class="p">&lt;RB&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The precision of the embedded
+SVRF statements must match that of the Calibre rule deck containing
+the FRACTURE statement.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id1b63cfb3-d8d5-4453-b1ed-8a3fcab722bd">&lt;SVRFEND&gt;</dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword indicating the end
+of the embedded SVRF statement group. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The left
+and right angle brackets (&lt; &gt;) for &lt;SVRFSTART&gt;, &lt;SVRFEND&gt;,
+&lt;LB&gt;, and &lt;RB&gt; are literal and required. SVRFSTART and SVRFEND
+must also always be capitalized.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id06a2b8fe-0305-409d-b02f-6f7a48fb29fb">svrf_layer_name {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> | {<span class="keyword ParameterName OptionalReplaceable">layer_name</span> <span class="keyword ParameterName OptionalReplaceable">oasis_layer_number</span> [<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]}…}</dt>
+<dd class="dd ArgumentDescription"><p class="p">A keyword that specifies the
+names (<span class="keyword ParameterName OptionalReplaceable">layer_name</span>),
+numbers (<span class="keyword ParameterName OptionalReplaceable">oasis_layer_number</span>),
+and optional data types (<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>)
+of the embedded SVRF layers corresponding to VB:OASIS geometry.
+For a single layer, the first form is used. For multiple layers,
+each name and corresponding layer number in the OASIS file must
+be specified.When VB:OASIS input is used with HDB input, the precisions
+of the HDB and VB:OASIS file must match. </p>
+<p class="p">The parameters enclosed in
+braces ({<span class="keyword ParameterName OptionalReplaceable">layer_name</span> |
+{<span class="keyword ParameterName OptionalReplaceable">layer_name</span> <span class="keyword ParameterName OptionalReplaceable">oasis_layer_number</span> [<span class="keyword ParameterName OptionalReplaceable">oasis_layer_datatype</span>]})
+can be repeated 0 or more times.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id353be7bb-1ba8-4b95-8461-76618e284c4d">density_precision [<span class="keyword ParameterName OptionalDefault">double</span> | float]</dt>
+<dd class="dd ArgumentDescription"><p class="p">This keyword instructs Calibre
+to internally store the density values with double or floating point
+precision, respectively. Significant memory savings will occur with
+float. The default setting is <span class="keyword ParameterName OptionalDefault">double</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id0a1af801-3dad-42bc-8ed6-621bf7083188">dose_ring <span class="keyword ParameterName OptionalReplaceable">dose</span> <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword that adds
+a ring of constant additional dose around the border of the convolution
+area given by points that are within <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> of
+the left and right edges, and <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span> of
+the top and bottom edge. The additional dose is ADDITIVE in the
+corners of the simulation, meaning <span class="keyword ParameterName OptionalReplaceable">dose</span> will
+be added twice for any points that satisfy both <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> and <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span>.
+This is useful when modeling Optical Density or Black Border Reflections.
+The default is all values of zero. The <span class="keyword ParameterName OptionalReplaceable">delta</span> values
+are in microns, and the <span class="keyword ParameterName OptionalReplaceable">dose</span> value
+is in intensity. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idd8b92098-53d0-4daa-8c28-ab79ebd3cec7">blade_shadow <span class="keyword ParameterName OptionalReplaceable">blade_x_um</span> <span class="keyword ParameterName OptionalReplaceable">blade_y_um</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional keyword that models
+the partial shadowing of the wafer by masking blades in the litho
+tool. This performs much like the dose_ring keyword, except it provides
+a linear roll-off of the dose from the value <span class="keyword ParameterName OptionalReplaceable">dose</span> in
+the dose_ring keyword to zero at the end of the blade shadowing.
+Hence, this keyword requires that dose_ring set a non-zero <span class="keyword ParameterName OptionalReplaceable">dose</span> value.
+In this manner, values within <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> &lt; <span class="keyword ParameterName OptionalReplaceable">x</span> &lt;
+( <span class="keyword ParameterName OptionalReplaceable">delta_x_um</span> + <span class="keyword ParameterName OptionalReplaceable">blade_x_um</span> )
+of the right and left borders of the region, will experience a linear
+roll-off from <span class="keyword ParameterName OptionalReplaceable">dose</span> to
+zero. Values within <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span> &lt; <span class="keyword ParameterName OptionalReplaceable">y</span> &lt;
+( <span class="keyword ParameterName OptionalReplaceable">delta_y_um</span> + <span class="keyword ParameterName OptionalReplaceable">blade_y_um</span> )
+of the top and bottom borders of the region will experience a linear
+roll-off from <span class="keyword ParameterName OptionalReplaceable">dose</span> to
+zero. This effect is additive for any points satisfying both x and
+y conditions. The <span class="keyword ParameterName OptionalReplaceable">blade</span> values
+are in microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id13a04fec-0d87-4c22-b4a4-ba2f0b56ff22">RDB [ONLY] <span class="keyword ParameterName OptionalReplaceable">filename</span> [MAG <span class="keyword ParameterName OptionalReplaceable">value</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword set that
+instructs the tool to create an ASCII results database (RDB) with
+geometry and detailed statistics, having the given filename. File
+names are case-sensitive. Subdirectories in a pathname are created
+as required.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ide40101f5-1654-426b-882d-bd7c630a4e8e"><p class="p Opt">RDB <span class="keyword ParameterName OptionalReplaceable">filename</span> —
+Specifies RDB output to the <span class="keyword ParameterName OptionalReplaceable">filename</span>.
+This database is in addition to the usual Calibre nmDRC Results
+Database and can be loaded into Calibre RVE or Pyxis Layout.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idcc735cd9-157b-41e1-a562-7e1a4c165ce6"><p class="p Opt">RDB
+ONLY <span class="keyword ParameterName OptionalReplaceable">filename</span> —
+Specifies results are sent to the RDB only. No geometric data is
+sent to the usual DRC Results Database. Any results sent to the
+RDB in this mode <span class="keyword ParameterName OptionalReplaceable">are not reported</span> in
+either the run transcript or the DRC Summary Report.</p>
+</li>
+<li class="li ArgOption" id="id16ec752a-6a15-4671-ab13-ec69199e2983__ideb8f30b6-1568-45d0-8c2e-ac8646240451"><p class="p Opt">MAG <span class="keyword ParameterName OptionalReplaceable">value</span> —
+Specifies the results sent to the RDB <span class="keyword ParameterName OptionalReplaceable">filename</span> are
+magnified by the specified <span class="keyword ParameterName OptionalReplaceable">value</span>.
+The <span class="keyword ParameterName OptionalReplaceable">value</span> must
+be a positive floating point number, which is dimensionless.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id74984552-d7c9-44ec-8fdc-b5e580893ced">globalMapFile {binary | ascii} <span class="keyword ParameterName OptionalReplaceable">file_path</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies a user-defined grid
+of points that exactly matches the grid of the density function. The
+points in the grid are added to the convolution result, similar
+to the spatialPolynomial keyword. You must specify either binary
+or ASCII file format. The ease of use of an ascii file can be weighed
+against the smaller file size and faster read in of a binary file.
+Both options are available. Within the global map file, two integers
+must be written that specify the number of points in the X-direction
+and the number of points in the Y-direction. These integers are
+followed by a matrix of floating-point numbers that specify the
+global map. The global map must be written in column major order
+(columns rasterized first).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id8d17a404-a64f-4a62-ac67-e9b21e5f63da">section_size <span class="keyword ParameterName OptionalReplaceable">sz</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Sets the desired size of a
+square section in user units. This can only be used with direct
+data entry, and overrides the default chosen settings.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><pre class="pre codeblock leveled"><code> 
+LAYOUT SYSTEM OASIS 
+LAYOUT PATH "../data/ring.oas" 
+LAYOUT PRIMARY "ring" 
+ 
+PRECISION 1000 
+DRC MAXIMUM RESULTS ALL 
+DRC RESULTS DATABASE "convolve_ring_output.oas" OASIS PSEUDO 
+DRC SUMMARY REPORT report.convolve_ring 
+ 
+LAYER orig3 3 
+ 
+LITHO FILE convolve_parameters [ 
+  SCALE 0.2 GAUSS 1 
+  SCALE 0.8 GAUSS 48 
+  ] 
+ 
+convolve_out_1 = DENSITY CONVOLVE 3 &lt; 0.3 TRUNCATE WINDOW 25 FILE convolve_parameters 
+ 
+convolve_out_2 = DENSITY CONVOLVE 3 &gt;= 0.3 &lt; 0.4 TRUNCATE WINDOW 25 FILE convolve_parameters 
+ 
+convolve_out_3 = DENSITY CONVOLVE 3 &gt;= 0.4 TRUNCATE WINDOW 25 FILE convolve_parameters 
+ 
+orig3 {COPY orig3 } DRC CHECK MAP orig3 3 
+convolve_out_1 {COPY convolve_out_1} DRC CHECK MAP convolve_out_1 301 
+convolve_out_2 {COPY convolve_out_2} DRC CHECK MAP convolve_out_2 302 
+convolve_out_3 {COPY convolve_out_3} DRC CHECK MAP convolve_out_3 303 </code></pre><div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idac02550c-a551-4975-8fad-8939002d83c1"><h2 class="title Subheading sectiontitle">Example of Gaussian
+Kernel Definitions</h2><pre class="pre codeblock leveled"><code>LITHO FILE dx [ 
+  scale 8.2 gauss 100.000000 
+  scale -6.50 gauss 1000.000000 
+  vboasis_path input.oas 
+] 
+m = density convolve prime0 &lt; 0.200 &gt;= 0.100000 wrap window 100 inside of\ 
+34695.968000 27518.852 36687.824 29565.584 file dx </code></pre></div>
+<div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id5b2504fa-5614-4fe3-a467-dd5cfb10be3a"><h2 class="title Subheading sectiontitle">Example of Fractal
+Kernel Definitions</h2><pre class="pre codeblock leveled"><code>LITHO FILE convolve_param [ 
+  scale 1 fractal 2 rmin 1 rmax 250 convolution_grid 10 partial 160 250 
+  scale 1 fractal 2 rmin 1 rmax 250 convolution_grid 10 partial 90 160 
+  scale 1 fractal 2 rmin 1 rmax 250 convolution_grid 10 partial 40 90 
+  scale 1 fractal 2 rmin 1 rmax 250 convolution_grid 10 partial 1 40 
+  upsample_interpolation linear 
+] 
+d10 = density convolve poly [1-area(poly)/area()] &lt;0.1 window 10 file \ 
+convolve_param </code></pre></div>
+<div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id584d0807-9762-4fcc-a50a-b44ed160c0f2"><h2 class="title Subheading sectiontitle">Report Example</h2><pre class="pre codeblock leveled"><code>TIME FOR CONVOLUTION PHASE: CPU TIME = 0  REAL TIME = 0 LVHEAP = 1/3/3 
+TIME FOR OUTPUT PHASE: CPU TIME = 0  REAL TIME = 0 LVHEAP = 1/3/3 
+TIME FOR EXPRESSION EVALUATION, SUBSAMPLING, CONVOLUTION, OUTPUT PHASE: 
+CPU TIME = 0  REAL TIME = 0 LVHEAP = 1/3/3 
+convolve_out_1 (HIER TYP=1 CFG=1 HGC=1 FGC=1 VHC=F VPC=F) 
+convolve_out_2 (HIER TYP=1 CFG=1 HGC=3 FGC=3 VHC=F VPC=F) 
+convolve_out_3 (HIER TYP=1 CFG=1 HGC=5 FGC=5 VHC=F VPC=F) 
+CPU TIME = 0  REAL TIME = 0  LVHEAP = 1/3/3  OPS COMPLETE = 5 OF 8 </code></pre><p class="p">The Hierarchical Geometries Count
+(HGC) value for each output layer shows you the number of geometries
+created. These geometries are merged representations of all the
+density windows that met the constraint for the given Density Convolve
+calculation.</p>
+</div>
+<div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id7abd3fcb-8382-48b0-9d4a-7d41ad23c024"><h2 class="title Subheading sectiontitle">ASCII Density Map Example</h2><p class="p">This example reads a full-mask job deck and writes a density
+map in ASCII format to the file <span class="ph filepath">print.dc00.txt</span>.
+The map contains density values for each 100 um x 100 um window.
+Because PRINT ONLY is specified, the dc00 layer does not contain
+any density data.</p>
+<pre class="pre codeblock"><code>LAYOUT SYSTEM OASIS 
+LAYOUT PATH "oas_in/dummy_1000.oas" 
+LAYOUT PRIMARY "*" 
+LAYOUT MONDO FLEX yes </code></pre><pre class="pre codeblock"><code>PRECISION 1000</code></pre><pre class="pre codeblock"><code>DRC RESULTS DATABASE "./oas_out/jobdeck_density.map.oas" OASIS PSEUDO 
+DRC MAXIMUM RESULTS ALL 
+DRC SUMMARY REPORT "./summaryrep/summary.jobdeck_density.map.txt" </code></pre><pre class="pre codeblock"><code>LAYER dummy 98 
+LAYER dataextent 99 </code></pre><pre class="pre codeblock"><code>POLYGON 0 0 152400 152400 dataextent</code></pre><pre class="pre codeblock"><code>LITHO FILE convolve_parameters [ 
+	SCALE 1.0 GAUSS .0001 CONVOLUTION_GRID 100 
+	input_mask ./ejb/map.ejb -levels 1
+]</code></pre><pre class="pre codeblock"><code>dc00 = DENSITY CONVOLVE dummy &lt;= 1.0 WINDOW 100 INSIDE OF LAYER dataextent 
+       PRINT ONLY print.dc00.txt FILE convolve_parametersdc00 { COPY dc00 } DRC CHECK MAP dc00 OASIS 2000</code></pre><p class="p">You can derive a single value for the density of the entire mask
+by averaging the density values of all windows. For this example,
+you could compute the average with the following awk script in the
+terminal window:</p>
+<pre class="pre codeblock"><code>awk '{ total += $5 }; END { print total/NR }' print.dc00.txt </code></pre></div>
+<div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__idb539e777-ceb2-4499-a766-58673567aeb4"><h2 class="title Subheading sectiontitle">Binned OASIS and ASCII Density
+Maps Example</h2><p class="p">This example is similar to “<a class="xref fm:HeadingOnly" href="#id16ec752a-6a15-4671-ab13-ec69199e2983__id7abd3fcb-8382-48b0-9d4a-7d41ad23c024">ASCII Density Map Example</a>”, but it separates
+the values into ten bins. In addition to the ASCII files containing
+exact density values per window, it writes a graphical version of
+the density map to an OASIS file (<span class="ph filepath">./oas_out/jobdeck_density.map.oas</span>). </p>
+<pre class="pre codeblock"><code>LAYOUT SYSTEM OASIS 
+LAYOUT PATH "oas_in/dummy_1000.oas" 
+LAYOUT PRIMARY "*" 
+LAYOUT MONDO FLEX yes</code></pre><pre class="pre codeblock"><code>PRECISION 1000</code></pre><pre class="pre codeblock"><code>DRC RESULTS DATABASE "./oas_out/jobdeck_density.map.oas" OASIS PSEUDO
+DRC MAXIMUM RESULTS ALL 
+DRC SUMMARY REPORT "./summaryrep/summary.jobdeck_density.map.txt"</code></pre><pre class="pre codeblock"><code>LAYER dummy 98 
+LAYER dataextent 99 </code></pre><pre class="pre codeblock"><code>POLYGON 0 0 152400 152400 dataextent</code></pre><pre class="pre codeblock"><code>LITHO FILE convolve_parameters [ 
+	SCALE 1.0 GAUSS .0001 CONVOLUTION_GRID 100 
+	input_mask ./ejb/map.ejb -levels 1 
+]</code></pre><pre class="pre codeblock"><code>dc01 = DENSITY CONVOLVE dummy       &lt;= 0.1 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc01.txt FILE convolve_parameters 
+dc02 = DENSITY CONVOLVE dummy &gt; 0.1 &lt;= 0.2 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc02.txt FILE convolve_parameters 
+dc03 = DENSITY CONVOLVE dummy &gt; 0.2 &lt;= 0.3 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc03.txt FILE convolve_parameters 
+dc04 = DENSITY CONVOLVE dummy &gt; 0.3 &lt;= 0.4 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc04.txt FILE convolve_parameters 
+dc05 = DENSITY CONVOLVE dummy &gt; 0.4 &lt;= 0.5 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc05.txt FILE convolve_parameters 
+dc06 = DENSITY CONVOLVE dummy &gt; 0.5 &lt;= 0.6 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc06.txt FILE convolve_parameters 
+dc07 = DENSITY CONVOLVE dummy &gt; 0.6 &lt;= 0.7 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc07.txt FILE convolve_parameters 
+dc08 = DENSITY CONVOLVE dummy &gt; 0.7 &lt;= 0.8 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc08.txt FILE convolve_parameters 
+dc09 = DENSITY CONVOLVE dummy &gt; 0.8 &lt;= 0.9 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc09.txt FILE convolve_parameters 
+dc10 = DENSITY CONVOLVE dummy &gt; 0.9 &lt;= 1.0 WINDOW 100 INSIDE OF LAYER 
+       dataextent PRINT print.dc10.txt FILE convolve_parameters </code></pre><pre class="pre codeblock"><code>dc01 { COPY dc01 } DRC CHECK MAP dc01 OASIS 2001 
+dc02 { COPY dc02 } DRC CHECK MAP dc02 OASIS 2002 
+dc03 { COPY dc03 } DRC CHECK MAP dc03 OASIS 2003 
+dc04 { COPY dc04 } DRC CHECK MAP dc04 OASIS 2004 
+dc05 { COPY dc05 } DRC CHECK MAP dc05 OASIS 2005 
+dc06 { COPY dc06 } DRC CHECK MAP dc06 OASIS 2006 
+dc07 { COPY dc07 } DRC CHECK MAP dc07 OASIS 2007 
+dc08 { COPY dc08 } DRC CHECK MAP dc08 OASIS 2008 
+dc09 { COPY dc09 } DRC CHECK MAP dc09 OASIS 2009 
+dc10 { COPY dc10 } DRC CHECK MAP dc10 OASIS 2010 </code></pre></div>
+<div class="section Subsection" id="id16ec752a-6a15-4671-ab13-ec69199e2983__id647a663f-45d0-46aa-a2ae-3f73bca0cc4e"><h2 class="title Subheading sectiontitle">Direct Input
+and Output</h2><p class="p">When running Density Convolve such that it reads directly from
+the job deck (for example, using the input_mask or vboasis_path
+arguments) and writes output to a text file or color map bitmap,
+the Calibre parser still requires the typical input and output statements.
+These examples show some “dummy” statements that satisfy the parser.
+These examples do not show specific Density Convolve values.</p>
+<p class="p">One common method directs the RDB output to <span class="ph filepath">/dev/null</span>.
+(Recall, Density Convolve is set up to write directly to a file
+other than the RDB.)</p>
+<pre class="pre codeblock"><code>LAYOUT PATH "empty.oas" 
+LAYOUT SYSTEM OASIS 
+LAYOUT PRIMARY "*" 
+
+DRC RESULTS DATABASE "/dev/null" ASCII 
+DRC MAXIMUM RESULTS ALL </code></pre><p class="p">Another method uses Layout Place Cell instead
+of DRC Results Database. The following lines create a file named <span class="ph filepath">./dummy.oas</span> with
+a precision of 10000. This technique is preferable if combining
+Density Convolve with other SVRF that produce output.</p>
+<pre class="pre codeblock"><code>LAYOUT PATH     "dummy.oas"
+LAYOUT PRIMARY  "*"
+LAYOUT SYSTEM   OASIS
+
+LAYOUT PLACE CELL "dummy.oas" OASIS TOP EMPTY
+PRECISION   10000</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DensityConvolveSvrfStatement_id52c2ee3c.html" title="The DENSITY CONVOLVE SVRF statement allows you to create a representation of your input layer that shows density values after applying convolution algorithms. Convolution is a mathematical procedure that produces a weighted moving average of two functions, in this case it evaluates the density value of a density window by taking into consideration the values of those windows surrounding it. Therefore the density values are “spread out” to nearby density windows.">DENSITY CONVOLVE SVRF Statement</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "DENSITY CONVOLVE"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_DensityConvolve_id16ec752a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

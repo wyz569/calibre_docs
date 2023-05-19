@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="DFM DP" />
+<meta name="abstract" content="Invokes Calibre double-patterning. Splits the target layer into two masks and generates error layers." />
+<meta name="description" content="Invokes Calibre double-patterning. Splits the target layer into two masks and generates error layers." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id96bcc792-6ad8-4032-8de9-bd905d28d060" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DFM DP</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DFM DP" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id96bcc792-6ad8-4032-8de9-bd905d28d060">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DFM DP</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><p class="p ContextMGC"><a class="xref fm:HeadingOnly" href="Contain_MultiPatterningSVRFCommands_id2565a2fa.html#id2565a2fa-34a4-4ef5-bcff-f3cd6d51901e__Contain_MultiPatterningSVRFCommands_id2565a2fa.xml#id2565a2fa-34a4-4ef5-bcff-f3cd6d51901e" title="A typical SVRF rule file containing double-, triple-, and quadruple-patterning may also contain other SVRF commands that declare input layers, perform preliminary layer manipulation, and save output layers.">Multi-Patterning SVRF Commands</a></p>
+<p class="shortdesc">Invokes Calibre double-patterning.
+Splits the target layer into two masks and generates error layers.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName RequiredReplaceable">output_layer</span> <span class="keyword ParameterName Required">=</span> <span class="keyword ParameterName Required">DFM DP</span> <br />
+<span class="keyword ParameterName RequiredReplaceable">operation_keyword</span><br />
+<span class="keyword ParameterName RequiredReplaceable">target_layer</span><br />
+{<span class="keyword ParameterName RequiredReplaceable">separator_layer</span> [‘<span class="keyword ParameterName Optional">(</span>’{<span class="keyword ParameterName OptionalDefault">OPPOSITE</span> | <span class="keyword ParameterName Optional">SAME</span>} [<span class="keyword ParameterName OptionalReplaceable">priority</span>]‘<span class="keyword ParameterName Optional">)</span>’]} <span class="keyword ParameterName Optional">...</span><br />
+{<span class="keyword ParameterName RequiredReplaceable">anchor_layer</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">ANCHOR</span> {<span class="keyword ParameterName Optional">MASK0</span> | <span class="keyword ParameterName Optional">MASK1</span>} [<span class="keyword ParameterName OptionalReplaceable">priority</span>]‘<span class="keyword ParameterName Required">)</span>’} <span class="keyword ParameterName Optional">...</span><br />
+{<span class="keyword ParameterName RequiredReplaceable">stitch_layer</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">STITCH</span><br />
+   {<span class="keyword ParameterName Optional">REQUIRED</span> | <span class="keyword ParameterName Optional">USER</span> | <span class="keyword ParameterName Optional">MINIMIZE</span> <span class="keyword ParameterName OptionalReplaceable">min_priority</span> | <span class="keyword ParameterName Optional">MAXIMIZE</span> <span class="keyword ParameterName OptionalReplaceable">max_priority</span>}‘<span class="keyword ParameterName Required">)</span>’} ...<br />
+[<span class="keyword ParameterName Optional">PREFER</span> {<span class="keyword ParameterName Optional">MASK0</span> | <span class="keyword ParameterName Optional">MASK1</span>}]<br />
+[<span class="keyword ParameterName Optional">UNFILTERED</span>]<br />
+[<span class="keyword ParameterName OptionalReplaceable">waiver_layer</span>‘(’<span class="keyword ParameterName Optional">WAIVER</span>‘)’] ...</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Performs coloring for double-patterning designs. Outputs decomposed
+mask layers, or associated error or analysis layers. Each DFM DP
+command must specify at least one layer referencing a separator,
+anchor, or stitch, and may specify any combination, in any order,
+and any number of the three layers. For important exceptions regarding
+layer derivation support see “<a class="xref fm:HeadingAndPage" href="Concept_GuidelinesForDerivingGoodSeparatorAndActionLayers_id5c46d151.html#id5c46d151-7108-4fc6-bf1c-2a97bde0a201__Concept_GuidelinesForDerivingGoodSeparatorAndActionLayers_id5c46d151.xml#id5c46d151-7108-4fc6-bf1c-2a97bde0a201" title="Separator and action layers are used to convey color relationships between one or more polygons and require careful assignment.">Guidelines for Deriving Good Separator and Action Layers</a>”.</p>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idc87313f3-70e2-435a-925d-d816a1716f71"><span class="keyword ParameterName RequiredReplaceable">output_layer</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required output layer that can be saved
+to the output database and used for final decomposed mask output
+or error visualization analysis.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ide4fb50ef-17ac-4b20-b333-e2dbabb6887c"><span class="keyword ParameterName RequiredReplaceable">operation_keyword</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required keyword directing DFM DP to perform
+its stated operation. You must specify one operation_keyword for
+each DFM DP command. All operation_keywords are classified into
+Mask Output and Error Visualization Keyword groups. The Error Visualization Keywords
+are sub-divided into two groups, those enabled or disabled by the
+specification of the <a class="xref fm:HeadingOnly" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__id94b53d63-3697-4bc8-8a55-188d39e39a81">UNFILTERED</a> keyword.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Mask Output Keywords</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id9ed17803-9670-452a-8db3-478c41e7272b"><p class="p Opt"><span class="keyword ParameterName Optional">MASK0</span> —
+A required type that outputs a polygon layer containing decomposed MASK0
+geometries.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idc1547100-8f67-4090-9c2f-2d1282417d55"><p class="p Opt"><span class="keyword ParameterName Optional">MASK1</span> —
+A required type that outputs a polygon layer containing decomposed MASK1
+geometries.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty HeadingLabel">Error Visualization Keywords</span></p>
+<p class="p">Many of the error layer keywords
+perform analysis on graphed components in the design. Components
+can be defined as chained polygons and separators that have no anchors breaking
+their connection sequence.</p>
+<p class="p">For error visualization output,
+the output type must be specified on a separate DFM DP command line.
+The error layer keywords are grouped in two categories: those enabled
+by specifying the UNFILTERED keyword, and those enabled by not specifying
+the UNFILTERED keyword.</p>
+<p class="p">All type-3 output layers (edge
+pairs) must be saved to the output database with a DFM COPY command.
+Type-1 and type-2 error layers (polygons and paths, respectively)
+can be saved with a COPY command. For a general discussion regarding
+error visualization and the implementation of these keywords, see
+the section entitled “<a class="xref fm:HeadingAndPage" href="Concept_MpVisualizationErrorResolution_id69351cdf.html#id69351cdf-04ef-4208-9c9a-6ef64304fd78__Concept_MpVisualizationErrorResolution_id69351cdf.xml#id69351cdf-04ef-4208-9c9a-6ef64304fd78" title="Visualization keywords assist the user to resolve multi-patterning-related decomposition failures. Three classes of visualization keywords are supported for various decomposition errors.">MP Visualization and Error Resolution</a>”.</p>
+<p class="p"><span class="ph FontProperty HeadingLabel">Keywords Enabled When UNFILTERED Is Not Specified</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id2d1373ed-b1af-4895-98e2-ffd412363bf3"><p class="p Opt"><span class="keyword ParameterName Optional">ALL_ANCHOR_POLYGONS</span> —
+Outputs mask shapes that show all anchor path violations in each
+component, including components that are associated with biconnected
+components (BCCs) of violation loops, whether involved in violation loops
+or not. This is a type-1 layer. This output can be used for layer
+processing and visualizing spacing constraints. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id068e76f0-fdbb-4750-9cfb-3fcbd3fbe525"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/all_anchor_with_direct_polygons.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id5c127cc5-db06-49ec-9e05-670df62f55b4"><p class="p Opt"><span class="keyword ParameterName Optional">ALL_ANCHOR_SEPARATORS</span> —
+Outputs all separators in every path between violated anchors, including
+all separators in all BCCs that these paths may intersect. This
+is a type-3 layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ide9dac7d8-28ee-4e35-a155-91e67b9d8da6"><div class="p Opt"><span class="keyword ParameterName Optional">ALL_LOOP_POLYGONS</span> —
+Outputs all mask shapes involved in all biconnected components (BCCs)
+that contain an odd cycle. This is a type-1 layer. An example output:<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/all_violation_loop_polygons.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id301e2d4e-25bc-4eb3-b4e9-4361bb5001a9"><div class="p Opt"><span class="keyword ParameterName Optional">ALL_LOOP_SEPARATORS</span> —
+Outputs all separators involved in all biconnected components (BCCs)
+that contain an odd cycle. This is a type-3 layer. An example output:<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/all_violation_loop_sep.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id01571d85-9dd0-4b77-9a4b-1120e9eb6720"><p class="p Opt"><span class="keyword ParameterName Optional">ANCHOR_SELF_CONFLICT_POLYGONS</span> —
+Outputs a single target shape interacting with multiple MASK0 and
+MASK1 anchors that have no valid stitches between the anchors. This
+is a type-1 layer. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id775dcda1-184d-4be4-82e4-bf8092e57cb5"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/anchor_self_conflict.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id6a8db2cb-829e-4b21-8711-4b678cdc7425"><p class="p Opt"><span class="keyword ParameterName Optional">CONFLICT</span> —
+Outputs a layer containing all target geometries in violation with
+any visualization error. The layer is formed by these violations
+and expands from these components to all polygons with connected
+separators. For errors stemming from a violation loop, all polygons
+in the biconnected component containing the loop are included. For
+errors stemming from anchor paths, all polygons in all biconnected components
+that connect two or more anchors in conflict are included. It stops expanding
+at anchors. This is a type-1 layer. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id8132f7c9-1052-4ff5-82af-32e3a1b238fd"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/conflict.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__iddc0c97e6-5e2f-466b-80e3-3d07463494ec"><p class="p Opt"><span class="keyword ParameterName Optional">CONFLICT_MARKER</span> —
+Outputs a layer containing a single shape covering the design extent
+if any conflict was found during DFM DP processing. This provides
+an efficient means of determining at a glance whether the design
+contains errors or not. This is a type-1 layer. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id8d92eade-bd95-4fea-ad99-7db6ab829ca8"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/conflict_marker.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id532b4eeb-81e4-4753-9d2c-40fc0d3db928"><p class="p Opt">DIRECT_ANCHOR_CONFLICT_SEPARATORS
+— Outputs required separators that cause direct anchor violations.
+A direct anchor violation results from two causes:</p>
+<ul class="ul"><li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idee0be521-2bb2-4f7f-9257-f3046e322453"><p class="p">A separator
+marked SAME found between two polygons that are anchored to different
+masks.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id7ba9959f-1aa8-46d7-886a-ca6e1613eb5c"><p class="p">A separator
+marked OPPOSITE found between two polygons that are anchored to
+the same mask.</p>
+</li>
+</ul>
+<p class="p">If the separator also causes a self-conflict (a single polygon
+connecting both ends of an opposite separator), then it is reported
+as a self-conflict violation and not a direct anchor violation.
+This is a type-3 layer.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id8fb62c7a-e068-4d28-98cf-1a5c2110a249"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/direct_anchor_conflict.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id915098fc-9462-4b1f-9656-4df956dd6253"><p class="p Opt"><span class="keyword ParameterName Optional">INVALID_ANCHOR0, INVALID_ANCHOR1</span> —
+Outputs a layer containing all MASK0 or MASK1 anchors not interacting
+with any target shape, or MASK1 anchors when MASK0 and MASK1 anchors
+are mutually interacting with the same target shapes (MASK0 anchors
+are arbitrarily accepted). MASK0 and MASK1 anchors that touch or
+overlap with stitches are also invalid. This is a type-1 layer.
+An example output of both error layers:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ide8ed7813-c4f4-4edb-8471-731a21da061d"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/invalid_anchors.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id6c73916c-f4eb-4a64-8d46-967f41a1d1c5"><p class="p Opt"><span class="keyword ParameterName Optional">INVALID_SEPARATORS</span> —
+Outputs all invalid separators from required or optional input separator
+layers. Each edge of a valid separator edge pair must touch exactly one
+target shape. See <a class="xref fm:FigureAndPage" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__idc1e140a4-887d-49d2-87b7-72709a668d67">Figure 4</a> for more information.
+This is a type-3 layer. Invalid separators include:</p>
+<ul class="ul"><li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ide9ff9f1e-2d7e-4156-8382-48bce37996d5"><p class="p">Separators
+not interacting with any target shapes.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__iddeb70826-02a8-405c-90c5-595a493badcd"><p class="p">Separators
+interacting with more than two target shapes, or have an edge that interacts
+with more than one target shape.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id275ac435-085f-45b8-af6c-f93fff959584"><p class="p">Separators
+having one edge not interacting with a target shape.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id234d6b60-2d0a-45ef-ba08-851959fe1ec6"><p class="p">Separators
+having one or more edges not interacting with any target shapes
+after stitches are removed.</p>
+</li>
+</ul>
+<p class="p">Example separators include:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id053e5457-26d6-4ff1-9d2f-3113c76ecd59"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/invalid_separators.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idd341c366-1d10-46b5-befb-96a4355afa1c"><p class="p Opt"><span class="keyword ParameterName Optional">INVALID_STITCHES</span> —
+Outputs all invalid stitches (either required or optional) from any
+stitch layer. Each stitch must cut a target shape in exactly two
+polygons (where the stitch touches only two shapes). For examples
+of good and bad stitches, see <a class="xref fm:FigureAndPage" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__id090eb130-24fc-491b-ad8d-7b7fde878a43">Figure 6</a>. This is a type-1
+layer. Invalid stitches may be categorized as:</p>
+<ul class="ul"><li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id6758517f-9488-4d73-a800-a0a6d6df27a6"><p class="p">Stitches
+that touch other stitches from different stitch layers.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id0381ca1c-3aba-4a1a-820c-689662b63a14"><p class="p">Stitches specified
+as REQUIRED that touch separators with a priority of 0 or lower.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__iddc82e630-5d00-4ad4-98e9-005b0fda51af"><p class="p">Stitches that
+touch anchors.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id44956d2f-5042-4f37-864b-0f8e1d69fc91"><p class="p">Stitches that
+extend outside the target layer or are entirely outside the target layer.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idceee301e-8e5e-4deb-83a1-424f6db180ff"><p class="p">Stitches not
+touching or overlapping with at least two target shapes (they fail
+to split a target shape into two parts).</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id948b1c9d-b989-43e0-9307-a1a250b01728"><p class="p">Stitches that
+split a target polygon into two pieces and touch one or more separators.</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id43dc50fc-7682-449e-a612-74074d545873"><p class="p">REQUIRED or
+MAXIMIZE stitches that touch or overlap with more target shapes
+than there are colors (target shapes are counted after stitches
+are removed from them).</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id3be17455-e572-437b-a1a6-921d732d15ac"><p class="p Opt"><span class="keyword ParameterName Optional">RING</span> —
+Outputs a ring polygon similar to the SHORTEST_LOOP_LINE error layer, but
+adds rings for self-conflict violations and includes anchors for
+more extensive analysis. Ring detection keeps a complete ring intact
+within the lowest level of the design hierarchy. This is a type-1
+layer. The RING output is also valid when UNFILTERED is specified.</p>
+<div class="note note" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id451db7c0-3f28-40d1-954f-a67bf6fcd6e2"><span class="notetitle">Note:</span> <p class="p">When very
+large rings are found, they are ordered and then generated using
+path tracing to ensure that at least one ring is output. A warning
+message is generated before this process is initiated, because the
+computations may be time intensive.</p>
+</div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id39cc91a1-2ac6-4581-a592-a765a943488a"><div class="p Opt"><span class="keyword ParameterName Optional">SELF_CONFLICT_POLYGONS</span> —
+Outputs a layer containing the target shapes involved with self-conflict
+separators as determined by SELF_CONFLICT_SEPARATORS. This is a
+type-1 layer. Self-conflict polygons take various forms:<br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/self_conflict_polygons.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idb3b80c37-41b1-4742-8196-3042f884e783"><p class="p Opt"><span class="keyword ParameterName Optional">SELF_CONFLICT_SEPARATORS</span> —
+Outputs all required separators that form a self-conflict. This
+is a type-3 layer. There are two types of self-conflicts:</p>
+<ul class="ul"><li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id3480dca6-3169-4071-919f-96cf5be08ecf"><p class="p">An OPPOSITE
+separator that touches the same polygon on two sides.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idc50e70d3-00c0-44c3-b499-045eac08bfae"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Self-Conflict
+With Opposite Separator Edge Pairs</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/self_conflict.png" /></div><br /></div>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idd11e9223-a086-4159-8099-015c7704c55d"><p class="p">An OPPOSITE
+separator and a SAME separator that touch the same two polygons.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idab62ab92-105d-43b4-b428-3b9d1ea3980b"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Self-Conflict
+With Opposite and Same Separator Edges</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/self_conflict_same_opposite.png" /></div><br /></div>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idb173efc3-35ba-49c5-83fa-fda5f4178072"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_ANCHOR_LINE</span> —
+Paths between two anchors that form a violation. The length of these
+paths is minimized. Paths running through BCCs that have violation loops
+are not included in this error layer. This is a type-1 layer. Shortest
+anchor lines highlight portions of any given short path:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id9d094489-9ca8-4f5a-9f32-e60f125a8b97"><span class="figcap"><span class="fig--title-label">Figure 3. </span>SHORTEST_ANCHOR_LINE</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/shortest_anchor_path.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id3356775d-f1cf-4b42-a0dd-97871ec0b25b"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_ANCHOR_POLYGONS</span> —
+Outputs mask shapes that are in the shortest anchor path. This is
+a type-1 layer. The SHORTEST_ANCHOR_POLYGONS error output contains
+a chain of one or more polygons connecting two or more anchored shapes:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id825439fc-52d0-428b-9f91-053305117787"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/shortest_anchor_with_direct_polygons.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id083355c3-d67b-48d3-bbc8-fb88e8fdae5c"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_ANCHOR_SEPARATORS</span> —
+Outputs edges representing the separators in the shortest anchor
+path (a type-3 layer).</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id35d11235-cc90-448e-9147-c741c6634d75"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_LOOP_LINE</span> —
+Outputs an error visualization layer represented as a ring polygon.
+The shapes which SHORTEST_LOOP_LINEs touch represent those polygons
+involved in the odd-cycle conflict. Where SHORTEST_LOOP_LINE rings appear
+extra wide and overlap involved shapes indicate those polygons that,
+after modification, would result in resolution of the odd-cycle
+conflict. Increasing the space between shapes at these locations
+within the SHORTEST_LOOP_LINE allows the adjacent polygons to be
+on the same mask, which removes the odd cycle. See <a class="xref fm:FigureAndPage" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__idd4f1d0ae-3172-46af-aed6-9d914c0bd05b">Figure 8</a> for details on
+SHORTEST_LOOP_LINE exclusion areas. This illustration shows two
+simple SHORTEST_LOOP_LINEs, one resulting from a self-conflict error
+and one from an odd-cycle error. The self-conflict SHORTEST_LOOP_LINE
+has a normal ring width. The odd-cycle conflict SHORTEST_LOOP_LINE
+is wider where it overlaps a shape, indicating conflict resolution
+if it were to be modified:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id9d6e3126-4fb6-4836-82a9-591fe29635c7"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/bold_ring.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id2c7a7cec-da7e-4f6a-ba99-a024942fb39f"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_LOOP_LINE_UNMERGED</span> —
+Outputs a layer comprising unmerged rings from different loops.
+DFM DP may be used to output unmerged loops as results database
+(RDB) format. Some loops output by SHORTEST_LOOP_LINE_UNMERGED may
+be disjointed; some may be detected in groups and reported as a
+single shape. </p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id2812776c-e080-43c7-9e27-98881d917e4d"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_LOOP_POLYGONS</span> —
+Outputs a layer comprising of the mask shapes involved in an odd-cycle
+conflict. </p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id41865c26-17b0-4eec-83a5-55d11d023cba"><p class="p Opt"><span class="keyword ParameterName Optional">SHORTEST_LOOP_SEPARATORS</span> —
+Outputs a layer comprising of the edge pair separators involved
+in an odd-cycle conflict. </p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id4d610cf1-6754-49d0-b337-d8ae9d417df2"><p class="p Opt"><span class="keyword ParameterName Optional">VIOLATED_OPTIONAL_SEPARATORS</span> —
+Outputs a layer containing optional violated separators (those with
+a priority index greater than 0, a lower priority). Separators specifying
+the OPPOSITE keyword (see page <a class="xref fm:PageNumberOnly" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__id3eb5e8f7-b405-4be0-8830-0c0d9f1fe59f">separator_layer [‘(’{OPPOSITE | SAME} [priority]‘)’]</a>) are considered
+violated if they are formed between two polygons assigned to the
+same mask, or if both ends of the separator touch the same polygon.
+Separators specifying the SAME keyword are considered violated if
+they are formed between two polygons with different mask assignments.
+Optional separators formed by anchor- and self-conflicts are included
+in this output. This output is a type-3 layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ide617278c-bd30-4dc4-9954-285953845b2e"><p class="p Opt"><span class="keyword ParameterName Optional">VIOLATED_OPTIONAL_STITCHES</span> —
+Outputs a layer containing optional violated MINIMIZE and MAXIMIZE
+stitches (those with a priority index greater than 0, a lower priority).
+A MINIMIZE stitch is considered violated when used and a MAXIMIZE
+stitch is considered violated when not used. This output is a type-1 layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idfe714ebd-e86e-4d9f-8f87-a8d565e271b7"><p class="p Opt"><span class="keyword ParameterName Optional">VIOLATED_SEPARATORS</span> —
+Outputs a layer containing violated required separators (those with
+a priority index equal to 0, the highest priority). Errors generated
+by SELF_CONFLICT_SEPARATORS are included in this output. Errors
+generated by DIRECT_ANCHOR_CONFLICT_SEPARATORS are not included
+in this output. This output is a type-3 layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id33d07bf9-adf0-4a37-8387-2bfc56c77f7b"><p class="p Opt"><span class="keyword ParameterName Optional">VIOLATED_STITCHES</span> —
+Outputs the polygons of stitches specified with the REQUIRED argument
+of the stitch_layer keyword that are in violation. This output is a
+type-1 layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idab2b4c0f-41e4-4e4a-9967-c001909804e9"><p class="p Opt"><span class="keyword ParameterName Optional">WARNING_LOOP_LINE</span> —
+Outputs lines (visual rings) that comprise even cycles, containing
+opposite separators joining SHORTEST_LOOP-type error layers. This
+is a type-1 layer.</p>
+</li>
+</ul>
+<p class="p"><span class="ph FontProperty HeadingLabel">Keywords Enabled When UNFILTERED Is Specified</span></p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__iddf8966d6-f921-4adc-aadb-cb4490f2c503"><p class="p Opt"><span class="keyword ParameterName Optional">ANCHOR_CONFLICT</span> —
+Outputs all shapes that are a subset of ALL_ANCHOR_POLYGONS and
+target shapes involved in direct anchor conflicts. This is a type-1
+layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id8f70cbdc-4f40-4af2-b55b-6ea3ed3c9be3"><p class="p Opt">ANCHOR_PATH
+— Outputs thin polygon markers associated with conflicts between anchored
+target shapes. Each marker floats near or touches one side of all
+target shapes and separators associated with a color alternation
+conflict between two anchored target shapes. The output appears
+as a path similar to SHORTEST_ANCHOR_LINE, but includes direct anchor-to-anchor
+conflicts, and analyzes biconnected components that contain rings.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idc2c5178c-f475-462b-ae6f-53f0c0a474cb"><p class="p Opt"><span class="keyword ParameterName Optional">ANCHOR_SELF_CONFLICT</span> —
+Outputs all target shapes interacting with multiple MASK0 and MASK1
+anchors that have no valid stitches between the anchors. This is a
+type-1 layer. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id75e1e7ac-c0f8-451f-a28d-ab2e2c6ad8e2"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/anchor_self_conflict.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ida5b5291c-3b17-4d74-95a1-c67222e1eeb6"><p class="p Opt">ANCHOR_TREE
+— Outputs polygons that are found in any shortest anchor path error, including
+single-separator direct anchor violations.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idf94da51c-d7bc-4cea-ae55-90329139c138"><p class="p Opt"><span class="keyword ParameterName Optional">CONFLICT</span> —
+Outputs a layer containing all target geometries in violation with
+any visualization error. The layer is formed by these violations
+and expands from these components to all polygons with connected
+separators. For errors stemming from a violation loop, all polygons
+in the biconnected component containing the loop are included. For
+errors stemming from anchor paths, all polygons in all biconnected components
+that connect two or more anchors in conflict are included. It stops expanding
+at anchors. This is a type-1 layer. An example output:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id2ed85ec6-f46b-4962-8568-9692bee329ab"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/conflict.png" /></div><br /></div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id14f852e7-5f83-4f00-a33a-6e4a372feafa"><p class="p Opt"><span class="keyword ParameterName Optional">LOOP</span> —
+Outputs a layer with all polygons found within the set of shortest
+loops, and polygons having self-conflict violations. This is a type-1
+layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id09f3df6a-65e8-41e2-86c4-8d7222f02187"><p class="p Opt"><span class="keyword ParameterName Optional">RING</span> —
+Outputs a ring polygon similar to the SHORTEST_LOOP_LINE error layer, but
+adds rings for self-conflict violations and includes anchors for
+more extensive analysis. Ring detection keeps a complete ring intact
+within the lowest level of the design hierarchy. This is a type-1
+layer. The RING output is also valid when UNFILTERED is not specified.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When very large rings are found, they are ordered and then
+generated using path tracing to ensure that at least one ring is
+output. A warning message is generated before this process is initiated,
+because the computations may be time intensive.</p>
+</div>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id6dd40475-3335-463d-aa25-c95608140119"><p class="p Opt"><span class="keyword ParameterName Optional">SELF_CONFLICT</span> —
+Outputs a layer containing the target shapes involved with self-conflict
+separators as determined by SELF_CONFLICT_SEPARATORS. This is a type-1
+layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id62ed7390-d40f-4561-a1d8-ad6eecb36370"><p class="p Opt"><span class="keyword ParameterName Optional">WARNING</span> —
+Outputs a layer containing even cycles (non-violating loops in which only
+opposite separators exist) that share a separator contained in a SHORTEST_LOOP_LINE.
+This is a type‑1 layer.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id52105a1f-b6bc-45e7-a3e8-8a88ec7ef14b"><span class="keyword ParameterName RequiredReplaceable">target_layer</span></dt>
+<dd class="dd ArgumentDescription" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__ida151dfb8-afe2-4eaf-9125-29fae2589e48"><p class="p">A required
+argument specifying the layer to be decomposed. The target_layer
+must be a polygon layer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id3eb5e8f7-b405-4be0-8830-0c0d9f1fe59f"><span class="keyword ParameterName RequiredReplaceable">separator_layer</span> [‘<span class="keyword ParameterName Optional">(</span>’{<span class="keyword ParameterName OptionalDefault">OPPOSITE</span> | <span class="keyword ParameterName Optional">SAME</span>} [<span class="keyword ParameterName OptionalReplaceable">priority</span>]‘<span class="keyword ParameterName Optional">)</span>’]</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+a separator_layer. If no separator_layer is specified, you must
+specify an anchor_layer or stitch_layer. The separator_layer must
+be an edge pair (layer type-3). One or more separator layers may
+be specified. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id59c2b3ec-6b69-421c-bea3-a57bcfbc30dd"><p class="p Opt"><span class="keyword ParameterName OptionalDefault">OPPOSITE</span></p>
+<p class="p">Indicates polygons associated with the separator must be assigned
+to different mask layers.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id0d918ed6-bd05-4c42-84d8-ede0777b2be7"><p class="p Opt"><span class="keyword ParameterName Optional">SAME</span></p>
+<p class="p">Indicates polygons associated with the separator can both be
+assigned to the same mask layer.</p>
+</li>
+<li class="li ArgOption" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idda17b1db-7f56-4bdb-9436-1dde7dfbc79a"><p class="p Opt">[<span class="keyword ParameterName OptionalReplaceable">priority</span>]</p>
+<p class="p">Separators can be specified
+as either required or optional during processing through the use
+of priority. The higher the priority value, the lower the priority
+of the separator. The priority value can be either 0 or a positive
+number. A separator of priority 0 enforces a required separator
+of highest priority. A separator specified with a priority value
+of 1 or greater is considered optional. The default priority value
+is 0.</p>
+</li>
+</ul>
+<p class="p">This SVRF code provides typical
+separator derivation, and <a class="xref fm:Figure" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__idc1e140a4-887d-49d2-87b7-72709a668d67">Figure 4</a> shows correctly formed
+separators.</p>
+<pre class="pre codeblock"><code>m1_tip = CONVEX EDGE m1 ANGLE1 == 90 LENGTH1 &gt;= 0.03 
+			ANGLE2 == 90 LENGTH2 &gt;= 0.03 WITH LENGTH &lt;= 0.06
+m1_side = m1 NOT COIN EDGE m1_tip</code></pre><pre class="pre codeblock"><code>m1_S2S = EXT m1_side &lt; 0.06 OPPOSITE PARALLEL ONLY PROJ &gt; 0
+m1_T2S = EXT m1_tip m1_side &lt; 0.065 PARALLEL ONLY
+m1_T2T = EXT m1_tip &lt; 0.085 PARALLEL ONLY</code></pre><p class="p">The input separator layer must consist
+of edge pairs only (layer type-3) and each separator of the edge
+pair must touch exactly one drawn shape. <a class="xref fm:Figure" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__idc1e140a4-887d-49d2-87b7-72709a668d67">Figure 4</a> demonstrates both edge- and
+tie-based separators. Combination polygon-separator error keywords
+always output tie‑based separators.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idc1e140a4-887d-49d2-87b7-72709a668d67"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Correct DFM DP Separators</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:100" src="../graphics/tp_qp_reference3.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id9fc4b089-f46e-40d5-8b17-a99c7f29e3de"><span class="keyword ParameterName RequiredReplaceable">anchor_layer</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">ANCHOR</span> {<span class="keyword ParameterName Optional">MASK0</span> | <span class="keyword ParameterName Optional">MASK1</span>} [<span class="keyword ParameterName OptionalReplaceable">priority</span>]‘<span class="keyword ParameterName Required">)</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+one or more anchor_layers. If no anchor_layer is specified, you
+must specify a separator_layer or stitch_layer. Anchor layers must
+comprise either polygons or edges (layer types 1 or 2, respectively).
+Any number of anchor layers may be specified. Optionally, a priority
+may be assigned to the anchor. The value specified must be 1 or
+higher. 0 is the default value. The higher the priority value, the
+lower the priority of the anchor.</p>
+<p class="p">Anchor layers are identified
+by the keyword ANCHOR specified inside the parentheses. If no parentheses
+are specified, the argument is interpreted as a separator layer.
+Mask values for anchor layer are identified by the keywords MASK0
+or MASK1 specified within the parentheses.</p>
+<p class="p"><a class="xref fm:Figure" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__id682ab378-7e77-4d85-a04b-81b39c1a4631">Figure 5</a> demonstrates correct and
+incorrect anchors.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id682ab378-7e77-4d85-a04b-81b39c1a4631"><span class="figcap"><span class="fig--title-label">Figure 5. </span>Good and
+Bad Anchors</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/good_anchors.png" /></div><br /><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/bad_anchors.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idb842c3fd-023d-47a9-8aa2-1d57c99d7a00"><span class="keyword ParameterName RequiredReplaceable">stitch_layer</span> ‘<span class="keyword ParameterName Required">(</span>’<span class="keyword ParameterName Required">STITCH</span> {<span class="keyword ParameterName Optional">REQUIRED</span> | <span class="keyword ParameterName Optional">USER</span> | <span class="keyword ParameterName Optional">MINIMIZE</span> <span class="keyword ParameterName OptionalReplaceable">priority</span> | <span class="keyword ParameterName Optional">MAXIMIZE</span> <span class="keyword ParameterName OptionalReplaceable">priority</span>}‘<span class="keyword ParameterName Required">)</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+one or more stitch_layers. If no stitch_layer is specified, you
+must specify a separator_layer or anchor_layer. Each of the stitch
+layers specified must be a polygon (layer type-1). The entirety
+of the stitch must be contained within the target shape and coincident
+with any target shape edge. A stitch is processed to result like
+a separator; after the stitch is subtracted from the drawn layer,
+the remaining space between target shapes determines whether the
+stitch is valid. For more information regarding invalid stitch criteria,
+see the error layer section entitled INVALID_STITCHES.</p>
+<p class="p">The REQUIRED and MAXIMIZE arguments
+indicate opposite-mask separators. The MAXIMIZE argument indicates
+stitches that are required or optional based on the value of its
+priority. Specifying MAXIMIZE priority as 0 is equivalent to specifying
+the REQUIRED argument. The MINIMIZE argument indicates optional
+stitches (those with potential placement on shapes without same-mask
+separators), and its priority must be specified as greater than
+0.</p>
+<p class="p">No processing preferences exist
+between stitches of the same priority. If two stitches with the
+same priority are mutually exclusive, one of these two stitches
+will be arbitrarily chosen. Stitches specified as USER stitches
+do not generate any separators. Separators for USER stitches should
+be specified using the separator_layer.</p>
+<p class="p"><a class="xref fm:Figure" href="#id96bcc792-6ad8-4032-8de9-bd905d28d060__id090eb130-24fc-491b-ad8d-7b7fde878a43">Figure 6</a> demonstrates differences
+between correct and incorrectly drawn stitches.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id090eb130-24fc-491b-ad8d-7b7fde878a43"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Good and
+Bad User Stitches</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/good_user_stitches.png" /></div><br /><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/bad_user_stitches.png" /></div><br /></div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id1399f508-5e01-493c-95a4-a66d486e916d"><span class="keyword ParameterName Optional">PREFER</span> {<span class="keyword ParameterName Optional">MASK0</span> | <span class="keyword ParameterName Optional">MASK1</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that assigns a majority
+of the polygons in a component after considering all priorities
+(required and optional) to the preferred mask. All isolated polygons
+are also placed on the preferred mask.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id94b53d63-3697-4bc8-8a55-188d39e39a81"><span class="keyword ParameterName Optional">UNFILTERED</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that enables or disables
+output keywords supported by DFM DP. Specifying UNFILTERED allows
+use of output keywords that are compatible with NMDPC, and those
+including more types of violations combined within a smaller set
+of error layers. Not specifying UNFILTERED enables output keywords
+that provide better separation of errors by type to provide for
+easier debugging.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The set of layers output by specifying UNFILTERED are all
+generated concurrently; the separate set of layers output by not
+specifying UNFILTERED are also all generated concurrently. However,
+the two sets are not generated concurrently with each other, and may
+generate different MASK layers as well as inconsistent error layers.
+For this reason, Siemens EDA recommends against mixing output keywords
+from different sets.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__iddd402f67-83c4-47e1-bd0c-9d86b81e6fbc"><span class="keyword ParameterName OptionalReplaceable">waiver_layer</span>‘(’<span class="keyword ParameterName Optional">WAIVER</span>‘)’ <span class="keyword ParameterName Optional">...</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optionally specifies a layer masking areas
+of the input layer within which rings are waived during error processing
+for DFM DP. Any number of waiver_layers may be specified.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id2df29a34-036c-4a98-96f6-2fa37259ff35"><h2 class="title Subheading sectiontitle">Example
+1 — Mask Output</h2><pre class="pre codeblock"><code>CA_Mask0_Out = DFM DP MASK0 CA_Uncolored
+	SEP.REQ SEP.OPT(SAME) CA_Mask0(anchor mask0) CA_Mask1(anchor mask1)</code></pre><pre class="pre codeblock"><code>CA_Mask1_Out = DFM DP MASK1 CA_Uncolored 
+	SEP.REQ SEP.OPT(SAME) CA_Mask0(anchor mask0) CA_Mask1(anchor mask1)</code></pre><pre class="pre codeblock"><code>CA_Mask0_Out {COPY CA_Mask0_Out} DRC CHECK MAP CA_Mask0_Out 15 
+CA_Mask1_Out {COPY CA_Mask1_Out} DRC CHECK MAP CA_Mask1_Out 16 </code></pre></div>
+<div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id4a302a90-21b7-4abe-97f4-35a9b017b665"><h2 class="title Subheading sectiontitle">Example
+2 — Modifiers for Separators</h2><pre class="pre codeblock"><code>// If separator type is not specified, default is opposite 0
+CA_Mask0_Out = DFM DP MASK0 CA_Uncolored
+	SEP.REQ(opposite 0) SEP.OPT(opposite 0) 
+	CA_Mask0(anchor mask0) CA_Mask1(anchor mask1) </code></pre><pre class="pre codeblock"><code>CA_Mask1_Out = DFM DP MASK1 CA_Uncolored
+	SEP.REQ(opposite 0) SEP.OPT(opposite 0)
+	CA_Mask0(anchor mask0) CA_Mask1(anchor mask1)</code></pre></div>
+<div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id6ec44ab2-247a-480f-9a1e-2e4739177d16"><h2 class="title Subheading sectiontitle">Example
+3 — Debugging and Analysis Layer Output</h2><pre class="pre codeblock"><code>// Anchor self-conflict output (Type-1)
+anchor_self_conflict = DFM DP ANCHOR_SELF_CONFLICT M1
+	M1_separator(OPPOSITE 0) 
+	M1_anchor(ANCHOR MASK0)</code></pre><pre class="pre codeblock"><code>// Conflict output (Type-1)
+conflict = DFM DP CONFLICT M1
+	M1_separator(OPPOSITE 0)
+	M1_anchor(ANCHOR MASK0)</code></pre><pre class="pre codeblock"><code>// Error output (Type-3)
+self_conflict = DFM DP SELF_CONFLICT M1
+	M1_separator(OPPOSITE 0)
+	M1_anchor(ANCHOR MASK0)</code></pre><pre class="pre codeblock"><code>direct_anchor_conflict = DFM DP DIRECT_ANCHOR_CONFLICT M1
+	M1_separator(OPPOSITE 0)
+	M1_anchor(ANCHOR MASK0)</code></pre></div>
+<div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id87a28280-a62a-44ff-b8eb-aa7d0a89647c"><h2 class="title Subheading sectiontitle">Example 4 — Self-Conflicts</h2><p class="p">Results and derivation of the SELF_CONFLICT
+error layer:</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idd27299e8-8a4f-44d2-9659-0e38048d3999"><span class="figcap"><span class="fig--title-label">Figure 7. </span>SELF_CONFLICT
+Error</span><br /><div class="imagecenter"><img class="image imagecenter" height="218" src="../graphics/reference04a.png" width="456" /></div><br /></div>
+</div>
+<div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id5ca49edc-3ea1-4347-ab32-867d392967cd"><h2 class="title Subheading sectiontitle">Example 5 — Migrating
+from RET NMDPC to DFM DP</h2><p class="p">The following example shows the
+difference between RET NMDPC and DFM DP syntaxes and the simplification
+of DFM DP, in part because of no LITHO FILE block requirement:</p>
+<h2 class="title Subheading sectiontitle">RET NMDPC</h2><pre class="pre codeblock"><code>LITHO FILE action_file [
+	action action_layer 0 opposite
+	action optional_action_layer 1 same
+	anchor anchor_layer 0 mask0
+]
+mask0 = RET NMDPC action_layer target_layer optional_action_layer
+	anchor_layer FILE action_file MAP MASK0</code></pre><h2 class="title Subheading sectiontitle">DFM DP</h2><pre class="pre codeblock"><code>mask0 = DFM DP MASK0 target_layer action_layer(OPPOSITE 0)
+	optional_action_layer(SAME 1) anchor_layer(ANCHOR MASK0)</code></pre></div>
+<p class="p">In addition, the following commands are rendered superfluous
+with DFM DP and are not supported:</p>
+<ul class="ul"><li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idd9bfaa3f-e230-4559-ba56-a844dce5aa2e"><p class="p">collector</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idebf28815-9246-4935-84f9-4ac6eb013b41"><p class="p">resolve</p>
+</li>
+<li class="li" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id34560315-82f8-4f6c-b597-5a7bbd1315c9"><p class="p">seed</p>
+</li>
+</ul>
+<div class="section Subsection" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__id62b11d1b-de1a-4635-a015-e2843fc7eb28"><h2 class="title Subheading sectiontitle">Example
+6</h2><p class="p">This illustration shows that SHORTEST_LOOP_LINE errors are output
+where odd cycles are formed.</p>
+<div class="fig fignone" id="id96bcc792-6ad8-4032-8de9-bd905d28d060__idd4f1d0ae-3172-46af-aed6-9d914c0bd05b"><span class="figcap"><span class="fig--title-label">Figure 8. </span>SHORTEST_LOOP_LINE
+Output</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:132" src="../graphics/reference02a.png" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MultiPatterningSVRFCommands_id2565a2fa.html" title="A typical SVRF rule file containing double-, triple-, and quadruple-patterning may also contain other SVRF commands that declare input layers, perform preliminary layer manipulation, and save output layers.">Multi-Patterning SVRF Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "DFM DP"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_DfmDp_id238a34ab.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

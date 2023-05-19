@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="A Simple OPCSBAR Implementation" />
+<meta name="abstract" content="Use this example to begin development of your own OPCSBAR implementation." />
+<meta name="description" content="Use this example to begin development of your own OPCSBAR implementation." />
+<meta name="prodname" content="Calibre® Opcsbar™ User's And Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="Mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-08-28" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_sbar_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 01, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® OPCsbar™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id579d5825-fff5-4b2a-aedc-bd460942ded3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>A Simple OPCSBAR Implementation</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="A Simple OPCSBAR Implementation" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="id579d5825-fff5-4b2a-aedc-bd460942ded3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">A Simple
+OPCSBAR Implementation</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">Use this
+example to begin development of your own OPCSBAR implementation.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id579d5825-fff5-4b2a-aedc-bd460942ded3__id8c6afe93-370b-47de-8c57-f3c46bee2932"><pre class="pre codeblock leveled"><code>//*********************************************************************
+//*************************** Input Section ***************************
+//*********************************************************************
+
+LAYOUT SYSTEM GDSII
+LAYOUT PATH "myGds.gds"
+//           ^-----------------------Write a GDS file name here
+LAYOUT PRIMARY "top"
+//              ^--------------------Write its Top Cell name
+FLAG SKEW YES
+LAYOUT ERROR ON INPUT YES
+PRECISION 1000
+//        ^--------- Write the database precision (1/grid)
+RESOLUTION 1
+LAYER feature  1
+//             ^------Select a layer (i.e. 1, 2, etc)
+//                     to receive scattering bars </code></pre><pre class="pre codeblock"><code>//*********************************************************************
+//*************************** Output Section **************************
+//*********************************************************************
+
+DRC MAXIMUM RESULTS ALL
+DRC RESULTS DATABASE "myGds_withSB.gds" GDSII
+//                    ^---------------Write an Output GDS
+DRC SUMMARY REPORT "/dev/null"
+DRC MAXIMUM VERTEX 199
+DRC KEEP EMPTY YES
+DRC CHECK MAP feature 1 
+//                    ^-------Layer number in the output GDS for the 
+//                             original design layer    
+DRC CHECK MAP assist  2 
+//                    ^-------Layer number in the output GDS for the 
+//                             assist features             </code></pre><pre class="pre codeblock leveled"><code>//********************************************************************
+//*************************** Variables ******************************
+//*********************************************************************
+
+//*********************************************************************
+// THESE PARAMETERS DEFINE THE ASPECT OF THE SCATTERING BARS
+//*********************************************************************
+
+// Used to avoid rounding errors.
+VARIABLE eps 0.001
+
+// Scattering Bar width
+VARIABLE sbWidthV 0.06
+
+// Distance from feature to sb.
+VARIABLE sbDist 0.16
+
+// Minimum space between sb for each existing one
+VARIABLE minSbGap 0.096
+
+// Minimum Distance between Critical Main Feature and Scattering Bar
+VARIABLE minOff 0.11
+
+// Minimum Length for the Scattering Bars
+VARIABLE minLength 0.130
+
+// Minimum Jog Leg Size to be "pre-cleaned" using COLINEARIZE
+// It cannot be larger than sbWidthV (SBwidth) 
+VARIABLE minJogLeg 0.015</code></pre><pre class="pre codeblock leveled"><code>//*********************************************************************
+// THESE PARAMETERS DEFINE THE PLACEMENT OF THE SCATTERING BARS
+// Note: They can be defined explicitly or generally using the 
+//       previously defined parameters
+//*********************************************************************
+
+// Min Value is 2*sbDist + sbWidth
+// If space &lt; space1, no sb.
+VARIABLE space1 2*sbDist + sbWidthV
+
+// Space between space1 and space2, 1 centered sb.
+// Min Value is 2* sbDist + 2*sbWidthV + minSbGap
+// &gt; space2, each edge gets 1 sb.
+VARIABLE space2 2*sbDist+2*sbWidthV+minSbGap
+
+// &gt; spacer3 and &lt; space4 leaves room for a single
+// bar centered between 2 bars 2*sbDist+3*sbWidthV+2*minSbGap
+VARIABLE space3 2*sbDist+3*sbWidthV+2*minSbGap
+
+// &gt; space 4 has room for at least an additional bar
+VARIABLE space4 2*sbDist+4*sbWidthV+3*minSbGap
+
+// SPACE5 has room for a single bar centered between two second bars
+VARIABLE space5 2*sbDist+5*sbWidthV+4*minSbGap
+
+// SPACE6 has room for a feature to have 3 bars
+VARIABLE space6 2*sbDist+6*sbWidthV+5*minSbGap</code></pre><pre class="pre codeblock leveled"><code>//*********************************************************************
+// THESE PARAMETERS DEFINE THE CLEANING AND MANUFACTURABILITY OF
+//                     THE SCATTERING BARS
+//*********************************************************************
+
+// Join SBs if end to end space &lt;= to this.
+VARIABLE sbJoinDist 1.3
+
+// Extend SBs by this amount 
+VARIABLE sbExtend 0.10
+
+// Variable to round to user units
+VARIABLE gdsPrecision 1000</code></pre><pre class="pre codeblock leveled"><code>//*********************************************************************
+//********************** The DRC RECIPE STARTS HERE ******************
+//*********************************************************************
+// Add any layer preprocessing here.  If you generate new layers, be
+// sure to modify the call to OPCSBAR to reflect these layers
+
+//*********************************************************************
+//*************************** OUTPUT LAYERS ***************************
+//*********************************************************************
+
+assist {OPCSBAR feature
+	MINSBOFFSET  minOff
+	MINSBSPACE   minSbGap
+	MINSBWIDTH   sbWidthV-eps
+	MAXSBWIDTH   sbWIdthV+eps
+	MINSBLENGTH  minLength
+	EXTENSION    sbExtend
+	INTERSECTION N
+	ANGLED
+
+	SPACE &gt;=space1 &lt;space2 SBWIDTH sbWidthV  CENTER
+
+	SPACE &gt;=space2 &lt;space3 SBWIDTH sbWidthV  SBOFFSET sbDist
+
+	SPACE &gt;=space3 &lt;space4 SBWIDTH sbWidthV  SBOFFSET sbDist
+		SBWIDTH sbWidthV  CENTER
+
+	SPACE &gt;=space4 &lt;space5 SBWIDTH sbWidthV  SBOFFSET sbDist
+		SBWIDTH sbWidthV  SBOFFSET sbDist+sbWidthV+minSbGap
+
+	SPACE &gt;=space5 &lt;space6 SBWIDTH sbWidthV  SBOFFSET sbDist
+		SBWIDTH sbWidthV  SBOFFSET sbDist+sbWidthV+minSBGap
+		SBWIDTH sbWidthV  CENTER
+
+	SPACE &gt;=space6 SBWIDTH sbWidthV  SBOFFSET sbDist
+		SBWIDTH sbWidthV  SBOFFSET sbDist+sbWidthV+minSBGap
+		SBWIDTH sbWidthV  SBOFFSET sbDist+2*sbWidthV+2*minSBGap
+
+	LINEENDMERGE sbJoinDist	
+} </code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_CalibreOpcsbarRuleFileTemplate_id2ecb9255.html" title="Templates can be used as a starting point for OPCSBAR file development.">Calibre OPCsbar Rule File Template</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_sbar_useref"
+                DocTitle = "Calibre® OPCsbar™ User’s and Reference Manual"
+                PageTitle = "A Simple OPCSBAR Implementation"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_ExampleFile_id579d5825.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCsbar™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

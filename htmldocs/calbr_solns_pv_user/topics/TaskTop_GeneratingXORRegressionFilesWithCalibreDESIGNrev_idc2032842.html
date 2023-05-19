@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Generating XOR Regression Files with Calibre DESIGNrev" />
+<meta name="abstract" content="Calibre DESIGNrev can use Tcl scripts in batch mode to generate layout databases and information about layout databases. This procedure discusses a script that creates an OASIS layout from a current layout database, a golden DRC results database, and a regression DRC results database. The script also generates an XOR comparison rule file that compares the results in the two input results databases by basing the compared layer names on the names of rule checks. This is useful in a DRC regression flow where the layout and rule file can change, while the rule check names remain the same." />
+<meta name="description" content="Calibre DESIGNrev can use Tcl scripts in batch mode to generate layout databases and information about layout databases. This procedure discusses a script that creates an OASIS layout from a current layout database, a golden DRC results database, and a regression DRC results database. The script also generates an XOR comparison rule file that compares the results in the two input results databases by basing the compared layer names on the names of rule checks. This is useful in a DRC regression flow where the layout and rule file can change, while the rule check names remain the same." />
+<meta name="prodname" content="Calibre Solutions for Physical Verification" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_solns_pv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 16, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Solutions for Physical Verification" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc2032842-a907-417b-b043-1f38b3ac789b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Generating XOR Regression Files with Calibre DESIGNrev</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Generating XOR Regression Files with Calibre DESIGNrev" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11802,product.id.P11801,product.id.P11426,product.id.P10099,product.id.P10096,product.id.P11493,product.id.P11347,product.id.P11713,product.id.P10294" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc2032842-a907-417b-b043-1f38b3ac789b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Generating
+XOR Regression Files with Calibre DESIGNrev</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Calibre DESIGNrev can use Tcl scripts in
+batch mode to generate layout databases and information about layout
+databases.</p>
+<p class="shortdesc">This procedure discusses a script that creates an OASIS
+layout from a current layout database, a golden DRC results database,
+and a regression DRC results database. The script also generates an
+XOR comparison rule file that compares the results in the two input
+results databases by basing the compared layer names on the names
+of rule checks. This is useful in a DRC regression flow where the
+layout and rule file can change, while the rule check names remain the
+same.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idc2032842-a907-417b-b043-1f38b3ac789b__id5b48bf58-9867-4a7d-9596-95d62676daa2"><p class="p">A current
+layout database.</p>
+</li>
+<li class="li" id="idc2032842-a907-417b-b043-1f38b3ac789b__idf4b1e1b9-f96c-42ec-8d56-783c509b6047"><p class="p">A DRC rule
+file where baseline rule check names have been maintained across revisions.</p>
+</li>
+<li class="li" id="idc2032842-a907-417b-b043-1f38b3ac789b__ide43055eb-74ac-40d2-a139-e1717d46d76d"><p class="p">A golden DRC
+results database that is used as the benchmark for DRC regression testing.
+The results are generated from baseline versions of the layout and
+DRC rule file.</p>
+</li>
+<li class="li" id="idc2032842-a907-417b-b043-1f38b3ac789b__ide5bef19e-8777-4a6d-8c88-27e631ba1a04"><p class="p">A regression
+DRC results database that is generated from the current version
+of the layout and DRC rule file.</p>
+</li>
+<li class="li" id="idc2032842-a907-417b-b043-1f38b3ac789b__id2b6adf77-0afb-463e-ae77-90f47c2fb726"><p class="p">A Calibre DESIGNrev
+license.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idc2032842-a907-417b-b043-1f38b3ac789b__id0e97d5cc-a7f0-4b2c-a2d2-3d93d52cd694"><span class="ph cmd">Open a
+new file called <span class="ph filepath">create_xor_files</span> and enter
+this code:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>#! /bin/sh 
+###################################################################
+# The purpose of this script is to set up regression testing of rule
+# check results. The script is called by Calibre DESIGNrev and 
+# outputs an SVRF rule file suitable for XOR checking of rule check
+# output.
+#
+# Usage: &lt;scriptname&gt; &lt;layout&gt; &lt;golden_drc_db&gt; &lt;regression_drc_db&gt;
+#
+# layout is the pathname of the current version of the physical
+# layout. golden_drc_db is the benchmark DRC results database for 
+# the rule file being regression tested. regression_drc_db is the 
+# current DRC results database produced from the current layout with
+# the rules being regression tested.
+###################################################################
+# required to convert paths to polygons
+export MGC_CWB_CONVERT_ZWPATH_TO_POLYGON=1;
+
+# the Tcl file to be executed in Calibre DESIGNrev
+drv_tmp_file=".drv.tcl";</code></pre><pre class="pre codeblock"><code># take the content of this script from the first line through the
+# first line that starts with exit and delete it. then copy the
+# remaining portion to drv_tmp_file.
+sed -e '1,/^exit/d' $0 &gt; $drv_tmp_file;
+
+# in the Calibre DESIGNrev shell, execute the following:
+# .drv.tcl &lt;original_script_name&gt; .drv.tcl &lt;command_line_args&gt;
+calibredrv -shell $drv_tmp_file $0 $drv_tmp_file $@;
+
+exit;
+
+# ensure variable setting for changing zero-width paths to polygons 
+if ![info exists ::env(MGC_CWB_CONVERT_ZWPATH_TO_POLYGON)] {
+    puts "\nERROR: env var MGC_CWB_CONVERT_ZWPATH_TO_POLYGON not \
+            set\n";
+    exit 1;
+}
+# the variable value must be 1
+if {$::env(MGC_CWB_CONVERT_ZWPATH_TO_POLYGON) != 1} {
+    puts "\nERROR: env var MGC_CWB_CONVERT_ZWPATH_TO_POLYGON value \
+            is not 1\n";
+    exit 1;
+}
+
+# from the calibredrv -shell call previously, initialize the command 
+# line args as variables.
+foreach {script tmpscript layout gold_rdb regr_rdb} $argv break
+if {[llength $argv] != 5} {
+   puts "\nUsage: $script &lt;layout&gt; &lt;golden rdb&gt; &lt;regression rdb&gt;\n";
+   exit 1;
+}</code></pre><pre class="pre codeblock"><code>##### variable setup
+# xor comparison rule file name
+set xor_svrf xor.svrf;
+# xor DRC report file name
+set xor_report "xor.report";
+# output layout
+set out_layout out.oas;
+# layout design handle
+set L [layout create $layout -dt_expand];
+# physical layout primary cell name
+set topcell [$L topcell];
+# list of physical layer numbers in ascending order
+set layer_nos [lsort -increasing -real [$L layers]];
+# for each layer number, add an entry to the larr array indicating 
+# the layer is physical with a value of 1.
+foreach layer_N $layer_nos {set larr($layer_N,is_physical) 1};
+# highest physical layer number plus 1
+set maxlayer [expr int([lindex $layer_nos end]) + 1];
+# initialize layer names list
+set layer_names [list];
+# initialize rdb layer numbers list
+set rdb_layer_nos [list];
+# initialize XOR comparison rule file script
+set svrf {};</code></pre><pre class="pre codeblock"><code>##### populate the layer array with layers from the RDBs.
+# the passed-in arguments are a list of layer numbers, a results 
+# database identifier, and a layout database file handle.
+proc populate_larr {layer_nos rdbID L} {
+
+# larr initially has physical layer numbers, but the array is then
+# populated with additional information.
+# the layer_names list is initially empty.
+  global larr layer_names;
+
+# process the input layer numbers and map them into the array 
+  foreach layer_N $layer_nos {
+# if the layer number is already in the array as physical, skip it
+    if [info exists larr($layer_N,is_physical)] continue;
+# otherwise, place the layer number into the array as originating 
+# from the merged physical layout with an RDB.
+    set larr($layer_N,is_physical) 0;
+# get the layer name corresponding to the number.
+# results databases have this information, while the physical layout
+# may not.
+    set name [$L layernames $layer_N];
+# put the name into the layer_names variable list
+    lappend layer_names $name;</code></pre><pre class="pre codeblock"><code># map the layer name to its originating results database and 
+# layer number, and place into the layer array.
+    lappend larr($name,layer,$rdbID) $layer_N;
+# map the layer number to the original name, and place into the 
+# layer array.
+    set larr($layer_N,oname) $name;
+# map the layer number to the originating results database and place
+# into the layer array.
+    set larr($layer_N,rdb) $rdbID;
+# assign a layer name and results database identifier string as
+# the layer name for each layer number in the merged layout handle.
+    $L layernames $layer_N ${name}:$rdbID;
+  }
+}</code></pre><pre class="pre codeblock"><code>##### main processing section.
+# process the golden and regression results database files.
+# these are used to populate the layer array.
+foreach rdb "[list $gold_rdb $regr_rdb]" rdbID {1 2} {
+  set Lrdb [layout create $rdb];
+# merge the physical layout with the current RDB in append mode.
+  set L [layout merge $L $Lrdb $maxlayer -mode append];
+# reset the layer numbers to conform with the merged layout.
+  set layer_nos [lsort -increasing -real [$L layers]];
+# reset the maximum layer number.
+  set maxlayer [expr int([lindex $layer_nos end]) + 1];
+# populate the layer array larr.
+  populate_larr $layer_nos $rdbID $L;
+# drop the extra topcell inserted by merging.
+  $L delete cell [$L topcell];
+}
+# sorted unique layer names across all input databases.
+set sort_layer_names [lsort -unique $layer_names];
+
+# output combined layout twice to expand paths.
+$L oasisout $out_layout;
+set L [layout create $out_layout -dt_expand];
+$L oasisout $out_layout;</code></pre><pre class="pre codeblock"><code>
+append svrf "
+/******************************************************************
+This file includes SVRF/TVF Technology under license by 
+Siemens Digital Industry Software. \"SVRF/TVF Technology\" shall
+mean the Standard Verification Rule Format (\"SVRF\") and
+Tcl Verification Format (\"TVF\") proprietary syntaxes for
+expressing process rules. You shall not use SVRF/TVF Technology
+unless you are a Siemens Digital Industry Software customer as
+defined by having authorized access to the password protected
+support site at http://support.sw.siemens.com/. The exact terms of
+your obligations and rights are governed by your respective 
+license. You shall not use SVRF/TVF Technology except: 
+(a) for your internal business purposes and (b) for use with
+Calibre(r) tools. All SVRF/TVF Technology constitutes or contains
+trade secrets and confidential information of Siemens Digital
+Industry Software or its licensors. You shall not make SVRF/TVF
+Technology available in any form to any person other than your
+employees and on-site contractors, excluding Siemens competitors,
+whose job performance requires access and who are under obligations
+of confidentiality.
+******************************************************************/
+
+LAYOUT PATH '$out_layout'
+LAYOUT PRIMARY $topcell
+LAYOUT SYSTEM OASIS
+LAYOUT ERROR ON INPUT NO
+DRC KEEP EMPTY NO
+DRC RESULTS DATABASE 'xor.rdb' ASCII
+DRC CELL NAME YES CELL SPACE XFORM
+DRC MAXIMUM RESULTS ALL
+DRC SUMMARY REPORT '$xor_report'
+DFM DATABASE '.dfmdb' \[ALL\] OVERWRITE REVISIONS
+LAYOUT USE DATABASE PRECISION YES
+LAYOUT PROCESS BOX RECORD YES
+LAYOUT INPUT EXCEPTION SEVERITY DATATYPE_MAP_TARGET 2
+EMPTY = AREA (EXTENT) == 0
+
+"; # end of append svrf</code></pre><pre class="pre codeblock"><code># get the keys corresponding to layer numbers from the 
+# layer array. then for those keys with a value of 0, store these as
+# RDB layers.
+foreach hash [array names larr "*,is_physical"] {
+  set val $larr($hash);
+# if the value is 1, it is a physical layer. skip those.
+  if $val continue;
+# get the layer numbers of the rdb layers.
+  set rdb_N [lindex [split $hash ","] 0];
+  lappend rdb_layer_nos $rdb_N;
+}</code></pre><pre class="pre codeblock"><code>append svrf {
+// ++++++++++++++++ layer settings +++++++++++++++++++++++
+}
+
+# use the layer names also as check names.
+foreach check $sort_layer_names {
+  foreach rdbID {1 2} {
+    if [info exists larr($check,layer,$rdbID)] {
+       append svrf "LAYER '${check}:$rdbID' \
+                    $larr($check,layer,$rdbID) \n";
+    } else {
+       append svrf "'${check}:$rdbID' = COPY 'EMPTY' \n";
+    }
+  }
+}
+
+append svrf {
+// ++++++++++++++++ xor rules +++++++++++++++++++++++
+}
+
+foreach check $sort_layer_names {
+  append svrf "'$check' \{\n";
+  append svrf "\t'${check}:1' XOR '${check}:2' \n";
+  append svrf "\}\n";
+}
+
+# write the XOR comparison rules.
+set fid [open $xor_svrf w];
+puts $fid $svrf;
+
+puts "\n\n\nExecute XOR flow:\ncalibre -drc -hier \[turbo hyper \
+            options\] $xor_svrf\n\n\n";
+
+close $fid;
+file delete $tmpscript;
+exit;</code></pre></div></li>
+<li class="li step stepexpand" id="idc2032842-a907-417b-b043-1f38b3ac789b__id837c2063-f82d-45c2-9877-c6b4e4a47130"><span class="ph cmd">Save the <span class="ph filepath">create_xor_files</span> file.</span></li>
+<li class="li step stepexpand" id="idc2032842-a907-417b-b043-1f38b3ac789b__id4585f36c-4640-485e-96a4-a906abd302b4"><span class="ph cmd">Execute
+the following command in a shell terminal (csh assumed):</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>% ./create_xor_files &lt;layout_path&gt; &lt;golden_rdb&gt; &lt;regression_rdb&gt;\
+|&amp; tee log.drv</code></pre><p class="p">where &lt;layout_path&gt; is the latest version of the layout, &lt;golden_rdb&gt;
+is the benchmark reference DRC results database, and &lt;regression_rdb&gt;
+is the current DRC results database for the latest version of the
+layout and rules. Examine the <span class="ph filepath">log.drv</span> file
+to ensure the run executed properly. If there are any discrepancies,
+fix them and repeat this step until the run completes as expected.</p>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The output consists of two files. </p>
+<p class="p">The first file is <span class="ph filepath">out.oas</span>. This is an OASIS
+layout database that contains layers from your current layout database
+and the results from both of the input DRC results databases. Layers
+from your current layout appear in the OASIS database with the original
+layer names. Layers from results databases appear with layer names
+starting with a rule check name, followed by a colon, followed by
+the number 1 or 2:</p>
+<p class="p BlockIndent">&lt;rule_check_name&gt;:{1|2}</p>
+<p class="p">The suffix :1 means the layer data originates in the golden results
+database, and the suffix :2 means the layer data originates in the
+regression results database.</p>
+<p class="p">The second file is <span class="ph filepath">xor.svrf</span>. This is an
+XOR comparison rule file that compares layers in <span class="ph filepath">out.oas</span> that
+originate from the results databases. The layer naming convention
+is the same as for <span class="ph filepath">out.oas</span>. The rule checks
+follow this general form:</p>
+<pre class="pre codeblock"><code>'&lt;rule_check_name&gt;' {
+        '&lt;rule_check_name&gt;:1' XOR '&lt;rule_check_name&gt;:2'
+}</code></pre><p class="p">If the regression results database lacks rule check results that
+the golden results database contains, the layer definitions appear
+as follows:</p>
+<pre class="pre codeblock"><code>EMPTY = AREA (EXTENT) == 0
+...
+
+LAYER '&lt;rule_check_name&gt;:1' &lt;N&gt;
+'&lt;rule_check_name&gt;:2' = COPY 'EMPTY'</code></pre><p class="p">where &lt;N&gt; is a layer number. The correspondence appears in
+the reverse order if the layer is empty in the golden results database:</p>
+<pre class="pre codeblock"><code>'&lt;rule_check_name:1' = COPY 'EMPTY'
+LAYER '&lt;rule_check_name&gt;:2' &lt;N&gt;</code></pre><p class="p">You can now run the XOR comparison:</p>
+<pre class="pre codeblock"><code>% calibre -drc -hier -turbo xor.svrf &gt;&amp; log.xor</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_DrcRegressionTesting_id64418414.html" title="Regression testing is employed to verify tool behaviors across software versions, to benchmark rule file performance, to compare layout versions, and so forth. This testing ensures consistency of mask generation across variable factors of the design process. Constructing a robust regression flow is therefore a common concern.">DRC Regression Testing</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_solns_pv_user"
+                DocTitle = "Calibre® Solutions for Physical Verification"
+                PageTitle = "Generating XOR Regression Files with Calibre DESIGNrev"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_GeneratingXORRegressionFilesWithCalibreDESIGNrev_idc2032842.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Solutions for Physical Verification, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

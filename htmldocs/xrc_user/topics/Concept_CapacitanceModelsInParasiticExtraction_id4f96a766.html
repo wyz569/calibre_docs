@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Capacitance Models in Parasitic Extraction" />
+<meta name="abstract" content="xCalibrate uses several models for calculations; xRC combines the xCalibrate models into coupled capacitance and intrinsic capacitance. In the netlist, these can be output separately or with coupled capacitance grounded, referred to as “lumped” capacitance." />
+<meta name="description" content="xCalibrate uses several models for calculations; xRC combines the xCalibrate models into coupled capacitance and intrinsic capacitance. In the netlist, these can be output separately or with coupled capacitance grounded, referred to as “lumped” capacitance." />
+<meta name="prodname" content="Calibre xRC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="xrc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="None" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® xRC™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="NO" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4f96a766-65f1-4ac2-8e65-4aee876d717e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Capacitance Models in Parasitic Extraction</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Capacitance Models in Parasitic Extraction" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11427,product.id.P10122" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id4f96a766-65f1-4ac2-8e65-4aee876d717e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Capacitance Models in Parasitic Extraction</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">xCalibrate
+uses several models for calculations; xRC combines the xCalibrate
+models into coupled capacitance and intrinsic capacitance. In the
+netlist, these can be output separately or with coupled capacitance
+grounded, referred to as “lumped” capacitance.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__idd3f323a9-169c-4536-913f-9c875b8dc9d1"><h2 class="title Subheading sectiontitle">xCalibrate
+Models </h2><p class="p">The xCalibrate rule file generator has both
+calibration models and effect models. In the xCalibrate transcript,
+references to “model 114” or “model 2024” refer to the calibration models.
+They are used with the technology description to create small layouts
+for the field solver. Results from the field solver are then analyzed
+by a curve fitter to determine coefficients for the capacitance
+and resistance equations. </p>
+<p class="p">The effect models are codified in the calibrated
+equations. As of 2008.1, the models are encrypted. They are occasionally
+referenced in xRC PDB transcripts. The capacitance models include
+the following:</p>
+<ul class="ul"><li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id4707f5ba-af23-4c84-b8b1-0f7bf401d7c2"><p class="p"><span class="ph FontProperty HeadingLabel">Capacitance Connection</span> –
+models via and contact capacitance.</p>
+</li>
+<li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__idde95f718-e538-4bc8-8da1-6c07820f38fd"><p class="p"><span class="ph FontProperty HeadingLabel">Capacitance Plate</span> –
+models capacitance between the lower surface of a wire and substrate
+(intrinsic), or the lower surface of a wire to the upper surface
+of another wire (crossover).</p>
+</li>
+<li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id06a06f99-bf50-46ba-99bc-906b84eb14b1"><p class="p"><span class="ph FontProperty HeadingLabel">Capacitance Nearbody (NB)</span> –
+models capacitance between the sides of two wires, either on the
+same layer or different layers.</p>
+</li>
+<li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id72f86730-3b63-4afa-aceb-8e023675c2c2"><p class="p"><span class="ph FontProperty HeadingLabel">Capacitance Fringe</span> –
+models capacitance between the side of a wire and either the substrate
+(intrinsic) or the bottom or top of a wire (crossover). </p>
+</li>
+</ul>
+<p class="p">These models are used for calculations. During
+formatting, the calculated values are consolidated into intrinsic
+and coupled capacitance. The intrinsic and coupled capacitance are output
+into the netlist and reports.</p>
+</div>
+<div class="section Subsection" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__ida87ec8ea-9ce0-4e74-9cb7-54c0b7b29496"><h2 class="title Subheading sectiontitle">Intrinsic</h2><p class="p">Intrinsic capacitance is capacitance between
+an interconnect and substrate, sometimes referred to as ground.
+For lower layer interconnect, it is often more significant than
+capacitance between two lines. </p>
+<div class="fig fignone" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__idee68299b-e7c7-452e-812d-4e734a6a62f6"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Intrinsic Capacitance </span><br /><div class="imagecenter"><img class="image imagecenter" height="118" src="../graphics/intrinsic_capacitance.gif" width="350" /></div><br /></div>
+<p class="p"><a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__idee68299b-e7c7-452e-812d-4e734a6a62f6">Figure 1</a> shows a cross section and schematic
+view of intrinsic capacitance. The three parasitic capacitors shown
+in the layout represent the individual parasitic effects calculated
+by the calibrated rules. When the Calibre xRC formatter runs, the
+separate capacitances (C<span class="ph FontProperty LiteralSubScript">1</span>,
+C<span class="ph FontProperty LiteralSubScript">2</span>, and
+C<span class="ph FontProperty LiteralSubScript">3</span> in
+the figure) are combined to a single intrinsic capacitance (C<span class="ph FontProperty LiteralSubScript">T</span> in
+the figure). Intrinsic capacitance appears in the netlist as “ci_<span class="keyword ParameterName OptionalReplaceable">instance</span>”<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>. </p>
+</div>
+<div class="section Subsection" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id1cf01095-ef89-4b9c-b0c7-4defb202bf79"><h2 class="title Subheading sectiontitle">Coupled</h2><p class="p">Coupled capacitance is capacitance between
+two conductors. Both the conductors are usually interconnect. (Calibre
+xRC is not recommended for device extraction. Devices are typically represented
+with device models provided by your foundry.)</p>
+<div class="fig fignone" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Coupled Capacitance</span><br /><div class="imagecenter"><img class="image imagecenter" height="246" src="../graphics/coupled_capacitance.gif" width="455" /></div><br /></div>
+<p class="p">As shown in <a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883">Figure 2</a> coupled capacitance is calculated across
+layers. The contribution from vias is controlled separately. Most
+often, it is turned off because it contributes very little but causes
+extraction to take longer.</p>
+<p class="p">How the calculated capacitance
+is represented in the output depends on your Calibre xRC settings. <a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883">Figure 2</a> (A) represents “capacitance
+only” output, which you would get from the ‑c extraction and formatter
+setting. The separate coupled capacitance effects are aggregated
+into a single net-to-net parasitic capacitance value. <a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883">Figure 2</a> (B) represents “distributed”
+output, typical of ‑rcc extraction. The sum of the three coupled
+capacitors is the same as that of the single coupled capacitor in
+(A). The three capacitors are separated by parasitic resistors (not shown)
+along the net. <a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883">Figure 2</a> (C) represents grounded,
+also sometimes called “lumped”, coupled capacitance. The total coupling
+capacitance is present on both nets and represented as going to
+ground. </p>
+<p class="p">Coupling capacitance is shown in a netlist
+as cc_<span class="keyword ParameterName OptionalReplaceable">instance</span>.</p>
+</div>
+<div class="section Subsection" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2fd336a6-7ca1-47e2-939e-a5787b720501"><h2 class="title Subheading sectiontitle">Lumped</h2><p class="p">Lumped capacitance is a term loosely referring
+to aggregated parasitic capacitance. It is often applied to capacitance-only
+(‑c) extraction because it outputs a single value for a net’s intrinsic capacitance
+and a single value for each net to which it is coupled.</p>
+<p class="p">Another situation sometimes referred to as
+lumped capacitance is when capacitance between nets is “broken”
+and “lumped to ground” as shown in <a class="xref fm:Figure" href="#id4f96a766-65f1-4ac2-8e65-4aee876d717e__id2d0af5a6-f43e-4904-b14d-c6d4d44cb883">Figure 2</a> (C). This can occur for several reasons:</p>
+<ul class="ul"><li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id0970fd17-e843-48db-b720-a41f28b813a7"><p class="p">The Calibre xRC formatter is run with
+the “-g” switch.</p>
+</li>
+<li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id0d788b8d-b418-4016-a719-1238a55da8b8"><p class="p">Extraction is run iteratively, and only
+one of the nets is in the more detailed extraction. (For example,
+an entire chip is extracted as “capacitance only,” followed by selected critical
+nets extracted with ‑rcc, and then the entire chip is netlisted.)</p>
+</li>
+<li class="li" id="id4f96a766-65f1-4ac2-8e65-4aee876d717e__id3b336bfc-8087-41bf-979f-be4e2cb02577"><p class="p">A reduction such as PEX Reduce CC was
+applied. (Grounding coupled capacitance makes simulation faster
+because the two nets do not need to be kept in step.)</p>
+</li>
+</ul>
+<p class="p">The total capacitance on a net is the same
+whether it is represented as separate intrinsic and net-to-net coupled
+capacitance, or as a single lumped value.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_ParasiticEffectsCalibreTools_idf94f0ede.html" title="The information in the following sections focuses on the Calibre xRC parasitic extraction tool and the xCalibrate rule file generator.">Parasitic Effects and Calibre Tools</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  Before v2007.4, intrinsic capacitance was c_<span class="ph FontProperty emphasis">instance</span>.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "xrc_user"
+                DocTitle = "Calibre® xRC™ User’s Manual"
+                PageTitle = "Capacitance Models in Parasitic Extraction"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CapacitanceModelsInParasiticExtraction_id4f96a766.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® xRC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

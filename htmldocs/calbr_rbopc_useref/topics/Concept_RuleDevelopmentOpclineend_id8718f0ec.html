@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Rule Development with OPCLINEEND" />
+<meta name="abstract" content="The OPCLINEEND command modifies the shape of line-ends." />
+<meta name="description" content="The OPCLINEEND command modifies the shape of line-ends." />
+<meta name="DC.subject" content="Writing rules, with OPCLINEEND" />
+<meta name="keywords" content="Writing rules, with OPCLINEEND" />
+<meta name="prodname" content="Calibre Rule-Based OPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-01-30" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rbopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Rule-Based OPC User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id8718f0ec-ead7-4e10-b599-be122c6587cf" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Rule Development with OPCLINEEND</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Rule Development with OPCLINEEND" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id8718f0ec-ead7-4e10-b599-be122c6587cf">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Rule Development with OPCLINEEND</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The OPCLINEEND
+command modifies the shape of line-ends. </span>
+</div>
+<p class="p">It
+provides one rule set for each set of width constraints. Each rule
+set contains one default rule. Unless your rules contain only one spacing
+constraint, the rules must also contain one correction rule for
+each spacing constraint. The basic syntax using all arguments is:</p>
+<pre class="pre codeblock leveled"><code>WIDTH &lt;range&gt; HEIGHT &lt;value&gt; SPACE &lt;range&gt; END &lt;values&gt; SERIF &lt;values&gt;</code></pre><p class="p">Rules are written in two sections, default
+and corrections rules.</p>
+<div class="section Subsections"><div class="section Subsection" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id34007500-b8e4-4d6f-8bd0-ade664527d31"><h2 class="title Subheading sectiontitle">Default Rules</h2><p class="p">Each
+rule set begins with one and only one default rule. The default
+rule is always the first rule in the rule set. It defines a condition,
+based on line-end width and (optionally) height, and the treatment
+to apply to all line-ends that meet that condition expressed in
+terms of extension and serif dimensions. The default rule is required.
+Note that the default rule does not contain a SPACE condition. The
+default rule defines the maximum OPC. The syntax for a default rule
+is as follows:</p>
+<pre class="pre codeblock leveled"><code>WIDTH &lt;<span class="keyword ParameterName OptionalReplaceable">range</span>&gt; END &lt;<span class="keyword ParameterName OptionalReplaceable">max distance</span>&gt; SERIF &lt;<span class="keyword ParameterName OptionalReplaceable">extension</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">depth</span>&gt;</code></pre><p class="p">The END
+and SERIF extension values in the default rule define the maximum
+movements defined for that width. The SERIF depth, which is typically
+not represented in a rules table, is calculated differently depending
+on whether serif height is constant or varies with space and width
+conditions:</p>
+<ul class="ul"><li class="li" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id15fdff75-6199-4be4-b9bc-36b494eecfe6"><p class="p">If the serif height is constant, the
+SERIF depth is the constant serif height minus the maximum end movement </p>
+</li>
+<li class="li" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__idff63c5f1-0f98-45ca-b29a-ebe0b4a80083"><p class="p">If the serif height varies from cell
+to cell in your rules table, SERIF depth is the serif height table
+values minus the maximum end movement. </p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__ide729eeb2-617e-4dc6-b88d-89840ac570c1"><h2 class="title Subheading sectiontitle">Correction
+Rules</h2><p class="p">Correction rules define the OPC treatment required
+for line-ends that would introduce spacing violations if they were
+corrected using the default rule. After applying the default rule, if
+OPCLINEEND encounters a spacing violation, it replaces the default
+corrections with the corrections defined in the correction rule.</p>
+<p class="p">Correction
+rules adhere to the same general syntax as default rules, except
+that they must contain the additional SPACE violation condition
+and they support lists of values for END and SERIF conditions. The
+END extension, SERIF extension, and SERIF depth can each contain
+up to three values. These account for up to three different spacing
+violations a default rule can introduce. These are discussed in
+detail in the section entitled “<a class="xref fm:HeadingAndPage" href="Concept_AvoidSpacingViolationsAfterTreatment_id0292f64b.html#id0292f64b-d93b-4141-8e70-440cacef017c__ide01722ad-2127-411c-b79e-f95b9fee9777">How Opposing Edges Affect Corrections</a>”.</p>
+<p class="p"><a class="xref fm:Figure" href="#id8718f0ec-ead7-4e10-b599-be122c6587cf__id0ce46fe4-146c-4cae-873b-9c9c56ac866f">Figure 1</a> illustrates this process. Notice that
+the movement values in the correction rule are specified with respect
+to the original line-end.</p>
+<div class="fig fignone" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id0ce46fe4-146c-4cae-873b-9c9c56ac866f"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Applying Correction Rules</span><br /><div class="imagecenter"><img class="image imagecenter" height="170" src="../graphics/opclineend17.png" width="446" /></div><br /></div>
+<p class="p">The
+following syntax is for a simple correction rule:</p>
+<pre class="pre codeblock leveled"><code>WIDTH &lt;<span class="keyword ParameterName OptionalReplaceable">range</span>&gt; SPACE &lt;<span class="keyword ParameterName OptionalReplaceable">range</span>&gt; END &lt;<span class="keyword ParameterName OptionalReplaceable">distance_list</span>&gt; 
+	SERIF &lt;<span class="keyword ParameterName OptionalReplaceable">extension_list</span>&gt; &lt;<span class="keyword ParameterName OptionalReplaceable">depth_list</span>&gt;</code></pre><p class="p">The SPACE constraint in a correction
+rule represents both types of spacing violations: </p>
+<ul class="ul"><li class="li" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id066e9cea-1a1b-463d-b4c4-0a7aeaba04eb"><p class="p">Line-end OPC violations</p>
+</li>
+<li class="li" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id914b37cc-1e50-4f78-8554-27f36e3bad21"><p class="p">Serif OPC violations</p>
+</li>
+</ul>
+<p class="p">Because OPCLINEEND checks for
+violations after applying the default rule, you must adjust the
+spacing values in the tables before you can use them as correction
+rules. For instructions on adjusting the spacing values, refer to
+the tables in the section entitled “<a class="xref fm:HeadingAndPage" href="Concept_TableConversionOpclineendRules_id5e677ba7.html#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id724f8ed0-0450-4988-8f38-037aa6542540">Make your Conversion Step by Step</a>”.</p>
+<p class="p">You create one correction rule for
+every spacing value found in any of the rules tables represented
+by the rule set.</p>
+</div>
+<div class="section Subsection" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__id4c612a5c-3ad4-47b5-b6ef-ccc81208093e"><h2 class="title Subheading sectiontitle">Avoiding Problems</h2><p class="p">Use the OPPOSITE EXTENDED metric with SPACE
+to avoid kissing corners and other problems caused by diagonally
+opposite geometries. Diagonally opposite geometries can cause problems
+with serifs as well as simple extensions, and so the OPPOSITE EXTENDED
+metric is equally relevant to all parts of Calibre OPCLINEEND. If
+you use OPPOSITE EXTENDED for one correction rule for a given width,
+you must use the same metric and value for all correction rules
+for that width.</p>
+<p class="p"><a class="xref fm:Figure" href="#id8718f0ec-ead7-4e10-b599-be122c6587cf__idc3f3006e-2c32-4d9d-a524-fff2c10f1086">Figure 2</a> demonstrates this problem:</p>
+<div class="fig fignone" id="id8718f0ec-ead7-4e10-b599-be122c6587cf__idc3f3006e-2c32-4d9d-a524-fff2c10f1086"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Avoidance of Kissing Corners</span><br /><div class="imagecenter"><img class="image imagecenter" height="162" src="../graphics/opclineend18.png" width="461" /></div><br /></div>
+<p class="p">Use
+the optional HEIGHT constraint to direct OPCLINEEND to ignore stubby
+line-ends which are defined as shorter than the specified height.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_OpclineendCommand_idbc2fb318.html" title="The OPCLINEEND command performs variable line-end extension, including end extension and hammerhead creation.">OPCLINEEND Command</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rbopc_useref"
+                DocTitle = "Calibre® Rule-Based OPC User’s and Reference Manual"
+                PageTitle = "Rule Development with OPCLINEEND"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_RuleDevelopmentOpclineend_id8718f0ec.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Rule-Based OPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

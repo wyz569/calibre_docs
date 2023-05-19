@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="Annotated Geometry Format Commands" />
+<meta name="abstract" content="Annotated Geometry Format (AGF) files are GDSII stream files (version 6) or OASIS (version 1.0) files created from the layout database. GDS output uses the PROPATTR and PROPVALUE fields to specify device ids, node numbers, and instance placement names. OASIS output uses the CELLNAME, PROPNAME, PROPSTRING, and LAYERNAME records in STRICT mode. Each CELLNAME record is followed by a S_CELL_OFFSET property record to support arbitrary access. This allows multi-threaded stream-in by Calibre tools." />
+<meta name="description" content="Annotated Geometry Format (AGF) files are GDSII stream files (version 6) or OASIS (version 1.0) files created from the layout database. GDS output uses the PROPATTR and PROPVALUE fields to specify device ids, node numbers, and instance placement names. OASIS output uses the CELLNAME, PROPNAME, PROPSTRING, and LAYERNAME records in STRICT mode. Each CELLNAME record is followed by a S_CELL_OFFSET property record to support arbitrary access. This allows multi-threaded stream-in by Calibre tools." />
+<meta name="DC.subject" content="Annotated geometry format (AGF)" />
+<meta name="keywords" content="Annotated geometry format (AGF)" />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idbed37247-d139-41a6-b8bf-ff4d49f67c8d" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Annotated Geometry Format Commands</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Annotated Geometry Format Commands" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idbed37247-d139-41a6-b8bf-ff4d49f67c8d">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Annotated Geometry Format Commands</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">Annotated
+Geometry Format (AGF) files are GDSII stream files (version 6) or
+OASIS (version 1.0) files created from the layout database. GDS
+output uses the PROPATTR and PROPVALUE fields to specify device
+ids, node numbers, and instance placement names. OASIS output uses
+the CELLNAME, PROPNAME, PROPSTRING, and LAYERNAME records in STRICT
+mode. Each CELLNAME record is followed by a S_CELL_OFFSET property
+record to support arbitrary access. This allows multi-threaded stream-in
+by Calibre tools.</span>
+</div>
+<p class="p">To generate
+AGF files, your rule file must include the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> statement with the GDSII or CCI option. A basic
+script for generating all CCI files needed for downstream flows
+is discussed under “<a class="xref fm:HeadingAndPage" href="TaskTop_GeneratingCciOutputFiles_idcee715a3.html#idcee715a3-1cfe-4c99-a514-a8205958025f__TaskTop_GeneratingCciOutputFiles_idcee715a3.xml#idcee715a3-1cfe-4c99-a514-a8205958025f" title="CCI files are used by third-party tools for post-LVS flows. This procedure shows how to generate the files.">Generating CCI Output Files</a>”.</p>
+<p class="p">You create the AGF file using the <a class="xref fm:HeadingOnly" href="Command_AGFWRITE_id93bcd499.html#id93bcd499-4f66-4ea0-995f-e6d0acc193dd__Command_AGFWRITE_id93bcd499.xml#id93bcd499-4f66-4ea0-995f-e6d0acc193dd" title="Writes an annotated geometry format (AGF) file.">AGF WRITE</a> command. This file is used in
+conjunction with the outputs of the <a class="xref fm:HeadingOnly" href="Command_LayoutNetlistWrite_id07cc5961.html#id07cc5961-b285-4e55-934d-09ba13c9d85a__Command_LayoutNetlistWrite_id07cc5961.xml#id07cc5961-b285-4e55-934d-09ba13c9d85a" title="Writes the customized layout netlist from the CCI system.">LAYOUT NETLIST WRITE</a>, <a class="xref fm:HeadingOnly" href="Command_LayoutNametableWrite_id9fff7011.html#id9fff7011-3071-4fb0-b035-5d31dbbaf504__Command_LayoutNametableWrite_id9fff7011.xml#id9fff7011-3071-4fb0-b035-5d31dbbaf504" title="Writes a Layout Netlist Names correspondence file.">LAYOUT NAMETABLE WRITE</a>, and <a class="xref fm:HeadingOnly" href="Command_LayoutNetXrefWrite_id0d5bd1d2.html#id0d5bd1d2-8c50-420a-9e39-54416d6c0e2b__Command_LayoutNetXrefWrite_id0d5bd1d2.xml#id0d5bd1d2-8c50-420a-9e39-54416d6c0e2b" title="Writes a Layout Net Cross-Reference File (LNXF).">LAYOUT NET XREF WRITE</a> commands to provide a complete
+set of cross-references for layout connectivity annotations.</p>
+<p class="p">The following table contains command summaries. Equivalent Tcl
+shell commands (qs:: or dfm:: scopes) are shown when applicable.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Historically, many of these
+command names began with the string “GDS”. However, with the introduction
+of OASIS output, GDS was changed to AGF in Calibre 2019.4. The GDS
+forms of the original command names may still be used, but that
+should be limited to cases where the output is actually GDS to prevent
+possible confusion.</p>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idbed37247-d139-41a6-b8bf-ff4d49f67c8d__idbf3d200b-2c42-477c-9d50-5c3491c8812f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>AGF Commands</span></caption><colgroup><col style="width:3.087in" /><col style="width:3.087in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d74846e225"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d74846e228"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFANNOTATEDDEVICES_idf9d3b9a2.html#idf9d3b9a2-7e2c-4a5f-875e-59d724c02847__Command_AGFANNOTATEDDEVICES_idf9d3b9a2.xml#idf9d3b9a2-7e2c-4a5f-875e-59d724c02847" title="Controls whether annotated device seed layers are output instead of original seed layers.">AGF ANNOTATED DEVICES</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Qssetagfoptions_id041efbcd.html#id041efbcd-b076-42d7-821a-641156b1083f__Command_Qssetagfoptions_id041efbcd.xml#id041efbcd-b076-42d7-821a-641156b1083f" title="Configures AGF output settings for the qs::write_agf command.">qs::set_agf_options</a> -annotated_devices</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Causes DFM property annotated
+device seed layers to be output instead of original seed layers.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFCLEARFILTERBOXLAYERS_idd3e3b0fd.html#idd3e3b0fd-5a9f-408a-b090-1f19b9a470a0__Command_AGFCLEARFILTERBOXLAYERS_idd3e3b0fd.xml#idd3e3b0fd-5a9f-408a-b090-1f19b9a470a0" title="Restores the default behavior of including the same set of layers in LVS Box cells that appear in non-box cells.">AGF CLEAR FILTER BOX LAYERS</a></p>
+<p class="p"><a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmcreate_filter', 'calbr_ys_ref'); return false;">dfm::create_filter</a> -box_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Restores the default behavior of including the
+same set of layers in LVS Box cells that appear in non-box cells.
+The present configuration of the FILTER LAYERS command is enforced.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFCLEARMERGELAYERS_id1ec8c897.html#id1ec8c897-9ee4-4a52-a9a2-6d4f559d5ac6__Command_AGFCLEARMERGELAYERS_id1ec8c897.xml#id1ec8c897-9ee4-4a52-a9a2-6d4f559d5ac6" title="Clears the current list of layers specified in CCI for merging.">AGF CLEAR MERGE LAYERS</a></p>
+<p class="p">qs::set_agf_options -clear_merge_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Clears the current list of layers specified
+for merging by the AGF MERGE LAYER or AGF MERGE PIN LAYERS commands.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFCLEARPCELLPROMOTELAYERS_id5960509a.html#id5960509a-d184-44ff-945f-7fb4473e45cf__Command_AGFCLEARPCELLPROMOTELAYERS_id5960509a.xml#id5960509a-d184-44ff-945f-7fb4473e45cf" title="Clears the current AGF PCELL PROMOTE LAYERS list.">AGF CLEAR PCELL PROMOTE LAYERS</a></p>
+<p class="p">qs::set_agf_options ‑clear_pcell_promote_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Clears the current AGF PCELL PROMOTE LAYERS
+list.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFFILTERBOXLAYERS_idd08957d7.html#idd08957d7-036d-4816-b95b-7bd6a05f9903__Command_AGFFILTERBOXLAYERS_idd08957d7.xml#idd08957d7-036d-4816-b95b-7bd6a05f9903" title="Controls the inclusion of layers in the AGF WRITE output for LVS Box cells. This command acts independently from FILTER LAYERS settings.">AGF FILTER BOX LAYERS</a></p>
+<p class="p">dfm::create_filter -box_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls the inclusion of layers in the
+AGF WRITE output for LVS Box cells. This command acts independently
+from <a class="xref fm:HeadingOnly" href="Command_FilterLayers_idc416d8af.html#idc416d8af-1ef7-40f5-ae46-a0401b3c68f3__Command_FilterLayers_idc416d8af.xml#idc416d8af-1ef7-40f5-ae46-a0401b3c68f3" title="Specifies which PHDB layers get queried.">FILTER LAYERS</a>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFFILTERINOUTBOXLAYERS_id47b405dd.html#id47b405dd-b8e2-4531-8ec4-489bf8768a1e__Command_AGFFILTERINOUTBOXLAYERS_id47b405dd.xml#id47b405dd-b8e2-4531-8ec4-489bf8768a1e" title="Controls the inclusion of layers in the AGF WRITE output for LVS Box cells. Layers that are previously included or excluded have their inclusion status changed by this command. This command acts independently from FILTER LAYERS.">AGF FILTER {IN | OUT} BOX LAYERS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls the inclusion of layers in the
+AGF WRITE output for LVS Box cells. Layers that are previously included
+or excluded have their inclusion status changed by this command.
+This command acts independently from FILTER LAYERS.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFFILTERMAP_id3322ea0f.html#id3322ea0f-2f9e-4757-805f-883bcf9bd36f__Command_AGFFILTERMAP_id3322ea0f.xml#id3322ea0f-2f9e-4757-805f-883bcf9bd36f" title="Controls whether the AGF MAP command outputs only filtered layers as specified in the FILTER LAYERS command.">AGF FILTER MAP</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_Qsagfmap_id018aa17e.html#id018aa17e-89ec-48df-bf21-209cffb01498__Command_Qsagfmap_id018aa17e.xml#id018aa17e-89ec-48df-bf21-209cffb01498" title="Returns the layer map scheme of annotated layout output.">qs::agf_map</a> -filter</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls whether the
+AGF MAP command outputs only filtered layers as specified in the
+FILTER LAYERS command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFFORMAT_ide9a52ca1.html#ide9a52ca1-96f7-45c6-b676-9b35df6ef55e__Command_AGFFORMAT_ide9a52ca1.xml#ide9a52ca1-96f7-45c6-b676-9b35df6ef55e" title="Controls the layout format used by AGF WRITE.">AGF FORMAT</a></p>
+<p class="p">qs::set_agf_options -format</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls the layout format
+used by AGF WRITE.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFHIERARCHY_idc71e7b82.html#idc71e7b82-383a-4c4c-8abf-1cff5e6f3f14__Command_AGFHIERARCHY_idc71e7b82.xml#idc71e7b82-383a-4c4c-8abf-1cff5e6f3f14" title="Controls the hierarchy output by the AGF WRITE command.">AGF HIERARCHY</a></p>
+<p class="p">qs::set_agf_options -hierarchy</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls the hierarchy
+output by the AGF WRITE (or qs::write_agf) command. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFHIERARCHYCLEAREXPANDCELLS_idad6fa66a.html#idad6fa66a-57b1-42cd-b9ab-03cb707e3116__Command_AGFHIERARCHYCLEAREXPANDCELLS_idad6fa66a.xml#idad6fa66a-57b1-42cd-b9ab-03cb707e3116" title="Clears the current list of cells specified with AGF HIERARCHY EXPAND CELL commands.">AGF HIERARCHY CLEAR EXPAND CELLS</a></p>
+<p class="p">qs::set_agf_options ‑hierarchy_clear_expand_cells</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Clears the current list
+of cells specified with AGF HIERARCHY EXPAND CELL (or qs::set_agf_options
+‑hierarchy_expand_cell) commands.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFHIERARCHYEXPANDCELL_id08098447.html#id08098447-92f8-4e6b-90b4-401a4a8dcb7c__Command_AGFHIERARCHYEXPANDCELL_id08098447.xml#id08098447-92f8-4e6b-90b4-401a4a8dcb7c" title="Causes expansion of cells in AGF output.">AGF HIERARCHY EXPAND CELL</a></p>
+<p class="p">qs::set_agf_options ‑hierarchy_expand_cell</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Causes expansion of cells
+in AGF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFHIERARCHYEXPANDDEVICELESSCELLS_idb5bd457c.html#idb5bd457c-278e-4c8b-b012-3d43464ab7a7__Command_AGFHIERARCHYEXPANDDEVICELESSCELLS_idb5bd457c.xml#idb5bd457c-278e-4c8b-b012-3d43464ab7a7" title="Controls automatic expansion of cells that contain no devices in them or in the lower-level placements within the cells.">AGF HIERARCHY EXPAND DEVICELESS CELLS</a></p>
+<p class="p">qs::set_agf_options ‑hierarchy_expand_deviceless_cells</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Controls automatic expansion
+of cells that contain no devices in them or in the lower-level placements
+within them.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFMAP_idfd7fa8dc.html#idfd7fa8dc-3f50-4f68-b364-2ddc8ba7031a__Command_AGFMAP_idfd7fa8dc.xml#idfd7fa8dc-3f50-4f68-b364-2ddc8ba7031a" title="Returns or configures the layer map scheme of AGF output.">AGF MAP</a></p>
+<p class="p">qs::agf_map</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Returns or configures
+the layer map scheme of AGF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFMERGELAYER_ida46cbf40.html#ida46cbf40-1011-4459-8fd3-dd66787ebef8__Command_AGFMERGELAYER_ida46cbf40.xml#ida46cbf40-1011-4459-8fd3-dd66787ebef8" title="Causes a layer to be merged in AGF output.">AGF MERGE LAYER</a></p>
+<p class="p">qs::set_agf_options -merge_layer</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Causes a layer to be merged in AGF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFMERGEPINLAYERS_idc8b108ab.html#idc8b108ab-43ce-4ef8-b95c-e3c7806b125c__Command_AGFMERGEPINLAYERS_idc8b108ab.xml#idc8b108ab-43ce-4ef8-b95c-e3c7806b125c" title="Causes selected device pin layers to be merged in AGF output.">AGF MERGE PIN LAYERS</a></p>
+<p class="p">qs::set_agf_options -merge_pin_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Causes selected device pin layers to be merged
+in AGF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFDEVPROPNETPROPPLACEPROPNAME_id06af4eda.html#id06af4eda-2b31-4db1-a52c-edc20d94f966__Command_AGFDEVPROPNETPROPPLACEPROPNAME_id06af4eda.xml#id06af4eda-2b31-4db1-a52c-edc20d94f966" title="Configures the PROPNAME record values corresponding to PROPSTRING records in the AGF output when it is OASIS.">AGF {DEVPROP | NETPROP | PLACEPROP} NAME</a></p>
+<p class="p">qs::set_agf_options -devprop_name, ‑netprop_name,
+-placeprop_name</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Configures the PROPNAME
+record values corresponding to PROPSTRING records in the AGF output
+when it is OASIS.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFDEVPROPNETPROPPLACEPROPNUMBER_id7f4783e0.html#id7f4783e0-9e9a-48da-b409-9689feaa119f__Command_AGFDEVPROPNETPROPPLACEPROPNUMBER_id7f4783e0.xml#id7f4783e0-9e9a-48da-b409-9689feaa119f" title="Configures the PROPATTR record values corresponding to PROPVALUE records in the AGF output when it is GDS.">AGF {DEVPROP | NETPROP | PLACEPROP} NUMBER</a></p>
+<p class="p">qs::set_agf_options -devprop_number, ‑netprop_number,
+-placeprop_number</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Configures
+the PROPATTR record numbers for PROPVALUE records in the AGF output
+when it is GDS.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFPCELLPROMOTELAYERS_id6ecac76e.html#id6ecac76e-e76f-4161-a75f-cad0c83a8330__Command_AGFPCELLPROMOTELAYERS_id6ecac76e.xml#id6ecac76e-e76f-4161-a75f-cad0c83a8330" title="Specifies pcell layers in the PHDB that are available for promotion in a subsequent AGF WRITE command.">AGF PCELL PROMOTE LAYERS</a></p>
+<p class="p">qs::set_agf_options -pcell_promote_layers</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Specifies pcell layers in the PHDB that
+are available for promotion in a subsequent AGF WRITE command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFRESET_ide968d6ac.html#ide968d6ac-d571-4afd-bd23-4df33451c95b__Command_AGFRESET_ide968d6ac.xml#ide968d6ac-d571-4afd-bd23-4df33451c95b" title="Sets the AGF configuration commands to their default values.">AGF RESET</a></p>
+<p class="p">qs::set_agf_options -reset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Sets the AGF commands
+to their default values.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFSEEDPROPERTY_id5db96c92.html#id5db96c92-f44a-449a-a54c-d2e4b85e54ff__Command_AGFSEEDPROPERTY_id5db96c92.xml#id5db96c92-f44a-449a-a54c-d2e4b85e54ff" title="Configures the type of device seed properties that can appear in AGF output.">AGF SEED PROPERTY</a></p>
+<p class="p">qs::set_agf_options -seed_property</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Configures the type of
+device seed properties that can appear in AGF output.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFSVRFMAP_ida260b7dd.html#ida260b7dd-c5c2-4b12-a732-685dc66b6b6a__Command_AGFSVRFMAP_ida260b7dd.xml#ida260b7dd-c5c2-4b12-a732-685dc66b6b6a" title="Configures the format of AGF MAP command output.">AGF SVRF MAP</a></p>
+<p class="p">qs::agf_map -svrf</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Configures the format
+of AGF MAP (or qs::agf_map).</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFUNITS_id419ccb13.html#id419ccb13-4c05-40e1-9d3b-b1ebf8bc6fdc__Command_AGFUNITS_id419ccb13.xml#id419ccb13-4c05-40e1-9d3b-b1ebf8bc6fdc" title="Specifies the values of the UNITS record in the output of the AGF WRITE command. AGF UNITS has no other effect on CCI output.">AGF UNITS</a></p>
+<p class="p">qs::set_agf_options -units</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Specifies the values
+of the UNITS record in the output of the <a class="xref fm:HeadingOnly" href="Command_AGFWRITE_id93bcd499.html#id93bcd499-4f66-4ea0-995f-e6d0acc193dd__Command_AGFWRITE_id93bcd499.xml#id93bcd499-4f66-4ea0-995f-e6d0acc193dd" title="Writes an annotated geometry format (AGF) file.">AGF WRITE</a> (or qs::write_agf) command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e225 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_AGFWRITE_id93bcd499.html#id93bcd499-4f66-4ea0-995f-e6d0acc193dd__Command_AGFWRITE_id93bcd499.xml#id93bcd499-4f66-4ea0-995f-e6d0acc193dd" title="Writes an annotated geometry format (AGF) file.">AGF WRITE</a></p>
+<p class="p"><a class="xref fm:HeadingOnly" href="Command_QswriteAgf_id3d90d8a1.html#id3d90d8a1-a38f-4136-a9f2-7f4fb4155387__Command_QswriteAgf_id3d90d8a1.xml#id3d90d8a1-a38f-4136-a9f2-7f4fb4155387" title="Writes an annotated AGF file.">qs::write_agf</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d74846e228 "><p class="p">Writes an AGF file.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "Annotated Geometry Format Commands"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_AnnotatedGeometryFormatCommands_idbed37247.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

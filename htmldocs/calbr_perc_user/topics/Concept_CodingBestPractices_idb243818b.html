@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Coding Best Practices" />
+<meta name="abstract" content="This section discusses some best practices for coding in Tcl and Calibre PERC. It also contains links to sections that relate to recommended coding methods." />
+<meta name="description" content="This section discusses some best practices for coding in Tcl and Calibre PERC. It also contains links to sections that relate to recommended coding methods." />
+<meta name="DC.subject" content="Guidelines, Best practices for coding" />
+<meta name="keywords" content="Guidelines, Best practices for coding" />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb243818b-ad58-4144-81a7-28cfbfcebc52" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Coding Best Practices</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Coding Best Practices" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idb243818b-ad58-4144-81a7-28cfbfcebc52">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Coding
+Best Practices</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This section
+discusses some best practices for coding in Tcl and Calibre PERC.
+It also contains links to sections that relate to recommended coding
+methods.</span>
+</div>
+<ul class="ul"><li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id12ae05be-a306-4c2e-86d9-4f12869398ac"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre PERC command library.</span> </p>
+<p class="p">To load the Calibre PERC library, you must
+specify the following command in the TVF Function: </p>
+<pre class="pre codeblock leveled"><code>package require CalibreLVS_PERC </code></pre></li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__idbbffbc9c-376c-4a83-85f4-d555aa2904bd"><p class="p"><span class="ph FontProperty HeadingLabel">Brace the argument to the expr command.</span></p>
+<p class="p">The ‘expr’ command takes a mathematical expression as its argument.
+That argument should be enclosed in braces “{ }”. For example:</p>
+<pre class="pre codeblock"><code>set var [expr {int($a)}]</code></pre><p class="p">Although omitting the braces is allowed, bracing the expression
+leads to better performance and data integrity.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id42286e5a-737c-4910-965d-fd3060161104"><p class="p"><span class="ph FontProperty HeadingLabel">Comment characters can behave like commands.</span> </p>
+<p class="p">In Tcl, comments are indicated by a hash
+mark (#) being the first non-whitespace character on a line. The
+leading # character is expected where the initial character of a command
+is found. In certain cases, a commented line can cause syntax errors.
+For example, this comment gives an error because it causes the braces
+to be unbalanced:</p>
+<pre class="pre codeblock leveled"><code># if {i &lt; 1} { 
+if {j &lt; 1} { 
+... 
+} </code></pre><p class="p">The first line in the following example is
+valid because it is preceded by a semicolon, but the third line
+is invalid because the second line ends with a backslash:</p>
+<pre class="pre codeblock leveled"><code>} ; # End check_device switch 
+perc::check_net -condition calc_adjacent_path \
+# "Net with MOS devices connected to different PAD paths"  </code></pre></li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__idc0ef994a-fb00-42df-b792-bf7efa121b08"><p class="p"><span class="ph FontProperty HeadingLabel">Netlist transformations.</span> </p>
+<p class="p">By default, Calibre PERC does not perform
+device reduction, unused device filtering, or logic injection, even
+if these features are enabled in the LVS rules. To enable these
+types of transformations, you should specify the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC Load</a> XFORM
+keyword set appropriate to the type of transformation you need.</p>
+<p class="p">Note that the XFORM keyword does not override
+an LVS rule file setting that disables any of these transformations.</p>
+<p class="p">If you use the XFORM keyword, you should
+ensure that all reducible properties are covered by effective property
+computations in your LVS Reduce statements.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If you use the XFORM
+keyword and you experience errors due to numeric properties that
+cannot be determined (the transformed netlist shows “UNKNOWN” properties), then
+you should check your effective property computations for device
+reduction.</p>
+</div>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id180030f3-b375-488f-88a4-733eb7b953a7"><p class="p"><span class="ph FontProperty HeadingLabel">General guidance on which Calibre PERC rule check commands to use.</span> </p>
+<p class="p">High-level guidance on Calibre PERC command
+usage is given under “<a class="xref fm:HeadingAndPage" href="MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.html#id80f61ef9-45ee-422e-a613-eb64c358180b__MGCChap_CalibrePercTopologyRuleChecks_id80f61ef9.xml#id80f61ef9-45ee-422e-a613-eb64c358180b" title="The core of the Calibre PERC functionality is topological rule checking. Topological rule checks are written in the Calibre PERC extension of TVF. This chapter contains naming conventions used when writing topology rule checks and working examples of initialization and rule check procedures.">Calibre PERC Topology Rule Checks</a>” and “<a class="xref fm:HeadingAndPage" href="Concept_VoltageCheckCoding_id11b112f0.html#id11b112f0-580b-4c0d-a0d9-ccdb5970123d__Concept_VoltageCheckCoding_id11b112f0.xml#id11b112f0-580b-4c0d-a0d9-ccdb5970123d" title="As for any topology checking in Calibre PERC, voltage checking uses both initialization procedures and rule checking procedures. Initialization procedures set up the voltage checking environment by specifying initial voltages and the paths along which those voltages may be propagated throughout the design. Rule checking procedures check voltage conditions in the design based upon the initialization conditions.">Voltage Check Coding</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id2fa9c679-e804-42f0-ae2a-282f283767b4"><p class="p"><span class="ph FontProperty HeadingLabel">Initialization procedure command order.</span> </p>
+<p class="p">Guidance for writing initialization procedures
+is given under “<a class="xref fm:HeadingAndPage" href="Concept_CommandOrderUseGuidelines_id6ea48ec1.html#id6ea48ec1-1f8b-4522-8099-4a907e004199__Concept_CommandOrderUseGuidelines_id6ea48ec1.xml#id6ea48ec1-1f8b-4522-8099-4a907e004199" title="The initialization procedure is a Tcl proc, and it follows Tcl conventions. In addition to those certain command usage guidelines govern how to write initialization procedures.">Command Order and Use Guidelines</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__ide665ce9e-5d9a-424c-8ccc-8fa99d5ade79"><p class="p"><span class="ph FontProperty HeadingLabel">Limit the number of net types in an initialization procedure.</span></p>
+<p class="p">Runtime and memory usage tend to increase
+with increasing numbers of net types in any initialization procedure
+(<span class="ph FontProperty emphasis">init proc</span>).
+For this reason, it is best to limit the number of net types to
+what is actually required to perform a set of rule checks that depend
+on the init proc. This practice also tends to simplify debugging
+of rule check results.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id2f6563d8-0a8a-483b-94d9-395d03eb4bf3"><p class="p"><span class="ph FontProperty HeadingLabel">Large numbers of voltage definitions in a single initialization procedure can adversely impact performance.</span> </p>
+<p class="p">This item is a corollary to the preceding
+one regarding net types. Having large numbers of symbolic voltages
+in an init proc can have an adverse effect upon performance.</p>
+<p class="p">Oftentimes a goal in voltage checking is
+to detect possible power-ground shorts. It is not necessary (or
+desirable) to assign a unique symbolic voltage to every supply port
+and then try to trace voltage conflicts across a large set of symbolic
+voltage names. Simply labeling all power ports with a single symbolic
+voltage, and doing a similar thing with ground ports, is sufficient
+and gives good performance. This also can simplify voltage tracing.
+See <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageGroup_idbdb87620.html#idbdb87620-cb7a-4979-90fe-0df343b16abe__id178305c8-882b-44d6-a1f4-a560a34d7b35">Example 2</a> under perc::define_voltage_group.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id4260601b-f833-409f-a4e5-b9beb0c8b5b8"><p class="p"><span class="ph FontProperty HeadingLabel">Hierarchy processing and proper device topology code.</span> </p>
+<p class="p">The general way nets are traversed by rule
+check commands is discussed under “<a class="xref fm:HeadingAndPage" href="Concept_HierarchyTraversalByRuleCheckCommands_id73bf23be.html#id73bf23be-1f78-46a5-accc-56357a93c933__Concept_HierarchyTraversalByRuleCheckCommands_id73bf23be.xml#id73bf23be-1f78-46a5-accc-56357a93c933" title="Certain Calibre PERC rule check commands traverse hierarchy. They process nets on a per-cell basis, and they proceed through the hierarchy as needed to return their outputs. How this is done is important to understand when coding and evaluating rule checks.">Hierarchy Traversal by Rule Check Commands</a>”. Guidance for coding device
+topology checks is given under “<a class="xref fm:HeadingAndPage" href="Concept_CodeGuidelinesDeviceTopologyRuleChecks_id89cb8559.html#id89cb8559-c44a-4b45-b581-102c001e9967__Concept_CodeGuidelinesDeviceTopologyRuleChecks_id89cb8559.xml#id89cb8559-c44a-4b45-b581-102c001e9967" title="Coding device topology checks is a complex process. There are certain things to be aware of and guidelines to follow to write effective device checks.">Code Guidelines for Device Topology Rule Checks</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id6dbc6b9b-2967-42f0-84cc-d4459099c4d3"><p class="p"><span class="ph FontProperty HeadingLabel">Processing cells independently using -opaqueCell.</span> </p>
+<p class="p">Guidance for how to use
+the -opaqueCell option for hierarchy processing management is discussed
+under “<a class="xref fm:HeadingAndPage" href="Concept_HierarchyTraversalOpaquecell_id81e7e878.html#id81e7e878-7e09-46c9-acf7-1ddda1873aeb__Concept_HierarchyTraversalOpaquecell_id81e7e878.xml#id81e7e878-7e09-46c9-acf7-1ddda1873aeb" title="The high-level commands like perc::check_device, perc::check_net, perc::check_device_and_net check, and perc::check_data check objects cell-by-cell by default. When nets are processed in the context of these commands, they automatically perform net traversal across cell boundaries when needed in the context of the lowest cell in the hierarchy that completely contains a net.">Hierarchy Traversal and -opaqueCell</a>”. This is an important section
+to review in order to understand how net-based results are generated
+by the tool.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__iddf9bfef4-8641-42e2-955d-2bd3f808ab17"><p class="p"><span class="ph FontProperty HeadingLabel">Tolerance matching for device property and voltage values.</span> </p>
+<p class="p">If
+two device property or net voltage values, respectively, are found
+to be within 0.001 percent of each other, then they are considered
+internally by the tool to be the same value. For properties, the
+tolerance applies when testing for equality of values, such as in pattern
+matching. For voltages, the tolerance applies when assigning voltages
+to nets, including use of UPF files. (The tool issues an error when
+it detects that two voltages are within the tolerance, but this
+is not always possible for very small differences.)</p>
+<p class="p">The tolerance is used because it prevents
+false errors that could be caused by binary numeric representation
+differences in host hardware. The tolerance range should be taken
+into account in rule writing.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__idb7ee8c84-0b30-44d4-92cf-508d022801ce"><p class="p"><span class="ph FontProperty HeadingLabel">Testing equality of floating-point numbers.</span> </p>
+<p class="p">The floating-point representation of a number
+is not necessarily the same as the mathematical value of the number.
+This is due to how binary numbers with a finite decimal representation
+are stored in memory. Furthermore, the Tcl representation of a floating-point
+number may not be the same as the representation of that same number
+by a Calibre PERC command, because the base code of such commands
+is not necessarily written in Tcl, while the rule file is. This
+situation can require special care in testing of equality (or inequality)
+of floating-point numbers. Rather than testing for exact equality, consider
+testing the values to see if they are within some tolerance of each
+other. This notional relation can be useful:</p>
+<pre class="pre codeblock leveled"><code>expr {abs($x - $y) &lt; 1e-05 * min($x,$y)} </code></pre><p class="p">If this relation returns true, then $x and
+$y may be considered equivalent, otherwise not. The tolerance precision
+of 1e-05 (or 0.001 percent) can be adjusted to the desired value.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id7e20df20-f0f8-448c-b817-b29e5d06d424"><p class="p"><span class="ph FontProperty HeadingLabel">Testing for NaN.</span></p>
+<p class="p">Certain commands can return “NaN”, which means “not-a-number”.
+It is frequently desirable to test for this condition in your code.
+This can be done most effectively as follows:</p>
+<pre class="pre codeblock"><code>if { [string compare -nocase $var nan]    == 0 } ||
+   { [string compare -nocase $var nanq] } == 0 } { 
+  # code goes here 
+} </code></pre></li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id9230e57e-039e-4c20-a747-ee05e07b96db"><p class="p"><span class="ph FontProperty HeadingLabel">Test iterators for the empty string when appropriate.</span> </p>
+<p class="p">It is possible that iterators can be returned
+empty because an iterator creation command does not find an object
+of interest. It is also possible an iterator can be stepped forward to
+the end of its sequence of values, where the returned value is empty.
+If either of these cases is possible, you should test the iterator
+return value against the empty string ("").</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__idde856f91-5c38-4032-a2fa-dee167afd57d"><p class="p"><span class="ph FontProperty HeadingLabel">Do not convert iterators to strings.</span> </p>
+<p class="p">Some Calibre PERC commands output iterators.
+This structure is discussed under “<a class="xref fm:HeadingAndPage" href="Concept_IteratorConcepts_id51cc0a59.html#id51cc0a59-3db0-4f03-81e1-cd179d70be3a__Concept_IteratorConcepts_id51cc0a59.xml#id51cc0a59-3db0-4f03-81e1-cd179d70be3a" title="The iterator control and data access commands rely on iterators. An iterator is a Tcl construct that provides access to data in the input netlist. Essentially, an iterator is an opaque array or list of references to design objects. You can traverse all of the elements in the design hierarchy using iterators. The string representation of an iterator is not meaningful and can change from release to release.">Iterator Concepts</a>”. Iterators are designed to
+be stepped through using Calibre PERC commands that manipulate them.
+The internal structure of an iterator is not useful, nor is it transparent
+(although it is always sequential). </p>
+<p class="p">You should not convert iterators to strings.
+For example, do not do this:</p>
+<pre class="pre codeblock leveled"><code>set len [string length $iterator]; # bad </code></pre><p class="p">The most common Tcl commands that cause problems
+in this context are string, concat, and eval. Iterator lists converted
+to strings can become invalid later, especially when concat is used.
+Iterator values used as array keys can also cause a problem and
+should be avoided.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id28a09749-9a46-4d44-a68b-5bc9cc50e840"><p class="p"><span class="ph FontProperty HeadingLabel">Store lists as lists instead of as strings.</span> </p>
+<p class="p">The following sequence of commands causes
+Tcl to use extra memory:</p>
+<pre class="pre codeblock leveled"><code>set var "a b c d" 
+# var is a string 
+set length [llength $var] 
+# var treated as list of length 4 </code></pre><p class="p">Here the variable var is initially stored
+as a string, but then it is used in a list context. This can cause
+memory usage problems because of the conversion between string and list
+variable types, especially as the data set becomes large.</p>
+<p class="p">Use the list command to store variables that
+are used as lists:</p>
+<pre class="pre codeblock leveled"><code>set var [list "a b c d"] 
+# var treated as list of length 1 </code></pre></li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id07e8e360-acd0-4e95-9f5e-2fbc6aa460c4"><p class="p"><span class="ph FontProperty HeadingLabel">Restrict file I/O during runtime.</span> </p>
+<p class="p">Reading from and writing to separate files
+from the Tcl code can have an adverse performance impact. This impact
+increases with the number of reads and writes, the sizes of the
+files that are processed, and any network latency in accessing the
+disc where the files may be stored. If file I/O is performed, files
+should be closed as quickly as possible.</p>
+<p class="p">In MT runs, file I/O to and from the same
+files by rule checks that are not in the same check group are disallowed.
+This is because the order of reads and writes cannot be guaranteed
+across rule check groups in MT mode.</p>
+<p class="p">Runtime annotations offer a more efficient alternative to file
+I/O in certain cases. See <a class="xref fm:HeadingOnly" href="Command_PercsetAnnotation_idc65a020e.html#idc65a020e-4293-4c51-b80d-f16209616d89__Command_PercsetAnnotation_idc65a020e.xml#idc65a020e-4293-4c51-b80d-f16209616d89" title="Attaches a user annotation to a device or a net. This allows testing of the annotation value in another rule check.">perc::set_annotation</a> for information
+about how to set up runtime annotations. Hash collections also offer
+a better alternative to file I/O. See “<a class="xref fm:HeadingAndPage" href="Concept_CollectionsAndCollectionIterators_id866db00e.html#id866db00e-656e-419c-a896-5a75bd7c1d9f__id390d2a25-2197-4a32-9c75-7210466b15b9">Hash Collections</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id48199292-cd6e-41de-acf8-322917aabae0"><p class="p"><span class="ph FontProperty HeadingLabel">Avoid modifying global variables during runtime.</span> </p>
+<p class="p">In general, it is best to avoid using global
+variables that are accessed by multiple rule checks and that are
+modified during runtime. This is especially important in multithreaded
+runs (PERC Load SELECT PARALLEL). Tcl global variables cannot be shared
+between interpreters that are executing on different threads. If
+you have global variables that are accessed and written to by multiple
+checks, ensure that all the checks that access globals are in the
+same check group.</p>
+<p class="p">Runtime annotations offer a more efficient alternative to global
+variables in many cases. See <a class="xref fm:HeadingOnly" href="Command_PercsetAnnotation_idc65a020e.html#idc65a020e-4293-4c51-b80d-f16209616d89__Command_PercsetAnnotation_idc65a020e.xml#idc65a020e-4293-4c51-b80d-f16209616d89" title="Attaches a user annotation to a device or a net. This allows testing of the annotation value in another rule check.">perc::set_annotation</a> for information
+about how to set up runtime annotations. Hash collections also offer
+a better alternative to global variables. See “<a class="xref fm:HeadingAndPage" href="Concept_CollectionsAndCollectionIterators_id866db00e.html#id866db00e-656e-419c-a896-5a75bd7c1d9f__id390d2a25-2197-4a32-9c75-7210466b15b9">Hash Collections</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id1706a899-7312-4e4c-83aa-f3ce78ae0eec"><p class="p"><span class="ph FontProperty HeadingLabel">Pattern template configuration.</span> </p>
+<p class="p">Guidance for pattern matching templates is
+found under “<a class="xref fm:HeadingAndPage" href="Concept_PatternMatchingPerformanceOptimization_idaf56264e.html#idaf56264e-eee2-4a6a-8a8c-4e8075d718ab__Concept_PatternMatchingPerformanceOptimization_idaf56264e.xml#idaf56264e-eee2-4a6a-8a8c-4e8075d718ab" title="In general, pattern matching can achieve better performance if certain optimizing practices are used.">Pattern Matching Performance Optimization</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id4566b928-5eb4-4d03-b2aa-82732b3882fb"><p class="p"><span class="ph FontProperty HeadingLabel">Subcircuits serving as devices.</span> </p>
+<p class="p">Guidance for using subcircuits as devices
+is given under “<a class="xref fm:HeadingAndPage" href="Concept_SubcircuitsDevices_idde32902a.html#idde32902a-4f0a-4b90-a0dd-0d7a345bde21__Concept_SubcircuitsDevices_idde32902a.xml#idde32902a-4f0a-4b90-a0dd-0d7a345bde21" title="Primitive SPICE subcircuits can serve as devices for many commands, so it is important to understand how they work in this context.">Subcircuits as Devices</a>”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__idff48ba67-26ad-47dd-ad7d-28c9a57f4011"><p class="p"><span class="ph FontProperty HeadingLabel">Voltage check general coding guidelines.</span> </p>
+<p class="p">Guidance for coding connectivity-based voltage
+checks is given under “<a class="xref fm:HeadingAndPage" href="Concept_VoltageCheckCoding_id11b112f0.html#id11b112f0-580b-4c0d-a0d9-ccdb5970123d__Concept_VoltageCheckCoding_id11b112f0.xml#id11b112f0-580b-4c0d-a0d9-ccdb5970123d" title="As for any topology checking in Calibre PERC, voltage checking uses both initialization procedures and rule checking procedures. Initialization procedures set up the voltage checking environment by specifying initial voltages and the paths along which those voltages may be propagated throughout the design. Rule checking procedures check voltage conditions in the design based upon the initialization conditions.">Voltage Check Coding</a>”. Also see <a class="xref fm:HeadingOnly" href="Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.html#iddd0d1ab0-d5fb-49c0-8083-7893862fc978__Contain_CodeGuidelinesUnidirectionalCurrentChecks_iddd0d1ab0.xml#iddd0d1ab0-d5fb-49c0-8083-7893862fc978" title="Vector-less voltage propagation can cause impossible voltage configurations to be reported. For instance, MOSFETs have interchangeable S and D pins. In a passgate configuration, current can flow either from source to drain or from drain to source. Frequently, only one of these directions can logically occur, but it is generally difficult or impossible for Calibre PERC to determine which one without additional user programming.">Code Guidelines for Unidirectional Current Checks</a>.</p>
+<p class="p">Voltage propagation iteration increases with
+device chains (stacks), such as for MOS and R devices. This increases
+runtime. If such structures exist in your design, it is best to allow
+series reduction (LVS Reduce Series) and to specify <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC Load </a>XFORM REDUCTION,
+or box the structures using <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Box', 'svrf_ur'); return false;">LVS Box</a>,
+so they are considered a single device.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id61251ebb-1b57-462e-aa5b-267a25622625"><p class="p"><span class="ph FontProperty HeadingLabel">Proper voltage intervals.</span> </p>
+<p class="p">The <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageInterval_id97b2b367.html#id97b2b367-5449-4921-859a-30bc2e61d886__Command_PercdefineVoltageInterval_id97b2b367.xml#id97b2b367-5449-4921-859a-30bc2e61d886" title="Specifies voltage resolution.">perc::define_voltage_interval</a> statement is used for defining
+the interval for possible voltages used by the system. This can
+be thought of as the precision to which voltages can be assigned
+and reported. </p>
+<p class="p">No interval is used if no voltages are created
+during the run. This is for efficiency.</p>
+<p class="p">If you create voltages during the run through
+-pinLimit or -pinVoltage procedures, or through <a class="xref fm:HeadingOnly" href="Command_PercdefineVoltageDrop_idc6eb4714.html#idc6eb4714-d6f6-4c7b-932d-2ce43dc96927__Command_PercdefineVoltageDrop_idc6eb4714.xml#idc6eb4714-d6f6-4c7b-932d-2ce43dc96927" title="Specifies voltage drop values for a net or pin.">perc::define_voltage_drop</a> statements, you should set a reasonable
+voltage interval. For example, if any voltage assigned during the
+run requires a precision no greater than 0.1, then the voltage interval
+should be set accordingly. The default is 0.01, but using a larger
+interval (which accommodates the precision of any voltage used in
+the run) can result in better performance.</p>
+<p class="p">If you use -pinLimit or -pinVoltage, but
+you create no new voltages during the run, then you should set the
+interval to “none”.</p>
+</li>
+<li class="li" id="idb243818b-ad58-4144-81a7-28cfbfcebc52__id893e2325-f056-4840-8977-8d43622bf9a1"><p class="p"><span class="ph FontProperty HeadingLabel">Propagating voltage drops independent of pin order.</span> </p>
+<p class="p">For cases when voltages from differing domains
+can be dropped across devices along a path, and you want to control
+which dropped voltage prevails on a net, see “<a class="xref fm:HeadingAndPage" href="Command_PerccreateVoltagePath_id2094c0cf.html#id2094c0cf-1da3-41d7-9049-860de10b6ca7__iddc639f15-1371-4cc4-b261-f6b5d9916310">Example 4</a>”.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_GettingStartedCalibrePerc_idae658a0a.html" title="Calibre PERC uses a Tcl command interface. In order to write rules successfully, significant Tcl knowledge is required. Running Calibre PERC checks is similar to DRC in that there are rule checks, and the results presentation in Calibre RVE is rule check based. However, topological rule checks are based upon circuit topology (netlists) rather than physical layout, so debugging these results has certain similarities to LVS. Debugging mask-layout-based check results, such as those produced by Logic-Driven Layout applications, tends to be very DRC-like in many cases.">Getting Started With Calibre PERC</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Coding Best Practices"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CodingBestPractices_idb243818b.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

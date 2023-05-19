@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating a Post-LVS Calibre View" />
+<meta name="abstract" content="Calibre Interactive and Calibre RVE generate a Calibre View for the top-level cell, regardless of the cell context set in the tools. The tools generate net and device names in the Calibre View from the source (or schematic) name space, unless nets and devices were unmatched during LVS comparison. In the latter case, the tool prefixes layout names with a “_Layout”." />
+<meta name="description" content="Calibre Interactive and Calibre RVE generate a Calibre View for the top-level cell, regardless of the cell context set in the tools. The tools generate net and device names in the Calibre View from the source (or schematic) name space, unless nets and devices were unmatched during LVS comparison. In the latter case, the tool prefixes layout names with a “_Layout”." />
+<meta name="prodname" content="Calibre Interactive User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf3b732b0-7aae-45a9-b522-47491711bb6a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating a Post-LVS Calibre View</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating a Post-LVS Calibre View" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf3b732b0-7aae-45a9-b522-47491711bb6a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating a Post-LVS Calibre View</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">Calibre Interactive
+and Calibre RVE generate a Calibre View for the top-level cell,
+regardless of the cell context set in the tools. The tools generate
+net and device names in the Calibre View from the source (or schematic)
+name space, unless nets and devices were unmatched during LVS comparison.
+In the latter case, the tool prefixes layout names with a “_Layout”.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id7d935f19-a3b7-4b7a-89df-2df3fae15869"><p class="p">Ensure
+you have the necessary input files. See “<a class="xref fm:HeadingAndPage" href="Concept_WhatYouNeedBeforeCreatingCalibreView_idf97aa7a5.html#idf97aa7a5-ac2a-4517-87ce-24c04a2128ec__Concept_WhatYouNeedBeforeCreatingCalibreView_idf97aa7a5.xml#idf97aa7a5-ac2a-4517-87ce-24c04a2128ec" title="Producing a Calibre View requires the correct product licenses, input files, and integration setup.">What You Need Before Creating a Calibre View</a>”.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idf05f0962-ffc3-4fe3-b212-7198b6e585e9"><p class="p">If
+importing schematic properties, make sure Source Case, Layout Case,
+and LVS Compare Case SVRF statements are in your SVRF rule file. </p>
+<p class="p">Because the Cadence Analog
+Design framework treats net and instance names in schematics case
+sensitively, you must use the following statement in your SVRF rule file:</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Source Case', 'svrf_ur'); return false;">Source Case</a> YES </p>
+<p class="p">Adding this statement enables
+highlighting by the Calibre RVE tool in the Cadence schematics and
+the importation of schematic properties by the Calibre View generator. Also
+see “<a class="xref fm:HeadingAndPage" href="Concept_ImportingSchematicPropertiesCalibreView_id53dd6004.html#id53dd6004-c0d3-4538-9751-cdae092df688__Concept_ImportingSchematicPropertiesCalibreView_id53dd6004.xml#id53dd6004-c0d3-4538-9751-cdae092df688" title="Because the Cadence Analog Design framework treats net and instance names in schematics case sensitively, you must add the Source Case statement to your SVRF rule file when creating a Calibre View.">Importing Schematic Properties for Calibre View</a>”.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id37140c98-2d8c-44d1-ba2f-dfe1ca3f39e0"><p class="p">Create
+the cellmap file. See “<a class="xref fm:HeadingAndPage" href="TaskTop_CreatingCellmapFile_idb484dd14.html#idb484dd14-a5f2-450c-83e9-a44e6fc0b262__TaskTop_CreatingCellmapFile_idb484dd14.xml#idb484dd14-a5f2-450c-83e9-a44e6fc0b262" title="The cellmap file is a text file that is used when creating a Calibre View.">Creating the Cellmap File</a>”.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id18e49d55-f28c-413c-94d6-8579627be59c"><p class="p">(Optional)
+Set the environment variable CALIBRE_DISABLE_PPAR_WARNINGS to disable
+pPar evaluation warnings.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id19625d10-2ed1-45d6-ab5f-698ebcaa08e5"><span class="ph cmd">Open the layout in Cadence
+Virtuoso.</span></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id9c59b439-46b1-4cc7-8e6b-8dbbe2d90928"><span class="ph cmd">Choose <span class="ph menucascade"><span class="ph uicontrol">Calibre</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Run nmLVS</span></span>. </span><div class="itemgroup info StepInfo"><p class="p">This invokes Calibre
+Interactive nmLVS. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Leave
+the “Export from layout viewer” button checked on the <span class="ph uicontrol">Layouts</span> tab
+of the Inputs pane. </p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id9c159397-41f4-4a2d-981f-d3eb9456d408"><span class="ph cmd">Click the <span class="ph uicontrol">Outputs</span> button.</span></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__ida37e07a1-ef39-4f37-905e-4e3c877ec89b"><span class="ph cmd">In the <span class="ph uicontrol">Report/SVDB </span>tab,
+do the following:</span><ol type="a" class="ol substeps"><li class="li substep" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idcc69c9ad-64ed-4199-9f1e-aa2151638293"><span class="ph cmd">Enable “Create SVDB Database.” </span></li>
+<li class="li substep" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id784ba8cf-0291-4c8b-88d4-50384efa9261"><span class="ph cmd">Enable “Start RVE after LVS
+finishes.” </span></li>
+<li class="li substep" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id01d83608-771e-48d1-ba56-a6d9682e335d"><span class="ph cmd">Enter the “SVDB Directory”
+name. </span></li>
+<li class="li substep" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__ida29358f0-4f0c-4e2e-903c-1b3d06d38000"><span class="ph cmd">Enable the “Generate Calibre
+Connectivity Interface Data” option.</span></li>
+</ol>
+</li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idc7b41dc1-3dd0-4fbc-a506-c2362331c9d8"><span class="ph cmd">Set all other required parameters
+for the Rules, Inputs, Outputs and LVS Options, as described in “<a class="xref fm:HeadingAndPage" href="MGCChap_UsingCalibreInteractivePerformLvs_idea5a4b81.html#idea5a4b81-a0ed-4779-98da-4163d3a59e65__MGCChap_UsingCalibreInteractivePerformLvs_idea5a4b81.xml#idea5a4b81-a0ed-4779-98da-4163d3a59e65" title="The Calibre Interactive nmLVS GUI allows you to specify command line options and select rule file statements for a Calibre nmLVS run. You can save GUI settings to a Calibre Interactive runset and load them in future runs.">Using Calibre Interactive to Perform LVS</a>”.</span></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id50d72e1a-3922-4be0-8b14-241140de883d"><span class="ph cmd">Click <span class="ph uicontrol">Run LVS</span>.</span><div class="itemgroup info StepInfo"><p class="p">Upon completion of the Calibre
+nmLVS‑H run, Calibre RVE automatically opens with the results of
+the run.</p>
+</div></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__ide33cdc5d-729b-4763-86ce-5445abebb384"><span class="ph cmd">In Calibre RVE, choose <span class="ph uicontrol">Tools
+&gt; Export CalibreView</span>. </span><div class="itemgroup info StepInfo"><div class="note tip"><span class="tiptitle">Tip</span> <p class="p">If you did <span class="ph FontProperty emphasis">not</span> open
+Calibre RVE from Calibre Interactive, choose <span class="ph menucascade"><span class="ph uicontrol">Highlight</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Setup Cell Map</span></span> before creating
+the Calibre View and confirm that the cell mapping is correct. See
+“<a class="xref Link" href="../../calbr_rve_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Map Calibre RVE Cells to Different Cadence Library for Highlighting', 'calbr_rve_user'); return false;">Map Calibre RVE Cells to Different Cadence Library for Highlighting</a>” in the <cite class="cite">Calibre
+RVE User’s Manual</cite>. </p>
+</div>
+</div></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idf969c200-be94-40fb-b940-5b57c116965c"><span class="ph cmd">Click <span class="ph uicontrol">OK</span> in
+the Export Calibre View dialog box.</span></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id81b70947-6aa5-4ddc-b1aa-004436ba80b4"><span class="ph cmd">Make selections in the Calibre
+View Setup dialog box. If the Calibre View Setup dialog box does
+not open automatically, choose <span class="ph uicontrol">Calibre &gt; Setup &gt; Calibre
+View</span> and enable “Always Show Dialog.” Most dialog settings
+are self-explanatory; refer to “<a class="xref fm:HeadingAndPage" href="General_CalibreViewSetupDialogBox_id98e537e4.html#id98e537e4-62e3-465c-bc6c-b13033924945__General_CalibreViewSetupDialogBox_id98e537e4.xml#id98e537e4-62e3-465c-bc6c-b13033924945" title="The Calibre View Setup dialog box has settings for several aspects of the Calibre View creation process.">Calibre View Setup Dialog Box</a>” or see below for tips on setting
+some of the fields:</span><div class="itemgroup info StepInfo"><ul class="ul"><li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idda6fcdf3-cab9-465d-a470-32bbdbe85f1a"><p class="p"><span class="ph FontProperty HeadingLabel">CalibreView Setup File</span> —
+Enter a CalibreView setup file then click <span class="ph uicontrol">Load</span> to populate
+the dialog box with the settings. If the setup file includes all
+the necessary settings, proceed to Step <a class="xref fm:NumberOnlyBlack" href="#idf3b732b0-7aae-45a9-b522-47491711bb6a__id5dfdd83f-4d0c-46a1-835d-2ad640680b52">10</a>. See “<a class="xref fm:HeadingAndPage" href="TaskTop_CreatingCalibreviewSetupFile_id422e7909.html#id422e7909-d05c-4269-9d31-22ffe99bfb3f__TaskTop_CreatingCalibreviewSetupFile_id422e7909.xml#id422e7909-d05c-4269-9d31-22ffe99bfb3f" title="The CalibreView setup file contains all the settings necessary to generate a CalibreView. You can use the file as input to the SKILL function mgc_rve_load_setup_file to create the CalibreView in batch mode, without opening the Calibre View Setup dialog box. The file can also be loaded into the Calibre View Setup dialog box in order to populate the dialog box with saved settings.">Creating a CalibreView Setup File</a>”.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id0d3762fa-a99a-4fad-8909-b52d74c7f24c"><p class="p"><span class="ph FontProperty HeadingLabel">CalibreView Netlist File </span>—
+Enter the name of an existing CalibreView netlist file. This field
+is filled in automatically when the dialog box is opened automatically during
+a Calibre Interactive run.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id9ab64193-13bb-4e52-821e-085ae136cb07"><p class="p"><span class="ph FontProperty HeadingLabel">Output Library</span> —
+Enter the library name for the design.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idf16212dd-3a2b-4693-aa7e-1d1cc3600774"><p class="p"><span class="ph FontProperty HeadingLabel">Cellmap File</span> —
+Enter the cellmap filename. See “<a class="xref fm:HeadingAndPage" href="General_CellmapSyntaxIntentionalDevices_ida63185cf.html#ida63185cf-2a1e-4eb4-a911-3673cc965571__General_CellmapSyntaxIntentionalDevices_ida63185cf.xml#ida63185cf-2a1e-4eb4-a911-3673cc965571" title="The cellmap statement for intentional devices instructs the Calibre View process on how to map the device.">Cellmap Syntax for Intentional Devices</a>” for
+cellmap creation procedures. Multiple cellmap files may be specified;
+enter multiple files as a space-separated list. Files are concatenated
+in the order specified. You may also specify an iCellMap file. </p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__ida14de29b-4050-46ad-ba21-26c29dd7a6e5"><p class="p"><span class="ph FontProperty HeadingLabel">Calibre View Type </span>—
+Set the Calibre View Type to “maskLayout.” This view permits both
+geometries and schematic symbols to be drawn together.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idef6bb8aa-179c-4adf-93f7-0e0ec90a9965"><p class="p"><span class="ph FontProperty HeadingLabel">Preserve Device Case</span> —
+Select this option to ensure that mixed case netlist files have
+their capitalization maintained throughout Calibre processing. The
+case of pin names is always ignored, regardless of this setting. </p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id9341dfff-e507-4f0b-acf7-499ba73452cf"><p class="p"><span class="ph FontProperty HeadingLabel">Reset Properties </span>—
+Specify properties you want reset to a specific value after being copied
+from the schematic. Only simple assignment is done; you cannot assign
+to a variable or another property value.</p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__idde9e9139-f448-402e-b319-6ade7eff2cfa"><p class="p"><span class="ph FontProperty HeadingLabel">Magnify Instances By</span> —
+Enter the magnification value the tool applies to intentional and
+parasitic devices. Specify a value less than one to prevent overlap
+of instances when generating a maskLayout Calibre View. </p>
+</li>
+<li class="li" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id8aab6873-540a-4d6a-b604-51864964bc16"><p class="p"><span class="ph FontProperty HeadingLabel">Generate SPECTRE Netlist </span>—
+Generate a SPECTRE netlist in addition to the Calibre View netlist.
+See “<a class="xref fm:HeadingAndPage" href="TaskTop_CreatingSpectreNetlistFromCalibreViewNetlist_idea0c0321.html#idea0c0321-1e81-491d-9a6d-81daa515fd2e__TaskTop_CreatingSpectreNetlistFromCalibreViewNetlist_idea0c0321.xml#idea0c0321-1e81-491d-9a6d-81daa515fd2e" title="You can generate a SPECTRE netlist from the Calibre View netlist using the Cadence Analog Design Environment (ADE). Cellmap information is used in the netlist generation, unlike the case when generating a SPECTRE netlist from Calibre xRC, in which source names are used.">Creating a SPECTRE Netlist from the Calibre View Netlist</a>”.</p>
+</li>
+</ul>
+</div></li>
+<li class="li step stepexpand" id="idf3b732b0-7aae-45a9-b522-47491711bb6a__id5dfdd83f-4d0c-46a1-835d-2ad640680b52"><span class="ph cmd">Click <span class="ph uicontrol">OK</span> to
+create the CalibreView and save the settings in the dialog box. </span><div class="itemgroup info StepInfo"><div class="note note"><span class="notetitle">Note:</span> <p class="p">Wire stubs with net name
+labels are available in maskLayout view type. Similar to Schematics
+view type, the net names associated with the wires should also be
+created.</p>
+<p class="p">To make the wires selectable
+in CalibreView, choose <span class="ph menucascade"><span class="ph uicontrol">Options</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Display</span></span>. In the Options dialog
+box, set both the X Snap Spacing and Y Snap Spacing fields to smaller
+values (e.g. 0.001); verify that the layer purpose pair (“wire”
+“drawing”) is both visible and selectable in the Layer Selection
+Window.</p>
+</div>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The Calibre View netlist is created. </p>
+<p class="p">In addition, the file <span class="ph filepath">calibreview.setup</span> is
+created in the run directory with the current Calibre View settings.
+This file is in the <a class="xref fm:HeadingOnly" href="FileRef_CalibreviewSetupFileFormat_id1fd537de.html#id1fd537de-0452-4905-91d5-3d9c08ab5b31__FileRef_CalibreviewSetupFileFormat_id1fd537de.xml#id1fd537de-0452-4905-91d5-3d9c08ab5b31" title="The CalibreView setup file allows you to specify the parameters for CalibreView creation without opening the Calibre View Setup dialog box.">CalibreView Setup File Format</a>. The file can be loaded into the Calibre
+View Setup dialog box to populate the dialog box with settings for
+the run. Browse for the file or enter the filename into the “Calibreview
+Setup File” field and click the <span class="ph uicontrol">Load</span> button. It
+can also be used as input to the SKILL function <a class="xref fm:HeadingOnly" href="General_SkillFunctionsGlobalVariablesCreatingCalibreView_id2c0164f4.html#id2c0164f4-deb0-4932-85d1-29c6f1e91cfb__id0ad84739-5beb-479f-96f3-d4067d10e9ab">mgc_rve_load_setup_file</a> to create
+the Calibre View in batch mode.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CreatingCalibreView_id00d1a224.html" title="A Calibre View of a cell is a schematic view of a cell you can simulate in the Cadence Analog Design Environment. This schematic view contains the connectivity and intentional devices the Calibre LVS tool extracts, and, optionally, parasitic devices the Calibre xRC tool extracts.">Creating a Calibre View</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_MappingSchematicNetsCalibreViewNetsSimulationPlotting_idf19ff912.html#idf19ff912-1965-449e-915a-de4c915ad109__" title="A typical step after parasitic extraction is the simulation of an extracted Calibre View in the Cadence Analog Design Environment. The method you use depends on whether you have multiple extracted Calibre Views or just one.">Mapping Schematic Nets to Calibre View Nets for Simulation and Plotting</a></div>
+<div><a class="link" href="../topics/TaskTop_BackannotationParasiticValuesSchematicInCadenceVirtuoso_idd1ca8a88.html#idd1ca8a88-dd44-49f1-8647-6aefdd408368__" title="When debugging parasitics in the design it is sometimes useful to backannotate the schematic with the extracted parasitic values. This can be done using the dialog box “Map Schematic Nets to CalibreView Nets”. Backannotation can also be deleted.">Backannotation of Parasitic Values to the Schematic in Cadence Virtuoso</a></div>
+<div><a class="link" href="../topics/Concept_ShowingParasiticPolygonsInCalibreView_idf9c6a3f7.html#idf9c6a3f7-76df-4d1b-8e78-3665abdd3ff2__" title="You can use the display and annotation of parasitic polygons to more easily analyze design parasitics.">Showing Parasitic Polygons in Calibre View</a></div>
+<div><a class="link" href="../topics/TaskTop_CreatingCalibreViewInBatchMode_idfdddaad0.html#idfdddaad0-17eb-4bf4-8903-c36ca6c2209d__" title="The SKILL function mgc_rve_load_setup_file() uses the parameters in the CalibreView setup file to create a CalibreView without opening the Calibre View Setup dialog box.">Creating a Calibre View in Batch Mode</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_user"
+                DocTitle = "Calibre® Interactive™ User’s Manual"
+                PageTitle = "Creating a Post-LVS Calibre View"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingPostLvsCalibreView_idf3b732b0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

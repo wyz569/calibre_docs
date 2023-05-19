@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Comparison of Enclosure Calculation Functions and Methods" />
+<meta name="abstract" content="The enclosure functions, the DFM Property data retrieval functions, and the Device TVF functions are useful for MOS device well proximity computation and similar applications. They are primarily used to extract physical parameters for BSIM4 device models." />
+<meta name="description" content="The enclosure functions, the DFM Property data retrieval functions, and the Device TVF functions are useful for MOS device well proximity computation and similar applications. They are primarily used to extract physical parameters for BSIM4 device models." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Comparison of Enclosure Calculation Functions and Methods</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Comparison of Enclosure Calculation Functions and Methods" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Comparison of Enclosure Calculation Functions
+and Methods</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The enclosure
+functions, the DFM Property data retrieval functions, and the Device
+TVF functions are useful for MOS device <span class="ph FontProperty emphasis">well proximity</span> computation
+and similar applications. They are primarily used to extract physical
+parameters for BSIM4 device models. </span>
+</div>
+<p class="p">The enclosure functions consist of
+the following:</p>
+<ul class="ul"><li class="li" id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65__id120fedc0-85f3-4d85-b17d-a93f8bf224bc"><p class="p"><a class="xref fm:HeadingOnly" href="Command_BILDevPropDeviceEnclosureMeasurements_idb90e06d6.html#idb90e06d6-8682-4151-811f-998cea4e2f21__Command_BILDevPropDeviceEnclosureMeasurements_idb90e06d6.xml#idb90e06d6-8682-4151-811f-998cea4e2f21" title="Returns a layer containing a DFM property vector of numbers that correspond to edge enclosure measurements for device seed shapes. The output layer is used as an auxiliary layer argument (or to derive such a layer) in a Device statement. This function may only be called in a tvf::SETLAYER command.">device::enclosure_measurements</a>, <a class="xref fm:HeadingOnly" href="Command_BILDevPropdevice_enclosure_parallel_measurements_id0fada000.html#id0fada000-102c-11e7-b101-005056b32f49__Command_BILDevPropdevice_enclosure_parallel_measurements_id0fada000.xml#id0fada000-102c-11e7-b101-005056b32f49" title="Returns a layer containing a DFM property vector of numbers that correspond to edge enclosure measurements parallel to device seed shape edges. The output layer is an edge layer with DFM vector properties used to derive an auxiliary layer argument in a Device statement. This function may only be called in the context of a tvf::SETLAYER command.">device::enclosure_parallel_measurements</a>, and <a class="xref fm:HeadingOnly" href="Command_BILDevPropdeviceenclosure_perpendicular_measurements_idc6a6dc3e.html#idc6a6dc3e-13fd-11e7-8670-005056b32f49__Command_BILDevPropdeviceenclosure_perpendicular_measurements_idc6a6dc3e.xml#idc6a6dc3e-13fd-11e7-8670-005056b32f49" title="Returns a layer containing a DFM property vector of numbers that correspond to edge enclosure measurements perpendicular to device seed shape edges. The output layer is an edge layer with DFM vector properties used to derive an auxiliary layer argument in a Device statement. This function may only be called in the context of a tvf::SETLAYER command.">device::enclosure_perpendicular_measurements</a> functions
+— Used only in Calibre and requires a Calibre Advanced Device Properties
+(ADP) product license. This function set is similar to the ENClosure_*
+functions, but has better performance in most cases.</p>
+</li>
+<li class="li" id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65__id95ce936e-0418-427b-9358-efe8e247518f"><p class="p"><a class="xref fm:HeadingOnly" href="General_DfmPropertyDataRetrievalFunctions_idc81af6e3.html#idc81af6e3-4181-4b46-aee8-8d3047f821c6__General_DfmPropertyDataRetrievalFunctions_idc81af6e3.xml#idc81af6e3-4181-4b46-aee8-8d3047f821c6" title="The Device Layer ANNOTATE operation and the Device statement’s device_annotation_program support data access functions that are used in conjunction with the DFM Property operation to retrieve values for use within device property computations. This capability is part of the TVF functional interface for device property computation. For vector functions, there are corresponding functions for converting DFM vector properties into Device enclosure function measurement format.">DFM Property Data Retrieval Functions</a> — Used only in Calibre and requires
+a Calibre Advanced Device Properties (ADP) product license.</p>
+<p class="p">For information about using the DFM Property
+operation for device enclosure calculations, see “<a class="xref fm:HeadingAndPage" href="Concept_WellEnclosureStressEffectCalculationsDfmProperty_idc3cc8e33.html#idc3cc8e33-e128-402f-89e3-75857c21aee8__Concept_WellEnclosureStressEffectCalculationsDfmProperty_idc3cc8e33.xml#idc3cc8e33-e128-402f-89e3-75857c21aee8" title="The DFM Property operation is useful for calculating complex device properties. It allows attachment of values to polygons in order to report stress effect properties in a netlist.">Well Enclosure or Stress Effect Calculations with DFM Property</a>”.</p>
+</li>
+<li class="li" id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65__id09ef0b8d-3845-43aa-ae8e-9a6ef048dc1b"><p class="p"><a class="xref fm:HeadingOnly" href="Command_BILDevPropEnclosureParallel_id8d473446.html#id8d473446-1261-4c6c-be4e-07417706e744__Command_BILDevPropEnclosureParallel_id8d473446.xml#id8d473446-1261-4c6c-be4e-07417706e744" title="Returns a vector of numbers that correspond to trapezoidal dimensions of average enclosure distances and widths.">enclosure_parallel</a> and <a class="xref fm:HeadingOnly" href="Command_BILDevPropEnclosurePerpendicular_id0d1c1874.html#id0d1c1874-facd-4d19-81ac-c9584b841377__Command_BILDevPropEnclosurePerpendicular_id0d1c1874.xml#id0d1c1874-facd-4d19-81ac-c9584b841377" title="Returns a vector of numbers that correspond to trapezoidal dimensions of average enclosure distances and widths.">enclosure_perpendicular</a> functions — Used only in Calibre
+and requires a Calibre Advanced Device Properties (ADP) product
+license. These are older functions that do not perform as well as
+device<span class="ph fmvar:double_colon">::</span>enclosure_measurements
+for well proximity applications.</p>
+</li>
+<li class="li" id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65__id9beff028-719a-405e-8cb9-76f7ef0683f2"><p class="p"><a class="xref fm:HeadingOnly" href="Command_BILDevPropEnclosureVector_idcc863c6a.html#idcc863c6a-8786-4dd4-b7e7-22fb75f36f74__Command_BILDevPropEnclosureVector_idcc863c6a.xml#idcc863c6a-8786-4dd4-b7e7-22fb75f36f74" title="Returns a vector of numbers that correspond to trapezoidal dimensions for polygons.">enclosure_vector</a> function — Used only in Calibre
+and requires a Calibre nmLVS product license. For well proximity
+applications, this operation has poorer performance than those listed
+previously.</p>
+</li>
+</ul>
+<p class="p">The following table outlines differences
+between how the various enclosure functions calculate enclosure
+measurements.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id6b1c8701-fe2b-4f15-9c4e-7b045e790d65__ide1c610a8-2b7e-4a6d-b25d-28c6779b37f2" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Differences in Historical Enclosure Calculation
+Methods</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d476815e245"><p class="p">Measurement</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d476815e248"><p class="p">ENC_PAR, ENC_PER Functions</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d476815e251"><p class="p">device::enclosure* Functions</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Merging of source/drain measurements.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Combines two s/d regions into
+&lt;width a b&gt; segments.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Reports each s/d region separately
+in &lt;width value&gt; segments.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Angled gates and gates
+with bends.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Returns a vector populated with
+-1.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Unsupported.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Non-Manhattan measurement/base intersections. </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Measures using the normal rules
+for angled measurement layer.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Takes no measurement
+and populates the vector with the maximum search distance.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Orthogonal (with respect
+to database axes) gates with holes.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Returns a vector populated with
+-1.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Measures normally, ignoring the
+holes.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Angled well.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Reports enclosure at midpoint
+of non-Manhattan edge.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Reports enclosure at
+closest endpoint of non-Manhattan edge.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e245 "><p class="p">Missing well.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e248 "><p class="p">Reports 0.0 enclosure
+when no well is present for a segment.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d476815e251 "><p class="p">Reports maximum search distance
+when no well is present.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_HistoricalWellProximityCalculationMethods_idfbe115d8.html" title="This section is provided for historical completeness to show methods used for well proximity calculations. These methods may appear in various process rule files but are not considered the most efficient or current. They are presented to the interested user so that they can be understood when encountered.">Historical Well Proximity Calculation Methods</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "Comparison of Enclosure Calculation Functions and Methods"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ComparisonEnclosureCalculationFunctionsMethods_id6b1c8701.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

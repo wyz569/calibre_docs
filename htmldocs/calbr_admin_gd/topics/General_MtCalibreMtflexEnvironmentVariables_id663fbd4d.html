@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="MT and Calibre MTflex Environment Variables" />
+<meta name="abstract" content="There are some environment variables you can use to control MT (multithreaded), Calibre MTflex, hyperscaling, and simultaneous multithreaded (SMT) operations." />
+<meta name="description" content="There are some environment variables you can use to control MT (multithreaded), Calibre MTflex, hyperscaling, and simultaneous multithreaded (SMT) operations." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id663fbd4d-5e93-480e-883d-74e3cf83298e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>MT and Calibre MTflex Environment Variables</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="MT and Calibre MTflex Environment Variables" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="topofpage" id="id663fbd4d-5e93-480e-883d-74e3cf83298e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">MT and Calibre MTflex Environment Variables</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">There are
+some environment variables you can use to control MT (multithreaded),
+Calibre MTflex, hyperscaling, and simultaneous multithreaded (SMT)
+operations.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="id663fbd4d-5e93-480e-883d-74e3cf83298e__id6472fd31-87de-4649-98b8-9a117bfeb702">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id663fbd4d-5e93-480e-883d-74e3cf83298e__id2b0b02d6-b252-4465-a857-2c8e0f71b7f5" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>MT and Calibre MTflex Environment Variables</span></caption><colgroup><col style="width:3.400in" /><col style="width:3.100in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d77809e147"><p class="p">Variables listed in
+the Admin Guide</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d77809e150"><p class="p">Definition</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreHdbflexMin_id64690150.html#id64690150-748c-4345-a9c9-f64dd12035ae__Command_CalibreHdbflexMin_id64690150.xml#id64690150-748c-4345-a9c9-f64dd12035ae" title="Specifies the behavior for the MINCOUNT argument when HDBFLEX is enabled.">CALIBRE_HDBFLEX_MIN</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Specifies the behavior for the MINCOUNT
+argument (in LAUNCH AUTOMATIC, LAUNCH CLUSTER, or LAUNCH MANUAL)
+when HDBFLEX is enabled.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreHyperSmtfactor_idad5ee6c0.html#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c__Command_CalibreHyperSmtfactor_idad5ee6c0.xml#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c" title="Launches additional threads on remote CPUs connected only to HDB0 and that support SMT processing.">CALIBRE_HYPER_SMTFACTOR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Controls the “-hyper”
+capability for OPC operations on HDB0 when run on hyperscaled systems. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreHyperflexSaveLogs_iddff46219.html#iddff46219-2b31-48c8-9155-41a7a20b1d82__Command_CalibreHyperflexSaveLogs_iddff46219.xml#iddff46219-2b31-48c8-9155-41a7a20b1d82" title="Specifies that PHDB log files are saved (instead of deleted) at the end of a run.">CALIBRE_HYPERFLEX_SAVE_LOGS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Saves PHDB log files
+at the end of a Calibre run. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtMonitorLoad_id9d1501e1.html#id9d1501e1-f283-4c62-8fbd-82380fa02a55__Command_CalibreMtMonitorLoad_id9d1501e1.xml#id9d1501e1-f283-4c62-8fbd-82380fa02a55" title="Specifies a time interval for writing monitoring (MON) statements to the transcript.">CALIBRE_MT_MONITOR_LOAD</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Prints the LOAD associated
+MON statements to the transcript at a specified interval.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtMonitorMemory_id8fd41c3b.html#id8fd41c3b-0462-489a-8e49-18fa5a083483__Command_CalibreMtMonitorMemory_id8fd41c3b.xml#id8fd41c3b-0462-489a-8e49-18fa5a083483" title="Specifies a time interval for writing LVHEAP memory information to the transcript.">CALIBRE_MT_MONITOR_MEMORY</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Prints the MEMORY associated MON
+statements to the transcript at a specified interval.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtSmtFactor_id6427a8fb.html#id6427a8fb-821d-4ceb-9a12-f5759a069da4__Command_CalibreMtSmtFactor_id6427a8fb.xml#id6427a8fb-821d-4ceb-9a12-f5759a069da4" title="Enables or disables support for SMT processing when running in multithreaded (MT) mode.">CALIBRE_MT_SMT_FACTOR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Overrides the BIOS setting
+for simultaneous multithreading.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexHyper_ide5df1b17.html#ide5df1b17-e16d-432a-a8ce-ead8d8b59ca7__Command_CalibreMtflexHyper_ide5df1b17.xml#ide5df1b17-e16d-432a-a8ce-ead8d8b59ca7" title="Assigns values to arguments for the HYPER statement.">CALIBRE_MTFLEX_HYPER</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Specifies the same information
+as that defined by the <a class="xref fm:HeadingOnly" href="Command_Hyper_idbecf2979.html#idbecf2979-e515-45a4-9a12-500ba06a9002__Command_Hyper_idbecf2979.xml#idbecf2979-e515-45a4-9a12-500ba06a9002" title="Sets parameters that define the setup information for using hyperscaling with Calibre MTflex.">HYPER</a> configuration statement.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexLaunch_iddcc88d88.html#iddcc88d88-4bc4-42fb-bd7e-fb8456fd756a__Command_CalibreMtflexLaunch_iddcc88d88.xml#iddcc88d88-4bc4-42fb-bd7e-fb8456fd756a" title="Assigns values to arguments for the LAUNCH AUTOMATIC, LAUNCH MANUAL, or LAUNCH CLUSTER statements.">CALIBRE_MTFLEX_LAUNCH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Sets the parameters to
+the set of LAUNCH configuration file commands.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexLocalHostDir_id3ea9da9e.html#id3ea9da9e-d419-4b37-8a0e-574b6b053b5d__Command_CalibreMtflexLocalHostDir_id3ea9da9e.xml#id3ea9da9e-d419-4b37-8a0e-574b6b053b5d" title="Specifies a path on the primary host where Calibre can store temporary files created by some applications on remote hosts.">CALIBRE_MTFLEX_LOCAL_HOST_DIR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Performs the function
+of the <a class="xref fm:HeadingOnly" href="Command_LocalHostDir_id9ae8c480.html#id9ae8c480-11c0-4a0a-aed4-8d4caf290665__Command_LocalHostDir_id9ae8c480.xml#id9ae8c480-11c0-4a0a-aed4-8d4caf290665" title="Specifies a directory on the primary host for storing temporary files that are created on remote hosts by some applications.">LOCAL HOST DIR</a> configuration file command when
+running without a configuration file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexMonitorLocal_ide52d51f9.html#ide52d51f9-339a-4e6f-9d66-efa55cda296a__Command_CalibreMtflexMonitorLocal_ide52d51f9.xml#ide52d51f9-339a-4e6f-9d66-efa55cda296a" title="Enables monitoring of Calibre MTflex operations on the primary host.">CALIBRE_MTFLEX_MONITOR_LOCAL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Provides the same information
+as the <a class="xref fm:HeadingOnly" href="Command_MonitorLocal_iddbea601c.html#iddbea601c-8e2d-44ed-a007-efbd9142a97d__Command_MonitorLocal_iddbea601c.xml#iddbea601c-8e2d-44ed-a007-efbd9142a97d" title="Enables monitoring of Calibre MTflex operations on the primary host.">MONITOR LOCAL</a> command when running calibre -remote.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexMonitorRemote_id17ff027a.html#id17ff027a-a919-426d-9227-dc9a2ee2f786__Command_CalibreMtflexMonitorRemote_id17ff027a.xml#id17ff027a-a919-426d-9227-dc9a2ee2f786" title="Enables monitoring of Calibre MTflex operations on the remote host.">CALIBRE_MTFLEX_MONITOR_REMOTE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Provides the same information
+as the <a class="xref fm:HeadingOnly" href="Command_MonitorRemote_id371abde9.html#id371abde9-4863-4a07-aa06-ab1f61e184b6__Command_MonitorRemote_id371abde9.xml#id371abde9-4863-4a07-aa06-ab1f61e184b6" title="Enables monitoring of Calibre MTflex operations on the remote hosts.">MONITOR REMOTE</a> command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexRemoteDir_idaa75ad1a.html#idaa75ad1a-84f2-436e-9611-2edd236cc269__Command_CalibreMtflexRemoteDir_idaa75ad1a.xml#idaa75ad1a-84f2-436e-9611-2edd236cc269" title="Specifies a directory on the remote host for writing log files.">CALIBRE_MTFLEX_REMOTE_DIR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Specifies a location
+on the remote host for writing log files.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexRemoteMaxmem_idfec379e4.html#idfec379e4-1f4c-41fb-9ced-f501e5d0c070__Command_CalibreMtflexRemoteMaxmem_idfec379e4.xml#idfec379e4-1f4c-41fb-9ced-f501e5d0c070" title="Specifies an LVHEAP limit to use on a remote host.">CALIBRE_MTFLEX_REMOTE_MAXMEM</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Sets the MAXMEM parameter
+for the <a class="xref fm:HeadingOnly" href="Command_RemoteHost_idc0b2f923.html#idc0b2f923-2328-4fdd-ad38-76ab58d3bdd9__Command_RemoteHost_idc0b2f923.xml#idc0b2f923-2328-4fdd-ad38-76ab58d3bdd9" title="Provides information for launching a remote host when using LAUNCH AUTOMATIC.">REMOTE HOST</a> command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreMtflexSaveLogs_idebfd138e.html#idebfd138e-6bc9-4058-9a1d-f118d4a07d8e__Command_CalibreMtflexSaveLogs_idebfd138e.xml#idebfd138e-6bc9-4058-9a1d-f118d4a07d8e" title="Specifies whether the Remote Compute Server (RCS) log files and CalibreRRLog file are saved at the end of a run.">CALIBRE_MTFLEX_SAVE_LOGS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Saves Remote Compute
+Server (RCS) log files at the end of a Calibre run.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreRemoteConnection_id0e6ebc08.html#id0e6ebc08-5839-494e-a656-f9715de5d475__Command_CalibreRemoteConnection_id0e6ebc08.xml#id0e6ebc08-5839-494e-a656-f9715de5d475" title="Specifies the primary host and port information for the remote host to use to connect with the primary host.">CALIBRE_REMOTE_CONNECTION</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Specifies
+the host and port number for each connection to a remote host when
+using the rcalibre or rxcalibre utility.</p>
+<p class="p">Execution of the REMOTE COMMAND
+automatically sets the <var class="keyword varname">host</var>:<var class="keyword varname">port</var> values
+for this environment variable in the child process.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreRemoteCount_idbd2cded0.html#idbd2cded0-4f7e-4079-bdc1-8564672de7ea__Command_CalibreRemoteCount_idbd2cded0.xml#idbd2cded0-4f7e-4079-bdc1-8564672de7ea" title="Specifies a value for the COUNT argument used in the LAUNCH CLUSTER or LAUNCH MANUAL statement.">CALIBRE_REMOTE_COUNT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">An environment variable
+set by the tool in a child process from <a class="xref fm:HeadingOnly" href="Command_RemoteCommand_ide34650f6.html#ide34650f6-c740-45d0-afb2-dcba24c8fe3b__Command_RemoteCommand_ide34650f6.xml#ide34650f6-c740-45d0-afb2-dcba24c8fe3b" title="Specifies a command and arguments that provide information about how to launch a Calibre MTflex server or an LVS compare process on a remote host.">REMOTE COMMAND</a>, and equal to the COUNT parameter
+for the <a class="xref fm:HeadingOnly" href="Command_LaunchCluster_id24c3e5ba.html#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481__Command_LaunchCluster_id24c3e5ba.xml#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH CLUSTER</a> command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_CalibreRemoteMincount_id11cfaee1.html#id11cfaee1-e0f4-42eb-be60-892d6a2981a0__Command_CalibreRemoteMincount_id11cfaee1.xml#id11cfaee1-e0f4-42eb-be60-892d6a2981a0" title="Specifies a value for the MINCOUNT argument used in the LAUNCH CLUSTER statement.">CALIBRE_REMOTE_MINCOUNT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">An environment variable
+set by the tool in a child process from <a class="xref fm:HeadingOnly" href="Command_RemoteCommand_ide34650f6.html#ide34650f6-c740-45d0-afb2-dcba24c8fe3b__Command_RemoteCommand_ide34650f6.xml#ide34650f6-c740-45d0-afb2-dcba24c8fe3b" title="Specifies a command and arguments that provide information about how to launch a Calibre MTflex server or an LVS compare process on a remote host.">REMOTE COMMAND</a>, and equal to the MINCOUNT parameter
+for the <a class="xref fm:HeadingOnly" href="Command_LaunchCluster_id24c3e5ba.html#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481__Command_LaunchCluster_id24c3e5ba.xml#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH CLUSTER</a> command.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e147 "><p class="p"><a class="xref Link" href="../../calbr_pto_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LITHO_SOCS_KERNELS_SHARED', 'calbr_pto_user'); return false;">LITHO_SOCS_KERNELS_SHARED</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d77809e150 "><p class="p">Enables shared memory in post-tapeout runs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_CalibreEnvironmentVariables_id3ab940c3.html" title="Environment variables allow you to define some aspect of the Calibre environment that can vary.">Calibre Environment Variables</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "MT and Calibre MTflex Environment Variables"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_MtCalibreMtflexEnvironmentVariables_id663fbd4d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="Calibre nmLVS Reconnaissance Command Line" />
+<meta name="abstract" content="Performs stand-alone hierarchical ERC, Sconnect stamping violation (soft connection), and short isolation checks on the layout using a rule file or a Mask SVDB Directory. The command line options for multithreading have essentially the same semantics as for LVS. Those options are fully described under the LVS command line section with just the differences discussed in detail here." />
+<meta name="description" content="Performs stand-alone hierarchical ERC, Sconnect stamping violation (soft connection), and short isolation checks on the layout using a rule file or a Mask SVDB Directory. The command line options for multithreading have essentially the same semantics as for LVS. Those options are fully described under the LVS command line section with just the differences discussed in detail here." />
+<meta name="DC.subject" content="DRC, invocation examples, Calibre nmDRC, invocation, examples, Command lines, LVS" />
+<meta name="keywords" content="DRC, invocation examples, Calibre nmDRC, invocation, examples, Command lines, LVS" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id93e8f035-8377-48dc-9929-7d279889c475" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Calibre nmLVS Reconnaissance Command Line</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Calibre nmLVS Reconnaissance Command Line" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id93e8f035-8377-48dc-9929-7d279889c475">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Calibre nmLVS Reconnaissance Command Line</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="shortdesc">Performs stand-alone hierarchical
+ERC, Sconnect stamping violation (soft connection), and short isolation
+checks on the layout using a rule file or a Mask SVDB Directory. </p>
+<p class="shortdesc">The command line options for
+multithreading have essentially the same semantics as for LVS. Those
+options are fully described under the LVS command line section with
+just the differences discussed in detail here.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">calibre</span> <span class="keyword ParameterName Required">-recon</span> <br />
+   { { <span class="keyword ParameterName Required">-erc=</span><span class="keyword ParameterName RequiredReplaceable">svrf_script</span>  |  <span class="keyword ParameterName Required">-softchk</span>[=<span class="keyword ParameterName OptionalReplaceable">tcl_script</span>] } <span class="keyword ParameterName Required">-svdb</span> <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> [ <span class="keyword ParameterName OptionalReplaceable">top_cell</span> ] } | <br />
+      { <span class="keyword ParameterName Required">-erc</span> [ -svdb <span class="keyword ParameterName OptionalReplaceable">svdb_dir </span>[<span class="keyword ParameterName OptionalReplaceable"> top_cell</span> ] ] { <span class="keyword ParameterName Required">‑exec</span> <span class="keyword ParameterName RequiredReplaceable">tcl_script</span>  [<span class="keyword ParameterName OptionalReplaceable">args</span>] } |<br />
+      { <span class="keyword ParameterName Required">-si</span>[={ALL | DB | IO | PG | <span class="keyword ParameterName OptionalReplaceable">tcl_script</span>}] <br />
+           [ { { -remote <span class="keyword ParameterName OptionalReplaceable">host</span>,<span class="keyword ParameterName OptionalReplaceable">host</span>,… } | { -remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span> } |  <br />
+                { ‑remotecommand <span class="keyword ParameterName OptionalReplaceable">filename</span> <span class="keyword ParameterName OptionalReplaceable">count</span> } } <br />
+                   [ -remotedata [ -recoverremote | -recoveroff ] ] [ -hyper [ -remote ] ] ]<br />
+      { <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span>  | { <span class="keyword ParameterName Required">-svdb</span> <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> [ <span class="keyword ParameterName OptionalReplaceable">top_cell</span> ] } } } <br />
+    [ -turbo [ <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> ] [ -turbo_all ] ] }</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><p class="p">To display the complete
+command usage, enter “calibre” on the command line with no arguments.</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id42537a75-4e0b-4562-bbb6-acedce31fca9"><span class="keyword ParameterName Required">-recon</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+to run Calibre nmLVS Reconnaissance mode. This argument enables
+certain verification tasks to be run stand-alone outside of an LVS
+run. Either the <span class="keyword ParameterName Required">‑erc</span>, <span class="keyword ParameterName Required">-si</span>,
+or <span class="keyword ParameterName Required">-softchk</span> option
+must also be specified.</p>
+<p class="p">A Calibre nmLVS Reconnaissance license is required whenever this
+option is used.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__idc36fb501-3ba4-4a61-b448-44bc9901e52b"><span class="keyword ParameterName Required">-erc=</span><span class="keyword ParameterName RequiredReplaceable">svrf_script</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An option specified with <span class="keyword ParameterName Required">-recon</span> that
+operates on layer data in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>.
+The <span class="keyword ParameterName Required">=</span><span class="keyword ParameterName RequiredReplaceable">svrf_script</span> suffix
+is required in this usage.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">svrf_script</span> is
+the name of a file that contains SVRF code used for deriving layers
+and is executed using the layout data in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>.
+The code that appears in the <span class="keyword ParameterName RequiredReplaceable">svrf_script </span>is handled
+in a similar way to <a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmnew_layer', 'calbr_ys_ref'); return false;">dfm::new_layer</a> -svrf
+‑keep_all_layers -rdbs_as_files. The intent of the <span class="keyword ParameterName Required">-erc</span> option
+is to allow layer operations such as <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Pathchk', 'svrf_ur'); return false;">Pathchk</a> to be performed
+on data in the PHDB. In order to do this, the rule file used to
+generate the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> should
+be the same as for LVS circuit extraction. LVS specification statements
+such as LVS Power Name and LVS Ground name are not executed if included
+in the <span class="keyword ParameterName RequiredReplaceable">svrf_script</span>,
+but their settings are observed if they appear in the rules used
+to generate the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>.</p>
+<p class="p">A Calibre nmLVS/Calibre nmLVS-H license pair is required to use
+this option.</p>
+<p class="p">See <a class="xref fm:HeadingOnly" href="#id93e8f035-8377-48dc-9929-7d279889c475__id9845ce36-f0b8-49c5-b91f-25dba0b89c6f">Example 1</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__idad9dcbca-653c-420f-ba2a-8ab91b939a2d"><span class="keyword ParameterName Required">-softchk</span>[=<span class="keyword ParameterName OptionalReplaceable">tcl_script</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that performs soft-connection
+checks on the layout data (PHDB) in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>. The
+Mask SVDB Directory SI keyword must have been active in the rules
+when the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> was
+created, or an error is given.</p>
+<p class="p">By default, all <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Sconnect', 'svrf_ur'); return false;">Sconnect</a> stamped
+layers (the second layer arguments in Sconnect operations) for which
+there was a stamping conflict during the circuit extraction run
+are processed. Soft connection checking is then performed as if <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Softchk', 'svrf_ur'); return false;">LVS Softchk</a> LOWER were
+specified in a circuit extraction run. This default can be changed
+by specifying the =<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> suffix, where <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+a Query Server Tcl shell script.</p>
+<p class="p">If =<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+specified, the soft connection checking is performed based upon <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'qssoftchk', 'calbr_query_user'); return false;">qs::softchk</a> or <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'qssoftchks', 'calbr_query_user'); return false;">qs::softchks</a> commands
+in the script. Query Server Tcl shell and Calibre YieldServer commands
+are also supported.</p>
+<p class="p">A Calibre nmLVS/Calibre nmLVS-H license pair is required to use
+this option. If the <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+specified, a Calibre Query Server license is also required.</p>
+<p class="p">See <a class="xref fm:HeadingOnly" href="#id93e8f035-8377-48dc-9929-7d279889c475__id776c78e4-23b2-4708-aed9-f1bd47d74109">Example 2</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__ide147c1a5-b34a-4e47-ab1c-78ce373a303e"><span class="keyword ParameterName Required">-svdb</span> <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> [ <span class="keyword ParameterName OptionalReplaceable">top_cell</span> ] </dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set that
+specifies a Mask SVDB Directory. The <span class="keyword ParameterName OptionalReplaceable">top_cell</span> is
+an optional argument specifying a primary cell name. The <span class="keyword ParameterName OptionalReplaceable">top_cell</span> is
+defined when there is data from more than one primary cell in the
+SVDB and you want to select the primary cell to use. This option
+requires that <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> SI
+was used to create the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>,
+or an error is given. </p>
+<p class="p">This argument set is required when <span class="keyword ParameterName Required">-erc=</span><span class="keyword ParameterName RequiredReplaceable">svrf_script</span> or <span class="keyword ParameterName Required">-softchk</span> is
+specified. It is optional with <span class="keyword ParameterName Required">-erc</span> <span class="keyword ParameterName Required">-exec</span> or <span class="keyword ParameterName Required">-si</span>.</p>
+<p class="p">The remaining behaviors discussed here apply only when <span class="keyword ParameterName Required">-si</span> is
+specified.</p>
+<p class="p">When <span class="keyword ParameterName Required">-si</span> is
+specified, stand-alone short isolation is performed on the layout
+data in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>.
+The <span class="keyword ParameterName Required">-si=</span> modal
+arguments have analogous effects to when a <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> is specified.</p>
+<p class="p">Either a <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> argument
+or the <span class="keyword ParameterName Required">‑svdb</span> option
+must be specified with <span class="keyword ParameterName Required">‑recon ‑si</span>.
+If <span class="keyword ParameterName Required">‑svdb</span> is
+specified, then the following apply:</p>
+<ul class="ul"><li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__id2ee440d0-0657-4c34-8b4b-2601f6696a79"><p class="p">If there
+are specification statements that apply to short isolation in the
+rules stored in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>,
+then those settings are applied as they are when a <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> is specified.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__id4d7ca5d5-ab5e-4dd0-8f4a-b4f0e4d629c7"><p class="p">If no <span class="keyword ParameterName Required">-si</span> modal
+argument is specified, then short isolation results are presented
+per the short_db::isolate_shorts -by_cell -by_layer options. A <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> modal
+argument allows custom control of results presentation.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__ide5989d5d-1404-4ab8-b34b-ed2c0eaad325"><p class="p">Only Connect
+and Sconnect operations that provide connectivity to Device pin layers
+are executed. This can be altered if the rules stored in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> contain
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS SI Select Connects', 'svrf_ur'); return false;">LVS SI Select Connects</a> statement,
+in which case, only the Connect and Sconnect statements corresponding
+to that statement’s settings are executed.</p>
+<p class="p">Alternatively, if -<span class="keyword ParameterName Required">si</span>=<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+specified, then the <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'short_dbselect_connects', 'calbr_query_user'); return false;">short_db::select_connects</a> command
+may be used in the Query Server script to produce the same effect.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__iddad79a69-6eac-4ebb-a98b-3ffc32645a09"><p class="p">At the conclusion
+of the run, the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> contains
+an interactive short isolation database that can be loaded into
+Calibre RVE or for further processing in the Query Server Tcl shell.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__ideeebb6ba-ca95-4a55-b219-4bbade7c3978"><p class="p">If <span class="keyword ParameterName Required">-si</span>=DB
+is specified on the command line, the contents of the SVDB are searched for
+sufficient information to perform short isolation, but no short
+isolation is performed. If there is sufficient information, then
+the message “SVDB READY FOR RECON SI” appears.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__id29cc2750-7a6c-4660-803b-d60583f33a4f"><p class="p">All of the
+command line options that enable multithreading may be used except ‑hyper.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id1b45aa7c-a202-4cd8-a024-b0e69dfeea26"><span class="keyword ParameterName Required">-erc</span> <span class="keyword ParameterName Required">-exec</span> <span class="keyword ParameterName RequiredReplaceable">tcl_script</span> [<span class="keyword ParameterName OptionalReplaceable">args</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set that
+specifies Query Server Tcl shell or YieldServer commands in the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span> are
+executed on data in a Mask SVDB Directory database that was created
+using the SI keyword. When this argument set is used, <span class="keyword ParameterName Required">-exec</span> must
+be the final option on the command line. The optional <span class="keyword ParameterName OptionalReplaceable">args</span> are
+arguments passed to the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span>.</p>
+<p class="p">In this usage, if the -svdb option is also specified,
+then the <span class="keyword ParameterName OptionalReplaceable">svdb_dir</span> is
+the one the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span> operates
+on unless overridden by the script. If the -svdb option is omitted,
+then an SVDB must be opened through the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id1e1ce2c3-f57f-4638-bd65-cbf77d8e2244"><span class="keyword ParameterName Required">-si</span>[={ ALL | DB | IO | PG | <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> }]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option specified with <span class="keyword ParameterName Required">-recon</span> that
+performs stand-alone short isolation on the layout.</p>
+<p class="p">Short isolation is performed as if the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Isolate Shorts', 'svrf_ur'); return false;">LVS Isolate Shorts</a> YES
+BY LAYER BY CELL statement were in the rules. Additional LVS Isolate
+Shorts secondary keywords apply (except for NO, which is always
+ignored with <span class="keyword ParameterName Required">-si</span>)
+if they exist in the rules specified by the <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> or
+are contained in the SVDB directory specified by the <span class="keyword ParameterName Required">-svdb</span> option.</p>
+<p class="p">The presence of an equals sign (=) suffix to the <span class="keyword ParameterName Required">-si</span> option
+indicates an optional run mode. The modal argument following “=”
+corresponds either to an LVS Isolate Shorts statement or to a Query
+Server Tcl Shell script consisting of short isolation commands.
+The modal arguments (case-insensitive, except for <span class="keyword ParameterName OptionalReplaceable">tcl_script</span>)
+are as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id93e8f035-8377-48dc-9929-7d279889c475__idb120ae61-bdc0-45c6-9960-2c490a38a037" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:1.075in" /><col style="width:4.775in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d93818e639"><p class="p">Modal Argument</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d93818e642"><p class="p">Equivalent Specification Statement and Definition</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e639 "><p class="p">ALL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e642 "><p class="p">LVS Isolate Shorts YES CELL ALL</p>
+<p class="p">All shorts are isolated at all levels of hierarchy. Any LVS Isolate Shorts
+NAME keywords appearing in a rule file are ignored. CELL PRIMARY
+is ignored.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e639 "><p class="p">DB</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e642 "><p class="p">Not equivalent to an LVS Isolate Shorts
+statement.</p>
+<p class="p">All necessary data for running short isolation in subsequent
+runs with the <span class="keyword ParameterName Required">-svdb</span> option
+is saved to the Mask SVDB Directory. </p>
+<p class="p">This option is useful when many shorts are expected such that numerous
+short isolation runs will be needed using data in the SVDB. In this
+case, it can be more efficient to store the layout data in one run and
+then run short isolation later using the <span class="keyword ParameterName Required">-svdb</span> option
+later, like this:</p>
+<pre class="pre codeblock"><code>calibre -recon -si=db -turbo rules</code></pre><pre class="pre codeblock"><code>calibre -recon -si -svdb svdb</code></pre><p class="p">Running ‑turbo without any remotes is also the fastest way of
+running circuit extraction and populating the SVDB. So running that
+part of the flow separately can improve overall processing time
+for shorts.</p>
+<p class="p">When the SVDB has all the necessary information for short isolation, the
+following message appears in the transcript:</p>
+<p class="p">SVDB READY FOR RECON SI.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e639 "><p class="p">IO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e642 "><p class="p">LVS Isolate Shorts YES CELL PRIMARY &amp;&amp;
+!NAME LVS_POWER_NAME LVS_GROUND_NAME</p>
+<p class="p">Shorts are isolated only between non-supply nets. The PRIMARY keyword
+is the default behavior but may be overridden.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e639 "><p class="p">PG</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e642 "><p class="p">LVS Isolate Shorts YES CELL PRIMARY &amp;&amp;
+NAME LVS_POWER_NAME LVS_GROUND_NAME</p>
+<p class="p">Shorts are isolated only for primary level nets specified in LVS Power/Ground
+Name statements. The PRIMARY keyword is the default behavior but
+may be overridden.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e639 "><p class="p"><span class="keyword ParameterName OptionalReplaceable">tcl_script</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d93818e642 "><p class="p">Not equivalent to an LVS Isolate Shorts
+statement. If there is an LVS Isolate Shorts statement in the rules,
+then it is ignored.</p>
+<p class="p">Specifies a Query Server Tcl shell script. The script is executed
+using the SVDB contents. Both <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Short Isolation Commands', 'calbr_query_user'); return false;">Short Isolation Commands</a> and <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Short Repair Database Commands', 'calbr_query_user'); return false;">Short Repair Database Commands</a> are
+supported. If short isolation is not performed in the script, then
+no short isolation occurs.</p>
+<p class="p">(Using an extension like .tcl or .qs is a good practice because
+it avoids the possibility of matching future modal operator names.)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">If there is an LVS Isolate Shorts YES statement in the rules
+and one of the ALL, IO, or PG modal arguments is specified, then
+the following occurs:</p>
+<ol class="ol"><li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__idf128aa56-522e-49a2-b5c6-b1374de5e06c"><p class="p">If the
+LVS Isolate Shorts statement contains additional arguments that
+conflict with the modal argument’s behavior, then the conflicting
+rule file statement’s arguments are ignored.</p>
+<p class="p">For example, if -si=IO is specified, and the rule file contains
+this:</p>
+<pre class="pre codeblock"><code>LVS ISOLATE SHORTS YES CELL ALL || NAME LVS_POWER_NAME LVS_GROUND_NAME</code></pre><p class="p">then the NAME specification is ignored because of a conflict,
+and the IO argument’s behavior prevails.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__id38b4f204-0745-4994-92b6-7fead1da8535"><p class="p">If the LVS
+Isolate Shorts statement contains arguments that do not conflict
+with the modal argument’s behavior, then the rule file statement’s
+arguments are applied to the modal argument’s behavior.</p>
+<p class="p">For the example in part a, the CELL ALL specification is applied
+because that does not conflict with the IO option’s behavior.</p>
+</li>
+</ol>
+<p class="p">Connectivity text shorts, opens, and unattached label warnings
+are given in the transcript, just as they are in a calibre -spice
+run. However, a circuit extraction report is not written, nor is
+a <span class="ph filepath">.shorts</span> database.</p>
+<p class="p">The tail of the transcript contains a section like this when
+shorts are detected:</p>
+<pre class="pre codeblock"><code>Current short serial number is 1
+  Short circuit (index: 0) (cell: TOPCELL) (net_id: 2) (text: PWR).
+    PWR at (1.3 82.4) (layer metal2)
+    top_short at (3.4 78) (layer metal2)
+
+
+Warning: 1 short paths from 1 out of 1 shorts were selected in 
+primary cell TOPCELL for short isolation.</code></pre><p class="p">Shorts from non-primary cells may also be shown depending on
+rule file settings. If shorts are filtered out due to use of a -si=
+modal argument, then this warning is given:</p>
+<pre class="pre codeblock"><code>Warning: &lt;i&gt; short paths from &lt;j&gt; out of &lt;k&gt; shorts were selected for short isolation.</code></pre><p class="p">where k is the number of detected shorts, j is the number of
+isolated shorts, and i is the number of distinct net paths between
+text labels among the j shorts.</p>
+<p class="p">If no shorts are detected, then this is shown instead:</p>
+<pre class="pre codeblock"><code>Short Isolation results are clean for ALL cells.</code></pre><p class="p">If an LVS Isolate Shorts NAME keyword is applied when the rules
+are read, or if the -name option is used for <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'qsisolate_shorts', 'calbr_query_user'); return false;">qs::isolate_shorts</a> or <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'short_dbisolate_shorts', 'calbr_query_user'); return false;">short_db::isolate_shorts</a> command
+when <span class="keyword ParameterName OptionalReplaceable">tcl_script</span> modal
+argument is used, then there is an additional section of the transcript
+like this:</p>
+<pre class="pre codeblock"><code>Name Pads Selected for Short Isolation for cell  "&lt;cell&gt;"
+-------------------------------------------------------
+
+WARNING:  Short circuit - Different names on one net:
+          Net Id:  &lt;n&gt;
+          (1)  name  "&lt;label&gt;"  at location  (&lt;x&gt;,&lt;y&gt;)  on layer  &lt;n&gt; 
+"&lt;name&gt;"
+          (2)  name  "&lt;label&gt;"  at location  (&lt;x&gt;,&lt;y&gt;)  on layer  &lt;n&gt; 
+"&lt;name&gt;"
+          The name "&lt;label&gt;" was assigned to the net.</code></pre><p class="p">which reads similarly to the usual Extraction Errors and Warnings
+report in the transcript. But the difference is that the shorts
+have been filtered by net name specifications.</p>
+<p class="p">When the SVDB directory produced by this option is loaded into
+Calibre RVE, the short isolation results presentation is the same
+as for the Mask SVDB Directory SI keyword. That is, interactive
+short isolation is always enabled.</p>
+<p class="p">Either a <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> argument
+or the <span class="keyword ParameterName Required">‑svdb</span> option
+must be specified with <span class="keyword ParameterName Required">‑si</span>.
+If <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> is
+specified, then the following apply:</p>
+<ul class="ul"><li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__idc1281f4f-1f45-4413-b468-27106babb37e"><p class="p">A Mask
+SVDB Directory statement that generates a PHDB must be specified
+in the rules. Some of the keyword options that do this are CCI,
+PHDB, QUERY, and SI.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__idacb34ea3-da49-4d77-847c-6684d607a58b"><p class="p">Only Connect
+and Sconnect operations that provide connectivity to Device pin layers
+are executed by default. This can be altered by specifying the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS SI Select Connects', 'svrf_ur'); return false;">LVS SI Select Connects</a> statement,
+in which case only the Connect and Sconnect operations corresponding
+to that statement’s settings are executed.</p>
+<p class="p">Alternatively, if -<span class="keyword ParameterName Required">si</span>=<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+specified, then the <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'short_dbselect_connects', 'calbr_query_user'); return false;">short_db::select_connects</a> command
+may be used in the Query Server script to produce the same effect.</p>
+</li>
+<li class="li" id="id93e8f035-8377-48dc-9929-7d279889c475__id428ba748-98ce-4e63-9f39-8c97ac63539b"><p class="p">Only short
+isolation is performed during connectivity extraction. None of the
+other modules like device recognition or netlist extraction are
+performed, regardless of rule file settings.</p>
+</li>
+</ul>
+<p class="p">The <span class="keyword ParameterName Required">-svdb</span> option
+behaviors are discussed separately.</p>
+<p class="p">By default, the maximum number of isolated shorts using this
+option is 500. This can be changed using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Maximum Short Results', 'svrf_ur'); return false;">LVS Maximum Short Results</a> statement.</p>
+<p class="p">A Calibre nmLVS Reconnaissance license is required. A Calibre nmLVS-H
+hierarchical license pair is required if <span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> is
+specified. A Calibre Query Server license is required if <span class="keyword ParameterName Required">-si</span>=<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> is
+used. See the <a class="xref LinkItalic" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre nmLVS Reconnaissance', 'calbr_admin_gd'); return false;">Calibre Administrator’s Guide</a> for complete license information.</p>
+<p class="p">See <a class="xref fm:HeadingOnly" href="#id93e8f035-8377-48dc-9929-7d279889c475__ida08fe4ee-f6a1-4b6e-bac4-9c5929c54a92">Example 3</a> and <a class="xref fm:HeadingOnly" href="#id93e8f035-8377-48dc-9929-7d279889c475__id811dc8b5-5fe6-4968-ae07-37f376234924">Example 4</a>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id307ea7fa-1f54-4acd-9ca2-af6dc55ec8d0">-hyper [remote] </dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies hyperscaling mode, which improves hardware
+utilization and run times. This option may only be specified with <span class="keyword ParameterName Required">-si</span> …
+-turbo and is incompatible with <span class="keyword ParameterName Required">-svdb</span>.
+In MTflex mode, this option is best used with 16 or more remote
+CPUs.</p>
+<p class="p">The remote
+option triggers remote pseudohierarchical database technology. This
+causes pseudo HDBs to be distributed across remote hosts in a MTflex
+run. There should be a minimum of four remote hosts when using this
+option, with 16 or more CPUs being optimal. For more details, see
+“<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__idbf745209-0c58-4f26-a68d-a955e0a44bd0">{-remote <span class="keyword ParameterName OptionalReplaceable">host</span>,<span class="keyword ParameterName OptionalReplaceable">host</span>,…} | {-remotefile <span class="keyword ParameterName OptionalReplaceable">filename</span>} | {-remotecommand <span class="keyword ParameterName OptionalReplaceable">filename</span> <span class="keyword ParameterName OptionalReplaceable">count</span>} [‑remotedata [‑recoverremote | ‑recoveroff]]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+to use the MTflex multithreaded parallel processing architecture.
+It can only be specified with <span class="keyword ParameterName Required">-si</span> …
+-turbo. These options are defined under “<a class="xref fm:HeadingAndPage" href="Command_CalibreNmlvsCalibreNmlvsH_id1b7a5bdd.html#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9__Command_CalibreNmlvsCalibreNmlvsH_id1b7a5bdd.xml#id1b7a5bdd-9567-4e0e-812a-61f7794bdda9" title="Performs flat and hierarchical LVS circuit extraction and comparison. Many LVS command line options are also relevant to Calibre PERC, where the behavior is occasionally somewhat different than in LVS. See the Calibre PERC User’s Manual for details.">Calibre nmLVS and Calibre nmLVS-H Command Line</a>”, and
+the behaviors are largely the same for Calibre nmLVS Reconnaissance
+applications. Certain runtime details are discussed in the “<a class="xref" href="#id93e8f035-8377-48dc-9929-7d279889c475__id4d716cb0-ddec-43d4-9b0f-f90ff1a6c267">Description</a>” section.</p>
+<p class="p">For general
+MTflex details, see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Command Line Options Reference Dictionary', 'calbr_admin_gd'); return false;">Command Line Options Reference Dictionary</a>” in the <cite class="cite ManualTitle">Calibre Administrator’s Guide</cite>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id3d995d3c-18e3-4c53-84b0-11e06405fe12"><span class="keyword ParameterName RequiredReplaceable">rule_file_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required
+argument that specifies an LVS circuit extraction rule file with
+Device statements is assumed. <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Mask SVDB Directory', 'svrf_ur'); return false;">Mask SVDB Directory</a> must
+be specified, and the SI keyword is implicitly activated if it is
+not specified in the rules. This argument only applies to the <span class="keyword ParameterName Required">‑si</span> option.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id7dd5f3d7-e3a4-4799-97f5-4f4af36958c2"><span class="keyword ParameterName Optional">-turbo</span> [<span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option that enables multithreaded
+parallel processing. The <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> is
+a count of CPUs to use on the primary host. In general, you should
+avoid specifying <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span>,
+and you should never specify 1.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Licensing for Multithreaded Operations', 'calbr_admin_gd'); return false;">Licensing for Multithreaded Operations</a>” in the <cite class="cite">Calibre Administrator’s
+Guide</cite> for additional information about license scaling with
+CPU count.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id93e8f035-8377-48dc-9929-7d279889c475__id29d4448c-190e-4b35-bf3f-c832e8446859">-turbo_all</dt>
+<dd class="dd ArgumentDescription"><p class="p">An option used with -turbo that
+halts the run if the tool cannot obtain the exact number of CPUs
+you specified using -turbo. Without -turbo_all, the Calibre tool
+normally uses fewer threads than requested if the requested number
+of licenses or CPUs is unavailable.</p>
+<p class="p">Specifying the -turbo_all option
+without <span class="keyword ParameterName OptionalReplaceable">number_of_processors</span> is
+effectively the same as specifying the maximum number of CPUs on
+the machine.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions" id="id93e8f035-8377-48dc-9929-7d279889c475__id4d716cb0-ddec-43d4-9b0f-f90ff1a6c267"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Initiates a Calibre nmLVS Reconnaissance
+run. The supported run modes are stand-alone ERC, soft connection
+checking, and text short isolation. These runs are separate from
+typical LVS runs. The reconnaissance modes can result in more efficient
+flows allowing various aspects of LVS verification to be run in
+parallel.</p>
+<p class="p">The <span class="keyword ParameterName Required">-erc=</span><span class="keyword ParameterName RequiredReplaceable">svrf_script</span> option
+causes the SVRF code in the <span class="keyword ParameterName RequiredReplaceable">svrf_script</span> to
+generate derived layers in the SVDB. Using the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM RDB', 'svrf_ur'); return false;">DFM RDB</a> operation
+in the <span class="keyword ParameterName RequiredReplaceable">svrf_script</span> is
+the recommended way to output layer results.</p>
+<p class="p">The <span class="keyword ParameterName Required">-erc</span> <span class="keyword ParameterName Required">-exec</span> <span class="keyword ParameterName RequiredReplaceable">tcl_script</span> argument
+set causes Query Server Tcl shell or YieldServer commands in the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span> to
+be executed on data in a Mask SVDB Directory (the SI keyword must
+have been specified when the database was created). In this case,
+the SVDB is either loaded with the -svdb option, or it is loaded
+using the <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'qsopen_svdb', 'calbr_query_user'); return false;">qs::open_svdb</a> command
+in the <span class="keyword ParameterName RequiredReplaceable">tcl_script</span>.
+In this usage, the <span class="keyword ParameterName Required">-exec</span> option
+must be the final one on the command line. For more information
+about Query Server Tcl shell functions, see “<a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Query Server Tcl Shell Command Summary', 'calbr_query_user'); return false;">Query Server Tcl Shell Command Summary</a>” in the <cite class="cite">Calibre Query Server Manual</cite>.</p>
+<p class="p">The <span class="keyword ParameterName Required">-softchk</span> option
+initiates a stand-alone soft-connection checking run. Soft-connection checks
+are performed just like LVS Softchk, but on the data in the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span>.
+By default, the results output is as if LVS Softchk LOWER had been
+specified in the rule file, and checks are performed on any stamped
+layers for which there was an Sconnect stamping conflict during circuit
+extraction, as indicated by this warning:</p>
+<pre class="pre codeblock"><code>WARNING:  Stamping conflict in SCONNECT - Multiple source nets stamp one target net.</code></pre><p class="p">If the =<span class="keyword ParameterName OptionalReplaceable">tcl_script</span> suffix
+is used, then the commands in the Tcl script are executed. The qs::softchk
+and qs::softchks commands are useful in this context. The output
+is a <span class="ph filepath">softchk.rdb</span> database, which can be loaded
+into Calibre RVE like any other ERC database.</p>
+<p class="p">When the <span class="keyword ParameterName Required">-svdb</span> option
+is used, the <span class="keyword ParameterName RequiredReplaceable">svdb_dir</span> must
+have been produced by a run that included the SI keyword of the
+Mask SVDB Directory statement. If this condition is not met, then
+this error is given:</p>
+<pre class="pre codeblock"><code>Error 302: ERROR: SVDB not produced using Mask SVDB Directory SI.</code></pre><p class="p">The <span class="keyword ParameterName Required">-si</span> option
+initiates a stand-alone short isolation run. Addressing short isolation discrepancies
+before other verification tasks that depend on valid connectivity
+makes for a more efficient overall process. Therefore, running <span class="keyword ParameterName Required">-recon</span> <span class="keyword ParameterName Required">-si</span> early
+on after full chip assembly and fixing any shorts can improve overall
+turnaround time for ERC checks and LVS comparison.</p>
+<p class="p">If MTflex distribution is used in a <span class="keyword ParameterName Required">-si</span> run,
+the primary or local host distributes the shorts to the remote processes
+and then collects the results from the remotes. By default, each
+remote process is assumed to consume no more than 100 GB of memory.
+For example, a remote machine with 1 TB of memory will have at most
+10 remote processes for distributed short isolation. This distribution
+strategy can be adjusted using the new Tcl Query Server command <a class="xref Link" href="../../calbr_query_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'short_dbset_distribution_configuration', 'calbr_query_user'); return false;">short_db::set_distribution_configuration</a>.</p>
+<p class="p">If a remote machine does not have the requested resources, it
+will be skipped and one of the following messages is written in
+the transcript:</p>
+<pre class="pre codeblock"><code>&lt;remote-host-name&gt; has 3 CPUs (16 CPUs are requested) - It will not be used in distributed SI.</code></pre><p class="p">or</p>
+<pre class="pre codeblock"><code>&lt;remote-host-name&gt; has 50000 MB of memory (100000MB minimum is requested) - It will not be used in distributed SI.</code></pre><p class="p">If no remote hosts can be found to satisfy the criteria, all
+processes are executed locally, and the following message is issued:</p>
+<pre class="pre codeblock"><code>Remote adjustment failed: executing SI on primary.</code></pre><p class="p">If a remote process fails to complete the analysis of a short,
+the analysis is re-started on the primary host. The results of locally
+restarted shorts are in the following RDB files:</p>
+<p class="p BlockIndent"><span class="ph filepath">./&lt;SVDB&gt;/&lt;TOP_CELL&gt;.phdb/isi/&lt;TOP_CELL&gt;-default-sn&lt;N&gt;.shorts</span></p>
+<p class="p">The time and memory statistics of the overall run are printed
+to the transcript in the following format:</p>
+<pre class="pre codeblock"><code>&lt;process ID&gt; &lt;host name&gt; &lt;CPU time&gt; &lt;real time&gt; &lt;lvheap&gt; &lt;malloc&gt; &lt;elapsed time&gt;</code></pre><p class="p">Because this mode generates multiple results in parallel, it
+is possible for the number of results to exceed the limit prescribed
+in <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Maximum Short Results', 'svrf_ur'); return false;">LVS Maximum Short Results</a>.
+In addition, the short serial numbers found in the RDB files may
+not match between distributed and non-distributed runs.</p>
+<p class="p">Integers are represented internally
+in sign-magnitude or twos-complement format. The maximum database
+coordinate precision range is +/‑ 2<span class="ph FontProperty LiteralSuperScript">61</span>.</p>
+<p class="p">Calibre nmLVS applications exit
+with a non-zero status if they cannot complete any form of requested
+processing due to fatal error conditions. In most Linux shells,
+you can check this status by examining the $? shell variable. </p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id93e8f035-8377-48dc-9929-7d279889c475__id9845ce36-f0b8-49c5-b91f-25dba0b89c6f"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">This example demonstrates Calibre nmLVS Recon
+ERC.</p>
+<p class="p">Assume that Mask SVDB Directory with the SI keyword has produced
+a PHDB in a previous circuit extraction run. Also assume that LVS
+Power Name and LVS Ground Name appear in the rules that generated
+the SVDB. Assume you have a file called <span class="keyword ParameterName OptionalReplaceable">erc.svrf</span> that
+contains the following:</p>
+<pre class="pre codeblock"><code>floating  = PATHCHK !POWER &amp;&amp; !GROUND
+erc.rules {
+  DFM RDB floating erc.db CHECKNAME "no_supply_path" ALL CELLS CELL SPACE
+}</code></pre><p class="p">The following command line executes the <span class="keyword ParameterName OptionalReplaceable">erc.svrf</span> rule
+script:</p>
+<pre class="pre codeblock"><code>calibre -recon -erc=erc.svrf -turbo -svdb svdb</code></pre><p class="p">The floating layer is output to the svdb directory. The results
+are output to the <span class="ph filepath">erc.db</span>, which can be opened
+in Calibre RVE.</p>
+</div>
+<div class="section Subsection" id="id93e8f035-8377-48dc-9929-7d279889c475__id776c78e4-23b2-4708-aed9-f1bd47d74109"><h2 class="title Subheading sectiontitle">Example
+2</h2><p class="p">This example demonstrates Calibre nmLVS Recon Softchk. </p>
+<p class="p">Assume you have a Mask SVDB Directory that was produced using
+the SI keyword during circuit extraction. The following command
+line isolates soft connections on any Sconnect stamped layers (the
+second layer in the Sconnect syntax) for which there was a stamping conflict
+during circuit extraction:</p>
+<pre class="pre codeblock"><code>calibre -recon -softchk -turbo -svdb svdb</code></pre><p class="p">This produces output that is the same as for LVS Softchk LOWER.</p>
+</div>
+<div class="section Subsection" id="id93e8f035-8377-48dc-9929-7d279889c475__ida08fe4ee-f6a1-4b6e-bac4-9c5929c54a92"><h2 class="title Subheading sectiontitle">Example
+3</h2><p class="p">This example demonstrates Calibre nmLVS Recon SI stand-alone
+short isolation using SVDB input.</p>
+<p class="p">Assume the LVS rule file contains a Mask SVDB
+Directory svdb QUERY SI statement. Then, the following is run:</p>
+<pre class="pre codeblock"><code>calibre -lvs -hier -turbo -hcell hcells rules</code></pre><p class="p">If this is subsequently run:</p>
+<pre class="pre codeblock"><code>calibre -recon -si -turbo -svdb svdb</code></pre><p class="p">then the SVDB is updated with interactive short isolation data
+from the top level of the design, which can be accessed in Calibre RVE
+or post-processed in the Query Server Tcl shell.</p>
+<p class="p">If this is subsequently run:</p>
+<pre class="pre codeblock"><code>calibre -recon -si=all -turbo -svdb svdb</code></pre><p class="p">Then short isolation is run at all levels of the hierarchy of
+the PHDB design data.</p>
+</div>
+<div class="section Subsection" id="id93e8f035-8377-48dc-9929-7d279889c475__id811dc8b5-5fe6-4968-ae07-37f376234924"><h2 class="title Subheading sectiontitle">Example
+4</h2><p class="p">This example demonstrates Calibre nmLVS Recon SI stand-alone
+short isolation using rule file input.</p>
+<p class="p">Assume this command line and a rule file containing Mask SVDB
+Directory svdb QUERY:</p>
+<pre class="pre codeblock"><code>calibre -recon -si=IO -turbo rules</code></pre><p class="p">Then this statement is applied during short isolation:</p>
+<pre class="pre codeblock"><code> LVS ISOLATE SHORTS CELL PRIMARY &amp;&amp; !NAME LVS_POWER_NAME LVS_GROUND_NAME</code></pre><p class="p">which evaluates non-supply nets at the top level of the design.</p>
+<p class="p">If the rules contain this:</p>
+<pre class="pre codeblock"><code>LVS ISOLATE SHORTS YES CELL PRIMARY &amp;&amp; NAME LVS_POWER_NAME LVS_GROUND_NAME CELL ALL BY LAYER BY CELL</code></pre><p class="p">Then CELL ALL BY LAYER BY CELL are additionally applied because
+they do not conflict with the command line, but NAME is overridden
+by !NAME because the command line behavior takes precedence.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SetupToolInvocation_id19cd41c3.html" title="Calibre nmDRC and Calibre nmLVS require rule file and design database inputs in certain formats in order to perform verification tasks. The command lines for these tools have a large set of options for configuring the runs.">Setup and Tool Invocation</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Calibre nmLVS Reconnaissance Command Line"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_CalibreNmLVSReconnaissanceCommandLine_id93e8f035.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

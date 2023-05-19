@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="GeneralRefTopic" />
+<meta name="DC.Title" content="SVRF Command Support in Embedded SVRF" />
+<meta name="abstract" content="There is a subset of SVRF operations that can be embedded into a FRACTURE, MDPVERIFY, MDP EMBED, or DENSITY CONVOLVE statement." />
+<meta name="description" content="There is a subset of SVRF operations that can be embedded into a FRACTURE, MDPVERIFY, MDP EMBED, or DENSITY CONVOLVE statement." />
+<meta name="prodname" content="Calibre Mask Data Preparation User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mdp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Mask Data Preparation User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="NONE" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddaf01e43-68d4-4c0e-8bd5-8c140171b688" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>SVRF Command Support in Embedded SVRF</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="SVRF Command Support in Embedded SVRF" />
+<meta name="attributes" content="doc.type.documentation.user,,doc.type.documentation.ref,product.version.v2021.2,product.id.P10101" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="default" id="iddaf01e43-68d4-4c0e-8bd5-8c140171b688">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">SVRF Command Support in Embedded SVRF</h1>
+<div class="body refbody GeneralRefBody"><div class="abstract GeneralRefAbstract"><span class="shortdesc">There is
+a subset of SVRF operations that can be embedded into a FRACTURE,
+MDPVERIFY, MDP EMBED, or DENSITY CONVOLVE statement.</span>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="iddaf01e43-68d4-4c0e-8bd5-8c140171b688__id30b944fb-bcf1-4488-ae00-2bc97d2491d9"><p class="p"><a class="xref fm:Table" href="#iddaf01e43-68d4-4c0e-8bd5-8c140171b688__idee22c92a-705a-48d4-8815-840811eac1a9">Table 1</a> lists the subset of the SVRF operations
+(otherwise documented in the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual</a>). All other SVRF commands
+are not supported.</p>
+<p class="p">The table also indicates the commands where
+you must specify the secondary keyword BOUND (or RET GLOBAL BOUND
+set to YES) to enable the operation. All secondary keywords for
+this SVRF operation may not be supported in embedded SVRF. The result
+of this embedded SVRF operation may only match the SVRF result for
+data within a section and its extended range region. See the “<a class="xref fm:HeadingAndPage" href="Command_InfluenceInteractionRangeBoundKeyword_id30d54323.html#id30d54323-fea9-4d68-8dd3-7be511cd06e2__Command_InfluenceInteractionRangeBoundKeyword_id30d54323.xml#id30d54323-fea9-4d68-8dd3-7be511cd06e2" title="The BOUND keyword is used to enable unlimited range SVRF operations inside of embedded SVRF and, with the value parameter, allow user control to define the range in which the execution of the operation occurs.">Influence the Interaction Range (BOUND Keyword)</a>” for further details.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="iddaf01e43-68d4-4c0e-8bd5-8c140171b688__idee22c92a-705a-48d4-8815-840811eac1a9" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Supported SVRF Statements for Embedded SVRF</span></caption><colgroup><col style="width:4.424in" /><col style="width:1.101in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d1806e163"><p class="p">Statement</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d1806e166"><p class="p">BOUND Keyword Required?</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'AND', 'svrf_ur'); return false;">AND</a> —
+Two layers only.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'AND', 'svrf_ur'); return false;">AND</a> —
+One layer variant.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Angle', 'svrf_ur'); return false;">ANGLE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Angle', 'svrf_ur'); return false;">NOT ANGLE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Area', 'svrf_ur'); return false;">AREA</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Area', 'svrf_ur'); return false;">NOT AREA</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Coincident Edge', 'svrf_ur'); return false;">COINCIDENT EDGE</a> </p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Coincident Edge', 'svrf_ur'); return false;">NOT COINCIDENT EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Coincident Inside Edge', 'svrf_ur'); return false;">COINCIDENT INSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Coincident Inside Edge', 'svrf_ur'); return false;">NOT COINCIDENT INSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Coincident Outside Edge', 'svrf_ur'); return false;">COINCIDENT OUTSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Coincident Outside Edge', 'svrf_ur'); return false;">NOT COINCIDENT OUTSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Convex Edge', 'svrf_ur'); return false;">CONVEX EDGE</a> —
+If there is a WITH LENGTH constraint with an upper bound.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Convex Edge', 'svrf_ur'); return false;">CONVEX EDGE</a> —
+If there is no WITH LENGTH constraint, or if the constraint does
+not have an upper bound.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Copy', 'svrf_ur'); return false;">COPY</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Cut', 'svrf_ur'); return false;">CUT</a> —
+If BY NET is not specified.</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Cut', 'svrf_ur'); return false;">NOT CUT</a> —
+If BY NET is not specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Deangle', 'svrf_ur'); return false;">DEANGLE</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Spec Reshape', 'calbr_yaye_ref'); return false;">DFM SPEC RESHAPE</a></p>
+<p class="p"><a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Reshape', 'calbr_yaye_ref'); return false;">DFM RESHAPE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Spec Via Shift', 'calbr_yaye_ref'); return false;">DFM SPEC VIA SHIFT</a></p>
+<p class="p"><a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Via Shift', 'calbr_yaye_ref'); return false;">DFM VIA SHIFT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Donut', 'svrf_ur'); return false;">DONUT</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Donut', 'svrf_ur'); return false;">NOT DONUT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Enclose', 'svrf_ur'); return false;">ENCLOSE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Enclose', 'svrf_ur'); return false;">NOT ENCLOSE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Enclose Rectangle', 'svrf_ur'); return false;">ENCLOSE RECTANGLE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Enclose Rectangle', 'svrf_ur'); return false;">NOT ENCLOSE RECTANGLE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Enclosure', 'svrf_ur'); return false;">ENCLOSURE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Expand Edge', 'svrf_ur'); return false;">EXPAND EDGE</a> —
+You cannot specify an expansion_set containing the BY FACTOR secondary keyword.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Expand Edge', 'svrf_ur'); return false;">EXPAND EDGE</a> —
+If BY FACTOR is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Extent', 'svrf_ur'); return false;">EXTENT</a> —
+The no-layer variant.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Extents', 'svrf_ur'); return false;">EXTENTS</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Extent Drawn', 'svrf_ur'); return false;">EXTENT DRAWN</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'External', 'svrf_ur'); return false;">EXTERNAL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Grow', 'svrf_ur'); return false;">GROW</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Holes', 'svrf_ur'); return false;">HOLES</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Inside', 'svrf_ur'); return false;">INSIDE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Inside', 'svrf_ur'); return false;">NOT INSIDE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Inside Edge', 'svrf_ur'); return false;">INSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Inside Edge', 'svrf_ur'); return false;">NOT INSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Interact', 'svrf_ur'); return false;">INTERACT</a> —
+Only if BY NET is not specified.</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Interact', 'svrf_ur'); return false;">NOT INTERACT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Internal', 'svrf_ur'); return false;">INTERNAL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Property Audit', 'svrf_ur'); return false;">LAYOUT PROPERTY AUDIT</a> —REPLACE
+and APPEND are not supported.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Length', 'svrf_ur'); return false;">LENGTH</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Length', 'svrf_ur'); return false;">NOT LENGTH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../calbr_mdp_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'MDP MAPSIZE', 'calbr_mdp_useref'); return false;">MDP MAPSIZE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'NOT', 'svrf_ur'); return false;">NOT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'OR', 'svrf_ur'); return false;">OR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'OR Edge', 'svrf_ur'); return false;">OR EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Outside', 'svrf_ur'); return false;">OUTSIDE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Outside', 'svrf_ur'); return false;">NOT OUTSIDE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Outside Edge', 'svrf_ur'); return false;">OUTSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Outside Edge', 'svrf_ur'); return false;">NOT OUTSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Perimeter', 'svrf_ur'); return false;">PERIMETER</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Rectangle', 'svrf_ur'); return false;">RECTANGLE</a> and <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Rectangle', 'svrf_ur'); return false;">NOT RECTANGLE</a> are
+supported under certain circumstances, but the requirement of the
+BOUND keyword depends on how the constraints are defined.</p>
+<p class="p">RECTANGLE and NOT RECTANGLE are supported if you specify at least
+one constraint, but you cannot specify a lower-bound constraint
+such as “&gt;x”. In this case, the BOUND keyword is not required.</p>
+<p class="p">RECTANGLE and NOT RECTANGLE are also supported if you specify
+only one constraint or if a constraint has no upper bound. However,
+in this case, the BOUND keyword is required.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Depends on constraints</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Rectangles', 'svrf_ur'); return false;">RECTANGLES</a> —
+If INSIDE OF is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Rectangles', 'svrf_ur'); return false;">RECTANGLES</a> —
+If INSIDE OF LAYER is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Rectangle Enclosure', 'svrf_ur'); return false;">RECTANGLE ENCLOSURE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Shift', 'svrf_ur'); return false;">SHIFT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Shrink', 'svrf_ur'); return false;">SHRINK</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Size', 'svrf_ur'); return false;">SIZE</a> —
+If OVERLAP ONLY is not specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Size', 'svrf_ur'); return false;">SIZE</a> —
+If OVERLAP ONLY is specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Snap', 'svrf_ur'); return false;">SNAP</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Touch', 'svrf_ur'); return false;">TOUCH</a> —
+If BY NET is not specified.</p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Touch', 'svrf_ur'); return false;">NOT TOUCH</a> —
+If BY NET is not specified.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Touch Edge', 'svrf_ur'); return false;">TOUCH EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Touch Edge', 'svrf_ur'); return false;">NOT TOUCH EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Touch Inside Edge', 'svrf_ur'); return false;">TOUCH INSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Touch Inside Edge', 'svrf_ur'); return false;">NOT TOUCH INSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Touch Outside Edge', 'svrf_ur'); return false;">TOUCH OUTSIDE EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not Touch Outside Edge', 'svrf_ur'); return false;">NOT TOUCH OUTSIDE EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Vertex', 'svrf_ur'); return false;">VERTEX</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'With Edge', 'svrf_ur'); return false;">WITH EDGE</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not With Edge', 'svrf_ur'); return false;">NOT WITH EDGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'With Neighbor', 'svrf_ur'); return false;">WITH NEIGHBOR</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not With Neighbor', 'svrf_ur'); return false;">NOT WITH NEIGHBOR</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'With Width', 'svrf_ur'); return false;">WITH WIDTH</a></p>
+<p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Not With Width', 'svrf_ur'); return false;">NOT WITH WIDTH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'XOR', 'svrf_ur'); return false;">XOR</a> —
+Two layers only.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">No</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e163 "><p class="p"><a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'XOR', 'svrf_ur'); return false;">XOR</a> —
+One layer variant.</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d1806e166 "><p class="p">Yes</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_SectionBasedProcessingCalibreEmbeddedSvrfMdpEmbed_idd6446eb5.html" title="Calibre MDP Embedded SVRF provides a method of performing SVRF operations for section-based processing of design databases.">Section-Based Processing, Calibre Embedded SVRF, and MDP EMBED</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mdp_useref"
+                DocTitle = "Calibre® Mask Data Preparation User’s and Reference Manual"
+                PageTitle = "SVRF Command Support in Embedded SVRF"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/General_SvrfCommandSupportInEmbeddedSvrf_iddaf01e43.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Mask Data Preparation User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

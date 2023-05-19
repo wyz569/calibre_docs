@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Differences Between FastXOR and Standard Dual Database Processing" />
+<meta name="abstract" content="There are several functional differences between FastXOR, DBdiff, and standard XOR layout comparison." />
+<meta name="description" content="There are several functional differences between FastXOR, DBdiff, and standard XOR layout comparison." />
+<meta name="prodname" content="Calibre Layout Comparison and Translation Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="DBdiff, FastXOR, fdi2gds, fdi2oasis, and fdiBA" />
+<meta name="SourceHandle" content="calbr_lvl_fdi_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Layout Comparison and Translation Guide" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Differences Between FastXOR and Standard Dual Database Processing</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Differences Between FastXOR and Standard Dual Database Processing" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Differences Between FastXOR
+and Standard Dual Database Processing</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">There are
+several functional differences between FastXOR, DBdiff, and standard
+XOR layout comparison.</span>
+</div>
+<div class="fig fignone" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__id65c8bc59-9ad0-4153-928d-2a2cebbd0b3e"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Standard XOR</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/standard_xor_flow.png" /></div><br /></div>
+<div class="fig fignone" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__ide902ba37-4cc1-458c-87c7-b6c4bd0adc72"><span class="figcap"><span class="fig--title-label">Figure 2. </span>FastXOR</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/fastxor_flow.png" /></div><br /></div>
+<p class="p">The following are the differences
+you will see when comparing FastXOR processing versus the standard
+Calibre nmDRC XOR processing of two databases:</p>
+<ul class="ul"><li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__idfbefae81-af1c-48ae-9629-44d0804a99f7"><p class="p">FastXOR (calibre -fx)
+reduces hardware requirements. A FastXOR job running on four CPUs
+typically runs in less time than a traditional DRC job on 16 CPUs.
+You may see similar performance gains.</p>
+</li>
+<li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__id82552619-52e7-4368-91c4-0817c0daa12c"><p class="p">In a FastXOR run, the layouts are automatically
+pre-processed by the DBdiff utility to determine the layers and
+regions of differences between the layouts. In a traditional DRC
+run using XOR operations, no such pre-processing occurs.</p>
+</li>
+<li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__idc38f7a43-5b37-468c-9768-d1caeb06ecb1"><p class="p">In a FastXOR run,
+if DBdiff establishes that a cell is the same in both input designs,
+then some layers may not be presented to the DRC executive process.
+Any operations in the rule file that might depend upon such layers
+will not see those layers because the layers are not being submitted
+for XOR comparison. This can lead to unexpected results for layer
+operations that expect non-empty input from layers that have been
+filtered out by DBdiff. </p>
+</li>
+<li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__ide3dcdbe4-33ff-410a-a2eb-baeb8c12656d"><p class="p">The Calibre transcript
+statistics of the number of shapes read during the layout input
+step during a calibre ‑fx run will be significantly different when
+compared to the data present in the original layout files. This
+is because of the internal DBdiff processing that filters out areas
+of the designs that are not different.</p>
+</li>
+<li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__id76a360cc-7671-46e7-8f26-6676334b6bd5"><p class="p">The number of results generated in calibre
+–fx mode may not match the number of results generated in the normal
+-drc mode, but a comparison of the overall XOR results of the two
+methods will not show geometric differences. This happens because
+the data and hierarchy seen in calibre –fx mode is different from
+the data and hierarchy seen in the normal -drc mode. See “<a class="xref fm:HeadingAndPage" href="TaskTop_ComparingFastXorCalibreNmdrcHRunResults_id65efec2f.html#id65efec2f-edd2-4740-927b-db01a4560d0e__TaskTop_ComparingFastXorCalibreNmdrcHRunResults_id65efec2f.xml#id65efec2f-edd2-4740-927b-db01a4560d0e" title="Compare FastXOR (calibre -fx) and traditional Calibre nmDRC-H LVL runs on the same two layouts when using similar runtime environments for the two runs.">Comparing FastXOR and Calibre nmDRC-H Run Results</a>”.</p>
+</li>
+<li class="li" id="idc9dc7631-becc-46e7-96b7-e5ba2b590bc9__id3201bad9-eae0-4acf-af6c-36cdcefdbb40"><p class="p">A comparison of differences between output
+of calibre –fx and a normal –drc run may not be the same when there
+are non-orthogonal shapes in the designs and there are differences
+between the designs in the non-orthogonal shapes. There may be 1
+dbu differences in where edges are snapped between FastXOR and normal
+-drc runs. This can be ignored.</p>
+</li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_GettingStartedWithFastxor_id824e2d70.html" title="You can run FastXOR from the command-line or from the Calibre Interactive nmDRC GUI.">Getting Started with FastXOR</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lvl_fdi_gd"
+                DocTitle = "Calibre® Layout Comparison and Translation Guide"
+                PageTitle = "Differences Between FastXOR and Standard Dual Database Processing"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_DifferencesBetweenFastXorUsualDualDatabaseProcessing_idc9dc7631.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Layout Comparison and Translation Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

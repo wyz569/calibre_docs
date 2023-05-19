@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Feature Vector File Format" />
+<meta name="abstract" content="The feature vector file is a type of Calibre model file. The “seed model” form (typically phv.mod) contains a list of features for the machine learning engine to extract. The MCOEF values are set to placeholders. The output (typically phvo.mod) is the same features with values for the MCOEF entries." />
+<meta name="description" content="The feature vector file is a type of Calibre model file. The “seed model” form (typically phv.mod) contains a list of features for the machine learning engine to extract. The MCOEF values are set to placeholders. The output (typically phvo.mod) is the same features with values for the MCOEF entries." />
+<meta name="DC.subject" content="phv.mod, Model files" />
+<meta name="keywords" content="phv.mod, Model files" />
+<meta name="prodname" content="Calibre SONR" />
+<meta name="version" content="v12.2" />
+<meta name="release" content="2016_01" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2016-08-02" />
+<meta name="DC.Date.Modified" content="2021-03-27" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_sonr_useref" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeInInventory" content="Yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all" />
+<meta name="HighlightColor" content="mgc_light_blue" />
+<meta name="HighlightChanges" content="Yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="DocumentTitle" content="Calibre® SONR™ User’s and Reference Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Feature Vector File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Feature Vector File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent">
+<h1 class="title topictitle1">Feature Vector File Format</h1>
+
+
+
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input for: Calibre SONR, Calibre ML
+OPC</p>
+
+<p class="shortdesc">The feature vector file is a type of Calibre model file.
+The “seed model” form (typically <span class="ph filepath">phv.mod</span>) contains
+a list of features for the machine learning engine to extract. The
+MCOEF values are set to placeholders. The output (typically <span class="ph filepath">phvo.mod</span>)
+is the same features with values for the MCOEF entries.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2>
+<p class="p">A feature vector file must conform to the following restrictions:</p>
+
+<ul class="ul"><li class="li" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__ided33bddd-aada-4d35-a5e9-87a3aecee3ca"><p class="p">Each parameter
+must be on its own line.</p>
+</li>
+
+<li class="li" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idfd229f6f-9d04-48b9-9ef8-2509caafe707"><p class="p">Each term may
+appear only once.</p>
+</li>
+
+<li class="li" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id74caadbb-5a2f-466e-96de-3f526016bf62"><p class="p">Parameters
+are case-sensitive.</p>
+</li>
+
+<li class="li" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id26fc0833-ae2a-42b3-a799-aa51f30ea6ce"><p class="p">Only ASCII
+characters are supported.</p>
+</li>
+
+<li class="li" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id3b3b6c80-b56d-49b0-9278-fc5616c78815"><p class="p">Text after
+# is ignored.</p>
+</li>
+</ul>
+
+<p class="p">This is the first four lines of a seed model feature vector file:</p>
+
+<pre class="pre codeblock"><code>version 1
+modelType NLITHO
+DEFINE G1 MCOEFA 1 MCOEFB -1
+DEFINE G2 MCOEFA 1 MCOEFB -1</code></pre>
+<p class="p">This is the first four lines of an output feature vector file
+with real measurements for MCOEF:</p>
+
+<pre class="pre codeblock"><code>version 1
+modelType NLITHO
+DEFINE G1 MCOEFA 0 MCOEFB 3
+DEFINE G2 MCOEFA 1 MCOEFB 1</code></pre>
+<p class="p">For seed models, the values for MCOEFA and MCOEFB are placeholders.
+When the model is generated, the values are replaced with ones calculated
+from the training data. A typical feature vector file has dozens,
+if not hundreds, of lines of DEFINE expressions.</p>
+</div>
+
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2>
+<div class="section ArgumentSet"><dl class="dl ArgumentList">
+<dt class="dt ArgumentName dlterm" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idccefce5b-b5cc-4128-a75c-07f6df9271c7"><span class="keyword ParameterName Required">version 1</span></dt>
+
+<dd class="dd ArgumentDescription"><p class="p">A required first line specifying the model
+version number. The only supported version is 1.</p>
+</dd>
+
+<dt class="dt ArgumentName dlterm" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id30c810e3-5e5d-4833-bf7f-c2f770325174"><span class="keyword ParameterName Required">modelType NLITHO</span></dt>
+
+<dd class="dd ArgumentDescription"><p class="p">A required second line specifying the model
+type. All feature vector models are NLITHO.</p>
+</dd>
+
+<dt class="dt ArgumentName dlterm" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id9c9de1d2-c4bf-4bbd-8604-15fa4d1752c1"><span class="keyword ParameterName Required">DEFINE</span> <span class="keyword ParameterName RequiredReplaceable">expression</span></dt>
+
+<dd class="dd ArgumentDescription"><p class="p">A required statement that identifies a feature
+vector term (also referred to as a feature). The expression has
+the following syntax:</p>
+
+<pre class="pre codeblock"><code><span class="keyword ParameterName RequiredReplaceable">term</span> <span class="keyword ParameterName Required">MCOEFA</span> <span class="keyword ParameterName RequiredReplaceable">value</span> <span class="keyword ParameterName Required">MCOEFB</span> <span class="keyword ParameterName RequiredReplaceable">value</span> [<span class="keyword ParameterName Optional">TYPE</span> <span class="keyword ParameterName OptionalReplaceable">kernel_expression</span>]</code></pre>
+<p class="p">Listed below are the possible values for <span class="keyword ParameterName RequiredReplaceable">term</span>.
+Most files include at least the G and D terms. </p>
+
+<p class="p">The groups of terms appear in approximate order of least effect
+on runtime to most effect. (Runtime is affected by several factors,
+so there is significant overlap between types of terms.)</p>
+
+<ul class="ul ArgumentOptions">
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__iddaf78d3e-4306-496f-88ba-14bed4721583"><p class="p Opt">G1
+— The direction of “outside” for the fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id1a855130-9b53-4a26-8afe-0e5694896a00"><p class="p Opt">G2
+— The corner type of the further corner of the previous fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id18ecedd6-6093-4468-858b-1be198e58553"><p class="p Opt">G3
+— The corner type of the further corner of the next fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id432f64b4-974f-4c3f-a58e-441f8a5d9ccf"><p class="p Opt">G4
+— The corner type of the fragment’s first corner.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id6ea5152c-ef4c-4119-b3c7-18eb0ff5f036"><p class="p Opt">G5
+— The corner type of the fragment’s second corner.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id0aed5250-5f7c-4db2-9047-e52100ede562"><p class="p Opt">G6
+— How many fragments between the first corner and the POI (maximum
+10).</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id9368d1c2-d9b1-45ae-af05-70a2f56d1031"><p class="p Opt">G7
+— How many fragments between the second corner and the POI (maximum
+10).</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idb43143a3-3278-4a14-8b0b-df0cb86c6fd9"><p class="p Opt">G8
+— The corner type of the edge in the direction of the previous fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id98c0c80f-bebb-447c-899c-5f21d1fba3a8"><p class="p Opt">G9
+— The corner type of the edge in the direction of the next fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id9753100a-e91a-4949-8fdc-9b9f365123a2"><p class="p Opt">G10
+— The corner type of the further corner of the previous edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idd2c3ac39-a04d-4325-a909-4a3cfd171ea6"><p class="p Opt">G11
+— The corner type of the further corner of the next edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id29c44b54-bc91-4d21-96d6-a6e45e466f5a"><p class="p Opt">G12
+— The length of the previous fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idc128f5cd-773e-4f6e-8c0f-1f32e62d961b"><p class="p Opt">G13
+— The length of the next fragment.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idf0152923-bfa6-4a63-bc06-52a9ee0bb1ce"><p class="p Opt">G14
+— The length of the edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id193641ed-6d1a-46c4-9f27-9e68c83cb8fc"><p class="p Opt">G15
+— The length of the previous edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id720983c8-1788-4e27-9299-7f43c951aa4b"><p class="p Opt">G16
+— The length of the next edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id26d75141-282d-4061-867e-2925ece60d7d"><p class="p Opt">G17
+— Distance from the POI to the internal facing edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id5fb77433-21a2-43bf-94f8-0e61d30d524c"><p class="p Opt">G18
+— The length of the fragment that the POI is on.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__ide22844da-1a59-4403-81ab-ef9c1615ce33"><p class="p Opt">G19
+— Distance from the POI to the external facing edge.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id7fc45a93-0556-4522-9f51-5534409e18eb">
+<p class="p Opt">X1 through X5 — Siemens IP.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id04a31be0-0ec5-4d42-8e3f-79971addc91b"><p class="p Opt">C1
+through C32 — Siemens IP.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idb1c5c096-3acc-4742-943e-34a96b439e8f">
+<p class="p Opt">CM1 through CM32 — Siemens IP. </p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id956cfb0a-70f8-49be-aae3-8d9aee4d7f16"><p class="p Opt">CP1
+through CP32 — Siemens IP.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id5e1a9896-35aa-447f-9abc-ec0868b50b09"><p class="p Opt">D1
+through D16 — Density terms. Density is convolved with a tophat
+kernel by default.</p>
+
+<p class="p">Only density terms can use the “TYPE kernel_expression” option.
+This can take one of two forms:</p>
+
+<ul class="ul ArgumentOptions">
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id5e46ee8e-5ea1-4697-98c4-993908039796"><p class="p Opt">TYPE
+tophat <span class="keyword ParameterName OptionalReplaceable">outer_radius</span> <span class="keyword ParameterName OptionalReplaceable">inner_radius</span> </p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idf019fdae-ad13-4f6b-8668-e4b3bc9a0594"><p class="p Opt">TYPE
+gauss <span class="keyword ParameterName OptionalReplaceable">radius</span></p>
+</li>
+</ul>
+
+<p class="p">Both may have an additional MODE option (SPARSE or DENSE), which
+is supported for backwards compatibility but has no effect.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id6297ff65-be0b-4cfb-88ca-39a36077d0f6"><p class="p Opt">I1
+through I12 — Image intensity terms. The image intensity assumes
+nominal focus and dose.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idea5c56eb-0bfb-42fd-a59f-0a4238097bda"><p class="p Opt">PWI1
+through PWI12 — Image intensity terms, calculated with the first
+process window condition. </p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__idb75a9eb5-20e4-4cbc-ad24-4b55a9a1c508"><p class="p Opt">M1
+through M7 — Mask terms. These terms include the effects of OPC.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id4fc7405a-a853-42c7-8084-8ccf1b936035"><p class="p Opt">RE1
+through RE4 — Resist simulation terms.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__ide1f9dd56-4773-4a6a-8ba0-49466d521b93"><p class="p Opt">SRAM
+— Whether the fragment interacts with SRAM.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id08eb96e4-4fd9-4ccf-b62e-5339d1d14afc"><p class="p Opt">PWRE1
+through PWRE4 — Resist simulation terms calculated with the first
+process window condition.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__id273756a0-fb42-4cdb-8f9a-fc3415484266"><p class="p Opt">R1
+and R2 — Retargeting layer terms.</p>
+</li>
+
+<li class="li ArgOption" id="id8afd36d8-9351-4f42-9d2e-7a9a4b5ba238__iddc7de2fb-b0a3-483e-b296-b64449cbd270">
+<p class="p Opt">MN<span class="ph FontProperty equationvariable">X</span>_<span class="ph FontProperty equationvariable">term</span> and
+MT<span class="ph FontProperty equationvariable">X</span>_<span class="ph FontProperty equationvariable">term</span> where <span class="ph FontProperty equationvariable">X</span> is
+1, 2, 3, or 4 and <span class="ph FontProperty equationvariable">term</span> is
+any of the other terms in this list — Multilayer terms. Calibre
+SONR supports up to four layers in addition to the POI layer. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2>
+<p class="p">The following example is sometimes referred to as “the generic
+86.” It is a good starting point for a seed model.</p>
+
+<pre class="pre codeblock"><code>version 1
+modelType NLITHO
+DEFINE       G1 MCOEFA   0.0 MCOEFB   3.0
+DEFINE       G2 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       G3 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       G4 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       G5 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       G6 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       G7 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       G8 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       G9 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G10 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G11 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G12 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      G13 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G14 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G15 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G16 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G17 MCOEFA   0.0 MCOEFB   2.0
+DEFINE      G18 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      G19 MCOEFA   0.0 MCOEFB   2.0
+DEFINE       X1 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       X2 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       X3 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       X4 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       X5 MCOEFA   0.0 MCOEFB   0.0
+DEFINE       C1 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C2 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C3 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C4 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C5 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C6 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C7 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C8 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       C9 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C10 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C11 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C12 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C13 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C14 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C15 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      C16 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP1 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP2 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP3 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP4 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP5 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP6 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP7 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP8 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE      CP9 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP10 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP11 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP12 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP13 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP14 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP15 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE     CP16 MCOEFA  -1.0 MCOEFB   1.0
+DEFINE       D1 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D2 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D3 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D4 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D5 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D6 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D7 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D8 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       D9 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D10 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D11 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D12 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D13 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D14 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D15 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      D16 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I1 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I2 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I3 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I4 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I5 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I6 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I7 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I8 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       I9 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      I10 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      I11 MCOEFA   0.0 MCOEFB   1.0
+DEFINE      I12 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       R1 MCOEFA   0.0 MCOEFB   1.0
+DEFINE       R2 MCOEFA   0.0 MCOEFB   1.0</code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreSONRReferenceInformation_id7e118e5b.html" title="This chapter contains descriptions for the commands used by Calibre SONR. The commands are grouped by their location in a rule file.">Calibre SONR Reference Information</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_sonr_useref"
+                DocTitle = "Calibre® SONR™ User’s and Reference Manual"
+                PageTitle = "Feature Vector File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_PhvFileFormat_id8afd36d8.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® SONR™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

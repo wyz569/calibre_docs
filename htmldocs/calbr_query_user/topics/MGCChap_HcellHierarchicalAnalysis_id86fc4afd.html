@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="MGCChapter" />
+<meta name="DC.Title" content="Hcell and Hierarchical Analysis" />
+<meta name="abstract" content="Hcells define correspondences between layout and source cells in hierarchical LVS. Calibre nmLVS-H cannot generally determine these correspondences if the subcircuit names are different in the two designs, so a user-defined hcell list is needed in that case. Furthermore, simply because cell names may match between layout and source designs does not mean the pair will make good hcells. The Query Server can assist in finding a prospective set of hcells that act as design partitions to improve comparison efficiency and to make debugging simpler." />
+<meta name="description" content="Hcells define correspondences between layout and source cells in hierarchical LVS. Calibre nmLVS-H cannot generally determine these correspondences if the subcircuit names are different in the two designs, so a user-defined hcell list is needed in that case. Furthermore, simply because cell names may match between layout and source designs does not mean the pair will make good hcells. The Query Server can assist in finding a prospective set of hcells that act as design partitions to improve comparison efficiency and to make debugging simpler." />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id86fc4afd-89c0-4c60-b827-0d7cfc3993d8" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Hcell and Hierarchical Analysis</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Hcell and Hierarchical Analysis" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id86fc4afd-89c0-4c60-b827-0d7cfc3993d8">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1"> Hcell and Hierarchical Analysis</h1>
+<div class="body MGCBody"><div class="abstract MGCAbstract"><span class="shortdesc">Hcells define
+correspondences between layout and source cells in hierarchical
+LVS. Calibre nmLVS-H cannot generally determine these correspondences
+if the subcircuit names are different in the two designs, so a user-defined
+hcell list is needed in that case. Furthermore, simply because cell
+names may match between layout and source designs does not mean
+the pair will make good hcells. The Query Server can assist in finding
+a prospective set of hcells that act as design partitions to improve
+comparison efficiency and to make debugging simpler. </span>
+</div>
+<p class="p">The Query Server Hcell analysis
+interface (also called the hcell analyzer) helps to identify a useful
+set of hcells to test. Commands are provided to read input data,
+identify hcells through various manual or automatic means, and to
+produce reports detailing cells, effectiveness of hcells, statistics
+on contained instances, and so forth. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Any hcell
+list generated by the Query Server should be regarded as provisional
+and should be thoroughly tested to ensure validity and performance.</p>
+</div>
+<p class="p">The functionality in the Tcl shell based
+Query Server (calibre -qs) supersedes similar functionality in the
+command-line based Query Server (calibre -query). The historical
+method for doing Hcell analysis using the non-Tcl Query Server is
+discussed under “<a class="xref fm:HeadingOnly" href="Contain_HcellListManagementUsingStandardCommands_id1114e459.html#id1114e459-aa54-44c3-b2c0-32d79ecf7cc3__Contain_HcellListManagementUsingStandardCommands_id1114e459.xml#id1114e459-aa54-44c3-b2c0-32d79ecf7cc3" title="Hcell lists specify cells that correspond between layout and source netlists. Judicious selection of hcells can make Calibre nmLVS-H comparison run much faster than otherwise is possible. The Query Server can assist in constructing hcell lists.">Hcell List Management Using Standard Commands</a>.”</p>
+<p class="p">The <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Hcell Report', 'svrf_ur'); return false;">LVS Hcell Report</a> specification
+statement has related functionality and can be a useful adjunct
+to the Query Server hcell interface.</p>
+<p class="p">See “<a class="xref Link" href="../../calbr_ver_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Hcells', 'calbr_ver_user'); return false;">Hcells</a>”
+in the <cite class="cite">Calibre Verification User’s Manual</cite> for
+more information about hcells.</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Concept_CurrentHcellList_id56991b78.html" title="The Query Server maintains an internal list of hcells called the current hcell list. Hcells are added to this list by reading the rule file, by reading an hcell list file, by specifying individual hcell pairs in Query Server commands, or by adding automatically matched hcells. Hcells can be removed from the current list either globally or by specifying individual pairs to be excluded. The current hcell list is used for Query Server analysis and reporting functions, as well as to select a list of hcells to be used for testing in LVS.">Current Hcell List</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_EvaluationHcellsLvsComparison_idd3b1613a.html" title="Hcells in the current hcell list should be evaluated for their effectiveness in LVS comparison. This can be done initially in the Query Server Tcl shell. Ultimately, every hcell list used for LVS comparison should be tested in Calibre nmLVS-H.">Evaluation of Hcells for LVS Comparison</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_EvaluationHcellsNetlistExtraction_id76a34ee5.html" title="The hcell analysis feature is typically used for LVS comparison when layout and source are both SPICE netlists. However, the hcell analysis can be used when the layout is geometric. This method has the disadvantage that the devices and connectivity from the layout have not yet been extracted, so comparison performance estimations are done entirely with the source netlist.">Evaluation of Hcells for Netlist Extraction</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_HcellSelectionLimitations_id2f95bde1.html" title="Hcell selection is useful feature when given a design with no hcell list or with a poor hcell list. However, limitations exist in automatic hcell selection.">Hcell Selection Limitations</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_NetlistHcellAnalysisAndReportingFlow_idba33c447.html" title="The hcell analysis and hierarchy tree reports are useful for finding hcells for hierarchical LVS comparison. The report ranks cells in order of potential value as hcells (assuming that a matching hcell can be found). ">Netlist Hcell Analysis and Reporting Flow</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Contain_TclShellHcellAnalysisCommands_ida3ecde40.html" title="Hcell analysis commands provide information for constructing preliminary hcell correspondence lists.">Tcl Shell Hcell Analysis Commands</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/FileRef_HcellEvaluationReportFormat_id1ad3fb45.html" title="Hcell analysis report showing the effectiveness of hcells.">Hcell Evaluation Report Format</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/FileRef_HcellAnalysisHierarchyTreeReportFormat_id17a13418.html" title="Hcell analysis statistics report used for selection of hcell list pairs. It provides an estimate of the percentage in memory savings if a cell is used as an hcell, which is a useful evaluation criterion.">Hcell Analysis and Hierarchy Tree Report Format</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_UnbalancedHcellReporting_id34ffb6e8.html" title="Hcells are said to be unbalanced when the cell counts differ in layout and source for a given hcell. ">Unbalanced Hcell Reporting</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_CellMatchesUsingPlacementMatching_idaa49eea3.html" title="The Query Server Hcell Analysis functionality includes the ability to create hcell matches between cells having a similar number of placements in the layout and source. ">Cell Matches Using Placement Matching</a></strong></li>
+</ul>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "Hcell and Hierarchical Analysis"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/MGCChap_HcellHierarchicalAnalysis_id86fc4afd.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

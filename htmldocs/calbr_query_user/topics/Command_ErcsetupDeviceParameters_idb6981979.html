@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="erc::setup_device_parameters" />
+<meta name="abstract" content="Calculates parallel device count and global coordinates properties for the CCI pushdown separated properties (PDSP) flow. These properties are not computed during LVS circuit extraction (calibre -spice), so they do not appear in the extracted layout netlist, nor are they available during LVS comparison." />
+<meta name="description" content="Calculates parallel device count and global coordinates properties for the CCI pushdown separated properties (PDSP) flow. These properties are not computed during LVS circuit extraction (calibre -spice), so they do not appear in the extracted layout netlist, nor are they available during LVS comparison." />
+<meta name="prodname" content="Calibre Query Server Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-13" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_query_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Query Server Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idb6981979-3c16-4037-af5c-8551b483ad1a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>erc::setup_device_parameters</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="erc::setup_device_parameters" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11713,product.id.P10099,product.id.P10087,product.id.P10084,product.id.P11347,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="syn-arg" id="idb6981979-3c16-4037-af5c-8551b483ad1a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">erc::setup_device_parameters</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">ERC TVF Command. </p>
+<p class="shortdesc">Calculates parallel device count and global coordinates
+properties for the CCI pushdown separated properties (PDSP) flow.
+These properties are not computed during LVS circuit extraction
+(calibre -spice), so they do not appear in the extracted layout
+netlist, nor are they available during LVS comparison.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Syntax</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">erc::setup_device_parameters</span> <span class="keyword ParameterName Required">-devices</span> <span class="keyword ParameterName RequiredReplaceable">device_list</span> [-globalx <span class="keyword ParameterName OptionalReplaceable">prop_x</span> -globaly <span class="keyword ParameterName OptionalReplaceable">prop_y</span>] <br />
+[-add ‘{’ <span class="keyword ParameterName OptionalReplaceable">input_prop</span> <span class="keyword ParameterName OptionalReplaceable">output_prop</span> [‘{’ {<span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> |   ‘{’ <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> <span class="keyword ParameterName OptionalReplaceable">tolerance</span> ‘}’ } ... ‘}’]]<br />
+[‑total ‘{’ <span class="keyword ParameterName OptionalReplaceable">count_prop</span> [‘{’ {<span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> | ‘{’ <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> <span class="keyword ParameterName OptionalReplaceable">tolerance</span> ‘}’} ... ‘}’]] <br />
+[‑nets ‘{’ <span class="keyword ParameterName OptionalReplaceable">netID_prop</span> [<span class="keyword ParameterName OptionalReplaceable">default_total</span>] ‘}’]<br />
+[-no_prop_error]<br />
+[-help]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id3947eed0-94aa-4b66-9f7f-7427e78dd9dd"><span class="keyword ParameterName Required">-devices</span> <span class="keyword ParameterName RequiredReplaceable">device_list</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument set that specifies a
+Tcl list of device types and optional subtypes. Device types and
+subtypes are specified as in a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Device', 'svrf_ur'); return false;">Device</a> statement:
+type(subtype). At least one device type must be in the <span class="keyword ParameterName RequiredReplaceable">device_list</span>. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__iddd6842c9-fd8a-4be6-a93d-dd28a06f7701">-globalx <span class="keyword ParameterName OptionalReplaceable">prop_x</span> -globaly <span class="keyword ParameterName OptionalReplaceable">prop_y</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that specifies
+to output location properties of the names <span class="keyword ParameterName OptionalReplaceable">prop_x</span> and <span class="keyword ParameterName OptionalReplaceable">prop_y</span> to
+the CCI netlist and separated properties file. The -globalx argument
+must be specified with -globaly. The <span class="keyword ParameterName OptionalReplaceable">prop_x</span> and <span class="keyword ParameterName OptionalReplaceable">prop_y</span> arguments
+must satisfy SPICE syntax criteria for property names. The output
+values associated with these property names are the top-level x and
+y coordinates in user units of the device seed shapes in the <span class="keyword ParameterName RequiredReplaceable">device_list</span>.</p>
+<p class="p">This argument set causes flattening of all specified devices
+written to the output. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id7e4803ca-1859-403b-9044-2f3682649b61">-add ‘{’<span class="keyword ParameterName OptionalReplaceable">input_prop</span> <span class="keyword ParameterName OptionalReplaceable">output_prop</span> [‘{’ {<span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> |   ‘{’ <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> <span class="keyword ParameterName OptionalReplaceable">tolerance</span> ‘}’} ... ‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that calculates
+the sum of values of a given property for device instances of the
+same type and optional subtype in the <span class="keyword ParameterName RequiredReplaceable">device_list</span> that
+are connected in parallel to other instances of the same classification.
+For instances that are not in parallel, <span class="keyword ParameterName OptionalReplaceable">output_prop</span> is
+equal to <span class="keyword ParameterName OptionalReplaceable">input_prop</span>.
+Parallel connections are determined across the hierarchy. </p>
+<p class="p">The arguments after the -add option are specified in a Tcl list
+of lists. These are the argument definitions:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id650d238d-a9da-4c0b-a268-ec6a6e433ee5"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">input_prop</span> —
+The name of the property whose values are summed. This parameter
+must be specified. Instances must have the specified property; otherwise,
+the instance is skipped for property summation, an <span class="keyword ParameterName OptionalReplaceable">output_prop</span> is
+not written, and an error message is given by default.</p>
+</li>
+<li class="li ArgOption" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id0324a275-dbf2-43f0-88cc-a9c1d6370875"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">output_prop</span> —
+The name of the property that contains the sum of the <span class="keyword ParameterName OptionalReplaceable">input_prop</span> values.
+This parameter must be specified.</p>
+</li>
+<li class="li ArgOption" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id0d07df17-11d3-4169-8930-198799bc13c1"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> —
+An optional name of layout netlist property (typically L or W) by which
+to group parallel instances. One or more <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> arguments
+may be specified in a list as a part of the argument set. Instances
+must have the specified property in order to be grouped together;
+otherwise, the instance is skipped for property calculation, the
+output property is not written, and an error message is given by
+default. If <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> is
+omitted, then device properties are not considered when grouping
+instances. If <span class="keyword ParameterName OptionalReplaceable">tolerance</span> is
+specified with a <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span>,
+then each pair must be specified in its own list. Properties specified
+by this argument must be LVS-actionable (see <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Netlist Property', 'svrf_ur'); return false;">LVS Netlist Property</a> for
+a definition).</p>
+</li>
+<li class="li ArgOption" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id32dce3fc-eb2e-445d-bad4-e8f087c67716"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">tolerance</span> —
+An optional non-negative floating-point number interpreted as a
+percent. If specified, it must appear in the same sub-list as a <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span>.
+By default, the <span class="keyword ParameterName OptionalReplaceable">tolerance</span> is
+0. Instances must be within a <span class="keyword ParameterName OptionalReplaceable">tolerance</span> percentage
+difference of the <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span>’s
+associated numeric value in order to be considered part of the same parallel
+group.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__idbc1ba4b4-f2c5-40d8-8a18-4380d10913c9">‑total ‘{’ <span class="keyword ParameterName OptionalReplaceable">count_prop</span> [‘{’ {<span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> | ‘{’ <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> <span class="keyword ParameterName OptionalReplaceable">tolerance</span> ‘}’} ... ‘}’]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that calculates
+the number of instances of a given type and optional subtype in
+the <span class="keyword ParameterName RequiredReplaceable">device_list</span> that
+are connected in parallel to other instances of the same classification.
+For instances that are not in parallel, the count is 1. Parallel
+connections are determined across the hierarchy. Parallel instances
+that are counted can optionally be grouped by a property name alone
+or by a property name with a tolerance for the property’s value.</p>
+<p class="p">The arguments after the -total option are specified in a Tcl
+list of lists. The <span class="keyword ParameterName OptionalReplaceable">count_prop</span> is
+the name of the output device property associated with the parallel
+count value. This parameter must be specified when -total is used.
+The <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> and <span class="keyword ParameterName OptionalReplaceable">tolerance</span> parameters
+are as described under -add. If the <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span> is
+missing for an instance, then the <span class="keyword ParameterName OptionalReplaceable">count_prop</span> is
+not written, and an error is given by default.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id40da239e-7fdc-4c4b-8c1a-6f5980a277b7">-nets ‘{’ <span class="keyword ParameterName OptionalReplaceable">netID_prop</span> [<span class="keyword ParameterName OptionalReplaceable">default</span>] ‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that groups parallel
+instances based upon the DFM property <span class="keyword ParameterName OptionalReplaceable">netID_prop</span>. </p>
+<p class="p">Everything after -nets is a Tcl list. The <span class="keyword ParameterName OptionalReplaceable">netID_prop</span> corresponds
+either to a numeric node ID or a ‑1 value. The <span class="keyword ParameterName OptionalReplaceable">default</span> is
+an optional numeric value specifying a default parameter value for
+instances that do not have a node ID (that is, <span class="keyword ParameterName OptionalReplaceable">netID_prop</span> has
+a value of ‑1).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__idce4998a2-a8ce-4941-af60-1e294c659e7b">-no_prop_error</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that suppresses runtime
+error messages that are given when a device instance lacks a <span class="keyword ParameterName OptionalReplaceable">grouping_prop</span>,
+or an <span class="keyword ParameterName OptionalReplaceable">input_prop</span> when
+-add is used. When -no_prop_error is specified, such instances are
+quietly skipped for property summation calculations.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id16796510-3721-44d7-ac6f-e01a0cc91c39">-help</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that shows
+the command usage.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">None.</p>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">This command is used in the CCI PDSP flow to calculate properties
+available to downstream simulation tools. This command is part of
+the CalibreLVS_ERC_TVF_device package and appears in a Tcl procedure
+called by the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'ERC TVF', 'svrf_ur'); return false;">ERC TVF</a> specification
+statement in the rule file. A Calibre ADP license is required. </p>
+<p class="p">The <span class="keyword ParameterName Required">-devices</span> argument
+defines the devices for which properties are calculated. Only instances with
+d, g, and s pins are processed. The devices are specified as they
+appear in Device statements in the rules, for example:</p>
+<pre class="pre codeblock"><code>-device {MP(phv) MN(nhv)}</code></pre><p class="p">If a type is specified without a subtype, then that type covers
+all subtypes.</p>
+<p class="p">When used, the -globalx and -globaly options must be specified
+together. These options cause flattening of the design to get the
+top-level coordinates of specified devices; therefore, use of these
+options should be restricted to small blocks or devices that appear
+infrequently in the design. The reported coordinates are based upon
+the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Center Device Location', 'svrf_ur'); return false;">LVS Center Device Location</a> rule
+file setting. YES is recommended when using -globalx and -globaly.</p>
+<p class="p">The -total option causes a property to be inserted in the output
+indicating the number of instances of the same type and subtype
+in the <span class="keyword ParameterName RequiredReplaceable">device_list</span> that
+are connected in parallel. The minimum count of parallel instances
+is 1, which means the instance has no parallel counterpart. The
+option’s arguments can be specified as a list of lists, such as
+here:</p>
+<pre class="pre codeblock"><code>-total { mos_in_parallel { L W } }</code></pre><p class="p">In this case, the values of the layout properties L and W are
+used to group the instances in parallel. The rule file must be configured
+so that the specified grouping properties are calculated and are
+LVS actionable. Appearance in <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Trace Property', 'svrf_ur'); return false;">Trace Property</a> statements
+is sufficient to meet this condition.</p>
+<p class="p">Instances not having the specified grouping properties are skipped
+for property summation, the <span class="keyword ParameterName OptionalReplaceable">count_prop</span> or <span class="keyword ParameterName OptionalReplaceable">output_prop</span> is
+not written, and this error is given by default:</p>
+<p class="p BlockIndent">Error: Property "<span class="keyword ParameterName OptionalReplaceable">grouping_prop</span>"
+not found on device &lt;instance&gt; of &lt;type&gt; in cell &lt;cell&gt; when
+grouping &lt;output&gt; property.</p>
+<p class="p">This error can be suppressed by using the -no_prop_error option. </p>
+<p class="p">By default, the <span class="keyword ParameterName OptionalReplaceable">tolerance</span> for
+matching netlist property values is 0 percent. That is, the property values
+much match exactly in order for the instances to be grouped together
+as parallel. If you want a tolerance of 1 percent difference for
+both L and W, then the previous example could be modified as follows:</p>
+<pre class="pre codeblock"><code>-total { mos_in_parallel { { L 1 } { W 1 } } }</code></pre><p class="p">The -nets option facilitates grouping parallel instances based
+upon a DFM property having a node ID value. The property is typically
+assigned by a marker layer. See <a class="xref fm:HeadingOnly" href="#idb6981979-3c16-4037-af5c-8551b483ad1a__idf679f823-774d-4453-be22-d5d6b15b6bac">Example 2</a>.</p>
+<p class="p">The -add option behaves similarly to the -total option. The main
+difference is -add sums the values of an input property rather than
+the number of instances. Non-parallel instances are processed with
+the sum effectively being <span class="keyword ParameterName OptionalReplaceable">input_prop</span> +
+0. As with -total, the sum is written to an output property. The
+-add behavior for grouping properties is the same as for -total. </p>
+<p class="p">Instances not having a specified <span class="keyword ParameterName OptionalReplaceable">input_prop</span> are
+skipped for property summation, the <span class="keyword ParameterName OptionalReplaceable">output_prop</span> is
+not written, and this error is given by default:</p>
+<p class="p BlockIndent">Error: Property "<span class="keyword ParameterName OptionalReplaceable">input_prop</span>"
+not found on device &lt;instance&gt; of &lt;type&gt; in cell &lt;cell&gt;
+when processing <span class="keyword ParameterName OptionalReplaceable">output_prop</span> property.</p>
+<p class="p">This error can be suppressed by using the -no_prop_error option.</p>
+<p class="p">The calculated properties are available in the outputs of the <a class="xref fm:HeadingOnly" href="Command_LayoutNetlistWrite_id07cc5961.html#id07cc5961-b285-4e55-934d-09ba13c9d85a__Command_LayoutNetlistWrite_id07cc5961.xml#id07cc5961-b285-4e55-934d-09ba13c9d85a" title="Writes the customized layout netlist from the CCI system.">LAYOUT NETLIST WRITE</a> or <a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmwrite_spice_netlist', 'calbr_ys_ref'); return false;">dfm::write_spice_netlist</a> commands
+when <a class="xref fm:HeadingOnly" href="Command_LayoutNetlistSeparatedProperties_id5b48201a.html#id5b48201a-c3a2-4e3d-9a15-d43d57a20ff3__Command_LayoutNetlistSeparatedProperties_id5b48201a.xml#id5b48201a-c3a2-4e3d-9a15-d43d57a20ff3" title="Controls the output of separated properties to the CCI netlist.">LAYOUT NETLIST SEPARATED PROPERTIES</a> YES or <a class="xref Link" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'dfmset_layout_netlist_options', 'calbr_ys_ref'); return false;">dfm::set_layout_netlist_options</a> ‑separated_properties
+is used. The properties are also available in the file generated
+by <a class="xref fm:HeadingOnly" href="Command_LayoutSeparatedPropertiesWrite_ida2817f65.html#ida2817f65-96f1-4d64-93e7-e80b292bab26__Command_LayoutSeparatedPropertiesWrite_ida2817f65.xml#ida2817f65-96f1-4d64-93e7-e80b292bab26" title="Writes pushdown separated properties (PDSP) to a file.">LAYOUT SEPARATED PROPERTIES WRITE</a> or <a class="xref fm:HeadingOnly" href="Command_qswrite_separated_properties_id1f6ef7f0.html#id1f6ef7f0-b686-11e6-bb6b-005056b32f49__Command_qswrite_separated_properties_id1f6ef7f0.xml#id1f6ef7f0-b686-11e6-bb6b-005056b32f49" title="Writes pushdown separated properties (PDSP) to a file.">qs::write_separated_properties</a>. </p>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Contain_CustomizedFilesForPushdownSeparatePropertiesPDSPFlow_idf8fc74dc.html#idf8fc74dc-753c-4a92-807b-4acb2c9e3a65__Contain_CustomizedFilesForPushdownSeparatePropertiesPDSPFlow_idf8fc74dc.xml#idf8fc74dc-753c-4a92-807b-4acb2c9e3a65" title="Pushdown separated properties is an LVS flow that allows for efficient handling of device properties used by third-party parasitic extraction tools. These properties are not typically used in LVS comparison, and they do not appear in the extracted layout netlist. CCI employs a number of commands specific to this flow.">Customized Files for Pushdown Separated Properties (PDSP) Flow</a>” for
+more details about the commands used with the PDSP flow.</p>
+<p class="p">Prefixing the command with the :: operator causes the command
+to be executed in the global scope.</p>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id4fb35a39-0533-4ce5-b361-421fcd1e8c86"><h2 class="title Subheading sectiontitle">Example
+1</h2><p class="p">This shows a basic rule file configuration. A mos_par_total property
+is calculated for MN and MP devices. The property corresponds to
+the number of instances connected in parallel.</p>
+<pre class="pre codeblock"><code>ERC TVF erc1 erc_lib mos_params
+
+TVF FUNCTION erc_lib [/*
+  package require CalibreLVS_ERC_TVF_device
+
+  proc mos_params {} {
+    puts "    EXECUTING mos_params"
+    ::erc::setup_device_parameters -devices {MN MP} \
+      -total { mos_par_total { L W } } \
+      -globalx "xloc" -globaly "yloc"; # only use these for small blocks 
+  }
+*/]
+
+LVS PUSH DEVICES SEPARATE PROPERTIES YES
+MASK SVDB DIRECTORY svdb QUERY CCI
+
+TRACE PROPERTY MN L L
+TRACE PROPERTY MN W W
+TRACE PROPERTY MP L L
+TRACE PROPERTY MP W W</code></pre><p class="p">For this CCI command run subsequently to LVS:</p>
+<pre class="pre codeblock"><code>qs::write_separated_properties pdsp.data</code></pre><p class="p">notice the properties in the output file:</p>
+<pre class="pre codeblock"><code>X0/X0/M0 <span class="ph CodeHighlight Bold">xloc=5.125e-06 yloc=5.1e-05</span> as=1.075e-10 ad=1.25e-10 ps=5.075e-05 pd=5.25e-05 <span class="ph CodeHighlight Bold">mos_par_total=1</span> $PIN_XY=6875,61000,5125,61000,5125,61000,5125,61000 $X=5125 $Y=51000 $D=1</code></pre></div>
+<div class="section Subsection" id="idb6981979-3c16-4037-af5c-8551b483ad1a__idf679f823-774d-4453-be22-d5d6b15b6bac"><h2 class="title Subheading sectiontitle">Example
+2</h2><p class="p">This shows the use of the -nets option.</p>
+<pre class="pre codeblock"><code>// establish connectivity on marker layer to indicate devices
+// sharing the same net ID
+CONNECT marker
+
+// annotate MP devices using mp_prop_layer
+LVS ANNOTATE DEVICES mp_prop_layer
+
+// if the marker layer intersects MP seed shapes, then the node ID of 
+// marker is assigned to the MKNET property; otherwise, the "NONETID"
+// value is assigned.
+mp_marker = DFM PROPERTY (DEVICE LAYER MP) marker OVERLAP MULTI
+          [ MKNET = (COUNT(marker) &gt; 0) ? NETID(marker, 1) : NONETID() ]</code></pre><pre class="pre codeblock"><code>// annotate MP seed shapes with the numeric mkn property
+mp_prop_layer = DEVICE LAYER MP ANNOTATE mp_marker [
+                  PROPERTY mkn
+                  mkn = DFM_NUM_VAL(mp_marker, MKNET) 
+                ] 
+
+// calculate parallel parameters for devices
+ERC TVF parallel_check ERC_parallel_props annotate_parallel_properties
+
+TVF FUNCTION ERC_parallel_props [/*
+package require CalibreLVS_ERC_TVF
+
+  proc annotate_parallel_properties {} {
+  # for MP devices not interacting with marker shapes, assign para=0
+    ::erc::setup_device_parameters -devices {MP} -total {para} \
+      -nets {mkn 0}
+
+  # this causes an error because ARB devices have no mkn property
+    ::erc::setup_device_parameters -devices {ARB} -total {para} \
+      -nets {mkn}
+  }
+*/]</code></pre><p class="p">MP instances receive an “mkn” property with either a node ID
+value from a marker shape or a ‑1 value. MP instances with the same
+property value are placed into distinct groups. The “para” property
+is assigned to each group based upon parallel MP instances in that
+group. Since a <span class="keyword ParameterName OptionalReplaceable">default_value</span> is
+specified, instances with the -1 “mkn” value receive a “para” value
+of 0. The second command in the annotate_parallel_devices proc causes
+an error because ARB devices have no mkn property.</p>
+</div>
+<div class="section Subsection" id="idb6981979-3c16-4037-af5c-8551b483ad1a__id423e4a7c-5eed-433d-b58f-8005fb089f71"><h2 class="title Subheading sectiontitle">Example
+3</h2><p class="p">Assume the following command:</p>
+<pre class="pre codeblock"><code>::erc::setup_device_parameters -devices {MP MN} \
+  -add {nf sum_nf {L { W 1 }}}</code></pre><p class="p">This command sums the nf property values of MP and MN instances
+connected in parallel having matching L property values and W properties
+within a 1% tolerance of each other. The total is the value of the
+sum_nf property. These properties are stored in the PHDB in a PDSP flow.
+In a subsequent Query Server run, qs::write_separated_properties
+command could output this:</p>
+<pre class="pre codeblock"><code>X7/X3/M4 <span class="ph CodeHighlight Bold">sum_nf=2</span> $PIN_XY=443207,147150,436463,147150,436463,147150 $X=436463 $Y=117105 $D=1
+X7/X3/M5 <span class="ph CodeHighlight Bold">sum_nf=4</span> $PIN_XY=492873,139077,486129,139077,486129,139077 $X=486129 $Y=117105 $D=1
+X7/X3/M6 <span class="ph CodeHighlight Bold">sum_nf=4</span> $PIN_XY=505546,139077,498802,139077,498802,139077 $X=498802 $Y=117105 $D=1</code></pre><p class="p">Notice the sum_nf properties. Devices M5 and M6 are in parallel
+with each other, so their nf values are both 2 with sum_nf being
+4. M4 is not in parallel with any instance, so its nf and sum_nf
+values are 2.</p>
+<p class="p">If the nf, L, or W properties are missing on any instance, then
+an error is given by default, and the instance is written without
+the sum_nf property.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ErcTvfCommands_id70f2fa06.html" title="ERC TVF commands support device parameter calculations for the pushdown separate properties (PDSP) flow. These device parameters are only available from the PDSP files generated by CCI. The commands are Tcl based and appear in TVF Function procedures referenced by the ERC TVF specification statement in the rule file. ERC TVF commands are not executed in the Query Server Tcl shell. However, they are only used in a PDSP flow, so they are documented together with the Query Server CCI APIs that support the PDSP flow.">ERC TVF Commands</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_ErcTvfCommands_id70f2fa06.html" title="ERC TVF commands support device parameter calculations for the pushdown separate properties (PDSP) flow. These device parameters are only available from the PDSP files generated by CCI. The commands are Tcl based and appear in TVF Function procedures referenced by the ERC TVF specification statement in the rule file. ERC TVF commands are not executed in the Query Server Tcl shell. However, they are only used in a PDSP flow, so they are documented together with the Query Server CCI APIs that support the PDSP flow.">ERC TVF Commands</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_query_user"
+                DocTitle = "Calibre® Query Server Manual"
+                PageTitle = "erc::setup_device_parameters"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_ErcsetupDeviceParameters_idb6981979.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Query Server Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

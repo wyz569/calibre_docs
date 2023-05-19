@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Dimension-Based Rules File Format" />
+<meta name="abstract" content="An optional Calibre LSG rule file format used for generating layout clips based on off‑pitch (ungrid) dimensions for rows and columns." />
+<meta name="description" content="An optional Calibre LSG rule file format used for generating layout clips based on off‑pitch (ungrid) dimensions for rows and columns." />
+<meta name="prodname" content="Calibre LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="version" content="v12.2" />
+<meta name="release" content="2016_01" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2017-11-09" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lsg_user" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="2" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 25, 2021" />
+<meta name="DocumentTitle" content="Calibre® LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id9cc83fc8-d0d3-4007-85ba-05fb746876a7" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Dimension-Based Rules File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Dimension-Based Rules File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Dimension-Based Rules File
+Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input
+to: Calibre LSG layout clip generation</p>
+<p class="shortdesc">An optional Calibre LSG rule file
+format used for generating layout clips based on off‑pitch (ungrid)
+dimensions for rows and columns. </p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">You specify a rule file with dimension‑based (and
+standard) LSG rules using the following argument in your LSG options
+file:</p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName Optional">rules</span>=<span class="keyword ParameterName OptionalReplaceable">rules_file</span></code></pre><p class="p">Refer to “<a class="xref fm:HeadingAndPage" href="Command_CalibreLfdLsg_id4a5f952a.html#id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793__Command_CalibreLfdLsg_id4a5f952a.xml#id4a5f952a-4a86-4ffc-9e6c-acf68cb7b793" title="Calibre LSG generates layout clips that can be used for creating initial pattern libraries and other early design phase layout applications.">calibre -lsg</a>” for Calibre LSG command usage and file argument descriptions.</p>
+<p class="p">A rules file with dimension‑based rules is similar
+to the standard LSG rule file format but includes added specifications
+for two lists of x‑ and y‑dimensions using the following formatting
+and syntax rules:</p>
+<ul class="ul"><li class="li" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__id05362485-7364-4f4d-a16a-f5cf878cb86d"><p class="p">A target unit pattern position is defined with
+a lower‑left x‑ y‑origin point along with its adjacent neighbors
+in an x‑ and y‑axis grid. For example, see the target unit pattern
+and neighboring unit pattern positions in “<a class="xref fm:HeadingAndPage" href="FileRef_RuleFileFormat_idfa146562.html#idfa146562-9a26-4539-a6cf-5d6132f460c9__FileRef_RuleFileFormat_idfa146562.xml#idfa146562-9a26-4539-a6cf-5d6132f460c9" title="An optional Calibre LSG rule file that can be used to define neighboring unit pattern placement constraints to create layout clips that are DRC realistic.">Rule File Format</a>”.</p>
+</li>
+<li class="li" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__idc40a5d2c-a008-41c1-9015-d081030a346d"><p class="p">A target unit pattern has two lists: a list of
+x‑dimensions (widths) and a list of y‑dimensions (heights) followed
+by a neighbor unit pattern ID with weights and constraints in each
+line with the following syntax (specify in a single line):</p>
+<p class="p">‘<span class="keyword ParameterName Required">[</span>’‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">x</span>,<span class="keyword ParameterName RequiredReplaceable">y</span>‘<span class="keyword ParameterName Required">}</span>’<span class="keyword ParameterName Required">,</span>‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">target_patternID</span>:<span class="keyword ParameterName OptionalReplaceable">x‑dimensions:y‑dimensions</span>, ,…‘<span class="keyword ParameterName Required">}</span>’‘<span class="keyword ParameterName Required">]</span>’;‘<span class="keyword ParameterName Required">[</span>’‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName RequiredReplaceable">patternID</span>,<span class="keyword ParameterName RequiredReplaceable">patternWeight</span>‘<span class="keyword ParameterName Required">}</span>’;…‘<span class="keyword ParameterName Required">]</span>’</p>
+</li>
+<li class="li" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__id1a4c6010-f66b-48ae-8d8e-acd952acaa22"><p class="p">A wildcard character (*) expresses the allowance
+of any dimension in the width or in the height lists.</p>
+</li>
+<li class="li" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__id024ed6ba-d3ed-42ab-ad57-4e70a7fc720b"><p class="p">A colon (:) separates the width list and the height
+list from the transformed unit pattern, and a pipe (|) separates
+the items in each list. </p>
+</li>
+<li class="li" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__idc0b8b537-32e1-4491-bce7-5063f565efcb"><p class="p">An ungrid value specified in the x‑ and y‑dimension
+lists is defined by type as discrete (floating point number), continuous
+(integer ending with (%)), and range (Start_Value‑End_Value‑Step).
+See “<a class="xref fm:HeadingAndPage" href="FileRef_UngridValuesFileFormat_id3363e091.html#id3363e091-a604-4749-afc9-54540f4bab0b__FileRef_UngridValuesFileFormat_id3363e091.xml#id3363e091-a604-4749-afc9-54540f4bab0b" title="An optional LSG rules file used to specify a set of off‑grid (off‑pitch size) values representing different pitch heights and widths for rows and columns in the generated layout clips.">Ungrid Values File Format</a>” for more information.</p>
+</li>
+</ul>
+<p class="p">An example of a dimension‑based rule is shown
+with the width and height dimensions highlighted as follows:</p>
+<pre class="pre codeblock"><code>[{-1,0},{5.1 :<span class="ph CodeHighlight magenta"> 20%|0.016|0.01:0.016|0.02-0.03-0.001)</span>,\
+3.1 <span class="ph CodeHighlight magenta">: 50%:*</span>,5.1<span class="ph CodeHighlight magenta"> : 0.01:0.01</span>,1.1}];
+[{5.1,0};]</code></pre></div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__id02715808-8cbd-4dc3-92a7-ea6129a5aa94"><span class="keyword ParameterName RequiredReplaceable">x</span>,<span class="keyword ParameterName RequiredReplaceable">y</span>, <span class="keyword ParameterName RequiredReplaceable">target_patternID</span>, and <span class="keyword ParameterName RequiredReplaceable">patternID</span>,<span class="keyword ParameterName RequiredReplaceable">patternWeight</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">See “Parameters” in “<a class="xref fm:HeadingAndPage" href="FileRef_RuleFileFormat_idfa146562.html#idfa146562-9a26-4539-a6cf-5d6132f460c9__FileRef_RuleFileFormat_idfa146562.xml#idfa146562-9a26-4539-a6cf-5d6132f460c9" title="An optional Calibre LSG rule file that can be used to define neighboring unit pattern placement constraints to create layout clips that are DRC realistic.">Rule File Format</a>” for descriptions.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__idd00345d9-7a3a-4b35-b888-3f5f56bdb99e"><span class="keyword ParameterName OptionalReplaceable">x‑dimensions:y‑dimensions</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+set that specifies a list of x‑dimensions (widths) and a list of y‑dimensions
+(heights) followed by a neighbor <span class="keyword ParameterName OptionalReplaceable">patternID</span>,<span class="keyword ParameterName OptionalReplaceable">patternWeight</span> pair
+with weights and constraints. </p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__ide8775867-3c5f-4c01-b261-f92225f37f82"><p class="p">These examples compare two solutions (the
+first using standard LSG rules format, and the second using dimension‑based
+rules format). Given the following values, the constraint is that unit
+pattern ID 3.1 is not allowed to appear in columns with widths 0.03
+um or 0.056 um.</p>
+<p class="p">Unit patterns:</p>
+<pre class="pre codeblock"><code>1.1, 3.1, 5.1</code></pre><p class="p">Ungrid values:</p>
+<pre class="pre codeblock"><code>cols : 1,3,6 : 0.03,0.056,0.07;</code></pre></div>
+<div class="section Subsection" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__idea23b48d-ce9c-4107-907d-c3d3ee77b9b8"><h2 class="title Subheading sectiontitle">Example 1</h2><p class="p">In this example, standard LSG rules (non‑dimensional)
+are used to forbid the appearance of pattern ID 3.1 in columns with
+widths 0.03 um or 0.056 um.</p>
+<p class="p">These standard rules are added to the LSG rule
+file: </p>
+<pre class="pre codeblock"><code>[{-1,0},{0.0}];[{3.1,0};]
+[{-3,0},{0.0}];[{3.1,0};]
+[{-6,0},{0.0}];[{3.1,0};]</code></pre><p class="p">This results in columns one and six not allowing
+unit pattern ID 3.1, even though the widths can accommodate the
+appearance of this pattern. </p>
+</div>
+<div class="section Subsection" id="id9cc83fc8-d0d3-4007-85ba-05fb746876a7__id3e546640-e9bc-49aa-8fe8-7c17450738b1"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">In this example, dimension-based rules replace
+the previous non‑dimensional rules in Example 1 and are used to
+forbid the appearance of pattern ID 3.1 in columns with widths 0.03 um
+or 0.056 um.</p>
+<p class="p">The following dimension‑based rules are added
+to the LSG rule file (width and height dimensions highlighted):</p>
+<pre class="pre codeblock"><code>[{0,1},{0.0<span class="ph CodeHighlight magenta">:0.03|0.056:*</span>,1.1<span class="ph CodeHighlight magenta">:0.03|0.056:*</span>,5.1<span class="ph CodeHighlight magenta">:0.03|0.056:*</span>}];[{3.1,0};]</code></pre><p class="p">This results in columns one and six allowing the
+appearance of unit pattern ID 3.1, with only column three not allowing
+the appearance of pattern ID 3.1.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreLSGFileFormats_id17b077c7.html" title="Specific formatting of unit pattern priorities, definitions, and rules is required for Calibre LSG input files. This formatting is done automatically when you use the Calibre LSG GUI to create these files (recommended method). The basic format and syntax of these input files is provided as a reference for file editing or when manual file creation is the chosen option.">Calibre LSG File Formats</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lsg_user"
+                DocTitle = "Calibre® LSG for Synthetic Layout Generation User’s Manual"
+                PageTitle = "Dimension-Based Rules File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_DimensionBasedRulesFileFormat_id9cc83fc8.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® LSG for Synthetic Layout Generation User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

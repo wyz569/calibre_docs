@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Simultaneous Multithreading With Virtual CPUs" />
+<meta name="abstract" content="Simultaneous multithreading (SMT) improves CPU efficiency by treating each physical CPU as two logical CPUs (one physical and one virtual). The processor causes the operating system to behave as if there are twice as many CPUs, so the operating system schedules twice as many processes to run." />
+<meta name="description" content="Simultaneous multithreading (SMT) improves CPU efficiency by treating each physical CPU as two logical CPUs (one physical and one virtual). The processor causes the operating system to behave as if there are twice as many CPUs, so the operating system schedules twice as many processes to run." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id46c73919-bd31-4a2e-a5af-46c4176a7780" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Simultaneous Multithreading With Virtual CPUs</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Simultaneous Multithreading With Virtual CPUs" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id46c73919-bd31-4a2e-a5af-46c4176a7780">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Simultaneous Multithreading With Virtual CPUs</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Simultaneous
+multithreading (SMT) improves CPU efficiency by treating each physical
+CPU as two logical CPUs (one physical and one virtual). The processor
+causes the operating system to behave as if there are twice as many
+CPUs, so the operating system schedules twice as many processes
+to run.</span>
+</div>
+<p class="p">While you can use simultaneous
+multithreading and hyperscaling (‑hyper) to improve runtime performance,
+they are different in that simultaneous multithreading is a hardware
+feature of specific processors while hyperscaling is a software
+feature internal to Calibre and available on all processor types.</p>
+<p class="p">The run-time benefit of SMT is less than 2X,
+despite the 2X increase in the number of CPUs. <a class="xref fm:Table" href="#id46c73919-bd31-4a2e-a5af-46c4176a7780__ida0be00e0-c0e7-46c2-a3d4-73e66c967130">Table 1</a> provides some general guidelines of
+the run‑time benefit for the different Calibre job classes (there
+is a noticeable variation in benefits from job to job).</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__ida0be00e0-c0e7-46c2-a3d4-73e66c967130" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre Runtime Benefit From Simultaneous Multithreading</span></caption><colgroup><col style="width:1.625in" /><col style="width:1.625in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e155"><p class="p">Calibre Job Class</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e158"><p class="p">Run-time Benefit</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e155 "><p class="p">DRC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e158 "><p class="p">15 percent</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e155 "><p class="p">MDP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e158 "><p class="p">20 percent</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e155 "><p class="p">OPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e158 "><p class="p">25 percent</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Enabling
+SMT may double the memory requirement to run Calibre. Do not use SMT
+with Calibre unless sufficient physical memory is available. This
+constraint is primarily an issue for Calibre LITHO OPC, where the
+memory requirement scales linearly with CPU count.</p>
+</div>
+<p class="p">The following conditions must be met in order
+to leverage SMT capabilities on your hardware when running Calibre
+jobs:</p>
+<ul class="ul"><li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id6b2ac37a-6e52-4c82-ba2b-9b750217c07d"><p class="p">SMT must be enabled in the BIOS. </p>
+<p class="p">You can view the information in the <span class="ph filepath italic">/proc/cpuinfo</span> file
+to determine whether SMT is enabled. By default, Calibre uses SMT
+when it is enabled in the BIOS.</p>
+</li>
+<li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__idb6863d81-57fe-4ef6-937e-a4a76ad7a641"><p class="p">You must use all physical CPUs on the
+machine to run the Calibre job.</p>
+<p class="p">You must specify -turbo with no value so
+that it defaults to running on all physical CPUs, or specify -turbo
+#, where # is the total number of physical CPUs on the primary host.
+Specifying a -turbo value that is less than the number of physical
+CPUs effectively ignores SMT, as the criteria to license all cores
+has not been met. Use of ‑turbo_all with a -turbo value greater
+than the number of physical CPUs will result in an error as this condition
+cannot be met. The same constraint applies to Calibre MTflex remotes.
+You must ensure that all physical CPUs on a remote host are licensed
+in order to leverage SMT capabilities on that host. Refer to the <a class="xref fm:HeadingOnly" href="Command_RemoteHost_idc0b2f923.html#idc0b2f923-2328-4fdd-ad38-76ab58d3bdd9__Command_RemoteHost_idc0b2f923.xml#idc0b2f923-2328-4fdd-ad38-76ab58d3bdd9" title="Provides information for launching a remote host when using LAUNCH AUTOMATIC.">REMOTE HOST</a> reference page for more information
+on this statement. </p>
+</li>
+<li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id4679b9c2-4fe0-4ec2-a10e-df2995758406"><p class="p">Optionally, there are environment variables
+and configuration file statements you can set to fully leverage
+SMT capabilities. Refer to “<a class="xref fm:HeadingAndPage" href="#id46c73919-bd31-4a2e-a5af-46c4176a7780__id2a215c97-6f48-4f79-8691-9feacf9ec01f">SMT Environment Variable and Configuration File Settings</a>” for more information.</p>
+</li>
+</ul>
+<p class="p">To maximize the benefit of SMT, IBM<sup>®</sup> Spectrum
+LSF (formerly IBM Platform LSF), and Univa Grid Engine, you should
+take the following steps:</p>
+<ul class="ul"><li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id362688cb-a66a-40e7-9772-3d30724243af"><p class="p">Configure available execution slots based
+on the number of physical CPUs, not total logical cores. This configuration
+is best for all applications because net throughput is much less
+than 2X for all logical cores, so assigning jobs to all logical cores
+will overload servers (hosts) and reduce net throughput for all
+applications. See “<a class="xref fm:HeadingOnly" href="Contain_CalibreDistributedResourceManagementTools_ida4943379.html#ida4943379-f6f3-4784-8db6-066692ad2a0e__Contain_CalibreDistributedResourceManagementTools_ida4943379.xml#ida4943379-f6f3-4784-8db6-066692ad2a0e" title="You can use distributed resource management tools, such as IBM Spectrum LSF (formerly IBM Platform LSF) or Univa Grid Engine, to manage workload processing for compute- and data-intensive applications. These tools are useful for scheduling and tracking the completion of Calibre jobs in a distributed environment.">Calibre and Distributed Resource Management Tools</a>” for details.</p>
+</li>
+<li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__idedc77608-5a56-4215-ae81-74ad63c66dc6"><p class="p">To increase the odds that all physical
+CPUs are licensed by a single Calibre job, configure the allocation
+rules to fill all available slots on each server before looking for
+additional slots on other servers. For example, use the fewest number
+of servers (hosts) instead of distributing across the maximum number
+of servers. With Univa Grid Engine this is accomplished via the
+$fill_up allocation rule. Use of such allocation rules by most jobs
+usually maximizes the number of hosts benefiting from SMT.</p>
+</li>
+</ul>
+<p class="p">The Calibre transcript provides additional
+information for jobs that run with SMT-enabled hardware. In the
+following example, the transcript header indicates the number of physical
+CPUs and that SMT is enabled. The remote host section indicates
+there are five remote hosts, each with eight physical CPUs (np),
+eight virtual cores (nv), and 16 total logical cores (ns). The run
+summary indicates all physical and virtual cores were used for the
+job.</p>
+<ul class="ul"><li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id74ebbb18-60bc-4867-9ac4-00eea09366f7"><p class="p">Transcript header information </p>
+<pre class="pre codeblock leveled"><code>// CPU Info: Cores = 40, SMT enabled with 40 additional virtual processors
+...</code></pre></li>
+<li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id0288def1-3e61-4286-94a7-30b04fac4dea"><p class="p">Remote host information </p>
+<pre class="pre codeblock leveled"><code>// Running on 40 CPUs (pending licensing)
+// List of connected remote hosts:
+// REMOTE HOST node1: np = 8, nv = 8, ns = 16
+// REMOTE HOST node2: np = 8, nv = 8, ns = 16
+// REMOTE HOST node3: np = 8, nv = 8, ns = 16
+// REMOTE HOST node4: np = 8, nv = 8, ns = 16
+// REMOTE HOST node5: np = 8, nv = 8, ns = 16
+// MTflex CPU resources: 64 , 80/40 Remote
+//
+// LITHO operations available for use on 40 CPUs (pending licensing)</code></pre></li>
+<li class="li" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id29de49fd-c8f1-42ca-a81f-a5030a8272ef"><p class="p">Run summary information</p>
+<pre class="pre codeblock leveled"><code>--- PROCESSOR COUNT = 40 + 40(virtual)</code></pre></li>
+</ul>
+<div class="section Subsections" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id615c6b99-2dd1-4a2b-a05b-438f6697c190"><div class="section Subsection" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__id2a215c97-6f48-4f79-8691-9feacf9ec01f"><h2 class="title Subheading sectiontitle">SMT
+Environment Variable and Configuration File Settings</h2><p class="p">When SMT is enabled, you have the option of
+using an environment variable or configuration file statement to
+fully leverage SMT capabilities. The defaults for these configuration
+options are such that, in most cases, running a Calibre job on an
+SMT-enabled system can automatically leverage the SMT capabilities.</p>
+<p class="p"><a class="xref fm:Table" href="#id46c73919-bd31-4a2e-a5af-46c4176a7780__idd903b762-3f9c-4e24-abb5-ad95b76c7c36">Table 2</a> summarizes the different
+settings you can use to enable or disable SMT when running a Calibre
+job with or without hyperscaling. Refer to the sections “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'SMT Environment Variables99With Hyperscaling', 'calbr_admin_gd'); return false;">With Hyperscaling</a>”
+and “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'SMT Environment Variables99Without Hyperscaling', 'calbr_admin_gd'); return false;">Without Hyperscaling</a>”
+for more information.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id46c73919-bd31-4a2e-a5af-46c4176a7780__idd903b762-3f9c-4e24-abb5-ad95b76c7c36" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>SMT Environment
+Variable and Configuration File Setting Summary</span></caption><colgroup><col style="width:0.795in" /><col style="width:1.026in" /><col style="width:0.785in" /><col style="width:3.894in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e283"><p class="p">Mode</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e286"><p class="p">Operations</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e289"><p class="p">Default</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26803e292"><p class="p">To Enable or Disable</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" colspan="4" style="vertical-align:top;" headers="d26803e283 d26803e286 d26803e289 d26803e292 "><p class="p"><span class="ph FontProperty HeadingLabel">With Hyperscaling</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "><p class="p">MT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">DRC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">ON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Always ON.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "> </td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">LITHO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">ON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Set the <a class="xref fm:HeadingOnly" href="Command_CalibreHyperSmtfactor_idad5ee6c0.html#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c__Command_CalibreHyperSmtfactor_idad5ee6c0.xml#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c" title="Launches additional threads on remote CPUs connected only to HDB0 and that support SMT processing.">CALIBRE_HYPER_SMTFACTOR</a> environment
+variable.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "><p class="p">MTflex</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">DRC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">ON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Always ON.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "> </td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">LITHO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">OFF</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Add the <a class="xref fm:HeadingOnly" href="Command_Hyper_idbecf2979.html#idbecf2979-e515-45a4-9a12-500ba06a9002__Command_Hyper_idbecf2979.xml#idbecf2979-e515-45a4-9a12-500ba06a9002" title="Sets parameters that define the setup information for using hyperscaling with Calibre MTflex.">HYPER</a> SMTFACTOR
+statement to the configuration file.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" colspan="4" style="vertical-align:top;" headers="d26803e283 d26803e286 d26803e289 d26803e292 "><p class="p"><span class="ph FontProperty HeadingLabel">Without Hyperscaling</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "><p class="p">MT</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">DRC or LITHO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">ON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Set the <a class="xref fm:HeadingOnly" href="Command_CalibreMtSmtFactor_id6427a8fb.html#id6427a8fb-821d-4ceb-9a12-f5759a069da4__Command_CalibreMtSmtFactor_id6427a8fb.xml#id6427a8fb-821d-4ceb-9a12-f5759a069da4" title="Enables or disables support for SMT processing when running in multithreaded (MT) mode.">CALIBRE_MT_SMT_FACTOR</a> environment
+variable.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e283 "><p class="p">MTflex</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e286 "><p class="p">DRC or LITHO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e289 "><p class="p">ON</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26803e292 "><p class="p">Set the <a class="xref fm:HeadingOnly" href="Command_CalibreMtSmtFactor_id6427a8fb.html#id6427a8fb-821d-4ceb-9a12-f5759a069da4__Command_CalibreMtSmtFactor_id6427a8fb.xml#id6427a8fb-821d-4ceb-9a12-f5759a069da4" title="Enables or disables support for SMT processing when running in multithreaded (MT) mode.">CALIBRE_MT_SMT_FACTOR</a> environment
+variable. Or, add the SMTFACTOR keyword to the <a class="xref fm:HeadingOnly" href="Command_LaunchAutomatic_id4a828ce2.html#id4a828ce2-af27-444e-b6d5-0431052eea50__Command_LaunchAutomatic_id4a828ce2.xml#id4a828ce2-af27-444e-b6d5-0431052eea50" title="Sets parameters for the remote hosts and connecting with those servers.">LAUNCH AUTOMATIC</a>, <a class="xref fm:HeadingOnly" href="Command_LaunchCluster_id24c3e5ba.html#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481__Command_LaunchCluster_id24c3e5ba.xml#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH CLUSTER</a>, or <a class="xref fm:HeadingOnly" href="Command_LaunchManual_id4b21ffb8.html#id4b21ffb8-af9e-44bd-8de3-bf905976305f__Command_LaunchManual_id4b21ffb8.xml#id4b21ffb8-af9e-44bd-8de3-bf905976305f" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH MANUAL</a> statement
+in the configuration file.<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 class="title Subheading sectiontitle">With Hyperscaling</h2><p class="p">When hyperscaling is used for a Calibre run,
+you can enable the appropriate environment variable or configuration
+file statement so that SMT can be utilized for HDB 0, which is beneficial
+in post tape-out flows where much of the job time is spent solely
+on HDB 0. By default, SMT is automatically utilized for pseudo HDBs
+1-4 when hyperscaling is used. It is not necessary to specify the
+following environment variable or configuration file statement to utilize
+SMT for pseudo HDBs 1-4.</p>
+<dl class="dl"><dt class="dt dlterm">For Calibre runs in MT mode with hyperscaling</dt>
+<dd class="dd"><p class="p">Use the <a class="xref fm:HeadingOnly" href="Command_CalibreHyperSmtfactor_idad5ee6c0.html#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c__Command_CalibreHyperSmtfactor_idad5ee6c0.xml#idad5ee6c0-7d0e-4900-93c6-2e8b79f9084c" title="Launches additional threads on remote CPUs connected only to HDB0 and that support SMT processing.">CALIBRE_HYPER_SMTFACTOR</a> environment variable to launch
+two Calibre processes per physical CPU for operations running on
+HDB 0 (as is done for jobs without hyperscaling). The default is
+1 (enabled). Set the environment variable to 0 to limit operations
+running on HDB 0 to one process per physical CPU, thereby preventing
+the utilization of SMT.</p>
+</dd>
+<dt class="dt dlterm">For Calibre runs in MTflex mode with hyperscaling</dt>
+<dd class="dd"><p class="p">Use the SMTFACTOR keyword for the <a class="xref fm:HeadingOnly" href="Command_Hyper_idbecf2979.html#idbecf2979-e515-45a4-9a12-500ba06a9002__Command_Hyper_idbecf2979.xml#idbecf2979-e515-45a4-9a12-500ba06a9002" title="Sets parameters that define the setup information for using hyperscaling with Calibre MTflex.">HYPER</a> statement to launch two Calibre
+processes per physical CPU for operations running on HDB 0 (as is
+done for jobs without hyperscaling). The default is 0 (disabled),
+which limits operations running on HDB 0 to one process per physical
+CPU, thereby preventing the utilization of SMT.</p>
+</dd>
+</dl>
+<h2 class="title Subheading sectiontitle">Without Hyperscaling</h2><p class="p">When hyperscaling is not used for a Calibre
+run, you can set the appropriate environment variable or configuration
+file statement to enable or disable SMT processing.</p>
+<dl class="dl"><dt class="dt dlterm">For Calibre runs in MT mode without hyperscaling</dt>
+<dd class="dd"><p class="p">Use the <a class="xref fm:HeadingOnly" href="Command_CalibreMtSmtFactor_id6427a8fb.html#id6427a8fb-821d-4ceb-9a12-f5759a069da4__Command_CalibreMtSmtFactor_id6427a8fb.xml#id6427a8fb-821d-4ceb-9a12-f5759a069da4" title="Enables or disables support for SMT processing when running in multithreaded (MT) mode.">CALIBRE_MT_SMT_FACTOR</a> environment variable to enable SMT
+processing. The default is 1 (enabled).</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If set to 0, this
+variable overrides any other SMT-related settings (such as the SMTFACTOR
+keyword for the LAUNCH statements). </p>
+</div>
+</dd>
+<dt class="dt dlterm">For Calibre runs in MTflex mode without hyperscaling</dt>
+<dd class="dd"><p class="p">Use the SMTFACTOR keyword in the <a class="xref fm:HeadingOnly" href="Command_LaunchAutomatic_id4a828ce2.html#id4a828ce2-af27-444e-b6d5-0431052eea50__Command_LaunchAutomatic_id4a828ce2.xml#id4a828ce2-af27-444e-b6d5-0431052eea50" title="Sets parameters for the remote hosts and connecting with those servers.">LAUNCH AUTOMATIC</a>, <a class="xref fm:HeadingOnly" href="Command_LaunchCluster_id24c3e5ba.html#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481__Command_LaunchCluster_id24c3e5ba.xml#id24c3e5ba-cdfb-4e45-95a6-fe5f48b47481" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH CLUSTER</a>, or <a class="xref fm:HeadingOnly" href="Command_LaunchManual_id4b21ffb8.html#id4b21ffb8-af9e-44bd-8de3-bf905976305f__Command_LaunchManual_id4b21ffb8.xml#id4b21ffb8-af9e-44bd-8de3-bf905976305f" title="Sets parameters for connection of the primary host to the remote hosts.">LAUNCH MANUAL</a> to enable SMT processing. The
+default is 1 (enabled).</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DistributedCalibreModes_id21052f8e.html" title="There are several different multithreaded processing modes available for distributing your design data or Calibre processes across multiple CPUs in order to speed up the processing of a Calibre job.">Multithreaded Processing Modes</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  The CALIBRE_MT_SMT_FACTOR environment
+variable setting overrides the LAUNCH AUTOMATIC|CLUSTER|MANUAL SMTFACTOR
+setting.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Simultaneous Multithreading With Virtual CPUs"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_SimultaneousMultithreadingWithVirtualCPUs_id46c73919.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

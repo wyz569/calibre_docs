@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="MGCChapter" />
+<meta name="DC.Title" content="Troubleshooting Calibre PERC Rules" />
+<meta name="abstract" content="Most of the problems you will encounter when running Calibre PERC rule checks fall into three broad categories: compiler errors stemming from errant SVRF code, runtime errors or warnings due to problems with your environment, and Tcl interpreter errors stemming from errant runtime TVF code. This chapter touches briefly upon all of these problems." />
+<meta name="description" content="Most of the problems you will encounter when running Calibre PERC rule checks fall into three broad categories: compiler errors stemming from errant SVRF code, runtime errors or warnings due to problems with your environment, and Tcl interpreter errors stemming from errant runtime TVF code. This chapter touches briefly upon all of these problems." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id634c2320-2fcc-450b-9383-8cbfea39526b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Troubleshooting Calibre PERC Rules</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Troubleshooting Calibre PERC Rules" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id634c2320-2fcc-450b-9383-8cbfea39526b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1"> Troubleshooting Calibre PERC Rules</h1>
+<div class="abstract MGCAbstract"><span class="shortdesc">Most of the
+problems you will encounter when running Calibre PERC rule checks
+fall into three broad categories: compiler errors stemming from
+errant SVRF code, runtime errors or warnings due to problems with
+your environment, and Tcl interpreter errors stemming from errant runtime
+TVF code. This chapter touches briefly upon all of these problems. </span>
+</div>
+<div class="related-links TopicTOC chaptoc">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/Concept_CompilerRuntimeErrors_id36abba30.html" title="Compiler errors are generated when the rule file compiler encounters a problem. Runtime errors occur after compilation and during the execution of various tool modules.">Compiler and Runtime Errors</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_TvfErrorsInCalibrePerc_idc0d753c9.html" title="TVF code appears within the TVF Function element in your Calibre PERC rule file. All of the code within a TVF Function is protected from the SVRF compiler, so the SVRF compiler reports no errors stemming from bad Tcl code. Everything inside the TVF Function block is passed to the Tcl interpreter, which returns any messages to the run transcript and the Calibre PERC report. This Tcl interpreter comes with the Tcl package that is present in the Calibre software tree.">TVF Errors in Calibre PERC</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Concept_GeneralCalibrePercTvfTroubleshootingMethod_idd2ffacef.html" title="When examining the Calibre PERC report, the TVF FUNCTION ERRORS section is the most important one for troubleshooting code problems. ">General Calibre PERC TVF Troubleshooting Method</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ProblemEveryRuleCheckFails_idad116f49.html" title="This problem is most likely because the TVF Function block is missing the following command as the first entry: package require CalibreLVS_PERC">Problem: Every Rule Check Fails</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ProblemWhitespaceAfterLineContinuation_id5869dfa5.html" title="The “\” character is used for backslash substitution in Tcl. Anything that occurs immediately after the \ character loses its special meaning and is treated as a literal character. ">Problem: Whitespace After “\” Line Continuation</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ProblemImproperQuoting_idfff1caf4.html" title="The double quotation marks (&#34; &#34;) and braces ({ }) are used for quoting strings in Tcl. Improper use of quoting causes errors.">Problem: Improper Quoting</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ErrorInvalidNetTypeTypeSetVoltageGroupName_id7dcbe769.html" title="This problem is related to a rule check requiring an element to be defined in an initialization procedure but not being able to find that element. ">Error: Invalid Net Type, Type Set, or Voltage Group Name</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ErrorInvalidCommandName_id790068d7.html" title="In Tcl, the first whitespace-delimited token (called a word) on a line is interpreted as the name of a command. If the word is not recognized as a command name, an error is reported. ">Error: Invalid Command Name</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ErrorUnknownFunctionParameter_id70a3d4d4.html" title="Function parameters are arguments to commands. In Calibre PERC, these parameters frequently are of the form “‑option”. ">Error: Unknown Function Parameter</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ErrorCannotFindNumericProperty_id69e8090c.html" title="If you reference a device property in your rule file code, that property must be available during the run. If not, you can get a missing property error.">Error: Cannot Find the Numeric Property</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/Trouble_ErrorPowerShortedToGroundWhileMergingNetsOrFilteringInstances_id5791a37a.html" title="This error is given when supply nets have been shorted together. It is detected during netlist initialization. When debugging, it is important to examine the supply net definitions in the rules and the initialization procedure for net type setup.">Error: Power shorted to ground while merging nets or filtering instances</a></strong></li>
+</ul>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Troubleshooting Calibre PERC Rules"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/MGCChap_TroubleshootingCalibrePercRules_id634c2320.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

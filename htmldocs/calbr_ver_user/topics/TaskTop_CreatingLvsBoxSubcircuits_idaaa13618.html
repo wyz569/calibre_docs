@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Creating LVS Box Subcircuits" />
+<meta name="abstract" content="The v2lvs::generate_empty_subckts -enable option (command line: –e) generates empty subcircuits from a Verilog library file. This can be useful in conjunction with the LVS Box rule file statement to perform partial comparison of a structural netlist without comparing the low-level circuit descriptions." />
+<meta name="description" content="The v2lvs::generate_empty_subckts -enable option (command line: –e) generates empty subcircuits from a Verilog library file. This can be useful in conjunction with the LVS Box rule file statement to perform partial comparison of a structural netlist without comparing the low-level circuit descriptions." />
+<meta name="DC.subject" content="V2LVS, LVS Box subcircuits" />
+<meta name="keywords" content="V2LVS, LVS Box subcircuits" />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating LVS Box Subcircuits</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating LVS Box Subcircuits" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating LVS Box Subcircuits</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">The v2lvs::generate_empty_subckts
+-enable option (command line: –e) generates empty subcircuits from
+a Verilog library file. This can be useful in conjunction with the
+LVS Box rule file statement to perform partial comparison of a structural netlist
+without comparing the low-level circuit descriptions.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__id007725bd-823c-4b7b-a7bb-6547cbba8324"><p class="p">Verilog
+structural netlist.</p>
+</li>
+<li class="li" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__ide68e202c-7f22-4e2a-b72e-de688cc3bbf1"><p class="p">Verilog
+primitive library file.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__id545b4d53-7835-4de3-b62b-f71302556f11"><span class="ph cmd">Generate a SPICE netlist using
+the Verilog design and primitive library file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_V2lvsloadVerilog_ida6b20476.html#ida6b20476-ba78-42f0-83a3-86b49eaac201__Command_V2lvsloadVerilog_ida6b20476.xml#ida6b20476-ba78-42f0-83a3-86b49eaac201" title="Specifies a Verilog structural netlist or library file.">v2lvs::load_verilog</a> -filename model.v  
+v2lvs::load_verilog -filename lib.vlib -lib_mode 
+<a class="xref fm:HeadingOnly" href="Command_V2lvswriteOutput_id9fb31825.html#id9fb31825-aa26-4092-9575-68231a218d93__Command_V2lvswriteOutput_id9fb31825.xml#id9fb31825-aa26-4092-9575-68231a218d93" title="Specifies to output a translated SPICE netlist of the input Verilog design. Optionally specifies the name of a consolidated SPICE library file.">v2lvs::write_output</a> -filename model.spi  </code></pre></div></li>
+<li class="li step stepexpand" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__idc795dcb5-b563-4ea0-bbbe-bb4d489adb84"><span class="ph cmd">Generate a SPICE netlist from
+the Verilog library file:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>v2lvs::load_verilog -filename lib.vlib  
+<a class="xref fm:HeadingOnly" href="Command_V2lvsgenerateEmptySubckts_id64380aae.html#id64380aae-d652-4490-9fa3-827f07550ef8__Command_V2lvsgenerateEmptySubckts_id64380aae.xml#id64380aae-d652-4490-9fa3-827f07550ef8" title="Controls empty .SUBCKT output.">v2lvs::generate_empty_subckts</a> -enable 
+v2lvs::write_output -filename lib.spi  </code></pre></div></li>
+<li class="li step stepexpand" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__id607b64e7-4885-47f9-af6e-f87718bb1149"><span class="ph cmd">Specify the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'LVS Box', 'svrf_ur'); return false;">LVS Box</a> statement for the
+layout cells that correspond to the subcircuits in the Verilog library
+file (<span class="ph filepath">lib.vlib</span> and <span class="ph filepath">lib.spi</span>).</span></li>
+<li class="li step stepexpand" id="idaaa13618-1166-4c2c-9e0d-7b7bf77b947c__idec00317c-3de3-4b6c-beb0-9bfe940e70d3"><span class="ph cmd">Include <span class="ph filepath">lib.spi</span> from <span class="ph filepath">model.spi</span>:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>$$ model.spi file 
+.include lib.spi </code></pre></div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">The <span class="ph filepath">model.spi</span> file
+is a SPICE netlist with all the pin interfaces to the library modules
+being provided, but not the translations of the library modules
+themselves. The <span class="ph filepath">lib.spi</span> file has empty subcircuit
+definitions for library primitives. These empty subcircuits can
+be treated as LVS Box cells in a hierarchical LVS run.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_V2lvs_idf9540624.html" title="The V2LVS (Verilog-to-LVS) tool translates a Verilog structural netlist into a SPICE netlist suitable for Calibre nmLVS/Calibre nmLVS-H and Calibre PERC.">V2LVS</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Creating LVS Box Subcircuits"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_CreatingLvsBoxSubcircuits_idaaa13618.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

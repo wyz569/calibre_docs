@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Guidelines for Deriving Good Separator and Action Layers" />
+<meta name="abstract" content="Separator and action layers are used to convey color relationships between one or more polygons and require careful assignment." />
+<meta name="description" content="Separator and action layers are used to convey color relationships between one or more polygons and require careful assignment." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5c46d151-7108-4fc6-bf1c-2a97bde0a201" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Guidelines for Deriving Good Separator and Action Layers</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Guidelines for Deriving Good Separator and Action Layers" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Guidelines
+for Deriving Good Separator and Action Layers</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">Separator and action layers are used
+to convey color relationships between one or more polygons and require
+careful assignment.</span>
+</div>
+<p class="p">Separator and action layers (as termed by DFM MP
+and RET NMDPC, respectively) are type-3 edge pairs in which one
+edge from each edge pair touches a portion of a polygon on the target
+layer. Separator and action layers are employed by most of the Calibre Multi-Patterning
+commands. Careful derivation of these separator and action layers
+is needed to ensure that clear and accurate color requirements are
+being communicated to the tools. It is possible to generate edge
+pairs that the Calibre Multi-Patterning may ignore or misinterpret. The
+following sections describe potential problems that can be avoided
+or accounted for when deriving separator and action layers.</p>
+<div class="section Subsections"><div class="section Subsection" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__ida3dfb126-c3f8-45a1-b62f-941d966b3b31"><h2 class="title Subheading sectiontitle">Edge Cluster (Pair) Contents</h2><ul class="ul"><li class="li" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__ida422ff65-45cb-42c7-a564-798f447d75a3"><p class="p">Edge clusters
+should comprise a pair of type-3 edges (they must contain exactly
+two edges).</p>
+</li>
+<li class="li" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id76845385-8bcc-4fc2-877a-b2ee0c8eada8"><p class="p">None of the
+edges within the edge cluster should be a singularity (also referred
+to as a trivial point).</p>
+</li>
+<li class="li" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id97d057f9-6d22-428f-818b-c587f70f0b9e"><p class="p">Some types of EXT, INT, or ENC measurements
+may generate edge pairs containing one or more singularities. In
+the following example, the EXT commands on the left generate results
+on the right containing singularities, single points marking the measurement
+on each shape:</p>
+<div class="fig fignone" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__idea330df0-aebe-48c1-9572-acb156ece35f"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Singularity
+Results</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/singularities.png" /></div><br /></div>
+</li>
+</ul>
+<p class="p">This table details singularity limitations of specific Calibre
+Multi-Patterning commands.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id3eff54bf-bf14-4ea9-8ca5-39ee2db80252" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Command
+Support of Singularity</span></caption><colgroup><col style="width:1.846in" /><col style="width:4.328in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d47849e180"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d47849e183"><p class="p">Singularity Support</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e180 "><p class="p">RET NMDPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e183 "><p class="p">Supports all types of singular or coincident interactions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e180 "><p class="p">RET TP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e183 "><p class="p">None.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e180 "><p class="p">RET QP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e183 "><p class="p">None.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e180 "><p class="p">DFM MP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e183 "><p class="p">None.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e180 "><p class="p">DFM BALANCE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e183 "><p class="p">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Subsection" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id880a0d29-175c-440f-b226-61fd53dc5afd"><h2 class="title Subheading sectiontitle">Interaction
+Area</h2><p class="p">Make sure that each edge of an edge pair interacts with polygons
+by a length greater than a singularity. </p>
+<ul class="ul"><li class="li" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id7061d251-e251-4ad9-82f2-f7fd8378530c"><p class="p">In this example, the edge pair on the left
+touches no polygons and the edge pair on the right touches only
+one polygon. Both of these edge pairs are ignored by Calibre Multi-Patterning
+commands.</p>
+<div class="fig fignone" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id8647db3e-9d12-4135-b876-4959095d2762"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Polygon
+Interaction with Less Than Two Edges</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/edge_pair_1.png" /></div><br /></div>
+</li>
+<li class="li" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id1857342d-1949-43eb-999f-88588d30856a"><p class="p">In this example,
+each edge in the edge pair touches a polygon but only as a singularity.
+The Calibre Multi-Patterning commands ignore this edge pair as well.</p>
+<div class="fig fignone" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__id8704cf84-3b41-4da6-b60b-9578122abe7c"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Polygon
+Interaction with Singularity</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/edge_pair_2.png" /></div><br /></div>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__idec003139-836b-4b2b-a3b3-fb3b0d8e3e55"><h2 class="title Subheading sectiontitle">Derivation
+Operation Limitations</h2><p class="p">Most Calibre multi-patterning commands ignore
+or potentially misinterpret these edge cluster interactions. Some
+SVRF layer derivation operations used for processing these edge clusters
+during multi-patterning may also have similar issues. This table
+shows these commands and their behavioral limitations.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5c46d151-7108-4fc6-bf1c-2a97bde0a201__ida1fc6731-a5a0-44ec-a502-d7221b76924f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Command
+Behavior with Singularities</span></caption><colgroup><col style="width:1.857in" /><col style="width:4.643in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d47849e255"><p class="p">Command</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d47849e258"><p class="p">Operational Behavior with Singularities</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e255 "><p class="p">DFM PROPERTY</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e258 "><p class="p">Ignores edge pairs that
+contain singularities alone. Supports edge pairs containing both
+singularities and standard edges.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e255 "><p class="p">DFM COPY EDGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e258 "><p class="p">Ignores singularities when copying edges.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e255 "><p class="p">DFM COPY REGION</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e258 "><p class="p">Ignores dual-singularity edge pairs when
+copying regions.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e255 "><p class="p">DFM EXPAND EDGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e258 "><p class="p">Does not expand singularities.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e255 "><p class="p">DFM SHIFT EDGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d47849e258 "><p class="p">Does not shift singularities.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreMultiPatterningBestPractices_id4aef794f.html" title="Best practices expedite Calibre Multi-Patterning recipe development.">Calibre Multi-Patterning Best Practices</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "Guidelines for Deriving Good Separator and Action Layers"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_GuidelinesForDerivingGoodSeparatorAndActionLayers_id5c46d151.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

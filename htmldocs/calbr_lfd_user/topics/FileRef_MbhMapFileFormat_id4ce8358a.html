@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="MBH Map File Format" />
+<meta name="abstract" content="The MBH map file is divided into three sections that define the layer, check, and interlayer DRC values that are used when running LFD with MBH functionality." />
+<meta name="description" content="The MBH map file is divided into three sections that define the layer, check, and interlayer DRC values that are used when running LFD with MBH functionality." />
+<meta name="prodname" content="Calibre Litho-Friendly Design User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lfd_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 19, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® Litho-Friendly Design User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id4ce8358a-0d1f-46b9-a668-42277cbf2057" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>MBH Map File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="MBH Map File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id4ce8358a-0d1f-46b9-a668-42277cbf2057">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">MBH Map
+File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Required input
+file for LFD::<a class="xref fm:HeadingOnly" href="Command_Generatehints_idd0a03f68.html#idd0a03f68-f248-4363-a128-0644ee384736__Command_Generatehints_idd0a03f68.xml#idd0a03f68-f248-4363-a128-0644ee384736" title="Runs Calibre LFD with MBH and generates a hints file for fixing lithographic hotspots.">GenerateHints</a>.</p>
+<p class="shortdesc">The MBH map file is divided
+into three sections that define the layer, check, and interlayer DRC
+values that are used when running LFD with MBH functionality.</p>
+<p class="p">Three types of sections are required and
+are listed in the order that they appear in the MBH map file:</p>
+<ul class="ul"><li class="li" id="id58b4270d-228f-4d28-add4-178fc16245f4"><p class="p"><span class="ph FontProperty HeadingLabel">Layer Definitions</span> —
+Includes the name and minimum DRC width and space of all layers
+used in subsequent checks.</p>
+</li>
+<li class="li" id="id4cd11af6-4cb9-4ee3-9001-30b3a353882c"><p class="p"><span class="ph FontProperty HeadingLabel">Check Definitions</span> —
+Includes parameters for single and multilayer checks. </p>
+</li>
+<li class="li" id="id2268a56b-f91d-4214-b110-4c7e5f0722fa"><p class="p"><span class="ph FontProperty HeadingLabel">Interlayer Spacing</span> —
+Includes the minimum DRC space between any two different layers
+or the minimum enclosure between two different layers.</p>
+</li>
+</ul>
+<p class="p">Each of these sections may be specified
+multiple times as needed.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">An MBH map file must conform to the
+following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idaf44f7e7-6228-409a-9be3-c3a2924a167f"><p class="p">All layers must be defined before
+the check or interlayer spacing.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id25025278-6d8d-4b87-aa2c-abc382c3529a"><p class="p">Each parameter entry must be
+defined on one line.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id3d376542-e4fa-4c2e-b0a9-e1e6ac5853f7"><p class="p">Tcl comments are supported for
+lines beginning with a (#) character.</p>
+</li>
+</ul>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="Concept_SampleMbhMapFile_idbd253b54.html#idbd253b54-8b93-44a8-a38a-de25cce0259b__Concept_SampleMbhMapFile_idbd253b54.xml#idbd253b54-8b93-44a8-a38a-de25cce0259b" title="The MBH map file, also known as the MBH error map file, defines the layer, check, and interlayer spacing DRC values that are used by MBH generation to produce hints that eliminate hotspots found from a Calibre LFD run.">Sample MBH Map File</a>”.</p>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ide0fdfc85-dbc3-4b63-9f74-e30becf84a45"><h2 class="title Subheading sectiontitle">Syntax</h2><p class="p"><span class="keyword ParameterName Required">Layer</span> </p>
+<p class="p"><span class="keyword ParameterName Required">-layerName</span> <span class="keyword ParameterName RequiredReplaceable">layer_name</span></p>
+<p class="p"><span class="keyword ParameterName Required">-minDRCWidth</span> <span class="keyword ParameterName RequiredReplaceable">min_drc_width_value</span></p>
+<p class="p">[<span class="keyword ParameterName Optional">-lineEndLength </span><span class="keyword ParameterName OptionalReplaceable">line_end_length</span>]</p>
+<p class="p">[<span class="keyword ParameterName Optional">-lineEndWidth </span><span class="keyword ParameterName OptionalReplaceable">line_end_width</span>]</p>
+<p class="p">{<span class="keyword ParameterName Optional">-minDRCSpace </span><span class="keyword ParameterName OptionalReplaceable">min_drc_space</span> |</p>
+<p class="p"><span class="keyword ParameterName Optional">-minLETLESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_letle_spacing</span></p>
+<p class="p"><span class="keyword ParameterName Optional">-minETESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_ete_spacing</span></p>
+<p class="p"><span class="keyword ParameterName Optional">‑minETLESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_etle_spacing</span>}</p>
+<p class="p">[<span class="keyword ParameterName Optional">-enablingVar</span> ‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName OptionalReplaceable">env_var </span>[<span class="keyword ParameterName OptionalReplaceable">env_varN</span> [0]]…‘<span class="keyword ParameterName Required">}</span>’]</p>
+<p class="p"><span class="keyword ParameterName Required">Check</span></p>
+<p class="p"><span class="keyword ParameterName Required">-checkName</span> <span class="keyword ParameterName RequiredReplaceable">check_name</span></p>
+<p class="p"><span class="keyword ParameterName Required">‑errorType</span> {<span class="keyword ParameterName Required">width</span> | <span class="keyword ParameterName Required">space</span> | <span class="keyword ParameterName Required">stitching</span>}</p>
+<p class="p"><span class="keyword ParameterName Required">-layer1</span> <span class="keyword ParameterName RequiredReplaceable">layer1_name</span></p>
+<p class="p">[<span class="keyword ParameterName Optional">-layer2</span> <span class="keyword ParameterName OptionalReplaceable">layer2_name</span>]</p>
+<p class="p">[<span class="keyword ParameterName Optional">-drcCleanLayers</span> ‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">layer3_name layer4_name layer5_name</span>...<span class="keyword ParameterName OptionalReplaceable">layerN_name</span>‘<span class="keyword ParameterName Optional">}</span>’]</p>
+<p class="p">[<span class="keyword ParameterName Optional">-validationLayers</span> ‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">validationLayer1 validationLayer2 validationLayer3</span>...<span class="keyword ParameterName OptionalReplaceable">validationLayerN</span>‘<span class="keyword ParameterName Optional">}</span>’]</p>
+<p class="p"><span class="keyword ParameterName Required">InterLayer</span></p>
+<p class="p"><span class="keyword ParameterName Required">-layer1</span> <span class="keyword ParameterName RequiredReplaceable">layer1_name</span></p>
+<p class="p"><span class="keyword ParameterName Required">-layer2</span> <span class="keyword ParameterName RequiredReplaceable">layer2_name</span></p>
+<p class="p">{</p>
+<p class="p"><span class="keyword ParameterName Optional">‑minDRCencl</span> <span class="keyword ParameterName OptionalReplaceable">min_drc_encl</span></p>
+<p class="p">[<span class="keyword ParameterName Optional">-minDRCenclSides</span> ‘{’‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_side</span>‘}’</p>
+<p class="p">[‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_side</span>‘}’
+…] ‘}’]</p>
+<p class="p">[<span class="keyword ParameterName Optional">-minDRCenclLineEnds</span> ‘{’‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_end</span>‘}’</p>
+<p class="p">[‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_end</span>‘}’
+… ] ‘}’]</p>
+<p class="p">|</p>
+<p class="p"><span class="keyword ParameterName Optional">-minDRCSpace</span> <span class="keyword ParameterName OptionalReplaceable">min_drc_space</span></p>
+<p class="p">|</p>
+<p class="p"><span class="keyword ParameterName Optional">-minLETLESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_letle_spacing</span></p>
+<p class="p"><span class="keyword ParameterName Optional">-minETESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_ete_spacing</span></p>
+<p class="p"><span class="keyword ParameterName Optional">-minETLESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_etle_spacing</span></p>
+<p class="p">}</p>
+<p class="p">[<span class="keyword ParameterName Optional">-stitching</span> {‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName OptionalReplaceable">list_of_width_length_pairs</span>‘<span class="keyword ParameterName Required">}</span>’
+|</p>
+<p class="p">‘<span class="keyword ParameterName Required">{</span>’<span class="keyword ParameterName OptionalReplaceable">default_length</span>‘<span class="keyword ParameterName Optional">}</span>’
+|</p>
+<p class="p">‘<span class="keyword ParameterName Required">{</span>’‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">list_of_width_length_pairs</span>‘<span class="keyword ParameterName Required">}</span>’<span class="keyword ParameterName OptionalReplaceable">default_length</span>‘<span class="keyword ParameterName Required">}</span>’}]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Layer
+Definitions</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id1e3db9ee-cc36-4e73-bfd9-292992715b6e"><span class="keyword ParameterName Required">Layer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword used to define the starting point for the layer operations
+section of the map file before check or interlayer space operations
+can be specified.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id8561d52a-6a6d-45b9-9e26-65da7bdca915"><span class="keyword ParameterName Required">‑layerName </span> <span class="keyword ParameterName RequiredReplaceable">layer_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the original name of a layer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id918337c3-0fac-4f54-bfbd-5624bb5255c3"><span class="keyword ParameterName Required">‑minDRCWidth </span> <span class="keyword ParameterName RequiredReplaceable">min_drc_width_value</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the minimum DRC width in microns
+of a layer. Use this keyword to ensure that the MBH generated hints
+do not violate the minimum DRC width rules.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id41e94651-88e9-4259-a08c-00037acdfa8d"><span class="keyword ParameterName Optional">‑minDRCSpace</span> <span class="keyword ParameterName OptionalReplaceable">min_drc_space</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum DRC space in microns between
+same layer exterior edges. Use this keyword to ensure that the MBH
+generated hints do not violate the minimum DRC spacing rule.</p>
+<p class="p">Either <span class="keyword ParameterName Optional">‑minDRCSpace</span> or
+the keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span><span class="keyword ParameterName Required">,</span> <span class="keyword ParameterName Optional">‑minETESpacing</span><span class="keyword ParameterName Required">, </span> <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be used, but not both. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idecdfd1a5-c8ef-4783-a29b-4e7c9e672045"><span class="keyword ParameterName Optional">‑minLETLESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_letle_spacing</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between same
+layer exterior line ends. Use this keyword to ensure that the MBH
+generated hints do not violate this spacing rule.</p>
+<p class="p">Either <span class="keyword ParameterName Optional">‑minDRCSpace</span> or
+the keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span><span class="keyword ParameterName Required">, </span><span class="keyword ParameterName Optional">‑minETESpacing</span><span class="keyword ParameterName Required">, </span><span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be used, but not both. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ide9b6029a-b433-4d8d-87bd-4bb58add7e57"><span class="keyword ParameterName Optional">‑minETESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_ete_spacing</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between same
+layer exterior edges (not a line-end). Use this keyword to ensure
+that the MBH generated hints do not violate this spacing rule.</p>
+<p class="p">Either <span class="keyword ParameterName Optional">‑minDRCSpace</span> or
+the keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span><span class="keyword ParameterName Required">, </span><span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be used, but not both. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ida837e114-c75f-4ae6-a3d7-e0e32c82e3a6"><span class="keyword ParameterName Optional">‑minETLESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_etle_spacing</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between same
+layer exterior edges and line ends. Use this keyword to ensure that
+the MBH generated hints do not violate this spacing rule.</p>
+<p class="p">Either <span class="keyword ParameterName Optional">‑minDRCSpace</span> or
+the keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span><span class="keyword ParameterName Required">, </span><span class="keyword ParameterName Optional">‑minETESpacing</span><span class="keyword ParameterName Required">, </span><span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be used, but not both. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id696e684d-eab4-4a21-aa9a-3102056e41d9"><span class="keyword ParameterName Optional">‑lineEndLength </span> <span class="keyword ParameterName OptionalReplaceable">line_end_length</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and argument that provide the distance criteria in microns
+used to determine if an edge is on a line end or not. A line end
+is defined as an edge that is less than or equal to ‑lineEndWidth
+and located between two convex corner shapes, each of which is at
+least <span class="keyword ParameterName Optional">‑lineEndLength long. </span></p>
+<p class="p"><span class="keyword ParameterName Optional">The default value is 1.5 * </span>‑minDRCWidth.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id894b087d-dd7f-4f63-85e3-a6c117ab839d"><span class="keyword ParameterName Optional">‑lineEndWidth </span> <span class="keyword ParameterName OptionalReplaceable">line_end_width</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument that provide
+the distance criteria in microns used to determine if an edge is
+on a line end or not. A line end is defined as an edge that is less
+than or equal to ‑lineEndWidth and located between two convex corner
+shapes, each of which is at least ‑lineEndLength long.</p>
+<p class="p">The default value is ‑lineEndLength.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id497a2efe-8c91-4071-9bc6-73e37eb2f646"><span class="keyword ParameterName Optional">‑enablingVar </span>‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">env_var </span>[<span class="keyword ParameterName OptionalReplaceable">env_varN</span> [<span class="keyword ParameterName Optional">0</span>]]…‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and list argument used to specify the environment variable
+argument for each layer defined within the layer section of the
+MBH map file. Using this keyword turns off the simulation of any
+unnecessary layers (DRC clean layers that were not moved by MBH
+during the validation run). The <span class="keyword ParameterName Optional">‑enablingVar </span>keyword
+does not accept an empty list argument. More than one environment
+variable can be specified.</p>
+<p class="p">For example, there are two
+scenarios in the case of using <span class="keyword ParameterName Optional">‑enablingVa</span>r
+{RUN_<span class="keyword ParameterName Optional">metal1_M1</span>}:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id5f806c2d-6165-4981-9426-18a15935b939"><p class="p">metal1_M1 is a DRC clean
+layer used in a given check. The hint being validated resulted in
+the movement of fragments belonging to that layer.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idabc49cae-dee3-4a6d-b357-dfca0ec2ebc5"><p class="p">metal1_M1 belongs to either
+-layer1 or -layer2.</p>
+</li>
+</ul>
+<p class="p">In both cases, during hint
+validation the environment variable RUN_metal1_M1 is automatically
+set to a value of 1 (simulation), else it is set to 0 (no simulation).</p>
+<p class="p">You may specify a value of
+0 for the environment variable to disable that layer simulation. However,
+an environment variable for a layer must be enabled if that layer
+is required for the simulation of any of the checks in the input
+RDB file. For example: </p>
+<p class="p">‑enablingVar {RUN_M1 RUN_M2 0} </p>
+<p class="p">Setting the environment variable
+RUN_M2 to a value of 0 disables RUN_M2 for the entire run. This
+provides a mechanism to switch off layer simulation from within
+the MBH map file.</p>
+<p class="p">Additionally, you must specify
+the following when using the ‑enablingVar:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id5b88eaaf-6864-45da-9db5-b4f0d0e262d5"><p class="p">Define the ‑enablingVar
+keyword and environment variable(s) argument for each layer in the
+layer operations section of the MBH map file. </p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id816aedb1-8efd-497d-9728-d234a992f81c"><p class="p">Define the environment variables
+in the contour generation section of your LFD rule file.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idccbb4623-dd4e-4013-845e-22ef55ba7680"><p class="p">Define the environment variables
+in the run file or user shell before invoking MBH, unless the ‑inputLayersList
+keyword is specified in the MBH TVF rule file.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Check
+Definitions</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id3f5930da-9e24-4d10-9e2d-3c10635d13af"><span class="keyword ParameterName Required">Check</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword that defines the starting point for the check operations
+section of the map file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id82517510-fe7b-4a43-9d2b-5885bee2b053"><span class="keyword ParameterName Required">‑checkName </span> <span class="keyword ParameterName RequiredReplaceable">check_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the check name as it is explicitly
+stated in the previously generated input RDB file with error markers.
+A warning message is issued when a check in the map file does not
+exist in the input RDB file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id22fcf072-f967-408d-9918-ce1a43cef2b8"><span class="keyword ParameterName Required">‑errorType</span> {<span class="keyword ParameterName Required">width</span> | <span class="keyword ParameterName Required">space</span> | <span class="keyword ParameterName Required">stitching</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required keyword and argument specifying
+the error marker type. You specify one of three error marker types.
+The <span class="keyword ParameterName Required">stitching</span> argument
+is only applied to checks that use ‑layer2, as in the case of dual
+layer checks.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id5a58b490-4733-480a-b8ce-31e8f88690cb"><span class="keyword ParameterName Required">‑layer1 </span> <span class="keyword ParameterName RequiredReplaceable">layer1_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the original name of the layer used
+in the single layer check, and the first layer original name in
+case of a dual layer check.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id21b260a5-8325-461b-8d43-cfd47ab4711e"><span class="keyword ParameterName Optional">‑layer2 </span> <span class="keyword ParameterName OptionalReplaceable">layer2_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and argument specifying the second layer original name in
+the case of a dual layer check. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idd8f53fc2-2cd2-47ba-9df4-3c615b769d19"><span class="keyword ParameterName Optional">‑drcCleanLayers</span> ‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">layer3_name layer4_name layer5_name</span>...<span class="keyword ParameterName OptionalReplaceable">layerN_name</span>‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and space-separated list argument specifying original layer
+names that the MBH hints generation should maintain DRC clean. MBH
+generates hints that are DRC clean on <span class="keyword ParameterName Required">‑layer1</span> and
+‑layer2 (if it exists), but other layers are not necessarily DRC
+clean unless specified with this optional keyword and list argument. </p>
+<p class="p">If the <span class="keyword ParameterName Optional">‑drcCleanLayers</span> keyword
+and list argument are not defined, MBH generates hints that are
+clean on the layers that the specific check is operating on by default.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id4190299c-bd98-45be-bbec-39fd296bf76e"><span class="keyword ParameterName Optional">‑validationLayers </span>‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">validationLayer1 validationLayer2 validationLayer3</span>...<span class="keyword ParameterName OptionalReplaceable">validationLayerN‘</span><span class="keyword ParameterName Optional">}’</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and space-separated list argument specifying the layers
+used in the validation mode to verify that the MBH generated hints
+are LFD clean. The validated hints verify LFD cleanliness and ensure
+that no new hotspots are introduced. In addition, this keyword checks
+that no valid hints are claimed as invalid.</p>
+</dd>
+</dl>
+</div>
+<div class="section ArgumentSet"><h2 class="title Subheading sectiontitle">Interlayer
+Spacing</h2><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id84a9ffb5-88f4-4d16-b23f-fb4347be403b"><span class="keyword ParameterName Required">InterLayer</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword that defines the starting point for the interlayer spacing
+operations of the map file. Interlayer spacing is used to maintain
+interlayer DRC cleanliness, and is used for single-patterning and
+multi-patterning specifications as well. </p>
+<p class="p">Interlayer spacing rules for
+any pair of layers work in three ways:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idfa96e825-67b6-4fe5-86e7-edf3d75d4159"><p class="p">Define an enclosure distance</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idf50439ca-8f57-40ef-bceb-564ea1d4c3a2"><p class="p">Define an interlayer space</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id8ce1ee8d-f100-4d16-a236-39a96fd47c13"><p class="p">Define both enclosure and
+interlayer space</p>
+</li>
+</ul>
+<p class="p">For each layer defined in
+the <span class="keyword ParameterName Optional">‑drcCleanLayers</span> option
+of a check, there must be an interlayer spacing between the layer
+and the layer(s) used for the check (layer1 and layer2, if it exists). </p>
+<p class="p">For multi-patterning there
+must be an interlayer spacing defined between the two layers used
+for the check (layer1 and layer2).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id8a77221f-9286-4389-9553-e355d00dde56"><span class="keyword ParameterName Required">‑layer1 </span> <span class="keyword ParameterName RequiredReplaceable">layer1_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the first layer original name. This
+is the enclosed layer name in the case that the <span class="keyword ParameterName Optional">‑minDRCEncl</span> keyword
+is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idd17c3cd2-c9c8-4937-98ee-bed589452ea2"><span class="keyword ParameterName Required">‑layer2 </span> <span class="keyword ParameterName RequiredReplaceable">layer2_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+keyword and argument specifying the second layer original name.
+This is the surrounding layer name in the case that the <span class="keyword ParameterName Optional">‑minDRCEncl</span> keyword
+is defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ide4d78388-c04e-458b-8a30-58e3d547a931"><span class="keyword ParameterName Optional">‑minDRCEncl</span> <span class="keyword ParameterName OptionalReplaceable">min_drc_encl</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum enclosure distance in microns
+between layer1 and layer2. Use this keyword to ensure that the MBH
+generated hints do not violate this spacing rule.</p>
+<p class="p">At least one of <span class="keyword ParameterName Optional">‑minDRCSpace, ‑minDRCEncl, or the spacing keyword set (‑minLETLESpacing,</span> <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be defined. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id3ec87872-f531-4bc7-bd99-3b86ea2d4304"><span class="keyword ParameterName Optional">-minDRCenclSides</span> ‘{’‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_side</span>‘}’[‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint</span> <span class="keyword ParameterName OptionalReplaceable">min_encl_side</span>‘}’ …] ‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and parameter defining enclosure rules for enclosing layer
+sides between layer1 and layer2, where the enclosure rule can depend
+on the width of the layer1 shape.</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id825b11cd-d01d-4f89-9137-6710dae307cf"><p class="p"><span class="keyword ParameterName OptionalReplaceable">width_constraint</span> —
+Defines the widths that the rule applies to. The width constraint is
+defined with the comparison operators “==”, “&gt;”, “&lt;”, “&gt;=”, and
+“&lt;=”. Open‑ended width constraints are not allowed. For example,
+“&gt; 0.005 &lt; 0.03” is allowed, but “&lt; 0.03” is not allowed.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ida7bb0515-c67d-497b-9de4-17ee0df13b76"><p class="p"><span class="keyword ParameterName OptionalReplaceable">min_encl_side</span> —
+A required parameter giving the minimum side enclosure distance in
+microns for the given <span class="keyword ParameterName OptionalReplaceable">width_constraint</span>.</p>
+</li>
+</ul>
+<p class="p">For example, this specification:</p>
+<pre class="pre codeblock leveled"><code>‑minDRCenclSides {{== 0.2 0.1} {&gt;= 0.1 &lt; 0.2 0.07}}   </code></pre><p class="p">causes this behavior:</p>
+<p class="p">For widths equal to 0.2, apply
+an enclosure side constraint of 0.1.</p>
+<p class="p">For widths &gt;= 0.1 and &lt; 0.2,
+apply an enclosure side constraint of 0.07.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id4603981d-5170-4c43-b6b1-1ddd43d6c5a9"><span class="keyword ParameterName Optional">‑minDRCenclLineEnds</span> ‘{’‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint min_encl_end</span>‘}’[‘{’<span class="keyword ParameterName OptionalReplaceable">width_constraint</span> <span class="keyword ParameterName OptionalReplaceable">min_encl_end</span>‘}’ …] ‘}’</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and parameter defining enclosure rules for enclosing layer
+line ends between layer1 and layer2, where the enclosure rule can
+depend on the width of the layer1 shape.</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idae201305-00c3-4e1d-81d7-104283762cd2"><p class="p"><span class="keyword ParameterName OptionalReplaceable">width_constraint</span> —
+Defines the widths that the rule applies to. The width constraint is
+defined with the comparison operators “==”, “&gt;”, “&lt;”, “&gt;=”, and
+“&lt;=”. Open‑ended width constraints are not allowed. For example,
+“&gt; 0.005 &lt; 0.03” is allowed, but “&lt; 0.03” is not allowed.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idd5d05d4d-b421-4b5d-a1a8-d14c6d44dbdc"><p class="p"><span class="keyword ParameterName OptionalReplaceable">min_encl_end</span> —
+A required parameter giving the minimum line end enclosure distance
+in microns for the given <span class="keyword ParameterName OptionalReplaceable">width_constraint</span>.</p>
+</li>
+</ul>
+<p class="p">For example, this specification:</p>
+<pre class="pre codeblock leveled"><code>‑minDRCenclLineEnds {{==0.2 0.1} {&gt;=0.1 &lt;0.2 0.07}}  </code></pre><p class="p">causes this behavior:</p>
+<p class="p">For widths equal to 0.2, apply
+an enclosure line end constraint of 0.1.</p>
+<p class="p">For widths &gt;= 0.1 and &lt; 0.2,
+apply an enclosure line end constraint of 0.07.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idde1575ad-6cd1-4b6f-81b1-cc626f202d3f"><span class="keyword ParameterName Optional">‑minDRCSpace </span> <span class="keyword ParameterName OptionalReplaceable">min_drc_space</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum DRC space in microns between
+different layers’ exterior edges. Use this keyword to ensure that
+the MBH generated hints do not violate this spacing rule.</p>
+<p class="p">At least one of <span class="keyword ParameterName Optional">‑minDRCSpace, ‑minDRCEncl, or the spacing keyword set (‑minLETLESpacing</span>, <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+must be defined. </p>
+<p class="p">The <span class="keyword ParameterName Optional">‑minDRCSpace</span> keyword
+cannot be specified with the spacing keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span>, <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>).</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idf52e8cc7-9c0c-4e8f-9954-b945700db8ac"><span class="keyword ParameterName Optional">‑minLETLESpacing</span> <span class="keyword ParameterName OptionalReplaceable">min_letle_spacing</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between different layers'
+exterior line ends. Use this keyword as part of the spacing keyword
+set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span>, <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+to ensure that the MBH generated hints do not violate the spacing
+rules.</p>
+<p class="p">This keyword cannot be defined
+if <span class="keyword ParameterName Optional">‑minDRCSpace</span> is
+defined and must be defined if <span class="keyword ParameterName Optional">‑minDRCSpace</span> or <span class="keyword ParameterName Optional">‑minDRCencl</span> is
+not defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id96bbcb43-b1dd-4407-b8ef-110ed4a0eb40"><span class="keyword ParameterName Optional">‑minETESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_ete_spacing</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between different layers'
+exterior edges (not a line-end). Use this keyword as part of the
+spacing keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span>, <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+to ensure that the MBH generated hints do not violate spacing rules. </p>
+<p class="p">This keyword cannot be defined
+if <span class="keyword ParameterName Optional">‑minDRCSpace</span> is
+defined and must be defined if <span class="keyword ParameterName Optional">‑minDRCSpace</span> or<span class="keyword ParameterName Optional">‑minDRCencl </span>is
+not defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idd39814a2-96d1-48fb-8a2c-5ed232eb0433"><span class="keyword ParameterName Optional">‑minETLESpacing </span> <span class="keyword ParameterName OptionalReplaceable">min_etle_spacing</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Keyword
+and argument specifying the minimum spacing in microns between different layers'
+exterior edges and line ends. Use this keyword as part of the spacing
+keyword set (<span class="keyword ParameterName Optional">‑minLETLESpacing</span>, <span class="keyword ParameterName Optional">‑minETESpacing</span>, <span class="keyword ParameterName Optional">‑minETLESpacing</span>)
+to ensure that the MBH generated hints do not violate spacing rules.</p>
+<p class="p">This keyword cannot be defined
+if <span class="keyword ParameterName Optional">‑minDRCSpace</span> is
+defined and must be defined if <span class="keyword ParameterName Optional">‑minDRCSpace</span> or <span class="keyword ParameterName Optional">‑minDRCencl</span><span class="keyword ParameterName Required"></span>is
+not defined.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ide3ef5c4c-021e-4990-8f6d-221c61ad4eb6"><span class="keyword ParameterName Optional">‑stitching {</span>‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">list_of_width_length_pairs</span>‘}’ | ‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">default_length</span>‘}’ | ‘<span class="keyword ParameterName Optional">{</span>’‘<span class="keyword ParameterName Optional">{</span>’<span class="keyword ParameterName OptionalReplaceable">list_of_width_length_pairs</span>‘}’ <span class="keyword ParameterName OptionalReplaceable">default_length</span>‘}’}</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional
+keyword and argument specifying the stitching rules applied between
+stitch fragments. The list argument options are width‑length pair(s)
+followed by a default length constraint. Units are microns.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+-stitching keyword option is only applied to checks that use ‑layer2.</p>
+</div>
+<p class="p">How stitching rules are applied
+between stitch fragments:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id3c543c9f-ebb9-4d10-8f05-7a0a7443b1fa"><p class="p"><span class="ph FontProperty HeadingLabel">Default Length Only</span> —
+Default length constraint value is applied to all fragment widths.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id2df8a7d5-eddd-4dd5-b34d-ef6541b2585e"><p class="p"><span class="ph FontProperty HeadingLabel">Width-Length Pairs Only</span> —
+No rules are applied to any fragment widths that are greater than
+the greatest value in the pair list. However, the length rules are
+applied to the widths defined in the pair list.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id13554165-12da-4bb4-863b-30b4c479fe85"><p class="p"><span class="ph FontProperty HeadingLabel">Both Default Length and Width-Length Pairs</span> —
+All defined width‑length pair length values are applied. The default
+length constraint applies to all fragment widths greater than the
+greatest value in the pairs list.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__ida51b303c-1857-4e46-a607-99547ad69ae2"><p class="p"><span class="ph FontProperty HeadingLabel">Stitching Length‑Width</span> —
+Minimum length check of both of the stitching edges after the hint
+movement takes place. The corresponding width‑length rule that matches
+the new length is then applied. </p>
+<p class="p">For example, given the stitching
+rules {0.05 0.12} {0.06 0.15} and the following conditions:</p>
+<ul class="ul"><li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id20f700c3-6acb-43a6-9186-119d6677003e"><p class="p">Before hint movement, the
+lengths of the stitching edges are 0.06 and 0.06.</p>
+</li>
+<li class="li" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id87feb668-a299-4388-9b5f-20a9b5d09f04"><p class="p">After hint movement, the
+lengths of the stitching edges are 0.05 and 0.06.</p>
+<p class="p">The first rule {0.05 0.12} is
+applied.</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id67381500-b296-4e16-9f9e-9a8c6a1ce852"><h2 class="title Subheading sectiontitle">Layer Section Example
+1</h2><p class="p">The ‑enablingVar keyword option
+and argument is defined for all layers specified in the layer section
+of the map file.</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName Optional">Layer </span> 
+<span class="keyword ParameterName Optional">	-layerName 	metal1_M1</span> 
+<span class="keyword ParameterName Optional">	-minDRCWidth 	0.025</span> 
+<span class="keyword ParameterName Optional">	-minDRCSpace 	0.06</span> 
+<span class="keyword ParameterName Optional">	-enablingVar    {RUN_M1}</span> 
+ 
+Layer  
+	-layerName 	metal1_M2 
+	-minDRCWidth 	0.025 
+	-minDRCSpace 	0.06	 
+	-enablingVar    {RUN_M1} 
+	 
+Layer	 
+	-layerName 	contact 
+	-minDRCWidth    0.07 
+	-minDRCSpace    0.02 
+	-enablingVar    {RUN_C} 
+ </code></pre></div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idf577cb21-06ec-4c58-abc6-67006c668b6f"><h2 class="title Subheading sectiontitle">Layer Section Example
+2</h2><p class="p">The environment variables for the
+‑enablingVar keyword option are defined in the contour generation
+section of the LFD rule file. </p>
+<pre class="pre codeblock leveled"><code>LFD::Begin 
+LFD::loadPDK... 
+ 
+#Register layers 
+ 
+If {$::env(RUN_metal1_M1)} { 
+LFD::RegisterLayer -DesignLayer metal1_M1... 
+} 
+If {$::env(RUN_C)} { 
+LFD::RegisterLayer -Designlayer contact... 
+} 
+ 
+If {$::env(RUN_M1)} { 
+LFD::MinSpaceCheck "-layer metal1..." 
+} 
+ 
+If {$::env(RUN_C)} { 
+LFD::MinWidthCheck "-layer contact..." 
+} 
+LFD::End 
+ </code></pre></div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id13bf4754-8e2c-4b6a-947f-007872ff937d"><h2 class="title Subheading sectiontitle">Layer Section Example
+3</h2><p class="p">The environment variables for the
+-enablingVar keyword option must be defined in the run file or user
+shell before invoking MBH, unless the ‑inputLayersList keyword is
+used.</p>
+<pre class="pre codeblock leveled"><code>#!/bin/sh 
+export RUN_metal1 M1=1 
+export RUN_metal1_M2=1 
+export RUN_C=1 
+export RUN_M2=1 </code></pre></div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idc45a2e82-c3b9-46d7-820b-2b729035b8ad"><h2 class="title Subheading sectiontitle">Check Definitions
+Section Example 1</h2><p class="p">The check definitions section of
+the map file is used to specify check names and include validation
+layers for LFD and DRC. Layers ‑layer1 and ‑layer2 (if exists) are
+maintained DRC clean by default.</p>
+<pre class="pre codeblock leveled"><code>Check 
+	-checkName 	 							M1_MinSpaceCheck 
+	‑errorType								space
+	-layer1								metal1_M1 
+	-validationLayers	       {M1_MSC_ALL} 
+	-drcCleanLayers         {contact} 
+	 </code></pre></div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id379a4925-2a27-4423-b602-b0d7d9a69b73"><h2 class="title Subheading sectiontitle">Interlayer Spacing
+Section Example 1</h2><p class="p">The interlayer section of the map
+file can be used to specify via enclosure rules.</p>
+<pre class="pre codeblock leveled"><code>InterLayer 
+	-layer1 via 
+	-layer2 metal 
+	-minDRCencl 0.001 
+	-minDRCenclSides {{==0.032 0.000} {&gt;0.032&lt;=0.070 0.012}} 
+	-minDRCenclLineEnds {{==0.032 0.025} {&gt;0.032&lt;=0.070 0.012}} 
+ </code></pre><p class="p">Where the <span class="keyword ParameterName Optional">‑minDRCenclSides values are applied as follows:</span></p>
+<p class="p">For a width that is 0.032, apply
+an enclosure side constraint of 0.000.</p>
+<p class="p">For a width that is &gt; 0.032 and
+&lt;= 0.070, apply an enclosure side constraint of 0.012.</p>
+<p class="p">Likewise, the ‑<span class="keyword ParameterName Optional">minDRCenclLineEnds values are applied as follows:</span></p>
+<p class="p">For a width that is 0.032, apply
+an enclosure line-end constraint of 0.025.</p>
+<p class="p">For a width that is &gt; 0.032 and
+&lt;= 0.070, apply an enclosure line-end constraint of 0.012.</p>
+</div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idb8f68ef1-7dc4-4de7-af4d-7a1fd3bdebf3"><h2 class="title Subheading sectiontitle">Interlayer Spacing
+Section Example 2</h2><p class="p">The interlayer section of the map
+file can be used to specify stitching width-length pairs and a default
+length constraint.</p>
+<pre class="pre codeblock leveled"><code>-stitching { {0.12 0.12} {0.52 0.32} 0.4}   </code></pre><p class="p">For a width that is &lt;= 0.12,
+apply a length constraint of 0.12.</p>
+<p class="p">For a width that is &lt;= 0.52,
+and &gt; 0.12 apply a length constraint of 0.32.</p>
+<p class="p">For a width that is greater than
+0.52, apply a default length constraint of 0.4.</p>
+</div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__id71943ecb-cfb8-471c-9a4f-9346ad374daa"><h2 class="title Subheading sectiontitle">Interlayer Spacing
+Section Example 3</h2><p class="p">The interlayer section of the map
+file can be used to specify stitching width-length pairs without a
+default length constraint.</p>
+<pre class="pre codeblock leveled"><code>-stitching { {0.12 0.12} {0.52 0.32} }   </code></pre><p class="p">For a width that is &lt;= 0.12,
+apply a length constraint of 0.12.</p>
+<p class="p">For a width that is &lt;= 0.52
+and &gt; 0.12, apply a length constraint of 0.32.</p>
+<p class="p">For a width that is greater than
+0.52, no rule is applied.</p>
+</div>
+<div class="section Subsection" id="id4ce8358a-0d1f-46b9-a668-42277cbf2057__idf2361a45-81e9-43d7-acfb-dec8811f4e97"><h2 class="title Subheading sectiontitle">Interlayer Spacing
+Example 4</h2><p class="p">The interlayer section of the map
+file can be used to specify only a default length constraint.</p>
+<pre class="pre codeblock leveled"><code>-stitching {0.4}   </code></pre><p class="p">For all widths, the 0.4 length
+constraint is applied. </p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_MbhRuleMapTranscriptFiles_id535935ac.html" title="Running Calibre LFD with MBH functionality requires TVF rule and error map (map) files with specific formatting and syntax. Run information is available through the MBH transcript file.">MBH Rule, Map, and Transcript Files</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/TaskTop_RunningCalibreLfdMbh_id00ff699f.html#id00ff699f-508c-43dd-adcb-94a6bac9d728__" title="You can run Calibre LFD with MBH functionality to generate suggested repair hints for the identified lithography hotspots in the layout.">Running Calibre LFD with MBH</a></div>
+<div><a class="link" href="../topics/Command_Generatehints_idd0a03f68.html#idd0a03f68-f248-4363-a128-0644ee384736__" title="Runs Calibre LFD with MBH and generates a hints file for fixing lithographic hotspots.">GenerateHints</a></div>
+<div><a class="link" href="../topics/Concept_SampleMbhMapFile_idbd253b54.html#idbd253b54-8b93-44a8-a38a-de25cce0259b__" title="The MBH map file, also known as the MBH error map file, defines the layer, check, and interlayer spacing DRC values that are used by MBH generation to produce hints that eliminate hotspots found from a Calibre LFD run.">Sample MBH Map File</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lfd_user"
+                DocTitle = "Calibre® Litho-Friendly Design User’s Manual"
+                PageTitle = "MBH Map File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_MbhMapFileFormat_id4ce8358a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Litho-Friendly Design User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

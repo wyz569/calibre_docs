@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Migrating a Database" />
+<meta name="abstract" content="Database migration is the process of importing legacy data to a new database format. Typically, the changes are done to support new functionality or to improve tool efficiency. Calibre DefectReview should always use the latest database format updates." />
+<meta name="description" content="Database migration is the process of importing legacy data to a new database format. Typically, the changes are done to support new functionality or to improve tool efficiency. Calibre DefectReview should always use the latest database format updates." />
+<meta name="prodname" content="Calibre DefectReview User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_defrev_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DefectReview™ User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="HighlightChanges" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="IncludeInInventory" content="none" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Migrating a Database</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Migrating a Database" />
+<meta name="attributes" content="doc.type.documentation.user, product.version.v2021.2,product.id.P10101,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Migrating a Database</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">Database migration is
+the process of importing legacy data to a new database format. Typically, the
+changes are done to support new functionality or to improve tool
+efficiency. Calibre DefectReview should always use the latest database
+format updates.</p>
+<p class="p">When you use any database features such as the Defect Management
+window, Open Inspection File(s) from Database, or Save To DB, and
+you see the following error message:</p>
+<div class="fig fignone" id="ida04c0d3d-2a33-4ffd-bdd0-434740363a84"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Database
+Incompatible Error</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_database_incompat.jpg" /></div><br /></div>
+<p class="p">This indicates that the latest version of Calibre DefectReview
+is no longer compatible with your legacy database and you must migrate
+to a new one.</p>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id1381ad17-e95e-4b2c-829b-c852c21e5329"><p class="p">The migration
+process should be performed by the server administrator. You must
+close all running instances of Calibre DefectReview, including all
+database connections, before starting the migration process.</p>
+</li>
+<li class="li" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id23cedb4d-764b-4067-ad18-ae2acc097178"><p class="p">The server
+administrator should keep a backup of the existing database before
+starting migration. This is required to keep your data safe if,
+for any reason, migration fails. Generally, backup of the mysql
+database is performed using the mysqldump command as follows (though
+the server administrator can use other database utilities as well): </p>
+<pre class="pre codeblock"><code>mysqldump –h&lt;host_name&gt; -u&lt;user_name&gt; -p&lt;password&gt; &lt;database_name&gt; | mysql –h&lt;host_name&gt; -u&lt;user_name&gt; -p&lt;password&gt; -A 
+–D&lt;new_databse_name&gt;</code></pre><p class="p">For example:</p>
+<pre class="pre codeblock"><code>mysqldump –hdbserver.domain.com -udbuser -pWelCome\!23 MgcDefectManagementDB | mysql - hdbserver.domain.com -udbuser 
+-pWelCome\!23 -A -D MgcDefectManagementDB_backup;</code></pre><ul class="ul"><li class="li" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id0b6fa54c-0efd-4e20-9868-1b67ef255113"><p class="p">Refer to
+the ServerNameOrDSN and DbName node in the <span class="ph filepath">dat-ini.xml</span> file
+for the host_name and database_name respectively.</p>
+</li>
+<li class="li" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id6fcb5a73-2891-4ccf-b3d6-9a6c0baa25c7"><p class="p">On Windows,
+use the full path of mysqldump command. Typically it is <span class="ph filepath">C:\Program Files\MySQL\MySQL Server 5.7\bin\ mysqldump</span>.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id46769460-cdcf-4a31-bcc2-43dacd6efc84"><p class="p">Save a backup
+of your database image directory (the location specified in the DbImagesBaseDir
+node in <span class="ph filepath">dat-ini.xml</span>).</p>
+<p class="p">For example, you have defined the image folder location in <span class="ph filepath">dat-ini.xml</span> as <span class="ph filepath">/home/dummydir</span>.
+You create a backup using the following command:</p>
+<pre class="pre codeblock"><code>cp –r /home/dummydir /home/dummydir_backup</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">On Windows, manually copy the image folder. Database migration
+may run for several hours. Do not close the Calibre DefectReview
+GUI during this time, as it may corrupt the database</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__idebdd1d24-2df9-424b-889e-1b2af19d72d7"><span class="ph cmd">To migrate
+the database to the latest version, click the Migrate icon in the
+toolbar (see <a class="xref fm:Figure" href="#id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id55809ec4-7d4f-4292-989c-0d80a54a7a9c">Figure 2</a>) or select <span class="ph uicontrol">Utilities</span> &gt; <span class="ph uicontrol">Migrate
+Database</span> (see <a class="xref fm:Figure" href="#id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id50471000-68e9-41e0-9a1b-c797850e461f">Figure 3</a>).</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id55809ec4-7d4f-4292-989c-0d80a54a7a9c"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Database
+Migration Icon</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_icon.jpg" /></div><br /></div>
+<div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id50471000-68e9-41e0-9a1b-c797850e461f"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Database
+Migration Option</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_option.jpg" /></div><br /></div>
+</div></li>
+<li class="li step stepexpand" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id9b845496-e15b-41a7-bfb7-7c186622afb8"><span class="ph cmd">After invoking
+the migration process, the following dialog box appears.</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id01e83bfd-842b-4449-aebb-f7230460bf98"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Database
+Migration Initial Dialog Box</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_msg1.jpg" /></div><br /></div>
+<p class="p">Click <span class="ph uicontrol">OK</span> to proceed.</p>
+</div></li>
+<li class="li step stepexpand" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id69b5d024-4c9f-435d-b4f4-af9be5cf5ae3"><span class="ph cmd">A second
+dialog box appears, as shown in the following figure. </span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id6b57f492-3faa-45fd-b718-751221784e2a"><span class="figcap"><span class="fig--title-label">Figure 5. </span>Database
+Migration Second Dialog Box</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_msg2.jpg" /></div><br /></div>
+<p class="p">Click <span class="ph uicontrol">OK</span> to migrate the database.</p>
+</div></li>
+<li class="li step stepexpand" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__id9686d100-0ff9-40b1-9e6c-dfbd7067ad1e"><span class="ph cmd">During
+the migration process, Calibre DefectReview displays a progress
+bar.</span><div class="itemgroup info StepInfo"><div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__ida067c442-57d9-46e5-971f-d4de58136af0"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Database
+Migration Progress Bar</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_prog.jpg" /></div><br /></div>
+<p class="p">The migration might take time to complete. However, the amount
+of time depends on amount of data present in the database. The progress
+bar continues until Calibre DefectReview completes the migration
+updates.</p>
+<p class="p">The migration process is complete once the following dialog box
+appears.</p>
+<div class="fig fignone" id="id15b8238e-d51f-4d6d-9acb-97545e9b7d4e__idcf9b105c-eb6a-407c-a289-f0dc67293555"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Database
+Migration Success</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/migrate_complete.jpg" /></div><br /></div>
+</div></li>
+</ol>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">Once database migration is completed successfully, you can use
+the latest features with the most current version of Calibre DefectReview.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DatabaseServerPostInstallationSetup_id20aafb09.html" title="After you install the MySql database server, you can create databases and users. You will also need to update MySql attributes such as max_allowed_packet and max_questions before you start using the defect database from Calibre DefectReview.">Database Server Post-Installation Setup</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_defrev_user"
+                DocTitle = "Calibre® DefectReview™ User’s Manual"
+                PageTitle = "Migrating a Database"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_MigratingADatabase_id15b8238e.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DefectReview™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

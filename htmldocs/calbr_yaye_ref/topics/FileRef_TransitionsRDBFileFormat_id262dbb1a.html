@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Transitions RDB File Format" />
+<meta name="abstract" content="Contains an ASCII representation of transition geometries and statistics. The transition geometries are on one via layer and two interconnect layers. There is one rule check for each capture window or cell. Each rule check reports statistics regarding the total number of transitions that intersect the window or cell—these statistics are reported as check text. A rule check also includes one result for each transition geometry that was created. All geometric results and statistics are reported as if the operation were executed completely flat." />
+<meta name="description" content="Contains an ASCII representation of transition geometries and statistics. The transition geometries are on one via layer and two interconnect layers. There is one rule check for each capture window or cell. Each rule check reports statistics regarding the total number of transitions that intersect the window or cell—these statistics are reported as check text. A rule check also includes one result for each transition geometry that was created. All geometric results and statistics are reported as if the operation were executed completely flat." />
+<meta name="prodname" content="Calibre YieldAnalyzer and YieldEnhancer User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_yaye_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="15" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 24, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id262dbb1a-1891-4fe0-beba-5c7c98432ceb" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Transitions RDB File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Transitions RDB File Format" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Transitions RDB File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Output
+from: A <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM Transition', 'svrf_ur'); return false;">DFM Transition</a> operation
+with an RDB specification or a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'DFM RDB', 'svrf_ur'); return false;">DFM RDB</a> operation with
+the TRANSITION keyword.</p>
+<p class="shortdesc">Contains an ASCII representation of
+transition geometries and statistics. The transition geometries
+are on one via layer and two interconnect layers. </p>
+<p class="shortdesc">There is one rule check for each capture
+window or cell. Each rule check reports statistics regarding the
+total number of transitions that intersect the window or cell—these
+statistics are reported as check text. A rule check also includes
+one result for each transition geometry that was created. All geometric
+results and statistics are reported as if the operation were executed completely
+flat.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The results database (RDB) is an ASCII file with the following
+contents:</p>
+<pre class="pre codeblock"><code>header
+rule_check_results
+rule_check_results
+...</code></pre><p class="p">The rule_check_results block has the following
+format, where the contents depend on the keywords used in the operation
+that creates the RDB. </p>
+<pre class="pre codeblock"><code>rulecheck_name
+rulecheck_info
+check_text
+result_data
+result_data
+...</code></pre><p class="p">The result_data block has the following format:</p>
+<pre class="pre codeblock"><code>result_type
+result_properties
+result_coordinates</code></pre><div class="fig fignone" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idd52d619a-84b2-4e12-9294-26485b7c612a"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Transitions RDB File Format</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/rdbfile_transitions.png" /></div><br /></div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id75a162e7-b4f0-466c-b837-12c3bd0144bf"><span class="keyword ParameterName OptionalReplaceable">header</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">The name of the top cell and the RDB precision.
+Example: top 1000</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id30e506a3-16c9-4007-92e4-c68fbbfa7124"><span class="keyword ParameterName OptionalReplaceable">rule_check_results</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">There
+is one <span class="keyword ParameterName OptionalReplaceable">rule_check_results</span> block
+for each capture window or cell.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id7c31685f-3663-415b-97ad-76e6684415e3"><span class="keyword ParameterName OptionalReplaceable">rulecheck_name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A
+string representing the rule check name. The <span class="keyword ParameterName OptionalReplaceable">rulecheck_name</span> depends
+on the conditions in which the RDB is created. The general form
+is the following:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id84341007-049f-43a2-876d-7cc7ff42e0b9" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>rulecheck_name
+Format in Transitions RDB</span></caption><colgroup><col style="width:3.084in" /><col style="width:2.115in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46124e203"><p class="p">RDB Creation Condition</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d46124e206"><p class="p"><span class="keyword ParameterName RequiredReplaceable">rulecheck_name</span> format</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e203 "><p class="p">Within a rule check</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e206 "><p class="p"><span class="keyword ParameterName OptionalReplaceable">scope</span>::&lt;<span class="keyword ParameterName OptionalReplaceable">n</span>&gt;[<span class="keyword ParameterName OptionalReplaceable">_m</span>]</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e203 "><p class="p">DFM RDB operation with
+CHECKNAME keyword</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e206 "><p class="p">[<span class="keyword ParameterName OptionalReplaceable">scope</span>::]<span class="keyword ParameterName OptionalReplaceable">name</span>[<span class="keyword ParameterName OptionalReplaceable">_m</span>]</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e203 "><p class="p">Layer derivation outside
+of a rule check</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d46124e206 "><p class="p"><span class="keyword ParameterName OptionalReplaceable">derived_layer_name</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__ida5ed6623-5b4f-4e90-9b44-cb78852032e1"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">scope</span> —
+The name of the rule check that contains the DFM Transition or DFM
+RDB operation. </p>
+<p class="p">When CHECKNAME is specified with a DFM RDB operation, <span class="keyword ParameterName OptionalReplaceable">scope</span> is
+only included if “CHECKNAME “%_l”” is specified and the first input
+layer is derived within the rule check (a local layer). </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__ideed6e335-fdd5-404e-95e9-3ab88500bb85"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">derived_layer_name</span> —
+The name of the derived layer created by the DFM Transition operation. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idade1c4f3-5ebe-4a95-8727-809e5cd2670d"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">n</span> —
+The ordinal within the rule check of the DFM RDB operation that
+writes out the layer data to the RDB. The ordinal is enclosed in
+angle brackets (&lt;<span class="keyword ParameterName OptionalReplaceable">n</span>&gt;).</p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idf5fc7b2c-b993-4a37-b2ad-5288c1268899"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">m</span> —
+A positive integer that uniquely identifies the window or cell. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id79aa3914-f0b6-4d76-af96-f1253525cbf4"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">name</span> —
+The <span class="keyword ParameterName OptionalReplaceable">name</span> parameter
+specified with the CHECKNAME keyword in a DFM RDB operation. If
+pattern substitution is used, <span class="keyword ParameterName OptionalReplaceable">name</span> is
+replaced with the name of the first input layer name for %_l_ ,
+and replaced with the top cell name for %_t_. </p>
+</li>
+</ul>
+<p class="p">For examples of <span class="keyword ParameterName OptionalReplaceable">rulecheck_name</span> construction
+for the DFM RDB operation, see “Single Layer RDB File Format.”</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__ide9c14f90-7dec-44d1-b7b7-2b25b355f014"><span class="keyword ParameterName OptionalReplaceable">rulecheck_info</span></dt>
+<dd class="dd ArgumentDescription"><pre class="pre codeblock"><code>flat_count hier_count num_text month day time year</code></pre><p class="p">One line containing the flat result count, the hierarchical result
+count, the number of check text lines that follow, and a date stamp
+(month day time year).</p>
+<p class="p">For example: 9 9 1 Nov 17 15:43:02 2016</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id6f42115f-44f9-45af-8785-ca7b5c3ed8bf"><span class="keyword ParameterName OptionalReplaceable">check_text</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Fourteen
+lines of text, where the content depends on whether the reporting
+is by cell or by window. If the RDB was created with a DFM RDB operation,
+only the CELL and SHOWN lines have meaningful data—all other check
+text lines have 0 for the value. </p>
+<p class="p">The check text has the following format:</p>
+<pre class="pre codeblock"><code>{WINDOW <span class="keyword ParameterName OptionalReplaceable">x_ll</span> <span class="keyword ParameterName OptionalReplaceable">y_ll</span> <span class="keyword ParameterName OptionalReplaceable">x_ur</span> <span class="keyword ParameterName OptionalReplaceable">y_ur</span> | CELL <span class="keyword ParameterName OptionalReplaceable">cell_name</span> <span class="keyword ParameterName OptionalReplaceable">cell_transform</span>}
+START <span class="keyword ParameterName OptionalReplaceable">num</span> [(<span class="keyword ParameterName OptionalReplaceable">num_f</span>) <span class="keyword ParameterName OptionalReplaceable">num_e</span> (<span class="keyword ParameterName OptionalReplaceable">num_ef</span>)]
+MODIFIED <span class="keyword ParameterName OptionalReplaceable">num</span> [(<span class="keyword ParameterName OptionalReplaceable">num_f</span>) <span class="keyword ParameterName OptionalReplaceable">num_e</span> (<span class="keyword ParameterName OptionalReplaceable">num_ef</span>)]
+SHOWN <span class="keyword ParameterName OptionalReplaceable">num</span>
+<span class="keyword ParameterName OptionalReplaceable">layerA</span> START AREA <span class="keyword ParameterName OptionalReplaceable">area</span> [(<span class="keyword ParameterName OptionalReplaceable">area_f</span>) <span class="keyword ParameterName OptionalReplaceable">area_e</span> (<span class="keyword ParameterName OptionalReplaceable">area_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerA</span> START PERIM <span class="keyword ParameterName OptionalReplaceable">perim</span> [(<span class="keyword ParameterName OptionalReplaceable">perim_f</span>) <span class="keyword ParameterName OptionalReplaceable">perim_e</span> (<span class="keyword ParameterName OptionalReplaceable">perim_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerB</span> START AREA <span class="keyword ParameterName OptionalReplaceable">area</span> [(<span class="keyword ParameterName OptionalReplaceable">area_f</span>) <span class="keyword ParameterName OptionalReplaceable">area_e</span> (<span class="keyword ParameterName OptionalReplaceable">area_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerB</span> START PERIM <span class="keyword ParameterName OptionalReplaceable">perim</span> [(<span class="keyword ParameterName OptionalReplaceable">perim_f</span>) <span class="keyword ParameterName OptionalReplaceable">perim_e</span> (<span class="keyword ParameterName OptionalReplaceable">perim_ef</span>)] 
+<span class="keyword ParameterName OptionalReplaceable">layerC</span> START COUNT <span class="keyword ParameterName OptionalReplaceable">count</span> [(<span class="keyword ParameterName OptionalReplaceable">count_f</span>) <span class="keyword ParameterName OptionalReplaceable">count_e</span> (<span class="keyword ParameterName OptionalReplaceable">count_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerA</span> ADDED AREA <span class="keyword ParameterName OptionalReplaceable">area</span> [(<span class="keyword ParameterName OptionalReplaceable">area_f</span>) <span class="keyword ParameterName OptionalReplaceable">area_e</span> (<span class="keyword ParameterName OptionalReplaceable">area_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerA</span> ADDED PERIM <span class="keyword ParameterName OptionalReplaceable">perim</span> [(<span class="keyword ParameterName OptionalReplaceable">perim_f</span>) <span class="keyword ParameterName OptionalReplaceable">perim_e</span> (<span class="keyword ParameterName OptionalReplaceable">perim_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerB</span> ADDED AREA <span class="keyword ParameterName OptionalReplaceable">area</span> [(<span class="keyword ParameterName OptionalReplaceable">area_f</span>) <span class="keyword ParameterName OptionalReplaceable">area_e</span> (<span class="keyword ParameterName OptionalReplaceable">area_ef</span>)]
+<span class="keyword ParameterName OptionalReplaceable">layerB</span> ADDED PERIM <span class="keyword ParameterName OptionalReplaceable">perim</span> [(<span class="keyword ParameterName OptionalReplaceable">perim_f</span>) <span class="keyword ParameterName OptionalReplaceable">perim_e</span> (<span class="keyword ParameterName OptionalReplaceable">perim_ef</span>)] 
+<span class="keyword ParameterName OptionalReplaceable">layerC</span> ADDED COUNT <span class="keyword ParameterName OptionalReplaceable">count</span> [(<span class="keyword ParameterName OptionalReplaceable">count_f</span>) <span class="keyword ParameterName OptionalReplaceable">count_e</span> (<span class="keyword ParameterName OptionalReplaceable">count_ef</span>)]</code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id83df1cc8-44ca-4a7b-a321-e5e5e9fb1872"><p class="p Opt">WINDOW <span class="keyword ParameterName OptionalReplaceable">x_ll</span> <span class="keyword ParameterName OptionalReplaceable">y_ll</span> <span class="keyword ParameterName OptionalReplaceable">x_ur</span> <span class="keyword ParameterName OptionalReplaceable">y_ur</span> —
+Used with window analysis in a DFM Transitions operation. The four
+values give the coordinates of the lower-left and upper-right corners
+of the data capture window, in database units.</p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id8ed27f63-fde9-42db-a57e-8f3f33f3a263"><p class="p Opt">CELL <span class="keyword ParameterName OptionalReplaceable">cell_name</span> <span class="keyword ParameterName OptionalReplaceable">cell_transform</span> —
+Used when the BY CELL keyword is included in the DFM Transition
+operation or a DFM RDB operation is used to create the RDB. The
+values give the name of the cell and six numbers defining a transform
+matrix that maps global coordinates to the coordinates of the cell.
+See DRC Cell Name for a description of the transform matrix. </p>
+</li>
+</ul>
+<p class="p">With the exception of the SHOWN check text line,
+the content of the remaining check text lines depends on whether
+the analysis was WINDOW or BY CELL: </p>
+<ul class="ul"><li class="li" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id4783ef19-6b8b-4097-934f-462730cd8df0"><p class="p">WINDOW analysis — One data value</p>
+</li>
+<li class="li" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id0b3cc75b-b3b2-40ad-8743-c53389b6f065"><p class="p">BY CELL analysis — Four data values:</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">data</span> —
+for the immediate hierarchical level</p>
+<p class="p">(<span class="keyword ParameterName OptionalReplaceable">data_f</span>)
+— for the flattened instantiations of the cell</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">data_e</span> —
+for the cell subhierarchy expanded</p>
+<p class="p">(<span class="keyword ParameterName OptionalReplaceable">data_ef</span>)
+— for all expanded, flat instantiations of the cell</p>
+</li>
+</ul>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id16d2cf7a-1b46-4e43-b455-55359077b279"><p class="p Opt">START <span class="keyword ParameterName OptionalReplaceable">num</span> —
+The number of transitions (not polygons) that intersect the analysis window
+or cell. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id78440bc9-a76c-4b20-bac4-7b1bbd086d3c"><p class="p Opt">MODIFIED <span class="keyword ParameterName OptionalReplaceable">num</span> —
+The number of modified transitions (not polygons) that intersect
+the analysis window or cell. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id2086765c-e673-478b-bcfe-d1d921cb5f52"><p class="p Opt">SHOWN <span class="keyword ParameterName OptionalReplaceable">num</span> —
+The count of all modified transitions (not polygons) actually shown
+in the RDB. This number is controlled by the MAXIMUM keyword.</p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idc31014fc-d26a-4380-9a8d-b707549246a2"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">layerA</span>, <span class="keyword ParameterName OptionalReplaceable">layerB</span>,
+and <span class="keyword ParameterName OptionalReplaceable">layerC</span> —
+These indicate the layer that the data applies to. <span class="keyword ParameterName OptionalReplaceable">layerA</span> and <span class="keyword ParameterName OptionalReplaceable">layerB</span> are
+the first and second interconnect layers in a DFM Transition operation, or
+the second and third layers in a DFM RDB operation. <span class="keyword ParameterName OptionalReplaceable">layerC</span> is
+the via layer in a DFM Transition operation or the first layer in
+a DFM RDB operation. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id6839aa92-3338-4cfb-8ca5-505401e8450b"><p class="p Opt">START [AREA | PERIM | COUNT] — Gives the total
+area, total perimeter, or via count, respectively, before transition
+modification.</p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id44b5ec3b-8f84-442f-bcab-3a57646d13be"><p class="p Opt">ADDED [AREA | PERIM | COUNT] — Gives the total
+area, total perimeter, or via count, respectively, after transition
+modification.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idb10cfa05-7676-431f-8427-5d46ab6d1455"><span class="keyword ParameterName OptionalReplaceable">result_data</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">There is a result_data
+block for each transition geometry, with the following format: </p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName OptionalReplaceable">result_type</span>
+<span class="keyword ParameterName OptionalReplaceable">result_properties</span>
+<span class="keyword ParameterName OptionalReplaceable">result_coordinates</span></code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id636d3d2c-8f17-4016-aa51-4e4ed20c188d"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">result_type</span> —
+One line with the format: </p>
+<pre class="pre codeblock"><code><span class="keyword ParameterName OptionalReplaceable">type</span> <span class="keyword ParameterName OptionalReplaceable">ordinal</span> <span class="keyword ParameterName OptionalReplaceable">num_objects</span></code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__ida897b0b6-08b5-4e0f-982b-60864b1d8293"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">type</span> —
+The result type, indicated by the character “p” for a polygon. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id4a7de55c-ee40-42fb-a204-15487f8fb508"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">ordinal</span> —
+The ordinal of the geometry within the rule check. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__iddfbb278b-3d0a-4ba0-bf70-37b3ae3a255b"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">num_objects</span> —
+The number of vertices in the polygon. </p>
+</li>
+</ul>
+<p class="p">For example, “p 2 4” indicates a polygon which is the second
+object within the rule check and has four vertices. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__ideb37e747-a9ea-46ec-900e-35b0d32ea5b2"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">result_properties</span> —
+One line starting with “DT” and with the format: </p>
+<pre class="pre codeblock"><code>DT [S] <span class="keyword ParameterName OptionalReplaceable">layer_num</span> [<span class="keyword ParameterName OptionalReplaceable">net_number</span> [<span class="keyword ParameterName OptionalReplaceable">net_name</span>]]</code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id358b1c74-e95c-43dc-89a9-660264c22296"><p class="p Opt">S — Indicates the
+polygon is the start of a modified transition. </p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idcd95bb97-1fd0-43e8-88a9-d7c6d8477168"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">layer_num</span> —
+The numeral 1, 2, or 3, indicating which input layer the result
+is from.</p>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__id1d8b2827-48a0-432b-a00b-925524be251d"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">net_number</span> [<span class="keyword ParameterName OptionalReplaceable">net_name</span>]
+— Nodal information is included if the NODAL keyword is specified.
+The internal node number is given, along with the net name if available. This
+connectivity is associated only with the polygon that is the start
+of the transition. </p>
+<p class="p">The node number is a property of the improved
+transition itself, not of the individual geometries in the improved
+transition. The node number of an improved transition is that of
+the original <span class="keyword ParameterName OptionalReplaceable">layer3</span> shape
+in the transition. In the unlikely event that a START constraint
+other than == 1 is specified, and the <span class="keyword ParameterName OptionalReplaceable">layer3</span> geometry
+in the transition collectively has more than one node number, then
+a node number is chosen arbitrarily.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="id262dbb1a-1891-4fe0-beba-5c7c98432ceb__idba625cdf-f2f9-47c3-b810-7415204304dd"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">result_coordinates</span> —
+The coordinates for the geometry. Coordinates are supplied in top cell
+space using an arbitrarily selected placement of the cell. There
+is one line for each vertex, and each line contains one pair of
+coordinates.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DfmRdbReference_ida5632624.html" title="The Calibre YieldAnalyzer and Calibre YieldEnhancer toolsets use proprietary DFM Results Databases (RDBs) to store the types of data required for analysis and enhancement.">DFM RDB Reference</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_yaye_ref"
+                DocTitle = "Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual"
+                PageTitle = "Transitions RDB File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_TransitionsRDBFileFormat_id262dbb1a.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® YieldAnalyzer and YieldEnhancer User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

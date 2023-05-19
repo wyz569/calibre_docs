@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="LEF/DEF Map File Format" />
+<meta name="abstract" content="Specifies how layers and objects in a LEF/DEF input design database are translated to the GDS or OASIS output database layers for fdi2gds and fdi2oasis." />
+<meta name="description" content="Specifies how layers and objects in a LEF/DEF input design database are translated to the GDS or OASIS output database layers for fdi2gds and fdi2oasis." />
+<meta name="prodname" content="Calibre Layout Comparison and Translation Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-12-14" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="DBdiff, FastXOR, fdi2gds, fdi2oasis, and fdiBA" />
+<meta name="SourceHandle" content="calbr_lvl_fdi_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Layout Comparison and Translation Guide" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>LEF/DEF Map File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="LEF/DEF Map File Format" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10099,product.id.P11427,product.id.P11426,product.id.P10119,product.id.P10089,product.id.P10122,product.id.P11427,product.id.P11493,product.id.P11802,product.id.P11803,product.id.P11801" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">LEF/DEF Map File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Specified in: fdi2gds -map and fdi2oasis
+‑map option.</p>
+<p class="shortdesc">Specifies how layers and objects in a LEF/DEF input design
+database are translated to the GDS or OASIS output database layers
+for fdi2gds and fdi2oasis. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If you do not have an existing mapping file, the fdi2gds
+and fdi2oasis utilities automatically create one from your input
+files if you translate your LEF/DEF database <span class="ph FontProperty emphasis">without</span> the
+-map option. You can then customize this mapping file for future
+translations.</p>
+</div>
+<p class="p">See “<a class="xref fm:HeadingAndPage" href="General_ExampleLefdefMapFile_id90b6e466.html#id90b6e466-d75e-441e-9835-80c1b14145ee__General_ExampleLefdefMapFile_id90b6e466.xml#id90b6e466-d75e-441e-9835-80c1b14145ee" title="The fdi2gds and fdi2oasis utilities output a default map file for LEF/DEF if you do not specify ‑map.">Example: LEF/DEF Map File</a>” for
+examples.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A LEF/DEF layer mapping file must
+conform to the following formatting and syntax rules:</p>
+<ul class="ul"><li class="li" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id179decdd-43e4-4e52-8706-fd7ffd64106d"><p class="p">The file is case-sensitive.</p>
+</li>
+<li class="li" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id0eaa351b-8e8f-4e7f-857c-e4a4f07ffeda"><p class="p">Blank lines are skipped. </p>
+</li>
+<li class="li" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id606623c9-56b9-4941-b1a3-33ad4def615b"><p class="p">Comments start with the hash
+symbol (#). For example, these comments are valid: </p>
+<pre class="pre codeblock"><code>#this is a comment
+METAL1 NET 12 0 # this is a comment 
+#this is a comment METAL2 NET 12 0</code></pre></li>
+</ul>
+<p class="p">The file format for each mapping
+line consists of four arguments:</p>
+<pre class="pre codeblock flushLeft"><code><span class="keyword ParameterName RequiredReplaceable">in_layer_object</span> {<span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span>[<span class="keyword ParameterName OptionalReplaceable">sub_type</span>][,]…}<span class="keyword ParameterName RequiredReplaceable"> out_layer_num</span> <span class="keyword ParameterName RequiredReplaceable">out_data_type</span></code></pre><p class="p">If you specify multiple <span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span> objects,
+then you must separate the arguments with a comma, for example:</p>
+<pre class="pre codeblock"><code>M3 PIN,NET,SPNET 3 1</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">For text label mapping using the NAME keyword, see “<a class="xref fm:HeadingAndPage" href="FileRef_LEFDEFTextMapping_idd885ae24.html#idd885ae24-43a7-4782-b6d1-9a7638d50aba__FileRef_LEFDEFTextMapping_idd885ae24.xml#idd885ae24-43a7-4782-b6d1-9a7638d50aba" title="Alternate syntax for the LEF/DEF map file that specifies how text labels in a LEF/DEF input design database are translated to the GDS or OASIS output database layers for fdi2gds and fdi2oasis.">LEF/DEF Text Mapping</a>”.</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__iddad53133-ea70-40b3-b22e-2b207d717144"><span class="keyword ParameterName RequiredReplaceable">in_layer_object</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required argument that
+specifies the LEF/DEF layer object name from the input database, such
+as metal or via objects.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idcff7648a-dab5-40e3-9457-9870f1e93f31"><span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span>[<span class="keyword ParameterName OptionalReplaceable">sub_type</span>] …</dt>
+<dd class="dd ArgumentDescription"><p class="p">Required
+argument set that specifies a list of objects to translate for the
+layer specified in the <span class="keyword ParameterName RequiredReplaceable">in_layer_object</span> argument.
+At least one object must be specified. If you specify more than one
+object, you must use commas between each value. For example, this
+statement outputs LEFPIN and VIAS of a specific size to layer 14,
+datatype 2:</p>
+<pre class="pre codeblock"><code>via34 LEFPIN,VIA:SIZE:0.55x0.55 14 2</code></pre><p class="p">The valid values for the <span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span> argument
+are listed as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id21461499-e303-4a20-b147-387304c71bdf" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Objects
+and Subtypes</span></caption><colgroup><col style="width:1.580in" /><col style="width:2.216in" /><col style="width:2.704in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d869e279"><p class="p"><span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span></p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d869e283"><p class="p">Supported <span class="keyword ParameterName RequiredReplaceable">sub_type</span></p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d869e288"><p class="p">Equivalent LEF and DEF Object</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">ALL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">All LEF and DEF object types</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">BLOCKAGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF BLOCKAGES without FILLS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">BLOCKAGEFILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF BLOCKAGES + FILLS </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">COMP</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF COMPONENTS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">DIEAREA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">None</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF DIEAREA</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">FILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF FILL without OPC</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">FILLOPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF FILL + OPC</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">LEFOBS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">LEF OBS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">LEFOBSVIA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:SIZE:<span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span></p>
+<p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">LEF OBS vias</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">LEFPIN</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">LEF PIN</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">NET</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+<p class="p">:TYPE:<span class="keyword ParameterName OptionalReplaceable">type</span><a class="xref fm:Footnote" href="#id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idf678b4e3-a6cf-4d0b-a6d3-246bc50c35bb"><sup>1</sup></a></p>
+<p class="p">:<span class="keyword ParameterName OptionalReplaceable">netname</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF NETS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">PIN</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+<p class="p">:<span class="keyword ParameterName OptionalReplaceable">netname</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF PINS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">SPNET</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+<p class="p">:TYPE:<span class="keyword ParameterName OptionalReplaceable">type</span><a class="xref fm:Footnote" href="#id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idf678b4e3-a6cf-4d0b-a6d3-246bc50c35bb"><sup>1</sup></a></p>
+<p class="p">:<span class="keyword ParameterName OptionalReplaceable">netname</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF SPECIALNETS</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">TRACK</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:WIDTH:<span class="keyword ParameterName OptionalReplaceable">width</span></p>
+<p class="p">:DIRECTION:<span class="keyword ParameterName OptionalReplaceable">direction</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">TRACK</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">VIA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:SIZE:<span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span></p>
+<p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+<p class="p">:TYPE:<span class="keyword ParameterName OptionalReplaceable">type</span><a class="xref fm:Footnote" href="#id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idf678b4e3-a6cf-4d0b-a6d3-246bc50c35bb"><sup>1</sup></a></p>
+<p class="p">:<span class="keyword ParameterName OptionalReplaceable">netname</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">LEF and DEF regular vias</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">VIAFILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:SIZE:<span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span></p>
+<p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF FILL vias</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e279 "><p class="p">VIAFILLOPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e283 "><p class="p">:SIZE:<span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span></p>
+<p class="p">:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e288 "><p class="p">DEF FILL+OPC vias</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">Use the optional <span class="keyword ParameterName OptionalReplaceable">subtype</span> argument
+to further refine the objects that are translated by their subtypes.
+You can specify the <span class="keyword ParameterName OptionalReplaceable">subtype</span> option
+to include items such as via (cut) sizes, net names, or mask colors.
+The subtypes can be used on the same line.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The FLOATING and VOLTAGE subtypes are not supported.</p>
+</div>
+<p class="p">Use the following <span class="keyword ParameterName OptionalReplaceable">subtype</span> syntax
+to specify the via size:</p>
+<pre class="pre codeblock"><code>… VIA:SIZE:<span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span> …</code></pre><p class="p">where the arguments are described as follows:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idd3fabd83-a32d-4e69-af97-a56ca8ec1df0"><p class="p Opt">VIA
+— Required keyword for the <span class="keyword ParameterName RequiredReplaceable">in_layer_obj_type</span>.</p>
+</li>
+<li class="li ArgOption" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idfaf76075-fbd3-4547-9048-87629480b93f"><p class="p Opt">:SIZE:
+— Required <span class="keyword ParameterName OptionalReplaceable">subtype</span> keyword
+that specifies to translate vias objects of a specific size.</p>
+</li>
+<li class="li ArgOption" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__ida0fcd733-8ae5-41f7-b1d2-21f582ee8187"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">dimension1</span>x<span class="keyword ParameterName OptionalReplaceable">dimension2</span> —
+Required values that indicate the size of the via cut in two dimensions.
+The two values are interchangeable (height or width) and are separated by
+the “x” character. </p>
+</li>
+</ul>
+<p class="p">Use the following <span class="keyword ParameterName OptionalReplaceable">subtype</span> syntax
+for MASK data:</p>
+<pre class="pre codeblock"><code>… <span class="keyword ParameterName OptionalReplaceable">in_layer_obj_type</span>:MASK:<span class="keyword ParameterName OptionalReplaceable">maskvalue</span> …</code></pre><p class="p">where the <span class="keyword ParameterName OptionalReplaceable">maskvalue</span> argument
+must be an integer greater than or equal to zero.</p>
+<p class="p">Use the following <span class="keyword ParameterName OptionalReplaceable">subtype</span> syntax
+for net names:</p>
+<pre class="pre codeblock"><code>… {NET | SPNET}:<span class="keyword ParameterName OptionalReplaceable">netname</span> …</code></pre><ul class="ul ArgumentOptions"><li class="li ArgOption" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id31deeae5-4b43-4835-b3a2-06869c31ebb6"><p class="p Opt">{NET
+| SPNET} — Required keyword that indicates the object is a DEF NET
+or DEF SPECIAL NET.</p>
+</li>
+<li class="li ArgOption" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id6a919b99-c21e-4a1e-8308-7009bf529091"><p class="p Opt">:<span class="keyword ParameterName OptionalReplaceable">netname</span> —
+Required value that indicates the name of the net in the DEF file.</p>
+</li>
+</ul>
+<p class="p">See the “Examples” section of this topic for details.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id8ed61473-49da-4f5e-a831-c127b3774130"><span class="keyword ParameterName RequiredReplaceable">out_layer_num</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required number of the layer in the translated
+GDS or OASIS layout database. This value allows customized control
+of the output database. The <span class="keyword ParameterName RequiredReplaceable">out_layer_num</span> value
+is a non-negative integer.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id8ac084ae-105b-4e0b-aa00-b7bd7b18fa03"><span class="keyword ParameterName RequiredReplaceable">out_datatype</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Required datatype number for the layer in
+the generated GDS or OASIS layout database. This value allows customized
+control of the output database. The <span class="keyword ParameterName RequiredReplaceable">out_datatype</span> value
+is a non-negative integer.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id0b76b334-1074-412e-a04f-b8cb2cc4117c"><h2 class="title Subheading sectiontitle">Default
+Output</h2><p class="p">If you do not specify ‑map, then the fdi2gds and fdi2oasis utilities
+generate a mapping file in your working directory (named <span class="ph filepath">fdi.map</span>)
+from your database with default settings. The default mapping file
+outputs objects to datatypes as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id84bf8021-9d60-4ebc-b083-828b59015e21" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Default
+Object Mapping</span></caption><colgroup><col style="width:1.747in" /><col style="width:1.503in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d869e696"><p class="p">LEF/DEF Object</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d869e699"><p class="p">Layer Datatype</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">NET</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">SPNET</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">PIN</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">11</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">LEFPIN</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">12</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">FILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">21</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">FILLOPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">22</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">VIAFILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">23</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">VIAFILLOPC</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">24</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">VIA</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">31</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">LEFOBS</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">41</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">BLOCKAGE</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">42</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e696 "><p class="p">BLOCKAGEFILL</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d869e699 "><p class="p">43</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">See “<a class="xref fm:HeadingAndPage" href="FileRef_LEFDEFTextMapping_idd885ae24.html#idd885ae24-43a7-4782-b6d1-9a7638d50aba__FileRef_LEFDEFTextMapping_idd885ae24.xml#idd885ae24-43a7-4782-b6d1-9a7638d50aba" title="Alternate syntax for the LEF/DEF map file that specifies how text labels in a LEF/DEF input design database are translated to the GDS or OASIS output database layers for fdi2gds and fdi2oasis.">LEF/DEF Text Mapping</a>” for details
+on text mapping defaults.</p>
+</div>
+<p class="p">Mask numbers are prefixed to the datatype numbers. For example,
+a FILL object on layer M1 with mask number 2 is mapped by default
+to GDS layer 4, datatype 221. If there was no mask number, the FILL
+would be mapped to GDS layer 4, datatype 21.</p>
+</div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__iddafe848a-c5ce-4198-a470-530da5254980"><h2 class="title Subheading sectiontitle">Translate
+Objects on the Same Input LEF Layer to Different Output Layers</h2><p class="p">Translate all DEF NETS on LEF layer “METAL1” to the GDS or OASIS
+output database on layer 1, datatype 0:</p>
+<pre class="pre codeblock"><code>METAL1 NET 1 0</code></pre><p class="p">Translate all DEF PINS on the same LEF layer to the GDS or OASIS
+output database on layer 2, datatype 0:</p>
+<pre class="pre codeblock"><code>METAL1 PIN 2 0</code></pre><p class="p">Translate all LEF PINS on the same LEF layer to the GDS or OASIS
+output database on layer 3, datatype 0:</p>
+<pre class="pre codeblock"><code>METAL1 LEFPIN 3 0</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id5c7bf1a0-2e38-4fab-ad69-13796d28954e"><h2 class="title Subheading sectiontitle">Translate
+Multiple Objects to the Same Layer</h2><p class="p">Translate all net, via, and special net objects from LEF layer
+“METAL2” to the GDS or OASIS output database on layer 6, datatype
+0. The object types are comma-delimited.</p>
+<pre class="pre codeblock"><code>METAL2 NET, VIA, SPNET 6 0</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idc618f2bd-42e1-4c6b-8fbb-5737ef75c6a0"><h2 class="title Subheading sectiontitle">Translate
+All Objects</h2><p class="p">Translate all objects on layer “METAL1” to the GDS or OASIS output
+database on layer 11, datatype 0:</p>
+<pre class="pre codeblock"><code>METAL1 ALL 11 0</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id202eeddb-2c5f-4f50-b19f-fd9b611dcdb3"><h2 class="title Subheading sectiontitle">Translate
+the Same Objects to Multiple Layers</h2><p class="p">The tool supports both many-to-one and one-to-many layer mappings.
+For example, the following statements translate all objects on layer
+M1 to layer 11, datatype 0 and layer 11, datatype 1.</p>
+<pre class="pre codeblock"><code>M1 ALL 11 0
+M1 ALL 11 1</code></pre><p class="p">This effectively creates a copy of the layer. You can use the
+same feature to translate a subset of objects from a layer to different
+layer and datatypes. For example:</p>
+<pre class="pre codeblock"><code>M3 NET,SPNET 3 0
+M3 PIN,NET,SPNET 3 1</code></pre><p class="p">In this example, layer 3, datatype 0 contains NET and SPNET objects
+from M3. Layer 3, datatype 1 includes the same elements as 3.0,
+but also contains PIN objects.</p>
+</div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id0fc32bbd-fc17-4ce0-89d3-1de3f68d304f"><h2 class="title Subheading sectiontitle">Translate
+Vias of a Specific Size </h2><p class="p">Use the <span class="keyword ParameterName OptionalReplaceable">subtype</span> option
+to translate only the DEF VIA objects on LEF layer “VIA12” that
+have a cut size of 0.36 by 0.36 units.</p>
+<pre class="pre codeblock"><code>VIA12 VIA:SIZE:0.36x0.36 5 0</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id96ce2740-d7ad-42d9-895a-f2e30cc3701a"><h2 class="title Subheading sectiontitle">Translate
+Objects by Net Name</h2><p class="p">Translate nets with the name ADDR_0 and special nets with the
+name VDD on layer “METAL1” to GDS or OASIS layer 11 datatype 5 and
+11.6, respectively. </p>
+<pre class="pre codeblock"><code>METAL1 NET:ADDR_0 11 5
+
+METAL1 SPNET:VDD 11 6 </code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id09b642f8-8da4-4db9-ba88-8181faae2de8"><h2 class="title Subheading sectiontitle">Translate
+Mask Data </h2><p class="p">Translate mask color 1 of NET objects on the “METAL1” layer to
+layer 4, datatype 0 in the GDS or OASIS output.</p>
+<pre class="pre codeblock"><code>METAL1 NET:MASK:1 4 0</code></pre><p class="p">You can translate vias of a specific size and on a specific mask
+by combining the subtype keywords in one line as follows:</p>
+<pre class="pre codeblock"><code>METAL1 VIA:SIZE:0.36x0.36:MASK:1 11 7</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id05fba619-5e4e-4667-b448-3d40de7e3caa"><h2 class="title Subheading sectiontitle">Translate
+NAME Objects for Labels</h2><p class="p">You can translate text objects on different LEF objects to a
+specific layer as follows:</p>
+<pre class="pre codeblock"><code>NAME metal1/PIN 0 5</code></pre><p class="p" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id0b61aaea-db84-453e-81b2-849d641b4993">In this example,
+NAME objects on pins on the metal1 layer are translated to layer
+0, datatype 5. See the <span class="keyword ParameterName RequiredReplaceable">in_layer_object</span> description
+in the Parameters section for more details. The following is an
+example for LEF pins:</p>
+<pre class="pre codeblock"><code>NAME M1/LEFPIN 121 0</code></pre></div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id9044bb7f-21a6-4311-9656-198ab02cab76"><h2 class="title Subheading sectiontitle">Translate DEF Tracks</h2><p class="p">Specify the TRACK object type to translate
+DEF tracks to the output. The WIDTH and DIRECTION subtypes are supported,
+where the WIDTH value is either “DEFAULT” or a floating-point number
+in microns. The DIRECTION value must be X or Y. For example:</p>
+<pre class="pre codeblock"><code>M1 TRACK:WIDTH:0.02:DIRECTION:X 10 1</code></pre><p class="p">This statement translates track objects on the
+M1 layer that are 0.02 microns wide in the x-direction to layer
+10, datatype 1.</p>
+</div>
+<div class="section Subsection" id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__id8dce530b-2421-4cf9-bad2-90f2aaa7b919"><h2 class="title Subheading sectiontitle">Translate a Net or Via by Type</h2><p class="p">You can specify ANALOG, CLOCK, GROUND, POWER,
+RESET, SCAN, SIGNAL, TIEOFF for the NET or VIA subtype TYPE. The
+following statement maps POWER type nets to layer 5, datatype 0.</p>
+<pre class="pre codeblock"><code>M1 SPNET:TYPE:POWER 5 0</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_LefdefMapping_idb0917b43.html" title="fdi2gds and fdi2oasis use a different mapping format when translating LEF/DEF databases.">LEF/DEF Mapping</a></div>
+</div>
+</div></div>
+<div class="fn"><a id="id178bcf4d-f508-4ff1-ab73-e6ecb7c8954e__idf678b4e3-a6cf-4d0b-a6d3-246bc50c35bb"><sup>1</sup></a>  The following
+values are supported for TYPE: ANALOG, CLOCK, GROUND, POWER, RESET,
+SCAN, SIGNAL, TIEOFF</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lvl_fdi_gd"
+                DocTitle = "Calibre® Layout Comparison and Translation Guide"
+                PageTitle = "LEF/DEF Map File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_LefdefLayerMapFile_id178bcf4d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Layout Comparison and Translation Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

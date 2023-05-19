@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Opening a Layout in Incremental Mode" />
+<meta name="abstract" content="The Calibre DESIGNrev application has an “-incr” switch directing the tool to invoke the layout viewer in incremental mode, which uses a cache file to aid the initial drawing speed. Invoking the layout viewer with this switch instructs the tool to load the layout incrementally and to generate or update a cache file if needed. When a layout is incrementally loaded, only hierarchical structures are loaded." />
+<meta name="description" content="The Calibre DESIGNrev application has an “-incr” switch directing the tool to invoke the layout viewer in incremental mode, which uses a cache file to aid the initial drawing speed. Invoking the layout viewer with this switch instructs the tool to load the layout incrementally and to generate or update a cache file if needed. When a layout is incrementally loaded, only hierarchical structures are loaded." />
+<meta name="prodname" content="Calibre DESIGNrev Layout Viewer User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_drv_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Layout Viewer User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id29e6fa8f-325b-4b34-94a2-7768d3231af1" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Opening a Layout in Incremental Mode</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Opening a Layout in Incremental Mode" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id29e6fa8f-325b-4b34-94a2-7768d3231af1">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Opening a Layout in Incremental Mode</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><p class="shortdesc">The Calibre DESIGNrev
+application has an “-incr” switch directing the tool to invoke the
+layout viewer in incremental mode, which uses a cache file to aid
+the initial drawing speed. Invoking the layout viewer with this
+switch instructs the tool to load the layout incrementally and to generate
+or update a cache file if needed. When a layout is incrementally
+loaded, only hierarchical structures are loaded.</p>
+<p class="p">Compressed layout files can be incrementally
+loaded, and OASIS files using cell block (CBLOCK) compression internal
+to the layout file can also be incrementally loaded without a performance
+penalty. However, if an entire OASIS layout file is compressed externally
+via gzip, gdzip or 7zip, and if the OASIS file does not use CBLOCK
+compression, there can be severe incremental loading performance
+issues. This is due to the layout file having to be uncompressed
+each time it is accessed by the layout viewer. The size of an OASIS
+file utilizing CBLOCK compression is approximately 10 percent larger
+than a gzipped OASIS file.</p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">The Calibre
+SVRF command, DRC Check Map, does not support CBLOCK compression; however
+you can use the DRC Results Database command which supports CBLOCK compression.</p>
+</div>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><div class="li step p" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__id91a8394d-b79a-4de8-b5b5-0d7a3b765f5d"><span class="ph cmd">Use one of the following methods
+to open a layout in incremental mode:</span><div class="itemgroup info StepInfo">
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__iddaa819db-5ccc-4248-bb21-e2061fbff02e" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.012in" /><col style="width:3.512in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d12911e154"><p class="p">If you want to...</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d12911e157"><p class="p">Do the following:</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d12911e154 "><p class="p">Use the command line
+to open a layout in incremental mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d12911e157 "><p class="p">Use the following syntax
+to invoke Calibre DESIGNrev and open the specified layout file in incremental
+mode:</p>
+<pre class="pre ShellCommand">calibredrv -incr &lt;<span class="keyword ParameterName OptionalReplaceable">layoutfile</span>&gt;</pre>
+<p class="p">For example:</p>
+<pre class="pre ShellCommand">calibredrv -incr layout.gds</pre>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d12911e154 "><p class="p">Use the GUI to open a layout
+in incremental mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d12911e157 "><ol class="ol"><li class="li" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__id60ba2154-776e-49d6-a04f-e548b6bedaaa"><p class="p">Invoke Calibre DESIGNrev
+without specifying any arguments. For example:</p>
+<pre class="pre ShellCommand">calibredrv</pre>
+</li>
+<li class="li" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__id8f46a7db-1f50-46af-80fa-163d13faac68"><p class="p">Choose <span class="ph menucascade bold"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">Open Layout Files</span></span>.</p>
+</li>
+<li class="li" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__id0d1f3e0f-2618-49ac-a155-2e79f57d1814"><p class="p">In the <span class="ph uicontrol">Files</span> tab,
+select the layout file you wish to open.</p>
+</li>
+<li class="li" id="id29e6fa8f-325b-4b34-94a2-7768d3231af1__idf7c01da7-348a-4f0b-8e77-a24cf0df4dda"><p class="p">From the <span class="ph uicontrol">Open</span> dropdown
+menu, choose <span class="ph uicontrol">Open Incrementally</span>.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div class="section result"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Results</h2></div><p class="p">When the layout is incrementally loaded,
+only hierarchical structures are loaded. You can change the hierarchy
+depth to navigate through the hierarchy. Invoking Calibre DESIGNrev
+in incremental mode generates or updates the cache file.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_IncrementallyLoadingLayouts_idc1afb52b.html" title="Incremental loading helps reduce loading time when reviewing Calibre results with large layout files and mostly flat designs, such as output from OPC and MDP tools. Instead of loading the entire file into memory, incremental loading loads only specified areas into memory, reducing loading and drawing time and memory usage in the layout viewer. Incremental loading enables the layout viewer to load huge layout files into memory that were not possible previously, due to the size limit of the workstation memory. The incremental loading feature supports both GDS and OASIS files.">Incrementally Loading Layouts</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/GUIRefT_ChooseLayoutFilesDialogBoxFilesTab_id003ec299.html" title="Use the Files tab in the Choose Layout Files dialog box to browse to and select a layout to open. To open multiple files, use Ctrl + click.">Choose Layout Files Dialog Box - Files Tab</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_user"
+                DocTitle = "Calibre® DESIGNrev™ Layout Viewer User’s Manual"
+                PageTitle = "Opening a Layout in Incremental Mode"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_OpeningLayoutInIncrementalMode_id29e6fa8f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Layout Viewer User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

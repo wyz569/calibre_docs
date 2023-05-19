@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="perc::collection" />
+<meta name="abstract" content="Returns data from a collection iterator. Creates a hash collection, adds data to it, returns data from it, and can delete it. Returns a collection iterator from a hash collection." />
+<meta name="description" content="Returns data from a collection iterator. Creates a hash collection, adds data to it, returns data from it, and can delete it. Returns a collection iterator from a hash collection." />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id01127e08-7773-4f86-9c93-f48a26bfd673" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>perc::collection</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="perc::collection" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id01127e08-7773-4f86-9c93-f48a26bfd673">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">perc::collection</h1>
+<div class="body refbody CommandRefBody-Var1"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Calibre PERC iterator control and
+data access command.</p>
+<p class="shortdesc">Returns data from a collection iterator. Creates a hash
+collection, adds data to it, returns data from it, and can delete
+it. Returns a collection iterator from a hash collection.</p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">perc::collection</span> {<span class="keyword ParameterName Required">-create</span> <span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">name</span> [-lifetime {<span class="keyword ParameterName OptionalDefault">currentRule</span> | currentLoad | currentRun}]} | {<span class="keyword ParameterName Required">‑destroy</span> <span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">name</span>} | {<span class="keyword ParameterName Required">-get</span> <span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">name</span>} | <br />
+{<span class="keyword ParameterName RequiredReplaceable">coll_handle</span> {{{<span class="keyword ParameterName Required">-add</span> | <span class="keyword ParameterName Required">-append</span>} <span class="keyword ParameterName Required">-key</span> <span class="keyword ParameterName RequiredReplaceable">key</span> <span class="keyword ParameterName Required">-value</span> <span class="keyword ParameterName RequiredReplaceable">value</span>} |<span class="keyword ParameterName Required"> -begin</span> | <span class="keyword ParameterName Required">‑destroy</span> | {<span class="keyword ParameterName Required">‑hasKey</span> <span class="keyword ParameterName RequiredReplaceable">key</span>}} | {<span class="keyword ParameterName Required">-key</span> <span class="keyword ParameterName RequiredReplaceable">key</span>}} |<br />
+{<span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> {<span class="keyword ParameterName Required">-key</span> | <span class="keyword ParameterName Required">-size </span>| <span class="keyword ParameterName Required">-value</span>}}</p>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">This command manages various aspects of collections and collection
+iterators. See “<a class="xref fm:HeadingAndPage" href="Concept_CollectionsAndCollectionIterators_id866db00e.html#id866db00e-656e-419c-a896-5a75bd7c1d9f__Concept_CollectionsAndCollectionIterators_id866db00e.xml#id866db00e-656e-419c-a896-5a75bd7c1d9f" title="A collection is a data structure that is especially useful in two situations. The first is to get around the inherent Tcl limit on list size. The second is to save data internally for lookup during the run. This second usage can circumvent file I/O issues associated with saving runtime data to disk. Collection iterators reference objects in collections and behave mostly as other Calibre PERC iterators do.">Collections and Collection Iterators</a>” for detailed
+background information.</p>
+<p class="p">One of five argument sets must be specified in the command. The
+sets begin with <span class="keyword ParameterName Required">-create</span>, <span class="keyword ParameterName Required">‑destroy</span>, <span class="keyword ParameterName Required">-get</span>, <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>,
+and <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span>,
+respectively.</p>
+<p class="p">The <span class="keyword ParameterName Required">-create</span> option
+creates a hash collection of a specified <span class="keyword ParameterName RequiredReplaceable">name</span>,
+sets the collection’s scope of applicability, and its duration,
+or lifetime. The <span class="keyword ParameterName Required">-create</span> option
+is used to define a collection handle (<span class="keyword ParameterName RequiredReplaceable">coll_handle</span>),
+like this:</p>
+<pre class="pre codeblock"><code>set coll_handle [perc::collection -create -name "my_collection" \
+                  -lifetime currentRule]</code></pre><p class="p">A hash collection is accessible either within the scope of the
+rule in which the collection is created (the default), within the
+scope of procedures called by a <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC Load', 'svrf_ur'); return false;">PERC Load</a> statement,
+or within the scope of the entire run. These scopes are established
+by the -lifetime keywords currentRule, currentLoad, or currentRun,
+respectively.</p>
+<p class="p">If currentRule is used (the default), the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> must
+be defined in the scope of a rule check procedure and may only be
+dereferenced in the scope of that rule check. If currentLoad or currentRun
+is used, the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> must
+be defined in an initialization or rule check procedure. </p>
+<p class="p">If currentLoad is used, the PERC Load statement that calls the
+procedure in which the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> is
+defined provides the scope of the hash collection. Once defined,
+the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>, may
+then be successfully dereferenced exclusively in the procedures
+specified in that PERC Load statement. </p>
+<p class="p">If currentRun is used, the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> may
+be dereferenced in any procedure active for the run.</p>
+<p class="p">A hash collection and any associated <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> expire
+when the collection’s lifetime is exceeded, unless the collection
+is manually deleted first. The <span class="keyword ParameterName Required">-destroy</span> argument
+is used to delete a collection, and it may be used either with -<span class="keyword ParameterName Required">name</span> or <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>.</p>
+<p class="p">A collection handle may be generated using the <span class="keyword ParameterName Required">-get</span> argument
+set, which references an existing hash collection by its name, like
+this:</p>
+<pre class="pre codeblock"><code>set newHandle [perc::collection -get -name "my_collection"]</code></pre><p class="p">Once a hash collection has been created, its handle then provides
+access to the collection. The elements of the collection are (<span class="keyword ParameterName RequiredReplaceable">key</span>, <span class="keyword ParameterName RequiredReplaceable">value</span>)
+pairs. These are added to the collection by using the <span class="keyword ParameterName Required">‑add</span> argument
+set, like this:</p>
+<pre class="pre codeblock"><code>perc::collection $coll_handle -add -key "my_key" -value "my value"</code></pre><p class="p">A <span class="keyword ParameterName RequiredReplaceable">key</span> is
+a unique string across the set of all keys for a given collection.
+That is, a <span class="keyword ParameterName RequiredReplaceable">key</span> cannot have
+more than one associated <span class="keyword ParameterName RequiredReplaceable">value</span> list.
+If a <span class="keyword ParameterName RequiredReplaceable">key</span> is
+added (using <span class="keyword ParameterName Required">-add</span>)
+more than once to a hash collection, then the value of the <span class="keyword ParameterName RequiredReplaceable">key</span> is
+the final <span class="keyword ParameterName RequiredReplaceable">value</span> that
+was added. In a multi-threaded run, “final” is not predictable because
+additions to a collection occur per-thread, and thread execution
+order is generally unpredictable. Your code may need to check a
+collection for a <span class="keyword ParameterName RequiredReplaceable">key</span> by
+using the <span class="keyword ParameterName Required">‑hasKey</span> option
+before adding the key. </p>
+<p class="p">The <span class="keyword ParameterName Required">-append</span> option
+may be used instead of <span class="keyword ParameterName Required">-add</span>.
+In this case, if the <span class="keyword ParameterName RequiredReplaceable">key</span> does
+not exist in the collection, then <span class="keyword ParameterName Required">-append</span> behaves
+exactly as <span class="keyword ParameterName Required">-add</span>.
+Otherwise, the <span class="keyword ParameterName RequiredReplaceable">value</span> is
+appended to the list of values for the <span class="keyword ParameterName RequiredReplaceable">key</span>.
+If you attempt to append a <span class="keyword ParameterName RequiredReplaceable">value</span> that
+is itself a list to an existing <span class="keyword ParameterName RequiredReplaceable">value</span>,
+the entire list of values is flattened. For example, this set of
+commands:</p>
+<pre class="pre codeblock"><code>perc::collection $coll_handle -add -key color -value blue
+perc::collection $coll_handle -append -key color -value [list red green]</code></pre><p class="p">results in a flattened value list of {blue red green}.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">value</span> may
+consist of strings, instance iterators, or net iterators, and these
+types may not be intermixed. If currentRun is specified, the <span class="keyword ParameterName RequiredReplaceable">value</span> may
+only consist of strings. Internally, a <span class="keyword ParameterName RequiredReplaceable">value</span> is
+always stored as a Tcl list containing no lists as elements (that
+is, the list is <span class="keyword ParameterName OptionalReplaceable">flattened</span>).
+A bare or scalar <span class="keyword ParameterName RequiredReplaceable">value</span> is
+interpreted as a list of one element. </p>
+<p class="p">In the context of an initialization procedure, iterators may
+not be added to a hash collection. If code is not carefully constructed,
+it can attempt to add an iterator to an external (and non-existent)
+net of a top-level cell to a hash collection. If this occurs, a
+warning is issued and no net is added to the collection.</p>
+<p class="p">A collection may only contain one type of <span class="keyword ParameterName RequiredReplaceable">value</span>,
+so it is important to add only one of the three allowed types to
+any collection. Failure to do so produces an error, and the non-conforming <span class="keyword ParameterName RequiredReplaceable">value</span> is
+not added to the collection. (It is advisable to wrap any <span class="keyword ParameterName Required">-add</span> or <span class="keyword ParameterName Required">-append</span> commands
+in a Tcl “catch” command to trap the error.) Also, because the end
+of an iterator produced by a high-level command returns an empty
+value, and an empty value is a string, it is a good practice for
+your code to verify whether a <span class="keyword ParameterName RequiredReplaceable">value</span> that
+is presumed to be an iterator is non-empty before adding the <span class="keyword ParameterName RequiredReplaceable">value</span> to
+a collection.</p>
+<p class="p">If the <span class="keyword ParameterName RequiredReplaceable">value</span> cannot
+be classified as an instance or a net iterator, it is treated as
+a string. There is a limited amount of semantical checking of the <span class="keyword ParameterName RequiredReplaceable">value</span>.
+For example, if dev1 and dev2 are instance iterators, then [list
+$dev1 $dev2] is treated as a list of instance iterators. But [list [list $dev1
+$dev2]] is interpreted as the string representation of [list $dev1
+$dev2]. While such a value can be added to a collection, this probably
+is not the intent because the value cannot be returned as a list
+of iterators. </p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">value</span> is
+returned as a Tcl list, possibly of a single element. That is, even
+if a scalar element is added as a <span class="keyword ParameterName RequiredReplaceable">value</span>,
+it is returned in a list. It is important to remember this when
+writing code to process a <span class="keyword ParameterName RequiredReplaceable">value</span>.
+See <a class="xref fm:HeadingOnly" href="#id01127e08-7773-4f86-9c93-f48a26bfd673__idef1071c2-a035-46d4-8d18-910d97f93427">Example 3</a>.</p>
+<p class="p">If currentLoad is specified, then iterators added to a hash collection
+are automatically treated as promotable.</p>
+<p class="p">Elements in an hash collection can be accessed in two ways. The
+first employs the <span class="keyword ParameterName Required">‑hasKey</span> and <span class="keyword ParameterName Required">-key</span> options,
+like this:</p>
+<pre class="pre codeblock"><code>if { [perc::collection $coll_handle -hasKey my_key] } {
+  set value [perc::collection $coll_handle -key my_key ]
+}</code></pre><p class="p">The <span class="keyword ParameterName Required">-hasKey</span> option
+returns “true” if the collection contains the <span class="keyword ParameterName RequiredReplaceable">key</span> and
+“false” otherwise. The <span class="keyword ParameterName Required">‑key</span> option
+returns the <span class="keyword ParameterName RequiredReplaceable">value</span> associated
+with the key. In this usage, a collection handle is also an argument
+to the command.</p>
+<p class="p">The second method employs scanning the elements of a collection
+through a collection iterator, like this:</p>
+<pre class="pre codeblock"><code>set coll_iterator [perc::collection $coll_handle -begin]
+while {$coll_iterator ne "" } {
+  set key   [perc::collection $coll_iterator -key]
+  set value [perc::collection $coll_iterator -value]
+...
+  perc::inc colIter
+}</code></pre><p class="p">The <span class="keyword ParameterName Required">-begin</span> option
+causes the command to output a collection iterator (<span class="keyword ParameterName RequiredReplaceable">coll_iterator</span>)
+indexed to the first referenced element in the hash collection.
+(Notice the distinction between a collection iterator and a collection
+handle.) The <span class="keyword ParameterName Required">-begin</span> option
+can be used any time a copy of a collection iterator is needed.
+Remember that this initializes the iterator to its first reference
+index, which is something perc::clone does not do (perc::clone can
+also be used to copy a collection iterator).</p>
+<p class="p">The perc::collection command is the only command that accesses
+the internals of a collection iterator for both hash and sequential
+collections. The <span class="keyword ParameterName Required">-key</span> and <span class="keyword ParameterName Required">-value</span> options
+access the current key and value pair referenced by the iterator.
+The <span class="keyword ParameterName Required">-key</span> option
+may only be used if the referenced collection is a hash collection.
+The traversal order for hash collection iterators is undefined.</p>
+<p class="p">If a collection iterator exists for a hash collection, no elements
+may be added to that collection. It is possible to iterate over
+all elements in a hash collection using a collection iterator while
+at the same time querying the collection for a key through a collection
+handle.</p>
+<p class="p">After a hash collection no longer exists, any collection iterators
+that reference that collection become invalid and generate an error
+if an attempt is made to access them.</p>
+<p class="p">When <span class="keyword ParameterName Required">-size</span> is
+used, the number of collection elements referenced in a collection
+iterator is returned. </p>
+<p class="p">When <span class="keyword ParameterName Required">-value</span> is
+used, the element currently referenced by the iterator is returned.
+The type of returned data is determined as follows:</p>
+<ul class="ul"><li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id5ad5f2a4-cb31-40d6-8bc5-56c3f7a3d4c5"><p class="p">If the <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> is
+created by <a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a> with
+the -collection option, then the returned element is a string.</p>
+</li>
+<li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__idc12808d2-aa67-4fab-a735-67d0cb930dfe"><p class="p">If the <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> is
+created by <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> with
+the -collection option but without ‑pinAlso, then the returned element
+is an instance iterator referencing a single instance.</p>
+</li>
+<li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id095e34b8-908d-4478-a2f9-9822c9f8096c"><p class="p">If the <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> is
+created by perc::count with the -collection and -pinAlso options, then
+the returned element is a Tcl list whose first element is an instance
+iterator referencing a single instance, and whose second element
+is a Tcl list of pin names associated with the instance.</p>
+</li>
+<li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__iddde7ec6e-db6c-4e5f-a02b-bbcd2557b36f"><p class="p">If the <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> is
+created by perc::collection <span class="keyword ParameterName Required">-begin</span>,
+the returned element is a Tcl list. The list contains objects consistent
+with whatever were added to the collection.</p>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id058b5886-41c8-4824-aa96-9dbd6acfdf49"><span class="keyword ParameterName Required">-create</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument that specifies to create a hash
+collection. This argument is used to create a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> and
+is used with the <span class="keyword ParameterName Required">-name</span> and
+-lifetime argument sets.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id6907dec9-8e41-4700-8ed8-80f87df35697"><span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">name</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set that specifies a name of
+a hash collection. Must be specified with <span class="keyword ParameterName Required">-create</span>, <span class="keyword ParameterName Required">‑destroy</span>,
+or <span class="keyword ParameterName Required">-get</span>.
+When used with <span class="keyword ParameterName Required">-create</span>,
+the <span class="keyword ParameterName RequiredReplaceable">name</span> must
+be unique for each hash collection.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id219ec5fd-1304-4d27-88fe-dc4aeb1d7151">-lifetime {<span class="keyword ParameterName OptionalDefault">currentRule</span> | currentLoad | currentRun}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument set that specifies
+the scope of applicability and the duration of a hash collection.
+When used, it must be specified with <span class="keyword ParameterName Required">-create</span>.
+Additional keywords define which lifetime governs the collection
+as follows:</p>
+<ul class="ul"><li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id147f7a60-7209-469f-b8e9-da881f9b4394"><p class="p">currentRule
+— The collection applies within the rule check in which a given perc::collection
+command is specified. The collection exists until that check concludes,
+or the user deletes the collection. When this keyword is active,
+the command may not be specified in an initialization procedure.</p>
+</li>
+<li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__ide07ef5a2-4de7-4726-bb67-08e2c1ffb9b5"><p class="p">currentLoad
+— The collection applies within the procedures specified in the PERC Load
+statement that calls the procedure in which the perc::collection command
+is specified. The collection exists until the procedures of that
+PERC Load statement conclude, or the user deletes the collection.</p>
+</li>
+<li class="li" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id7d0328fe-f9e3-41b4-9af7-1253344b2dc9"><p class="p">currentRun
+— The collection applies in any active procedure of the run. The collection
+exists for the entire run, or the user deletes the collection. However, <span class="ph FontProperty emphasis">creation</span> of
+a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> can
+only occur in an initialization or rule check procedure.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id14bf0f6d-b927-4384-80f1-324715a69801"><span class="keyword ParameterName Required">-destroy</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Argument that specifies to delete a hash
+collection. When specified with a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>,
+this option takes no secondary arguments. Otherwise, the <span class="keyword ParameterName Required">-name</span> argument
+set is also required to define which hash collection to delete.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id1ee9ba29-ff67-4de6-897c-ccd395057fab"><span class="keyword ParameterName Required">-get</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Argument that specifies to define a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> for
+the collection defined with the <span class="keyword ParameterName Required">-name</span> argument
+set.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id1f9335ec-36c5-4f9a-9aeb-614117b2b24d"><span class="keyword ParameterName RequiredReplaceable">coll_handle</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Argument that specifies a variable name,
+or handle, for a hash collection. When dereferenced, this argument
+is preceded by a dollar sign ($). A <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> is
+defined by a perc::collection command that uses the <span class="keyword ParameterName Required">-create </span>option
+or the <span class="keyword ParameterName Required">-get</span> option. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id34a9e288-8188-4298-82b1-afc5a6f60479"><span class="keyword ParameterName Required">-add</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Argument that specifies to add a <span class="keyword ParameterName RequiredReplaceable">key</span> and <span class="keyword ParameterName RequiredReplaceable">value </span>to
+the hash collection referenced by the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>.
+If a command specified with <span class="keyword ParameterName Required">-add</span> references
+a <span class="keyword ParameterName RequiredReplaceable">key</span> that
+already exists in the collection, that key’s <span class="keyword ParameterName RequiredReplaceable">value</span> is
+overwritten with the <span class="keyword ParameterName RequiredReplaceable">value</span> of
+the current command. May not be specified with <span class="keyword ParameterName Required">-append</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__ida5182220-5539-4688-8b00-4257565d3146"><span class="keyword ParameterName Required">-append</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">Argument that specifies to append a <span class="keyword ParameterName RequiredReplaceable">value</span> to
+the list of values for a <span class="keyword ParameterName RequiredReplaceable">key</span> in
+the hash collection referenced by the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>.
+If the key does not exist in the collection, then <span class="keyword ParameterName Required">‑append</span> behaves
+exactly the same as <span class="keyword ParameterName Required">-add</span>.
+May not be specified with <span class="keyword ParameterName Required">-add</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id7db99fdf-a698-45b9-886e-b1694ed5446c"><span class="keyword ParameterName Required">-key</span> | <span class="keyword ParameterName Required">-key</span> <span class="keyword ParameterName RequiredReplaceable">key</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">When specified by itself, <span class="keyword ParameterName Required">-key</span> returns
+the current key referenced by a <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span>.
+The collection referenced by the iterator must be a hash collection
+in this usage.</p>
+<p class="p">When <span class="keyword ParameterName Required">-key</span> is
+specified with <span class="keyword ParameterName RequiredReplaceable">key</span>,
+the <span class="keyword ParameterName RequiredReplaceable">key</span> is
+a case-sensitive string, and the argument set must be specified
+with a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>.
+The <span class="keyword ParameterName RequiredReplaceable">key</span> consists
+of visible characters and the space character. When <span class="keyword ParameterName Required">-add</span> and <span class="keyword ParameterName Required">-append</span> are
+not also specified in the command, the <span class="keyword ParameterName RequiredReplaceable">value</span> associated
+with the <span class="keyword ParameterName RequiredReplaceable">key</span> is
+returned. If the <span class="keyword ParameterName RequiredReplaceable">key</span> is
+not present in the collection, the Tcl “empty object” is returned.
+When <span class="keyword ParameterName Required">-add</span> or <span class="keyword ParameterName Required">-append</span> (when
+the <span class="keyword ParameterName RequiredReplaceable">key</span> does
+not exist in the collection) is also specified, then the <span class="keyword ParameterName RequiredReplaceable">key</span> is
+added to the collection along with its associated <span class="keyword ParameterName RequiredReplaceable">value</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id01719142-6e9e-4b9c-a9b4-8ad8dd26e2de"><span class="keyword ParameterName Required">-value</span> | <span class="keyword ParameterName Required">-value</span> <span class="keyword ParameterName RequiredReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">When specified by itself, <span class="keyword ParameterName Required">-value</span> returns
+the current value referenced by a <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> as
+a Tcl list.</p>
+<p class="p">When <span class="keyword ParameterName Required">-value</span> is
+specified with <span class="keyword ParameterName RequiredReplaceable">value</span>,
+the <span class="keyword ParameterName RequiredReplaceable">value</span> is
+a Tcl list, possibly of one element. The list must uniformly consist
+of strings, instance iterators, or net iterators. The types may
+not be intermixed. The <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> and <span class="keyword ParameterName Required">-add</span> or <span class="keyword ParameterName Required">-append</span> options
+must also be specified in this usage. The <span class="keyword ParameterName RequiredReplaceable">value</span> is
+added to the hash collection either with a new associated <span class="keyword ParameterName RequiredReplaceable">key</span> (if
+the <span class="keyword ParameterName RequiredReplaceable">key</span> does
+not already exist) or appended to an existing list of values for
+an existing <span class="keyword ParameterName RequiredReplaceable">key</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__idc093ce89-e6fb-45e5-a4eb-c1978093fc06"><span class="keyword ParameterName Required">-begin</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument specified with a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> that
+outputs a <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span>.
+The <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span> references
+the hash collection associated with the <span class="keyword ParameterName RequiredReplaceable">coll_handle</span>.
+The iterator is indexed to the first element in the collection.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id965379dd-b5ed-4d08-97d1-ef05f63f4af8"><span class="keyword ParameterName Required">-hasKey</span> <span class="keyword ParameterName RequiredReplaceable">key</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument set specified with a <span class="keyword ParameterName RequiredReplaceable">coll_handle</span> that
+returns 1 if the referenced collection contains the key, and 0 otherwise.
+The <span class="keyword ParameterName RequiredReplaceable">key</span> is
+a case-sensitive string.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id1de79adf-4c96-4c6d-8a1b-417dee869bb4"><span class="keyword ParameterName RequiredReplaceable">coll_iterator</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument that is a sequential
+collection iterator created by the -collection option of <a class="xref fm:HeadingOnly" href="Command_Perccount_iddc2be6a2.html#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad__Command_Perccount_iddc2be6a2.xml#iddc2be6a2-af8b-4db2-a0a4-eebebc591bad" title="Returns the number of devices meeting the conditions of the command.">perc::count</a> or <a class="xref fm:HeadingOnly" href="Command_Percname_idfec10dd1.html#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d__Command_Percname_idfec10dd1.xml#idfec10dd1-a4a4-4a94-ad9f-1da475b6a82d" title="Returns the name of the element pointed to by the iterator argument.">perc::name</a>, or a
+hash collection iterator created using the <span class="keyword ParameterName Required">-begin</span> option.
+If perc::count creates the iterator, the iterator is the second
+element of a list returned by perc::count. If perc::name creates
+the iterator, the iterator is the only element returned by perc::name.</p>
+</dd>
+</dl>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id22be80c5-7039-49aa-b031-72d0c534135a"><span class="keyword ParameterName Required">-size</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An argument that specifies to return the
+number of collection elements referenced in a <span class="keyword ParameterName RequiredReplaceable">coll_iterator</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">The values returned depend
+on the options used, as follows:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id01127e08-7773-4f86-9c93-f48a26bfd673__idf895e969-3046-4de7-ae49-afb856cbedc0" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:1.718in" /><col style="width:3.157in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d97751e945"><p class="p">Option</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d97751e948"><p class="p">Returned Value</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-begin</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">hash collection iterator</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-create</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">hash collection handle</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-get</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">string</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-hasKey</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">integer</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-key</span> (without <span class="keyword ParameterName Required">-add</span>)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">string or “empty object”</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-size</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">integer</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e945 "><p class="p"><span class="keyword ParameterName Required">-value</span> (without <span class="keyword ParameterName Required">-add</span> or <span class="keyword ParameterName Required">-append</span>)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d97751e948 "><p class="p">For a sequential collection iterator, a
+string, an instance iterator, or a list consisting of an instance
+iterator and a pin list. </p>
+<p class="p">For a hash collection iterator, a Tcl list, possibly of one element.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id01127e08-7773-4f86-9c93-f48a26bfd673__id451e2ef9-f2f4-4418-8943-a64593140aab"><h2 class="title Subheading sectiontitle">Example
+1</h2><pre class="pre codeblock"><code>proc collect_devs {net} {
+    set result [perc::count -net $net -type "mp mn" -collection -pinAlso]
+    set count  [lindex $result 0] 
+    puts "&gt;&gt;&gt;NET: [perc::name $net] has $count MOS instances:" 
+    for {set colItr [lindex $result 1} {${colItr} ne ""} \
+        {perc::inc colItr} {
+      set elements [perc::collection $colItr -value]
+      set inst [lindex ${elements} 0]
+      set pins [lindex ${elements} 1]
+      puts "        [perc::name $inst]: $pins"
+    }
+# show the number of elements in the collection iterator
+    set size [perc::collection $colItr -size]
+    puts "        Iter size: $size"
+# do not return a reported result to the calling environment.
+    return 0
+  }
+  proc rule_1 {} {
+    perc::check_net -condition collect_devs
+  }</code></pre><p class="p">Tcl proc collect_devs2 takes a net iterator as input. The “result”
+variable contains a Tcl list consisting of an instance count as
+the first element and a sequential collection iterator as the second
+element. The count is stored in $count. The collection iterator
+is stored in $colItr.</p>
+<p class="p">The first element of $colItr is an instance iterator ($inst).
+The second element of $colItr is a Tcl list of pins ($pins) associated
+with the instance iterator. The check produces output like this
+in the transcript:</p>
+<pre class="pre codeblock"><code>&gt;&gt;&gt;NET: GND has 3 MOS instances:
+        X1/X0/M1: b s
+        X0/X0/M3: b
+        X0/X0/M2: b s
+        Iter size: 3
+&gt;&gt;&gt;NET: PWR has 3 MOS instances:
+        X1/X0/M0: b s
+        X0/X0/M1: b d
+        X0/X0/M0: b s
+        Iter size: 3</code></pre><p class="p">Notice the size of $colItr is the same as the instance count.</p>
+</div>
+<div class="section Subsection" id="id01127e08-7773-4f86-9c93-f48a26bfd673__idc0050b4a-cf3f-4459-b219-d0a956251813"><h2 class="title Subheading sectiontitle">Example
+2</h2><pre class="pre codeblock"><code>TVF FUNCTION perc.coll [/*
+package require CalibreLVS_PERC
+
+# initialization proc for rule_2 checks.
+# label Power and Ground nets but do not propagate labels.
+# initialize a collection hash with a scope of the PERC Load referencing 
+# this procedure.
+  proc init_2 {} {
+    perc::define_net_type "Power" "VDD?"
+    perc::define_net_type "Ground" "VSS?"
+    set mosHash [perc::collection -create -name "MOS Hash" \
+                   -lifetime currentLoad]
+  }
+
+# if the device has property L &lt; 1.5, put it into the mosHash with its 
+# path as the key and its L property value as the value
+  proc update_hash {dev} {
+    set length [perc::value [perc::get_properties $dev -name "L"]]
+    if { $length &lt; 1.5 } {
+      set mosHash [perc::collection -get -name "MOS Hash"]
+      set instPath [perc::name $dev -fromTop]
+      perc::collection $mosHash -add -key $instPath -value $length 
+    }
+    return 0
+  }
+
+# check MN and MP devices with gates connected directly to a supply net
+  proc rule_2_1 {} {
+    perc::check_device -type {mn mp} -pinNetType {{g} {Power || Ground}} \
+                       -condition update_hash
+  }</code></pre><pre class="pre codeblock"><code># print the instance and length data to the transcript
+# output the key,value pairs in lsort order of the keys
+  proc output_hash_data {} {
+    set mosHash [perc::collection -get -name "MOS Hash"]
+    set mosHashItr [perc::collection $mosHash -begin]
+    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    if {[perc::collection $mosHashItr -size] &gt; 0} {
+      puts "Instance,Length\n"
+      while {$mosHashItr ne ""} {
+        set key [perc::collection $mosHashItr -key]
+        set value [perc::collection $mosHashItr -value]
+        set printHash($key) $value
+        perc::inc mosHashItr
+      }
+# sort the keys and use that list to generate the output
+      set sortedKeys [lsort [array names printHash]]
+      foreach sKey "$sortedKeys" {
+        puts "${sKey},$printHash($sKey)"
+      } 
+    } else {
+      puts "&gt;&gt;&gt;&gt;&gt; NO mosHash OUTPUT"
+    }
+    puts "\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+  }</code></pre><pre class="pre codeblock"><code># output the sorted mosHash info in the transcript
+  proc rule_2_2 {} {
+    perc::check_data -condition output_hash_data
+  }
+*/]
+ 
+PERC LOAD perc.coll INIT init_2 SELECT rule_2_1 rule_2_2 
+SELECTTYPE INFO rule_2_1 rule_2_2
+
+PERC PROPERTY MN L
+PERC PROPERTY MP L</code></pre><p class="p">In this example, interactions with a hash collection are divided
+up into three main phases: creation, population, and reading stored
+data. This is a recommended practice. Whereas the output produced
+by this example does not require use of a collection, the main point
+is to demonstrate a methodology that is easily transferable to checks
+that would require a hash collection or file I/O to disk (which
+you generally want to avoid by using a collection instead). The
+checks are set up as informational checks, so they do not affect
+the overall report status of the run.</p>
+<p class="p">Tcl proc init_2 creates a hash collection that is accessible
+through the mosHash handle. The collection’s scope (lifetime) includes
+all the procedures called by the PERC Load statement that init_2
+appears in, as well as any procedures that are subsequently called
+due to that PERC Load statement.</p>
+<p class="p">Tcl proc rule_2_1 checks all MN and MP device instances whose
+gate pin is tied directly to a supply net. The associated update_hash
+condition proc determines if the instance’s L property is less than
+1.5 um. If it is, the instance path and property value are stored
+in the hash collection as a (key, value) pair. The mosHash handle
+is regenerated in the update_hash proc to avoid using global variables,
+which can be problematic in multithreaded runs. The update_hash
+proc always returns 0 because this is an informational check that
+is not designed to produce error results.</p>
+<p class="p">Tcl proc rule_2_2 executes the output_hash_data proc. Again,
+the mosHash handle is regenerated in the proc to avoid using global
+variables. The output_hash_data proc creates a collection iterator
+called mosHashItr. If the iterator contains references, each (key,value)
+pair that is referenced in the mosHash collection is placed in an
+array called printHash. The keys of the printHash array are sorted
+lexicographically, and then the key,value pairs referenced by the iterator
+are printed in the transcript in “lsort” order. If the iterator
+does not contain references, a suitable message is printed in the
+transcript.</p>
+</div>
+<div class="section Subsection" id="id01127e08-7773-4f86-9c93-f48a26bfd673__idef1071c2-a035-46d4-8d18-910d97f93427"><h2 class="title Subheading sectiontitle">Example
+3</h2><p class="p">In the following code, the “value” variable references a list,
+not an iterator (regardless of whether the value is added to the
+collection as a scalar). Hence, the perc::name command will fail.
+Obtaining the iterator from the ${value} list, such as through a
+Tcl “foreach” or “lindex” command, resolves this issue.</p>
+<pre class="pre codeblock"><code>set colItr [perc::collection ${colHdl} -begin]
+while { ${colItr} ne "" } {
+  set key   [perc::collection ${colItr} -key]
+  set value [perc::collection ${colItr} -value]
+# this fails. value must be handled as a list, not an iterator.
+  puts -nonewline " [perc::name ${value}]"
+  ...
+  perc::inc colItr
+}     </code></pre><p class="p">Also see perc::check_data “<a class="xref fm:HeadingAndPage" href="Command_PerccheckData_idc670986d.html#idc670986d-b894-4123-8cd4-29430c23fb66__idf267d02b-94ca-4eb0-9d9d-297b0799fcb0">Example 2</a>” and PERC
+Load “<a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'PERC_LOAD99Ex5', 'svrf_ur'); return false;">Example 5</a>” in the <cite class="cite">SVRF Manual</cite>.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_RuleCheckCommands_id9b3d8e0b.html" title="Rule check commands appear in rule check procs and are used to check the design. Some rule check commands may be used in init procs. These are annotated in the notes to the tables in this section.">Rule Check Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "perc::collection"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_Perccollection_id01127e08.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="TaskTopic" />
+<meta name="DC.Title" content="Executing Calibre Through IBM Spectrum LSF in MT Mode Using SMPs on the Same Host" />
+<meta name="abstract" content="This procedure illustrates how to execute Calibre through IBM Spectrum LSF in Multithreaded (MT) mode using Shared Memory Multi-Processors (SMP) on the same host. In this situation, you instruct IBM Spectrum LSF to execute Calibre nmDRC-H on eight CPUs on the same host." />
+<meta name="description" content="This procedure illustrates how to execute Calibre through IBM Spectrum LSF in Multithreaded (MT) mode using Shared Memory Multi-Processors (SMP) on the same host. In this situation, you instruct IBM Spectrum LSF to execute Calibre nmDRC-H on eight CPUs on the same host." />
+<meta name="prodname" content="Calibre Administrator's Guide" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_admin_gd" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Administrator’s Guide" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id27dadd63-550a-4198-bf6b-c459303a2236" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Executing Calibre Through IBM Spectrum LSF in MT Mode Using SMPs on the Same Host</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Executing Calibre Through IBM Spectrum LSF in MT Mode Using SMPs on the Same Host" />
+<meta name="attributes" content="doc.type.documentation.sys,product.version.v2021.2" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id27dadd63-550a-4198-bf6b-c459303a2236">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Executing Calibre
+Through IBM Spectrum LSF in MT Mode Using SMPs on the Same Host</h1>
+<div class="body taskbody TaskBody"><div class="abstract TaskAbstract"><span class="shortdesc">This
+procedure illustrates how to execute Calibre through IBM Spectrum
+LSF in Multithreaded (MT) mode using Shared Memory Multi-Processors
+(SMP) on the same host. In this situation, you instruct IBM Spectrum
+LSF to execute Calibre nmDRC-H on eight CPUs on the same host.</span>
+</div>
+<div class="section prereq Prerequisites p"><div class="tasklabel"><h2 class="sectiontitle tasklabel">Prerequisites</h2></div><ul class="ul"><li class="li" id="id27dadd63-550a-4198-bf6b-c459303a2236__idb4fad99c-42df-403e-b442-b407e832bb76"><p class="p">IBM
+Spectrum LSF must be installed and configured for your network.</p>
+</li>
+<li class="li" id="id27dadd63-550a-4198-bf6b-c459303a2236__idc13f491f-a833-4210-adf5-97b0efd4b5a4"><p class="p">The
+CALIBRE_HOME environment variable must be set to the location of a
+Calibre software tree that is accessible by the remote hosts.</p>
+</li>
+<li class="li" id="id27dadd63-550a-4198-bf6b-c459303a2236__id8ad841e0-3d0f-4068-8c0d-afc5df8441cd"><p class="p">LM_LICENSE_FILE
+or MGLS_LICENSE_FILE must be set to the location of a license file.</p>
+</li>
+</ul>
+</div>
+<div class="tasklabel"><h2 class="sectiontitle tasklabel">Procedure</h2></div><ol class="ol steps"><li class="li step stepexpand" id="id27dadd63-550a-4198-bf6b-c459303a2236__id654b1743-387c-40d8-9711-c44a283ec227"><span class="ph cmd">Create a shell script named <span class="ph filepath italic">run_calibre</span>.
+For example:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock leveled"><code>#!/bin/csh
+setenv CALIBRE_HOME /calibre_tree/linux_tree
+# Execute Calibre
+$CALIBRE_HOME/bin/calibre $*</code></pre></div></li>
+<li class="li step stepexpand" id="id27dadd63-550a-4198-bf6b-c459303a2236__ida1ce2eb2-2406-43da-bca2-7f43824e949a"><span class="ph cmd">Execute the script using the
+bsub command:</span><div class="itemgroup info StepInfo"><pre class="pre codeblock"><code>bsub -o drc.log -n 8 -R "span[hosts=1] 
+	select[type==LINUX &amp;&amp; maxmem&gt;2000]" 
+	run_calibre -drc -hier -turbo -hyper rule.file</code></pre><p class="p"><a class="xref fm:Table" href="#id27dadd63-550a-4198-bf6b-c459303a2236__idd8ecb338-f7c2-4374-8519-4448266df7a4">Table 1</a> provides a description of the bsub commands used
+in this example.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id27dadd63-550a-4198-bf6b-c459303a2236__idd8ecb338-f7c2-4374-8519-4448266df7a4" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>bsub Command Line Arguments</span></caption><colgroup><col style="width:1.887in" /><col style="width:3.637in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d50340e179"><p class="p">bsub Arguments</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d50340e182"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">-o drc.log</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">Redirects the Calibre
+standard output to drc.log.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">-n 8</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">Instructs LSF to select
+any 8 CPUs for running Calibre.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">hosts=1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">Specifies that the 8
+CPUs must be on the same host.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">type==LINUX</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">The selected host must
+be a Linux platform</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">maxmem&gt;2000</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">The host must have at
+least two Gbit of memory</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e179 "><p class="p">run_calibre</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d50340e182 "><p class="p">A shell script that sets
+the Calibre tree and executes Calibre.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></li>
+</ol>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ExecutingCalibreUsingIBMSpectrumLSF_id05fc183e.html" title="IBM Spectrum LSF is software for managing workload processing for compute and data-intensive applications. With IBM Spectrum LSF, you can schedule and track the completion of batch workloads across a distributed environment.">Executing Calibre Using IBM Spectrum LSF</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_admin_gd"
+                DocTitle = "Calibre® Administrator’s Guide"
+                PageTitle = "Executing Calibre Through IBM Spectrum LSF in MT Mode Using SMPs on the Same Host"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/TaskTop_ExecutingCalibreThroughIBMSpectrumLSFInMTModeUsingSMPsOnTheSameHost_id27dadd63.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Administrator’s Guide, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

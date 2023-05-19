@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Scattering Bar Cleanup" />
+<meta name="abstract" content="After Calibre OPCsbar generates scattering bars, it cleans up the design based on instructions provided with various keywords." />
+<meta name="description" content="After Calibre OPCsbar generates scattering bars, it cleans up the design based on instructions provided with various keywords." />
+<meta name="DC.subject" content="Scattering bars, creating" />
+<meta name="keywords" content="Scattering bars, creating" />
+<meta name="prodname" content="Calibre® Opcsbar™ User's And Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="Mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-08-28" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="3" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_sbar_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 01, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® OPCsbar™ User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="NONE" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Scattering Bar Cleanup</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Scattering Bar Cleanup" />
+<meta name="attributes" content="doc.type.documentation.user,doc.type.documentation.ref,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Scattering Bar Cleanup</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">After Calibre
+OPCsbar generates scattering bars, it cleans up the design based
+on instructions provided with various keywords. </span>
+</div>
+<p class="p">Cleanup is an iterative process.
+Cleaning up a group of scattering bars often results in another
+group requiring cleanup. Calibre OPCsbar performs several cleanup
+iterations, where scattering bars are modified to meet all constraints,
+ensuring that the final output is DRC and MRC compliant.</p>
+<p class="p">For example, <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id43367356-b1b2-40d9-a1ef-00c344fdc105">Figure 1</a> demonstrates a cleanup cycle to resolve the
+spacing violation by shortening the lower scattering bar. If the
+remainder is less than MINSBLENGTH, Calibre OPCsbar removes the
+scattering bar completely.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id43367356-b1b2-40d9-a1ef-00c344fdc105"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Cleaning up DRC and MRC Violations</span><br /><div class="imagecenter"><img class="image imagecenter" height="234" src="../graphics/SB_advanced221.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc1642d8e-922e-4748-9f00-701576746f60">Table 1</a> lists all keywords you use for scattering
+bar cleanup work.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc1642d8e-922e-4748-9f00-701576746f60" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Cleanup Keywords</span></caption><colgroup><col style="width:2.045in" /><col style="width:2.086in" /><col style="width:2.045in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph uicontrol">Cleanup Task</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph uicontrol">Keyword</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><span class="ph uicontrol">Applies to:</span></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" rowspan="2" style="vertical-align:top;"><p class="p">Treatment
+of nearby scattering bars</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendmerge_id2d97bc8f.html#id2d97bc8f-511a-4ce8-bb85-ea9876a74b68__Command_Lineendmerge_id2d97bc8f.xml#id2d97bc8f-511a-4ce8-bb85-ea9876a74b68" title="Merges adjacent scattering bars by end.">LINEENDMERGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">adjacent, parallel, and offset
+in the line-end<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>direction</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Centermerge_id12369d67.html#id12369d67-d57b-4b30-956f-5da61e2ed441__Command_Centermerge_id12369d67.xml#id12369d67-d57b-4b30-956f-5da61e2ed441" title="Merges adjacent scattering bars by center.">CENTERMERGE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">adjacent, parallel, and offset
+in the space direction</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" rowspan="5" style="vertical-align:top;"><p class="p">Treatment
+of intersecting scattering bars</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Colinearize_id6bbe43fd.html#id6bbe43fd-01d4-42a2-bb44-f549d8577db6__Command_Colinearize_id6bbe43fd.xml#id6bbe43fd-01d4-42a2-bb44-f549d8577db6" title="Merges adjacent scattering bars.">COLINEARIZE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">parallel overlapping sbars</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Intersection_id85ef6ae3.html#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8__Command_Intersection_id85ef6ae3.xml#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8" title="Define intersection types between scattering bars.">INTERSECTION</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">orthogonal and angled sbars
+that intersect</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Opent_idcfbaaa89.html#idcfbaaa89-eb07-4f30-9a95-39d653f14b31__Command_Opent_idcfbaaa89.xml#idcfbaaa89-eb07-4f30-9a95-39d653f14b31" title="Cleans up T-shaped scattering bars.">OPENT</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">T intersections when no
+intersections are allowed</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_JogFill_idfad78e7d.html#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5__Command_JogFill_idfad78e7d.xml#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5" title="Cleans overlapping scattering bars.">JOG FILL</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">parallel overlapping sbars</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minjogwidth_idc37d7774.html#idc37d7774-9117-4bc5-a7ab-d857ef683382__Command_Minjogwidth_idc37d7774.xml#idc37d7774-9117-4bc5-a7ab-d857ef683382" title="Defines the minimum jog width.">MINJOGWIDTH</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">parallel overlapping sbars</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Extension</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Extension_idab62bf5f.html#idab62bf5f-7053-40e5-ae31-3304232bdc6f__Command_Extension_idab62bf5f.xml#idab62bf5f-7053-40e5-ae31-3304232bdc6f" title="Adjusts ends of scattering bars.">EXTENSION</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">all scattering bars generated</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" rowspan="8" style="vertical-align:top;"><p class="p">Width,
+Length, Spacing, and Offset constraints</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsboffset_id38fed7ad.html#id38fed7ad-8238-47aa-a593-09c166dbf506__Command_Minsboffset_id38fed7ad.xml#id38fed7ad-8238-47aa-a593-09c166dbf506" title="Defines a minimum offset.">MINSBOFFSET</a> </p>
+</td>
+<td class="entry cellrowborder default-entry" rowspan="8" style="vertical-align:top;"><p class="p">all scattering
+bars; checked at every step of the cleanup process</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsbspace_id512e88f9.html#id512e88f9-023d-4c6e-9205-a66d885c0b53__Command_Minsbspace_id512e88f9.xml#id512e88f9-023d-4c6e-9205-a66d885c0b53" title="Defines minimum scattering bar spacing.">MINSBSPACE</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendspace_id63b39dd7.html#id63b39dd7-074d-4848-a90e-e54cc1c2b022__Command_Lineendspace_id63b39dd7.xml#id63b39dd7-074d-4848-a90e-e54cc1c2b022" title="Defines minimum line end spacing.">LINEENDSPACE</a> </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendtolongspace_id30c01beb.html#id30c01beb-4ce6-4c68-a267-40e61ef86fec__Command_Lineendtolongspace_id30c01beb.xml#id30c01beb-4ce6-4c68-a267-40e61ef86fec" title="Defines minimum line end to side spacing.">LINEENDTOLONGSPACE</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendoffset_id57805693.html#id57805693-bf0e-493b-8d16-599bd8abccaf__Command_Lineendoffset_id57805693.xml#id57805693-bf0e-493b-8d16-599bd8abccaf" title="Defines minimum line end offset.">LINEENDOFFSET</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsbwidth_id8f0e5aa1.html#id8f0e5aa1-33c7-480c-8508-e3047b93b633__Command_Minsbwidth_id8f0e5aa1.xml#id8f0e5aa1-33c7-480c-8508-e3047b93b633" title="Defines minimum scattering bar width.">MINSBWIDTH</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Maxsbwidth_id26ab8f9f.html#id26ab8f9f-4325-422a-9ef7-20b8e3da4948__Command_Maxsbwidth_id26ab8f9f.xml#id26ab8f9f-4325-422a-9ef7-20b8e3da4948" title="Defines maximum width of scattering bars.">MAXSBWIDTH</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsblength_id85ed86b5.html#id85ed86b5-afe7-4286-a2b3-6d7bd9ac0fae__Command_Minsblength_id85ed86b5.xml#id85ed86b5-afe7-4286-a2b3-6d7bd9ac0fae" title="Defines minimum length of scattering bars.">MINSBLENGTH</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section Subsections"><div class="section Subsection" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id63b6fe07-2ad5-49e7-a523-e124ea763c3a"><h2 class="title Subheading sectiontitle">Scattering Bar Cleanup Order</h2><p class="p">Scattering bar cleanup requires several steps.
+Calibre OPCsbar performs these cleanup steps in this order:</p>
+<ol class="ol"><li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idd0002075-56cd-4f2b-8fd7-035ccfcbbec9"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Centermerge_id12369d67.html#id12369d67-d57b-4b30-956f-5da61e2ed441__Command_Centermerge_id12369d67.xml#id12369d67-d57b-4b30-956f-5da61e2ed441" title="Merges adjacent scattering bars by center.">CENTERMERGE</a></p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id68bcbc72-97e5-4fb9-be7b-76715763d9a5"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Colinearize_id6bbe43fd.html#id6bbe43fd-01d4-42a2-bb44-f549d8577db6__Command_Colinearize_id6bbe43fd.xml#id6bbe43fd-01d4-42a2-bb44-f549d8577db6" title="Merges adjacent scattering bars.">COLINEARIZE</a></p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id6bb20235-5d8e-4457-958f-fc00dc7da1ab"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendmerge_id2d97bc8f.html#id2d97bc8f-511a-4ce8-bb85-ea9876a74b68__Command_Lineendmerge_id2d97bc8f.xml#id2d97bc8f-511a-4ce8-bb85-ea9876a74b68" title="Merges adjacent scattering bars by end.">LINEENDMERGE</a></p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id9c40e750-9722-4944-84cd-f5a7e1a40b64"><p class="p">Cleanup of Illegal Jogs (for scattering bars
+that do not touch)</p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id45d59ec6-c58e-4736-b98c-f26c7135befe"><p class="p">Cleanup of Illegal Jogs (for scattering bars
+that touch)</p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id9c268d09-be54-454d-a939-c1891628ea6d"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Extension_idab62bf5f.html#idab62bf5f-7053-40e5-ae31-3304232bdc6f__Command_Extension_idab62bf5f.xml#idab62bf5f-7053-40e5-ae31-3304232bdc6f" title="Adjusts ends of scattering bars.">EXTENSION</a></p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id20db8796-efb2-4a4a-894d-7b4d4067d158"><p class="p"><a class="xref fm:HeadingOnly" href="Command_Intersection_id85ef6ae3.html#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8__Command_Intersection_id85ef6ae3.xml#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8" title="Define intersection types between scattering bars.">INTERSECTION</a></p>
+</li>
+</ol>
+<h2 class="title Subheading sectiontitle">Cleanup of Width, Offset,
+and Spacing Violations</h2><p class="p">At each of the cleanup phases, Calibre OPCsbar
+checks to see whether or not resulting scattering bars meet the
+space, width, and offset constraints. When it encounters violations,
+the operation resolves the problems by modifying or removing the
+offending scattering bars.</p>
+<p class="p">Calibre OPCsbar checks for
+violations of the space and offset constraints by calculating measurement
+regions and checking for edges within these regions. To check the space
+and offset constraints for standard scattering bars, it creates
+measurement regions extending from the outside edges of each figure.
+To check the space and offset constraints for negative scattering
+bars, it creates measurement regions extending from the inside edges
+of each figure. </p>
+<p class="p">Calibre
+OPCsbar creates the measurement region for line-ends using the Euclidean
+metric, and for edges using the Opposite metric. For a detailed
+discussion of spacing checks and measurement regions, refer to the <a class="xref Link" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'External', 'svrf_ur'); return false;">EXTERNAL</a> operation
+in the <a class="xref LinkItalic" href="../../svrf_ur/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'svrf_ur'); return false;">Standard Verification Rule Format (SVRF) Manual</a>.</p>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id3e0cc1a1-a3a5-4f7f-b2f5-30de4881811a">Figure 2</a> shows Euclidean measurements for OFFSET
+and SPACE keywords.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id3e0cc1a1-a3a5-4f7f-b2f5-30de4881811a"><span class="figcap"><span class="fig--title-label">Figure 2. </span>Measurement Regions for OFFSET
+and SPACE Rules</span><br /><div class="imagecenter"><img class="image imagecenter" height="538" src="../graphics/SB_advanced222.png" width="465" /></div><br /></div>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ide5e13e44-4a18-4783-9a03-e2655116af64">Figure 3</a> depicts spacings and lengths common
+to scattering bars and target shapes.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ide5e13e44-4a18-4783-9a03-e2655116af64"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Parameters Used to Define Edge
+Spacing and Length</span><br /><div class="imagecenter"><img class="image imagecenter" height="300" src="../graphics/SB_advanced223.png" width="470" /></div><br /></div>
+<p class="p"><a class="xref fm:Table" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf96df13f-8be9-43e4-9444-dd66771a248f">Table 2</a> provides a matrix of constraints between
+various keywords and scattering bar edge types.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf96df13f-8be9-43e4-9444-dd66771a248f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Defining Spacing Constraints Between
+Different Types of Edges</span></caption><colgroup><col style="width:0.807in" /><col style="width:1.692in" /><col style="width:2.147in" /><col style="width:2.178in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5505e533"><p class="p">SB Type</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5505e536"><p class="p">Any input layer edge</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5505e539"><p class="p">SB edge</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d5505e542"><p class="p">SB line-end</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e533 "><p class="p"><span class="ph uicontrol">Edge</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e536 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsboffset_id38fed7ad.html#id38fed7ad-8238-47aa-a593-09c166dbf506__Command_Minsboffset_id38fed7ad.xml#id38fed7ad-8238-47aa-a593-09c166dbf506" title="Defines a minimum offset.">MINSBOFFSET</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e539 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Minsbspace_id512e88f9.html#id512e88f9-023d-4c6e-9205-a66d885c0b53__Command_Minsbspace_id512e88f9.xml#id512e88f9-023d-4c6e-9205-a66d885c0b53" title="Defines minimum scattering bar spacing.">MINSBSPACE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e542 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendtolongspace_id30c01beb.html#id30c01beb-4ce6-4c68-a267-40e61ef86fec__Command_Lineendtolongspace_id30c01beb.xml#id30c01beb-4ce6-4c68-a267-40e61ef86fec" title="Defines minimum line end to side spacing.">LINEENDTOLONGSPACE</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e533 "><p class="p"><span class="ph uicontrol">Line-end</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e536 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendoffset_id57805693.html#id57805693-bf0e-493b-8d16-599bd8abccaf__Command_Lineendoffset_id57805693.xml#id57805693-bf0e-493b-8d16-599bd8abccaf" title="Defines minimum line end offset.">LINEENDOFFSET</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e539 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendtolongspace_id30c01beb.html#id30c01beb-4ce6-4c68-a267-40e61ef86fec__Command_Lineendtolongspace_id30c01beb.xml#id30c01beb-4ce6-4c68-a267-40e61ef86fec" title="Defines minimum line end to side spacing.">LINEENDTOLONGSPACE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e542 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendspace_id63b39dd7.html#id63b39dd7-074d-4848-a90e-e54cc1c2b022__Command_Lineendspace_id63b39dd7.xml#id63b39dd7-074d-4848-a90e-e54cc1c2b022" title="Defines minimum line end spacing.">LINEENDSPACE</a></p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e533 "><p class="p"><span class="ph uicontrol">Corner</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e536 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendoffset_id57805693.html#id57805693-bf0e-493b-8d16-599bd8abccaf__Command_Lineendoffset_id57805693.xml#id57805693-bf0e-493b-8d16-599bd8abccaf" title="Defines minimum line end offset.">LINEENDOFFSET</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e539 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendspace_id63b39dd7.html#id63b39dd7-074d-4848-a90e-e54cc1c2b022__Command_Lineendspace_id63b39dd7.xml#id63b39dd7-074d-4848-a90e-e54cc1c2b022" title="Defines minimum line end spacing.">LINEENDSPACE</a></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e542 "><p class="p"><a class="xref fm:HeadingOnly" href="Command_Lineendspace_id63b39dd7.html#id63b39dd7-074d-4848-a90e-e54cc1c2b022__Command_Lineendspace_id63b39dd7.xml#id63b39dd7-074d-4848-a90e-e54cc1c2b022" title="Defines minimum line end spacing.">LINEENDSPACE</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">A scattering bar line-end is defined as &gt;= <a class="xref fm:HeadingOnly" href="Command_Minsbwidth_id8f0e5aa1.html#id8f0e5aa1-33c7-480c-8508-e3047b93b633__Command_Minsbwidth_id8f0e5aa1.xml#id8f0e5aa1-33c7-480c-8508-e3047b93b633" title="Defines minimum scattering bar width.">MINSBWIDTH</a> and &lt;=<a class="xref fm:HeadingOnly" href="Command_Maxsbwidth_id26ab8f9f.html#id26ab8f9f-4325-422a-9ef7-20b8e3da4948__Command_Maxsbwidth_id26ab8f9f.xml#id26ab8f9f-4325-422a-9ef7-20b8e3da4948" title="Defines maximum width of scattering bars.">MAXSBWIDTH</a>.</p>
+<h2 class="title Subheading sectiontitle">Cleanup Techniques to
+Keep Scattering Bars Rectangular</h2><p class="p">The scattering bars resulting from the generation
+step or from resolving spacing or offset violations are often characterized
+by interesting non-rectangular shapes. Rectangularization is the
+process of trimming raw or intermediate scattering bars to end up
+with the rectangular shapes typical of scattering bars. </p>
+<p class="p">Whenever
+the Calibre OPCsbar operation creates a non-rectangular scattering
+bar, it immediately modifies it to be rectangular. </p>
+<ul class="ul"><li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc7e651ed-324c-4bbd-ac8b-ea41c50572ef"><p class="p">Non-rectangular raw scattering bars are
+rectangularized as part of the creation step.</p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ida91109e4-e504-4dcf-9654-6ed485186c17"><p class="p">Non-rectangular scattering bars created
+as a result of correcting spacing or offset violations are rectangularized
+before moving on to the next cleanup step.</p>
+</li>
+</ul>
+<p class="p">Uncorrected scattering bars can contain non-rectilinear
+angles in three configurations:</p>
+<dl class="dl"><dt class="dt dlterm">Notches</dt>
+<dd class="dd"><p class="p">A rectangular shape with a small notched-shaped section missing.</p>
+</dd>
+<dt class="dt dlterm">Angled Edges</dt>
+<dd class="dd"><p class="p">A parallelogram or trapezoid having one or more sides at
+other than 90- or 270-degrees to the remaining sides. </p>
+</dd>
+<dt class="dt dlterm">Angled Intersections</dt>
+<dd class="dd"><p class="p">Two rectangular scattering bars intersecting at a non-90-
+or 270-degree angle.</p>
+</dd>
+</dl>
+<p class="p">The following figure provides an illustration
+of these three configurations.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc6c3b8d4-59d7-4594-a2c7-70287d10d2f9"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Raw Scattering bars with Non-Orthogonal Angles</span><br /><div class="imagecenter"><img class="image imagecenter" height="110" src="../graphics/SB_advanced224.png" width="468" /></div><br /></div>
+<p class="p">Raw scattering bar errors are corrected as
+follows:</p>
+<ul class="ul"><li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id4c8705dc-14fe-46b2-b06c-4b72c4e95b61"><p class="p">Calibre OPCsbar cleans up notches by
+trimming away the notched portion of the raw scattering bar, leaving
+two smaller scattering bars.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id2bee5ecf-c340-4c73-ab2c-ada47ff62a41"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/SB_advanced225.png" /></div><br /></div>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id6243e35e-70ec-422b-a2cb-36bd08949b37"><p class="p">Calibre OPCsbar cleans up angled ends
+by trimming the angled end, leaving a rectangular end.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id1ced77dc-a085-4c99-ace9-5b9c263e0cab"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/SB_advanced226.png" /></div><br /></div>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id841fc24f-b82b-4145-92ba-b3ab811d2d9b"><p class="p">Calibre OPCsbar cleans up angled intersections
+only when portions of the intersecting scattering bars extend beyond
+the intersection, forming small wing-shaped extensions. Cleanup
+involves trimming away those ends. The remaining scattering bar still
+contains non-90 and non-270 degree angles at the intersection point
+but all corners angles are 90 degrees.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf8de1406-9e09-4256-b8fa-2e478c571cb5"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/SB_advanced227.png" /></div><br /></div>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id27a2054d-d3f2-43ae-aa6b-85edbfe8d343"><p class="p">The second angled intersection in <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc6c3b8d4-59d7-4594-a2c7-70287d10d2f9">Figure 4</a> does not require correction as it does
+not include any wing-shaped extensions.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id4ace1334-3c0d-4a8a-a9bf-6d27cf31ac93"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:120" src="../graphics/SB_advanced228.png" /></div><br /></div>
+</li>
+</ul>
+<h2 class="title Subheading sectiontitle">Cleanup of Illegal Jogs</h2><p class="p">When two scattering bars touch or overlap,
+they may form illegal jogs that are too small for mask fabrication
+or inspection. To avoid this, you define the minimum length allowed
+for the shared region with <a class="xref fm:HeadingOnly" href="Command_Minsbwidth_id8f0e5aa1.html#id8f0e5aa1-33c7-480c-8508-e3047b93b633__Command_Minsbwidth_id8f0e5aa1.xml#id8f0e5aa1-33c7-480c-8508-e3047b93b633" title="Defines minimum scattering bar width.">MINSBWIDTH</a>. <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idfa260077-adc7-401e-968b-e145785ab912">Figure 5</a> shows how this parameter relates to
+jogs.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idfa260077-adc7-401e-968b-e145785ab912"><span class="figcap"><span class="fig--title-label">Figure 5. </span>MINSBWIDTH and Jogs</span><br /><div class="imagecenter"><img class="image imagecenter" height="140" src="../graphics/SB_advanced229.png" width="468" /></div><br /></div>
+<p class="p">Calibre resolution methodology for touching
+or overlapping problems depends on whether <a class="xref fm:HeadingOnly" href="Command_JogFill_idfad78e7d.html#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5__Command_JogFill_idfad78e7d.xml#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5" title="Cleans overlapping scattering bars.">JOG FILL</a> is specified, and the priorities
+of the scattering bars. This is based on shape position relative
+to original edges, since JOG FILL does not consider <a class="xref fm:HeadingOnly" href="Command_PrioritizeByLayer_id36e2e9f4.html#id36e2e9f4-e709-4b29-ba6b-809b66ff3679__Command_PrioritizeByLayer_id36e2e9f4.xml#id36e2e9f4-e709-4b29-ba6b-809b66ff3679" title="Defines priorities for generating scattering bars.">PRIORITIZE BY LAYER</a>. See “<a class="xref fm:HeadingAndPage" href="Concept_ScatteringBarCleanupPriority_ided452415.html#ided452415-2c90-4b63-9220-e6aa4b96ddfb__id44f887c9-13ba-451d-b091-6531cef115e6">Prioritization by Order</a>” for more information.</p>
+<p class="p">If the scattering bars are the same priority,
+Calibre OPCsbar checks JOG FILL. </p>
+<ul class="ul"><li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id1f50fea1-0fe6-490a-8721-10f33c5df59d"><p class="p">If JOG FILL is specified, Calibre OPCsbar
+extends both scattering bars equally to generate a jog equal to
+the value you specify for the fill width. (If the fill width is
+not specified, it defaults to the value specified for <a class="xref fm:HeadingOnly" href="Command_Minsbwidth_id8f0e5aa1.html#id8f0e5aa1-33c7-480c-8508-e3047b93b633__Command_Minsbwidth_id8f0e5aa1.xml#id8f0e5aa1-33c7-480c-8508-e3047b93b633" title="Defines minimum scattering bar width.">MINSBWIDTH</a>.)</p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf6408e59-7bea-40ad-ac83-2bdf54d01e6a"><p class="p">If JOG FILL is not specified, or if the
+scattering bars are different priorities, Calibre OPCsbar trims
+away the scattering bars to leave an MRC-compliant separation.</p>
+</li>
+</ul>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id6b0da17d-4be0-4c0e-badf-2e4faa400640">Figure 6</a> demonstrates jog interaction styles.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id6b0da17d-4be0-4c0e-badf-2e4faa400640"><span class="figcap"><span class="fig--title-label">Figure 6. </span>Jog Interaction Styles</span><br /><div class="imagecenter"><img class="image imagecenter" height="146" src="../graphics/SB_advanced230.png" width="468" /></div><br /></div>
+<p class="p">Used
+alone, JOG FILL can generate scattering bars with jogs that are legal
+by filling jog areas formed by touching or overlapping scattering
+bars. If you specify a value for line-end distance, JOG FILL fills
+the gap between adjacent scattering bars that are not touching,
+if they are within the specified distance from each other. This
+distance must be less than or equal to <a class="xref fm:HeadingOnly" href="Command_Minsbspace_id512e88f9.html#id512e88f9-023d-4c6e-9205-a66d885c0b53__Command_Minsbspace_id512e88f9.xml#id512e88f9-023d-4c6e-9205-a66d885c0b53" title="Defines minimum scattering bar spacing.">MINSBSPACE</a>.</p>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ida155c03f-02fb-45bb-950f-618b85b60840">Figure 7</a> demonstrates this behavior.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ida155c03f-02fb-45bb-950f-618b85b60840"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Jog Fill Between Non-Touching
+Scattering Bars</span><br /><div class="imagecenter"><img class="image imagecenter" height="148" src="../graphics/SB_advanced231.png" width="442" /></div><br /></div>
+<p class="p">The application fills in
+both directions. When scattering bars are configured such that there
+are multiple ways of adding jog fill, the application chooses the configuration
+arbitrarily. </p>
+<p class="p">In <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__iddff7d525-b6f3-4e06-9020-b147f3814758">Figure 8</a>, OPCSBAR can generate either the upper
+jog fill or the lower jog fill, but not both.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__iddff7d525-b6f3-4e06-9020-b147f3814758"><span class="figcap"><span class="fig--title-label">Figure 8. </span>Jog Fill Between Non-Touching
+Scattering Bars (cont.)</span><br /><div class="imagecenter"><img class="image imagecenter" height="153" src="../graphics/SB_advanced232.png" width="434" /></div><br /></div>
+<p class="p">When you specify ANGLED, you must also specify
+JOG FILL, or cleanup removes angled scattering bars. Even with JOG
+FILL specified, only angles that are multiples of 45 degrees are
+considered valid. <a class="xref fm:Table" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf4a5a793-89e2-4cff-9e11-a589f13c61fe">Table 3</a> lists the angles that remain after cleanup
+for the various combinations of <a class="xref fm:HeadingOnly" href="Command_Angled_id24d20c54.html#id24d20c54-83d0-4f82-b948-04a6b346e8fe__Command_Angled_id24d20c54.xml#id24d20c54-83d0-4f82-b948-04a6b346e8fe" title="Generates 45-degree scattering bars.">ANGLED</a>, <a class="xref fm:HeadingOnly" href="Command_JogFill_idfad78e7d.html#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5__Command_JogFill_idfad78e7d.xml#idfad78e7d-ff2c-4f95-a5bc-eb1ce7575dd5" title="Cleans overlapping scattering bars.">JOG FILL</a>, and <a class="xref fm:HeadingOnly" href="Command_Intersection_id85ef6ae3.html#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8__Command_Intersection_id85ef6ae3.xml#id85ef6ae3-befe-45f4-a9c7-b1773e8e46c8" title="Define intersection types between scattering bars.">INTERSECTION</a>.</p>
+<p class="p"><a class="xref fm:Table" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf4a5a793-89e2-4cff-9e11-a589f13c61fe">Table 3</a> lists how angles are handled by the
+cleanup algorithm.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idf4a5a793-89e2-4cff-9e11-a589f13c61fe" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Internal Angles Remaining After Cleanup</span></caption><colgroup><col style="width:0.359in" /><col style="width:0.645in" /><col style="width:2.223in" /><col style="width:2.298in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" colspan="4" style="vertical-align:top;" id="d5505e886"><p class="p">JOG FILL</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" rowspan="3" style="vertical-align:top;" headers="d5505e886 "><p class="p">ANGLED</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "> </td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">YES</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">NO</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">YES</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">90, 135, 225, 270</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">90, 270</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">NO</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">L,P or T Intersections: 90,
+270</p>
+<p class="p">N Intersections: 90</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d5505e886 "><p class="p">L, P, or T Intersections: 90,
+270</p>
+<p class="p">N Intersections: 90</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 class="title Subheading sectiontitle">Cleanup of Intersection
+Violations</h2><p class="p">The INTERSECTION
+keyword allows you to control the types of intersections allowed
+after cleanup. Allowed styles are </p>
+<dl class="dl"><dt class="dt dlterm">N</dt>
+<dd class="dd"><p class="p">No intersections are allowed.</p>
+</dd>
+<dt class="dt dlterm">L</dt>
+<dd class="dd"><p class="p">Only L-shaped intersections are allowed.</p>
+</dd>
+<dt class="dt dlterm">T</dt>
+<dd class="dd"><p class="p">Both L- and T-shaped intersections are allowed.</p>
+</dd>
+<dt class="dt dlterm">P</dt>
+<dd class="dd"><p class="p">L-, T- and plus-shaped intersections are allowed.</p>
+</dd>
+</dl>
+<p class="p">Note that you can only specify a single intersection
+style. If scattering bars intersect in a style that is not allowed,
+the application cuts away portions of the intersection to generate
+an intersection that is allowed. It makes the cuts such that the
+spacing between any remaining shapes is equal to <a class="xref fm:HeadingOnly" href="Command_Minsbspace_id512e88f9.html#id512e88f9-023d-4c6e-9205-a66d885c0b53__Command_Minsbspace_id512e88f9.xml#id512e88f9-023d-4c6e-9205-a66d885c0b53" title="Defines minimum scattering bar spacing.">MINSBSPACE</a><a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a>or <a class="xref fm:HeadingOnly" href="Command_Lineendspace_id63b39dd7.html#id63b39dd7-074d-4848-a90e-e54cc1c2b022__Command_Lineendspace_id63b39dd7.xml#id63b39dd7-074d-4848-a90e-e54cc1c2b022" title="Defines minimum line end spacing.">LINEENDSPACE</a>, whichever applies.</p>
+<h2 class="title Subheading sectiontitle">Basic Intersection Cleanup</h2><p class="p">Intersection
+resolution occurs after trimming away any portions of the scattering
+bars that violate the MINSBOFFSET rule. The
+final shape is dependent on the relative priority, original length,
+and orientation of the scattering bars.</p>
+<ul class="ul"><li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idbf699f3a-12f1-4036-995e-fe46ab4d0471"><p class="p">When higher and lower scattering bars
+interact, if it is not possible to preserve both, Calibre OPCsbar
+preserves higher scattering bars at the expense of lower scattering
+bars. </p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idd2a6311d-97b9-4454-890d-365504e14ede"><p class="p">When the priorities are the same, Calibre
+OPCsbar cuts away both scattering bars such that the separation
+between the bars is equal to MINSBSPACE/LINEENDSPACE.</p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idb348ae25-00d2-45e4-9e1c-0efc2c90d1c7"><p class="p">If, after cutting away both scattering
+bars, the length of one scattering bar(s) is less than <a class="xref fm:HeadingOnly" href="Command_Minsblength_id85ed86b5.html#id85ed86b5-afe7-4286-a2b3-6d7bd9ac0fae__Command_Minsblength_id85ed86b5.xml#id85ed86b5-afe7-4286-a2b3-6d7bd9ac0fae" title="Defines minimum length of scattering bars.">MINSBLENGTH</a>, Calibre OPCsbar removes the short
+bar(s), then returns the other scattering bar to its original length. </p>
+</li>
+<li class="li" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idc086503a-4b8d-4ae0-8b33-6a794090edc6"><p class="p">If, after cutting away the scattering
+bars, the lengths of all remaining scattering bars are less than
+MINSBLENGTH, Calibre OPCsbar resolves the conflict automatically
+by preserving either the vertical or horizontal scattering bar and
+removing the other scattering bar. To avoid this automatic resolution,
+use <a class="xref fm:HeadingOnly" href="Command_Sblayer_id8f696411.html#id8f696411-dd39-40f7-87db-1c20b8955645__Command_Sblayer_id8f696411.xml#id8f696411-dd39-40f7-87db-1c20b8955645" title="Preexisting scattering bar layer name.">SBLAYER</a>.</p>
+</li>
+</ul>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idadfa1ce2-181a-465e-a4d6-3ed60dae09c9">Figure 9</a> shows how Calibre OPCsbar resolves
+various intersection problems to achieve an “N” intersection. Note
+that in two situations, the bars are not cut away equally. The first
+situation is demonstrated when resolving a “T” intersection. Calibre OPCsbar
+trims the stem of the “T” to preserve the crossbar. The second situation
+is demonstrated when the length of one portion of a “+” intersection
+is less than MINSBLENGTH.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idadfa1ce2-181a-465e-a4d6-3ed60dae09c9"><span class="figcap"><span class="fig--title-label">Figure 9. </span>Achieving an “N” Intersection </span><br /><div class="imagecenter"><img class="image imagecenter" height="537" src="../graphics/SB_advanced233.png" width="468" /></div><br /></div>
+<p class="p"><a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idb84cd09e-993f-483b-8c1c-1cdbea0ff417">Figure 10</a> shows how Calibre OPCsbar resolves
+various intersection problems to achieve an “L” intersection. Note
+that an “L” formed by an orthogonal scattering bar with an angled
+scattering bar is considered a valid “L.”</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__idb84cd09e-993f-483b-8c1c-1cdbea0ff417"><span class="figcap"><span class="fig--title-label">Figure 10. </span>Achieving “L” Intersections</span><br /><div class="imagecenter"><img class="image imagecenter" height="570" src="../graphics/SB_advanced234.png" width="468" /></div><br /></div>
+<h2 class="title Subheading sectiontitle">Cleanup of U Configurations</h2><p class="p">When two “L” intersections face
+each other, they create a “U” shape. When specifying an intersection
+of type “L”, you can supply an optional value, <span class="keyword ParameterName OptionalReplaceable">u_bottom_length</span>,
+which defines a minimum distance between the middle scattering bars
+in a U configuration. If the minimum distance is not met, the bottom
+of the U is removed as shown in <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ida461f88d-2b20-44a1-91ee-2f40ea561e74">Figure 11</a>.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__ida461f88d-2b20-44a1-91ee-2f40ea561e74"><span class="figcap"><span class="fig--title-label">Figure 11. </span>Resolving “L” Intersections that
+Result in “U”</span><br /><div class="imagecenter"><img class="image imagecenter" height="154" src="../graphics/SB_advanced235.png" width="417" /></div><br /></div>
+<h2 class="title Subheading sectiontitle">Cleanup of Overlapping
+Intersections</h2><p class="p">When
+L intersections are allowed and two perpendicular scattering bars overlap
+but do not intersect completely, Calibre OPCsbar fills as needed
+to generate an L shape as depicted in <a class="xref fm:Figure" href="#idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id8532cf77-9bde-4375-8d48-1c02116e5313">Figure 12</a>.</p>
+<div class="fig fignone" id="idc33aaac7-5bcf-4dd3-8d35-852deb5f715a__id8532cf77-9bde-4375-8d48-1c02116e5313"><span class="figcap"><span class="fig--title-label">Figure 12. </span>Cleaning of Overlapping Scattering Bars</span><br /><div class="imagecenter"><img class="image imagecenter" height="122" src="../graphics/SB_advanced236.png" width="464" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_CalibreOpcsbarConcepts_idfb848950.html" title="Understanding Calibre OPCsbar concepts speed development of OPCSBAR recipes.">Calibre OPCsbar Concepts</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  A scattering bar line-end is defined
+as &gt;= MINSBWIDTH and &lt;=MAXSBWIDTH.</div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  When not specified,
+MINSBSPACE defaults to MINSBOFFSET which defaults to the smallest SBOFFSET
+defined in any of the rules for the Calibre OPCsbar operation.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_sbar_useref"
+                DocTitle = "Calibre® OPCsbar™ User’s and Reference Manual"
+                PageTitle = "Scattering Bar Cleanup"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_ScatteringBarCleanup_idc33aaac7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCsbar™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

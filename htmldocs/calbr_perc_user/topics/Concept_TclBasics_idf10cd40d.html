@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Tcl Basics" />
+<meta name="abstract" content="There are some fundamental ideas to remember when using Tcl." />
+<meta name="description" content="There are some fundamental ideas to remember when using Tcl." />
+<meta name="DC.subject" content="Syntax conventions, Tcl" />
+<meta name="keywords" content="Syntax conventions, Tcl" />
+<meta name="prodname" content="Calibre PERC User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-25" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_perc_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® PERC™ User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Tcl Basics</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Tcl Basics" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11493,product.id.P10099,product.id.P11347,product.id.P10084,product.id.P11427,product.id.P10116,product.id.P10096" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Tcl Basics</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">There are some
+fundamental ideas to remember when using Tcl.</span>
+</div>
+<ul class="ul"><li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id8f7ac095-abee-4595-8848-71ec099602a6"><p class="p"><span class="ph FontProperty HeadingLabel">Tcl is case sensitive.</span> </p>
+<p class="p">The core set of Tcl commands are all lower
+case, as are the Calibre PERC command names, but command options
+are generally mixed case. User-given names can use any case.</p>
+</li>
+<li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id7e930825-f179-46b7-9ed3-71db5eae1c1e"><p class="p"><span class="ph FontProperty HeadingLabel">Order matters.</span> </p>
+<p class="p">The first word on a line is interpreted as
+a command name, and all other words on the line are command arguments.
+Command are generally executed in the order they appear in a script;
+however, Tcl procedures (procs) do not need to be defined before
+they are called.</p>
+</li>
+<li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id9058883f-4920-427e-a25f-438b35787073"><p class="p"><span class="ph FontProperty HeadingLabel">Many characters have special meanings in Tcl.</span> </p>
+<p class="p">For a complete list of special characters,
+consult the Tcl resources listed earlier. The following are the
+special characters that warrant particular attention.</p>
+</li>
+</ul>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__ide8a76d31-efeb-443f-837c-96ee1ea67c80" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Tcl Special Characters</span></caption><colgroup><col style="width:1.032in" /><col style="width:4.818in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d69875e174"><p class="p">Character</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d69875e177"><p class="p">Meaning</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">;</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">The semicolon terminates
+the previous command, allowing you to place more than one command
+on the same line.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">\</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">Causes backslash substitution
+(or what is sometimes called an escape sequence in other languages).
+Normally this is used to remove the special meaning of a metacharacter.
+Be careful not to have whitespace on the same line after a backslash
+that terminates a line, as this can cause Tcl interpretation errors.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">\n</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">The backslash with the
+letter “n” creates a new line. There generally should be no space
+after the n.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">$</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">The dollar sign in front
+of a variable name instructs the Tcl interpreter to access the value
+stored in the variable.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">[ ] </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">Brackets cause command
+substitution, instructing the Tcl interpreter to treat everything
+within the brackets as the result of a command. Command substitution
+can be nested within words.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">{ }</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">Braces instruct the Tcl
+interpreter to treat the enclosed words as a single string. The
+Tcl interpreter accepts the string as-is, without performing any
+variable substitution or evaluation.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">“ ”</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">Quotation marks instruct
+the Tcl interpreter to treat the enclosed words as a single string.
+However, when the Tcl interpreter encounters variables or commands
+within a string in quotation marks, it evaluates the variables and
+commands to generate the string.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e174 "><p class="p">#</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d69875e177 "><p class="p">The hash character denotes
+a comment. It must be the first non-whitespace character at the
+start of a command, and it must be followed by whitespace because
+it is parsed as a command.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="ul"><li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id0a85ea32-54dc-4711-ba11-6e52678ac18f"><p class="p"><span class="ph FontProperty HeadingLabel">Comments are a type of command.</span> </p>
+<p class="p">In Tcl, comments are indicated by a leading
+hash character (#). It must be the first non-whitespace character
+of the command; nothing after it on the line is acted upon.</p>
+<p class="p">Since the # must be the first character of
+the <span class="ph FontProperty emphasis">command</span>,
+this means the first line in the following example is valid because
+it is preceded by a semicolon, but the third line is not, because
+the second line ends with a backslash.</p>
+<pre class="pre codeblock leveled"><code>} ;# End loop 
+qs::inc short_itr \
+# "increment iterator"  </code></pre></li>
+<li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id74020f07-c44e-434f-998d-8f23ca858973"><p class="p"><span class="ph FontProperty HeadingLabel">Namespace considerations.</span> </p>
+<p class="p">Tcl commands are often prefixed with namespace
+of the form “<span class="keyword ParameterName OptionalReplaceable">name</span>::”.
+However, the strings “perc::”, “perc_ldl::”, “ldl::”, and “dfm::”
+are not Tcl namespaces and cannot be imported. (They can be thought
+of as scoping expressions.)</p>
+<p class="p">Some YieldServer (dfm::) commands are enabled
+in Calibre PERC to access the DFM database. These are documented
+in the <a class="xref LinkItalic" href="../../calbr_ys_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'manual title', 'calbr_ys_ref'); return false;">Calibre YieldServer Reference Manual</a>.</p>
+</li>
+<li class="li" id="idf10cd40d-de0b-4da8-92ab-3ccf7f60f1e3__id03114d0b-d7c2-4760-b56e-7f7c24f2af01"><p class="p"><span class="ph FontProperty HeadingLabel">Iterators.</span> </p>
+<p class="p">Iterators are Tcl objects that
+can be thought of as opaque lists. The internal structure of an
+iterator is not generally predictable. Certain iterators can be
+incrementally stepped through using a loop to access all the values.
+In some cases, an iterator may store only one entry, in which case
+it cannot be incremented. It is important not to treat an iterator as
+a string by using it in a string-related context. It is generally
+a good practice to test if an iterator is empty, such as here:</p>
+<pre class="pre codeblock"><code>while {$iterator ne ""} { ...</code></pre></li>
+</ul>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_TclEnvironment_ide17b1cb0.html" title="The Calibre PERC functions are proprietary Tcl-based commands used an a rule file. They make use of standard Tcl and runtime TVF through the TVF Function statement.">Tcl Environment</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_TclEnvironment_ide17b1cb0.html" title="The Calibre PERC functions are proprietary Tcl-based commands used an a rule file. They make use of standard Tcl and runtime TVF through the TVF Function statement.">Tcl Environment</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_perc_user"
+                DocTitle = "Calibre® PERC™ User’s Manual"
+                PageTitle = "Tcl Basics"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_TclBasics_idf10cd40d.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® PERC™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="layout filemerge" />
+<meta name="abstract" content="Performs a disk-based merge of multiple GDS files, multiple OASIS files, or a combination of GDS and OASIS files without loading them into memory." />
+<meta name="description" content="Performs a disk-based merge of multiple GDS files, multiple OASIS files, or a combination of GDS and OASIS files without loading them into memory." />
+<meta name="prodname" content="Calibre DESIGNrev Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2019.4" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="Batch Command Support for Calibre® DESIGNrev™, Calibre® WORKbench™, Calibre® LITHOview™, and Calibre® MDPview™" />
+<meta name="SourceHandle" content="calbr_drv_ref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® DESIGNrev™ Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>layout filemerge</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="layout filemerge" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10088,product.id.P10120" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">layout filemerge</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><span class="shortdesc">Performs
+a disk-based merge of multiple GDS files, multiple OASIS files,
+or a combination of GDS and OASIS files without loading them into
+memory.</span>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">layout filemerge</span> <span class="keyword ParameterName Required">‑in</span> {<span class="keyword ParameterName RequiredReplaceable">layoutfile</span> | <span class="keyword ParameterName RequiredReplaceable">directory</span> | <span class="keyword ParameterName RequiredReplaceable">textfile</span> | <br />
+   {<span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> <br />
+      [<span class="keyword ParameterName Optional">-layerbump</span> <span class="keyword ParameterName OptionalReplaceable">layer_bump</span>]<br />
+      [<span class="keyword ParameterName Optional">‑map_layer</span> {{<span class="keyword ParameterName OptionalReplaceable">from_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt1</span>] <span class="keyword ParameterName OptionalReplaceable">to_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt2</span>]} …}]<br />
+      {[‑exclude_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[.<span class="keyword ParameterName OptionalReplaceable">dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[.<span class="keyword ParameterName OptionalReplaceable">dtn</span>]}] | [‑include_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[.<span class="keyword ParameterName OptionalReplaceable">dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[.<span class="keyword ParameterName OptionalReplaceable">dtn</span>]}]}<br />
+      [-prefix <span class="keyword ParameterName OptionalReplaceable">prefix</span>]<br />
+      [-suffix <span class="keyword ParameterName OptionalReplaceable">suffix</span>]<br />
+      [-exclude_top]<br />
+      [-excludeprefixsuffix {<span class="keyword ParameterName OptionalReplaceable">cell …</span>}]<br />
+      [-placecell {[-refcell <span class="keyword ParameterName OptionalReplaceable">refcell</span>] [‑incells <span class="keyword ParameterName OptionalReplaceable">incell</span>] [‑x <span class="keyword ParameterName OptionalReplaceable">x</span>] [‑y <span class="keyword ParameterName OptionalReplaceable">y</span>] [‑mirror <span class="keyword ParameterName OptionalReplaceable">mirror</span>]<br />
+          [‑angle <span class="keyword ParameterName OptionalReplaceable">angle</span>] [‑mag <span class="keyword ParameterName OptionalReplaceable">mag</span>]}…]<br />
+      [‑scale <span class="keyword ParameterName OptionalReplaceable">scale_value</span>]   }<br />
+}…<br />
+{{<span class="keyword ParameterName Required">-out</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span>} | {<span class="keyword ParameterName Required">‑oasisout</span>  <span class="keyword ParameterName RequiredReplaceable">output_file</span>} | {<span class="keyword ParameterName Required">‑gdsout</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span>}}<br />
+[-mode {<span class="keyword ParameterName Optional">append</span> | overwrite | rename | forcerename | reportconflictsonly}]<br />
+[-cblockmode {<span class="keyword ParameterName Optional">0</span> | <span class="keyword ParameterName OptionalDefault">1</span> | <span class="keyword ParameterName Optional">auto</span>}]<br />
+[-smartdiff {[‑ignoregeometries] [-ignoreproperties] [‑ignorereferences] [‑ignoretexts]<br />
+   [‑convertpathtopoly] }]<br />
+[-noemptycells {<span class="keyword ParameterName OptionalDefault">0</span> | 1 | 2 | 3}]<br />
+[-createcache {<span class="keyword ParameterName OptionalDefault">0</span> | 1}] <br />
+{[‑exclude_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[<span class="keyword ParameterName OptionalReplaceable">.dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[<span class="keyword ParameterName OptionalReplaceable">.dtn</span>]}] | [‑include_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[<span class="keyword ParameterName OptionalReplaceable">.dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[<span class="keyword ParameterName OptionalReplaceable">.dtn</span>]}]}<br />
+[-createtop <span class="keyword ParameterName OptionalReplaceable">cellname</span>]<br />
+[-topcell <span class="keyword ParameterName OptionalReplaceable">topcellname</span>]<br />
+[-map_cell {{<span class="keyword ParameterName OptionalReplaceable">cellname</span> <span class="keyword ParameterName OptionalReplaceable">mapped_cellname</span>} | <span class="keyword ParameterName OptionalReplaceable">filename</span>}]<br />
+[<span class="keyword ParameterName Optional">‑map_layer</span> {{<span class="keyword ParameterName OptionalReplaceable">from_layer</span>[<span class="keyword ParameterName OptionalReplaceable">.dt1</span>] <span class="keyword ParameterName OptionalReplaceable">to_layer</span>[<span class="keyword ParameterName OptionalReplaceable">.dt2</span>]} …}]<br />
+[‑peek {[‑cells] [‑layers] [‑undefcells]}]<br />
+[-preserve <span class="keyword ParameterName OptionalReplaceable">filterfile</span>]<br />
+[-strictmode <span class="keyword ParameterName Optional">{0</span> | <span class="keyword ParameterName OptionalDefault">1</span>}]<br />
+[-tmp <span class="keyword ParameterName OptionalReplaceable">tmp_dir</span>]<br />
+[-<span class="keyword ParameterName Optional">integerScaling</span>]<br />
+[-precision <span class="keyword ParameterName OptionalReplaceable">output_precision</span>]<br />
+[-reportconflicts]<br />
+[-stringSeverity {ignore | warning | fix | <span class="keyword ParameterName Optional">error</span>}]<br />
+[‑exclude_cells <span class="keyword ParameterName OptionalReplaceable">cells</span> [‑deleteChildCells]]<br />
+[‑exclude_properties]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfd47c09f-9e26-4727-bcc2-bcb8f17817c8"><span class="keyword ParameterName Required">-in</span> {<span class="keyword ParameterName RequiredReplaceable">layoutfile</span> | <span class="keyword ParameterName RequiredReplaceable">directory</span> | <span class="keyword ParameterName RequiredReplaceable">textfile</span> | {<span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> [<span class="keyword ParameterName OptionalReplaceable">file‑specific‑options</span>]}}…</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying the input
+layout files to use for the merge operation. You can specify <span class="keyword ParameterName Required">‑in</span> multiple
+times in any execution of the layout filemerge command with any combination
+of the valid arguments. When you specify multiple input files in
+which the input precisions do not match, the lowest common multiple
+of the input precisions is calculated. Each input layout is then
+magnified as it is read to ensure the user unit values are retained.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf02e580d-6b66-4150-8ce2-f9ade6bb2008"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">layoutfile</span> —
+Specifies the name of a GDS or OASIS file to use as input for the
+merge operation. You can specify the same input file multiple times. </p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc9b35d51-86c2-482e-ade8-c6c3d33ea8a5"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">directory</span> —
+Specifies the name of a directory that contains one or more input
+files to be merged. All layout files in the specified directory
+are included in the merged output file. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">With Calibre 2018.4, the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span> argument
+set replaces the ‑indir argument. However, the use of ‑indir is
+still supported.</p>
+</div>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id62135994-84a7-417c-987a-e62179f9270c"><p class="p Opt"><span class="keyword ParameterName RequiredReplaceable">textfile</span> —
+Specifies the name of an ASCII file that contains the names of the
+input layouts to be merged. The ASCII file can contain layouts and
+directories that contain layouts. The following rules apply to the
+use of an ASCII file:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idab8f8add-a495-41c6-9294-97bc032313fb"><p class="p">Empty lines
+and lines beginning with a pound sign (#) are ignored.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id79a58bb3-6c21-4b3d-a780-90a509fb01b3"><p class="p">Each layout
+or directory name must appear on a separate line in the file.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd632d49e-cea3-4ba3-ba78-9a870b7911b8"><p class="p">A path to another
+text file is not allowed.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide02b6426-cb17-40bf-902f-d364591f8800"><p class="p">File-specific
+options, such as ‑exclude_layer or ‑suffix, can be specified for
+a layout with the following conditions:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id47c2a929-a62a-460d-b43f-fd583b082e94"><p class="p">The layout
+name must appear first in the line before any file‑specific options.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd6696818-14a2-4d4d-b944-c94359c4208a"><p class="p">File-specific
+options cannot be specified for directories.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc6758db2-d891-47f0-b500-fa4756180bb7"><p class="p">The <span class="keyword ParameterName Required">‑name</span> argument
+should not be used.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="p">See the <a class="xref fm:ExampleAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfdf2691b-373b-46c0-b95b-ff1fc695d380">Example 22 - Specify an ASCII File as Input</a>.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ideeab3ab5-1f0c-4a93-a635-8a66f0db2e82"><p class="p Opt"><span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> [<span class="keyword ParameterName OptionalReplaceable">file-specific-options</span>]
+— Specifies the name of an input file containing the layers or cells
+to filter or manipulate when merging with another file. Use this option
+when you want to specify file‑specific options, such as ‑layerbump
+or ‑map_layer.</p>
+<p class="p">The <span class="keyword ParameterName Required">-name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set and associated values should be specified using the Tcl list
+command and be enclosed in brackets as shown in the following example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.gds -in [list -name layout2.gds] \
+	-out layout3.gds</code></pre><div class="note note"><span class="notetitle">Note:</span> <p class="p">With Calibre 2018.4, the <span class="keyword ParameterName Required">‑in</span> {<span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>}
+argument set replaces the ‑infile argument. However, the use of
+‑infile is still supported.</p>
+</div>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">file-specific-options</span> to
+the <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set are:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id9bc2f7f0-5f2a-4621-87fb-213ffff253e0"><p class="p Opt"><span class="keyword ParameterName Optional">‑layerbump</span> <span class="keyword ParameterName OptionalReplaceable">layer_bump</span> —
+Specifies a value by which the layer number of each layer in <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> is
+incremented in the output file. This option cannot be specified
+with ‑map_layer within the same <span class="keyword ParameterName Required">‑name</span> argument
+set.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd0dc11e7-c9b4-4ddb-89dd-ae69acd9cd2c"><p class="p Opt"><span class="keyword ParameterName Optional">-map_layer</span> {{ <span class="keyword ParameterName OptionalReplaceable">from_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt1</span>] <span class="keyword ParameterName OptionalReplaceable">to_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt2</span>]} … }
+— Specifies that objects on the <span class="keyword ParameterName OptionalReplaceable">from_layer</span> of <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> are
+written to the <span class="keyword ParameterName OptionalReplaceable">to_layer</span> in
+the output file. You can specify layers as either a layer number
+or a layer number and datatype value separated by a period (.).
+The ‑map_layer option and associated <span class="keyword ParameterName OptionalReplaceable">from_layer</span> and <span class="keyword ParameterName OptionalReplaceable">to_layer</span> values
+should be specified using the Tcl list command and be enclosed in brackets
+as shown in the following example:</p>
+<pre class="pre codeblock"><code>	-map_layer [list 0 1 100.5 200.5]</code></pre><p class="p">You cannot specify ‑map_layer and ‑layer_bump within the same <span class="keyword ParameterName Required">‑name</span> argument
+set. When you specify ‑map_layer with ‑include_layer or ‑exclude_layer,
+the layers specified by ‑include_layer or ‑exclude_layer are filtered
+before applying the ‑map_layer argument to any unfiltered layers.</p>
+<p class="p">This option applies only to the layout specified by <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>.
+To map layers globally, use the ‑map_layer option available with
+the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+or <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+sets. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59">Using ‑map_layer, ‑include_layer, and ‑exclude_layer</a>” for more
+information.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id7b33aa0b-8305-4d6f-9b5f-499c3999f7ff"><p class="p Opt">-exclude_layer {<span class="keyword ParameterName OptionalReplaceable"> l1</span>[.<span class="keyword ParameterName OptionalReplaceable">dt</span>]
+… <span class="keyword ParameterName OptionalReplaceable">ln</span>[.<span class="keyword ParameterName OptionalReplaceable">dtn</span>] }
+— Specifies a list of layer numbers to exclude from the merged output
+file. You can specify layers as either a layer number or a layer
+number and datatype value separated by a period (.). The ‑exclude_layer argument
+can not be specified with ‑include_layer. The ‑exclude_layer values should
+be specified using the Tcl list command and enclosed in brackets
+as shown in the following example:</p>
+<pre class="pre codeblock"><code>	layout filemerge -in layout1.gds -in [list -name layout2.gds \
+		‑exclude_layer [list 1 2 3]] -out layout3.gds</code></pre><p class="p">Instead of specifying layer numbers with the ‑exclude_layer argument,
+you can specify the name of an ASCII file that contains the layer
+numbers to be excluded from the merged output file. In the following
+example, the <span class="ph filepath">oas_layers.txt</span> file contains a
+list of layers to be excluded from <span class="ph filepath">layout1.oas</span> and
+the <span class="ph filepath">gds_layers.txt</span> file includes a list of
+layers to be excluded from <span class="ph filepath">layout2.gds</span>:</p>
+<pre class="pre codeblock"><code>	layout filemerge \
+		-in [list -name layout1.oas -exclude_layer oas_layers.txt] \
+		-in [list -name layout2.gds -exclude_layer gds_layers.txt] \
+		-out merged.oas</code></pre><p class="p">The layer numbers in the ASCII file can be on the same line or
+span multiple lines, as long as each number is separated by a space,
+tab, or newline character.</p>
+<p class="p">This option applies only to an input file specified by <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>.
+To exclude layers globally, use the ‑exclude_layer option available
+with the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+or <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+sets. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59">Using ‑map_layer, ‑include_layer, and ‑exclude_layer</a>” for more
+information.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idffb1cd7c-4f69-4a04-a682-8d4cf9d3b1a6"><p class="p Opt">‑include_layer  {<span class="keyword ParameterName OptionalReplaceable"> l1</span>[.<span class="keyword ParameterName OptionalReplaceable">dt</span>]
+… <span class="keyword ParameterName OptionalReplaceable">ln</span>[.<span class="keyword ParameterName OptionalReplaceable">dtn</span>] }
+— Specifies a list of layer numbers to include in the merged output
+file. You can specify layers as either a layer number or a layer
+number and datatype value separated by a period (.). The ‑include_layer argument
+can not be specified with ‑exclude_layer. The ‑include_layer values should
+be specified using the Tcl list command and enclosed in brackets
+as shown in the following example:</p>
+<pre class="pre codeblock"><code>	layout filemerge -in layout4.gds -in [list -name layout5.gds \
+		‑include_layer [list 1 2 3]] -out layout6.gds</code></pre><p class="p">Instead of specifying layer numbers with the ‑include_layer argument,
+you can specify the name of an ASCII file that contains the layer
+numbers to be included in the merged output file. In the following
+example, the <span class="ph filepath">oas_layers.txt</span> file contains a
+list of layers to be included in <span class="ph filepath">layout1.oas</span> and
+the <span class="ph filepath">gds_layers.txt</span> file includes a list of
+layers to be included in <span class="ph filepath">layout2.gds</span>:</p>
+<pre class="pre codeblock"><code>	layout filemerge \
+		-in [list -name layout1.oas -include_layer oas_layers.txt] \
+		-in [list -name layout2.gds -include_layer gds_layers.txt] \
+		-out merged.oas</code></pre><p class="p">The layer numbers in the ASCII file can be on the same line or
+span multiple lines, as long as each number is separated by a space,
+tab, or newline character.</p>
+<p class="p">This option applies only to an input file specified by <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>.
+To include layers globally, use the ‑include_layer option available
+with the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> or the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span> argument
+sets. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59">Using ‑map_layer, ‑include_layer, and ‑exclude_layer</a>” for more
+information.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id6d3fe826-2291-4366-98c7-c21ba0723b92"><p class="p Opt"><span class="keyword ParameterName Optional">-prefix</span> <span class="keyword ParameterName OptionalReplaceable">prefix</span> —
+Prepends the specified <span class="keyword ParameterName OptionalReplaceable">prefix</span> to
+each cellname (including top cells) in order to create unique cellnames,
+thereby preventing cells with the same name from being merged. This
+argument is supported with all merge modes except overwrite mode
+(-mode overwrite). This argument generates an error when used with
+-mode overwrite, ‑map_cell, or the ‑preserve argument.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__iddf58169b-c4da-48fb-b195-874c5fb072bd"><p class="p Opt"><span class="keyword ParameterName Optional">-suffix</span> <span class="keyword ParameterName OptionalReplaceable">suffix</span> —
+Appends the specified <span class="keyword ParameterName OptionalReplaceable">suffix</span> to
+each cellname (including top cells) in order to create unique cellnames,
+thereby preventing cells with the same name from being merged. This
+argument is supported with all merge modes except overwrite mode
+(-mode overwrite). This argument generates an error when used with
+-mode overwrite, ‑map_cell, or the ‑preserve argument.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id140544e0-4cec-4e7a-a078-980b344419e6"><p class="p Opt">-exclude_top
+— Excludes the topcells in each input file from having a prefix
+or suffix appended. This option can only be specified when using
+the append merge mode (-mode append) and must be specified for all
+or none of the input files.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id46e44aaf-bb6e-4580-96fc-b69bb521b1b2"><p class="p Opt">-excludeprefixsuffix
+{<span class="keyword ParameterName OptionalReplaceable">cell</span> ...}
+— Specifies the cell(s) in each input file that should be excluded
+from prepending a prefix or appending a suffix. This argument can
+only be used with the ‑prefix or ‑suffix options. The <span class="keyword ParameterName OptionalReplaceable">cell</span> option
+specifies a cellname, filename, or a Tcl list of cellnames. The
+following conditions apply:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id67ae2b64-f22c-4c1d-91bc-a1fd05b73fbb"><p class="p">When specifying
+a cellname, the cellname can be specified explicitly or using a
+wildcard (*, ?, or [ ] characters are supported).</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2a3a1a9e-a478-4041-bc59-0d321acdcec5"><p class="p">When specifying
+a filename, the file must contain cellnames, one on each line, specified
+explicitly or using a wildcard.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2f6524fe-d21a-49a4-b2e9-d9b8fc251cb0"><p class="p">When specifying
+a Tcl list, each cellname in the list must be specified explicitly
+or using a wildcard.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf24c81cd-a9fe-4391-9a5f-2ab76acf3786"><p class="p Opt">-placecell {[-refcell <span class="keyword ParameterName OptionalReplaceable">refcell</span>]
+[‑incells <span class="keyword ParameterName OptionalReplaceable">incell</span>]
+[‑x <span class="keyword ParameterName OptionalReplaceable">x</span>]
+[‑y <span class="keyword ParameterName OptionalReplaceable">y</span>]
+[‑mirror <span class="keyword ParameterName OptionalReplaceable">mirror</span>] [‑angle <span class="keyword ParameterName OptionalReplaceable">angle</span>]
+[‑mag <span class="keyword ParameterName OptionalReplaceable">mag</span>]}…
+— Specifies the location for placing a cell from the input file
+specified by <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> into
+the newly created top cell in the output file. You can specify the
+‑placecell argument multiple times.</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb7986ca0-07f5-4da9-a967-e11c5eb2a94f"><p class="p">-refcell <span class="keyword ParameterName OptionalReplaceable">refcell</span> —
+Specifies which cell from the input file is to be referenced. If
+this argument is not specified, then the topcell from the input
+layout is used. If there is more than one topcell, then one is selected
+and the transcript lists the topcell that was chosen in addition
+to the other available topcells.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id592d7b0b-63d4-4d7f-81e6-49dde00ece51"><p class="p">‑incells <span class="keyword ParameterName OptionalReplaceable">incell</span> —
+Specifies the name of a cell in which to create a new placement
+of a reference from an input file. The following restrictions apply
+when using ‑incells:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd12d6590-c099-45d6-8b7d-50444cc22494"><p class="p">The specified <span class="keyword ParameterName OptionalReplaceable">incell</span> cannot
+exist in a layout specified with the ‑name argument, but must exist
+in at least one of the other specified input layouts. Different
+layouts can specify different <span class="keyword ParameterName OptionalReplaceable">incell</span> values
+to ‑incell.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id81fe56d8-0d6a-4b8f-8171-6f6863aebc32"><p class="p">The ‑incell
+argument cannot be used with ‑mode forcerename (or ‑forcerename).</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id97b50672-f024-4ea4-9ea9-f2951c065849"><p class="p">The ‑createtop
+argument is optional if ‑incell is specified at least once. If both
+‑createtop and ‑incell are specified, the top cell for any input
+layout in which ‑incell is not specified is placed at the top level
+in the input layout. If ‑createtop is not specified, then the top
+cell for any input layout that does not use ‑incell is placed at
+the top level of the output layout.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide249ba6a-a161-414b-bc19-fbaa458fb842"><p class="p">When ‑refcell
+is not specified with ‑incell, the default is to use a topcell from
+the layout specified by the ‑name argument.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida09093bf-8129-4727-bc91-fa7bb048810d"><p class="p">-x <span class="keyword ParameterName OptionalReplaceable">x</span> —
+Specifies an <span class="keyword ParameterName OptionalReplaceable">x</span> coordinate
+value at which the origin of the referenced cell is placed in the
+merged output file. The default coordinate value is 0. A coordinate
+can be specified as a dbu (default) or micron value.</p>
+<p class="p">A dbu value can be specified as an integer that is followed by
+a “d” to indicate dbu, or as a floating point number as long as
+the number contains no fractional component (for example, 1024.0).
+Specifying a fractional component for a dbu value will generate
+an error. For example:</p>
+<pre class="pre codeblock"><code>	Error converting the -x argument value, 10000.1, to an
+	integer.</code></pre><p class="p">A micron value can be specified as a floating point number or
+an integer, and must be followed by a “u” to indicate micron.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc942f35b-a118-47fa-8270-789e38f4b258"><p class="p">-y <span class="keyword ParameterName OptionalReplaceable">y</span> —
+Specifies a <span class="keyword ParameterName OptionalReplaceable">y</span> coordinate
+value at which the origin of the referenced cell is placed in the
+merged output file. The default coordinate value is 0. A coordinate
+can be specified as a dbu (default) or micron value.</p>
+<p class="p">A dbu value can be specified as an integer followed by a “d”
+to indicate dbu, or as a floating point number as long as the number
+contains no fractional component (for example, 1024.0). Specifying
+a fractional component for a dbu value will generate an error. For
+example:</p>
+<pre class="pre codeblock"><code>	Error converting the -x argument value, 10000.1, to an
+	integer.</code></pre><p class="p">A micron value can be specified as a floating point number or
+an integer, and must be followed by a “u” to indicate micron.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2396414b-edff-4adf-87d6-eb69b3f01a4f"><p class="p">-mirror <span class="keyword ParameterName OptionalReplaceable">mirror</span> —
+Specifies whether the referenced cell is mirrored in the merged
+output file. Valid values for <span class="keyword ParameterName OptionalReplaceable">mirror</span> are:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id0614c111-bb0a-4be7-bba8-f4d6ac94c728"><p class="p">true —
+The referenced cell is mirrored in the merged output file.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd3823dfe-4368-46ef-91c9-52b59bf93bcc"><p class="p">false — The
+referenced cell is not mirrored in the merged output file. This is
+the default.</p>
+</li>
+</ul>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id4c69d3b4-a685-4848-9271-fd04f098616a"><p class="p">-angle <span class="keyword ParameterName OptionalReplaceable">angle</span> —
+Specifies an angle at which to place the referenced cell in the merged
+output file. The default angle is 0.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id56e29297-4f20-4a26-8e78-8f9934ec3108"><p class="p">-mag <span class="keyword ParameterName OptionalReplaceable">mag</span> —
+Specifies a value for magnifying the referenced cell in the merged
+output file. The default magnification is 1.0.</p>
+</li>
+</ul>
+<p class="p">Specify the ‑placecell argument using the Tcl list command and
+enclose associated values in brackets as shown in the following
+example:</p>
+<pre class="pre codeblock"><code>	layout filemerge -in spare_top_fill.oas \
+		-in [list -name spare_top_wIP.oas \
+		-placecell [list -refcell DM1_5c]] -createtop new_top \
+		-out ./output/out.oas</code></pre><p class="p">The following requirements and general information regard the
+use of the ‑placecell argument:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb51466c4-66a6-4d88-816f-fd7cf41256aa"><p class="p">The ‑topcell
+argument cannot be used with ‑placecell.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id6fe85680-d1af-453b-a302-ca02591a391e"><p class="p">The ‑createtop
+argument is required when specifying ‑placecell. Cells are placed
+in the merged results under the topcell specified by ‑createtop.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id7cfcee23-c1c5-4826-bfde-35a3b763f3e3"><p class="p">You can specify
+the ‑placecell argument multiple times within a list of arguments
+that are passed to the <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set as shown in the following example:</p>
+<pre class="pre codeblock"><code>	layout filemerge -in spare_top_fill.oas \
+		-in [list -name spare_top_wIP.oas \
+		-placecell [list -refcell topcell_1] \
+		-placecell [list -refcell topcell_2]] -createtop new_top \
+		-out ./output/out.oas</code></pre><p class="p">This is useful when a layout contains more than one top cell
+and you want to preserve each of the top cells. </p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id327aa0a7-e467-4740-a8ea-947010514911"><p class="p">You can specify
+to place the <span class="ph FontProperty emphasis">same</span> cell
+multiple times from any input layout. For example:</p>
+<pre class="pre codeblock"><code>	layout filemerge -in [list -name layout.oas \
+		-placecell [list -refcell <span class="ph CodeHighlight orange">CELL88</span>] \ 
+		-placecell [list -refcell <span class="ph CodeHighlight orange">CELL88</span> -x -10 -y -10]] \   
+		-out CELL88.oas -createtop new_top</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id0e99af48-cef2-416f-93c0-048d43c3bfe2"><p class="p">When using
+-placecell with -mode rename or -mode forcerename, each cell is uniquely
+named so that it is placed at the specified location in the merged
+output. However, when using -placecell with -mode append or -mode
+overwrite, the results of each appended or overwritten cell are
+placed at the specified location and, as a result, the appended
+or overwritten cell in the merged output may not match the original
+cell in the input layout.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id5ef1e5d4-9897-43e3-a52e-1a3866a0af0c"><p class="p">When ‑placecell
+is not specified for all input layouts (in the same layout filemerge
+operation), then for each input layout for which -placecell is specified, only
+the specified cells and associated hierarchy are placed into the
+new topcell. The topcells and children in the layouts for which
+-placecell is not specified, are written as children of the new
+topcell specified by ‑createtop. In the following example, the topcells
+from <span class="ph filepath">layout0.oas</span>, <span class="ph filepath">layout1.oas</span>,
+and <span class="ph filepath">layout2.oas</span> are placed in the resulting
+output under the new topcell specified by the ‑createtop argument
+(NEWTOP).</p>
+<pre class="pre codeblock"><code>	layout filemerge -in layout0.oas -in layout1.oas \
+		-in [list -name layout2.oas -placecell { -x 50u -y 50u }] \
+		-out ./output/merged.oas -mode rename ‑createtop NEWTOP</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id1df07ab3-7194-4f71-b9f0-3f6ccfc5abff"><p class="p">When an input
+layout contains more than one topcell and the ‑placecell argument
+is not specified, the layout filemerge operation includes each topcell
+at the top level of the resulting output and generates a note similar
+to the following:</p>
+<pre class="pre codeblock"><code>	Note: Layout "layout.oas" contains more than one top cell, all
+	were implicitly placed: TOPCELL_A, TOPCELL_B.</code></pre></li>
+</ul>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc880f8d6-f481-45b9-ae7f-3b8c5c5db627"><p class="p Opt">‑scale <span class="keyword ParameterName OptionalReplaceable">scale_value</span> —
+Specifies a positive real number by which to scale the input layout.
+To scale up a layout, specify a value greater than 1.0. To scale
+down a layout, specify a value greater than 0 and less then 1.0
+(for example, 0.5).</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd0c850bb-9ac9-451b-98de-f5373763a6f9">{<span class="keyword ParameterName Required">-out</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span>} | {<span class="keyword ParameterName Required">‑oasisout</span>  <span class="keyword ParameterName RequiredReplaceable">output_file</span>} | {<span class="keyword ParameterName Required">‑gdsout</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument specifying
+a filename in which to output the results of the merge operation.
+The name specified for <span class="keyword ParameterName RequiredReplaceable">output_file</span> cannot
+be the same as any of the input filenames.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id17d91be9-f1b0-4bf8-9376-d1250795c22b"><p class="p Opt"><span class="keyword ParameterName Required">‑out</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span> —
+Specifies the name of the file in which to output the results. When this
+option is used, the output format of the merged files is determined
+by the input file format, as follows:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida84cc07b-7196-47e3-9279-8bf4796fa727"><p class="p">Merged GDS input files output
+GDS format.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id438523ec-55bb-40a8-8c91-03526f890545"><p class="p">Merged OASIS input files
+output OASIS format.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf9e8e0ce-26df-4b4a-8d21-ec82abb17f08"><p class="p">Mixed input files (GDS and
+OASIS) output OASIS format.</p>
+</li>
+</ul>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id111d1647-3958-4ced-8ae8-02ff8d74a904"><p class="p Opt"><span class="keyword ParameterName Required">-oasisout</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span> —
+Specifies the name of an OASIS file in which to output the results.
+This argument is useful when all of the input layouts are GDS format
+and you want the merged results in OASIS format.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id3a0384ca-ab48-4c3a-9cc9-348509752026"><p class="p Opt"><span class="keyword ParameterName Required">‑gdsout</span> <span class="keyword ParameterName RequiredReplaceable">output_file</span> —
+Specifies the name of a GDS file in which to output the results. Any
+input layouts that are in OASIS format are converted to GDS prior
+to merging.</p>
+</li>
+</ul>
+<p class="p">The ‑out, ‑oasisout, and ‑gdsout arguments
+are mutually exclusive and each argument cannot be specified with
+the ‑mode reportconflictsonly argument. Specifying ‑out, ‑oasisout, or
+‑gdsout with ‑mode reportconflictsonly generates an error.</p>
+<p class="p">The merged results can be compressed to a gzip file by specifying
+a .gz (or .GZ) suffix for the output filename. The -cblockmode argument
+has no effect when compressing an OASIS file to a gzipped output
+file. Specifying the output as gzipped OASIS with the ‑strictmode argument
+generates the following warning and disables strict mode:</p>
+<pre class="pre codeblock"><code>Warning: Strict mode is not supported when writing a gzipped output layout, strict mode disabled.</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idafc61ec5-513a-4f2c-946f-22f4b796b6e9"><span class="keyword ParameterName Optional">-mode</span> {<span class="keyword ParameterName Optional">append</span> | <span class="keyword ParameterName Optional">overwrite</span> | <span class="keyword ParameterName Optional">rename</span> | <span class="keyword ParameterName Optional">forcerename</span> | <span class="keyword ParameterName Optional">reportconflictsonly}</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying
+how duplicate cells (cells in the input files having the same name)
+are handled.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id9472a95e-535f-4868-991e-10d5c3468df2"><p class="p Opt"><span class="keyword ParameterName Optional">append</span> —
+Concatenates the contents of the duplicate cells together. If the
+‑smartdiff option is set, action is taken only if the cell contents
+are different.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id86540fcb-e69c-42cc-9d84-f0cb35c7f5c0"><p class="p Opt">overwrite
+— Writes the contents of duplicate cells from the second file over
+the contents of the first, deleting the contents of the cell from
+the first file. This argument prints a warning message when specified
+with the -smartdiff argument.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id206e781b-1c04-4c87-b6fc-6b35873b9fa0"><p class="p Opt">rename
+— Renames the duplicate cell, to make it unique. If the ‑smartdiff
+option is specified, action is taken only if the cell contents are
+different.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id4a17cb09-f096-456f-9102-927b886bb0f3"><p class="p Opt">forcerename
+— Renames the original and new cellnames to be unique, by adding
+a _WB<span class="keyword ParameterName OptionalReplaceable">x</span> extension,
+where <span class="keyword ParameterName OptionalReplaceable">x</span> is
+an integer. When used with the ‑prefix or -suffix argument, all
+cellnames are renamed using the specified prefix and/or suffix.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id67258e22-f538-4144-9687-c430efb7ed28"><p class="p Opt">reportconflictsonly
+— Reports any cells in the input files that have the same name. When
+it is not obvious which merge mode (append, overwrite, rename, or forcerename)
+is most appropriate for merging files, you can use this option to
+report cellname conflicts, thereby allowing you to determine which
+mode to use when merging the files.</p>
+<p class="p">Specifying this option with -reportconflicts generates a warning
+and the option specified last overrides the option specified first.</p>
+<p class="p">Unlike the -reportconflicts argument, -reportconflictsonly does
+not support writing to an output file and does not provide information
+on how cell naming conflicts are resolved. Attempting to use this
+argument with -out issues a warning similar to the following:</p>
+<pre class="pre codeblock"><code>Warning: The -out switch and argument '<var class="keyword varname">output_file</var>.oas' will be ignored due to the use of the -reportconflictsonly mode.</code></pre><p class="p">When ‑smartdiff is specified with ‑reportconflictsonly, cells
+having the same name and different content (geometries, placements,
+properties, text) are reported. Cells having the same name and content
+are not reported.</p>
+<p class="p">The reportconflictsonly option disables the ‑strictmode argument.</p>
+</li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">You can specify each of these options without
+the -mode keyword. For example, ‑append, -overwrite, -rename, -forcerename,
+and -reportconflictsonly are all valid arguments.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide7d31841-d267-40c0-90e4-42df2240a517"><span class="keyword ParameterName Optional">‑cblockmode</span> <span class="keyword ParameterName Optional">{0</span> | <span class="keyword ParameterName OptionalDefault">1</span> | <span class="keyword ParameterName Optional">auto</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that writes
+OASIS layout files using CBLOCK compression. CBLOCKs are only written
+for cell records and strict mode tables that are larger than 128 bytes.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idcf96b4f8-feef-44e1-815a-0ddb39977ab1"><p class="p Opt"><span class="keyword ParameterName Optional">0</span> —
+CBLOCKs are not written to the output file.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id17d60b40-28f3-45af-a208-12431550247b"><p class="p Opt"><span class="keyword ParameterName Optional">1</span> —
+CBLOCKs are written to the output file. This is the default.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2be55e77-5f55-47dc-9332-5d199fa58842"><p class="p Opt"><span class="keyword ParameterName Optional">auto</span> —
+If any of the input files contain CBLOCKs, then the CBLOCKs are
+written to the output file.</p>
+</li>
+</ul>
+<p class="p">When the output format is a gzipped OASIS file (.GZ or .gz),
+specifying this argument generates a warning and does not write
+CBLOCKs to the file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idcc901785-efe9-4618-9198-2978e33af737">-smartdiff [‑ignoregeometries] [‑ignoreproperties] [‑ignorereferences] [‑ignoretexts] [‑convertpathtopoly]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional
+argument that causes additional processing to be performed when
+cellname conflicts occur. In the case of a conflict, the command
+compares the cell topologies and only alters cells when the cell
+contents are different. This argument provides a cleaner hierarchy for
+the merged output file and minimizes the file size. You can specify
+one or more of the following to filter out parts of a cell that
+are not relevant.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd73a66d6-004a-44bb-a4e6-c3765ccdf701"><p class="p Opt">‑ignoregeometries — Specifies that for each
+cell, only properties, texts, and references are compared to determine
+whether the cell is the same or not.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id4ade5b58-efe5-480e-89dc-ae16255739fd"><p class="p Opt">-ignoreproperties
+— Specifies that properties are not considered for comparison. The default
+is to include properties in the comparison.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfcb12971-c682-4d62-8584-246442c4fdfe"><p class="p Opt">‑ignorereferences — Specifies that for cell
+references, only properties, texts, and geometries are considered
+for comparison.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id693ecd7d-f8e9-4ffb-9612-e4b6cc64c7aa"><p class="p Opt">-ignoretexts
+— Specifies that text objects are not considered for comparison.
+When text objects are not ignored, only the text, layer, datatype,
+and x/y values are considered. Any attributes are ignored.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id5eab1973-d288-47a8-a6bf-f5e52f0b3227"><p class="p Opt">-convertpathtopoly
+— Specifies that paths are converted to polygons for comparison. The
+default is to not convert paths to polygons.</p>
+</li>
+</ul>
+<p class="p">When specifying more than one ‑smartdiff option, the options
+should be specified using the Tcl list command and be enclosed in
+brackets. For example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.gds -in layout2.gds \
+	-smartdiff [list -ignoretext -convertpathtopoly] \
+	‑out layout3.gds</code></pre><p class="p">Using -smartdiff with the -mode forcerename (or -forcerename),
+-mode overwrite (or ‑overwrite), ‑prefix, or ‑suffix argument eliminates
+the ability to detect cell conflicts and impacts performance. Use
+of these arguments with -smartdiff issues a warning. For example:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id6795e030-f55e-458c-9fe6-5361035ab44e"><p class="p">Using -smartdiff
+with -mode forcerename:</p>
+<pre class="pre codeblock"><code>Warning: Using the "‑smartdiff" switch in combination with the "‑mode forcerename" switch may impact the performance of filemerge without changing the output.</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb9a0e3a2-05f9-4b34-b64f-6202a4e3f061"><p class="p">Using -smartdiff
+with the -mode overwrite:</p>
+<pre class="pre codeblock"><code>Warning: Using the "‑smartdiff" switch in combination with the "‑mode overwrite" switch may impact the performance of filemerge without changing the output.</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id324a3cd8-bdcb-480d-87b1-e60e284fdf5d"><p class="p">Using -smartdiff
+with the -suffix argument:</p>
+<pre class="pre codeblock"><code>Warning: Using the "-smartdiff" switch in combination with the "‑in {-suffix...}" switch(es) may impact the performance of filemerge without changing the output.</code></pre></li>
+</ul>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">When using ‑smartdiff with a file-specific ‑include_layer
+or ‑exclude_layer argument, Calibre DESIGNrev performs the smartdiff
+comparison before filtering any layers. To perform file-specific
+layer filtering prior to performing the smartdiff comparison, you must
+run layout filemerge twice, once to filter layers and the second
+time to perform the smartdiff comparison. The global ‑include_layer
+and ‑exclude_layer arguments do not affect the smartdiff comparison,
+since the same layers are filtered from all cells.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idcf21c080-424f-4806-9d3c-e08786a9756a">-noemptycells {<span class="keyword ParameterName OptionalDefault">0</span> | 1 | 2 | 3}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used to
+control the writing of cell definitions for empty cells and references
+to empty cells.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id1bfba441-76fb-4753-b8f9-0a18b68e630c"><p class="p Opt">0 — Writes empty cell definitions to the
+output file. This is the default.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd4c1c1be-437e-4c35-93e8-84cb53a42452"><p class="p Opt">1
+— Does not write empty cells to the output. References to empty
+cells are written to the output.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idde6910a5-0678-4398-9e20-ae88674318e3"><p class="p Opt">2
+— Does not write empty cells or their immediate references to the
+output. Cells that contain only references to empty cells are written
+to the output.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd8316327-1ab2-40cb-9e11-d5e05971f9e8"><p class="p Opt">3
+— Does not write empty cells or their references to the output.
+This option works recursively, removing all cells that only contain
+references to empty cells.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id417564d2-2379-45ce-98e1-aaec0e150c62">-createcache {<span class="keyword ParameterName OptionalDefault">0</span> | 1} </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying
+whether to create a PCR (cache) file for the merged output file.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id731acbc2-5a95-41e3-88de-783810a84106"><p class="p Opt">0 — No cache file is created. This is the
+default.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id0405a14e-f76c-4e92-8a01-3e784524a7b4"><p class="p Opt">1
+— A cache file is created for the generated merged output file.</p>
+</li>
+</ul>
+<p class="p">The PCR file is used for performing incremental loading of a
+layout and can speed up initial loading of a layout. Refer to “<a class="xref Link" href="../../calbr_drv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'The Peek Cache Repository File', 'calbr_drv_user'); return false;">The Peek Cache Repository File</a>” and “<a class="xref Link" href="../../calbr_drv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Incrementally Loading Layouts', 'calbr_drv_user'); return false;">Incrementally Loading Layouts</a>”
+in the <span class="ph FontProperty ManualTitle">Calibre DESIGNrev Layout Viewer User’s Manual</span> for
+more information.</p>
+<p class="p">The -createcache argument disables the ‑strictmode argument.
+Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd0ebac3d-761e-4d42-bd53-0c107d37966a">Creating a PCR File for an OASIS Strict Mode Layout</a>” for more
+information.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__iddf44e788-5e6d-4fdd-8179-dfd08c6ca315">‑exclude_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[.<span class="keyword ParameterName OptionalReplaceable">dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[.<span class="keyword ParameterName OptionalReplaceable">dtn</span>]} | ‑include_layer {<span class="keyword ParameterName OptionalReplaceable">l1</span>[<span class="keyword ParameterName OptionalReplaceable">.dt</span>] … <span class="keyword ParameterName OptionalReplaceable">ln</span>[<span class="keyword ParameterName OptionalReplaceable">.dtn</span>]}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An
+optional argument specifying a list of layer numbers that contain
+the objects to exclude or include from the merged output file. You
+can specify layers as either a layer number or a layer number and
+datatype value separated by a “.”. The ‑exclude_layer or ‑include_layer argument
+and associated values should be specified using the Tcl list command
+and be enclosed in brackets. For example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.gds -in  layout2.gds \
+	‑exclude_layer [list 1 2 3] -out layout3.gds</code></pre><p class="p">Instead of specifying layer numbers, you can
+specify the name of an ASCII file containing the layer numbers to
+be excluded or included from the merged output file. For example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout0.gds -in layout1.gds -out merged.gds \
+	‑exclude_layer exclude_layers.txt</code></pre><p class="p">The layer numbers in the ASCII file can be on the same line or
+span multiple lines, as long as each number is separated by a space,
+tab, or newline character.</p>
+<p class="p">The ‑exclude_layer and ‑include_layer arguments
+apply globally to any input files specified by the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+and <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+sets. To exclude or include layers from a specific input file, use
+the ‑exclude_layer or ‑include_layer argument with the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59">Using ‑map_layer, ‑include_layer, and ‑exclude_layer</a>” for more
+information on using this argument.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida02b75bd-d406-44a3-9f72-ebdef3d78b48">-createtop <span class="keyword ParameterName OptionalReplaceable">cellname</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+that specifies the name of a topcell in which to place the topcells
+from the input files. During the merge operation, the topcell in
+each input file becomes a child of the new topcell. When this argument
+is not specified, the input layouts are merged in import-style and
+no topcell is created.</p>
+<p class="p">When this argument is specified with -topcell, the value specified
+for <span class="keyword ParameterName OptionalReplaceable">cellname</span> becomes
+the new top cell and it contains the cell specified by <span class="keyword ParameterName OptionalReplaceable">topcellname</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id04e8b4f6-c9eb-4c3b-b7e8-1e7acd47becf">-topcell <span class="keyword ParameterName OptionalReplaceable">topcellname</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies
+the name of a top cell to output to the resulting merged layout.
+Only one top cell and the references in the hierarchy of the top
+cell are output to the merged results. This argument can be useful
+in removing unreferenced cells from an IP library file.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide8045561-6f6f-4ea8-9ff0-a1d4bff2ddd5">-map_cell {{<span class="keyword ParameterName OptionalReplaceable">cellname</span> <span class="keyword ParameterName OptionalReplaceable">mapcellname</span>} | <span class="keyword ParameterName OptionalReplaceable">filename</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument
+that renames (or maps) a cellname from the input layout file(s)
+to a cellname in the output file. You can specify the ‑map_cell
+argument multiple times in the same layout filemerge command, using
+either form of the mapping options. If you specify multiple mappings
+of the same cellname, the first mapping is always used. The cells
+are renamed before merging.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id36108540-e0c5-49d6-ac1c-1a9e19cb977c"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">cellname</span> <span class="keyword ParameterName OptionalReplaceable">mapcellname</span> —
+Specifies a cellname in the input file (<span class="keyword ParameterName OptionalReplaceable">cellname</span>)
+and the cellname to map it to in the output file (<span class="keyword ParameterName OptionalReplaceable">mapcellname</span>).</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id180f5c6d-5077-4e54-8444-699c869fded7"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">filename</span> —
+Specifies the name of an ASCII file containing the cellname mappings.
+The cellname for each “from” cell and “to” cell is specified on
+a separate line in the file. Blank lines and lines beginning with
+the pound sign (#) are ignored.</p>
+</li>
+</ul>
+<p class="p">Both mapping options support the use of glob‑style wildcards
+(for example, *, ?, and […]) for the cellname in the input file.
+In this example, the wildcards match cells named “CELL3abc” and
+“CELL5xyz” in an input layout file.</p>
+<pre class="pre codeblock"><code>CELL[35]??? NEW_MAPPED_CELL</code></pre><p class="p">Because wildcards can match zero or more cell occurrences, you
+should ensure they are only used for cells that are identical but
+have different names, as only one cell will be written to the output
+file.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The intended purpose of the ‑map_cell argument is to make
+it easy to remove many similarly named child cells, by giving the
+child cells the same name, and then deleting those cells. However,
+renaming <span class="ph FontProperty emphasis">both</span> parent
+and child cells to the same name can create circular references.</p>
+</div>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id96608851-875f-440c-9673-3f1f0206f4eb"><span class="keyword ParameterName Optional">-map_layer</span> {{<span class="keyword ParameterName OptionalReplaceable">from_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt1</span>] <span class="keyword ParameterName OptionalReplaceable">to_layer</span>[.<span class="keyword ParameterName OptionalReplaceable">dt2</span>]}…}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying that objects
+on the <span class="keyword ParameterName OptionalReplaceable">from_layer</span> of
+the input file are written to the <span class="keyword ParameterName OptionalReplaceable">to_layer</span> in
+the resulting output file. Layers can be specified as either a layer
+number or a layer number and datatype value separated by a period
+(.). You should use the Tcl list format to specify multiple <span class="keyword ParameterName OptionalReplaceable">from_layer</span> and <span class="keyword ParameterName OptionalReplaceable">to_layer</span> values.
+For example:</p>
+<pre class="pre codeblock"><code>-map_layer [list 0 1 100.5 200.5]</code></pre><p class="p">You cannot specify ‑map_layer and ‑layer_bump for files specified
+by the ‑in argument. When you specify ‑map_layer with ‑include_layer
+or ‑exclude_layer, the layers specified by ‑include_layer or ‑exclude_layer
+are filtered before applying the ‑map_layer argument to any unfiltered
+layers.</p>
+<p class="p">This option applies globally to any input files specified by
+the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>, and <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+sets. To perform file-specific layer mapping, use the ‑map_layer option
+available with the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59">Using ‑map_layer, ‑include_layer, and ‑exclude_layer</a>” for more
+information on using this argument.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf544d4ef-2f0f-4323-9017-a8da5ee35957">‑peek [‑cells] [‑layers] [‑undefcells]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying the information
+to return from the layout filemerge operation. This argument returns
+values in the same format as the <a class="xref fm:HeadingOnly" href="Command_LayoutPeek_ida7fb2577.html#ida7fb2577-4942-4964-99c6-3f30762c1991__Command_LayoutPeek_ida7fb2577.xml#ida7fb2577-4942-4964-99c6-3f30762c1991" title="Returns information from a layout database without loading the file into memory.">layout peek</a> command. Values returned by this argument can be assigned
+to a Tcl variable for further processing.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id8c3b3cfd-91fc-4ef3-82ca-bb6547883549"><p class="p Opt">‑cells — Returns the names of all cells in the
+merged results.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id532d5e0e-71c6-48ba-98b2-e6cdde83be34"><p class="p Opt">‑layer — Returns the names of all layers in
+the merged results.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfff34829-a894-4af8-9c50-ea855716b5ff"><p class="p Opt">‑undefcell — Returns the names of all cells
+that are referenced but not defined in the merged results.</p>
+</li>
+</ul>
+<p class="p">To return results from more than one ‑peek argument,
+the arguments must be grouped in a Tcl list format. For example:</p>
+<pre class="pre codeblock"><code>‑peek [list ‑cells ‑layers]</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idbcfbcbb3-40eb-4aff-8460-110329448a6a">-preserve <span class="keyword ParameterName OptionalReplaceable">filterfile</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying
+the name of a file that contains the filenames and cellnames to
+preserve during the merge operation. This argument makes controlled
+merges possible by preserving the file and cell pairs in the merged
+output file. In other words, the cellnames in a specific file will
+always overwrite cells with the same name from any input layout
+files during the merge operation. This can be useful for assembling
+library files.</p>
+<p class="p">Each filename and cellname that
+you want to preserve is specified on a separate line in the <span class="keyword ParameterName OptionalReplaceable">filterfile</span> using
+the following syntax:</p>
+<pre class="pre codeblock leveled"><code><span class="keyword ParameterName OptionalReplaceable">filename</span> <span class="keyword ParameterName OptionalReplaceable">cellname</span> [-nohier]</code></pre><p class="p">For example:</p>
+<pre class="pre codeblock leveled"><code>filename_x cellname_a 
+filename_x cellname_b 
+filename_z cellname_c </code></pre><p class="p">The <span class="keyword ParameterName OptionalReplaceable">filename</span> must
+be a full or relative pathname if the file is located in a different
+directory. If a <span class="keyword ParameterName OptionalReplaceable">cellname</span> is
+specified more than once with a different filename, then the last <span class="keyword ParameterName OptionalReplaceable">filename</span> and <span class="keyword ParameterName OptionalReplaceable">cellname</span> definition
+in the <span class="keyword ParameterName OptionalReplaceable">filterfile</span> takes
+precedence.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If
+this argument is not used and a cellname conflict is discovered
+during the merge operation, then the last input file on the command
+line appends, overwrites, or renames cells in the other input file(s).
+When a cellname conflict occurs during overwrite mode, the last
+input file specified on the command line overwrites cells from other
+input files.</p>
+</div>
+<p class="p">For example, consider the case
+where you want to use cell A from layout 1 and cell B from layout
+2, but both layout 1 and layout 2 have a cell A and cell B. Without
+the ‑preserve argument, you can only have A and B in the output
+from the same layout. Using the ‑preserve argument you can preserve
+the cells in the final result by specifying cell A, layout 1 and
+cell B, layout 2 in the <span class="keyword ParameterName OptionalReplaceable">filterfile</span>,
+as follows:</p>
+<pre class="pre codeblock"><code>layout1 A
+layout2 B</code></pre><div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__iddc24fce3-50a0-427b-afb6-66dd7fbdca8b"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Merge
+and Preserve</span><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_preserve.jpg" /></div><br /></div>
+<p class="p">By default, all cells are preserved
+down the hierarchy of a cell specified in the <span class="keyword ParameterName OptionalReplaceable">filterfile</span>.
+To preserve only a given cell, specify the ‑nohier option in the <span class="keyword ParameterName OptionalReplaceable">filterfile</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id9421a167-fc51-4c41-9575-b742fffe4917">‑strictmode <span class="keyword ParameterName Optional">{0</span> | <span class="keyword ParameterName OptionalDefault">1</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies whether
+or not to create strict mode output for the resulting OASIS layout
+database.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id195b24cf-5f23-4562-a2a8-ad542bd7c423"><p class="p Opt">0 — Creates non-strict mode output.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida74736a9-bd82-4d4b-bfcf-806546048035"><p class="p Opt">1 — Creates strict mode output. This is
+the default.</p>
+</li>
+</ul>
+<p class="p">When creating a gzipped OASIS file and ‑strictmode
+1 (the default) is specified, a warning is generated and strictmode
+is disabled.</p>
+<p class="p">The ‑strictmode argument cannot be enabled
+with the ‑createcache argument. Refer to “<a class="xref fm:HeadingAndPage" href="#idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd0ebac3d-761e-4d42-bd53-0c107d37966a">Creating a PCR File for an OASIS Strict Mode Layout</a>” for more
+information.</p>
+<p class="p">For more information on OASIS strict mode, refer to the section
+“<a class="xref Link" href="../../calbr_oasis_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Name Records and Table Offsets', 'calbr_oasis_gd'); return false;">Name Records and Table Offsets</a>”
+in the <span class="ph FontProperty ManualTitle">Open Artwork System Interchange Standard (OASIS) Guide</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id9dc02b53-8c01-4cb3-94fe-2e556c20bd91">-tmp <span class="keyword ParameterName OptionalReplaceable">tmp_dir</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used to
+specify a temporary directory for expanding input files that are
+in gzip format. This argument is useful for performance reasons. </p>
+<p class="p">If you do not specify this argument,
+the merge operation uses the value of the MGC_CWB_TMP_DIR environment
+variable, or <span class="ph filepath">$HOME/.calibrewb_workspace/tmp</span> if the
+environment variable is not set. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id82c75257-c2eb-4a1f-a4b6-b18beefb7ae2">-integerScaling</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used to set the target
+output precision to the lowest common multiple of all input layout
+files. A positive integer value is used to scale the precisions
+instead of a fractional number, which can potentially cause problems
+with some geometry representations. </p>
+<p class="p">The default behavior is to scale the input layout files having
+lower precision values to match that of the layout file with the
+highest precision value. For example, if you merge two layout files
+whose precisions are 4000 and 10000, the layout with the precision
+of 4000 is scaled by 2.5 so that it also has a precision of 10000. </p>
+<p class="p">Using this same example, if -integerScaling is specified, the
+layout file with a precision of 4000 is scaled by 5 and the layout
+file with a precision of 10000 is scaled by 2, which avoids scaling
+by fractional numbers.</p>
+<p class="p">This argument cannot be specified with ‑precision.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfd6dc915-a862-4a42-939b-2efb4d270cbe">-precision <span class="keyword ParameterName OptionalReplaceable">value</span></dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument used to set the target
+output precision of the merged results. The specified <span class="keyword ParameterName OptionalReplaceable">value</span> must
+be greater than 0.</p>
+<p class="p">This argument cannot be specified with ‑integerScaling.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id7a94bc03-a5b4-44f8-a8bf-cfce8026e81b">-reportconflicts</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that reports
+merge conflicts. Information generated indicates cells causing name
+conflicts as well as actions taken for each merge conflict. For
+example:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc1dc94cd-2f7a-4c24-ac11-866a01d1dcc2"><p class="p">Using -reportconflicts
+with -mode append and -smartdiff:</p>
+<pre class="pre codeblock"><code>Note: cell spare_top already exists in spare_top_fill.oas and content differs, appended with spare_top from spare_top_wIP.oas.</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida6f5106a-7952-4164-9631-563575a071ba"><p class="p">Using -reportconflicts
+with the -mode rename and ‑smartdiff:</p>
+<pre class="pre codeblock"><code>Note: cell spare_top already exists in spare_top_fill.oas and content differs, renamed with spare_top_WB1 from spare_top_wIP.oas.</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id42400536-b185-4513-aa15-6d4556f34393"><p class="p">Using -reportconflicts
+with -mode overwrite:</p>
+<pre class="pre codeblock"><code>Note: cell spare_top already exists in spare_top_fill.oas and content differs, overwritten with spare_top from spare_top_wIP.oas.</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id515af4ef-24f2-4eee-9c41-55d6d6dbd83a"><p class="p">Using -reportconflicts
+with -mode forcerename:</p>
+<pre class="pre codeblock"><code>Note: cell spare_top already exists in spare_top_fill.oas and content differs, force renamed with spare_top_WB2 from spare_top_wIP.oas.</code></pre></li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id05fa5557-9ef4-4aae-91fb-74eef1b6afce">-stringSeverity {ignore | warning | fix | <span class="keyword ParameterName OptionalDefault">error</span>}</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies the
+type of message, if any, that is generated when illegal a-string
+values are found while reading an OASIS file.</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id02ea0920-8dd1-4316-ad63-65f935c31fb4"><p class="p Opt">ignore
+— Does not generate any messages when illegal a-string values are
+found while reading an OASIS file, and writes the output layout
+with illegal characters intact.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id976a6b8e-91ed-4d04-b4b8-63f407019b32"><p class="p Opt">warning
+— Generates a warning message for each illegal a-string value found
+while reading an OASIS file, and writes the output layout with illegal
+characters intact.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide8e7d80f-5105-4e22-b870-1168bc37a547"><p class="p Opt">fix
+— Replaces any illegal a‑string character with a space ( ) character
+and generates a warning message.</p>
+</li>
+<li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf667cc0d-4d57-4083-b850-d505329e634c"><p class="p Opt">error
+— Generates an error message for each illegal a-string value found
+while reading an OASIS file, and does not output an OASIS file.
+This is the default.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id50af6624-c50a-46ec-b121-3ad8992b87d1">‑exclude_cells <span class="keyword ParameterName OptionalReplaceable">cells</span> [‑deleteChildCells]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument that specifies the
+name of one or more <span class="keyword ParameterName OptionalReplaceable">cells</span> to
+suppress from being output by the filemerge operation. This argument
+can be specified one or more times per invocation of the layout
+filemerge command.</p>
+<p class="p">Any references to the excluded cells are output to the merged
+results but the cells are left undefined. When loading the merged
+results, Calibre DESIGNrev replaces any undefined cells with empty
+cells. To suppress references to excluded cells, use the ‑noemptycells argument
+with the 2 or 3 option. </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc7001c4e-e9f1-4f03-b7e3-fff96923a885"><p class="p Opt">‑deleteChildCells
+— Deletes any child cells that are referenced in the hierarchy of
+the specified cell(s). Child cells referenced outside of the hierarchy
+of the specified cell are not deleted.</p>
+</li>
+</ul>
+<p class="p">The following rules apply to cell names:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf3084b26-7a90-40cd-a058-143c489b717c"><p class="p">Cell names
+can be specified explicitly or by using wildcard characters. </p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id00a1e412-1da0-43f1-b106-47d6e2809e8a"><p class="p">Glob-style
+wildcards (*, ?, \, and […]) are supported in cell names, where:</p>
+<p class="p BlockIndent">* — Matches any sequence of characters.</p>
+<p class="p BlockIndent">? — Matches any single character.</p>
+<p class="p BlockIndent">\ — Escapes the special meaning of the wildcard character.</p>
+<p class="p BlockIndent">[…] — Matches the set of characters specified within
+the brackets. The dash (‑) character can be used to denote a range.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id0f11f4b6-adad-4a42-80c8-a6813163d700"><p class="p">Multiple cells
+should be specified using the Tcl list command. The Tcl list command must
+be enclosed in brackets as shown in the following example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.gds -in layout2.gds \
+-out layout3.gds -exclude_cell [list cell_A cell_B cell_C]</code></pre></li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb07e1ab1-99e4-4864-bb4b-534114833a2d">-exclude_properties</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument specifying that geometry
+and placement properties should not be written to the merged layout
+file. Cell and file level properties are still written to the merged layout
+file.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section ReturnedValues"><h2 class="title Subheading sectiontitle">Return Values</h2><p class="p">Returns an error string when
+an error occurs. Otherwise, no values are returned when the files are
+successfully merged.</p>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">The layout filemerge command
+performs a disk-based merge of multiple GDS input files, multiple
+OASIS input files, or a mixed input format (GDS and OASIS) without
+loading them into memory.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Layout filemerge is the recommended solution when merging
+files, over other options such as layout merge or $L import layout,
+because it is fast and has a low memory requirement.</p>
+</div>
+<p class="p">Refer to the ‑out argument for
+information on the output format. The functionality provided by the
+layout filemerge command is also available in the Calibre DESIGNrev
+GUI by selecting <span class="ph menucascade"><span class="ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="ph uicontrol">File
+Merge</span></span>. Refer to “<a class="xref Link" href="../../calbr_drv_user/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Layout Filemerge Dialog Box', 'calbr_drv_user'); return false;">Layout Filemerge Dialog Box</a>” in the <span class="ph FontProperty ManualTitle">Calibre DESIGNrev Layout Viewer User’s Manual</span> for
+more information.</p>
+<p class="p">The layout filemerge operation
+supports an import-style (one topcell is maintained) and merge-style
+(each file is given its own topcell) in the resulting output.</p>
+<p class="p">Specifying an input file with no additional arguments generates
+an output file as follows:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id0be8718a-d924-4751-8f6f-f82e71fa4b71"><p class="p">The contents
+of duplicate cells are appended.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id7c4527a9-1d91-4084-a9fa-e9d8206d969f"><p class="p">CBLOCKS are
+written if any of the input OASIS files contain CBLOCKS.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd08dee22-4c69-4a0b-b11d-4e7e313b7cbe"><p class="p">If there are
+cellname conflicts, cells are altered only when the cell contents
+are different.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id9d2d5c34-0f9c-40be-b507-6db6df2b8515"><p class="p">Empty cell
+definitions are written.</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idffd6f24c-4b22-4381-9676-752681b03382"><p class="p">The input layout(s)
+with lower precision values are scaled to match that of the layout
+file with the highest precision.</p>
+</li>
+</ul>
+<p class="p">Files are processed in the order in which they are specified
+on the command line. For example, the files and directories specified
+in the following command:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout0.oas -in dir1 \
+	-in [list -name layout1.oas] ‑in dir2 -in layout2.oas \
+	-out layout_merged.oas -report_conflicts</code></pre><p class="p">Are processed in the following order:</p>
+<ol class="ol"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id87e14318-d775-4825-a2ea-08938cb6368c"><p class="p"><span class="ph filepath">layout0.oas</span></p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id8b3668d5-436c-46c9-85f7-39a838d3346b"><p class="p">Contents of <span class="ph filepath">dir1</span></p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id7900b09e-cf3a-4ad9-9588-c484d29ad4bf"><p class="p"><span class="ph filepath">layout1.oas</span></p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id07a60a65-e4aa-495c-9da6-0d9296f21ed2"><p class="p">Contents of <span class="ph filepath">dir2</span></p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__iddd36d197-785d-4c72-af73-7467e50add83"><p class="p"><span class="ph filepath">layout2.oas</span></p>
+</li>
+</ol>
+<p class="p">The layout filemerge command supports
+gzipped input files and supports options for specifying where to
+expand input files that are in gzip format. Refer to the description
+of the ‑tmp argument for more information.</p>
+<p class="p">When merging a file that contains
+an undefined cell, the definition of the cell is taken from the first
+occurrence of the input file specified in the command that contains
+the cell definition. This behavior only applies when rename mode
+(-rename) is specified. For example, assume Cell A is referenced
+in <span class="ph filepath italic">file1.gds</span> but is
+not defined, and it is defined in both <span class="ph filepath italic">file2.gds</span> and <span class="ph filepath italic">file3.gds</span>.
+If you specify the following command, the definition of cell A in
+the output file is taken from <span class="ph filepath italic">file2.gds</span> since
+this is the first file specified in the command line that contains
+the cell definition:</p>
+<pre class="pre codeblock leveled"><code>calibredrv -a layout filemerge -in file1.gds -in file2.gds -in file3.gds \ 
+	-rename ‑out out.gds </code></pre><div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id25914a89-f3f1-45e0-97ae-812b3e811d59"><h2 class="title Subheading sectiontitle">Using
+‑map_layer, ‑include_layer, and ‑exclude_layer</h2><p class="p">You can apply the ‑map_layer, ‑include_layer, and ‑exclude_layer
+options globally to input files, at a file-specific level, or both
+globally and file-specific.</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id01828ac0-2894-4444-8400-62ecf0a0b665"><p class="p">To apply
+globally, you can specify any of these options with one or more
+of the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+and <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+sets as shown in the following example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout0.oas -in layout1.oas \
+	‑in /home/layout_files ‑map_layer [list 111 222] \
+	‑include_layer [list 222]</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id62fea332-88b8-4796-9570-97e3d7b95169"><p class="p">To apply at
+a file-specific level, you can specify any of these options with
+the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument
+set. The ‑map_layer, ‑include_layer, and ‑exclude_layer options
+are applied only to the associated input file specified by the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> argument set.
+For example:</p>
+<pre class="pre codeblock"><code>layout filemerge -in [list -name layout0.oas] \
+	-maplayer [list 111 222] -include_layer [list 222]</code></pre></li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb62db3c4-c8c6-4e5b-84a8-4223856b1d0d"><p class="p">To apply both
+globally and at a file-specific level, you can specify any of these
+options with any combination of the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+or <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+set. In this situation, the following rules apply:</p>
+<ul class="ul"><li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idbc6df514-6edc-4bf8-a00e-13fd1e91ca6e"><p class="p">The ‑map_layer
+values specified with <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName Required">‑name</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> take
+precedence over the ‑map_layer values specified with the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span>, <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+or <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> .</p>
+</li>
+<li class="li" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id4ccacf13-0a7f-4b7c-bca5-9f0ea86ea318"><p class="p">The ‑exclude_layer
+or ‑include_layer values specified with <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">layoutfile</span> or <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">directory</span>,
+or <span class="keyword ParameterName Required">-in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> are
+not applied to a layout file for which a file‑specific ‑exclude_layer
+or ‑include_layer option is specified. For example, the following command
+excludes layer 1 from the results of merging <span class="ph filepath">a.gds</span> to <span class="ph filepath">out.gds</span> and
+excludes layer 0 from the results of merging <span class="ph filepath">b.gds</span> to <span class="ph filepath">out.gds</span>:</p>
+<pre class="pre codeblock"><code>layout filemerge -in a.gds \
+	-in [list -name b.gds ‑exclude_layer 0] -exclude_layer 1 \
+	-out out.gds</code></pre></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida3993daa-5209-45ef-a7c7-6162f604ab7b"><h2 class="title Subheading sectiontitle">Merging
+Databases with Different Precisions</h2><p class="p">You can merge files that have different precisions.
+The precision of the output file is the same as the highest precision
+among the input files. The x and y coordinates of records in the
+files at lower precision are magnified. A message appears in the
+transcript for each file that is scaled by the magnification factor.</p>
+<p class="p">To override the default behavior for determining the output layout
+precision, you can use the ‑precision or ‑integerScaling argument.</p>
+</div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd0ebac3d-761e-4d42-bd53-0c107d37966a"><h2 class="title Subheading sectiontitle">Creating
+a PCR File for an OASIS Strict Mode Layout</h2><p class="p">Specifying the ‑createcache argument with the ‑strictmode argument
+is not supported and generates an error. If you require a PCR file
+for an OASIS strict mode layout, you can create one by incrementally
+loading the strict mode layout using the ‑incr argument available
+with the layout create command. Refer to “<a class="xref fm:HeadingAndPage" href="Command_LayoutCreateGdsOrOasisFile_id53adbc38.html#id53adbc38-6deb-4a76-8ad3-6101fb04e997__Command_LayoutCreateGdsOrOasisFile_id53adbc38.xml#id53adbc38-6deb-4a76-8ad3-6101fb04e997" title="Creates a view of a layout from an existing GDS or OASIS(1) layout database.">layout create (GDS or OASIS file)</a>” for
+more information. You can also use the ‑handle argument available
+with the layout peek command to create a .pcr file for an OASIS
+strict mode layout. Refer to “<a class="xref fm:HeadingAndPage" href="Command_LayoutPeek_ida7fb2577.html#ida7fb2577-4942-4964-99c6-3f30762c1991__Command_LayoutPeek_ida7fb2577.xml#ida7fb2577-4942-4964-99c6-3f30762c1991" title="Returns information from a layout database without loading the file into memory.">layout peek</a>” for
+more information.</p>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2d6ece25-12fd-441e-8a7d-d0626db19770"><h2 class="title Subheading sectiontitle">Example
+1 - Using Defaults</h2><p class="p">This example merges two layouts, <span class="ph filepath">spare_top_fill.oas</span> and <span class="ph filepath">spare_top_wIP.oas</span>,
+and outputs the results to <span class="ph filepath">spare_top_merged.oas</span>.
+Default values for all arguments are used since no arguments are
+specified. Duplicate cells are concatenated, and CBLOCKs and empty
+cell definitions are written to the output. The input file with
+the lowest precision value is scaled to match the precision of the
+input file having the higher precision value. An error is generated
+if the databases have different precision values.</p>
+<pre class="pre codeblock"><code>layout filemerge -in spare_top_fill.oas -in spare_top_wIP.oas \
+	-out ./output/spare_top_merged.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idaecf31a6-4d0a-4131-a5e4-eb61ce03af56"><h2 class="title Subheading sectiontitle">Example 2 - Increment
+(or Bump) Layers</h2><p class="p">This example merges <span class="ph filepath">spare_top_fill.oas</span> and <span class="ph filepath">spare_top_wIP.oas</span> into
+the output file <span class="ph filepath">spare_top_merged_bumped.oas</span>.
+All layers in <span class="ph filepath">spare_top_wIP.oas</span> are incremented
+by 200. For example, layer 31 in <span class="ph filepath">spare_top_wIP.oas</span> becomes
+layer 231 in <span class="ph filepath">spare_top_merged_bumped.oas</span>.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in spare_top_fill.oas -in spare_top_wIP.oas 200 \
+	-out ./output/spare_top_merged_bumped.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id54ef9e90-d82f-472f-9c12-b14253bb9f99"><h2 class="title Subheading sectiontitle">Example 3 - Include
+Layers</h2><p class="p">This example merges <span class="ph filepath">spare_top_fill.oas</span> and <span class="ph filepath">spare_top_wIP.oas</span> into
+the output file <span class="ph filepath">spare_top_merged_fill_layers.oas</span>.
+The ‑in ‑name argument set merges the layers 52.71, 53.71, 54.11,
+and 55.11 in <span class="ph filepath">spare_top_fill.oas</span> with all layers
+in <span class="ph filepath">spare_top_wIP.oas</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in [list -name spare_top_fill.oas \
+	-include_layer [list 52.71 53.71 54.11 55.11]] \
+	-in [list -name spare_top_wIP.oas] \
+	‑out ./output/spare_top_merged_fill_layers.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idb9422a7c-9e77-4115-a8e0-8221a00feb31"><h2 class="title Subheading sectiontitle">Example
+4 - Filter Input Layers Specified in an ASCII File</h2><p class="p">This example merges the layout files named <span class="ph filepath">layout0.oas</span> and <span class="ph filepath">layout1.oas</span>.
+The <span class="ph filepath">layers.txt</span> file specifies the layers to
+include in the merged output from <span class="ph filepath">layout0.oas</span>.
+For example:</p>
+<pre class="pre codeblock"><code>1.0 3.0 5.0 7.0 9.1 9.3</code></pre><p class="p">Each layout contains one cell named “TOPCELL”. The results are
+merged into “TOPCELL” in <span class="ph filepath">out.oas</span>, and include
+the objects from all layers for <span class="ph filepath">layout1.oas</span> and
+the objects from the layers specified in <span class="ph filepath">include_layers.txt</span> for <span class="ph filepath">layout0.oas</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.oas -in [list -name layout0.oas \
+	‑include_layer layers.txt] -out ./output/out.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idf1eafc44-2385-4a26-a205-67129a0ed900"><h2 class="title Subheading sectiontitle">Example 5 - Include
+All References Without Polygons or Texts</h2><p class="p">This example assumes there are only
+references (no objects) on layer 10 of the input GDS file named <span class="ph filepath">lab1a.gds</span>.
+The following command outputs only the cellnames in <span class="ph filepath">lab1a.gds</span> and
+the references on layer 10 to the file <span class="ph filepath">out_layer10_refs.gds</span>.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in lab1a.gds -include_layer 10 \
+	-out ./output/out_layer10_refs.gds</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id45bccdb6-0d83-4dad-a747-e9f1b6b7907d"><h2 class="title Subheading sectiontitle">Example 6 - Exclude
+Layers</h2><p class="p">This example merges the files <span class="ph filepath">layout.gds</span> and <span class="ph filepath">layout_block.gds</span>,
+excluding layers 1 and 2 in <span class="ph filepath">layout_block.gds</span> from
+the results. The ‑mode overwrite argument causes duplicate cells
+from <span class="ph filepath">layout_block.gds</span> to overwrite the same
+cell found in <span class="ph filepath">layout.gds</span>. The results are output
+to <span class="ph filepath">layout_exclude_layers.gds</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	‑exclude_layer [list 1 2] ‑out ./output/layout_exclude_layers.gds \
+	-mode overwrite</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc09daa2e-9e21-4963-a959-6ccaa909aa49"><h2 class="title Subheading sectiontitle">Example
+7 - Append a Specified Suffix </h2><p class="p">This example merges the layout files named <span class="ph filepath">spare_top_fill.oas</span> and <span class="ph filepath">spare_top_wIP.oas</span>.
+The merged results contain two top level cells named “spare_top_fill”
+and “spare_top_IP”. The string “_fill” is appended to each cell
+in <span class="ph filepath">spare_top_fill.oas</span> and the string “_IP”
+is appended to each cell in <span class="ph filepath">spare_top_wIP.oas</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in [list -name spare_top_fill.oas -suffix _fill] \
+	-in [list -name spare_top_wIP.oas -suffix _IP] \
+	-out merged_results.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ideaa98369-7826-420f-8a5e-f8253f1d4b54"><h2 class="title Subheading sectiontitle">Example
+8 - Place Cells from Multiple Input Layout Databases</h2><p class="p">This example creates a new topcell named “new_top” and places
+the cells from three input layout databases (<span class="ph filepath">layout1.gds</span>, <span class="ph filepath">layout2.gds</span>,
+and <span class="ph filepath">layout3.gds</span>) in <span class="ph filepath">merged_layouts.gds</span> at
+the specified x and y coordinates. The x and y coordinates for <span class="ph filepath">layout1.gds</span> are
+in dbus. The x coordinate value is specified as a floating point
+number that is acceptable since the number (10000.0) contains no
+fractional component. The x and y coordinates for <span class="ph filepath">layout2.gds</span> and <span class="ph filepath">layout3.gds</span> are
+specified in microns (indicated by the ‘u’ character), where some
+values are specified as floating point numbers with fractional components.</p>
+<pre class="pre codeblock"><code>layout filemerge -createtop new_top \
+	-in {-name layout1.gds -placecell {-x 10000.0 -y 20000d}} \
+	-in {-name layout2.gds -placecell {-x 2.0u -y 1.5u}} \
+	-in {-name layout3.gds -placecell {-x 3u -y 1.5u}} \
+	-out    merged_layouts.gds</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idd119fd96-f15d-430e-88fc-7897bb2df546"><h2 class="title Subheading sectiontitle">Example 9 - Append
+or Concatenate Cells (to resolve cellname conflicts when merging)</h2><p class="p">This example combines the files <span class="ph filepath">layout.gds</span> and <span class="ph filepath">layout_block.gds</span> into
+the output file <span class="ph filepath">layout_design_with_block.gds</span>.
+Any cells having the same name are concatenated.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	‑out layout_design_with_block.gds ‑mode append</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id2c79c353-ae1d-4ae2-9903-75a15ec163bf"><h2 class="title Subheading sectiontitle">Example 10 - Overwrite
+or Swap Cells (to swap cell definitions)</h2><p class="p">In this example, any cells that
+have the same name are overwritten. Duplicate cells in <span class="ph filepath">layout_block.gds</span> overwrite
+cells in <span class="ph filepath">layout.gds</span>, deleting the contents
+of any duplicate cells from the first file.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	‑out layout_design_with_block.gds ‑mode overwrite</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idbe1acdb9-e64d-4b24-aa4e-a80c6443ef27"><h2 class="title Subheading sectiontitle">Example 11 - Rename
+or Preserve Cells</h2><p class="p">In this example, any cells that
+have the same name are uniquely renamed, by adding a “_WB<span class="keyword ParameterName OptionalReplaceable">x</span>” extension,
+where <span class="keyword ParameterName OptionalReplaceable">x</span> is
+an integer. The result is an import-style merging of the two layouts.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	-out ./output/layout_design_with_block.gds -mode rename</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ided069864-6547-47d7-8fc9-4af27ddd0edc"><h2 class="title Subheading sectiontitle">Example 12 - Force
+Rename Cells</h2><p class="p">In
+this example, all cells are uniquely renamed, by adding a “_WB<span class="keyword ParameterName OptionalReplaceable">x</span>”
+extension, where <span class="keyword ParameterName OptionalReplaceable">x</span> is
+an integer. The result is a merge-style merging of the layouts.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	-out ./output/layout_design_with_block.gds -mode forcerename</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idbc2d9bab-8e6c-4655-8452-6c986c49a806"><h2 class="title Subheading sectiontitle">Example 13 - Use -smartdiff
+Option to Compare Cells</h2><p class="p">In this example, -smartdiff is used
+to find the differences between two layouts. By default, the layout
+viewer compares cells by name alone, however to compare cell content
+as well you need to use the -smartdiff option. After executing the
+layout filemerge command below, visually compare the two versions
+of the file-merged layout to identify the newer cells. If “-mode rename”
+is used without -smartdiff, identical cells with the same name are
+duplicated, however with -smartdiff only differing cells with the
+same name are duplicated.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in dd1.gds -in dd2.gds -out outfile.gds \ 
+	-smartdiff -mode rename </code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id266e9027-fb45-46ed-bb0d-50957bc7ab8b"><h2 class="title Subheading sectiontitle">Example 14 - Increment
+(or Bump) Layers and Create a Topcell</h2><p class="p">This example combines the files
+“dd1.gds” and “dd2.gds” into the output file “outfile.gds.” All the
+layers in “dd1.gds” are incremented by 60. Any cells that have the
+same name are uniquely renamed. The result is a merging of the layouts,
+and the output file has a topcell named TOP.</p>
+<pre class="pre codeblock leveled"><code>layout filemerge -in dd1.gds 60 -in dd2.gds \ 
+	-out outfile.gds -mode rename -createtop TOP </code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id93d6891f-deb2-4ea5-8e68-d60c3d92dd4a"><h2 class="title Subheading sectiontitle">Example
+15 - Specify a Topcell Name</h2><p class="p">This example uses the -topcell argument when merging <span class="ph filepath">layout.gds</span> and <span class="ph filepath">layout_block.gds</span> into <span class="ph filepath">layout_with_block.gds</span>. </p>
+<div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id5ce8c5fb-5c70-4792-a1ef-a220ec54db20"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example19.jpg" /></div><br /></div>
+<pre class="pre codeblock"><code>layout filemerge -in layout.gds -in layout_block.gds \
+	-out ./output/layout_with_block_ntc.gds -mode rename \
+	-topcell TOPCELL</code></pre><p class="p">The -topcell argument causes only the references in TOPCELL to
+be output to the resulting merged layout.</p>
+<div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idaf098c7a-3abb-4679-ba49-963a3831e915"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example19_results.jpg" /></div><br /></div>
+<p class="p">Without the -topcell argument, the cells from both layout databases
+are merged and the ‑mode rename argument renames any duplicate cellnames
+so that they are unique.</p>
+<div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id50e459ae-2aea-4206-8d92-cd77bb3ed336"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example19_results_ntc.jpg" /></div><br /></div>
+</div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id60d1671d-05b4-4338-8b04-02969429ddd8"><h2 class="title Subheading sectiontitle">Example
+16 - Allow Scaling</h2><p class="p">This example uses the -scale argument to scale <span class="ph filepath">layout_block.gds</span>,
+merge with <span class="ph filepath">layout.gds</span>, and output the results
+to <span class="ph filepath">merged.oas</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in [list -name layout_block.gds -scale 2] 
+	-in layout.gds ‑out merged.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida7fb19b7-0dea-4563-8e81-5596a28248f6"><h2 class="title Subheading sectiontitle">Example
+17 - Disable Strict Mode Output</h2><p class="p">This example merges the files <span class="ph filepath">spare_top_fill.oas</span> and <span class="ph filepath">spare_top_wIP.oas</span>.
+The -strictmode argument creates strict mode output for all fields
+in the table-offsets structure of the resulting <span class="ph filepath">merged.oas</span> file.
+The layout peek command with the ‑strictmode argument returns a
+value of 1 indicating that the resulting file is in strict mode.</p>
+<pre class="pre codeblock"><code>layout filemerge -in spare_top_fill.oas -in spare_top_wIP.oas \
+	‑out ./output/merged.oas ‑strictmode 1
+layout peek ./output/merged.oas -strictmode
+1</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ide8a2b07d-897a-49fb-aa73-44296cdd1abe"><h2 class="title Subheading sectiontitle">Example
+18 - Report Merge Conflicts</h2><p class="p">This example uses the -reportconflicts argument to identify any
+merge conflicts when merging the files <span class="ph FontProperty ManualTitle">spare_top_fill.oas</span> and <span class="ph FontProperty ManualTitle">spare_top_wIP.oas</span>.
+The merge mode defaults to ‑mode append, which concatenates the
+contents of the duplicate cells together.</p>
+<pre class="pre codeblock"><code>layout filemerge -in spare_top_fill.oas -in spare_top_wIP.oas \
+	-out ./output/out.oas -reportconflicts
+...
+Note: cell spare_top already exists in spare_top_fill.oas, append with spare_top from spare_top_wIP.oas.</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id6b4788a9-1d94-44f9-be89-fac93513e205"><h2 class="title Subheading sectiontitle">Example
+19 - Map Layers</h2><p class="p">In this example, the ‑include_layer and -map_layer arguments
+are applied globally to the input files <span class="ph filepath">layout0.oas</span> and <span class="ph filepath">layout1.oas</span>.
+Objects on layers 1, 3.789, and 99.99 in <span class="ph filepath">layout0.oas</span> are appended
+to objects on the same layers in <span class="ph filepath">layout1.oas</span>.
+Layer 1 is mapped to layer 10 and layer 3.789 is mapped to layer
+4.654 in the merged results.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout0.oas -in layout1.oas 
+	-include_layer [list 1 3.789 99.99] \
+	-map_layer [list 1 10 3.789 4.654] \
+	-out ./output/merged.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id1a65337d-ab71-4a9b-875b-dcb0e186745a"><h2 class="title Subheading sectiontitle">Example
+20 - Map Cells</h2><p class="p">This example uses the ‑map_cell argument to specify the name
+of the mapping file, <span class="ph filepath">cell_map.txt</span>, that contains
+the following cell mappings:</p>
+<pre class="pre codeblock"><code>a1240 layout1_a1240
+a2311 layout1_a2311
+a1220 layout1_a1220
+a1620 layout1_a1620
+a1720 layout1_a1720</code></pre><p class="p">The following layout filemerge command renames the cells, based
+on the mapping in <span class="ph filepath">cell_map.txt</span>, prior to merging <span class="ph filepath">layout0.gds</span> and <span class="ph filepath">layout1.gds</span> into <span class="ph filepath">merged.gds</span>.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout0.gds -in layout1.gds -out merged.gds \		‑map_cell cell_map.txt</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idaafa369b-aba9-4cec-aaea-9e177fe53259"><h2 class="title Subheading sectiontitle">Example
+21 - String Severity</h2><p class="p">This example uses the ‑stringSeverity argument to specify how
+an input OASIS file containing illegal a-string values is handled.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout1.oas -in layout2.oas \
+	‑out ./output/merged.out -stringSeverity warning</code></pre><p class="p">The warning option for the ‑stringSeverity argument generates
+a message similar to the following for each illegal a-string value
+found in an input OASIS file and proceeds with merging the files.</p>
+<pre class="pre codeblock"><code>Warning: at offset 12345 in file layout1.oas for cell 'TOPCELL', non-printable character 0xa in an a-string.</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idfdf2691b-373b-46c0-b95b-ff1fc695d380"><h2 class="title Subheading sectiontitle">Example
+22 - Specify an ASCII File as Input</h2><p class="p">This example uses the <span class="keyword ParameterName Required">‑in</span> <span class="keyword ParameterName RequiredReplaceable">textfile</span> argument
+set to specify an ASCII text file named <span class="ph filepath">filemerge_inputs.txt</span> that
+contains the following input files for the layout filemerge operation:</p>
+<pre class="pre codeblock"><code># this is a comment
+/home/user/design.gds
+/home/user/fill.oas -exclude_layer 4 -suffix _fill -exclude_top
+/home/user/standardcells/</code></pre><p class="p">Executing the following layout filemerge command merges <span class="ph filepath">design.gds</span>, <span class="ph filepath">fill.oas</span>,
+and any layouts found in the <span class="ph filepath">/home/user/standardcells/</span> directory.
+The file‑specific options, ‑exclude_layer, ‑suffix, and ‑exclude_top,
+are applied only to the <span class="ph filepath">fill.oas</span> layout.</p>
+<pre class="pre codeblock"><code>layout filemerge -in filemergeinputs.txt -out output.oas</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id82c43ba0-47cc-447a-97ee-b5fe830fe89e"><h2 class="title Subheading sectiontitle">Example
+23 - Empty Cell Handling</h2><p class="p">This example uses the ‑noemptycells argument to remove empty
+cell definitions and references to empty cells from the output file.
+In the input file (<span class="ph filepath">input.gds</span>), the cells named
+cell_03, cell_04, cell_05, and cell_06 are either empty or reference
+an empty cell. The cells named cell_01, cell_02, poly_03, and TOPCELL
+are not empty nor do they reference an empty cell.</p>
+<div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id3956f5ad-5140-4dde-8bdb-b3ff814da25f"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/cell_browser_layout_filemerge_example.jpg" /></div><br /></div>
+<p class="p">The layout peek command with the -cells argument returns the
+following list of cells for the input file (<span class="ph filepath">input.gds</span>):</p>
+<pre class="pre codeblock"><code>layout peek input.gds -cells
+cell_05 cell_01 cell_06 cell_02 poly_03 cell_03 cell_04 TOPCELL</code></pre><p class="p">The layout filemerge command with the “-noemptycells 3” argument
+does not write empty cell definitions nor references to empty cells
+to the output file (<span class="ph filepath">filter.gds</span>).</p>
+<pre class="pre codeblock"><code>layout filemerge -in input.gds -out filter.gds -noemptycells 3</code></pre><p class="p">The layout peek command with the -cells argument returns the
+following list of cells for the output file, verifying that the
+empty cells and references to empty cells have not been written
+to the output file:</p>
+<pre class="pre codeblock"><code>layout peek filter.gds -cells
+cell_01 cell_02 poly_03 TOPCELL</code></pre></div>
+<div class="section Subsection" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__ida7563b10-c2a9-47a5-81ef-7ac504a56647"><h2 class="title Subheading sectiontitle">Example
+24 - Excluding Cells</h2><p class="p">This example illustrates the results of using the -exclude_cell
+argument with the ‑deleteChildCells option and the ‑noemptycells
+argument on a layout with the following hierarchy:</p>
+<div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idcb2a483a-eefc-43dd-b6b4-135262f043cb"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example24a.jpg" /></div><br /></div>
+<p class="p">The following command suppresses the definition of a9500 from
+the merged results. However, references to a9500 are maintained
+but the cell is no longer defined. NewCell becomes a top cell since
+it was originally a child cell of a9500 and the ‑deleteChildCells
+argument was not used.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout.gds -oasisout layout_with_childcell.oas \
+	‑exclude_cell a9500</code></pre><div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__iddacf3002-9aba-49a9-8710-ac43c9b1c738"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example24c.jpg" /></div><br /></div>
+<p class="p">The following command suppresses the definition of a9500 from
+the merged results. The ‑noemptycells argument causes all references
+to a9500 to be removed. NewCell becomes a top cell since it was
+originally a child cell of a9500 and the ‑deleteChildCells argument
+was not used.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout.gds -oasisout layout_delete_childcell.oas \
+	‑exclude_cell a9500 -noemptycells 3</code></pre><div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__idc06c85a6-ddc6-410c-9506-869c852473ee"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example24d.jpg" /></div><br /></div>
+<p class="p">The following command suppresses the definition of a9500 from
+the merged results. The ‑deleteChildCells argument removes NewCell
+since it is a child of a9500 and was not referenced elsewhere in
+the hierarchy.</p>
+<pre class="pre codeblock"><code>layout filemerge -in layout.gds -oasisout layout_nochildcell.oas \
+	‑exclude_cell a9500 ‑deleteChildCells</code></pre><div class="fig fignone" id="idc9bf4801-bb7a-436f-ba6c-bd688f57b6ff__id35c697fe-0e32-4ca7-9600-b0f1bd8c363a"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/layout_filemerge_example24b.jpg" /></div><br /></div>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_LayoutCommands_idf350df98.html" title="The layout commands are used to manipulate entire layout objects, including operations such as creating, deleting, and merging layouts.">Layout Commands</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Command_OverlayFilemerge_id382f6ee7.html#id382f6ee7-a959-4661-8b18-b1d68d3dcf9a__" title="Merges the layout files that are referenced in an overlay and outputs the results to a GDS or OASIS file.">overlay filemerge</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_drv_ref"
+                DocTitle = "Calibre® DESIGNrev™ Reference Manual"
+                PageTitle = "layout filemerge"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_LayoutFilemerge_idc9bf4801.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® DESIGNrev™ Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

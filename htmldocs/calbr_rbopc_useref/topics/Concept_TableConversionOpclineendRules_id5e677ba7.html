@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Table Conversion to OPCLINEEND Rules" />
+<meta name="abstract" content="This section describes some planning thoughts and the sequence of steps to convert a table of values into valid OPCLINEEND syntax." />
+<meta name="description" content="This section describes some planning thoughts and the sequence of steps to convert a table of values into valid OPCLINEEND syntax." />
+<meta name="prodname" content="Calibre Rule-Based OPC User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2020-01-30" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_rbopc_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Rule-Based OPC User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Table Conversion to OPCLINEEND Rules</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Table Conversion to OPCLINEEND Rules" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Table Conversion
+to OPCLINEEND Rules</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">This section
+describes some planning thoughts and the sequence of steps to convert
+a table of values into valid OPCLINEEND syntax.</span>
+</div>
+<div class="section Subsections" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id5e298a79-c17e-4f9e-bdb7-cda389d26cd1"><div class="section Subsection" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id45020fba-04d4-4fac-bebe-7029327fc5c7"><h2 class="title Subheading sectiontitle">Plan your Conversion</h2><p class="p">In most cases you can perform
+all the corrections indicated by all relevant rules tables with
+a single OPCLINEEND command. In order to successfully combine rules
+tables, the tables must meet one of the following conditions:</p>
+<ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id60ae446d-eeb9-4449-aa89-c09699d4098c"><p class="p">All tables use the same width and spacing
+intervals.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id2bf4c728-17f8-4608-9a66-8c8f94200c55"><p class="p">The tables use different intervals for
+width and/or spacing, but the intervals are mutually exclusive.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id73c9f374-f780-4ccc-8270-393a5911089f"><p class="p">The tables use different intervals for
+width and/or spacing, and the intervals for one table map cleanly
+into the intervals for the other table.</p>
+</li>
+</ul>
+<p class="p">There are two assumptions behind the
+default rule/correction rules structure: </p>
+<ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id87ef5658-1059-4620-9b1f-26526a8934c7"><p class="p">You can do a better job anticipating
+spacing violations (either due to less than the minimum spacing
+allowed after a RET operation or to nearby geometries impinging
+on corner space) after the move than before the move. </p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id18ddc3b6-5b65-4032-9285-7e0a6140ab35"><p class="p">For every line width, there is a maximum
+correction. </p>
+</li>
+</ul>
+<p class="p">Based on these assumptions, you apply that
+maximum correction if OPCLINEEND discovers a spacing violation you
+replace the maximum correction with the greatest correction that
+does not result in a spacing violation, as defined in the correction
+rule for that spacing.</p>
+<p class="p">To write the rules you must know three things:</p>
+<ol class="ol"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id0afb0876-ed26-418c-8d31-718f8160cf33"><p class="p">The number of line-ends corrected for each
+space that is examined.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id3932415d-8d44-4cd1-ba29-88e553bc7d48"><p class="p">The maximum correction for each line width.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id367b1be1-2a1a-4257-ab28-7d0491813bb2"><p class="p">The minimum spacing to enforce for line-ends
+and serifs.</p>
+</li>
+</ol>
+<p class="p">The number of line-ends corrected for each
+space is really a question about the assumptions under which the
+table was created. If the assumption is that line-ends are opposite (for
+line extensions) and adjacent (for serif extensions) to other line-ends,
+both must be corrected when OPCLINEEND encounters a violation. If
+the assumption is that line-ends are opposite and adjacent to other
+types of lines, only the line-end is corrected.</p>
+<p class="p">You can
+check this assumption by examining the rules tables. </p>
+<ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idab045e71-bb11-4bac-87a7-d35f8afe8d42"><p class="p">If the spacing interval<a name="fnsrc_1" href="#fntarg_1"><sup>1</sup></a>equals the correction interval<a name="fnsrc_2" href="#fntarg_2"><sup>2</sup></a>, the number of edges to be corrected
+is 1.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id4e2f3240-0e95-4a62-98d5-aa9853221245"><p class="p">If the spacing interval is twice the
+correction interval, the number of edges to be corrected is 2. </p>
+</li>
+</ul>
+<p class="p">The maximum correction for each line width
+is the maximum table value for that width.</p>
+<p class="p">Knowing the number of line-ends corrected for
+each space, N, makes it easy to calculate the minimum spacing to
+enforce for line-ends and serifs. In the rules table, for each spacing/width
+combination, calculate the enforced spacing as:</p>
+<pre class="pre codeblock"><code>Spacing - (N * correction)</code></pre><ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id5be8a477-baf6-453f-93d8-a9031bf46cd2"><p class="p">In most tables, the value is the same
+for every space or width pair in the table. This value is the minimum
+spacing.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id1e824e36-ebf1-4e51-b9b3-8227cc8e08e3"><p class="p">If the values are not the same for every
+space or width pair in the table, check to see if they are the same
+for each width. Use the smallest value as the minimum spacing value.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id724f8ed0-0450-4988-8f38-037aa6542540"><h2 class="title Subheading sectiontitle">Make your Conversion Step
+by Step</h2><ol class="ol"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id9e8b16a1-1beb-4301-9ae1-00bf48e1df4a"><p class="p">Convert table values into microns.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idb682e96b-8381-4254-a824-a3fd02d1f000" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Line-End Extension Table in User Units</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/line-end.ext.uu.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idc839f795-4893-4977-a101-b7712a57914e" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Serif Extension Table in User Units</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/serif.ext.uu.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idb3c60f12-f916-4bb9-86df-805b6d250440"><p class="p">Analyze your process and tables and calculate
+values for:</p>
+<ol class="ol" type="a"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id851ee9b1-6145-47c6-b47e-2981fb7b9b0f"><p class="p">N = The number of edges to be corrected for
+each space that is examined. In this example, N = 2.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id05176228-b877-4a00-8e12-af36fe091cc8"><p class="p">C = The maximum correction(s) for each line
+width. In this example, the values are:</p>
+<p class="p"><span class="ph FontProperty equationvariable">Line extension — C<span class="ph FontProperty LiteralSuperScript">all</span> = 0.30 Serif Extension — C<span class="ph FontProperty LiteralSuperScript">0.1</span> = 0.30, C<span class="ph FontProperty LiteralSuperScript">0.15</span>= 0.20, C<span class="ph FontProperty LiteralSuperScript">0.2</span>= 0.10</span></p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id4a386e43-ef1f-4a2f-bc20-e1e925acd183"><p class="p">S<span class="ph FontProperty LiteralSubScript">L</span> =
+The minimum spacing for line-ends. In this example S<span class="ph FontProperty LiteralSubScript">L</span> =
+0.7.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id57167b44-fa92-4984-af6b-78610719b0cb"><p class="p">S<span class="ph FontProperty LiteralSubScript">S</span> =
+The minimum spacing for serifs. In this example S<span class="ph FontProperty LiteralSubScript">S</span> = 0.9.</p>
+</li>
+</ol>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ida5191434-2446-4bcb-8856-9dce8bdc65b4"><p class="p">For each space/width pair, calculate the spacing
+constraint to be measured after the default rule is applied by subtracting (N*C<span class="ph FontProperty LiteralSuperScript">width</span>)
+from the original spacing. Then rewrite the tables using this new
+spacing. In the following tables, the diagonal line through a table
+cell enables you to compare the line-end extension (upper half)
+with the spacing for that cell (lower half).</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idc5929269-2a3f-4246-8db2-98d1d1274f20" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>Spacing Adjustment for Line-End Extensions</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/space.adj.line-end.ext.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id658e543a-5add-4531-bee0-21fd12172712" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 4. </span>Line-End Extensions Based on Adjusted Spacing</span></caption><colgroup><col style="width:2.925in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/line-end.ext.based.adj.space.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idaf2e4b36-6f95-471e-9fb6-fb6e0fefff7c" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 5. </span>Spacing Adjustment for Serifs</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/adj.serif.space.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id085146ae-c40f-4a72-801d-07f276a67c39" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 6. </span>Serifs Based on Adjusted Spacing</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/serif.based.adj.space.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ide84ff2bb-2560-4386-be74-b0918f17ba65"><p class="p">Expand each correction cell into four cells,
+as shown in <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ide06d2424-e351-4dba-9b3e-4870a3e31d53">Table 8</a> and <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idf8d5c3b7-36e6-41bf-801c-c85918de4397">Table 9</a>. In step 6, you
+convert the spacing and width categories into ranges of values.
+You can fill in the cells with three different movement distances,
+one for each of the three conditions as follows:</p>
+<ol class="ol" type="a"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id678fa7f2-7460-496a-ad26-c5bc3f50ebfe"><p class="p">The opposing edge is not extended.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id350e40bc-03d0-4f5a-8773-f6746d3daafc"><p class="p">The opposing edge is an extension of the same
+type. </p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id5c2d2fc0-b592-46bf-9313-bb612a76b57a"><p class="p">The opposing edge is an extension of a different type.</p>
+</li>
+</ol>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__iddabab9be-a9f2-4065-8e12-c7d617a5633e"><p class="p">As mentioned previously, rules tables are
+typically created with an assumption about how many edges are moved
+for a given space. In step 2 you calculated this as N (for this
+example N=2). In this step you calculate the movement for all cases (not
+just the case assumed) and use this assumption to check your rules
+against the original table.</p>
+<p class="p">Tables <a class="xref fm:NumberOnly" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id658e543a-5add-4531-bee0-21fd12172712">Table 4</a> and <a class="xref fm:NumberOnly" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id085146ae-c40f-4a72-801d-07f276a67c39">Table 6</a> show the spacing after the default
+rule has been applied, plus the recommended movement from the original
+table. If the spacing is less than the minimum spacing to enforce,
+you must write a correction rule for that space. You do this by
+calculating the distance by which the default rule overshot the
+desired correction (V), then figuring out the correct movement for
+the edges. See <a class="xref fm:Table" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id05def378-ea4f-41a3-a387-fbb2713d54ba">Table 7</a> for equation notation.</p>
+<ol class="ol" type="a"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id174e459b-76af-42a1-b994-2ee16ab9f090"><p class="p">When the opposing edge is not extended:</p>
+<pre class="pre codeblock"><code>V1 = SM - S
+C1 = Cd-V</code></pre><p class="p">(If N = 1, this should be the same as the
+value from the original table.)</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id8384c9ab-3792-42c8-9e8f-945e723bd19d"><p class="p">When the opposing edge is an extension of
+the same type:</p>
+<pre class="pre codeblock"><code>V2 = SM - S
+C2 = Cd-V/2</code></pre><p class="p">(If N = 2, this should be the same as the
+value from the original table.)</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id790d6e45-1a60-430e-b7fc-c3bd642562ab"><p class="p">When the opposing edge is an extension of
+another type:</p>
+<pre class="pre codeblock"><code>SLS = the greater of SL and SS
+V3 = (SLS- S)</code></pre><p class="p">You choose how to distribute the movement
+between the serif and the line-end. For example, to subtract V/2
+from the default correction for both tables<a name="fnsrc_3" href="#fntarg_3"><sup>3</sup></a>:</p>
+<pre class="pre codeblock"><code>C3 = Cd-V/2</code></pre></li>
+</ol>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id05def378-ea4f-41a3-a387-fbb2713d54ba" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 7. </span>Notation Used in Equations</span></caption><colgroup><col style="width:1.025in" /><col style="width:4.825in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Known Values</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">N = Number of edges assumed
+to be corrected for each space.</p>
+<p class="p">Cd = Default correction for the table.</p>
+<p class="p">SL = Minimum spacing for line-end extensions.</p>
+<p class="p">SS = Minimum spacing for serif extensions</p>
+<p class="p">S = Spacing after default rule was applied.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">Values to Calculate</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;"><p class="p">V= Violation — distance
+by which correction overshot desired results.</p>
+<p class="p">SM = Minimum spacing for the table. If for
+a line-end extensions table, this is SL. For a serif extensions
+table this is SS.</p>
+<p class="p">SLS = Minimum spacing for line-end opposite
+serif extensions.</p>
+<p class="p">C = Correction.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ide06d2424-e351-4dba-9b3e-4870a3e31d53" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 8. </span>Modified
+Line-End Extensions Table</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/mod.line-end.ext.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idf8d5c3b7-36e6-41bf-801c-c85918de4397" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 9. </span>Modified
+Serif Extensions Table</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/mod.serif.ext.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id62308f1c-dba8-4754-8d5e-511ce92379b1"><p class="p"><a class="xref fm:Table" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idb6bde480-f7fe-4b95-ac96-1ae1ad117c02">Table 10</a> shows the conversion
+of the spacing and width categories into ranges of values:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idb6bde480-f7fe-4b95-ac96-1ae1ad117c02" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 10. </span>Final
+Line-End Extensions Table</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/final.line-end.ext.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id27e1ac0e-cd28-48ad-8635-419d269a275d" class="table" frame="void" border="0" rules="none"><caption><span class="tablecap"><span class="table--title-label">Table 11. </span>Final
+Serif Extensions Table</span></caption><colgroup><col style="width:3.250in" /></colgroup><tbody class="tbody"><tr class="row"><td class="entry nocellnorowborder default-entry" style="vertical-align:top;"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/final.serif.ext.png" /></div><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idf274f49f-9969-46f7-9dd4-3eca0afaf34c"><p class="p">Select a value for SERIF height. If your process
+calls for a single serif height, use that value. If your process
+uses a serif height table to define the serif height, select the
+value that corresponds to the greatest spacing. For this example,
+a constant value of 0.5 is assumed.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id90f7759e-3ea0-4196-9c82-044a74f35641"><p class="p">Use the OPPOSITE EXTENDED metric with SPACE
+to catch corner spacing violations. Calculate the extension to use
+for this metric as the maximum vertical and horizontal clearance
+required between diagonally opposite corners. (For more information
+on this concept, refer to “<a class="xref fm:HeadingAndPage" href="Concept_RuleDevelopmentOpclineend_id8718f0ec.html#id8718f0ec-ead7-4e10-b599-be122c6587cf__id4c612a5c-3ad4-47b5-b6ef-ccc81208093e">Avoiding Problems</a>”.) For this example, 0.3 is
+used.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id35fa9cbf-1c0c-47b3-a24c-6c913584ff6f"><p class="p">Create a rule set for the smallest width in
+either table. </p>
+<ol class="ol" type="a"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id55763a60-3a37-4df9-ab96-cc0f94fe14a7"><p class="p">Create the default rule with:</p>
+<ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id091fc4fb-2a5b-4fc2-a88c-ed94178b284c"><p class="p">END = maximum movement for that width
+in <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ide06d2424-e351-4dba-9b3e-4870a3e31d53">Table 8</a>.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id5abea735-4270-4cef-b794-cb2566c35f3a"><p class="p">SERIF extension = maximum for that width
+in <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idf8d5c3b7-36e6-41bf-801c-c85918de4397">Table 9</a>.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id8824718a-a860-4cbd-8d5b-179d96129770"><p class="p">SERIF depth = serif height from step
+7 minus END. </p>
+<pre class="pre codeblock leveled"><code>WIDTH &gt;0.1&lt;=0.15 END 0.3 SERIF 0.3 0.2</code></pre></li>
+</ul>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idd1d77e6d-0742-4f4b-8c48-d2ea2bcbd8e9"><p class="p">Create one correction rule for each spacing
+constraint in each table. </p>
+<ul class="ul"><li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__ide788bff9-1d33-4a05-a08c-849a12ff003f"><p class="p">WIDTH = WIDTH from the default rule and
+SPACE = SPACE from the table.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id7c64a261-b9c1-4141-b5e4-5cd05af900cf"><p class="p">OPPOSITE EXTENDED = as defined in step
+8.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id27ea273a-ff74-482e-a788-0e2a58c2e2e5"><p class="p">END = movements for
+that WIDTH and SPACE in the Modified Line-End Extensions table.
+See <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idb6bde480-f7fe-4b95-ac96-1ae1ad117c02">Table 10</a>.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idad84bd1d-d9e3-4f86-add2-7115d3a35c9a"><p class="p">SERIF extensions =
+movement for that WIDTH and SPACE in the Modified Serif Extension.
+See <a class="xref fm:TableAndPage" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id27e1ac0e-cd28-48ad-8635-419d269a275d">Table 11</a>.</p>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id0522383e-fbd5-4da3-a795-5a0fcbfb7ed1"><p class="p">SERIF depth = serif height minus END.
+There must be the same number of depth values to match the number
+of serif extension values. In this example all are the same. (If
+serif height is not constant, find the value in the serif height
+table that corresponds to the WIDTH and SPACE values for the rule.)
+The rules for WIDTH &gt; 0.1 &lt;= 0.15 are shown in <a class="xref fm:Example" href="#id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idad9e9bc3-4eaa-4afe-a1de-1fd83221403a">Figure 1</a>.</p>
+<div class="fig fignone" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__idad9e9bc3-4eaa-4afe-a1de-1fd83221403a"><span class="figcap"><span class="fig--title-label">Figure 1. </span>LINEENDBIAS Example</span></div>
+<pre class="pre codeblock leveled"><code><span class="ph FontProperty P9">//default rule
+lineendBias {OPCLINEEND POLY
+	WIDTH &gt; 0.1 &lt;= 0.15 END 0.3 SERIF 0.3 0.2</span></code></pre><pre class="pre codeblock leveled"><code><span class="ph FontProperty P9">// remainder are correction rules
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &lt;= 0.1 OPPOSITE EXTENDED 0.3 
+		END 0.0 0.0 0.0 SERIF 0.0 0.0 0.0 0.50 0.50 0.50
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.1 &lt;= 0.2 OPPOSITE EXTENDED 0.3 
+		END 0.0 0.05 0.0 SERIF 0.0 0.0 0.0 0.50 0.45 0.45
+ 	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.2 &lt;= 0.3 OPPOSITE EXTENDED 0.3 
+		END 0.0 0.10 0.0 SERIF 0.0 0.0 0.0 0.50 0.40 0.40
+ 	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.3 &lt;= 0.4 OPPOSITE EXTENDED 0.3 
+		END 0.0 0.15 0.05 SERIF 0.0 0.5 0.5 0.50 0.35 0.35
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.4 &lt;= 0.5 OPPOSITE EXTENDED 0.3 
+		END 0.1 0.2 0.1 SERIF 0.0 0.10 0.10 0.40 0.30 0.30
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.5 &lt;= 0.6 OPPOSITE EXTENDED 0.3 
+		END 0.2 0.25 0.15 SERIF 0.0 0.15 0.15 0.30 0.25 0.25
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.6 &lt;= 0.7 OPPOSITE EXTENDED 0.3 
+		END 0.3 0.30 0.20 SERIF 0.1 0.20 0.20 0.20 0.20 0.20	
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.7 &lt;= 0.8 OPPOSITE EXTENDED 0.3 
+		END 0.3 0.30 0.25 SERIF 0.2 0.25 0.25 0.20 0.20 0.15
+	WIDTH &gt; 0.1 &lt;= 0.15 SPACE &gt; 0.8 OPPOSITE EXTENDED 0.3 
+		END 0.3 0.30 0.30 SERIF 0.3 0.3 0.3 0.20 0.20 0.10}</span></code></pre></li>
+</ul>
+</li>
+</ol>
+</li>
+<li class="li" id="id5e677ba7-08e9-42d4-8e20-52e11d3f7d82__id5ce1b25f-5b61-41c6-b41c-f98fb765980c"><p class="p">Repeat the process for each additional WIDTH.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_OpclineendCommand_idbc2fb318.html" title="The OPCLINEEND command performs variable line-end extension, including end extension and hammerhead creation.">OPCLINEEND Command</a></div>
+</div>
+</div></div>
+<div class="fn"><a name="fntarg_1" href="#fnsrc_1"><sup>1</sup></a>  The
+spacing interval is the step size between each successive spacing
+interval. </div><div class="fn"><a name="fntarg_2" href="#fnsrc_2"><sup>2</sup></a>  The
+correction interval is the stepsize between corrections. Typically
+there is a consistent step size between corrections, such as 0.05
+micron or 0.1 micron.</div><div class="fn"><a name="fntarg_3" href="#fnsrc_3"><sup>3</sup></a>  Base
+this decision on knowledge of your process. As a rule of thumb,
+the D correction for the line-end plus the D correction for the
+serif extension of the same space should add up to V.</div></div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_rbopc_useref"
+                DocTitle = "Calibre® Rule-Based OPC User’s and Reference Manual"
+                PageTitle = "Table Conversion to OPCLINEEND Rules"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_TableConversionOpclineendRules_id5e677ba7.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Rule-Based OPC User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

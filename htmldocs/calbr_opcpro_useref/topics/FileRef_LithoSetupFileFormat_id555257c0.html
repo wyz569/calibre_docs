@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="Litho Setup File Format" />
+<meta name="abstract" content="The model-based Calibre RET tools all use litho setup files to provide tool-specific settings and operations within a Calibre DRC run. The file format as discussed in this manual also generally applies to non-sparse OPC tools, although there may be differences." />
+<meta name="description" content="The model-based Calibre RET tools all use litho setup files to provide tool-specific settings and operations within a Calibre DRC run. The file format as discussed in this manual also generally applies to non-sparse OPC tools, although there may be differences." />
+<meta name="DC.subject" content="Files, Litho setup, Setup files, syntax" />
+<meta name="keywords" content="Files, Litho setup, Setup files, syntax" />
+<meta name="prodname" content="Calibre OPCpro User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-17" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="2" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_opcpro_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="none" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_wheat" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="Mar. 12, 2021" />
+<meta name="Draft" content="NONE" />
+<meta name="DocumentTitle" content="Calibre® OPCpro™ User’s and Reference Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id555257c0-90b2-4b5c-ba76-a69ab54561f8" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Litho Setup File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Litho Setup File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P10108,doc.type.documentation.ref" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id555257c0-90b2-4b5c-ba76-a69ab54561f8">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Litho Setup File Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input for:
+Calibre OPCpro, Calibre ORC, and Calibre PRINTimage. It may also
+be used for mini-OPC and the PI button in Calibre WORKbench, but
+is not required.</p>
+<p class="shortdesc">The model-based Calibre RET
+tools all use litho setup files to provide tool-specific settings
+and operations within a Calibre DRC run. The file format as discussed
+in this manual also generally applies to non-sparse OPC tools, although
+there may be differences.</p>
+<p class="p">A
+litho setup file can be a standalone setup file, referenced using
+the FILE keyword in the LITHO operation, or it can be provided inside
+the SVRF rule file using the <a class="xref fm:HeadingOnly" href="Command_LithoFile_id957f8af9.html#id957f8af9-ae56-437e-8e32-49f3acb67e9d__Command_LithoFile_id957f8af9.xml#id957f8af9-ae56-437e-8e32-49f3acb67e9d" title="Contains the litho setup file within an SVRF rule file.">LITHO FILE</a> statement. (This second form is
+sometimes referred to as a “setup parameter block”.) Both methods
+support Tcl scripting to parameterize repetitive setup code (see
+Examples 2 through 5 in “<a class="xref" href="#id555257c0-90b2-4b5c-ba76-a69ab54561f8__id49d8d87a-004f-4950-815a-320b21848be4">Examples</a>”),
+and both are checked for errors before running. The only difference
+is that when provided as a standalone file, all lines must begin
+in the first column.</p>
+<p class="p">All parameters for a specific batch tool
+run must be defined in the same file, and must not change during
+the run. If you want to modify a setup file for a series of runs,
+set Calibre to save a copy to a setup parameter block when the run
+starts using code like the following:</p>
+<pre class="pre codeblock leveled"><code>LITHO FILE setup_block [ /*
+	INCLUDE litho.in
+*/ ]</code></pre><div class="section Subsection" id="id6e57cffd-b9be-4a58-9d85-7187892c4e16"><h2 class="title Subheading sectiontitle">Setup File Error Reporting</h2><p class="p">All setup files are checked for syntax errors
+before executing any SVRF operations. If the application encounters
+an error in the setup file, it aborts the run. The error message
+in the transcript reports the line in the setup file where the error
+was encountered. Note that if the setup file contains multiple errors,
+processing halts as soon as the first error is encountered.</p>
+<p class="p">The following example shows an error message
+generated during parsing.</p>
+<pre class="pre codeblock leveled"><code>-------------------------------------------------------------------------
+AT LINE # 58
+SETUP FILE ERROR: sse: not a valid env variable OPC_USE_ADAPTIVE_STEPS
+-------------------------------------------------------------------------
+
+ERROR: USER ERROR in LITHO
+xxxxxxxxxSetup file problem.
+
+
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+CALIBRE LITHO ABORTED DUE TO FATAL USER ERROR
+///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+</code></pre></div>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">A litho setup file must conform to
+the following restrictions:</p>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idfb1683d5-2912-4a09-9f8b-4af8467cc194"><h2 class="title Subheading sectiontitle">Syntax Rules</h2><ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id6cc737c3-81c5-4ca0-803c-25501ee755a5"><p class="p">Only one command or variable
+per line.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id8743caff-3d6b-47c7-97cc-7c74d57443dd"><p class="p">All arguments for a command must
+be on the same line as the keyword. A line can be extended by having
+a \ as the last character on the line. (Additional whitespace or comments
+cause a syntax error.)</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idfccb780f-9e58-4bf1-8791-7debb1248b8e"><p class="p">All
+litho keywords, arguments, option names, command names, and variable
+names are reserved words. Do not use them as names of layers or
+tags.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id87be2ed9-cddb-422e-9400-15c0901916d9"><p class="p">Comments within the setup parameters
+begin with a pound sign (#) or a double forward slash (//). </p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idfa93abf1-9ce0-4e11-b0a1-07d1cef59bd7"><p class="p">Comments must begin at the beginning
+of the input line, and everything on the line after the comment
+character is part of the comment. </p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id3b8223d3-3277-44a2-a4ec-6fbf8c4319e7"><p class="p">Use the double forward slash
+(//) character to have your comments remain in the transcript after
+the setup file is pre-processed. The pound sign (#) is interpreted
+as a Tcl comment character and any subsequent text is removed from
+the transcript.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__ida8ede64f-53a7-45e3-8406-ddc6d5d101f1"><h2 class="title Subheading sectiontitle">Case Sensitivity</h2><ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id5eeeed1f-0e09-4bbe-a42e-eedb88b2ec5d"><p class="p">Keywords and names written in all
+uppercase letters in this document are case-insensitive. </p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id50af3464-d22f-4a9f-b415-df52a6d02fb9"><p class="p">All other keywords and names
+are case-sensitive. </p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id675a2515-340f-4acb-a162-7b00825442de"><p class="p">Because of their relationship
+to the directory system of the host platform, structure names and
+pathnames are also case sensitive. To avoid confusion, you should
+enclose them in quotation marks.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id0787cabe-7961-42a6-8bb8-8731f4f37d26"><h2 class="title Subheading sectiontitle">Order Rules </h2><ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id2458f436-b8aa-486f-9246-7b4f37e7096e"><p class="p">Keywords must appear at the beginning
+of the setup parameters, separate from variables and tagging commands
+by the “arbitrary commands” comment.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id755fab01-6de4-4709-ac71-60aac6a057d4"><p class="p">Keyword arguments must appear
+in the order specified in the syntax descriptions in this manual.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id5c82432d-649f-4835-a2ca-e5e30740484e"><p class="p">Keyword options, which take
+the form of pairs of secondary keyword and value, can appear in
+any order after the keyword itself.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id13a0da63-6f50-4677-b67f-06fc55f029d3"><p class="p">Variables, which you set using
+the sse command, must appear in the arbitrary command section of
+the setup files.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id0d3feba6-97d4-4c30-be9a-919b63b83194"><p class="p">Tagging commands must appear
+after the variables and must appear in the order in which they are
+to be evaluated.</p>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id9a68ff11-1d30-4811-88df-7c4be716e6b1"><p class="p">For the sparse OPC tools, the
+setup file is generally formatted as follows:</p>
+<pre class="pre codeblock leveled"><code>	LITHO FILE name [ /*
+		<a class="xref fm:HeadingOnly" href="Contain_LithoSetupFileKeywords_id5d361e7b.html#id5d361e7b-8fac-4d3f-b66e-9b32db85fbd8__Contain_LithoSetupFileKeywords_id5d361e7b.xml#id5d361e7b-8fac-4d3f-b66e-9b32db85fbd8" title="Setup file keywords define OPC and simulation parameters and define the layers used in Calibre OPCpro, Calibre ORC, and Calibre PRINTimage operations. Keywords may only be specified once per setup file.">Litho Setup File Keywords</a>
+		#--------------- Arbitrary Commands ---------------------
+		<a class="xref fm:HeadingOnly" href="Contain_LithoVariables_ide342bdbf.html#ide342bdbf-c0e2-41ba-9aef-d42effbc01af__Contain_LithoVariables_ide342bdbf.xml#ide342bdbf-c0e2-41ba-9aef-d42effbc01af" title="This section describes setup variables and litho-specific environment variables that control the functioning of the sparse OPC simulation tools. There are two ways to set these variables:">Litho Variables</a>
+		<a class="xref fm:HeadingOnly" href="Contain_TaggingCommands_ide141a5fb.html#ide141a5fb-6352-4e0e-a029-9da6d6d10b87__Contain_TaggingCommands_ide141a5fb.xml#ide141a5fb-6352-4e0e-a029-9da6d6d10b87" title="Tagging commands work on specific subsets of fragments. These subsets are “tag sets.” You can define custom tag sets with the newTag commands and then modify the fragments in the sets using other tagging commands.">Tagging Commands</a>
+	*/ ]</code></pre></li>
+</ul>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><p class="p">There are few required
+parameters. The set that cause a syntax error if not present includes</p>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id85012802-26c0-4499-a58b-52c5736e9225"><a class="xref fm:HeadingOnly" href="Command_Background_id13f8d5ca.html#id13f8d5ca-6c71-40fd-b005-c3636c1aa50d__Command_Background_id13f8d5ca.xml#id13f8d5ca-6c71-40fd-b005-c3636c1aa50d" title="Required. Describes the imaging background.">background</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Describes the imaging background, such as dark
+field, light field, or attenuated.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id65622e28-f17a-4efb-9538-94c6f8411c5c"><a class="xref fm:HeadingOnly" href="Command_Cornersitestyle_id7305c5ae.html#id7305c5ae-88ca-4ab0-822f-9afadaf02550__Command_Cornersitestyle_id7305c5ae.xml#id7305c5ae-88ca-4ab0-822f-9afadaf02550" title="Required. Specifies the model used to place control sites on fragments adjacent to a corner.">cornerSiteStyle</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+how to handle control sites on fragments adjacent to corners.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__ide296a296-ea40-4273-9a7a-f30ee6f0b41e"><a class="xref fm:HeadingOnly" href="Command_Gridsize_ida20f0eb0.html#ida20f0eb0-d9dd-42b5-82fb-73a6b54bb272__Command_Gridsize_ida20f0eb0.xml#ida20f0eb0-d9dd-42b5-82fb-73a6b54bb272" title="Required. Specifies the internal grid size in microns.">gridsize</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Sets
+an internal grid size to use for calculations, typically the same
+as the layout’s units.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__iddd192392-efe9-4dbe-8246-4dff09cf4501"><a class="xref fm:HeadingOnly" href="Command_Layer_id24bcf6df.html#id24bcf6df-916f-445c-80b7-a063af955d1e__Command_Layer_id24bcf6df.xml#id24bcf6df-916f-445c-80b7-a063af955d1e" title="Required. Defines how the given mask layer is treated by OPC and simulation.">layer</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Defines
+the properties of layers passed in by the LITHO operation.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id59836da0-ca4f-45be-971e-3c349218afb1"><a class="xref fm:HeadingOnly" href="Command_Minfeature_idd7b4317e.html#idd7b4317e-aca9-4e7e-afd8-39c55541c3be__Command_Minfeature_idd7b4317e.xml#idd7b4317e-aca9-4e7e-afd8-39c55541c3be" title="Required. Specifies the minimum design feature size in microns.">minfeature</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the minimum design feature size in microns.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id78ed1c77-0a6e-4375-85fb-bd5e302c40fa"><a class="xref fm:HeadingOnly" href="Command_Opticalmodel_id5168feee.html#id5168feee-9599-42e8-a497-fcba8508dae7__Command_Opticalmodel_id5168feee.xml#id5168feee-9599-42e8-a497-fcba8508dae7" title="Required. Specifies the optical model for aerial image simulation during OPC and analysis.">opticalmodel</a> or <a class="xref fm:HeadingOnly" href="Command_Optical_Model_idf911e241.html#idf911e241-83f7-4e7d-b3d1-8dd5aafc2314__Command_Optical_Model_idf911e241.xml#idf911e241-83f7-4e7d-b3d1-8dd5aafc2314" title="Specifies an optical model. Can appear up to 12 times in a setup file, as opposed to opticalmodel, secondOpticalmodel, and thirdOpticalmodel.">optical_model</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the optical model used in simulation. One of these commands is required
+even if the setup file primarily uses models specified with inline_optical.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__ide41d839e-73d3-4660-be4e-303ca32a405f"><a class="xref fm:HeadingOnly" href="Command_Resistpolyfile_id4dd682c5.html#id4dd682c5-6231-4919-a7dc-5aaa62fb0358__Command_Resistpolyfile_id4dd682c5.xml#id4dd682c5-6231-4919-a7dc-5aaa62fb0358" title="Required. Defines the resist model to use for simulations.">resistpolyfile</a></dt>
+<dd class="dd ArgumentDescription"><p class="p">Specifies
+the resist model used in simulation.</p>
+</dd>
+</dl>
+<p class="p">There are many possible parameters, so the remainder of this
+chapter covers them in three sections. See the Related Topics.</p>
+</div>
+</div>
+<div class="section Examples" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id49d8d87a-004f-4950-815a-320b21848be4"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id3143fe91-075d-4318-a207-7a12a5f89675"><h2 class="title Subheading sectiontitle">Example 1 — Simple
+Setup File Without Tagging</h2><pre class="pre codeblock leveled"><code># ---------------- Simulation models ---------------
+modelpath ./models 
+opticalmodel mymodel.opt 
+resistpolyfile mymodel.mod 
+# Simulation Models - Use this section to define simulation model 
+# information such as:
+# - The directories to search for the models 
+# - Optical model names
+# - Process model name</code></pre><pre class="pre codeblock leveled"><code># ------------------ OPC algorithm -----------------
+iterations 4 
+tilemicrons 160.000000 
+stepsize 0.001 
+gridsize 0.001 
+siteinfo RESIST 
+cornerSiteStyle SITES_ON_ARC 
+lineEndAdjDist 0.190000 
+convexAdjDist 0.140000 
+concaveAdjDist 0.140000 
+
+# OPC Algorithm - Use this section to define OPC parameters such as:
+# - Number of iterations for OPC
+# - The input GDS grid size
+# - The edge movement size, or stepsize
+# - Site information (location points for intensity calculations)
+# - Corner site styles (placement of corner sites)</code></pre><pre class="pre codeblock leveled"><code># ------------------- Fragmentation ------------------
+minfeature 0.180000 
+minedgelength 0.130000 
+maxedgelength 1000.000000 
+cornedge 0.130000 
+concavecorn 0.130000 
+interfeature -interdistance 0.290000 -ripplelen 0.130000 -num 0 
+seriftype 0 
+minjog 0.120000 
+lineEndLength 0.320000 
+
+# Fragmentation - Use this section to define fragmentation parameters such 
+# as:
+# - Fragmentation types such as interfeature, island-layer, visible-layer
+# - Features to fragment
+# - Fragmentation limits such as max or min edge length, corners, jog size</code></pre><pre class="pre codeblock leveled"><code># -------------------- Layer info --------------------
+background clear 
+# Layers
+layer 2 DIFF 17 0 hidden dark
+layer 4 POLY 17 0 opc dark
+layer 5 L237 17 0 hidden dark
+layer 104 HI_OPC 49 0 hidden dark
+layer 105 DEF_OPC 49 0 hidden dark
+layer 106 LO_OPC 49 0 hidden dark
+
+# Layer Info - Use this section to define layer information such as:
+# - Layer definitions
+# - Background definitions</code></pre><pre class="pre codeblock leveled"><code>#--------------- Arbitrary Commands ---------------------
+sse LITHO_PROMOTION_TILING 1
+
+MRC_RULE EXTERNAL {USE 0.16}
+MRC_RULE INTERNAL {USE 0.13}
+
+# Arbitrary Commands Area - Use this area to add additional setup features
+# such as: 
+# - Setup environment variables
+# - Custom Tcl scripts
+# - fragmentLayer blocks (command blocks used to override global or 
+#    default settings for specified layers)</code></pre></div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id46530cf5-7d08-41dd-9651-ae00ba53d1ac"><h2 class="title Subheading sectiontitle">Example 2 — Tcl Blocks</h2><p class="p">A Tcl script can be placed in the
+“Arbitrary Commands” section of the setup file, following a clearTagScript
+keyword. For example:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+set simtag "all"
+for {set i 1} {$i &lt;= 10} {incr i} {
+	newTag negEPE$i -how EPE $simtag -0.1 0
+	fastIter negEPE$i 1
+	newTag posEPE$i -how EPE $simtag 0 0.1
+	fastIter posEPE$i 1
+}</code></pre><p class="p">Tcl commands in the setup file
+are pre-processed by the Tcl interpreter, then converted (or “expanded”)
+to Calibre LITHO commands, and finally input to the litho tool.
+The litho transcript echoes the Calibre translated commands and
+not the original Tcl commands. For instance, the following Tcl example:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+	for {set i 0{ {$i &lt; 3} {incr i} { 
+		fastIter all 1
+}</code></pre><p class="p">expands
+to the following executable litho commands:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+fastIter all 1
+fastIter all 1
+fastIter all 1</code></pre><p class="p">In addition, the Calibre WORKbench
+GUI tool expands any Tcl commands into translated setup file commands.
+You do not have to maintain the expanded form of the script.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Be sure
+to save the expanded setup code in a different file. Once Tcl code
+is translated, it cannot be restored to its original language syntax.</p>
+</div>
+<p class="p">Tcl scripting can be used as a
+method of implementing tagging operations. For example, you can
+create a Tcl script that executes the equivalent of a series of
+fastIter commands, allowing you to perform custom OPC or ORC iterations
+on specific tags.</p>
+</div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idf1f1a128-0196-45e2-a9f7-b567e450bdfa"><h2 class="title Subheading sectiontitle">Example 3 — Custom
+OPC With Negative and Positive EPE Search</h2><p class="p">The following Tcl script was created
+to search for negative and positive EPEs and apply OPC on those
+edges:</p>
+<div class="fig fignone ExampleTitle" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idcb7dbcaa-b3ea-4867-9ec5-100b7b59cb6a"><span class="figcap"><span class="fig--title-label">Example 1. </span>Tcl for Custom OPC</span><pre class="pre codeblock leveled"><code>clearTagScript
+set simtag "all"
+for {set i 1} {$i &lt;= 5} {incr i} {	 
+									# Perform this loop five times
+	newTag negEPE$i -how EPE $simtag -0.1 0 
+									# Find any edge with negative EPE
+	fastIter negEPE$i 1
+									# Apply OPC to those edges
+	newTag posEPE$i -how EPE $simtag 0 0.1
+									# Find any edge with positive EPE
+	fastIter posEPE$i 1
+									# Apply OPC to those edges
+}</code></pre></div>
+<p class="p">The Tcl loop expands to the following
+litho commands:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+newTag negEPE1 -how EPE all -0.1 0
+fastIter negEPE1 1
+newTag posEPE1 -how EPE all 0 1
+fastIter posEPE1 1
+newTag negEPE2 -how EPE all -0.1 0
+fastIter negEPE2 1
+newTag posEPE2 -how EPE all 0 0.1
+fastIter posEPE2 1
+newTag negEPE3 -how EPE all -0.1 0
+fastIter negEPE3 1
+newTag posEPE3 -how EPE all 0 0.1
+fastIter posEPE3 1
+newTag negEPE4 -how EPE all -0.1 0
+fastIter negEPE4 1
+newTag posEPE4 -how EPE all 0 0.1
+fastIter posEPE4 1
+newTag negEPE5 -how EPE all -0.1 0
+fastIter negEPE5 1
+newTag posEPE5 -how EPE all 0 0.1
+fastIter posEPE5 1</code></pre><p class="p">Note how many newTag and fastIter
+commands would normally have been manually written without the use
+of the Tcl script.</p>
+</div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idb206a2c7-af2c-4559-bc9a-01a75258b689"><h2 class="title Subheading sectiontitle">Example 4 — Generate
+an Array of Tags for Use With Calibre ORC</h2><p class="p">The following Tcl loop creates
+an array of image tags (SLOPE, in this case). The range is from 0
+to 5, in increments of 0.5.</p>
+<div class="fig fignone ExampleTitle" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id82a4f4af-9200-4691-a473-dca074166d16"><span class="figcap"><span class="fig--title-label">Example 2. </span>Tcl for Array of Image
+Tags</span><pre class="pre codeblock leveled"><code>clearTagScript
+newTag orcable -how EDGE LENGTH &gt;= 0.0875
+set stepSLOPE 0.5
+for (set i 0) ($i &lt;=9) (incr i) {
+	set hibin [expr $i*stepSLOPE+$stepSLOPE]
+	set lobin [expr $i*stepSLOPE]
+	newTag "SLOPE$lobin$hibin" -how IMAGE orcable SLOPE &gt; $lobin &lt;= $hibin
+}</code></pre></div>
+<p class="p">This Tcl code block expands to
+the following litho commands:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+newTag orcable -how EDGE LENGTH &gt;= 0.0875
+newTag SLOPE0.00.5 -how IMAGE orcable SLOPE &gt; 0.0 &lt;= 0.5
+newTag SLOPE0.51.0 -how IMAGE orcable SLOPE &gt; 0.5 &lt;= 1.0
+newTag SLOPE0.01.5 -how IMAGE orcable SLOPE &gt; 1.0 &lt;= 1.5
+newTag SLOPE0.52.0 -how IMAGE orcable SLOPE &gt; 1.5 &lt;= 2.0
+newTag SLOPE0.02.5 -how IMAGE orcable SLOPE &gt; 2.0 &lt;= 2.5
+newTag SLOPE0.53.0 -how IMAGE orcable SLOPE &gt; 2.5 &lt;= 3.0
+newTag SLOPE0.03.5 -how IMAGE orcable SLOPE &gt; 3.0 &lt;= 3.5
+newTag SLOPE0.54.5 -how IMAGE orcable SLOPE &gt; 3.5 &lt;= 4.0
+newTag SLOPE0.04.5 -how IMAGE orcable SLOPE &gt; 4.0 &lt;= 4.5
+newTag SLOPE0.55.5 -how IMAGE orcable SLOPE &gt; 4.5 &lt;= 5.0</code></pre></div>
+<div class="section Subsection" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__id98b7edac-9c2a-42c9-a2e4-53825ee4dfca"><h2 class="title Subheading sectiontitle">Example 5 — Tags2boxes
+Output (ORC)</h2><p class="p">The following Tcl loop performs
+the same tagging operation as in <a class="xref fm:HeadingOnly" href="#id555257c0-90b2-4b5c-ba76-a69ab54561f8__idb206a2c7-af2c-4559-bc9a-01a75258b689">Example 4 — Generate an Array of Tags for Use With Calibre ORC</a> (although
+this time, the increment is 0.7). Additionally, each tagged fragment
+is written out with a tags2boxes operation.</p>
+<div class="fig fignone ExampleTitle" id="id555257c0-90b2-4b5c-ba76-a69ab54561f8__idb3961796-500d-4121-9de5-08bda6c7747d"><span class="figcap"><span class="fig--title-label">Example 3. </span>Tcl for Image Tagging
+and Tags2Boxes</span><pre class="pre codeblock leveled"><code>clearTagScript
+newTag orcable -how EDGE LENGTH &gt;= 0.0875
+set stepSLOPE 0.7        #increment by 0.7
+for (set i 0) ($i &lt;=9) (incr i) { 
+	set hibin [expr $i*stepSLOPE+$stepSLOPE]
+	set lobin [expr $i*stepSLOPE]
+	newTag "SLOPE$lobin$hibin" -how IMAGE orcable SLOPE &gt; $lobin &lt;= $hibin
+}
+for (set i 0) ($i &lt;=9) (incr i) {
+	set hibin [expr $i*stepSLOPE+$stepSLOPE] 
+	set lobin [expr $i*stepSLOPE]
+	set layernum [expr $i +300}
+	tags2boxes -tags "SLOPE$lobin$hibin" -layers "$layernum"
+												#output tags2boxes
+}</code></pre></div>
+<p class="p">This Tcl code block expands to
+the following litho commands:</p>
+<pre class="pre codeblock leveled"><code>clearTagScript
+newTag orcable -how EDGE LENGTH &gt;= 0.0875
+newTag SLOPE0.00.7 -how IMAGE orcable SLOPE &gt; 0.0 &lt;= 0.7
+newTag SLOPE0.71.4 -how IMAGE orcable SLOPE &gt; 0.7 &lt;= 1.4
+newTag SLOPE0.42.1 -how IMAGE orcable SLOPE &gt; 1.4 &lt;= 2.1
+newTag SLOPE0.12.8 -how IMAGE orcable SLOPE &gt; 2.1 &lt;= 2.8
+newTag SLOPE0.83.5 -how IMAGE orcable SLOPE &gt; 2.8 &lt;= 3.5
+newTag SLOPE0.54.2 -how IMAGE orcable SLOPE &gt; 3.5 &lt;= 4.2
+newTag SLOPE0.24.9 -how IMAGE orcable SLOPE &gt; 4.2 &lt;= 4.9
+newTag SLOPE0.95.6 -how IMAGE orcable SLOPE &gt; 4.9 &lt;= 5.6
+newTag SLOPE0.66.3 -how IMAGE orcable SLOPE &gt; 5.6 &lt;= 6.3
+newTag SLOPE0.37.0 -how IMAGE orcable SLOPE &gt; 6.3 &lt;= 7.0
+tags2boxes -tags SLOPE0.00.7 -layers 300
+tags2boxes -tags SLOPE0.71.4 -layers 301
+tags2boxes -tags SLOPE0.42.1 -layers 302
+tags2boxes -tags SLOPE0.12.8 -layers 303
+tags2boxes -tags SLOPE0.83.5 -layers 304
+tags2boxes -tags SLOPE0.54.2 -layers 305
+tags2boxes -tags SLOPE0.24.9 -layers 306
+tags2boxes -tags SLOPE0.95.6 -layers 307
+tags2boxes -tags SLOPE0.66.3 -layers 308
+tags2boxes -tags SLOPE0.37.0 -layers 309</code></pre></div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_SvrfCommands_id0f71cca4.html" title="There are four SVRF commands used by the sparse OPC tools.">SVRF Commands</a></div>
+</div>
+
+<div class="linklist linklist relinfo"><strong>Related Topics</strong><br />
+
+<div><a class="link" href="../topics/Contain_LithoSetupFileKeywords_id5d361e7b.html" title="Setup file keywords define OPC and simulation parameters and define the layers used in Calibre OPCpro, Calibre ORC, and Calibre PRINTimage operations. Keywords may only be specified once per setup file.">Litho Setup File Keywords</a></div>
+<div><a class="link" href="../topics/Contain_LithoVariables_ide342bdbf.html" title="This section describes setup variables and litho-specific environment variables that control the functioning of the sparse OPC simulation tools. There are two ways to set these variables:">Litho Variables</a></div>
+<div><a class="link" href="../topics/Contain_TaggingCommands_ide141a5fb.html" title="Tagging commands work on specific subsets of fragments. These subsets are “tag sets.” You can define custom tag sets with the newTag commands and then modify the fragments in the sets using other tagging commands.">Tagging Commands</a></div>
+<div><a class="link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Tcl Library in Calibre', 'calbr_admin_gd'); return false;">Tcl Library in Calibre [Calibre Administrator's Guide]</a></div></div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_opcpro_useref"
+                DocTitle = "Calibre® OPCpro™ User’s and Reference Manual"
+                PageTitle = "Litho Setup File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_LithoSetupFileFormat_id555257c0.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® OPCpro™ User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

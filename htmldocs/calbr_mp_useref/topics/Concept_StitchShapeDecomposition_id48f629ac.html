@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Stitch Shape Decomposition" />
+<meta name="abstract" content="The dpStitchCandidates command generates stitches over regions of overlapping shapes on previously decomposed masks." />
+<meta name="description" content="The dpStitchCandidates command generates stitches over regions of overlapping shapes on previously decomposed masks." />
+<meta name="prodname" content="Calibre Multi-Patterning User's and Reference Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Mentor Graphics Corporation 10 24 2014 10 24 2014" />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-02-18" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_mp_useref" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="NONE" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 17, 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Multi-Patterning User’s and Reference Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="IncludeDraftCommentsInChangeLog" content="All" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id48f629ac-033e-4c9d-a4c2-92530e593070" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Stitch Shape Decomposition</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Stitch Shape Decomposition" />
+<meta name="attributes" content="doc.type.documentation.ref,doc.type.documentation.user,product.version.v2021.2,product.id.P10115" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id48f629ac-033e-4c9d-a4c2-92530e593070">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Stitch Shape Decomposition</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The dpStitchCandidates
+command generates stitches over regions of overlapping shapes on
+previously decomposed masks.</span>
+</div>
+<p class="p">Some foundries permit
+polygons to be split across masks. The dpStitchCandidates LITHO
+FILE shown here is one possible way to automate locating stitch
+placements. It returns two layers, the stitch candidates and the
+separators. Example <a class="xref fm:NumberOnlyBlack" href="#id48f629ac-033e-4c9d-a4c2-92530e593070__id66fe6e90-d8de-417c-8454-b83c319fa0c4">Figure 1</a> shows the setup file, which would
+be placed inside an SVRF file and called by <a class="xref fm:HeadingOnly" href="Command_RetDpstitch_ida3b4a7b5.html#ida3b4a7b5-6866-4b87-8702-bee6cf68a2a5__Command_RetDpstitch_ida3b4a7b5.xml#ida3b4a7b5-6866-4b87-8702-bee6cf68a2a5" title="Calls a LITHO FILE statement containing a setlayer dpstitch command that generates stitch candidate shapes. Used with RET NMDPC and DFM DP.">RET DPSTITCH</a>.</p>
+<div class="fig fignone" id="id48f629ac-033e-4c9d-a4c2-92530e593070__id66fe6e90-d8de-417c-8454-b83c319fa0c4"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Stitched Shape Decomposition</span><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_LithoFile_idb9db0eb3.html#idb9db0eb3-01fd-481e-82c6-19433ee842be__Command_LithoFile_idb9db0eb3.xml#idb9db0eb3-01fd-481e-82c6-19433ee842be" title="Specifies pattern decomposition commands. Used only with RET NMDPC, RET TP, and RET QP.">LITHO FILE</a> dpstitch_setup_M1 [ /* 
+	<a class="xref fm:HeadingOnly" href="Command_Layer_idb5e82a71.html#idb5e82a71-6e3e-4af7-b866-784222c8ce69__Command_Layer_idb5e82a71.xml#idb5e82a71-6e3e-4af7-b866-784222c8ce69" title="Allows layers to be available for the setlayer commands. Used for RET NMDPC only.">layer</a> m1_input visible clear  
+	layer m1_stitch_keepout visible clear  
+	layer m1_m0_precolor visible clear  
+	layer m1_m1_precolor visible clear  
+	layer usersep1 hidden clear  
+	<a class="xref fm:HeadingOnly" href="Command_Tilemicrons_id3680a61b.html#id3680a61b-2eb6-406a-b529-d293289dc34f__Command_Tilemicrons_id3680a61b.xml#id3680a61b-2eb6-406a-b529-d293289dc34f" title="Specifies the size of a processing tile. Used for RET NMDPC and RET DPSTITCH only.">tilemicrons</a> 35 adjust</code></pre><pre class="pre codeblock leveled"><code><a class="xref fm:HeadingOnly" href="Command_Options_ideb2c768f.html#ideb2c768f-36ee-4ead-99ad-a82bfa82dcf1__Command_Options_ideb2c768f.xml#ideb2c768f-36ee-4ead-99ad-a82bfa82dcf1" title="Passes stitching keywords with free-format to setlayer. Used for RET NMDPC and RET DPSTITCH only.">options</a> M1OPTS { 
+		layer m1_input opc clear 
+		layer m1_stitch_keepout visible clear 
+		layer m1_m0_precolor visible clear 
+		layer m1_m1_precolor visible clear 
+		layer usersep1 hidden clear 
+ </code></pre><pre class="pre codeblock leveled"><code>
+		<a class="xref fm:HeadingOnly" href="Command_Dpstitchsize_id82a0e6fc.html#id82a0e6fc-dfb7-4e93-8eff-c9ae7e651853__Command_Dpstitchsize_id82a0e6fc.xml#id82a0e6fc-dfb7-4e93-8eff-c9ae7e651853" title="Specifies stitch length requirements for various line widths.">dpStitchSize</a> (0.04 &lt;= length &lt;= 0.05) for (0 &lt; width &lt;= 0.03): \ 
+			(0.06 &lt;= length &lt;= 0.08) for (0.03 &lt; width &lt;= 0.06): \ 
+			0.08 otherwise: 
+ 
+		<a class="xref fm:HeadingOnly" href="Command_Dpfaceclass_iddd66951f.html#iddd66951f-23c6-410f-a075-f99cfe3cbbf0__Command_Dpfaceclass_iddd66951f.xml#iddd66951f-23c6-410f-a075-f99cfe3cbbf0" title="Classifies edges into groups.">dpFaceClass</a> name(tip): \ 
+			true for length &lt;= 0.03 and minAdjacent &gt;= 0.03: \ 
+			false otherwise: 
+ 
+		<a class="xref fm:HeadingOnly" href="Command_Dpspacing_id7576090b.html#id7576090b-b12b-4120-8a28-27c87f32e39f__Command_Dpspacing_id7576090b.xml#id7576090b-b12b-4120-8a28-27c87f32e39f" title="Specifies spacing requirements between two face classes.">dpSpacing</a> (tip,tip) metric(opposite): 0.06 otherwise: 
+		dpSpacing (tip,side) metric(opposite): 0.06 otherwise: 
+		dpSpacing (side,side) metric(opposite): 0.06 otherwise: 
+ </code></pre><pre class="pre codeblock leveled"><code>
+		<a class="xref fm:HeadingOnly" href="Command_Minintersectionarmlength_ideb96d385.html#ideb96d385-35b7-4820-b747-ffb5f1c9df7b__Command_Minintersectionarmlength_ideb96d385.xml#ideb96d385-35b7-4820-b747-ffb5f1c9df7b" title="Specifies the minimum length of an intersection extension that is considered for stitching.">minIntersectionArmLength</a> 0.04 otherwise: 
+		<a class="xref fm:HeadingOnly" href="Command_Intersectionstitch_idc4e9a791.html#idc4e9a791-86e1-4baf-9326-48d8326e8072__Command_Intersectionstitch_idc4e9a791.xml#idc4e9a791-86e1-4baf-9326-48d8326e8072" title="Specifies the required conditions that make an intersection suitable for stitches.">intersectionStitch</a> true for numArms &gt;= 3: \ 
+			false otherwise: 
+		<a class="xref fm:HeadingOnly" href="Command_Minconcavecorneroverlap_id6592409c.html#id6592409c-357c-4a57-aea7-1caa6857c032__Command_Minconcavecorneroverlap_id6592409c.xml#id6592409c-357c-4a57-aea7-1caa6857c032" title="Defines the minimum overlap required for concave corners to receive stitches.">minConcaveCornerOverlap</a> \ 
+			0.06 for (0.04 &lt;= width  &lt; 0.06): 
+		<a class="xref fm:HeadingOnly" href="Command_Minconcavecornerspacing_id76a40b99.html#id76a40b99-e662-4d02-9166-16719cdc7a55__Command_Minconcavecornerspacing_id76a40b99.xml#id76a40b99-e662-4d02-9166-16719cdc7a55" title="Defines the minimum distance from every inside corner to a stitch candidate rectangle.">minConcaveCornerSpacing</a> \ 
+			0.06 for width &lt; 0.06: \ 
+			0.04 otherwise: 
+		<a class="xref fm:HeadingOnly" href="Command_Minconvexcornerspacing_idbfae253e.html#idbfae253e-6a00-464e-bc08-2020ddd61344__Command_Minconvexcornerspacing_idbfae253e.xml#idbfae253e-6a00-464e-bc08-2020ddd61344" title="Defines the minimum distance from every outside corner to a stitch candidate rectangle.">minConvexCornerSpacing</a> 0.06 for width &lt; 0.06: \ 
+			0.04 otherwise: 
+		<a class="xref fm:HeadingOnly" href="Command_Dpstitchcandidates_id8ac2555f.html#id8ac2555f-e5ae-40d0-a5f6-a51e1febd6da__Command_Dpstitchcandidates_id8ac2555f.xml#id8ac2555f-e5ae-40d0-a5f6-a51e1febd6da" title="Generates shapes representing regions where overlapping decomposed layers may be joined.">dpStitchCandidates</a> criticalDistance 0.03 minArea 0.0036 \ 
+			stitchKeepout m1_stitch_keepout \ 
+			anchor0 m1_m0_precolor anchor1 m1_m1_precolor maxStitchWidth 0.5\ 
+			-outLayer stitchcandidates \ 
+			-outLayer side \ 
+			-outLayer separators -outLayer tip 
+	} 
+	<a class="xref Link" href="../../calbr_mp_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'setlayer dpstitch', 'calbr_mp_useref'); return false;">setlayer</a> stitchcandidates = <a class="xref Link" href="../../calbr_mp_useref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'setlayer dpstitch', 'calbr_mp_useref'); return false;">dpstitch</a> m1_input m1_stitch_keepout \ 
+		m1_m0_precolor m1_m1_precolor usersep1 \
+		MAP stitchcandidates OPTIONS M1OPTS 
+ 
+	setlayer separators = dpstitch m1_input m1_stitch_keepout \ 
+		m1_m0_precolor m1_m1_precolor usersep1 
+		MAP separators OPTIONS M1OPTS 
+ 
+*/] 
+ 
+ </code></pre></div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCChap_ExampleFiles_iddadf1bf7.html" title="Use example rule files to help speed your file development.">Example Files</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_mp_useref"
+                DocTitle = "Calibre® Multi-Patterning User’s and Reference Manual"
+                PageTitle = "Stitch Shape Decomposition"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_StitchShapeDecomposition_id48f629ac.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Multi-Patterning User’s and Reference Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

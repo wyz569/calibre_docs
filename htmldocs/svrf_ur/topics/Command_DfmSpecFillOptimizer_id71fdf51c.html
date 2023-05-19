@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="CommandRefTopic" />
+<meta name="DC.Title" content="DFM Spec Fill Optimizer" />
+<meta name="abstract" content="Defines a set of optimization criteria to be used in finding the optimal fill." />
+<meta name="description" content="Defines a set of optimization criteria to be used in finding the optimal fill." />
+<meta name="prodname" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="svrf_ur" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="3/25/21" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Standard Verification Rule Format (SVRF) Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id71fdf51c-f0d0-4b85-9293-fca2cc362811" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>DFM Spec Fill Optimizer</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="DFM Spec Fill Optimizer" />
+<meta name="attributes" content="doc.type.documentation.ref,product.version.v2021.2,product.id.P10089,product.id.P10099,product.id.P10119,product.id.P10101,product.id.P11427,product.id.P10115,product.id.P11426,product.id.P10122,product.id.P11493" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body class="usa-arg" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">DFM Spec Fill Optimizer</h1>
+<div class="body refbody CommandRefBody"><div class="abstract CommandRefAbstract"><p class="p ContextMGC">Specification
+statement</p>
+<p class="p ContextMGC">License: <a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Calibre YieldEnhancer', 'calbr_admin_gd'); return false;">Calibre YieldEnhancer</a></p>
+<p class="shortdesc">Defines a set of optimization
+criteria to be used in finding the optimal fill. </p>
+</div>
+<div class="section Usages"><h2 class="title Subheading sectiontitle">Usage</h2><div class="section UsageSet"><p class="lines UsageLine"><span class="keyword ParameterName Required">DFM SPEC FILL OPTIMIZER</span> <span class="keyword ParameterName RequiredReplaceable">optimizer_name</span> <br />
+<span class="keyword ParameterName RequiredReplaceable">analyze_layer1</span> [<span class="keyword ParameterName OptionalReplaceable">analyze_layer2</span> …] <br />
+‘<span class="keyword ParameterName Required">[</span>’ <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> ‘<span class="keyword ParameterName Required">]</span>’ [ <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> ]<br />
+[<span class="keyword ParameterName Optional">TOMAX</span> <br />
+      [ <span class="keyword ParameterName Optional">WINDOW</span> {<span class="keyword ParameterName OptionalReplaceable">w</span> | <span class="keyword ParameterName OptionalReplaceable">wx</span> <span class="keyword ParameterName OptionalReplaceable">wy</span>} [<span class="keyword ParameterName Optional">STEP</span> {<span class="keyword ParameterName OptionalReplaceable">s</span> | <span class="keyword ParameterName OptionalReplaceable">sx</span> <span class="keyword ParameterName OptionalReplaceable">sy</span>}] [<span class="keyword ParameterName Optional">BACKUP</span>] ] <br />
+      [ <span class="keyword ParameterName Optional">INSIDE OF LAYER</span> [<span class="keyword ParameterName Optional">BY POLYGON</span>] <span class="keyword ParameterName OptionalReplaceable">layer_analyze</span> ]  <br />
+      [ <span class="keyword ParameterName Optional">NOEMPTY</span> {<span class="keyword ParameterName OptionalReplaceable">r</span> | <span class="keyword ParameterName OptionalReplaceable">rx</span> <span class="keyword ParameterName OptionalReplaceable">ry</span>} ]… <br />
+]<br />
+[ <span class="keyword ParameterName Optional">MAGNITUDE</span> <span class="keyword ParameterName OptionalReplaceable">mag_constraint </span>[<span class="keyword ParameterName OptionalDefault">ABSOLUTE</span> | <span class="keyword ParameterName Optional">RELATIVE</span>] ] <br />
+[ <span class="keyword ParameterName Optional">GRADIENT</span> <span class="keyword ParameterName OptionalReplaceable">grad_constraint</span> [<span class="keyword ParameterName OptionalDefault">ABSOLUTE</span> | <span class="keyword ParameterName Optional">RELATIVE</span>] [<span class="keyword ParameterName Optional">CORNER</span>] ]</p>
+</div>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Arguments</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idea69c190-0915-44d5-a484-fc6f9c5987f7"><span class="keyword ParameterName RequiredReplaceable">optimizer_name</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument assigning
+a name by which this set of optimization criteria can be referenced. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idff327907-faac-4cc3-889c-22727310c33a"><span class="keyword ParameterName RequiredReplaceable">analyze_layer1</span> [<span class="keyword ParameterName OptionalReplaceable">analyze_layer2</span> …] </dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument for use
+when performing any density calculations. This argument lists the
+names of all layers referenced in the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span>.
+You must supply at least one layer (<span class="keyword ParameterName RequiredReplaceable">analyze_layer1</span>). </p>
+<p class="p">These layers may or may not
+be the same as the layers used to constrain the placement of the generated
+fill, such as the <span class="keyword ParameterName OptionalReplaceable">space_layer</span> defined
+in <a class="xref fm:HeadingOnly" href="Command_DfmSpecFillShape_id07e94408.html#id07e94408-523b-4312-ba00-26658fdb7a69__Command_DfmSpecFillShape_id07e94408.xml#id07e94408-523b-4312-ba00-26658fdb7a69" title="Defines a fill shape and assigns it a name by which it can be referenced from within a DFM Spec Fill specification. When used for single layer shapes, this statement defines the fill shape in its entirety. When used for multilayer shapes, this statement defines the portion of the shape that is drawn on a single specific layer.">DFM Spec Fill Shape</a> or <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a>.</p>
+<p class="p">If specifying more than one <span class="keyword ParameterName RequiredReplaceable">analyze_layer</span>,
+make sure that these are not copies of the same original layer.
+This generates a syntax error. For example if the original layer
+is A, then the following set of commands work correctly:</p>
+<pre class="pre codeblock"><code>ANALYZE_LAYER_B = COPY A
+ANALYZE_LAYER_C = COPY ANALYZE_LAYER_B 
+DFM SPEC FILL OPTIMIZER "spec1" ... ANALYZE_LAYER_B ANALYZE_LAYER_C</code></pre><p class="p">Specifying the following generates
+an error:</p>
+<pre class="pre codeblock"><code>ANALYZE_LAYER_B = COPY A
+ANALYZE_LAYER_C = COPY A
+...</code></pre></dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id1794c446-dd36-4c11-979a-7d2562c41e0d">‘<span class="keyword ParameterName Required">[</span>’ <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> ‘<span class="keyword ParameterName Required">]</span>’</dt>
+<dd class="dd ArgumentDescription"><p class="p">A required argument defining
+an expression that is used for optimization of fill generation. Typically,
+the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> represents
+density. The <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> must
+be enclosed in brackets <span class="keyword ParameterName Required">[ ]</span>.</p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> may
+include any of the following:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idc03b23ac-5bd7-4750-93ee-b2a5d7e95ff4"><p class="p">Numbers, including numeric
+variables</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd5616506-c7c7-478e-9e05-b3d9443c0e73"><p class="p"><a class="xref fm:HeadingOnly" href="General_MathOperators_idf1457929.html#idf1457929-4b2f-45f0-89e6-68dedaabf92d__General_MathOperators_idf1457929.xml#idf1457929-4b2f-45f0-89e6-68dedaabf92d" title="Built-in math operators are available for use in DFM expressions. These are operators familiar in other programming contexts.">Math Operators</a> (+, -,
+!, ~, ^, *, /, +, -) </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id1cbea335-94fc-44bd-afe3-23197c6cf1aa"><p class="p">Parentheses ( ) </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id2ece4b7d-8a0b-4399-8d03-1383eec222df"><p class="p">Variables </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd34741c8-0800-4594-953a-4d0affd4968b"><p class="p"><a class="xref fm:HeadingOnly" href="General_MathFunctions_id7c9c3927.html#id7c9c3927-fe30-43b0-ba09-c4caa4cbc19a__General_MathFunctions_id7c9c3927.xml#id7c9c3927-fe30-43b0-ba09-c4caa4cbc19a" title="Certain math functions are supported in DFM Expressions. Math functions take zero or more numeric input arguments and produce a numeric value. There is no compile-time or runtime exception checking on the arguments of these functions, and unreasonable or undefined values may result from certain arguments.">Supported Math Functions in DFM Expressions</a> </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idbe6782ea-d3cc-44eb-8b1f-eac436e59d7f"><p class="p">User-defined functions created
+with <a class="xref fm:HeadingOnly" href="Command_DfmFunction_id879454b1.html#id879454b1-404a-412a-8094-fb480f5c3a9f__Command_DfmFunction_id879454b1.xml#id879454b1-404a-412a-8094-fb480f5c3a9f" title="Specifies a user-defined function that can be referenced within expressions for DFM Analyze, DFM Property, or other DFM Function statements.">DFM Function</a></p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ida326f1c9-ffbf-4df5-9f75-7e9adced66a9"><p class="p"><a class="xref fm:HeadingOnly" href="General_ConditionalExpressions_ide027a325.html#ide027a325-8bb9-4a37-8131-9256af5f6d60__General_ConditionalExpressions_ide027a325.xml#ide027a325-8bb9-4a37-8131-9256af5f6d60" title="A conditional expression is a way to specify an if/then expression within a DFM expression—it returns one result if the specified condition is true and another result if the condition is false. You can use conditional expressions in the DFM expressions within DFM Analyze, DFM Spec Fill Optimizer, DFM Property and its related operations, and DFM Function.">Conditional Expressions</a> </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ida0e1c116-282d-433f-acd4-42c4bb312b02"><p class="p">Most <a class="xref fm:HeadingOnly" href="Contain_MeasurementFunctions_id13468c08.html#id13468c08-797c-4cca-8773-611a15322186__Contain_MeasurementFunctions_id13468c08.xml#id13468c08-797c-4cca-8773-611a15322186" title="Measurement functions calculate the value of a geometric attribute of layer data. Measurement functions return values expressed in user units. Although the COUNT function does not measure a geometric attribute, it is included with the measurement functions because it behaves similarly to the other functions in this class.">Measurement Functions</a>.</p>
+</li>
+</ul>
+<p class="p">PROPERTY, the per-shape functions, and some other functions are
+not supported; see “<a class="xref fm:HeadingAndPage" href="General_DfmFuncDfmSpecFillSupport_idd6da54b4.html#idd6da54b4-ce01-49a1-8068-5edcb0e03eac__General_DfmFuncDfmSpecFillSupport_idd6da54b4.xml#idd6da54b4-ce01-49a1-8068-5edcb0e03eac" title="The built-in function and DFM expression support for DFM Spec Fill Optimizer is summarized here.">DFM Spec Fill Optimizer: Function and Expression Support</a>” for
+details. </p>
+<p class="p">For more information on expressions,
+refer to “<a class="xref fm:HeadingAndPage" href="Contain_DfmExpressions_id0aa735bd.html#id0aa735bd-eb6a-446d-9da0-f14de5e1332e__Contain_DfmExpressions_id0aa735bd.xml#id0aa735bd-eb6a-446d-9da0-f14de5e1332e" title="DFM Expressions are used to calculate DFM properties, define an analysis or density function, or specify a user-defined function. They can be used to calculate scores, statistics, and measurement values based on layer data. DFM Expressions are used in DFM Analyze, the DFM Property operation family, DFM Function, and DFM Spec Fill Optimizer.">DFM Expressions</a>”. The
+usual rules of operator precedence apply, and parentheses may be
+used to establish precedence in the calculation. </p>
+<p class="p">In addition:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id87e5324e-1c16-4f9f-a0d9-1a3043950299"><p class="p">The temporary layer containing
+generated fill must appear in the expression at least once. You
+represent this temporary layer as “_FILL_” in the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span>. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idb0afd603-6b50-412f-b68e-84f8b7c2a52c"><p class="p">Each input layer that appears
+in the expression must be defined as an <span class="keyword ParameterName RequiredReplaceable">analyze_layer</span>. It
+is not necessary to list the temporary layer _FILL_ as an <span class="keyword ParameterName RequiredReplaceable">analyze_layer</span>.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id072d35fd-1e9e-42cd-b5a0-7cb93c751a26"><p class="p">The value of
+the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> must
+monotonically increase as fill shapes are added to the design.</p>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">Note
+that this requirement is not checked at run time, but failure to
+conform to it produces unexpected results.</p>
+</div>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id3cb64966-72de-41b1-81af-fd71fd9c94cb"><p class="p">Division by 0 is defined
+not to satisfy any constraint.</p>
+</li>
+</ul>
+<p class="p">In certain cases, an expression
+where the denominator approaches zero can cause calculations to
+be inaccurate and can lead to unexpected results. For example, consider
+the following two optimization expressions that consider the area
+of the layer excl: </p>
+<pre class="pre codeblock"><code>[(AREA(metal) + AREA(_FILL_))/(AREA() - AREA(excl))] &gt; value
+[(AREA(metal) + AREA(_FILL_) + (value * AREA(excl)))/AREA()] &gt; value</code></pre><p class="p">Even though the expressions
+are algebraically equivalent, the first one can produce lower quality
+results, for example too many fill shapes, when AREA() - AREA(excl)
+is very small. </p>
+</dd>
+</dl>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">You must specify at least one of <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span>,
+MAGNITUDE, or GRADIENT. If TOMAX is specified, only <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> is
+supported. </p>
+</div>
+<dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idb3055d11-9964-4c0f-a973-62c81506a6dc"><span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional argument defining
+a numeric optimization constraint. The constraint defines a goal
+that the fill generation algorithm attempts to achieve for the value
+of the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span>.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id3a14ec7a-5898-49ae-83f0-72e733ce6ff3" class="table" frame="border" border="1" rules="cols"><colgroup><col style="width:2.415in" /><col style="width:4.085in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d348280e500"><p class="p"><span class="ph FontProperty emphasis">optimization_limit</span></p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d348280e504"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e500 "><p class="p">&gt; <span class="keyword ParameterName OptionalReplaceable">lower_bound</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e504 "><p class="p">Fill is added until the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+is greater than or equal to <span class="keyword ParameterName OptionalReplaceable">lower_bound</span>. </p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e500 "><p class="p">&gt; <span class="keyword ParameterName OptionalReplaceable">lower_bound</span> &lt; <span class="keyword ParameterName OptionalReplaceable">upper_bound</span></p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e504 "><p class="p">Fill is added until the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+is greater than or equal to <span class="keyword ParameterName OptionalReplaceable">lower_bound</span>,
+but does not exceed <span class="keyword ParameterName OptionalReplaceable">upper_bound</span>.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e500 "><p class="p">&lt; <span class="keyword ParameterName OptionalReplaceable">upper_bound</span> TOMAX</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e504 "><p class="p">The <span class="keyword ParameterName OptionalReplaceable">upper_bound</span> is
+treated as a target value for the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span>.
+The maximum amount of fill is added without the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value exceeding <span class="keyword ParameterName OptionalReplaceable">upper_bound</span>. </p>
+<p class="p">(When optimizing density, always include TOMAX if a <span class="keyword ParameterName OptionalReplaceable">lower_bound</span> is
+not specified, otherwise a density of zero meets the constraint
+and no fill will be added.)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">Note that “&gt;=” and “&gt;” are
+treated as equivalent and mean “&gt;=”. Similarly, “&lt;=” and “&lt;” are
+treated as equivalent and mean “&lt;=”.</p>
+<p class="p">The <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> may
+include any of the following:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id77cdde18-977b-4aa8-a2cc-ca9db7ed217a"><p class="p">Numbers, including numeric
+variables</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idcccdd699-5783-4f89-91fd-44f39d5ade15"><p class="p"><a class="xref fm:HeadingOnly" href="General_MathOperators_idf1457929.html#idf1457929-4b2f-45f0-89e6-68dedaabf92d__General_MathOperators_idf1457929.xml#idf1457929-4b2f-45f0-89e6-68dedaabf92d" title="Built-in math operators are available for use in DFM expressions. These are operators familiar in other programming contexts.">Math Operators</a> (+, -,
+!, ~, ^, *, /, +, -) </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idead88622-1872-4dd5-b6f2-5eb9d9612ea7"><p class="p">Parentheses ( ) </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id92690fec-d26a-481f-815a-f11951f34b05"><p class="p">Variables </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id8bca466b-9b11-40db-808c-7fb4d6e69c7f"><p class="p"><a class="xref fm:HeadingOnly" href="General_ConditionalExpressions_ide027a325.html#ide027a325-8bb9-4a37-8131-9256af5f6d60__General_ConditionalExpressions_ide027a325.xml#ide027a325-8bb9-4a37-8131-9256af5f6d60" title="A conditional expression is a way to specify an if/then expression within a DFM expression—it returns one result if the specified condition is true and another result if the condition is false. You can use conditional expressions in the DFM expressions within DFM Analyze, DFM Spec Fill Optimizer, DFM Property and its related operations, and DFM Function.">Conditional Expressions</a> </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idf64d3e0d-9156-48bd-9f5c-b387b31dda9c"><p class="p"><a class="xref fm:HeadingOnly" href="General_MathFunctions_id7c9c3927.html#id7c9c3927-fe30-43b0-ba09-c4caa4cbc19a__General_MathFunctions_id7c9c3927.xml#id7c9c3927-fe30-43b0-ba09-c4caa4cbc19a" title="Certain math functions are supported in DFM Expressions. Math functions take zero or more numeric input arguments and produce a numeric value. There is no compile-time or runtime exception checking on the arguments of these functions, and unreasonable or undefined values may result from certain arguments.">Supported Math Functions in DFM Expressions</a> </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id241928cf-3340-4aa3-b438-4d830b69bf27"><p class="p">User-defined functions created
+with <a class="xref fm:HeadingOnly" href="Command_DfmFunction_id879454b1.html#id879454b1-404a-412a-8094-fb480f5c3a9f__Command_DfmFunction_id879454b1.xml#id879454b1-404a-412a-8094-fb480f5c3a9f" title="Specifies a user-defined function that can be referenced within expressions for DFM Analyze, DFM Property, or other DFM Function statements.">DFM Function</a> </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id177c2292-9e1f-4d35-a742-ba3fb5b2835f"><p class="p">Most <a class="xref fm:HeadingOnly" href="Contain_MeasurementFunctions_id13468c08.html#id13468c08-797c-4cca-8773-611a15322186__Contain_MeasurementFunctions_id13468c08.xml#id13468c08-797c-4cca-8773-611a15322186" title="Measurement functions calculate the value of a geometric attribute of layer data. Measurement functions return values expressed in user units. Although the COUNT function does not measure a geometric attribute, it is included with the measurement functions because it behaves similarly to the other functions in this class.">Measurement Functions</a></p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id26e27f88-59c9-40c9-9294-e4dbcdbee28a"><p class="p">PROPERTY</p>
+</li>
+</ul>
+<p class="p">The per-shape functions and some other functions are not supported;
+see “<a class="xref fm:HeadingAndPage" href="General_DfmFuncDfmSpecFillSupport_idd6da54b4.html#idd6da54b4-ce01-49a1-8068-5edcb0e03eac__General_DfmFuncDfmSpecFillSupport_idd6da54b4.xml#idd6da54b4-ce01-49a1-8068-5edcb0e03eac" title="The built-in function and DFM expression support for DFM Spec Fill Optimizer is summarized here.">DFM Spec Fill Optimizer: Function and Expression Support</a>” for
+details. </p>
+<p class="p">For more information on expressions,
+refer to “<a class="xref fm:HeadingAndPage" href="Contain_DfmExpressions_id0aa735bd.html#id0aa735bd-eb6a-446d-9da0-f14de5e1332e__Contain_DfmExpressions_id0aa735bd.xml#id0aa735bd-eb6a-446d-9da0-f14de5e1332e" title="DFM Expressions are used to calculate DFM properties, define an analysis or density function, or specify a user-defined function. They can be used to calculate scores, statistics, and measurement values based on layer data. DFM Expressions are used in DFM Analyze, the DFM Property operation family, DFM Function, and DFM Spec Fill Optimizer.">DFM Expressions</a>”. The
+usual rules of operator precedence apply, and parentheses may be
+used to establish precedence in the calculation.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Do not
+use the temporary layer (_FILL_) in an <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> expression. </p>
+</div>
+<p class="p">You can specify the <span class="keyword ParameterName RequiredReplaceable">optimization_limit</span> as
+a numerical constraint or as an expression enclosed in brackets
+([ ]). <a class="xref fm:Table" href="#id71fdf51c-f0d0-4b85-9293-fca2cc362811__id39206f08-07d0-4291-8876-86ed359ab221">Table 1</a> shows equivalent definitions
+for <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span>.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id39206f08-07d0-4291-8876-86ed359ab221" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Expression Format for <span class="ph FontProperty emphasis">optimization_limit</span></span></caption><colgroup><col style="width:2.412in" /><col style="width:2.463in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d348280e683"><p class="p">Expression Format</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d348280e686"><p class="p">Equivalent Constraint </p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e683 "><p class="p">[0.3]</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e686 "><p class="p">&gt; 0.3</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e683 "><p class="p">[0.3] [0.5]</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e686 "><p class="p">&gt; 0.3 &lt; 0.5</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e683 "><p class="p">[0.3] TOMAX</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d348280e686 "><p class="p">&lt; 0.3 TOMAX</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">You can also include more complex
+expressions that include property and per-area references, for example:</p>
+<pre class="pre codeblock"><code>1: DFM SPEC FILL OPTIMIZER OPT1 M1 marker 
+2:   [(AREA(M1)+AREA(_FILL_))/AREA()]
+3:   <span class="ph CodeHighlight orange">[0.8 - (PROPERTY(marker, des_val)*AREA(marker)/AREA()] TOMAX</span> </code></pre><p class="p">Where line 2 is the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> and
+line 3 is the <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span>.</p>
+<p class="p">An upper bound in the <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> is
+useful to ensure that the fill operation does not add too much fill
+to windows that are adjacent to a window with an extremely high
+original <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+when a gradient or magnitude constraint is also specified. When
+an upper bound is specified, fill is not added if doing so would
+cause the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+to exceed the upper bound, even if this means that the gradient,
+magnitude, or minimum density constraint is not met. </p>
+<p class="p">The <span class="keyword ParameterName RequiredReplaceable">optimization_limit</span> is
+the highest-priority goal for generating fill. This means that if
+it is possible to achieve a <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+within this specified constraint by adding geometry as defined by
+fill attributes, the geometry will be added. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd17ba63d-dd3f-4f45-9b14-b7cf18ba0f9f">TOMAX </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword that works
+with the less than (&lt;) <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> constraint
+to maximize fill within the specified constraint. </p>
+<p class="p">As an example of using <span class="keyword ParameterName Optional">TOMAX</span>,
+the following statement: </p>
+<pre class="pre codeblock"><code>DFM SPEC FILL OPTIMIZER tomax_M1 metal1 
+   [ (AREA(metal1) + AREA(_FILL_)) / AREA( ) ] &lt; 0.8 TOMAX</code></pre><p class="p">generates fill such that the
+combination of regular metal1 and fill polygons does not exceed 80
+percent density on the metal1 layer.</p>
+<p class="p"><span class="keyword ParameterName Optional">TOMAX</span> does
+not work greater than (&gt;) constraint. Do not use <span class="keyword ParameterName Optional">TOMAX</span> with <span class="keyword ParameterName Optional">MAGNITUDE and GRADIENT</span>.</p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id874fbac7-a7c5-4e38-99d5-ba493f0f2041">WINDOW {<span class="keyword ParameterName OptionalReplaceable">w</span> | <span class="keyword ParameterName OptionalReplaceable">wx</span> <span class="keyword ParameterName OptionalReplaceable">wy</span>} [STEP {<span class="keyword ParameterName OptionalReplaceable">s</span> | <span class="keyword ParameterName OptionalReplaceable">sx</span> <span class="keyword ParameterName OptionalReplaceable">sy</span>}] [BACKUP]</dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional secondary keyword
+set used with the TOMAX keyword to specify the size of the data
+capture window within which the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> is
+to be calculated. This keyword set is used when specifying multiple
+grid multi optimizers; see <a class="xref fm:HeadingOnly" href="#id71fdf51c-f0d0-4b85-9293-fca2cc362811__id59229a48-cb97-4014-892c-09949005a504">Multiple Grid Multi Optimizer Support</a>. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">Multiple
+optimizers are only supported for hierarchical runs. There is also
+no support for multiple optimizers with Calibre YieldServer.</p>
+</div>
+<p class="p">The operation partitions the
+design into rectangular areas of the specified size. If WINDOW is
+not specified, the data capture window defaults to the analyze extent.
+When WINDOW is specified, there are restrictions on the fill shape
+size; see “<a class="xref fm:HeadingAndPage" href="#id71fdf51c-f0d0-4b85-9293-fca2cc362811__id9a335e2f-4d06-4d26-8e3a-2db0303dbb9d">Restrictions on Window, Step, and Fill Shape Size</a>”.</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id7ba92755-9319-43ac-9338-c52f5927c811"><p class="p">WINDOW
+{<span class="keyword ParameterName OptionalReplaceable">w</span> | <span class="keyword ParameterName OptionalReplaceable">wx</span> <span class="keyword ParameterName OptionalReplaceable">wy</span>}
+— Specifies the window size.</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id76759eb9-143d-437b-88e6-eaf1598001d6"><p class="p"><span class="keyword ParameterName OptionalReplaceable">w</span> —
+A square window with sides <span class="keyword ParameterName OptionalReplaceable">w</span> user
+units long.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ida040746e-1557-44c4-b922-9530c10a8fda"><p class="p"><span class="keyword ParameterName OptionalReplaceable">wx</span> <span class="keyword ParameterName OptionalReplaceable">wy</span> —
+A rectangular window that is <span class="keyword ParameterName OptionalReplaceable">wx</span> user
+units long and <span class="keyword ParameterName OptionalReplaceable">wy</span> user
+units high.</p>
+</li>
+</ul>
+<p class="p">By default, the tool truncates
+the WINDOW to the boundary size if the WINDOW is larger than the
+boundary in the x-direction or y-direction. </p>
+<p class="p">If STEP is also specified, the WINDOW dimensions <span class="keyword ParameterName OptionalReplaceable">w</span>,
+or <span class="keyword ParameterName OptionalReplaceable">wx</span> and <span class="keyword ParameterName OptionalReplaceable">wy</span>,
+must be a multiple of the corresponding STEP size <span class="keyword ParameterName OptionalReplaceable">s</span>, <span class="keyword ParameterName OptionalReplaceable">sx</span>,
+or <span class="keyword ParameterName OptionalReplaceable">sy</span>. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd614dad8-5823-46ea-9bad-641c5d03d6c2"><p class="p">STEP {<span class="keyword ParameterName OptionalReplaceable">s</span> | <span class="keyword ParameterName OptionalReplaceable">sx</span> <span class="keyword ParameterName OptionalReplaceable">sy</span>}
+— Optional keyword with WINDOW that defines an offset for the analysis
+window. The <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> is
+evaluated first with an analysis window grid at offset (0,0). The
+grid is then shifted and optimization is repeated.</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ida6c888f2-4164-439f-bbaa-a82c41badfe4"><p class="p"><span class="keyword ParameterName OptionalReplaceable">s</span> —
+The offset is <span class="keyword ParameterName OptionalReplaceable">s</span> user
+units in the x and y directions.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idcee1d3fb-c2c3-499c-9d19-a1b75127007f"><p class="p"><span class="keyword ParameterName OptionalReplaceable">sx</span> <span class="keyword ParameterName OptionalReplaceable">sy</span> —
+The offset is <span class="keyword ParameterName OptionalReplaceable">sx </span>and <span class="keyword ParameterName OptionalReplaceable">sy</span> in
+the x and y directions, respectively.</p>
+</li>
+</ul>
+<p class="p">Assuming <span class="keyword ParameterName OptionalReplaceable">sx</span> and <span class="keyword ParameterName OptionalReplaceable">sy</span> are
+specified, optimization is repeated at the following offsets:</p>
+<p class="p BlockIndent">(0,0), (<span class="keyword ParameterName OptionalReplaceable">sx</span>,0),
+(2*<span class="keyword ParameterName OptionalReplaceable">sx</span>,0),
+… (0, <span class="keyword ParameterName OptionalReplaceable">sy</span>),
+(<span class="keyword ParameterName OptionalReplaceable">sx</span>, <span class="keyword ParameterName OptionalReplaceable">sy</span>),
+(2*<span class="keyword ParameterName OptionalReplaceable">sx</span>, <span class="keyword ParameterName OptionalReplaceable">sy</span>),
+… (<span class="keyword ParameterName OptionalReplaceable">Nx</span>*<span class="keyword ParameterName OptionalReplaceable">sx</span>, <span class="keyword ParameterName OptionalReplaceable">Ny</span>*<span class="keyword ParameterName OptionalReplaceable">sy</span>)</p>
+<p class="p">Where:</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">Nx</span> =
+(wx/<span class="keyword ParameterName OptionalReplaceable">sx</span>)
+- 1</p>
+<p class="p BlockIndent"><span class="keyword ParameterName OptionalReplaceable">Ny</span> =
+(<span class="keyword ParameterName OptionalReplaceable">wy</span>/<span class="keyword ParameterName OptionalReplaceable">sy</span>)
+- 1</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ida81604d9-e4fe-4ebb-a717-d892a136c37a"><p class="p">BACKUP — Optional
+keyword for WINDOW that modifies the capture windows on the right
+and top edges of the optimization area. These windows are shifted
+left or down until they align with the right and top edges of the
+design. This eliminates partial windows on the edges of the design.
+The keyword is similar to the BACKUP keyword for the <a class="xref fm:HeadingOnly" href="Command_Density_id9b1d1a3c.html#id9b1d1a3c-8da9-4453-974b-9bc0de57b93b__Command_Density_id9b1d1a3c.xml#id9b1d1a3c-8da9-4453-974b-9bc0de57b93b" title="Constructs a derived polygon layer by measuring the density of an input layer within a user-specified window over a specified region of the design.">Density</a> operation.</p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id6620b589-1e1b-4e81-b9d2-31edef41d462">INSIDE OF LAYER [BY POLYGON] <span class="keyword ParameterName OptionalReplaceable">layer_analyze</span> </dt>
+<dd class="dd ArgumentDescription"><p class="p">Optional secondary keyword
+set used with the TOMAX keyword to constrain the operation to the
+areas defined by the specified layer(s). These layers must be original
+or derived polygon layers. This keyword set is used when specifying
+multiple grid multi optimizers; see “<a class="xref fm:HeadingAndPage" href="#id71fdf51c-f0d0-4b85-9293-fca2cc362811__id59229a48-cb97-4014-892c-09949005a504">Multiple Grid Multi Optimizer Support</a>”.</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id2cc4de49-7e02-4c47-925f-3266aa34e923"><p class="p"><span class="keyword ParameterName OptionalReplaceable">layer_analyze</span> —
+An original or derived polygon layer that defines the boundary areas
+to be used in density analysis. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id8a15d729-765e-433e-90ec-5d846ec0006f"><p class="p">BY POLYGON — An optional
+keyword you can specify with INSIDE OF LAYER. For each polygon in <span class="keyword ParameterName OptionalReplaceable">layer_analyze</span>,
+the polygon extent is identified and an optimization grid is created.
+The density optimization is then constrained to the grid based on
+the polygons. The extent of the polygons in <span class="keyword ParameterName OptionalReplaceable">layer_analyze </span>should
+not overlap. </p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The BY
+POLYGON option can reduce performance considerably. Exercise care when
+using this option and constrain the number of processed geometries
+so that the impact to run time and memory usage is minimized.</p>
+</div>
+<p class="p">INSIDE OF LAYER impacts density
+calculations and fill generation differently. </p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id2f895f45-7b28-4c13-b685-0cb3c263e9fc"><p class="p">For fill generation, INSIDE
+OF LAYER constrains the analysis to the areas within the actual
+polygons on the named layer.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__iddec16bcb-a75d-476e-b3c6-b0cd3b71bd7c"><p class="p">For density calculations,
+INSIDE OF LAYER constrains the analysis to the area within the extent
+of the layer geometries.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The
+INSIDE OF LAYER option for DFM Spec Fill Optimizer behaves differently
+from the INSIDE OF LAYER option for the Density operation. For Density,
+INSIDE OF LAYER constrains the analysis to the extents of all geometries
+on the layer. </p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd62e67a9-daeb-41aa-944a-20ad964233c4">NOEMPTY {<span class="keyword ParameterName OptionalReplaceable">r</span> | <span class="keyword ParameterName OptionalReplaceable">rx</span> <span class="keyword ParameterName OptionalReplaceable">ry</span>} </dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional repeatable argument
+set used with the TOMAX keyword. NOEMPTY defines a minimum empty
+area constraint. The minimum empty area is defined as a gap in the
+fill pattern that is large enough to fit a rectangle of the provided
+dimensions: </p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd064e026-803a-4f98-b64d-de63ed9436b3"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">r</span> —
+A square with sides that are <span class="keyword ParameterName OptionalReplaceable">r</span> user
+units in width.</p>
+</li>
+<li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id6ba61335-970c-4aab-b7ea-fad9c1199fa0"><p class="p Opt"><span class="keyword ParameterName OptionalReplaceable">rx</span> <span class="keyword ParameterName OptionalReplaceable">ry</span> —
+A rectangle with x and y dimensions of <span class="keyword ParameterName OptionalReplaceable">rx</span> and <span class="keyword ParameterName OptionalReplaceable">ry</span> in
+user units.</p>
+</li>
+</ul>
+<p class="p">For example, this specifies
+a minimum empty region of 2x2 user units:</p>
+<pre class="pre codeblock"><code>NOEMPTY 2</code></pre><p class="p">If multiple NOEMPTY argument
+sets are specified, the operation determines an empty area constraint
+that meets all the conditions. </p>
+<p class="p">When NOEMPTY causes fill to be added to a region that already
+meets the <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span>,
+the final density may be greater than the density limit. For an
+example using NOEMPTY, see “<a class="xref Link" href="../../calbr_yaye_ref/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Preventing Empty Fill Areas', 'calbr_yaye_ref'); return false;">Preventing Empty Fill Areas</a>”
+in the <cite class="cite">Calibre YieldAnalyzer and YieldEnhancer Reference Manual</cite>. </p>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idc38b0d13-8d28-4f3e-8ca7-ce559810b778">MAGNITUDE <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span> [<span class="keyword ParameterName OptionalDefault">ABSOLUTE</span> | <span class="keyword ParameterName Optional">RELATIVE</span>]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+set used to define a maximum amount by which the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> can
+vary over the total portion of the design being evaluated by the operation.
+That is, constraining the difference between the smallest <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+and greatest <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+in the design. </p>
+<p class="p">The primary argument, <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span>,
+can be either of the following:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id93e01cea-fa47-4918-bdd1-6a6f23431f8b"><p class="p"><span class="keyword ParameterName RequiredReplaceable">magnitude_constraint </span>—
+A constant value constraint of the type less-than (&lt;). The constant
+value must be a positive number, the value of which must meet the following
+criteria:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id38e278bc-d29e-4b28-8f26-d267b21c67b5"><p class="p">If <span class="keyword ParameterName OptionalReplaceable">gradient_constraint</span> is
+also specified, then the constant value must be greater than the <span class="keyword ParameterName OptionalReplaceable">gradient_constraint. </span></p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id0e9dbcff-fa1a-4f01-bdd1-8d082cb77163"><p class="p">If a <span class="keyword ParameterName RequiredReplaceable">optimization_limit</span> with
+both a lower and upper bound is also specified, then the constant
+value must be less than (upper_bound_<span class="keyword ParameterName RequiredReplaceable">optimization_limit</span> - lower_bound_<span class="keyword ParameterName OptionalReplaceable">optimization_limit</span>).</p>
+</li>
+</ul>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd4d774da-f0a1-46fb-a2f4-b99306509685"><p class="p"><span class="keyword ParameterName OptionalReplaceable">max_magnitude_constraint_expression</span> —
+Any expression that is supported by the <a class="xref fm:HeadingOnly" href="Command_DfmAnalyze_id1ca0eb21.html#id1ca0eb21-bd76-4f8e-89f7-9b74a6058289__Command_DfmAnalyze_id1ca0eb21.xml#id1ca0eb21-bd76-4f8e-89f7-9b74a6058289" title="Identifies areas on a layout where manufacturing yield can potentially be improved.">DFM Analyze</a> operation. When <span class="keyword ParameterName OptionalReplaceable">max_magnitude_constraint_expression</span> is
+used, it must be enclosed in brackets [ ]. For more information,
+refer to “<a class="xref fm:HeadingAndPage" href="Contain_DfmExpressions_id0aa735bd.html#id0aa735bd-eb6a-446d-9da0-f14de5e1332e__Contain_DfmExpressions_id0aa735bd.xml#id0aa735bd-eb6a-446d-9da0-f14de5e1332e" title="DFM Expressions are used to calculate DFM properties, define an analysis or density function, or specify a user-defined function. They can be used to calculate scores, statistics, and measurement values based on layer data. DFM Expressions are used in DFM Analyze, the DFM Property operation family, DFM Function, and DFM Spec Fill Optimizer.">DFM Expressions</a>”.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The <span class="keyword ParameterName OptionalReplaceable">max_magnitude_constraint_expression</span> can
+only be used with MAGNITUDE inside a DFM Spec Fill Optimizer statement.
+It cannot be used inside a <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a> statement. </p>
+</div>
+</li>
+</ul>
+<p class="p">The secondary keywords, RELATIVE
+and ABSOLUTE, define how the tool interprets the <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span>:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id99ac302f-65e7-4261-85d7-5a105812141c"><p class="p">RELATIVE — The <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span> is
+defined as a percentage. When specified:</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">mag_constraint</span> =(<span class="keyword ParameterName OptionalReplaceable">maximum_density</span> - <span class="keyword ParameterName OptionalReplaceable">minimum_density</span>)/<span class="keyword ParameterName OptionalReplaceable">maximum_density</span></p>
+<p class="p">which is equivalent to:</p>
+<p class="p"><span class="keyword ParameterName OptionalReplaceable">minimum_density</span> = <span class="keyword ParameterName OptionalReplaceable">maximum_density</span>(1
+– <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span> )</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id27067ea8-ddb0-4195-8cf6-dc0a50da8666"><p class="p">ABSOLUTE — The <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span> is
+defined as an absolute value. This is the default. When specified,
+the tool attempts to add fill to achieve a minimum density such
+that:</p>
+<p class="p">(<span class="keyword ParameterName OptionalReplaceable">maximum_density</span> - <span class="keyword ParameterName OptionalReplaceable">mag_constraint</span>)
+&lt;= <span class="keyword ParameterName OptionalReplaceable">minimum_density</span></p>
+</li>
+</ul>
+</dd>
+<dt class="dt ArgumentName dlterm" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id5c5e37e6-8e03-4c9a-92b8-5f91022da64f">GRADIENT <span class="keyword ParameterName OptionalReplaceable">grad_constraint</span> [<span class="keyword ParameterName OptionalDefault">ABSOLUTE</span> | <span class="keyword ParameterName Optional">RELATIVE</span>] [CORNER]</dt>
+<dd class="dd ArgumentDescription"><p class="p">An optional keyword and argument
+set, allowed only if <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> is specified,
+defining an optimal gradient to achieve between adjacent capture
+windows, where the gradient is a function based on the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span>.
+The operation will attempt to generate fill geometry to satisfy
+this constraint. This condition is <span class="ph FontProperty emphasis">in addition to</span> the <span class="keyword ParameterName OptionalReplaceable">optimization_limit</span> criterion. </p>
+<p class="p">The primary argument, <span class="keyword ParameterName OptionalReplaceable">grad_constraint</span>,
+can be either of the following:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id3f67cb0d-060b-4b93-b11f-543f2ab1b85d"><p class="p"><span class="keyword ParameterName OptionalReplaceable">gradient_constraint </span>—
+A constant value constraint of the type less-than (&lt;).</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id9f2cb13a-37bf-4e32-8c3e-3a38ee7d63d2"><p class="p"><span class="keyword ParameterName OptionalReplaceable">min_gradient_constraint_expression</span> —
+Any expression that is supported by the <a class="xref fm:HeadingOnly" href="Command_DfmAnalyze_id1ca0eb21.html#id1ca0eb21-bd76-4f8e-89f7-9b74a6058289__Command_DfmAnalyze_id1ca0eb21.xml#id1ca0eb21-bd76-4f8e-89f7-9b74a6058289" title="Identifies areas on a layout where manufacturing yield can potentially be improved.">DFM Analyze</a> operation. When <span class="keyword ParameterName OptionalReplaceable">min_gradient_constraint_expression</span> is
+used, it must be enclosed in brackets [ ]. For more information,
+refer to “<a class="xref fm:HeadingAndPage" href="Contain_DfmExpressions_id0aa735bd.html#id0aa735bd-eb6a-446d-9da0-f14de5e1332e__Contain_DfmExpressions_id0aa735bd.xml#id0aa735bd-eb6a-446d-9da0-f14de5e1332e" title="DFM Expressions are used to calculate DFM properties, define an analysis or density function, or specify a user-defined function. They can be used to calculate scores, statistics, and measurement values based on layer data. DFM Expressions are used in DFM Analyze, the DFM Property operation family, DFM Function, and DFM Spec Fill Optimizer.">DFM Expressions</a>”.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The <span class="keyword ParameterName OptionalReplaceable">min_gradient_constraint_expression</span> can
+only be used with GRADIENT inside a DFM Spec Fill Optimizer statement.
+It cannot be used inside a <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a> statement.</p>
+</div>
+</li>
+</ul>
+<p class="p">The gradient value of a window
+W is the maximum of</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id6d4eb763-7d10-487e-9f27-fef861b738ba"><p class="p Opt">{G(W,
+W<span class="ph FontProperty LiteralSubScript">L</span>),
+G(W, W<span class="ph FontProperty LiteralSubScript">R</span>),
+G(W, W<span class="ph FontProperty LiteralSubScript">B</span>),
+G(W, W<span class="ph FontProperty LiteralSubScript">T</span>)}</p>
+</li>
+</ul>
+<p class="p">where:</p>
+<ul class="ul ArgumentOptions"><li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id143eb245-c2a6-4ffc-b246-7312b303a8cf"><p class="p Opt">G
+is the gradient function</p>
+</li>
+<li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id6b95b971-1d19-43bf-ba1c-a2348a4c53f9"><p class="p Opt">W<span class="ph FontProperty LiteralSubScript">L</span> is
+the window immediately to the left of W</p>
+</li>
+<li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idad713c9e-53f7-4cca-b02e-7b4c9124ef33"><p class="p Opt">W<span class="ph FontProperty LiteralSubScript">R</span> is
+the window immediately to the right of W</p>
+</li>
+<li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id7fbc0f53-96e9-4151-a151-4a83c1bc0e86"><p class="p Opt">W<span class="ph FontProperty LiteralSubScript">T</span> is
+the window immediately above W</p>
+</li>
+<li class="li ArgOption" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id589a5784-007e-468d-a77d-575648bb24cf"><p class="p Opt">W<span class="ph FontProperty LiteralSubScript">B</span> is
+the window immediately below W</p>
+</li>
+</ul>
+<p class="p">For windows A and B, where
+V<span class="ph FontProperty LiteralSubScript">A</span> is
+the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+for window A and V<span class="ph FontProperty LiteralSubScript">B</span> is
+the <span class="keyword ParameterName RequiredReplaceable">optimization_expression</span> value
+of window B the gradient function, G, is defined as:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idc064f3ee-6df2-4e03-a1ca-4d8778fc982b"><p class="p">If RELATIVE is specified,
+or by default:</p>
+<div class="fig fignone Equation" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id07f16cf1-f882-430d-80d4-0f69b5894931"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/DFMFill/dfm_spec_fill_opt_eq_gradient_relative.png" /></div><br /></div>
+</li>
+</ul>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id683672f1-798f-491e-b85b-52f36de60f77"><p class="p">If ABSOLUTE is specified: </p>
+<div class="fig fignone Equation" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id265ce335-2581-4769-9fb6-ea7258b14a9a"><br /><div class="imagecenter"><img class="image imagecenter fmdpi:96" src="../graphics/DFMFill/dfm_spec_fill_opt_eq_gradient_absolute.png" /></div><br /></div>
+</li>
+</ul>
+<p class="p">In place of the <span class="keyword ParameterName OptionalReplaceable">gradient_constraint</span>,
+you may specify a <span class="keyword ParameterName OptionalReplaceable">min_gradient_constraint_expression</span> enclosed
+in brackets [].</p>
+<p class="p">If CORNER is specified with
+GRADIENT, then the set of windows in the GRADIENT calculation is
+extended to include the four windows touching W on each corner,
+which may not exist at certain window locations. GRADIENT value
+is reduced by sqrt(2) for windows that are touching by a corner
+only.</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">If gradient
+values that are not as expected, check whether or not WRAP is used. Wrapped
+gradient windows are calculated based on the geometries on opposing
+edges of a design.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section Descriptions"><h2 class="title Subheading sectiontitle">Description</h2><p class="p">Defines a set of optimization
+criteria consisting of an optimization function and appropriate constraints.
+An optimizer is an object or construct that can be instantiated
+multiple times through references in <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a> or <a class="xref fm:HeadingOnly" href="Command_DfmSpecFillShape_id07e94408.html#id07e94408-523b-4312-ba00-26658fdb7a69__Command_DfmSpecFillShape_id07e94408.xml#id07e94408-523b-4312-ba00-26658fdb7a69" title="Defines a fill shape and assigns it a name by which it can be referenced from within a DFM Spec Fill specification. When used for single layer shapes, this statement defines the fill shape in its entirety. When used for multilayer shapes, this statement defines the portion of the shape that is drawn on a single specific layer.">DFM Spec Fill Shape</a> specifications.</p>
+<p class="p">Key points are as follows:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idc9b95147-da68-4ba0-93eb-1c65794ea610"><p class="p">When a fill shape referenced
+in a DFM Spec Fill statement has an optimizer explicitly specified
+for it through the DFM Spec Fill Shape statement that created it,
+the optimizer specified in the shape specification is used for optimization.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id3af1a25b-118c-420a-8205-699a3b020f7f"><p class="p">When a DFM Spec Fill statement
+has an optimizer specified, this optimizer is used as an additional
+criteria to be met. That is, it is used in addition to any optimizers
+specified in the DFM Spec Fill Shape statements.</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id8c596b04-5fcb-4cd5-93ad-55067b6756a1"><p class="p">When a DFM Spec Fill statement
+specifies an optimizer, all fill shapes in that DFM Spec Fill statement
+are optimized by the same instance of the optimizer. The shapes
+are added in the order specified in DFM Spec Fill until the optimization
+constraint for each window is met. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id4183736c-8088-45a9-a759-2a4c2b3d551b"><p class="p">When multiple fill shapes
+referencing different optimizers are used to form a multilayer fill
+pattern, all optimizers are used. The <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a> keywords <span class="keyword ParameterName Optional">FILLMIN</span> and <span class="keyword ParameterName Optional">FILLMAX</span> control
+how many of the multilayer patterns are actually added.</p>
+<p class="p">For multilayer fill shapes, if an optimizer is specified in the
+DFM Spec Fill Shape statements for the shapes, the optimizer must
+be different for each shape. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idd0aa7e91-0456-4598-b01b-ea0a57ac77ab"><p class="p">FILLSHAPE and OUTPUT geometries
+from <span class="ph FontProperty emphasis">different</span> DFM
+Spec Fill statements that refer to the same OPTIMIZER are optimized
+independently. This means that fill generated by one DFM Spec Fill
+statement is not counted in the density calculation of a different
+DFM Spec Fill statement. If this behavior is not desired, then output
+of one DFM Spec Fill should be added to the original geometries
+as input to another DFM Spec Fill Optimizer. </p>
+</li>
+</ul>
+<div class="note caution"><span class="cautiontitle">CAUTION:</span> <p class="p">The optimizer defined with DFM Spec Fill
+Optimizer may not be used with any variable fill shape, such as
+those specified with keywords like STRETCHFILL or STRIPE. Failure
+to observe this restriction can produce incorrect output.</p>
+</div>
+<div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id9a335e2f-4d06-4d26-8e3a-2db0303dbb9d"><h2 class="title Subheading sectiontitle">Restrictions
+on Window, Step, and Fill Shape Size</h2><p class="p">When WINDOW is specified, there are some restrictions on the
+fill shape size relative to the <span class="ph FontProperty emphasis">atomic window</span>.
+The atomic window is a square with sides equal to the smallest STEP dimension.
+If STEP is not specified, the smallest WINDOW dimension is used. </p>
+<p class="p">The fill shape must satisfy these conditions:</p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id14f88211-9b38-4e3d-b235-334256978c16"><p class="p">AREA(fill_shape_extent)/AREA(atomic_window)
+&lt;= 0.5</p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id3e7af120-9ce8-469b-9311-f53e74876980"><p class="p">largest_fill_shape_dimension
+&lt; atomic_window_width</p>
+</li>
+</ul>
+<p class="p">As noted previously, if both STEP and WINDOW are specified, the
+WINDOW dimensions <span class="keyword ParameterName OptionalReplaceable">w</span>, or <span class="keyword ParameterName OptionalReplaceable">wx</span> and <span class="keyword ParameterName OptionalReplaceable">wy</span>,
+must be a multiple of the corresponding STEP size <span class="keyword ParameterName OptionalReplaceable">s</span>, <span class="keyword ParameterName OptionalReplaceable">sx</span> or <span class="keyword ParameterName OptionalReplaceable">sy</span>. </p>
+</div>
+<div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id59229a48-cb97-4014-892c-09949005a504"><h2 class="title Subheading sectiontitle">Multiple Grid Multi
+Optimizer Support</h2><p class="p">In cases involving complicated
+density rules that require several density optimization grids, you can
+optionally specify more than one optimizer. Using this method, you
+can create optimizers to target specific areas of the chip, high-density
+regions for example, instead of applying the optimizer to the entire
+chip. </p>
+<p class="p">Using multiple optimizers, you
+can specify a window grid size on a per-optimizer basis for TOMAX
+constraints. As long as each optimizer uses the TOMAX constraint,
+the optimizer can utilize its own window size and combination of
+analysis region and other analysis grid options. Additionally, multiple
+optimizers per DFM Spec Fill Shape are allowed.</p>
+<p class="p">When using multiple optimizers for a fill shape, the optimizers
+are specified in the DFM Spec Fill Shape statement. The corresponding
+DFM Spec Fill statement specifies the optimizer priority with the
+PRIORITY keyword. The DFM Spec Fill statement should not specify
+an optimizer when using multiple optimizers. </p>
+</div>
+<div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__idefc91e3b-0df4-4710-9a55-73c54bb4a1f8"><h2 class="title Subheading sectiontitle">PRIORITY
+Keyword</h2><p class="p">The <a class="xref fm:HeadingOnly" href="Command_DfmSpecFill_idde25b53a.html#idde25b53a-5c39-46bb-9800-e77c134a9e0f__Command_DfmSpecFill_idde25b53a.xml#idde25b53a-5c39-46bb-9800-e77c134a9e0f" title="Creates a fill specification that can be used with DFM Fill to generate fill layers.">DFM Spec Fill</a> statement’s
+PRIORITY keyword is used to specify the order that the tool runs
+the optimizers. This keyword is recommended when running multi-optimizers
+that use the DFM Spec Fill statement's WINDOW or INSIDE OF LAYER
+keywords.</p>
+<p class="p">Refer to the TOMAX keyword and
+associated secondary keywords and arguments as well as <a class="xref fm:HeadingOnly" href="#id71fdf51c-f0d0-4b85-9293-fca2cc362811__iddcf7f364-6c60-4ab8-8764-4ebc0a576d82">Example 3</a>.</p>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id382c8ec2-d1e7-462c-aed4-1a472755444e"><h2 class="title Subheading sectiontitle">Example 1 </h2><p class="p">An optimizer named BASE is defined
+with DFM Spec Fill Optimizer. No OPTIMIZERS are specified in the
+DFM Spec Fill Shape statements that define the fill shapes.</p>
+<pre class="pre codeblock"><code>DFM SPEC FILL X
+   INSIDE OF LAYER new_layer
+   WINDOW 5 5
+   OPTIMIZER BASE
+   FILLSHAPE
+      OUTPUT metal1 "BIG_SQUARE"
+      EFFORT 2
+   FILLSHAPE
+      OUTPUT metal1 "HORIZ_RECT"
+      EFFORT 2
+   FILLSHAPE
+      OUTPUT metal1 "VERT_RECT"
+      EFFORT 2</code></pre><p class="p">All shapes use same BASE as optimizer.
+First BIG_SQUARE is added, then HORIZ_RECT, then VERT_RECT. </p>
+<ul class="ul"><li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__ide5b5234e-230c-43b9-bf6a-b16d6f52813f"><p class="p">BIG_SQUARE shapes are factored
+into the OPTIMIZER values calculated for HORIZ_RECT. </p>
+</li>
+<li class="li" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id43d8ab27-4448-4d57-bb51-1c32db55d00e"><p class="p">BIG_SQUARE and HORIZ_RECT shapes
+are factored into the OPTIMIZER values calculated for VERT_RECT.</p>
+</li>
+</ul>
+</div>
+<div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__id4127b072-edea-4429-8eb9-a5c1bed5f2a2"><h2 class="title Subheading sectiontitle">Example 2</h2><p class="p">OPTIMIZER “EXTRA” specified for
+FILLSHAPE “BIG_SQUARE”.</p>
+<pre class="pre codeblock"><code>DFM SPEC FILL X
+   INSIDE OF LAYER new_layer
+   WINDOW 5 5
+   OPTIMIZER BASE
+   FILLSHAPE
+      OUTPUT metal1 "BIG_SQUARE"
+      OUTPUT metal2 "HORIZ_RECT"
+      EFFORT 2
+      FILLMIN</code></pre><p class="p">Because the two OUTPUTs are supplied
+within the same FILLSHAPE, the two fill shapes are combined to form
+a 2-layer cell. Fill is generated by placing this cell in such a
+way as to satisfy at least one of the two optimizers, “EXTRA” or
+“BASE.”</p>
+</div>
+<div class="section Subsection" id="id71fdf51c-f0d0-4b85-9293-fca2cc362811__iddcf7f364-6c60-4ab8-8764-4ebc0a576d82"><h2 class="title Subheading sectiontitle">Example 3</h2><p class="p">The following example demonstrates
+using multiple optimizers and runs each optimizer in priority one-by-one
+sequence:</p>
+<pre class="pre codeblock"><code>DFM SPEC FILL OPTIMIZER defaultOpt metal1
+    [ ( AREA(metal1) + AREA(_FILL_) ) / AREA() ] &lt; 0.4 TOMAX 
+DFM SPEC FILL OPTIMIZER OPT1 metal1
+    [ ( AREA(metal1) + AREA(_FILL_) ) / AREA() ] &lt; 0.5 TOMAX WINDOW 50 
+    INSIDE OF LAYER metal2    
+DFM SPEC FILL OPTIMIZER OPT2 metal1 hdensity
+    [ ( AREA(metal1) + AREA(_FILL_) ) / AREA() ] &lt; 0.6 TOMAX WINDOW 50
+    INSIDE OF LAYER BY POLYGON hdensity    
+DFM SPEC FILL SHAPE SHAPE1 RECTFILL 0 0 0.5 1 STEP .1 .1 SPACE .640 metal1
+    OPTIMIZER OPT2 OPTIMIZER OPT1 OPTIMIZER defaultOpt
+DFM SPEC FILL three metal1
+    INSIDE OF LAYER bulk_ext
+    FILLSHAPE “FS” 
+        OUTPUT "one" "SHAPE1" 
+        PRIORITY OPT2 OPT1 defaultOpt</code></pre><p class="p">Note that for this sequence to work,
+all of the optimizers are specified in “SHAPE1.” Additionally, in
+this example, the high-density optimizer is specified first; in
+other words, the optimizer run order should be specified from highest
+density to lowest density.</p>
+</div>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_DfmCommands_ide62291e8.html" title="The commands in this section begin with “DFM.”">DFM … Commands</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "svrf_ur"
+                DocTitle = "Standard Verification Rule Format (SVRF) Manual"
+                PageTitle = "DFM Spec Fill Optimizer"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Command_DfmSpecFillOptimizer_id71fdf51c.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Standard Verification Rule Format (SVRF) Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Creating an Interface to Cadence Encounter" />
+<meta name="abstract" content="The following script can be inserted into the enc.tcl file to load the Calibre software:" />
+<meta name="description" content="The following script can be inserted into the enc.tcl file to load the Calibre software:" />
+<meta name="prodname" content="Calibre Interactive User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-19" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="2021.2" />
+<meta name="HighlightColor" content="Pale Yellow" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_interactive_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="9" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Interactive™ User’s Manual" />
+<meta name="CSHelp" content="No" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="idf93a887f-9069-4490-9b93-e4eccd8adf6b" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Creating an Interface to Cadence Encounter</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Creating an Interface to Cadence Encounter" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10116,product.id.P10096,product.id.P11800" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="idf93a887f-9069-4490-9b93-e4eccd8adf6b">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Creating an Interface to Cadence Encounter</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">The following
+script can be inserted into the enc.tcl file to load the Calibre
+software:</span>
+</div>
+<pre class="pre codeblock leveled"><code>proc load_calibre {} {
+	global env
+	if {![info exists env(CALIBRE_HOME)] || $env(CALIBRE_HOME)==""} {
+		if {![info exists env(MGC_HOME)] || $env(MGC_HOME)==""} {
+			puts "Environment variable CALIBRE_HOME not set."
+			puts "Calibre interface NOT loaded."
+			return
+		} else {
+			puts "Environment variable CALIBRE_HOME not set, using MGC_HOME."
+			set env(CALIBRE_HOME) $env(MGC_HOME)
+		}
+	}
+
+	set etclf [file join $env(CALIBRE_HOME) lib cal_enc.tcl]
+	if {![file readable $etclf]} {
+		puts "Could not find Calibre initialization files." 
+		puts "Calibre interface not loaded."
+		return
+	}
+	if {[catch {source $etclf} msg]} {
+		puts "ERROR while loading Calibre interface: $msg"
+	}
+}
+load_calibre</code></pre><p class="p">This script first checks to see if the CALIBRE_HOME
+environment variable is set. If so, it loads the cal_enc.tcl file
+located in the lib subdirectory of the CALIBRE_HOME directory. The rest
+of the files accessed by cal_enc.tcl are located in the $CALIBRE_HOME/shared/pkgs/icv/tools/queryenc
+subdirectory. Collectively, these files are referred to as the Calibre
+Encounter Interface. The Calibre Encounter Interface adds a <span class="ph uicontrol">Calibre</span> menu
+to the Encounter application’s banner menu.</p>
+<p class="p">You can also use MGC_HOME instead of CALIBRE_HOME
+to define the location of your software tree; see “<a class="xref Link" href="../../calbr_admin_gd/nsmgchelp.htm" target="_top" onclick="oT('STD_FM11', 'Setting the CALIBRE_HOME Environment Variable', 'calbr_admin_gd'); return false;">Setting the CALIBRE_HOME Environment Variable</a>” in the <cite class="cite">Calibre Administrator’s
+Guide</cite>. </p>
+<p class="p">The following menu items are available in the <span class="ph uicontrol">Calibre</span> menu:</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__id5016a747-9268-4a62-93c0-c8449447259f" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Calibre Menu in Cadence Encounter</span></caption><colgroup><col style="width:1.512in" /><col style="width:4.012in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d247355e168"><p class="p">Menu
+Item</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d247355e179"><p class="p">Description</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Run nmDRC </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre Interactive
+DRC on the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Run DFM</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre Interactive
+DFM on the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Run nmLVS </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre Interactive
+LVS on the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Run PERC </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre Interactive
+PERC on the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Run PEX</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre Interactive
+PEX on the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Start RVE </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Starts Calibre RVE</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Clear Highlights </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Clears Calibre RVE highlights
+in the current cell</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">Setup</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Open a dialog box to
+set parameters for the following:</p>
+<ul class="ul"><li class="li" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__id213cf404-3538-4a96-802f-8c25ac715cdd"><p class="p">GDS Export</p>
+</li>
+<li class="li" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__id26bf5811-01ba-411f-8530-62b7e827a193"><p class="p">DEF Export</p>
+</li>
+<li class="li" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__idc6be8059-cb19-4636-b326-99ae4f89e63c"><p class="p">Verilog Export (also see “<a class="xref fm:HeadingAndPage" href="TaskTop_ImportingSavenetlistParametersVerilogExportInCadenceEncounter_id860a3c7e.html#id860a3c7e-aa3a-4c2a-a651-88d07af60ad1__TaskTop_ImportingSavenetlistParametersVerilogExportInCadenceEncounter_id860a3c7e.xml#id860a3c7e-aa3a-4c2a-a651-88d07af60ad1" title="You can populate the Calibre &gt; Setup &gt; Verilog Export dialog box with the parameters used by the saveNetlist command in Cadence Encounter.">Importing saveNetlist Parameters for Verilog Export in Cadence Encounter</a>”)</p>
+</li>
+<li class="li" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__id3acb7660-92cf-42c4-bb9e-8fff732adb2f"><p class="p">RVE</p>
+</li>
+<li class="li" id="idf93a887f-9069-4490-9b93-e4eccd8adf6b__idde039a99-9997-4ba3-b262-d345a4bc0081"><p class="p">Socket</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e168 "><p class="p">About </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d247355e179 "><p class="p">Displays information
+about the Calibre Encounter Interface</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">For general information on the socket communication
+between a layout viewer and Calibre Interactive and Calibre RVE,
+see “<a class="xref fm:HeadingAndPage" href="Contain_SettingTheSocketPortInCalibreInteractive_idad812a82.html#idad812a82-68c9-4e1b-b64a-0213ed0769bf__Contain_SettingTheSocketPortInCalibreInteractive_idad812a82.xml#idad812a82-68c9-4e1b-b64a-0213ed0769bf" title="Calibre Interactive uses certain default port numbers for socket communication with a connected layout or schematic viewer. The port numbers can also be set manually, as described here. Individual layout and schematic viewers may have additional methods for setting the port numbers; see the section for the specific viewer.">Setting the Socket Port in Calibre Interactive</a>”.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CadenceEncounter_iddd2a3883.html" title="Calibre includes software that enables seamless integration of Calibre Interactive and Calibre RVE within the Cadence Encounter platform. A Calibre menu is activated when the supplied software is loaded into the Encounter environment, usually through the cal_enc.tcl file.">Cadence Encounter</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_interactive_user"
+                DocTitle = "Calibre® Interactive™ User’s Manual"
+                PageTitle = "Creating an Interface to Cadence Encounter"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_CreatingInterfaceCadenceEncounter_idf93a887f.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Interactive™ User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

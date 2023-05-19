@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="FileRefTopic" />
+<meta name="DC.Title" content="LSG Via Specifications File Format" />
+<meta name="abstract" content="A required input file to the Calibre LSG via flow that uses JavaScript Object Notation (JSON) format for specifying the via parameters and values." />
+<meta name="description" content="A required input file to the Calibre LSG via flow that uses JavaScript Object Notation (JSON) format for specifying the via parameters and values." />
+<meta name="prodname" content="Calibre LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="version" content="v12.2" />
+<meta name="release" content="2016_01" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software" />
+<meta name="DC.Date.Created" content="2017-11-09" />
+<meta name="DC.Date.Modified" content="2021-03-26" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_lsg_user" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="2" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="Draft" content="NONE" />
+<meta name="DraftDate" content="March 25, 2021" />
+<meta name="DocumentTitle" content="Calibre® LSG for Synthetic Layout Generation User’s Manual" />
+<meta name="CSHelp" content="none" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>LSG Via Specifications File Format</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="LSG Via Specifications File Format" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10115,product.id.P11426" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">LSG Via Specifications File
+Format</h1>
+<div class="body refbody FileRefBody"><div class="abstract FileRefAbstract"><p class="p ContextMGC">Input to: Calibre
+LSG Via flow</p>
+<p class="shortdesc">A required input file to the Calibre
+LSG via flow that uses JavaScript Object Notation (JSON) format
+for specifying the via parameters and values.</p>
+</div>
+<div class="section Formats"><h2 class="title Subheading sectiontitle">Format</h2><p class="p">The path and filename of the via specifications
+file (<span class="ph filepath">.json</span> extension) is included
+inside the via SVRF rules file for the Calibre LSG via flow. The
+JSON format is text‑based and supports hierarchical nested data
+structures that coincide with the via specifications for dimension, enclosure,
+and spacing constraints. </p>
+<p class="p">Here are some basic JSON conventions:</p>
+<div class="note note"><span class="notetitle">Note:</span> <p class="p">The following list contains
+only selected observations of JSON format conventions. Refer to <a class="xref" href="https://www.json.org/" target="_blank">https://www.json.org/</a> for comprehensive syntax
+and usage information.</p>
+</div>
+<ul class="ul"><li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__id92a8cf51-0666-4bd5-8daf-b0be5b45f128"><p class="p">Strings are enclosed in quotation marks “<span class="ph FontProperty emphasis">string</span>”.
+Character escape sequences apply to contents within “<span class="ph FontProperty emphasis">string</span>”
+including backslash (\) escape.</p>
+</li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__ide2eac88e-4385-4829-87a3-bc10963ad201"><p class="p">The first string in the JSON via specifications
+file is used for checking forward and backward version compatibility.</p>
+<pre class="pre codeblock"><code>"Version" : major.minor</code></pre></li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__idd71cd28e-010b-484c-9492-2107786429f8"><p class="p">Floating‑point numbers are supported.</p>
+</li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__id2a44f1ca-a058-436f-91d8-1af86e5ec344"><p class="p">Comments can be specified as strings:</p>
+<pre class="pre codeblock"><code>"comment" : "<span class="keyword ParameterName OptionalReplaceable">my_Via_comment</span>"</code></pre></li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__idac93dbe9-f2ea-420b-935b-ba85de3f75f9"><p class="p">Whitespace is accepted and ignored between a pair
+of tokens.</p>
+</li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__idbe925632-16b9-4c64-a8bd-8e0e095016a8"><p class="p">Nesting of object and array structures is supported
+where structures are defined as follows:</p>
+<ul class="ul"><li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__id0c12da27-3fbc-46a5-89f9-82ab0a30ec1d"><p class="p"><span class="ph FontProperty HeadingLabel">Objects</span> —
+Defined as name and value pairs that are colon (:) separated and enclosed
+in braces ({ }) where pair is defined as { “<span class="ph FontProperty emphasis">string</span>”
+: <span class="ph FontProperty emphasis">value</span> }
+and <span class="ph FontProperty emphasis">value</span> can
+be the following: <span class="keyword ParameterName OptionalReplaceable">string</span>, <span class="keyword ParameterName OptionalReplaceable">number</span>, <span class="keyword ParameterName OptionalReplaceable">object</span>, <span class="keyword ParameterName OptionalReplaceable">array</span>,
+“true”, “false”, or “null”.</p>
+</li>
+<li class="li" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__ide5f97164-27f5-4996-9799-e87013d484a4"><p class="p"><span class="ph FontProperty HeadingLabel">Arrays </span>—
+Defined as ordered values that are comma (,) separated and enclosed
+in brackets ([ ]). Arrays include [ <span class="keyword ParameterName OptionalReplaceable">elements</span> ],
+[ <span class="keyword ParameterName OptionalReplaceable">value</span> ],
+and [ <span class="keyword ParameterName OptionalReplaceable">value</span> , <span class="keyword ParameterName OptionalReplaceable">elements</span> ],
+where <span class="keyword ParameterName OptionalReplaceable">value</span> includes
+the same list as specified under Objects.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section Arguments"><h2 class="title Subheading sectiontitle">Parameters</h2><div class="section ArgumentSet"><dl class="dl ArgumentList"><dt class="dt ArgumentName dlterm" id="iddf31a1cc-ab61-4f81-b903-e3f3e49b88d9__id177674d1-8c14-451d-b9a4-09bc3fd2e154">The structure of the via specification file with the parameters highlighted is shown: </dt>
+<dd class="dd ArgumentDescription"><pre class="pre codeblock"><code>o  Tag: <span class="ph CodeHighlight magenta">Version</span>
+
+          <span class="ph CodeHighlight Bold">Mandatory</span>
+
+          Location: Top level
+
+          Value: (Float) x.y : where x represents major version and 
+          y represents minor version.
+
+          Details:
+
+                  Backward compatibility is assured.
+
+                  Forward compatibility is assured as long as the 
+                  difference is in the minor version only.
+
+                  Newer version with a different major number 
+                  greater than the current major is not compatible.
+
+o  Tag: <span class="ph CodeHighlight magenta">ViaPerPolygon</span>
+
+          Optional: Default Value: Maximum Integer number
+
+          Location: Top level
+
+          Value: (Integer) Maximum number of vias per polygon.
+
+o  Tag: <span class="ph CodeHighlight magenta">Seed</span>
+
+          Optional: Default Value: Random
+
+          Location: Top level
+
+          Value: (Integer) Number that controls the randomization of 
+          the generated vias.
+
+          Details:
+
+                  Fixing the same number generates the same vias 
+                  configuration as long as all other inputs are 
+                  the same from run to run.
+
+o  Tag: <span class="ph CodeHighlight magenta">ViaSpecs</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                  Location: Top level
+
+                  Value: (Array) List of via specifications.
+
+         o  Tag: <span class="ph CodeHighlight magenta">Name</span>
+
+                  Optional
+
+                  Value: (String) name of the via that is used 
+                  later as an ID for writing the layout constraints.
+
+         o  Tag: <span class="ph CodeHighlight magenta">Rotation</span>
+
+                  Optional: Default Value true
+
+                  Location: ViaSpecs array
+
+                  Value: (Boolean) Determines if the 90 degree 
+                  rotation of the via is needed.
+
+         o  Tag: <span class="ph CodeHighlight magenta">Dimension</span>
+
+                          <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                          Location: ViaSpecs array
+
+                          Value: (Object) Specifies the dimensions 
+                          of the via.
+
+                o  Tag: <span class="ph CodeHighlight magenta">Height</span>
+
+                          Conditional Optional: If the Width is 
+                          specified (square via), default value is 
+                          equal to Width.
+
+                          Location: Dimension
+
+                          Value: (positive Float) The height (in the
+                          y‑direction) of the via in user units.
+
+                o  Tag: <span class="ph CodeHighlight magenta">Width</span>
+
+                          Conditional Optional: If the height is 
+                          specified (square via), default value is 
+                          equal to height.
+
+                          Location: Dimension
+
+                          Value: (positive Float) The width (in the
+                          x‑direction) of the via in user units.
+
+o  Tag: <span class="ph CodeHighlight magenta">Enclosure</span>
+
+          Optional
+
+          Location: ViaSpecs array
+
+          Value: (Array) List of Enclosure ranges and values.
+
+o  Tag: <span class="ph CodeHighlight magenta">Spacing</span>
+
+          Optional
+
+          Location: ViaSpecs array
+
+          Value: (Array) List of Spacing ranges and values.
+
+o  Tag: <span class="ph CodeHighlight magenta">WidthMin</span>
+
+          Optional: Default Minimum value (zero)
+
+          Location: Enclosure/Spacing array
+
+          Value: (Float) The minimum metal width value for this
+           range(inclusive) in user units.
+
+o  Tag: <span class="ph CodeHighlight magenta">WidthMax</span>
+
+          Optional: Default Maximum value
+
+          Location: Enclosure/Spacing array
+
+          Value: (Float) The maximum metal width value for this
+          range(exclusive) in user units.
+
+o  Tag: <span class="ph CodeHighlight magenta">LongSideEnc</span>
+
+          Conditional Optional: Default value equal to ShortSideEnc
+          (square via should have either LongSideEnc or
+          ShortSideEnc, not both).
+
+          Location: Enclosure array
+
+          Value: (Float) The minimum enclosure value for this metal
+          width range in user units associated with the long side of
+          the bar via, and both sides of the square via.
+
+o  Tag: <span class="ph CodeHighlight magenta">ShortSideEnc</span>
+
+          Conditional Optional: Default value equal LongSideEnc
+          (square Via should have either LongSideEnc or
+          ShortSideEnc, not both).
+
+          Location: Enclosure array
+
+          Value: (Float) The minimum enclosure value for this metal
+          width  range in user units associated with short side of
+          the bar via and both sides of the square via.
+
+o  Tag: <span class="ph CodeHighlight magenta">ConditionalEnc</span>
+
+          Conditional Optional: Should not be mixed with either 
+          LongSideEnc or ShortSideEnc.
+
+          Location: Enclosure array
+
+          Value: (Array) List of values for valid enclosure 
+          configuration. Each configuration is a list of four 
+          values that represent the minimum enclosure value for this 
+          metal width range in user units associated with each side 
+          of the via. All possible mapping between these four values
+          and the sides of the via is considered given they follow 
+          either a clockwise or counter‑clockwise order.
+
+o  Tag: <span class="ph CodeHighlight magenta">LongSideSpace</span>
+
+          Conditional Optional: Default value equal ShortSideSpace 
+          (square via should have either LongSideSpace or 
+          ShortSideSpace, not both).
+
+          Location: Spacing array
+
+          Value: (Float) The minimum spacing value for this metal 
+          width range in user units associated with long side of the
+          bar via, and both sides of the square via.
+
+o  Tag: <span class="ph CodeHighlight magenta">ShortSideSpace</span>
+
+          Conditional Optional: Default value equal LongSideSpace 
+          (square via should have either LongSideSpace or 
+          ShortSideSpace, not both).
+
+          Location: Spacing array
+
+          Value: (Float) The minimum spacing value for this metal 
+          width range in user units associated with long side of the
+          bar via and both sides of the square via.
+
+o  Tag: <span class="ph CodeHighlight magenta">LineEnd</span>
+
+                  Optional
+
+                  Location: Top level
+
+                  Value: (Object) Specify the definition of a Line 
+                  End Edge and weight of via placement at these 
+                  locations.
+
+        o  Tag: <span class="ph CodeHighlight magenta">MaxWidth</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>: The maximum width of an edge to be 
+                  considered as a Line End.
+
+                  Location: LineEnd
+
+                  Value: (Positive Float) The width of the edge in 
+                  user units.
+
+        o  Tag: <span class="ph CodeHighlight magenta">SideMinLength</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>: The minimum length of the two
+                  right‑angled sides connected to the Line End edge.
+
+                  Location: LineEnd
+
+                  Value: (Positive Float) The length of the edge in 
+                  user units.
+
+        o  Tag: <span class="ph CodeHighlight magenta">Percent</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>: The percentage of placed Vias at Line 
+                  End to the total existing Line Ends.
+
+                  Location: LineEnd	Value: (Integer [0-100]) The 
+                  ratio of vias at Line End in a percentage format.
+
+o  Tag: <span class="ph CodeHighlight magenta">LayoutConstraints</span>
+
+                  Optional
+
+                  Location: Top level
+
+                  Value: (Array) list of via to via constraints that 
+                  apply to the entire layout.
+
+        o  Tag: <span class="ph CodeHighlight magenta">via1</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                  Value: (String) name of first via to which the 
+                  constraint is applied.
+
+        o  Tag: <span class="ph CodeHighlight magenta">via2</span>
+
+                  <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                  Value: (String) name of second via to which the 
+                  constraint is applied.
+
+        o  Tag: <span class="ph CodeHighlight magenta">MinHorizontalSpace</span>
+
+                  Optional
+
+                  Value: Value of the min horizontal spacing between 
+                  two vias applied across the whole layout.
+
+              o  Tag: <span class="ph CodeHighlight magenta">Opposite</span>
+
+                        <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                        Value: (Positive Float) min opposite spacing 
+                        value.
+
+              o  Tag: <span class="ph CodeHighlight magenta">Extension</span>
+
+                        Optional
+
+                        Value: (Positive Float) value of extension 
+
+        o  Tag: <span class="ph CodeHighlight magenta">MinVerticalSpace</span>
+
+                  Optional
+
+                  Value: Value of the min vertical spacing between 
+                  two vias applied across the entire layout.
+
+              o  Tag: <span class="ph CodeHighlight magenta">Opposite</span>
+
+                        <span class="ph CodeHighlight Bold">Mandatory</span>
+
+                        Value: (Positive Float) min opposite spacing
+                        value.
+
+             o  Tag: <span class="ph CodeHighlight magenta">Extension</span>
+
+                        Optional
+
+                        Value: (Positive Float) value of extension.
+
+        o  Tag: <span class="ph CodeHighlight magenta">MinCornerToCorner</span>
+
+                  Optional 
+
+                  Value: (Positive Float) value of min corner to 
+                  corner spacing between two vias applied across the
+                  entire layout.
+
+        o  Tag: <span class="ph CodeHighlight magenta">MinCenterToCenter</span>
+
+                        Optional
+
+                        Value: (Positive Float) value of min center 
+                        to center spacing between two vias applied
+                        across the entire layout.</code></pre></dd>
+</dl>
+</div>
+</div>
+<div class="section Examples"><h2 class="title Subheading sectiontitle">Examples</h2><p class="p">See “<a class="xref fm:HeadingAndPage" href="Concept_CalibreLsgViaFlowSpecificationsFile_id9b993231.html#id9b993231-5257-4192-a5be-3465600c095b__Concept_CalibreLsgViaFlowSpecificationsFile_id9b993231.xml#id9b993231-5257-4192-a5be-3465600c095b" title="The via specifications file contains the parameters that define the dimensions, enclosures, and spacing values for the vias in the Calibre LSG via flow.">Calibre LSG Via Flow Specifications File</a>” for an example via specifications file.</p>
+</div>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_CalibreLSGViaCommandAndFileFormats_id34233e5a.html" title="Certain command specifications and file formats are used for the Calibre LSG Via flow.">Calibre LSG Via Command and File Formats</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_lsg_user"
+                DocTitle = "Calibre® LSG for Synthetic Layout Generation User’s Manual"
+                PageTitle = "LSG Via Specifications File Format"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/FileRef_LsgViaSpecificationsFileFormat_iddf31a1cc.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® LSG for Synthetic Layout Generation User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ContainerTopic" />
+<meta name="DC.Title" content="System Netlist Generator Flow Example" />
+<meta name="abstract" content="Create a source netlist for an interposer design using the System Netlist Generator GUI. Design data is included." />
+<meta name="description" content="Create a source netlist for an interposer design using the System Netlist Generator GUI. Design data is included." />
+<meta name="prodname" content="Calibre 3DSTACK User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-23" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="GenerateOnlyChangedTopics" content="no" />
+<meta name="IncludeDraftCommentsInChangeLog" content="all;show" />
+<meta name="HighlightColor" content="Pale Green" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_3dstack_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® 3DSTACK User’s Manual" />
+<meta name="CSHelp" content="no" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="ida63d3085-51a7-47fa-83ad-70c42582c618" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>System Netlist Generator Flow Example</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="System Netlist Generator Flow Example" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P11716,product.id.P10089,product.id.P10099" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="ida63d3085-51a7-47fa-83ad-70c42582c618">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">System Netlist Generator Flow Example</h1>
+<div class="body MGCBody"><div class="abstract ContainerAbstract"><span class="shortdesc">Create
+a source netlist for an interposer design using the System Netlist
+Generator GUI. Design data is included.</span>
+</div>
+<p class="p">Two identical RAM memory chips
+and a controller are stacked on an interposer as shown in <a class="xref fm:Figure" href="#ida63d3085-51a7-47fa-83ad-70c42582c618__id849e22b4-3bb4-4b8d-abdf-c3d304c5d72f">Figure 1</a>. Note, the interposer netlist is left
+out for simplicity.</p>
+<div class="fig fignone" id="ida63d3085-51a7-47fa-83ad-70c42582c618__id849e22b4-3bb4-4b8d-abdf-c3d304c5d72f"><span class="figcap"><span class="fig--title-label">Figure 1. </span>System Netlist Generator
+Interposer Design </span><br /><div class="imagecenter"><img class="image imagecenter" height="119" src="../graphics/system_netlister_example1.gif" width="377" /></div><br /></div>
+<p class="p">The SPICE netlists for the memory and
+controller are defined in <a class="xref fm:Table" href="#ida63d3085-51a7-47fa-83ad-70c42582c618__idd014e3d9-4d66-48e3-9929-6f2834ecef3e">Table 1</a>.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ida63d3085-51a7-47fa-83ad-70c42582c618__idd014e3d9-4d66-48e3-9929-6f2834ecef3e" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Netlists for Chips Used In This Example</span></caption><colgroup><col style="width:1.817in" /><col style="width:4.682in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26295e161"><p class="p">SPICE Filename</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26295e164"><p class="p">Contents of SPICE
+Netlists</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e161 "><p class="p"><span class="ph filepath">myram_netlist.spi</span> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e164 "><pre class="pre codeblock leveled"><code>.SUBCKT myram mode enable adr[0] adr[1] adr[2] w_data[0] w_data[1] w_data[2] w_data[3] w_data[4] w_data[5] w_data[6] w_data[7] 
+r_data[0] r_data[1] r_data[2] r_data[3] r_data[4] r_data[5] r_data[6] r_data[7] 
+.ENDS myram </code></pre></td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e161 "><p class="p"><span class="ph filepath">controller_netlist.spi</span> </p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e164 "><pre class="pre codeblock leveled"><code>.SUBCKT controller  
+  reset mode 
+$--Chip enable bus-- 
+  ENABLE&lt;0&gt; ENABLE&lt;1&gt; 
+$--Address bus-- 
+  ADDR&lt;0&gt; ADDR&lt;1&gt; ADDR&lt;2&gt; 
+$--Port A+B-- 
+  GPIO_A&lt;0&gt; GPIO_A&lt;1&gt; GPIO_A&lt;2&gt; GPIO_A&lt;3&gt;   GPIO_A&lt;4&gt; GPIO_A&lt;5&gt; GPIO_A&lt;6&gt; GPIO_A&lt;7&gt; 
+  GPIO_B&lt;0&gt; GPIO_B&lt;1&gt; GPIO_B&lt;2&gt; GPIO_B&lt;3&gt;   GPIO_B&lt;4&gt; GPIO_B&lt;5&gt; GPIO_B&lt;6&gt; GPIO_B&lt;7&gt; 
+$--Port C+D-- 
+  GPIO_C&lt;0&gt; GPIO_C&lt;1&gt; GPIO_C&lt;2&gt; GPIO_C&lt;3&gt;   GPIO_C&lt;4&gt; GPIO_C&lt;5&gt; GPIO_C&lt;6&gt; GPIO_C&lt;7&gt; 
+  GPIO_D&lt;0&gt; GPIO_D&lt;1&gt; GPIO_D&lt;2&gt; GPIO_D&lt;3&gt;   GPIO_D&lt;4&gt; GPIO_D&lt;5&gt; GPIO_D&lt;6&gt; GPIO_D&lt;7&gt; 
+.ENDS controller </code></pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">The desired net connectivity of the chips
+on the interposer design is defined in <a class="xref fm:Table" href="#ida63d3085-51a7-47fa-83ad-70c42582c618__id5f091a01-eb59-40ce-8a81-a677ea5b841b">Table 2</a>.</p>
+
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="ida63d3085-51a7-47fa-83ad-70c42582c618__id5f091a01-eb59-40ce-8a81-a677ea5b841b" class="table" frame="border" border="1" rules="cols"><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Net Connectivity of the Interposer Design</span></caption><colgroup><col style="width:2.058in" /><col style="width:2.058in" /><col style="width:2.058in" /></colgroup><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26295e201"><p class="p">Chip Placement</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26295e204"><p class="p">Placement Port</p>
+</th>
+<th class="entry cellrowborder default-entry" style="vertical-align:top;" id="d26295e207"><p class="p">Net</p>
+</th>
+</tr>
+</thead>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder default-entry" rowspan="5" style="vertical-align:top;" headers="d26295e201 "><p class="p">ram1</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">mode</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">enable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">enable_1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">adr (3-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">address</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">w_data (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">write_data1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">r_data (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">read_data1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" rowspan="5" style="vertical-align:top;" headers="d26295e201 "><p class="p">ram2</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">mode</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">enable</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">enable_2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">adr (2-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">address</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">w_data (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">write_data2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">r_data (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">read_data2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" rowspan="9" style="vertical-align:top;" headers="d26295e201 "><p class="p">controller</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">reset</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">reset</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">mode</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">mode</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">ENABLE&lt;0&gt;</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">enable_1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">ENABLE&lt;1&gt;</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">enable_2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">ADDR (2-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">address</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">GPIO_A (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">write_data1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">GPIO_B (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">read_data1</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">GPIO_C (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">write_data2</p>
+</td>
+</tr>
+<tr class="row"><td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e204 "><p class="p">GPIO_D (8-bit)</p>
+</td>
+<td class="entry cellrowborder default-entry" style="vertical-align:top;" headers="d26295e207 "><p class="p">read_data2</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">This data is used throughout the following
+procedures:</p>
+</div>
+<div class="related-links TopicTOC levels:1">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_CreatingNewProject_id98590a9e.html" title="Launch the System Netlist Generator GUI and create a new project. ">Creating a New Project</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_ImportingChipsIntoDatabase_id46aa7b41.html" title="Import SPICE netlists and create chips for the design.">Importing Chips into the Database</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_ModifyingAddingPinsOnChips_id03f2c9af.html" title="Modify pins on chip definitions. ">Modifying and Adding Pins on Chips</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_CreatingPlacementsChips_ida30aece0.html" title="Create placements, or instantiations, of your chips in the System Netlist Generator project.">Creating Placements for the Chips</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_DefiningNetConnectivity_id3e047efb.html" title="Electrically connect the placements in your design by defining and assigning nets in the database.">Defining Net Connectivity</a></strong></li>
+<li class="link ulchildlink"><strong><a href="../topics/TaskTop_ExportingCompleteDesign_id009d947d.html" title="Export the completed source netlist from the System Netlist Generator.">Exporting the Complete Design</a></strong></li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/MGCAppe_Examples_id8d733885.html" title="The Calibre 3DSTACK rule file contains assembly operations that build a model of your 3D-IC and a set of verification rules. This section contains rule file examples and a complete walk-through of the Calibre 3DSTACK flow.">Examples</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_3dstack_user"
+                DocTitle = "Calibre® 3DSTACK User’s Manual"
+                PageTitle = "System Netlist Generator Flow Example"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Contain_SystemNetlistGeneratorExample_ida63d3085.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® 3DSTACK User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>

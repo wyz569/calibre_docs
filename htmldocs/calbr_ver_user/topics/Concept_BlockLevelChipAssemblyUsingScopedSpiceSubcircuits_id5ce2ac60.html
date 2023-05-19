@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.Type" content="ConceptTopic" />
+<meta name="DC.Title" content="Block-Level Chip Assembly Using Scoped SPICE Subcircuits" />
+<meta name="abstract" content="When assembling a schematic design from several block-level components, some high-level SPICE blocks may use lower-level subcircuits that conflict with block names used by other high-level blocks. Because SPICE cannot distinguish between the calls to the conflicting cells, this situation results in an incorrect instantiation of the first encountered cell for all instances of the conflicting name." />
+<meta name="description" content="When assembling a schematic design from several block-level components, some high-level SPICE blocks may use lower-level subcircuits that conflict with block names used by other high-level blocks. Because SPICE cannot distinguish between the calls to the conflicting cells, this situation results in an incorrect instantiation of the first encountered cell for all instances of the conflicting name." />
+<meta name="prodname" content="Calibre Verification User's Manual" />
+<meta name="version" content="2014.06" />
+<meta name="release" content="v2014.06" />
+<meta name="series" content="mgc_ih" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Creator" content="Mentor Graphics Corporation" />
+<meta name="DC.Publisher" content="Siemens Industry Software 10 24 2014 10 24 2014 Fresh off the boat." />
+<meta name="DC.Date.Created" content="0000-00-00" />
+<meta name="DC.Date.Modified" content="2021-03-15" />
+<meta name="Topline" content="Siemens EDA" />
+<meta name="VariantPrefix" content="none" />
+<meta name="Tier" content="1" />
+<meta name="SubTitle" content="none" />
+<meta name="SourceHandle" content="calbr_ver_user" />
+<meta name="SoftwareVersionNum" content="2021.2" />
+<meta name="SoftwareRelease" content="none" />
+<meta name="RevHist" content="14" />
+<meta name="PublicationDate" content="none" />
+<meta name="Platform" content="none" />
+<meta name="PartNumber" content="none" />
+<meta name="LicenseType" content="EULA" />
+<meta name="InfoHubHandle" content="calbr_ih" />
+<meta name="HighlightColor" content="mgc_yellow_129_50" />
+<meta name="HighlightChanges" content="yes" />
+<meta name="EclipsePluginName" content="none" />
+<meta name="IncludeDraftCommentsInChangeLog" content="21.2;show" />
+<meta name="DraftDate" content="March 2021" />
+<meta name="Draft" content="none" />
+<meta name="DocumentTitle" content="Calibre® Verification User’s Manual" />
+<meta name="CSHelp" content="NO" />
+<meta name="CSDSearchKeywords" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="Copyright" content="READONLY - Use: copyrfirst and copyrlast" />
+<meta name="ConditionFiltering" content="XML" />
+<meta name="ChecklinksRelease" content="calibre" />
+<meta name="BookcaseHandle" content="none" />
+<meta name="Beta" content="none" />
+<meta name="Alpha" content="none" />
+<meta name="ActiveStatus" content="Active" />
+<meta name="GenerateOnlyChangedTopics" content="none" />
+<meta name="IncludeInInventory" content="yes" />
+<meta name="SourceEDDVersion" content="12.2.10" />
+<meta name="DC.Format" content="XHTML" />
+<meta name="DC.Identifier" content="id5ce2ac60-5576-4e5e-b114-4163f3fc2dd7" />
+<link rel="stylesheet" type="text/css" href="../commonltr.css" />
+<title>Block-Level Chip Assembly Using Scoped SPICE Subcircuits</title>
+<link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /><noscript><link rel="StyleSheet" href="../../MGC/styles-disw/body.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/catalog.css" type="text/css" /><link rel="StyleSheet" href="../../MGC/styles-disw/document.css" type="text/css" /><link rel="stylesheet" href="../../MGC/styles-disw/mgcdita-lang.css" type="text/css" /></noscript><meta name="mgc_html_doctitle" content="Block-Level Chip Assembly Using Scoped SPICE Subcircuits" />
+<meta name="attributes" content="doc.type.documentation.user,product.version.v2021.2,product.id.P10089,product.id.P11800,product.id.P11801,product.id.P11802,product.id.P11426,product.id.P10099,product.id.P10084,product.id.P10090,product.id.P11493,product.id.P11427" />
+<meta name="TEMPLATEBASE" content="mgc_mgchelp_v4.3.000" />
+<script type="text/javascript" language="JavaScript1.2" src="../../MGC/js/page.js"></script><script type="text/javascript" language="JavaScript1.2">
+            if(DetectChromeForBasic()){
+            writeNoScriptStyles();
+            }
+
+        </script><script type="text/javascript" language="JavaScript1.2">
+            // Set reference to top level help frame
+            //
+            if(!DetectChromeForBasic()){
+            javascriptTopicRedirect();
+            }
+        </script></head>
+<body id="id5ce2ac60-5576-4e5e-b114-4163f3fc2dd7">
+<div id="bodycontent" class="BodyContent">
+<script type="text/javascript" language="JavaScript1.2">
+              var BC = new Array("TODO: Breadcrumb Title","title1","naV","naV","naV","naV","2");
+          </script>
+<noscript><iframe framespacing="0" marginheight="2px" frameborder="no" scrolling="no" src="../../MGC/html/noscript_header.htm" width="100%" height="100px;">xxx</iframe></noscript>
+<script type="text/javascript" language="JavaScript1.2">
+              if(DetectChromeForBasic()){
+              if(!(top.inEclipse)){
+              writeBasicHeader();
+              }
+              }
+          </script>
+<div id="BodyContent"><h1 class="title topictitle1">Block-Level Chip Assembly Using Scoped SPICE Subcircuits</h1>
+<div class="body conbody ConceptBody"><div class="abstract ConceptAbstract"><span class="shortdesc">When assembling
+a schematic design from several block-level components, some high-level SPICE
+blocks may use lower-level subcircuits that conflict with block
+names used by other high-level blocks. Because SPICE cannot distinguish
+between the calls to the conflicting cells, this situation results
+in an incorrect instantiation of the first encountered cell for
+all instances of the conflicting name. </span>
+</div>
+<p class="p">Example:</p>
+<pre class="pre codeblock leveled"><code>---- file blk1.cdl ----- 
+.SUBCKT A P2 P1 $$ This subcircuit conflicts with SUBCKT A in blk2.cdl 
+C0 P1 P2 40 
+.ENDS 
+
+.SUBCKT BLK1 A[1] A[0] B C 
+XA0 A[1] C A 
+XA1 A[0] B A 
+.ENDS 
+---- file blk2.cdl ---- 
+.SUBCKT A P2 P1 $$ This subcircuit conflicts with SUBCKT A in blk1.cdl 
+R0 P1 P2 
+.ENDS 
+
+.SUBCKT BLK2 A[1] A[0] B C 
+XA0 A[1] C A 
+XA1 A[0] B A 
+.ENDS 
+---- file top.cdl ---- 
+.INCLUDE blk1.cdl 
+.INCLUDE blk2.cdl 
+
+.SUBCKT TOP 
+X0 A B C D BLK1 
+X1 A B C D BLK2 
+.ENDS </code></pre><p class="p">When this SPICE netlist is read, the following
+warning results:</p>
+<pre class="pre codeblock leveled"><code>LVS Netlist Compiler - Errors and Warnings for "top.cdl" 
+-------------------------------------------------------- 
+Warning: Duplicate subckt definition "A" at line 1 in file "blk2.cdl" previously defined at line 1 in file "blk1.cdl"</code></pre><p class="p">and SUBCKT A from <span class="ph FontProperty emphasis">blk1.cdl</span> is
+used for all instantiations of A in the design.</p>
+<p class="p">SPICE has a mechanism for scoping that can
+alleviate this issue. In order to avoid the issue, a top-level SUBCKT
+is used to wrap the entire high-level block. That top-level SUBCKT
+in turn contains the entire file along with a single-instance call
+to the top-level block inside. For example, one can replace <span class="ph FontProperty emphasis">top.cdl</span> with
+the following top level netlist:</p>
+<pre class="pre codeblock leveled"><code>---- new top.cdl ---- 
+$$ Wrapper subcircuit that protects BLK1 
+.SUBCKT BLK1_WRAPPER A[1] A[0] B C  
+.INCLUDE blk1.cdl 
+X0 A[1] A[0] B C BLK1 
+.ENDS 
+
+$$ Wrapper subcircuit that protects BLK2 
+.SUBCKT BLK2_WRAPPER A[1] A[0] B C  
+.INCLUDE blk2.cdl 
+X0 A[1] A[0] B C BLK2 
+.ENDS 
+
+.SUBCKT TOP 
+X0 A B C D BLK1_WRAPPER  
+X1 A B C D BLK2_WRAPPER 
+.ENDS </code></pre><p class="p">Note the new .SUBCKT entries BLK1_WRAPPER and
+BLK2_WRAPPER. Each contains the .INCLUDE for a high-level block,
+which remains unchanged from before. Each also contains a single
+call to the lower-level block being instantiated. All instance calls
+inside the scope of the wrapper cell resolve inside the wrapper
+cell first. Cells inside the wrapper cell are no longer visible
+outside the wrapper cell. Thus, the conflict between the two A cells
+is resolved.</p>
+<p class="p">V2LVS supports the -cfg option, which helps
+to resolve this situation in some Verilog designs. See “<a class="xref fm:HeadingAndPage" href="General_EnableSubcircuitScoping_id05a9cc22.html#id05a9cc22-414e-4d3e-a2ed-ce687c02d4c0__General_EnableSubcircuitScoping_id05a9cc22.xml#id05a9cc22-414e-4d3e-a2ed-ce687c02d4c0" title="V2LVS supports a configuration file that allows subcircuit scoping of lower-level SPICE blocks that are incorporated into a top-level Verilog design.">Enable Subcircuit Scoping</a>”.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent Topic:</strong> <a class="link" href="../topics/Contain_ElementStatements_idf08b9c7c.html" title="SPICE uses element statements to represent circuit components. Most of these components are primitive devices. A subcircuit definition frequently specifies a more complex structure.">Element Statements</a></div>
+</div>
+</div></div>
+</div>
+<!--BeginFooterContent--><div class="BlankFooter" id="BlankFooter"> </div><div class="Footer" id="Footer"> </div><script type="text/javascript"><!--
+                PDFLinkTitle = "InfoHub.Help"
+                DocHandle = "calbr_ver_user"
+                DocTitle = "Calibre® Verification User’s Manual"
+                PageTitle = "Block-Level Chip Assembly Using Scoped SPICE Subcircuits"
+                Copyright = "2021"
+                ThisTopic = "PointingtoaCommoncustomerjsFile";
+                CurrentFile = "topics/Concept_BlockLevelChipAssemblyUsingScopedSpiceSubcircuits_id5ce2ac60.html"
+                CurrentFileID = "3";
+                topicFooter();
+            --></script><noscript><p class="MGCFooter">Calibre® Verification User’s Manual, v2021.2<br />Unpublished work. © 2021 Siemens 
+                <br /><a href="../../mgc_html_help/nsmgchelp.htm" target="_blank">Browser Requirements</a></p></noscript></body>
+</html>
